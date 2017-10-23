@@ -12,6 +12,12 @@
   </head>
 
   <body>
-    <%= yield %>
+  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+      <div class="android-header mdl-layout__header mdl-layout__header--waterfall">
+        <%= render "shared/header"%>
+        <%= yield %>
+        <%= render "shared/footer" %>
+      </div>
+    </div>
   </body>
 </html>

@@ -1,26 +1,26 @@
 body {
     margin: 0;
   }
-  
+
   /* Disable ugly boxes around images in IE10 */
-  
+
   a img {
     border: 0px;
   }
-  
+
   ::-moz-selection, ::selection {
     background-color: #6ab344;
     color: #fff;
   }
-  
+
   .mdl-textfield .is-focused {
     border-bottom: 1px solid #e9b000;
   }
-  
+
   .android-search-box .mdl-textfield__input {
     color: rgba(0, 0, 0, 0.87);
   }
-  
+
   .mdl-textfield {
     .mdl-textfield__input {
       font-family: 'Comfortaa', cursive;
@@ -31,27 +31,27 @@ body {
       color: #ffffff;
     }
   }
-  
+
   .android-content {
     font-family: 'Comfortaa', cursive;
   }
-  
+
   .android-header .mdl-menu__container {
     z-index: 50;
     margin: 0 !important;
   }
-  
+
   .button-center {
     text-align: center;
     width: 100%;
     margin-bottom: 25px;
     margin-top: -25px;
   }
-  
+
   .android-footer a, .footer-social a:hover {
     color: #ffffff;
   }
-  
+
   .action-icons {
     float: left;
     margin-left: 15px;
@@ -60,35 +60,35 @@ body {
       color: #fabc28;
     }
   }
-  
+
   .medium-icon {
     margin-bottom: 10px;
   }
-  
+
   .button-center button {
     background: #fabc28;
     color: white;
   }
-  
+
   .mdl-textfield--expandable {
     width: auto;
   }
-  
+
   .center-items {
     justify-content: center;
   }
-  
+
   .tan {
     background: #ffffff;
     .android-navigation .mdl-navigation__link {
       color: black;
     }
   }
-  
+
   .mdl-navigation__link i {
     font-size: 24px;
   }
-  
+
   .android-fab {
     position: absolute;
     right: 20%;
@@ -97,30 +97,30 @@ body {
     background: #64ffda !important;
     color: black !important;
   }
-  
+
   .android-mobile-title {
     display: none !important;
   }
-  
+
   .android-logo-image {
     /*height: 28px;*/
     width: 60px;
   }
-  
+
   .mdl-layout__header {
     margin-top: 10px;
   }
-  
+
   .mdl-layout__header-row .mdl-navigation__link {
     padding: 0 10px 0 10px;
   }
-  
+
   .header {
     position: relative;
     background-size: cover;
     height: 800px;
   }
-  
+
   .android-header {
     overflow: visible;
     background-color: white;
@@ -139,7 +139,7 @@ body {
       font-size: 16px;
     }
   }
-  
+
   .android-navigation-container {
     /* Simple hack to make the overflow happen to the left instead... */
     direction: rtl;
@@ -149,7 +149,7 @@ body {
     width: 500px;
     transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1), width 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   }
-  
+
   .android-navigation {
     /* ... and now make sure the content is actually LTR */
     direction: ltr;
@@ -158,12 +158,12 @@ body {
     justify-content: flex-end;
     width: 800px;
   }
-  
+
   .android-search-box.is-focused + .android-navigation-container {
     opacity: 0;
     width: 100px;
   }
-  
+
   .android-navigation .mdl-navigation__link {
     display: inline-block;
     height: 60px;
@@ -174,7 +174,7 @@ body {
       border-bottom: 4px solid #fabc28;
     }
   }
-  
+
   .android-search-box {
     -webkit-order: 2;
     -ms-flex-order: 2;
@@ -182,23 +182,23 @@ body {
     margin-left: 16px;
     margin-right: 16px;
   }
-  
+
   .android-more-button {
     -webkit-order: 3;
     -ms-flex-order: 3;
     order: 3;
   }
-  
+
   .android-drawer {
     border-right: none;
   }
-  
+
   .android-drawer-separator {
     height: 1px;
     background-color: #dcdcdc;
     margin: 8px 0;
   }
-  
+
   .android-drawer {
     .mdl-navigation__link.mdl-navigation__link {
       font-size: 14px;
@@ -217,7 +217,7 @@ body {
       bottom: 16px;
     }
   }
-  
+
   .landing-masthead {
     position: relative;
     min-height: 750px;
@@ -226,7 +226,7 @@ body {
     background: url('images/header.jpg') center 30% no-repeat;
     background-size: cover;
   }
-  
+
   .logo-font {
     /*font-family: 'Montserrat', sans-serif;*/
     font-family: 'Comfortaa', cursive;
@@ -234,17 +234,17 @@ body {
     color: #ffffff;
     font-weight: 200;
   }
-  
+
   .android-slogan {
     font-size: 60px;
     padding-top: 160px;
   }
-  
+
   .android-sub-slogan {
     font-size: 21px;
     padding-top: 24px;
   }
-  
+
   .down-arrow {
     i {
       font-size: 100px;
@@ -258,13 +258,13 @@ body {
     }
     color: #ffffff;
   }
-  
+
   .mdl-typography--display-1-color-contrast {
     font-family: 'Comfortaa', cursive;
     /*font-family: 'Montserrat', sans-serif;*/
     font-size: 40px;
   }
-  
+
   .android-create-character {
     font-size: 21px;
     padding-top: 400px;
@@ -274,20 +274,20 @@ body {
       font-weight: 300;
     }
   }
-  
+
   .android-screen-section {
     position: relative;
     padding-top: 60px;
     padding-bottom: 80px;
   }
-  
+
   .android-screens {
     text-align: right;
     width: 100%;
     white-space: nowrap;
     overflow-x: auto;
   }
-  
+
   .android-screen {
     text-align: center;
     .android-link {
@@ -296,11 +296,11 @@ body {
       z-index: 2;
     }
   }
-  
+
   .android-image-link {
     text-decoration: none;
   }
-  
+
   .android-wear {
     display: inline-block;
     width: 160px;
@@ -310,7 +310,7 @@ body {
       z-index: 1;
     }
   }
-  
+
   .android-phone {
     display: inline-block;
     width: 64px;
@@ -320,7 +320,7 @@ body {
       z-index: 1;
     }
   }
-  
+
   .android-tablet {
     display: inline-block;
     width: 110px;
@@ -334,7 +334,7 @@ body {
       z-index: 2;
     }
   }
-  
+
   .android-tv {
     display: inline-block;
     width: 300px;
@@ -344,7 +344,7 @@ body {
       z-index: 1;
     }
   }
-  
+
   .android-auto {
     display: inline-block;
     width: 300px;
@@ -355,14 +355,14 @@ body {
       z-index: 1;
     }
   }
-  
+
   .android-wear-section {
     position: relative;
     background: url('images/wear.png') center top no-repeat;
     background-size: cover;
     height: 800px;
   }
-  
+
   .android-wear-band {
     position: absolute;
     bottom: 0;
@@ -370,7 +370,7 @@ body {
     text-align: center;
     background-color: #37474f;
   }
-  
+
   .android-wear-band-text {
     max-width: 800px;
     margin-left: 25%;
@@ -381,7 +381,7 @@ body {
       padding-top: 8px;
     }
   }
-  
+
   .android-link {
     text-decoration: none;
     color: #000000 !important;
@@ -394,7 +394,7 @@ body {
       vertical-align: middle;
     }
   }
-  
+
   .android-alt-link {
     text-decoration: none;
     color: #64ffda !important;
@@ -407,11 +407,11 @@ body {
       top: 6px;
     }
   }
-  
+
   .android-customized-section {
     text-align: center;
   }
-  
+
   .android-customized-section-text {
     max-width: 500px;
     margin-left: auto;
@@ -421,17 +421,17 @@ body {
       padding-top: 16px;
     }
   }
-  
+
   .android-customized-section-image {
     background: url('images/devices.jpg') center top no-repeat;
     background-size: cover;
     height: 400px;
   }
-  
+
   .mdl-mega-footer--left-section {
     font-size: 30px;
   }
-  
+
   .android-more-section {
     padding: 30px 0;
     max-width: 1044px;
@@ -442,24 +442,30 @@ body {
       padding-bottom: 24px;
     }
   }
-  
+
   .android-card-container {}
-  
+
   .mdl-card {
     border-radius: 0px;
   }
-  
+
   .mdl-card-border {
     border: .5px solid black;
   }
-  
+
   .detail-heading {
     font-size: 30px;
     margin-bottom: 30px;
     margin-top: 10px;
     text-align: center;
   }
-  
+
+  .detail-heading {
+      color: #000000;
+      font-size: 25px;
+      font-family: 'Comfortaa', cursive;
+  }
+
   .android-card-container {
     .mdl-card__media {
       overflow: hidden;
@@ -490,10 +496,11 @@ body {
       }
     }
   }
-  
+
   .android-footer {
     background-color: #fafafa;
     position: relative;
+    bottom: 0;
     a:hover {
       color: #8bc34a;
     }
@@ -511,11 +518,11 @@ body {
       top: 6px;
     }
   }
-  
+
   .android-link-menu:hover {
     cursor: pointer;
   }
-  
+
   /**** Mobile layout ****/
   @media (max-width: 900px) {
     .android-navigation-container {

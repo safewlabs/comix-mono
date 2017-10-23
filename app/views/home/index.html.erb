@@ -1,314 +1,218 @@
-<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-
-    <div class="android-header mdl-layout__header mdl-layout__header--waterfall">
-    <div class="mdl-layout__header-row">
-        <span class="android-title mdl-layout-title">
-        <a href="">
-            <%= image_tag('logo.png', class: 'android-logo-image') %>
-        </a>
-        </span>
-
-        <div class="android-header-spacer mdl-layout-spacer"></div>
-        <div class="android-search-box mdl-textfield mdl-js-textfield mdl-textfield--expandable mdl-textfield--floating-label mdl-textfield--align-right mdl-textfield--full-width">
-        <label class="mdl-button mdl-js-button mdl-button--icon" for="search-field">
-            <i class="material-icons">search</i>
-        </label>
-        <div class="mdl-textfield__expandable-holder">
-            <input class="mdl-textfield__input" type="text" id="search-field">
+<section id="select-comics-section" class="android-more-section">
+    <!-- <div class="android-section-title mdl-typography--display-1-color-contrast">Fresh on Comix</div> -->
+    <div class="android-card-container mdl-grid">
+    <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
+        <div class="mdl-card__media">
+        <%= image_tag("https://images-na.ssl-images-amazon.com/images/S/cmx-images-prod/Item/577314/577314._SX312_QL80_TTD_.jpg") %>
         </div>
+        <div class="mdl-card__title">
+            <h4 class="mdl-card__title-text">Create your own Android character</h4>
         </div>
-        <!-- Navigation -->
-        <div class="android-navigation-container">
-        <nav class="android-navigation mdl-navigation">
-            <a class="mdl-navigation__link " href="">Start Selling</a>
-            <% if member_signed_in? %>            
-                <%= link_to('Logout', destroy_member_session_path, method: :delete) %>  
-            <% else %>
-                <%= link_to('Login', new_member_session_path, class: "mdl-navigation__link" )  %>
-            <% end %>
-            <%= link_to('Join', new_member_registration_path, class: "mdl-navigation__link" )  %>            
-            <a class="mdl-navigation__link " href="">Cart</a>
-        </nav>
+        <div class="mdl-card__supporting-text">
+        <span class="mdl-typography--font-light mdl-typography--subhead">Turn the little green Android mascot into you, your friends, anyone!</span>
         </div>
-        <span class="android-mobile-title mdl-layout-title">
-            <%= image_tag("logo.png", class: "android-logo-image") %>
-        </span>
-        <!-- <button class="android-more-button mdl-button mdl-button--icon">
-        <i class="material-icons">favorite_border</i>
-        </button>
-        <button class="android-more-button mdl-button mdl-button--icon">
-        <i class="material-icons">add_shopping_cart</i>
-        </button> -->
-    </div>
-    </div>
-
-    <div class="android-header mdl-layout__header mdl-layout__header--waterfall">
-    <div class="mdl-layout__header-row center-items tan">
-        <!-- Navigation -->
-        <div class="android-navigation-container">
-        <nav class="android-navigation mdl-navigation">
-            <a class="mdl-navigation__link" href="">Superhero</a>
-            <a class="mdl-navigation__link" href="">Manga</a>
-            <a class="mdl-navigation__link" href="">Indigenous</a>
-            <a class="mdl-navigation__link" href="">Young Adult</a>
-            <a class="mdl-navigation__link" href="">LGBTQ</a>
-            <a class="mdl-navigation__link" href="" id="more-menu">
-            <i class="ion-android-more-vertical"></i>
+        <div class="mdl-card__actions">
+            <a class="android-link mdl-js-button action-icons" href="">
+            <i class="ion-android-favorite-outline"></i>
             </a>
-        </nav>
-        </div>
-    </div>
-    </div>
-
-    <div class="android-content mdl-layout__content header">
-
-    <section id="select-comics-section" class="android-more-section">
-        <!-- <div class="android-section-title mdl-typography--display-1-color-contrast">Fresh on Comix</div> -->
-        <div class="android-card-container mdl-grid">
-        <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
-            <div class="mdl-card__media">
-            <%= image_tag("https://images-na.ssl-images-amazon.com/images/S/cmx-images-prod/Item/577314/577314._SX312_QL80_TTD_.jpg") %>
-            </div>
-            <div class="mdl-card__title">
-                <h4 class="mdl-card__title-text">Create your own Android character</h4>
-            </div>
-            <div class="mdl-card__supporting-text">
-            <span class="mdl-typography--font-light mdl-typography--subhead">Turn the little green Android mascot into you, your friends, anyone!</span>
-            </div>
-            <div class="mdl-card__actions">
-                <a class="android-link mdl-js-button action-icons" href="">
-                <i class="ion-android-favorite-outline"></i>
-                </a>
-                <a class="android-link mdl-js-button action-icons" href="">
-                <i class="ion-ios-chatboxes-outline"></i>
-                </a>
-                <a class="android-link mdl-js-button action-icons" href="">
-                <i class="ion-ios-upload-outline"></i>
-                </a>
-            </div>
-        </div>
-
-        <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
-            <div class="mdl-card__media">
-            <%= image_tag("https://images-na.ssl-images-amazon.com/images/S/cmx-images-prod/Item/584349/584349._SX360_QL80_TTD_.jpg") %>
-            </div>
-            <div class="mdl-card__title">
-                <h4 class="mdl-card__title-text">Get a clean customisable home screen</h4>
-            </div>
-            <div class="mdl-card__supporting-text">
-            <span class="mdl-typography--font-light mdl-typography--subhead">A clean, simple, customisable home screen that comes with the power of Google Now: Traffic alerts, weather and much more, just a swipe away.</span>
-            </div>
-            <div class="mdl-card__actions">
-                <a class="android-link mdl-js-button action-icons" href="">
-                <i class="ion-android-favorite-outline"></i>
-                </a>
-                <a class="android-link mdl-js-button action-icons" href="">
-                <i class="ion-ios-chatboxes-outline"></i>
-                </a>
-                <a class="android-link mdl-js-button action-icons" href="">
-                <i class="ion-ios-upload-outline"></i>
-                </a>
-            </div>
-        </div>
-
-        <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
-            <div class="mdl-card__media">
-            <%= image_tag("https://images-na.ssl-images-amazon.com/images/S/cmx-images-prod/Item/577334/577334._SX312_QL80_TTD_.jpg") %>
-            </div>
-            <div class="mdl-card__title">
-                <h4 class="mdl-card__title-text">Millions to choose from</h4>
-            </div>
-            <div class="mdl-card__supporting-text">
-            <span class="mdl-typography--font-light mdl-typography--subhead">Hail a taxi, find a recipe, run through a temple – Google Play has all the apps and games that let you make your Android device uniquely yours.</span>
-            </div>
-            <div class="mdl-card__actions">
-                <a class="android-link mdl-js-button action-icons" href="">
-                <i class="ion-android-favorite-outline"></i>
-                </a>
-                <a class="android-link mdl-js-button action-icons" href="">
-                <i class="ion-ios-chatboxes-outline"></i>
-                </a>
-                <a class="android-link mdl-js-button action-icons" href="">
-                <i class="ion-ios-upload-outline"></i>
-                </a>
-            </div>
-        </div>
-
-        <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
-            <div class="mdl-card__media">
-            <%= image_tag("https://images-na.ssl-images-amazon.com/images/S/cmx-images-prod/Item/580475/580475._SX312_QL80_TTD_.jpg") %>
-            </div>
-            <div class="mdl-card__title">
-                <h4 class="mdl-card__title-text">Millions to choose from</h4>
-            </div>
-            <div class="mdl-card__supporting-text">
-            <span class="mdl-typography--font-light mdl-typography--subhead">Hail a taxi, find a recipe, run through a temple – Google Play has all the apps and games that let you make your Android device uniquely yours.</span>
-            </div>
-            <div class="mdl-card__actions">
-                <a class="android-link mdl-js-button action-icons" href="">
-                <i class="ion-android-favorite-outline"></i>
-                </a>
-                <a class="android-link mdl-js-button action-icons" href="">
-                <i class="ion-ios-chatboxes-outline"></i>
-                </a>
-                <a class="android-link mdl-js-button action-icons" href="">
-                <i class="ion-ios-upload-outline"></i>
-                </a>
-            </div>
-        </div>
-
-        <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
-            <div class="mdl-card__media">
-            <%= image_tag("https://images-na.ssl-images-amazon.com/images/S/cmx-images-prod/Item/575539/575539._SX312_QL80_TTD_.jpg") %>
-            </div>
-            <div class="mdl-card__title">
-                <h4 class="mdl-card__title-text">Millions to choose from</h4>
-            </div>
-            <div class="mdl-card__supporting-text">
-            <span class="mdl-typography--font-light mdl-typography--subhead">Hail a taxi, find a recipe, run through a temple – Google Play has all the apps and games that let you make your Android device uniquely yours.</span>
-            </div>
-            <div class="mdl-card__actions">
-                <a class="android-link mdl-js-button action-icons" href="">
-                <i class="ion-android-favorite-outline"></i>
-                </a>
-                <a class="android-link mdl-js-button action-icons" href="">
-                <i class="ion-ios-chatboxes-outline"></i>
-                </a>
-                <a class="android-link mdl-js-button action-icons" href="">
-                <i class="ion-ios-upload-outline"></i>
-                </a>
-            </div>
-        </div>
-
-        <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
-            <div class="mdl-card__media">
-            <%= image_tag("https://images-na.ssl-images-amazon.com/images/S/cmx-images-prod/Item/575584/575584._SX360_QL80_TTD_.jpg") %>
-            </div>
-            <div class="mdl-card__title">
-                <h4 class="mdl-card__title-text">Millions to choose from</h4>
-            </div>
-            <div class="mdl-card__supporting-text">
-            <span class="mdl-typography--font-light mdl-typography--subhead">Hail a taxi, find a recipe, run through a temple – Google Play has all the apps and games that let you make your Android device uniquely yours.</span>
-            </div>
-            <div class="mdl-card__actions">
-                <a class="android-link mdl-js-button action-icons" href="">
-                <i class="ion-android-favorite-outline"></i>
-                </a>
-                <a class="android-link mdl-js-button action-icons" href="">
-                <i class="ion-ios-chatboxes-outline"></i>
-                </a>
-                <a class="android-link mdl-js-button action-icons" href="">
-                <i class="ion-ios-upload-outline"></i>
-                </a>
-            </div>
-        </div>
-
-        <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
-            <div class="mdl-card__media">
-            <%= image_tag("https://images-na.ssl-images-amazon.com/images/S/cmx-images-prod/Item/577030/577030._SX312_QL80_TTD_.jpg") %>
-            </div>
-            <div class="mdl-card__title">
-                <h4 class="mdl-card__title-text">Millions to choose from</h4>
-            </div>
-            <div class="mdl-card__supporting-text">
-            <span class="mdl-typography--font-light mdl-typography--subhead">Hail a taxi, find a recipe, run through a temple – Google Play has all the apps and games that let you make your Android device uniquely yours.</span>
-            </div>
-            <div class="mdl-card__actions">
-                <a class="android-link mdl-js-button action-icons" href="">
-                <i class="ion-android-favorite-outline"></i>
-                </a>
-                <a class="android-link mdl-js-button action-icons" href="">
-                <i class="ion-ios-chatboxes-outline"></i>
-                </a>
-                <a class="android-link mdl-js-button action-icons" href="">
-                <i class="ion-ios-upload-outline"></i>
-                </a>
-            </div>
-        </div>
-
-        <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
-            <div class="mdl-card__media">
-            <%= image_tag("https://images-na.ssl-images-amazon.com/images/S/cmx-images-prod/Item/580530/580530._SX312_QL80_TTD_.jpg") %>
-            </div>
-            <div class="mdl-card__title">
-                <h4 class="mdl-card__title-text">Millions to choose from</h4>
-            </div>
-            <div class="mdl-card__supporting-text">
-            <span class="mdl-typography--font-light mdl-typography--subhead">Hail a taxi, find a recipe, run through a temple – Google Play has all the apps and games that let you make your Android device uniquely yours.</span>
-            </div>
-            <div class="mdl-card__actions">
-                <a class="android-link mdl-js-button action-icons" href="">
-                <i class="ion-android-favorite-outline"></i>
-                </a>
-                <a class="android-link mdl-js-button action-icons" href="">
-                <i class="ion-ios-chatboxes-outline"></i>
-                </a>
-                <a class="android-link mdl-js-button action-icons" href="">
-                <i class="ion-ios-upload-outline"></i>
-                </a>
-            </div>
-        </div>
-
-        <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
-            <div class="mdl-card__media">
-            <%= image_tag("https://images-na.ssl-images-amazon.com/images/S/cmx-images-prod/Item/574755/b3f65750c57bd38e87d397038c3c907f._SX312_QL80_TTD_.jpg") %>
-            </div>
-            <div class="mdl-card__title">
-                <h4 class="mdl-card__title-text">Millions to choose from</h4>
-            </div>
-            <div class="mdl-card__supporting-text">
-            <span class="mdl-typography--font-light mdl-typography--subhead">Hail a taxi, find a recipe, run through a temple – Google Play has all the apps and games that let you make your Android device uniquely yours.</span>
-            </div>
-            <div class="mdl-card__actions">
-                <a class="android-link mdl-js-button action-icons" href="">
-                <i class="ion-android-favorite-outline"></i>
-                </a>
-                <a class="android-link mdl-js-button action-icons" href="">
-                <i class="ion-ios-chatboxes-outline"></i>
-                </a>
-                <a class="android-link mdl-js-button action-icons" href="">
-                <i class="ion-ios-upload-outline"></i>
-                </a>
-            </div>
-        </div>
-        </div>
-
-    </section>
-
-    <div class="button-center">
-        <button class="mdl-button mdl-js-button mdl-button--raised">
-        Load more
-        </button>
-    </div>
-
-    <footer class="android-footer mdl-mega-footer">
-        <div class="mdl-mega-footer--top-section">
-        <div class="mdl-mega-footer--left-section">
-            <a class="footer-social" href="https://www.facebook.com/Comix-1938019309763202/" target="_blank">
-            <img class="medium-icon" src="https://png.icons8.com/facebook/ios7/25" title="Facebook" width="25" height="25">
+            <a class="android-link mdl-js-button action-icons" href="">
+            <i class="ion-ios-chatboxes-outline"></i>
             </a>
-            &nbsp;
-            <img class="medium-icon" src="https://png.icons8.com/twitter/ios7/25" title="Twitter" width="25" height="25">
-            &nbsp;
-            <img class="medium-icon" src="https://png.icons8.com/medium/color/30" title="Medium" width="30" height="30">
-            &nbsp;
-            <i class="ion-social-octocat medium-icon"></i>
-        </div>
-        <div class="mdl-mega-footer--right-section">
-            <a class="mdl-typography--font-light" href="#top">
-            Back to Top
-            <i class="material-icons">expand_less</i>
+            <a class="android-link mdl-js-button action-icons" href="">
+            <i class="ion-ios-upload-outline"></i>
             </a>
         </div>
-        </div>
-
-        <div class="mdl-mega-footer--bottom-section">
-        <a class="android-link mdl-typography--font-light" href="">About Us</a>
-        <a class="android-link mdl-typography--font-light" href="">Blog</a>
-        <a class="android-link mdl-typography--font-light" href="">Terms of Use</a>
-        <a class="android-link mdl-typography--font-light" href="">Privacy Policy</a>
-        </div>
-
-    </footer>
     </div>
+
+    <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
+        <div class="mdl-card__media">
+        <%= image_tag("https://images-na.ssl-images-amazon.com/images/S/cmx-images-prod/Item/584349/584349._SX360_QL80_TTD_.jpg") %>
+        </div>
+        <div class="mdl-card__title">
+            <h4 class="mdl-card__title-text">Get a clean customisable home screen</h4>
+        </div>
+        <div class="mdl-card__supporting-text">
+        <span class="mdl-typography--font-light mdl-typography--subhead">A clean, simple, customisable home screen that comes with the power of Google Now: Traffic alerts, weather and much more, just a swipe away.</span>
+        </div>
+        <div class="mdl-card__actions">
+            <a class="android-link mdl-js-button action-icons" href="">
+            <i class="ion-android-favorite-outline"></i>
+            </a>
+            <a class="android-link mdl-js-button action-icons" href="">
+            <i class="ion-ios-chatboxes-outline"></i>
+            </a>
+            <a class="android-link mdl-js-button action-icons" href="">
+            <i class="ion-ios-upload-outline"></i>
+            </a>
+        </div>
+    </div>
+
+    <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
+        <div class="mdl-card__media">
+        <%= image_tag("https://images-na.ssl-images-amazon.com/images/S/cmx-images-prod/Item/577334/577334._SX312_QL80_TTD_.jpg") %>
+        </div>
+        <div class="mdl-card__title">
+            <h4 class="mdl-card__title-text">Millions to choose from</h4>
+        </div>
+        <div class="mdl-card__supporting-text">
+        <span class="mdl-typography--font-light mdl-typography--subhead">Hail a taxi, find a recipe, run through a temple – Google Play has all the apps and games that let you make your Android device uniquely yours.</span>
+        </div>
+        <div class="mdl-card__actions">
+            <a class="android-link mdl-js-button action-icons" href="">
+            <i class="ion-android-favorite-outline"></i>
+            </a>
+            <a class="android-link mdl-js-button action-icons" href="">
+            <i class="ion-ios-chatboxes-outline"></i>
+            </a>
+            <a class="android-link mdl-js-button action-icons" href="">
+            <i class="ion-ios-upload-outline"></i>
+            </a>
+        </div>
+    </div>
+
+    <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
+        <div class="mdl-card__media">
+        <%= image_tag("https://images-na.ssl-images-amazon.com/images/S/cmx-images-prod/Item/580475/580475._SX312_QL80_TTD_.jpg") %>
+        </div>
+        <div class="mdl-card__title">
+            <h4 class="mdl-card__title-text">Millions to choose from</h4>
+        </div>
+        <div class="mdl-card__supporting-text">
+        <span class="mdl-typography--font-light mdl-typography--subhead">Hail a taxi, find a recipe, run through a temple – Google Play has all the apps and games that let you make your Android device uniquely yours.</span>
+        </div>
+        <div class="mdl-card__actions">
+            <a class="android-link mdl-js-button action-icons" href="">
+            <i class="ion-android-favorite-outline"></i>
+            </a>
+            <a class="android-link mdl-js-button action-icons" href="">
+            <i class="ion-ios-chatboxes-outline"></i>
+            </a>
+            <a class="android-link mdl-js-button action-icons" href="">
+            <i class="ion-ios-upload-outline"></i>
+            </a>
+        </div>
+    </div>
+
+    <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
+        <div class="mdl-card__media">
+        <%= image_tag("https://images-na.ssl-images-amazon.com/images/S/cmx-images-prod/Item/575539/575539._SX312_QL80_TTD_.jpg") %>
+        </div>
+        <div class="mdl-card__title">
+            <h4 class="mdl-card__title-text">Millions to choose from</h4>
+        </div>
+        <div class="mdl-card__supporting-text">
+        <span class="mdl-typography--font-light mdl-typography--subhead">Hail a taxi, find a recipe, run through a temple – Google Play has all the apps and games that let you make your Android device uniquely yours.</span>
+        </div>
+        <div class="mdl-card__actions">
+            <a class="android-link mdl-js-button action-icons" href="">
+            <i class="ion-android-favorite-outline"></i>
+            </a>
+            <a class="android-link mdl-js-button action-icons" href="">
+            <i class="ion-ios-chatboxes-outline"></i>
+            </a>
+            <a class="android-link mdl-js-button action-icons" href="">
+            <i class="ion-ios-upload-outline"></i>
+            </a>
+        </div>
+    </div>
+
+    <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
+        <div class="mdl-card__media">
+        <%= image_tag("https://images-na.ssl-images-amazon.com/images/S/cmx-images-prod/Item/575584/575584._SX360_QL80_TTD_.jpg") %>
+        </div>
+        <div class="mdl-card__title">
+            <h4 class="mdl-card__title-text">Millions to choose from</h4>
+        </div>
+        <div class="mdl-card__supporting-text">
+        <span class="mdl-typography--font-light mdl-typography--subhead">Hail a taxi, find a recipe, run through a temple – Google Play has all the apps and games that let you make your Android device uniquely yours.</span>
+        </div>
+        <div class="mdl-card__actions">
+            <a class="android-link mdl-js-button action-icons" href="">
+            <i class="ion-android-favorite-outline"></i>
+            </a>
+            <a class="android-link mdl-js-button action-icons" href="">
+            <i class="ion-ios-chatboxes-outline"></i>
+            </a>
+            <a class="android-link mdl-js-button action-icons" href="">
+            <i class="ion-ios-upload-outline"></i>
+            </a>
+        </div>
+    </div>
+
+    <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
+        <div class="mdl-card__media">
+        <%= image_tag("https://images-na.ssl-images-amazon.com/images/S/cmx-images-prod/Item/577030/577030._SX312_QL80_TTD_.jpg") %>
+        </div>
+        <div class="mdl-card__title">
+            <h4 class="mdl-card__title-text">Millions to choose from</h4>
+        </div>
+        <div class="mdl-card__supporting-text">
+        <span class="mdl-typography--font-light mdl-typography--subhead">Hail a taxi, find a recipe, run through a temple – Google Play has all the apps and games that let you make your Android device uniquely yours.</span>
+        </div>
+        <div class="mdl-card__actions">
+            <a class="android-link mdl-js-button action-icons" href="">
+            <i class="ion-android-favorite-outline"></i>
+            </a>
+            <a class="android-link mdl-js-button action-icons" href="">
+            <i class="ion-ios-chatboxes-outline"></i>
+            </a>
+            <a class="android-link mdl-js-button action-icons" href="">
+            <i class="ion-ios-upload-outline"></i>
+            </a>
+        </div>
+    </div>
+
+    <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
+        <div class="mdl-card__media">
+        <%= image_tag("https://images-na.ssl-images-amazon.com/images/S/cmx-images-prod/Item/580530/580530._SX312_QL80_TTD_.jpg") %>
+        </div>
+        <div class="mdl-card__title">
+            <h4 class="mdl-card__title-text">Millions to choose from</h4>
+        </div>
+        <div class="mdl-card__supporting-text">
+        <span class="mdl-typography--font-light mdl-typography--subhead">Hail a taxi, find a recipe, run through a temple – Google Play has all the apps and games that let you make your Android device uniquely yours.</span>
+        </div>
+        <div class="mdl-card__actions">
+            <a class="android-link mdl-js-button action-icons" href="">
+            <i class="ion-android-favorite-outline"></i>
+            </a>
+            <a class="android-link mdl-js-button action-icons" href="">
+            <i class="ion-ios-chatboxes-outline"></i>
+            </a>
+            <a class="android-link mdl-js-button action-icons" href="">
+            <i class="ion-ios-upload-outline"></i>
+            </a>
+        </div>
+    </div>
+
+    <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
+        <div class="mdl-card__media">
+        <%= image_tag("https://images-na.ssl-images-amazon.com/images/S/cmx-images-prod/Item/574755/b3f65750c57bd38e87d397038c3c907f._SX312_QL80_TTD_.jpg") %>
+        </div>
+        <div class="mdl-card__title">
+            <h4 class="mdl-card__title-text">Millions to choose from</h4>
+        </div>
+        <div class="mdl-card__supporting-text">
+        <span class="mdl-typography--font-light mdl-typography--subhead">Hail a taxi, find a recipe, run through a temple – Google Play has all the apps and games that let you make your Android device uniquely yours.</span>
+        </div>
+        <div class="mdl-card__actions">
+            <a class="android-link mdl-js-button action-icons" href="">
+            <i class="ion-android-favorite-outline"></i>
+            </a>
+            <a class="android-link mdl-js-button action-icons" href="">
+            <i class="ion-ios-chatboxes-outline"></i>
+            </a>
+            <a class="android-link mdl-js-button action-icons" href="">
+            <i class="ion-ios-upload-outline"></i>
+            </a>
+        </div>
+    </div>
+    </div>
+
+</section>
+
+<div class="button-center">
+    <button class="mdl-button mdl-js-button mdl-button--raised">
+    Load more
+    </button>
 </div>

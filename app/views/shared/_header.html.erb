@@ -1,0 +1,35 @@
+<div class="mdl-layout__header-row">
+    <span class="android-title mdl-layout-title">
+      <%= link_to root_path do %>
+        <%= image_tag('logo.png', class: 'android-logo-image') %>
+      <% end %>
+    </span>
+
+    <div class="android-header-spacer mdl-layout-spacer"></div>
+    <div class="android-search-box mdl-textfield mdl-js-textfield mdl-textfield--expandable mdl-textfield--floating-label mdl-textfield--align-right mdl-textfield--full-width">
+      <label class="mdl-button mdl-js-button mdl-button--icon" for="search-field">
+          <i class="material-icons">search</i>
+      </label>
+      <div class="mdl-textfield__expandable-holder">
+          <input class="mdl-textfield__input" type="text" id="search-field">
+      </div>
+    </div>
+    <!-- Navigation -->
+    <div class="android-navigation-container">
+      <nav class="android-navigation mdl-navigation">
+          <a class="mdl-navigation__link " href="">Start Selling</a>
+          <% if member_signed_in? %>
+              <%= link_to('Logout', destroy_member_session_path, method: :delete) %>
+          <% else %>
+              <%= link_to('Login', new_member_session_path, class: "mdl-navigation__link" )  %>
+          <% end %>
+          <%= link_to('Join', new_member_registration_path, class: "mdl-navigation__link" )  %>
+          <a class="mdl-navigation__link " href="">Cart</a>
+      </nav>
+    </div>
+    <span class="android-mobile-title mdl-layout-title">
+        <%= image_tag("logo.png", class: "android-logo-image") %>
+    </span>
+</div>
+
+<%= render "shared/subheader" %>
