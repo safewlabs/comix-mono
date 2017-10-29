@@ -4,4 +4,5 @@ class Member < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
   has_many :roles, through: :member_roles, dependent: :destroy
+  accepts_nested_attributes_for :member_roles  
 end
