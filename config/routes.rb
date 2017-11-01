@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root to: 'home#index'
 
-  devise_for members: {
+  devise_for :members, controllers: {
     registrations: 'members/registrations',
     sessions: 'members/sessions'    
   }
