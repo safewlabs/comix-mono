@@ -6,21 +6,15 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-# movies = Movie.create([
-#         { name: 'Action/Adventure' }, 
-#         { name: 'Adventure' },
-#         { name: 'Star Wars' }, 
-#         { name: 'Lord of the Rings' }
-#         { name: 'Star Wars' }, 
-#         { name: 'Lord of the Rings' }
-#         { name: 'Star Wars' }, 
-#         { name: 'Lord of the Rings' }
-#         { name: 'Star Wars' }, 
-#         { name: 'Lord of the Rings' }
-#         { name: 'Star Wars' }, 
-#         { name: 'Lord of the Rings' }
-#         { name: 'Star Wars' }, 
-#         { name: 'Lord of the Rings' }
-#         { name: 'Star Wars' }, 
-#         { name: 'Lord of the Rings' }
-#     ])
+grenres = Genre.create([
+        { name: 'Superhero' }, 
+        { name: 'Manga' },
+        { name: 'Indigenous' }, 
+        { name: 'Young Adult' },
+        { name: 'LGBTQ' }, 
+        { name: 'Graphic Novels' },
+        { name: 'Steampunk' },
+        { name: 'Spy' },
+        { name: 'Non-Fiction' },
+        { name: 'Cyberpunk' }
+    ])
