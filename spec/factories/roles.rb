@@ -1,5 +1,5 @@
 FactoryBot.define do
   factory :role do
-    name:  'seller'
+    name "creator"
   end
 end

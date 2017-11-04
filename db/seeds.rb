@@ -20,14 +20,8 @@ grenres = Genre.first_or_create([
     ])
 
 role = Role.first_or_create([
-    { name: 'Superhero' }, 
-    { name: 'Manga' },
-    { name: 'Indigenous' }, 
-    { name: 'Young Adult' },
-    { name: 'LGBTQ' }, 
-    { name: 'Graphic Novels' },
-    { name: 'Steampunk' },
-    { name: 'Spy' },
-    { name: 'Non-Fiction' },
-    { name: 'Cyberpunk' }
+    { name: 'buyer' }, 
+    { name: 'creator' },
+    { name: 'admin' },
+    { name: 'store_admin' }
 ])

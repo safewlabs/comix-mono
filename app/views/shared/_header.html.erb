@@ -17,13 +17,13 @@
     <div class="android-navigation-container">
       <nav class="android-navigation mdl-navigation">
           <a class="mdl-navigation__link " href="">Start Selling</a>
+          <a class="mdl-navigation__link " href="">Cart</a>          
           <% if signed_in? %>
-              <%= link_to('Logout', destroy_member_session_path, method: :delete) %>
+              <%= link_to('Logout', destroy_member_session_path, method: :delete, class: "mdl-navigation__link") %>
           <% else %>
+              <%= link_to('Join', new_member_registration_path, class: "mdl-navigation__link" )  %>          
               <%= link_to('Login', new_member_session_path, class: "mdl-navigation__link" )  %>
           <% end %>
-          <%= link_to('Join', new_member_registration_path, class: "mdl-navigation__link" )  %>
-          <a class="mdl-navigation__link " href="">Cart</a>
       </nav>
     </div>
     <span class="android-mobile-title mdl-layout-title">
