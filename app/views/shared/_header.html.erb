@@ -16,7 +16,7 @@
     </div>
     <div class="android-navigation-container">
       <nav class="android-navigation mdl-navigation">
-          <a class="mdl-navigation__link " href="">Start Selling</a>
+          <%= link_to('Start Selling', sell_on_comix_path, method: :get, class: "mdl-navigation__link") %>
           <a class="mdl-navigation__link " href="">Cart</a>          
           <% if signed_in? %>
               <%= link_to('Logout', destroy_member_session_path, method: :delete, class: "mdl-navigation__link") %>

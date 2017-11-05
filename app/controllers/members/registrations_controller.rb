@@ -7,6 +7,12 @@ class Members::RegistrationsController < Devise::RegistrationsController
   #   super
   # end
 
+  def seller
+    build_resource({})
+    yield resource if block_given?
+    respond_with resource
+  end
+
   # POST /resource
   def create
     super
