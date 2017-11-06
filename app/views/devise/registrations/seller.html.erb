@@ -3,7 +3,7 @@
   <h2 class="detail-heading">Sign up</h2>
 
   <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-    <%= f.hidden_field :roles, value: creator' %>
+    <%= f.hidden_field :roles, value: 'creator' %>
 
     <%= render 'devise/registrations/new', locals: {resource: resource} %>
   <% end %>
