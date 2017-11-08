@@ -7,7 +7,7 @@ class Members::RegistrationsController < Devise::RegistrationsController
   #   super
   # end
 
-  def seller
+  def creator
     build_resource({})
     yield resource if block_given?
     respond_with resource

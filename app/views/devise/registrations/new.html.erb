@@ -1,6 +1,6 @@
 <section id="select-comics-section" class="android-more-section">
 
-  <h2 class="detail-heading">Sign up</h2>
+  <h2 class="detail-heading">Join us</h2>
 
   <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
     <%= f.hidden_field :roles, value: 'buyer' %>
@@ -9,5 +9,5 @@
 
   <br/>
   
-  <%= render "devise/shared/links" %>
+  <%#= render "devise/shared/links" %>
 </section>

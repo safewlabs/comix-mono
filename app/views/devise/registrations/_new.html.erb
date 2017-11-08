@@ -1,7 +1,15 @@
 <%= fields_for resource do |f| %>
     
     <%= devise_error_messages! %>
-    
+
+    <%= link_to member_facebook_omniauth_authorize_path do %>
+        <%= image_tag 'fb_login.png', width: '300px' %>
+    <% end %>
+
+    <br/>
+
+    <h2>Or</h2>
+        
     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
         <%= f.label :email, for: "email", class: "mdl-textfield__label" %>        
         <%= f.email_field :email, class: "mdl-textfield__input", id: "email" %>
