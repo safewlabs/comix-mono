@@ -8,6 +8,8 @@
       <label class="mdl-textfield__label" for="email">Email</label>
     </div>
 
+    <br/>
+
     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
       <%= f.password_field :password, class: "mdl-textfield__input", autocomplete: "off" %>
       <label class="mdl-textfield__label" for="email">Password</label>
@@ -16,7 +18,7 @@
     <% if devise_mapping.rememberable? -%>
       <div class="field">
         <%= f.check_box :remember_me %>
-        <%= f.label :remember_me %>
+        <%= f.label :remember_me, class: "checkbox-label" %>
       </div>
     <% end -%>
 

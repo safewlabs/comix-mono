@@ -25,11 +25,15 @@ body {
     .mdl-textfield__input {
       font-family: 'Comfortaa', cursive;
       font-weight: 200;
-      border-bottom: 1px solid #ffffff;
+      border-bottom: 1px solid #757575;
     }
     .mdl-textfield__label {
-      color: #ffffff;
+      color: #757575;
     }
+  }
+
+  .checkbox-label {
+    color: black;
   }
 
   .android-content {
@@ -59,6 +63,10 @@ body {
       font-size: 30px;
       color: #fabc28;
     }
+  }
+
+  .member-signup {
+    width: 100%;
   }
 
   .medium-icon {
