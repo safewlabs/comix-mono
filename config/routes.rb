@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
+  get 'dashboard', to: 'dashboard#index', as: 'dashboard'
+
   get 'about-us', to: 'pages#about', as: 'about_us'
+  get 'terms-of-use', to: 'pages#terms_of_use', as: 'terms_of_use'
+  get 'privacy-policy', to: 'pages#privacy_policy', as: 'privacy_policy'
 
   root to: 'home#index'
 
