@@ -1,0 +1,26 @@
+<div class="mdl-layout__header-row">
+    <span class="android-title mdl-layout-title">
+        <%= link_to root_path do %>
+            <%= image_tag('logo.png', class: 'android-logo-image') %>
+        <% end %>
+    </span>
+
+    <div class="android-header-spacer mdl-layout-spacer"></div>
+    <div class="android-navigation-container">
+        <nav class="android-navigation mdl-navigation">
+            <%= link_to('Website', root_path, method: :get, class: "mdl-navigation__link") %>
+            <% if signed_in? %>
+                <%= link_to('Logout', destroy_member_session_path, method: :delete, class: "mdl-navigation__link") %>
+            <% else %>
+                <%= link_to('Join', new_member_registration_path, method: :get, class: "mdl-navigation__link" )  %>          
+                <%= link_to('Login', new_member_session_path, method: :get, class: "mdl-navigation__link" )  %>
+            <% end %>
+        </nav>
+    </div>
+    <%= render 'dashboard/drawer' %>
+    <span class="android-mobile-title mdl-layout-title">
+        <%= image_tag("logo.png", class: "android-logo-image") %>
+    </span>
+</div>
+
+<%= render "dashboard/subheader" %>
