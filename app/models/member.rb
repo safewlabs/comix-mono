@@ -5,6 +5,8 @@ class Member < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable,
          :omniauthable, omniauth_providers: [:facebook]
+  
+  has_many :stores
 
   after_initialize :set_default_role, if: :new_record?
 

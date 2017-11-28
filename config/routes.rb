@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+
+  resources :products
   get 'dashboard', to: 'dashboard#index', as: 'dashboard'
 
   get 'about-us', to: 'pages#about', as: 'about_us'

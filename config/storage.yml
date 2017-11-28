@@ -1,0 +1,7 @@
+amazon:
+  service: S3
+  access_key_id: <%= ENV['DIGITALOCEAN_SPACES_ACCESS_KEY_ID'] %>
+  secret_access_key: <%= ENV['DIGITALOCEAN_SPACES_SECRET_ACCESS_KEY'] %>
+  region: nyc3
+  bucket: <%= ENV['DIGITALOCEAN_SPACES_BUCKET'] %>
+  endpoint: 'https://nyc3.digitaloceanspaces.com'
