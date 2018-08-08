@@ -50,7 +50,7 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.7.2'
   gem 'factory_bot_rails'
   gem 'faker'
-  gem 'database_cleaner'
+  gem 'guard-rspec', '~> 4.7'
 end
 
 group :development do
@@ -63,6 +63,10 @@ group :development do
 end
 
 group :test do
+  gem 'database_cleaner'
+  gem 'shoulda-matchers', '~> 3.1'
+  gem 'rails-controller-testing'
+  gem 'webmock'
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '>= 2.15', '< 4.0'
   gem 'selenium-webdriver'
