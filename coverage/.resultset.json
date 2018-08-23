@@ -1,0 +1,51 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/Users/saurabhbhatia/comix-mono/app/models/role.rb": [
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null
+      ],
+      "/Users/saurabhbhatia/comix-mono/app/models/concerns/sluggable.rb": [
+        null,
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        0,
+        0,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null,
+        1,
+        null,
+        1,
+        0,
+        null,
+        null
+      ],
+      "/Users/saurabhbhatia/comix-mono/app/models/user.rb": [
+        0,
+        0,
+        null,
+        null,
+        0,
+        0,
+        0
+      ]
+    },
+    "timestamp": 1534997286
+  }
+}
