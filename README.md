@@ -1,3 +1,3 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/1482d87626eec74e1697/maintainability)](https://codeclimate.com/github/safewlabs/comix-mono/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/1482d87626eec74e1697/test_coverage)](https://codeclimate.com/github/safewlabs/comix-mono/test_coverage)
-[ ![Codeship Status for safewlabs/comix-mono](https://app.codeship.com/projects/1b9be7e0-a50e-0135-16d4-669675cbf703/status?branch=master)](https://app.codeship.com/projects/255140)
+[ ![Codeship Status for safewlabs/comix-mono](https://app.codeship.com/projects/1b9be7e0-a50e-0135-16d4-669675cbf703/status?branch=new-app)](https://app.codeship.com/projects/255140)
