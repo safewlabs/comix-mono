@@ -10,7 +10,7 @@ RSpec.describe Store, type: :model do
       end
     end
     
-    context 'with store trait' do
+    context 'with users trait' do
       let(:store) { build(:store, :with_users) }
   
       it 'has a valid factory with store trait' do
@@ -20,11 +20,30 @@ RSpec.describe Store, type: :model do
   end
   
   describe 'test associations' do
+    context 'test owner association' do
+      let(:store) { build(:store) }
+      
+      it 'belongs to a user' do
+        expect(store).to belong_to(:owner)
+      end
+    end
+    
     context 'test teams association' do
       let(:store) { build(:store, :with_users) }
       
       it 'has many teams' do
         expect(store).to have_many(:teams)
+      end
+    end
+  end
+  
+  describe 'slug generation' do
+    context 'create a slug' do
+      let(:store) { build_stubbed(:store) }
+      
+      it 'should create a slug for store before_create' do
+        store.run_callbacks :create
+        expect(store.slug).not_to be_empty
       end
     end
   end

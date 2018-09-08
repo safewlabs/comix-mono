@@ -16,6 +16,7 @@
         null,
         1,
         1,
+        1,
         null
       ],
       "/Users/saurabhbhatia/comix-mono/app/models/concerns/sluggable.rb": [
@@ -29,8 +30,8 @@
         null,
         null,
         1,
-        1,
-        1,
+        2,
+        2,
         null,
         null,
         1,
@@ -40,7 +41,7 @@
         1,
         null,
         1,
-        1,
+        2,
         null,
         null
       ],
@@ -54,9 +55,10 @@
         null,
         0,
         0,
+        0,
         0
       ]
     },
-    "timestamp": 1536269678
+    "timestamp": 1536410580
   }
 }
