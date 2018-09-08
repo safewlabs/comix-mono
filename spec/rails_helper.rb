@@ -1,6 +1,7 @@
 # This file is copied to spec/ when you run 'rails generate rspec:install'
 require 'spec_helper'
 require 'simplecov'
+require 'codecov'
 require 'capybara/rspec'
 require 'webmock/rspec'
 
@@ -34,6 +35,7 @@ SimpleCov.start 'rails' do
     source_file.lines.count < 5
   end
 end
+SimpleCov.formatter = SimpleCov::Formatter::Codecov
 Shoulda::Matchers.configure do |config|
   config.integrate do |with|
     with.test_framework :rspec

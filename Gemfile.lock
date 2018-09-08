@@ -65,6 +65,10 @@ GEM
     chromedriver-helper (1.2.0)
       archive-zip (~> 0.10)
       nokogiri (~> 1.8)
+    codecov (0.1.10)
+      json
+      simplecov
+      url
     coderay (1.1.2)
     coffee-rails (4.2.2)
       coffee-script (>= 2.2.0)
@@ -277,6 +281,7 @@ GEM
       thread_safe (~> 0.1)
     uglifier (4.1.18)
       execjs (>= 0.3.0, < 3)
+    url (0.3.2)
     warden (1.2.7)
       rack (>= 1.0)
     web-console (3.6.2)
@@ -306,6 +311,7 @@ DEPENDENCIES
   byebug
   capybara (>= 2.15, < 4.0)
   chromedriver-helper
+  codecov
   coffee-rails (~> 4.2)
   database_cleaner
   devise
