@@ -1,0 +1,24 @@
+version: '3'
+services:
+  db:
+    image: postgres
+    volumes:
+      - ./tmp/db:/var/lib/postgresql/data
+  webpacker:
+    build: .
+    env_file:
+      - '.env.docker'
+    command: ./bin/webpack-dev-server
+    volumes:
+      - .:/comix-mono
+    ports:
+      - '3035:3035'
+  web:
+    build: .
+    command: bundle exec rails s -p 3000 -b '0.0.0.0'
+    volumes:
+      - .:/comix-mono
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
