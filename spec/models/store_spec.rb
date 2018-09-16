@@ -37,7 +37,7 @@ RSpec.describe Store, type: :model do
     end
   end
   
-  describe 'slug generation' do
+  describe 'test slug generation' do
     context 'create a slug' do
       let(:store) { build_stubbed(:store) }
       
