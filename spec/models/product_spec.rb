@@ -20,4 +20,15 @@ RSpec.describe Product, type: :model do
       end
     end
   end
+
+  describe 'test slug generation' do
+    context 'create a slug' do
+      let(:product) { build_stubbed(:product) }
+      
+      it 'should create a slug for product before_create' do
+        product.run_callbacks :create
+        expect(product.slug).not_to be_empty
+      end
+    end
+  end
 end
