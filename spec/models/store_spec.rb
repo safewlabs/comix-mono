@@ -35,6 +35,14 @@ RSpec.describe Store, type: :model do
         expect(store).to have_many(:teams)
       end
     end
+    
+    context 'test products association' do
+      let(:store) { build(:store, :with_products) }
+      
+      it 'has many teams' do
+        expect(store).to have_many(:products)
+      end
+    end
   end
   
   describe 'test slug generation' do
