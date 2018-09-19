@@ -17,6 +17,14 @@ RSpec.describe Product, type: :model do
         expect(product).to be_valid
       end
     end
+
+    context 'with collaborators trait' do
+      let(:product) { build(:product, :with_genres) }
+  
+      it 'has a valid factory with store trait' do
+        expect(product).to be_valid
+      end
+    end
   end
   
   describe 'test associations' do
@@ -25,6 +33,22 @@ RSpec.describe Product, type: :model do
       
       it 'belongs to a store' do
         expect(product).to belong_to(:store)
+      end
+    end
+
+    context 'test collaborators association' do
+      let(:product) { build(:product, :with_collaborators) }
+      
+      it 'has many teams' do
+        expect(product).to have_many(:collaborations)
+      end
+    end
+    
+    context 'test products_genre association' do
+      let(:product) { build(:product, :with_genres) }
+      
+      it 'has many teams' do
+        expect(product).to have_many(:genres)
       end
     end
   end

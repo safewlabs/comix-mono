@@ -21,4 +21,7 @@ class Product < ApplicationRecord
   belongs_to :store
   has_many :collaborations
   has_many :creators, through: :collaborations
+  
+  has_many :products_genres
+  has_many :genres, through: :products_genres
 end

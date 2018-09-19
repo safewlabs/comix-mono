@@ -17,5 +17,15 @@ FactoryBot.define do
         create_list(:collaborations, number_of_collaborations, product: product)
       end
     end
+    
+    trait :with_genres do
+      transient do
+        number_of_genres { 2 }
+      end
+      
+      after(:create) do |product|
+        create_list(:products_genre, number_of_genres, product: product)
+      end
+    end
   end
 end

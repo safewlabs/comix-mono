@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_09_18_114356) do
+ActiveRecord::Schema.define(version: 2018_09_19_120309) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -37,6 +37,12 @@ ActiveRecord::Schema.define(version: 2018_09_18_114356) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "genres", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "products", force: :cascade do |t|
     t.string "name"
     t.text "description"
@@ -49,6 +55,15 @@ ActiveRecord::Schema.define(version: 2018_09_18_114356) do
     t.datetime "updated_at", null: false
     t.string "slug"
     t.index ["store_id"], name: "index_products_on_store_id"
+  end
+
+  create_table "products_genres", force: :cascade do |t|
+    t.bigint "product_id"
+    t.bigint "genre_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["genre_id"], name: "index_products_genres_on_genre_id"
+    t.index ["product_id"], name: "index_products_genres_on_product_id"
   end
 
   create_table "roles", force: :cascade do |t|
@@ -115,4 +130,6 @@ ActiveRecord::Schema.define(version: 2018_09_18_114356) do
   add_foreign_key "collaborations", "creators"
   add_foreign_key "collaborations", "products"
   add_foreign_key "products", "stores"
+  add_foreign_key "products_genres", "genres"
+  add_foreign_key "products_genres", "products"
 end

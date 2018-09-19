@@ -17,6 +17,14 @@ RSpec.describe Store, type: :model do
         expect(store).to be_valid
       end
     end
+    
+    context 'with products trait' do
+      let(:store) { build(:store, :with_products) }
+  
+      it 'has a valid factory with store trait' do
+        expect(store).to be_valid
+      end
+    end
   end
   
   describe 'test associations' do

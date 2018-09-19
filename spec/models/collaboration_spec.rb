@@ -12,10 +12,10 @@ RSpec.describe Collaboration, type: :model do
   end
   
   describe 'test associations' do
-    context 'test owner association' do
+    context 'test fk associations' do
       let(:collaboration) { build(:collaboration) }
     
-      it 'belongs to a user' do
+      it 'belongs to a creator and a product' do
         expect(collaboration).to belong_to(:creator)
         expect(collaboration).to belong_to(:product)
       end
