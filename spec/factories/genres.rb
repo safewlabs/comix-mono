@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :genre do
-    name { "Superhero" }
+    name { Faker::Book.genre }
     
     trait :with_products do
       transient do
