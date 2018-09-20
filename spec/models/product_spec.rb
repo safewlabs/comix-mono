@@ -18,8 +18,16 @@ RSpec.describe Product, type: :model do
       end
     end
 
-    context 'with collaborators trait' do
+    context 'with genres trait' do
       let(:product) { build(:product, :with_genres) }
+  
+      it 'has a valid factory with store trait' do
+        expect(product).to be_valid
+      end
+    end
+
+    context 'with categories trait' do
+      let(:product) { build(:product, :with_categories) }
   
       it 'has a valid factory with store trait' do
         expect(product).to be_valid
@@ -39,7 +47,7 @@ RSpec.describe Product, type: :model do
     context 'test collaborators association' do
       let(:product) { build(:product, :with_collaborators) }
       
-      it 'has many teams' do
+      it 'has many collaborations' do
         expect(product).to have_many(:collaborations)
       end
     end
@@ -47,8 +55,16 @@ RSpec.describe Product, type: :model do
     context 'test products_genre association' do
       let(:product) { build(:product, :with_genres) }
       
-      it 'has many teams' do
+      it 'has many genres' do
         expect(product).to have_many(:genres)
+      end
+    end
+
+    context 'test products_category association' do
+      let(:product) { build(:product, :with_categories) }
+      
+      it 'has many categories' do
+        expect(product).to have_many(:categories)
       end
     end
   end

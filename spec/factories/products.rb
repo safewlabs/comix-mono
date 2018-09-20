@@ -27,5 +27,15 @@ FactoryBot.define do
         create_list(:products_genre, number_of_genres, product: product)
       end
     end
+
+    trait :with_categories do
+      transient do
+        number_of_categories { 2 }
+      end
+      
+      after(:create) do |product|
+        create_list(:products_categories, number_of_categories, product: product)
+      end
+    end
   end
 end

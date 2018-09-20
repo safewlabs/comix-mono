@@ -1,6 +1,22 @@
 {
   "RSpec": {
     "coverage": {
+      "/Users/saurabhbhatia/comix-mono/app/models/category.rb": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null
+      ],
       "/Users/saurabhbhatia/comix-mono/app/models/collaboration.rb": [
         null,
         null,
@@ -26,6 +42,22 @@
         null,
         null,
         null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null
+      ],
+      "/Users/saurabhbhatia/comix-mono/app/models/genre.rb": [
         null,
         null,
         null,
@@ -68,6 +100,9 @@
         null,
         1,
         1,
+        null,
+        1,
+        1,
         null
       ],
       "/Users/saurabhbhatia/comix-mono/app/models/concerns/sluggable.rb": [
@@ -81,8 +116,8 @@
         null,
         null,
         1,
-        17,
-        17,
+        23,
+        23,
         null,
         null,
         1,
@@ -92,8 +127,42 @@
         1,
         null,
         1,
-        17,
+        23,
         null,
+        null
+      ],
+      "/Users/saurabhbhatia/comix-mono/app/models/products_category.rb": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null
+      ],
+      "/Users/saurabhbhatia/comix-mono/app/models/products_genre.rb": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        1,
+        1,
         null
       ],
       "/Users/saurabhbhatia/comix-mono/app/models/role.rb": [
@@ -190,6 +259,6 @@
         0
       ]
     },
-    "timestamp": 1537442566
+    "timestamp": 1537444412
   }
 }

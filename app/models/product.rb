@@ -24,4 +24,7 @@ class Product < ApplicationRecord
   
   has_many :products_genres
   has_many :genres, through: :products_genres
+  
+  has_many :products_categories
+  has_many :categories, through: :products_categories
 end

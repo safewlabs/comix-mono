@@ -9,5 +9,23 @@ RSpec.describe Category, type: :model do
         expect(category).to be_valid
       end
     end
+    
+    context 'with products trait' do
+      let(:category) { build(:category, :with_products) }
+  
+      it 'has a valid factory with store trait' do
+        expect(category).to be_valid
+      end
+    end
+  end
+
+  describe 'test associations' do
+    context 'test products_category association' do
+      let(:category) { build(:category, :with_products) }
+      
+      it 'has many products' do
+        expect(category).to have_many(:products)
+      end
+    end
   end
 end
