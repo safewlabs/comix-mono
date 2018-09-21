@@ -23,5 +23,15 @@ FactoryBot.define do
         create_list(:products, number_of_products, store: store)
       end
     end
+    
+    trait :with_publications do
+      transient do
+        number_of_publications { 2 }
+      end
+      
+      after(:create) do |store|
+        create_list(:publications, number_of_publications, store: store)
+      end
+    end
   end
 end

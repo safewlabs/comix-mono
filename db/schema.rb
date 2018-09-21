@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_09_20_114001) do
+ActiveRecord::Schema.define(version: 2018_09_21_122416) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -60,6 +60,8 @@ ActiveRecord::Schema.define(version: 2018_09_20_114001) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "slug"
+    t.bigint "publication_id"
+    t.index ["publication_id"], name: "index_products_on_publication_id"
     t.index ["store_id"], name: "index_products_on_store_id"
   end
 
@@ -79,6 +81,16 @@ ActiveRecord::Schema.define(version: 2018_09_20_114001) do
     t.datetime "updated_at", null: false
     t.index ["genre_id"], name: "index_products_genres_on_genre_id"
     t.index ["product_id"], name: "index_products_genres_on_product_id"
+  end
+
+  create_table "publications", force: :cascade do |t|
+    t.string "name"
+    t.text "bio"
+    t.string "type"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "store_id"
+    t.index ["store_id"], name: "index_publications_on_store_id"
   end
 
   create_table "roles", force: :cascade do |t|
@@ -144,9 +156,11 @@ ActiveRecord::Schema.define(version: 2018_09_20_114001) do
 
   add_foreign_key "collaborations", "creators"
   add_foreign_key "collaborations", "products"
+  add_foreign_key "products", "publications"
   add_foreign_key "products", "stores"
   add_foreign_key "products_categories", "categories"
   add_foreign_key "products_categories", "products"
   add_foreign_key "products_genres", "genres"
   add_foreign_key "products_genres", "products"
+  add_foreign_key "publications", "stores"
 end

@@ -42,6 +42,10 @@ RSpec.describe Product, type: :model do
       it 'belongs to a store' do
         expect(product).to belong_to(:store)
       end
+
+      it 'belongs to a publiction' do
+        expect(product).to belong_to(:publication)
+      end
     end
 
     context 'test collaborators association' do

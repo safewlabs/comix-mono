@@ -7,6 +7,7 @@ FactoryBot.define do
     release_date { "2018-09-16 17:58:16" }
     age_rating { "13+" }
     association :store, factory: :store
+    association :publication, factory: :publication
     
     trait :with_collaborators do
       transient do
