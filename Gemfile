@@ -54,7 +54,7 @@ group :development, :test do
 end
 
 group :development do
-  gem 'annotate', git: 'https://github.com/ctran/annotate_models.git'
+  gem 'annotate'
   gem 'listen', '>= 3.0.5', '< 3.2'
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
   gem 'web-console', '>= 3.3.0'
