@@ -15,6 +15,8 @@
 #
 
 class Creator < ApplicationRecord
+  include Sluggable
+  
   has_many :collaborations
   has_many :products, through: :collaborations
 end

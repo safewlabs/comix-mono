@@ -28,4 +28,15 @@ RSpec.describe Publication, type: :model do
       end
     end
   end
+  
+  describe 'test slug generation' do
+    context 'create a slug' do
+      let(:publication) { build_stubbed(:publication) }
+      
+      it 'should create a slug for publication before_create' do
+        publication.run_callbacks :create
+        expect(publication.slug).not_to be_empty
+      end
+    end
+  end
 end

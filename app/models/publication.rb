@@ -12,6 +12,8 @@
 #
 
 class Publication < ApplicationRecord
+  include Sluggable
+  
   has_many :products
   belongs_to :store
 end

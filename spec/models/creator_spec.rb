@@ -18,4 +18,15 @@ RSpec.describe Creator, type: :model do
       end
     end
   end
+  
+  describe 'test slug generation' do
+    context 'create a slug' do
+      let(:creator) { build_stubbed(:creator) }
+      
+      it 'should create a slug for creator before_create' do
+        creator.run_callbacks :create
+        expect(creator.slug).not_to be_empty
+      end
+    end
+  end
 end
