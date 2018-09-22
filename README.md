@@ -45,3 +45,7 @@ We use RSpec as our testing framework. Run the tests using the following command
 ```
 bundle exec rspec
 ```
+
+### Models
+
+![Alt models](./docs/models_complete.svg)
