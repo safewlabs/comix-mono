@@ -48,4 +48,4 @@ bundle exec rspec
 
 ### Models
 
-![Alt models](./docs/models_complete.svg)
+![Alt models](./doc/models_complete.svg)
