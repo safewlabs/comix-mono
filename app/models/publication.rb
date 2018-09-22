@@ -9,6 +9,7 @@
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #  store_id   :bigint(8)
+#  slug       :string
 #
 
 class Publication < ApplicationRecord

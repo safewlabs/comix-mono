@@ -12,6 +12,7 @@
 #  facebook   :string
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
+#  slug       :string
 #
 
 class Creator < ApplicationRecord
