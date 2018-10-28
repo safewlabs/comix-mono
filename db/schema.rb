@@ -108,10 +108,12 @@ ActiveRecord::Schema.define(version: 2018_09_22_020421) do
   create_table "stores", force: :cascade do |t|
     t.string "name"
     t.string "description"
+    t.bigint "user_id"
     t.string "slug"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "owner_id"
+    t.index ["user_id"], name: "index_stores_on_user_id"
   end
 
   create_table "teams", force: :cascade do |t|
@@ -145,15 +147,6 @@ ActiveRecord::Schema.define(version: 2018_09_22_020421) do
     t.index ["role_id"], name: "index_users_roles_on_role_id"
     t.index ["user_id", "role_id"], name: "index_users_roles_on_user_id_and_role_id"
     t.index ["user_id"], name: "index_users_roles_on_user_id"
-  end
-
-  create_table "users_stores", force: :cascade do |t|
-    t.bigint "user_id"
-    t.bigint "store_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["store_id"], name: "index_users_stores_on_store_id"
-    t.index ["user_id"], name: "index_users_stores_on_user_id"
   end
 
   add_foreign_key "collaborations", "creators"

@@ -1,8 +1,13 @@
 Rails.application.routes.draw do
   root 'home#index'
+  
   devise_for :users, controllers: {
-    sessions: 'users/sessions',
-    registrations: 'users/registrations'
+    registrations: 'users/registrations',
+    sessions: 'users/sessions'
   }
+  
+  devise_scope :user do
+    get 'sell-on-comix', to: 'users/registrations#creator'
+  end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

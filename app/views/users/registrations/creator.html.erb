@@ -1,9 +1,6 @@
-<h2>Join Us</h2>
-
+<h2>Start selling with us</h2>
+  
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= f.hidden_field :roles, value: 'buyer' %>    
+  <%= f.hidden_field :roles, value: 'creator' %>    
   <%= render 'users/registrations/new', locals: {resource: resource} %>
 <% end %>
-
-
-<%= render "users/shared/links" %>
