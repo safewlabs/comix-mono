@@ -1,7 +1,10 @@
-Rails.application.routes.draw do
-  get 'pages/about'
+Rails.application.routes.draw do  
   root 'home#index'
   
+  # pages
+  get 'about', to: 'pages#about' as: 'about'
+  
+  # user management
   devise_for :users, controllers: {
     registrations: 'users/registrations',
     sessions: 'users/sessions'
