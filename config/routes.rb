@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   root 'home#index'
   
   # pages
-  get 'about', to: 'pages#about' as: 'about'
+  get 'about', to: 'pages#about', as: 'about'
   
   # user management
   devise_for :users, controllers: {
