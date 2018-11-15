@@ -17,6 +17,8 @@
 #  updated_at             :datetime         not null
 #
 
+require 'uri'
+
 class User < ApplicationRecord
   rolify
   # Include default devise modules. Others available are:
@@ -27,4 +29,6 @@ class User < ApplicationRecord
   has_many :stores
   has_many :teams
   has_many :stores, through: :teams
+
+  # validates :email, format: { with: URI::MailTo::EMAIL_REGEXP, message: "only allows valid emails" }
 end

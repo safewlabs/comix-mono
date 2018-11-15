@@ -304,8 +304,8 @@
         null,
         null,
         1,
-        0,
-        0,
+        3,
+        3,
         null,
         null,
         null,
@@ -336,7 +336,7 @@
         null,
         null,
         1,
-        0,
+        3,
         null,
         null,
         null,
@@ -376,15 +376,19 @@
         null,
         null,
         0,
-        0,
-        null,
         null,
         0,
         0,
         null,
+        null,
+        0,
+        0,
+        null,
         0,
         0,
         0,
+        null,
+        null,
         0
       ],
       "/Users/saurabhbhatia/comix-mono/app/controllers/users/omniauth_callbacks_controller.rb": [
@@ -520,6 +524,6 @@
         0
       ]
     },
-    "timestamp": 1542261834
+    "timestamp": 1542296357
   }
 }
