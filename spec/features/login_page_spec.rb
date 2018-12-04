@@ -12,10 +12,29 @@ RSpec.describe "load login page", type: :feature do
     visit "/users/sign_in"
     expect(page).to have_content 'Log in'
   end
-#   describe 'successful sign up' do
-#     let(:user) { attributes_for(:user) }
-#     it "signs up successfully with matching credentials" do
+  
+  describe 'successful login in' do
+    let(:user) { create(:user, password: 'password123', password_confirmation: 'password123') }
 
-#     end
-#   end
+    it "logs in successfully with matching credentials" do
+      visit new_user_session_path
+      fill_in "user[email]", with: user[:email]
+      fill_in "user[password]", with: 'password123'
+      click_button "Log in"
+      expect(page).to have_content "Logged in as #{user[:email]}"
+    end
+  end
+  
+  describe 'unsuccessful login in' do
+    let(:user) { create(:user, password: 'password123', password_confirmation: 'password123') }
+
+    it "signs up successfully with matching credentials" do
+      visit new_user_session_path
+      fill_in "user[email]", with: user[:email]
+      fill_in "user[password]", with: 'password456'
+      click_button "Log in"
+      expect(page).to have_content "Invalid Email or password."
+    end
+  end
+  
 end
