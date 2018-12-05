@@ -35,6 +35,14 @@ RSpec.describe "load login page", type: :feature do
       click_button "Log in"
       expect(page).to have_content "Invalid Email or password."
     end
+    
+    it "signs up successfully with matching credentials" do
+      visit new_user_session_path
+      fill_in "user[email]", with: 'test@pass.com'
+      fill_in "user[password]", with: 'password123'
+      click_button "Log in"
+      expect(page).to have_content "Invalid Email or password."
+    end
   end
   
 end
