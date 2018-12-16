@@ -1,6 +1,8 @@
 Rails.application.routes.draw do  
   root 'home#index'
   
+  get 'dashboard', to: 'dashboards#index', as: 'dashboard'
+  
   # pages
   get 'about', to: 'pages#about', as: 'about'
   
