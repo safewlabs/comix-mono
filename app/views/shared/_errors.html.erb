@@ -1,0 +1,5 @@
+    <% if flash.present? %>
+      <% flash.each do |key, value| %>
+        <%= value %>
+      <% end %>
+    <% end %>

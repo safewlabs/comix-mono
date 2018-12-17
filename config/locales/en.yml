@@ -31,3 +31,7 @@
 
 en:
   hello: "Hello world"
+  pundit:
+    default: 'You cannot perform this action.'
+    dashboards_policy:
+      index?: 'You are not allowed to access this page!'
