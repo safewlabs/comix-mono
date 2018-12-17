@@ -9,6 +9,7 @@ gem 'rails', '~> 5.2.2'
 gem 'pg', '>= 0.18', '< 2.0'
 gem 'devise', '~> 4.5.0'
 gem 'rolify'
+gem 'pundit'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
@@ -67,7 +68,7 @@ end
 group :test do
   gem 'database_cleaner'
   gem 'rails-controller-testing'
-  gem 'shoulda-matchers', '~> 3.1'
+  gem 'shoulda-matchers', '4.0.0.rc1'
   gem 'simplecov'
   gem 'codecov'
   gem 'webmock'
