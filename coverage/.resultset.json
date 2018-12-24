@@ -258,7 +258,7 @@
       "/Users/saurabhbhatia/comix-mono/app/policies/dashboards_policy.rb": [
         1,
         1,
-        6,
+        7,
         null,
         null
       ],
@@ -271,10 +271,10 @@
         1,
         null,
         1,
-        1,
+        2,
         null,
-        1,
-        1,
+        2,
+        2,
         null,
         null
       ],
@@ -283,7 +283,7 @@
         1,
         null,
         1,
-        4,
+        5,
         null,
         null
       ],
@@ -630,6 +630,6 @@
         0
       ]
     },
-    "timestamp": 1545649894
+    "timestamp": 1545650221
   }
 }
