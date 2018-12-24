@@ -20,4 +20,13 @@ RSpec.describe "load dashboards page", type: :feature do
       expect(page).to have_content 'You are not allowed to access this page!'
     end
   end
+  
+  context 'dashboard page is not accessible without login' do
+    let(:user) { create(:user) }
+  
+    it 'loads dashboard page' do
+      visit "/dashboard"
+      expect(page).to have_content 'Log in'
+    end
+  end
 end
