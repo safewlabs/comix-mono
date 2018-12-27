@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   
   get 'dashboard', to: 'dashboards#index', as: 'dashboard'
   
+  resources :stores
+
   # pages
   get 'about', to: 'pages#about', as: 'about'
   

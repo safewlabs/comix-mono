@@ -14,21 +14,21 @@ RSpec.describe "load login page", type: :feature do
   end
   
   describe 'successful login in' do
-    let(:user) { create(:user, password: 'password123', password_confirmation: 'password123') }
+    let(:user) { create(:user) }
 
     it "logs in successfully with matching credentials" do
       visit new_user_session_path
       fill_in "user[email]", with: user[:email]
-      fill_in "user[password]", with: 'password123'
+      fill_in "user[password]", with: 'password'
       click_button "Log in"
       expect(page).to have_content "Logged in as #{user[:email]}"
     end
   end
   
   describe 'unsuccessful login in' do
-    let(:user) { create(:user, password: 'password123', password_confirmation: 'password123') }
+    let(:user) { create(:user) }
 
-    it "signs up successfully with matching credentials" do
+    it "slogin fails without matching password" do
       visit new_user_session_path
       fill_in "user[email]", with: user[:email]
       fill_in "user[password]", with: 'password456'
@@ -36,10 +36,10 @@ RSpec.describe "load login page", type: :feature do
       expect(page).to have_content "Invalid Email or password."
     end
     
-    it "signs up successfully with matching credentials" do
+    it "slogin fails without matching email" do
       visit new_user_session_path
       fill_in "user[email]", with: 'test@pass.com'
-      fill_in "user[password]", with: 'password123'
+      fill_in "user[password]", with: 'password'
       click_button "Log in"
       expect(page).to have_content "Invalid Email or password."
     end

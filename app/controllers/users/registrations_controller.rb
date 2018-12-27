@@ -79,7 +79,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
 
   def after_sign_up_path_for(resource)
     if resource.has_role?(:creator)
-      dashboard_path
+      new_store_path
     else
       root_path
     end
