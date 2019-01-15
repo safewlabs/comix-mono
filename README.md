@@ -10,6 +10,7 @@
 * Rails 5.2.1
 * PostgreSQL
 * Stimulus JS
+* Tailwind CSS
 * RSpec
 * Capybara
 * FactoryBot
@@ -31,11 +32,15 @@ $ bundle install
 $ yarn install
 $ rails db:create db:migrate db:seed
 ```
+In order to run the server, install foreman
 
+```
+$ gem install foreman
+```
 Start the server.
 
 ```shell
-$ rails s
+$ foreman start -f Procfile.dev
 ```
 
 ### Testing

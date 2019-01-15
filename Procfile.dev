@@ -1,0 +1,3 @@
+# Procfile
+rails: rails s
+node: ./bin/webpack --watch --colors --progress

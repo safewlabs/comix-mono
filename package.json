@@ -6,6 +6,8 @@
     "stimulus": "^1.0.1"
   },
   "devDependencies": {
+    "autoprefixer": "^9.4.5",
+    "tailwindcss": "^0.7.3",
     "webpack-dev-server": "3.1.14"
   }
 }
