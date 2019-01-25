@@ -42,6 +42,11 @@ Start the server.
 ```shell
 $ foreman start -f Procfile.dev
 ```
+Or use docker
+
+```
+$ docker-compose up
+```
 
 ### Testing
 
