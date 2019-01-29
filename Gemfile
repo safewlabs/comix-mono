@@ -7,7 +7,7 @@ ruby '2.5.1'
 gem 'rails', '6.0.0.beta1'
 # Use postgresql as the database for Active Record
 gem 'pg', '>= 0.18', '< 2.0'
-gem 'devise', '~> 4.5.0'
+gem 'devise', git: 'https://github.com/plataformatec/devise.git'
 gem 'rolify'
 gem 'pundit'
 # Use Puma as the app server
