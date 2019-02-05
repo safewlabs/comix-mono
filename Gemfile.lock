@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/plataformatec/devise.git
-  revision: 6064ca8b736faafa2f597e5319c1a43938c2eae9
+  revision: a921c10e6ab0b96b7f2d9e880ef7842376b053da
   specs:
     devise (4.5.0)
       bcrypt (~> 3.0)
