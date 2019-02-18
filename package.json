@@ -3,11 +3,11 @@
   "private": true,
   "dependencies": {
     "@rails/webpacker": "3.5",
-    "stimulus": "^1.1.1"
+    "stimulus": "^1.1.1",
+    "tailwindcss": "^0.7.3"
   },
   "devDependencies": {
     "autoprefixer": "^9.4.5",
-    "tailwindcss": "^0.7.3",
     "webpack-dev-server": "3.1.14"
   }
 }
