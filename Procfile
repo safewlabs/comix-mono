@@ -1,4 +1,4 @@
 # Procfile
 release: rails db:migrate
 rails: rails s
-node: ./bin/webpack --watch --colors --progress
+node: NODE_ENV=production ./bin/webpack --watch --colors --progress
