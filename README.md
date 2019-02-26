@@ -11,10 +11,8 @@
 * PostgreSQL
 * Stimulus JS
 * Tailwind CSS
-* RSpec
-* Capybara
-* FactoryBot
-* Faker
+* RSpec, Capybara, FactoryBot, Faker
+* Sidekiq & Rediss
 
 ### Services
 
