@@ -1,4 +1,3 @@
 # Procfile
 release: rails db:migrate
-rails: rails s
-node: ./bin/webpack --watch --colors --progress
+web: bundle exec rails s && ./bin/webpack --watch --colors --progress
