@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/plataformatec/devise.git
-  revision: 2e5b5fcd705b06c518ab0156b96badb91c4cb6ea
+  revision: c1e4031e3b16e51d595a862326bc47822282d622
   specs:
     devise (4.6.2)
       bcrypt (~> 3.0)
@@ -186,7 +186,7 @@ GEM
     puma (3.12.1)
     pundit (2.0.1)
       activesupport (>= 3.0.0)
-    rack (2.0.6)
+    rack (2.0.7)
     rack-proxy (0.6.5)
       rack
     rack-test (1.1.0)
