@@ -125,7 +125,12 @@ let colors = {
   pink: "#f66d9b",
   "pink-light": "#fa7ea8",
   "pink-lighter": "#ffbbca",
-  "pink-lightest": "#ffebef"
+  "pink-lightest": "#ffebef",
+  "cx-grain-yellow": "#f7c759",
+  "cx-beaver": "#9e7f66",
+  "cx-crayola": "#ffb728",
+  "cx-lavender-blush": "#ffe8f2",
+  "cx-pumpkin": "#ff683a"
 };
 
 module.exports = {
@@ -203,7 +208,8 @@ module.exports = {
       "Droid Sans",
       "Helvetica Neue",
       "sans-serif",
-      "Quicksand"
+      "Quicksand",
+      "Nunito"
     ],
     serif: [
       "Constantia",
