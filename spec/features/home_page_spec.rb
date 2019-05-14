@@ -14,7 +14,7 @@ RSpec.describe "load home page", type: :feature do
 
   it "redirects to signup page" do
     visit "/"
-    click_link 'Sign up'
+    click_link 'Join'
     expect(page).to have_content 'Join Us'
   end
 

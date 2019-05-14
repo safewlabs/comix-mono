@@ -14,7 +14,7 @@ RSpec.describe "load sign up page", type: :feature do
       fill_in "user[email]", with: user[:email]
       fill_in "user[password]", with: user[:password]
       fill_in "user[password_confirmation]", with: user[:password]
-      click_button "Sign up"
+      click_button "Join"
       expect(page).to have_content "Logged in as #{user[:email]}"
     end
   end
@@ -28,7 +28,7 @@ RSpec.describe "load sign up page", type: :feature do
         fill_in "user[email]", with: user[:email]
         fill_in "user[password]", with: user[:password]
         fill_in "user[password_confirmation]", with: SecureRandom.alphanumeric(8)
-        click_button "Sign up"
+        click_button "Join"
         expect(page).to have_content "1 error prohibited this user from being saved:"
         expect(page).to have_content "Password confirmation doesn't match Password"
       end
@@ -42,7 +42,7 @@ RSpec.describe "load sign up page", type: :feature do
         fill_in "user[email]", with: user[:email]
         fill_in "user[password]", with: SecureRandom.alphanumeric(5)
         fill_in "user[password_confirmation]", with: SecureRandom.alphanumeric(5)
-        click_button "Sign up"
+        click_button "Join"
         expect(page).to have_content "Password is too short (minimum is 6 characters)"
       end
     end
