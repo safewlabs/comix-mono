@@ -1,5 +1,5 @@
 <%= fields_for resource do |f| %>
-  <%= devise_error_messages! %>
+  <%= render "devise/shared/error_messages" %>
 
   <div class="field">
   	<%= f.label :email, for: "email" %>        
