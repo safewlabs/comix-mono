@@ -12,7 +12,7 @@
 * Stimulus JS
 * Tailwind CSS
 * RSpec, Capybara, FactoryBot, Faker
-* Sidekiq & Rediss
+* Sidekiq & Redis
 
 ### Services
 

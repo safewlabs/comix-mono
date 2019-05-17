@@ -3,9 +3,10 @@ body {
 }
 a {
   text-decoration: none;
+  @apply .font-nunito;
 }
 .navbar-link {
   &:hover {
-    @apply .text-cx-lavender-blush .p-2 .bg-cx-pumpkin;
+    @apply .text-cx-lavender-blush .bg-cx-pumpkin;
   }
 }
