@@ -6,8 +6,8 @@
 
 ### Stack
 
-* Ruby 2.5.1
-* Rails 6.0.0 beta
+* Ruby 2.6.1
+* Rails 6
 * PostgreSQL
 * Stimulus JS
 * Tailwind CSS
