@@ -6,7 +6,12 @@ a {
   @apply .font-nunito;
 }
 .navbar-link {
+  background-image: linear-gradient(#ff683a, #ff683a);
+  background-position: 0% 100%;
+  background-repeat: no-repeat;
+  background-size: 0% 2px;
+  transition: background-size .3s;
   &:hover {
-    @apply .text-cx-lavender-blush .bg-cx-pumpkin;
+    background-size: 100% 3px;
   }
 }
