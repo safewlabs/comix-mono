@@ -3,7 +3,7 @@ body {
 }
 a {
   text-decoration: none;
-  @apply .font-nunito;
+  @apply .font-nunito .text-xl;
 }
 .navbar-link {
   background-image: linear-gradient(#ff683a, #ff683a);
