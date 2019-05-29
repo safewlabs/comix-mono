@@ -3,14 +3,14 @@ body {
 }
 a {
   text-decoration: none;
-  @apply .font-maven-pro  .text-xl .font-bold;
+  @apply .font-maven-pro  .text-xl .font-normal;
 }
 .navbar-link {
   background-image: linear-gradient(#ff683a, #ff683a);
   background-position: 0% 100%;
   background-repeat: no-repeat;
   background-size: 0% 2px;
-  transition: background-size .3s;
+  transition: background-size 0.3s;
   &:hover {
     background-size: 100% 3px;
   }
