@@ -26,7 +26,7 @@ RSpec.describe "load dashboards page", type: :feature do
   
     it 'loads dashboard page' do
       visit "/dashboard"
-      expect(page).to have_content 'Log in'
+      expect(page).to have_content 'Login'
     end
   end
 end

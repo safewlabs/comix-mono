@@ -11,7 +11,7 @@ RSpec.describe "login page", type: :request do
     it "redirects to signup page" do
       get "/users/sign_in"
       expect(response).to render_template(:new)
-      expect(response.body).to include("Log in")
+      expect(response.body).to include("Login")
     end
 
     it "redirects to sell on comix page" do

@@ -5,12 +5,12 @@ RSpec.describe "load login page", type: :feature do
     visit "/users/sign_in"
     fill_in "user[email]", with: email
     fill_in "user[password]", with: password
-    click_button 'Log in'
+    click_button 'Login'
   end
 
   it "checks if sign up page loads correctly" do
     visit "/users/sign_in"
-    expect(page).to have_content 'Log in'
+    expect(page).to have_content 'Login'
   end
   
   describe 'successful login in' do
@@ -20,7 +20,7 @@ RSpec.describe "load login page", type: :feature do
       visit new_user_session_path
       fill_in "user[email]", with: user[:email]
       fill_in "user[password]", with: 'password'
-      click_button "Log in"
+      click_button "Login"
       expect(page).to have_content "Logged in as #{user[:email]}"
     end
   end
@@ -32,7 +32,7 @@ RSpec.describe "load login page", type: :feature do
       visit new_user_session_path
       fill_in "user[email]", with: user[:email]
       fill_in "user[password]", with: 'password456'
-      click_button "Log in"
+      click_button "Login"
       expect(page).to have_content "Invalid Email or password."
     end
     
@@ -40,7 +40,7 @@ RSpec.describe "load login page", type: :feature do
       visit new_user_session_path
       fill_in "user[email]", with: 'test@pass.com'
       fill_in "user[password]", with: 'password'
-      click_button "Log in"
+      click_button "Login"
       expect(page).to have_content "Invalid Email or password."
     end
   end
