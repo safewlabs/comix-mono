@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/plataformatec/devise.git
-  revision: 4ab54943adcfc9ad72ffcb028cf2dd29f991eade
+  revision: 44f7325a9138aebf800ada92277505d65a6a9f9e
   specs:
     devise (4.6.2)
       bcrypt (~> 3.0)
@@ -72,7 +72,7 @@ GEM
     annotate (2.7.5)
       activerecord (>= 3.2, < 7.0)
       rake (>= 10.4, < 13.0)
-    bcrypt (3.1.12)
+    bcrypt (3.1.13)
     bindex (0.7.0)
     bootsnap (1.4.4)
       msgpack (~> 1.0)
