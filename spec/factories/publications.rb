@@ -1,7 +1,7 @@
 FactoryBot.define do
   factory :publication do
     name { Faker::Company.name }
-    bio { Faker::Lorem.paragraph(2) }
+    bio { Faker::Lorem.paragraph(sentence_count: 2) }
     type { ['Micro', 'Small'].sample }
     association :store, factory: :store
     

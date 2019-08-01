@@ -1,7 +1,7 @@
 FactoryBot.define do
   factory :creator do
     name { Faker::Artist.name }
-    bio { Faker::Lorem.paragraph(2) }
+    bio { Faker::Lorem.paragraph(sentence_count: 2) }
     website {  }
     blog { Faker::Internet.url }
     twitter { Faker::Twitter.screen_name }

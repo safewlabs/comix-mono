@@ -1,7 +1,7 @@
 FactoryBot.define do
   factory :store do
     name { Faker::Artist.name }
-    description { Faker::Lorem.paragraph(2) }
+    description { Faker::Lorem.paragraph(sentence_count: 2) }
     association :owner, factory: :user
     
     trait :with_users do
