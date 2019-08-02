@@ -1,5 +1,5 @@
 <div class="w-full max-w-xs m-0 m-auto mt-32">
-  <h2 class="text-2xl text-center">Join us</h2><br/>
+  <h2 class="text-2xl text-center">Join Us</h2><br/>
   <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { class: "bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 border" }) do |f| %>
     <%= f.hidden_field :roles, value: 'buyer' %>
     <%= render 'users/registrations/new', locals: {resource: resource} %>
