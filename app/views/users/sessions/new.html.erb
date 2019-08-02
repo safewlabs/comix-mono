@@ -1,5 +1,5 @@
 <div class="w-full max-w-xs m-0 m-auto mt-32">
-  <%= form_for(resource, as: resource_name, url: session_path(resource_name), html: { class: "bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4" }) do |f| %>
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name), html: { class: "bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 border" }) do |f| %>
     <%= render "devise/shared/error_messages" %>
 
     <% flash.each do |key, value| %>
@@ -25,6 +25,12 @@
           <%= f.check_box :remember_me %>
           <%= f.label :remember_me %>
         </div>
+      <% end -%>
+    </div>
+    <br/>
+    <div class="flex items-center justify-between">
+      <%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
+        <%= link_to "Forgot your password?", new_password_path(resource_name), class: "text-gray-700 text-base" %><br />
       <% end -%>
     </div>
 
