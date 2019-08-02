@@ -1,3 +1,8 @@
-<footer class='w-full text-center border-t border-grey p-4 pin-b'>
-  Copyright &copy;
+<footer class='w-full text-center border-t border-grey p-4 pin-b flex flex-row justify-between'>
+  <div>
+    Copyright &copy; <%= Time.current.year %> 
+    | <a href="https://safew.tech" target="_blank" class="text-base">Safew Labs</a>
+    | Made with <ion-icon name="heart"></ion-icon> on the <ion-icon name="globe"></ion-icon>.
+  </div>
+  <%= image_tag "powered_by_stripe.png" %>
 </footer>
