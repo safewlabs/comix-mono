@@ -11,7 +11,7 @@ a {
   background-repeat: no-repeat;
   background-size: 0% 2px;
   transition: background-size 0.3s;
-  &:hover {
-    background-size: 100% 3px;
-  }
+}
+.navbar-link:hover {
+  background-size: 100% 3px;
 }
