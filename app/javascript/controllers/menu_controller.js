@@ -8,15 +8,12 @@ document.addEventListener('DOMContentLoaded', () => {
       // Add a click event on each of them
       $navbarBurgers.forEach( el => {
         el.addEventListener('click', () => {
-          debugger;
           // Get the target from the "data-target" attribute
           const target = el.dataset.target;
-          const $target = document.getElementById(target);
-  
+          const $target = document.getElementById(target);  
           // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
-          el.classList.toggle('is-active');
-          $target.classList.toggle('is-active');
-  
+          // el.classList.toggle('sm:hidden');
+          $target.classList.toggle('sm:hidden');
         });
       });
     }
