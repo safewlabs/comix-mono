@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/plataformatec/devise.git
-  revision: 9aa17eec07719a97385dd40fa05c4029983a1cd5
+  revision: ad5892391da99cafb462e8883a185b3a0e653f4f
   specs:
     devise (4.6.2)
       bcrypt (~> 3.0)
@@ -208,7 +208,7 @@ GEM
     rails-dom-testing (2.0.3)
       activesupport (>= 4.2.0)
       nokogiri (>= 1.6)
-    rails-html-sanitizer (1.0.4)
+    rails-html-sanitizer (1.1.0)
       loofah (~> 2.2, >= 2.2.2)
     rails_12factor (0.0.3)
       rails_serve_static_assets
