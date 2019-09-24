@@ -11,7 +11,7 @@ gem 'devise', git: 'https://github.com/plataformatec/devise.git'
 gem 'rolify'
 gem 'pundit'
 # Use Puma as the app server
-gem 'puma', '~> 4.1'
+gem 'puma', '~> 4.2'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 6.0'
 # Use Uglifier as compressor for JavaScript assets
