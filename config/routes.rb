@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get 'dashboard', to: 'dashboards#index', as: 'dashboard'
   
   resources :stores
+  resources :genres, only: :index
 
   # pages
   get 'about', to: 'pages#about', as: 'about'

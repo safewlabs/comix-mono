@@ -9,8 +9,26 @@
 </div>
 <div class="container my-12 mx-auto px-4 md:px-12">
     <div class="flex flex-wrap -mx-1 lg:-mx-4 tiles">
-      <% 12.times do %>
+      <% 8.times do %>
         <%= render 'shared/product_card' %>
+      <% end %>
+    </div>
+</div>
+<div class="text-center text-4xl">
+  Genres
+</div>
+<div class="container my-12 mx-auto px-4 md:px-12">
+    <div class="flex flex-wrap -mx-1 lg:-mx-4 tiles">
+      <%= render partial: 'shared/genre_card', collection: @genres, as: :genre %>
+    </div>
+</div>
+<div class="text-center text-4xl">
+  Categories
+</div>
+<div class="container my-12 mx-auto px-4 md:px-12">
+    <div class="flex flex-wrap -mx-1 lg:-mx-4 tiles">
+      <% 4.times do %>
+        <%= render 'shared/category_card' %>
       <% end %>
     </div>
 </div>

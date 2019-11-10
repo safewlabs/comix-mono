@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 grenres = Genre.first_or_create([
-  { name: 'Superhero' }, 
+  { name: 'Superhero' },
   { name: 'Manga' },
   { name: 'Indigenous' }, 
   { name: 'Young Adult' },
