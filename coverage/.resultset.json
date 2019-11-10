@@ -357,6 +357,13 @@
         null,
         null
       ],
+      "/Users/saurabhbhatia/comix-mono/app/controllers/home_controller.rb": [
+        1,
+        1,
+        6,
+        null,
+        null
+      ],
       "/Users/saurabhbhatia/comix-mono/app/controllers/users/sessions_controller.rb": [
         null,
         null,
@@ -383,6 +390,13 @@
         null,
         null,
         null,
+        null,
+        null
+      ],
+      "/Users/saurabhbhatia/comix-mono/app/controllers/genres_controller.rb": [
+        1,
+        1,
+        2,
         null,
         null
       ],
@@ -679,6 +693,6 @@
         0
       ]
     },
-    "timestamp": 1564751385
+    "timestamp": 1573382020
   }
 }
