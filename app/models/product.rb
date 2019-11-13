@@ -29,5 +29,8 @@ class Product < ApplicationRecord
   has_many :products_categories
   has_many :categories, through: :products_categories
   
+  has_one_attached :issue_cover
+  has_one_attached :file
+  
   belongs_to :publication
 end

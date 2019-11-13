@@ -20,4 +20,5 @@ class Creator < ApplicationRecord
   
   has_many :collaborations
   has_many :products, through: :collaborations
+  has_one_attached :avatar
 end

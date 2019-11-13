@@ -19,4 +19,5 @@ class Store < ApplicationRecord
   has_many :products
   has_many :teams
   has_many :users, through: :teams
+  has_one_attached :cover_image
 end
