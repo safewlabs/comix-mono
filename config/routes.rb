@@ -5,7 +5,8 @@ Rails.application.routes.draw do
   
   resources :stores
   resources :genres, only: :index
-
+  resources :products
+  
   # pages
   get 'about', to: 'pages#about', as: 'about'
   
