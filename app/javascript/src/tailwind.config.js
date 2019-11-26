@@ -148,6 +148,7 @@ module.exports = {
       '48': '12rem',
       '56': '14rem',
       '64': '16rem',
+      '96': '24rem'
     },
     screens: {
       sm: {'max': '639px'},

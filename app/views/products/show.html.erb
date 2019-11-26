@@ -1,2 +1,22 @@
-<h1>Products#show</h1>
-<p>Find me in app/views/products/show.html.erb</p>
+<%= render 'shared/search_bar' %>
+<div class="container my-12 mx-auto px-6">
+  <div class="max-w-sm w-full h-96 lg:max-w-full lg:flex">
+    <div class="lg:w-96 flex-none bg-cover rounded text-center overflow-hidden" style="background-image: url('https://images-na.ssl-images-amazon.com/images/S/cmx-images-prod/Item/21383/21383._SX360_CLs%7C360,546%7Ccu/cmx-cu-sash-lg.png%7C0,0,361,547%20208,394,152,152_QL80_TTD_.jpg')" title="<%= @product.name %>">
+    </div>
+    <div class="bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
+      <div class="mb-8">
+        <div class="text-gray-900 font-bold text-5xl mb-2">
+          <%= @product.name %>
+        </div>
+        <p class="text-gray-700 text-base">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.</p>
+      </div>
+      <div class="flex items-center">
+        <img class="w-10 h-10 rounded-full mr-4" src="https://picsum.photos/32/32/?random" alt="Avatar of Jonathan Reinink">
+        <div class="text-sm">
+          <p class="text-gray-900 leading-none">Jonathan Reinink</p>
+          <p class="text-gray-600">Aug 18</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

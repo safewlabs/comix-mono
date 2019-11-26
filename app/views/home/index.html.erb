@@ -1,9 +1,5 @@
 <%= render 'shared/hero_banner' %>
-<div class="pt-8 -mt-14">
-  <div class="container mx-auto px-6">
-    <input class="w-full h-12 px-3 rounded mb-8 focus:outline-none focus:shadow-outline text-xl px-8 shadow" type="search" placeholder="Search...">
-  </div>
-</div>
+<%= render 'shared/search_bar' %>
 <div class="text-center text-4xl">
   Freshly Pressed
 </div>
@@ -30,4 +26,3 @@
       <%= render partial: 'shared/category_card', collection: @categories, as: :category %>
     </div>
 </div>
-<%= render 'shared/footer' %>
