@@ -804,10 +804,10 @@
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/@csstools/convert-colors/-/convert-colors-1.4.0.tgz#ad495dc41b12e75d588c6db8b9834f08fa131eb7"
 
-"@rails/webpacker@~4.1.0":
-  version "4.1.0"
-  resolved "https://registry.yarnpkg.com/@rails/webpacker/-/webpacker-4.1.0.tgz#6c2f569cbcc42dae3d3a1c0dd4e92b92b686732f"
-  integrity sha512-4wtClcDXj/xhoR4yUTuUuZvVrI7MZviQwW+CKecD8GL+1BScqqAjjl97aEFlJJp+uSdEZscl9ugWLROc3weC9Q==
+"@rails/webpacker@~4.2.1":
+  version "4.2.1"
+  resolved "https://registry.yarnpkg.com/@rails/webpacker/-/webpacker-4.2.1.tgz#aa2f879e083c3409d9eba6049d9f898bdc9b1f5d"
+  integrity sha512-0jzu2UhieZ5Bn0ZjVKEyEM//RXPtawJ1OBhoEnVQkBjdASKkv5LuoHUlATpAKNqrZ64OSJUzm+22SNmL9TKYKA==
   dependencies:
     "@babel/core" "^7.7.2"
     "@babel/plugin-proposal-class-properties" "^7.7.0"
