@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/plataformatec/devise.git
-  revision: 43068ac23907cbf8f74dfedd60fe4e9f14560006
+  revision: 83a32e6d2118b0535cf54b48df4f9853d85b55fd
   specs:
     devise (4.7.1)
       bcrypt (~> 3.0)
@@ -294,7 +294,7 @@ GEM
     turbolinks (5.2.1)
       turbolinks-source (~> 5.2)
     turbolinks-source (5.2.0)
-    tzinfo (1.2.5)
+    tzinfo (1.2.6)
       thread_safe (~> 0.1)
     uglifier (4.2.0)
       execjs (>= 0.3.0, < 3)
