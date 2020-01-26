@@ -3,9 +3,10 @@ Rails.application.routes.draw do
   
   get 'dashboard', to: 'dashboards#index', as: 'dashboard'
   
-  resources :stores
+  resources :stores, param: :slug
   resources :genres, only: :index
   resources :products, param: :slug
+  resources :creators, param: :slug
   
   # pages
   get 'about', to: 'pages#about', as: 'about'
