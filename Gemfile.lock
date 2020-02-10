@@ -140,8 +140,8 @@ GEM
     hashdiff (1.0.0)
     i18n (1.8.2)
       concurrent-ruby (~> 1.0)
-    jbuilder (2.9.1)
-      activesupport (>= 4.2.0)
+    jbuilder (2.10.0)
+      activesupport (>= 5.0.0)
     json (2.3.0)
     libv8 (3.16.14.19)
     listen (3.2.1)
@@ -341,7 +341,7 @@ DEPENDENCIES
   factory_bot_rails
   faker
   guard-rspec (~> 4.7)
-  jbuilder (~> 2.9)
+  jbuilder (~> 2.10)
   listen (>= 3.0.5, < 3.3)
   pg (>= 0.18, < 2.0)
   puma (~> 4.3)
