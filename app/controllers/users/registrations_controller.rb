@@ -78,7 +78,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # The path used after sign up.
 
   def after_sign_up_path_for(resource)
-    if resource.has_role?(:creator)
+    if resource.has_role?(:creator) && resource.sign_in_count.eql?(1)
       new_store_path
     else
       root_path
