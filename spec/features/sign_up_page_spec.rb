@@ -15,7 +15,7 @@ RSpec.describe "load sign up page", type: :feature do
       fill_in "user[password]", with: user[:password]
       fill_in "user[password_confirmation]", with: user[:password]
       click_button "Join"
-      expect(page).to have_content "Logged in as #{user[:email]}"
+      expect(page).to have_content "Profile"
     end
   end
 
