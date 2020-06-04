@@ -1,5 +1,5 @@
 class StoresController < ApplicationController
-  before_action :authenticate_user!
+  before_action :authenticate_user!, except: [:show]
   after_action :verify_authorized, except: [:show]
     
   def index
@@ -8,6 +8,7 @@ class StoresController < ApplicationController
   end
 
   def show
+    @store = Store.find_by(slug: params[:slug])
   end
 
   def new
