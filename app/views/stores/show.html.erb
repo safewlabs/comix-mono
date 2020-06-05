@@ -2,34 +2,15 @@
       <section class="relative block" style="height: 500px;">
         <div
           class="absolute top-0 w-full h-full bg-center bg-cover"
-          style='background-image: url("https://images.unsplash.com/photo-1499336315816-097655dcfbda?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=2710&amp;q=80");'
+          style='background-image: url("https://res.cloudinary.com/drg9hguhu/image/upload/v1591365405/lance-anderson-AJgdNGVNtLg-unsplash_sudtz0.jpg");'
         >
           <span
             id="blackOverlay"
             class="w-full h-full absolute opacity-50 bg-black"
           ></span>
         </div>
-        <div
-          class="top-auto bottom-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden"
-          style="height: 70px; transform: translateZ(0px);"
-        >
-          <svg
-            class="absolute bottom-0 overflow-hidden"
-            xmlns="http://www.w3.org/2000/svg"
-            preserveAspectRatio="none"
-            version="1.1"
-            viewBox="0 0 2560 100"
-            x="0"
-            y="0"
-          >
-            <polygon
-              class="text-gray-300 fill-current"
-              points="2560 0 2560 100 0 100"
-            ></polygon>
-          </svg>
-        </div>
       </section>
-      <section class="relative py-16 bg-gray-300">
+      <section class="relative py-16">
         <div class="container mx-auto px-4">
           <div
             class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-xl rounded-lg -mt-64"
@@ -52,30 +33,9 @@
                   class="w-full lg:w-4/12 px-4 lg:order-3 lg:text-right lg:self-center"
                 >
                 </div>
-                <div class="w-full lg:w-4/12 px-4 lg:order-1">
-                  <div class="flex justify-center py-4 lg:pt-4 pt-8">
-                    <div class="mr-4 p-3 text-center">
-                      <span
-                        class="text-xl font-bold block uppercase tracking-wide text-gray-700"
-                        ><%= @store.products.count %></span
-                      ><span class="text-sm text-gray-500">Comix</span>
-                    </div>
-                    <div class="mr-4 p-3 text-center">
-                      <span
-                        class="text-xl font-bold block uppercase tracking-wide text-gray-700"
-                        >10</span
-                      ><span class="text-sm text-gray-500">Creators</span>
-                    </div>
-                    <div class="lg:mr-4 p-3 text-center">
-                      <span
-                        class="text-xl font-bold block uppercase tracking-wide text-gray-700"
-                        >89</span
-                      ><span class="text-sm text-gray-500">Fans</span>
-                    </div>
-                  </div>
-                </div>
+                <div class="w-full lg:w-4/12 px-4 lg:order-1"></div>
               </div>
-              <div class="text-center mt-12">
+              <div class="text-center mt-40">
                 <h3
                   class="text-4xl font-semibold leading-normal mb-2 text-gray-800 mb-2"
                 >
@@ -88,22 +48,19 @@
                     <p class="mb-4 text-lg leading-relaxed text-gray-800">
                       <%= @store.description %>
                     </p>
-                    <a href="#pablo" class="font-normal text-pink-500"
-                      >Show more</a
-                    >
                   </div>
                 </div>
               </div>
-              <div class="mt-10 py-10 border-t border-gray-300 text-center">
+              <div class="mt-10 py-10 border-t text-center">
               <div class="flex flex-wrap justify-center">
                 <div class="w-full lg:w-9/12 px-4">
                     <% @store.products.each do |product|%>
                       <div class="my-1 px-1 w-full md:w-1/2 lg:my-2 lg:px-2 lg:w-1/4">
-                      <article class="overflow-hidden rounded border hover:shadow-lg">
-                          <a href="#">
+                        <article class="overflow-hidden rounded border hover:shadow-lg">
+                            <a href="#">
                               <img alt="Placeholder" class="block h-auto w-full" src="https://picsum.photos/600/400/?random">
-                          </a>
-                  
+                            </a>
+                    
                           <header class="flex items-center justify-between leading-tight p-2 md:p-4">
                               <h1 class="text-lg">
                                   <a class="no-underline hover:underline text-black" href="#">
@@ -114,9 +71,9 @@
                                 &#36; 3.99
                               </p>
                           </header>
-                  
-                      </article>
-                  </div>
+                    
+                        </article>
+                      </div>
                     <% end %>
                 </div>
               </div>
