@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/plataformatec/devise.git
-  revision: 70f3ae24e00906814b63fe1998c861ca45fbecf6
+  revision: 50f820a6cf13d7a9525198cdab288b7526fe98ec
   specs:
     devise (4.7.1)
       bcrypt (~> 3.0)
@@ -138,7 +138,7 @@ GEM
       guard-compat (~> 1.1)
       rspec (>= 2.99.0, < 4.0)
     hashdiff (1.0.1)
-    i18n (1.8.2)
+    i18n (1.8.3)
       concurrent-ruby (~> 1.0)
     jbuilder (2.10.0)
       activesupport (>= 5.0.0)
@@ -226,7 +226,7 @@ GEM
     redis (4.1.4)
     ref (2.0.0)
     regexp_parser (1.7.0)
-    responders (3.0.0)
+    responders (3.0.1)
       actionpack (>= 5.0)
       railties (>= 5.0)
     rolify (5.3.0)
