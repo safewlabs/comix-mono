@@ -188,7 +188,8 @@ module.exports = {
         '"Courier New"',
         'monospace',
       ],
-      hero: ['Ultra', 'serif']
+      hero: ['Ultra', 'serif'],
+      body: ['Slabo 13px', 'serif']
     },
     fontSize: {
       xs: '0.75rem',
