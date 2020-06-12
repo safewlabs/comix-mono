@@ -1,28 +1,57 @@
-<div class="max-w-4xl flex h-auto flex-wrap mx-auto my-32 lg:my-0">
+<div class="flex flex-wrap h-auto flex-wrap lg:mx-64 my-16">
   <div class="w-full lg:w-2/5">
-    <img src="https://images-na.ssl-images-amazon.com/images/S/cmx-images-prod/Item/21383/21383._SX360_CLs%7C360,546%7Ccu/cmx-cu-sash-lg.png%7C0,0,361,547%20208,394,152,152_QL80_TTD_.jpg" class="shadow-2xl hidden lg:block">
+    <img src="https://images-na.ssl-images-amazon.com/images/S/cmx-images-prod/Item/21383/21383._SX360_CLs%7C360,546%7Ccu/cmx-cu-sash-lg.png%7C0,0,361,547%20208,394,152,152_QL80_TTD_.jpg" class="shadow-2xl hidden rounded-lg lg:block">
   </div>
-  <div class="flex items-center w-full lg:w-3/5 shadow-2xl mx-6 lg:mx-0">
-    <div class="p-4 md:p-12 text-center lg:text-left">
+  <div class="w-full lg:w-3/5 shadow-2xl rounded-lg mx-6 lg:mx-0">
+    <div class="p-4 md:p-12">
       <div class="block lg:hidden rounded-full shadow-xl mx-auto -mt-16 h-48 w-48 bg-cover bg-center" style="background-image: url('https://images-na.ssl-images-amazon.com/images/S/cmx-images-prod/Item/21383/21383._SX360_CLs%7C360,546%7Ccu/cmx-cu-sash-lg.png%7C0,0,361,547%20208,394,152,152_QL80_TTD_.jpg')"></div>
       <h1 class="text-3xl font-bold pt-8 lg:pt-0"><%= @product.name %></h1>
-      <div class="mx-auto lg:mx-0 w-4/5 pt-3 border-b-2 divider-line opacity-25"></div>
+      <div class="mx-auto lg:mx-0 pt-3 border-b-2 divider-line opacity-25"></div>
       <p class="pt-8 text-xl"><%= @product.description %></p>
 
-      <div class="pt-12 pb-8 text-xl">
-        &#36; <%= @product.price %>&nbsp;&nbsp;&nbsp;&nbsp;
-        <button class="inline-block px-4 py-2 leading-none border rounded text-cx-lavender-blush bg-cx-pumpkin hover:border-transparent hover:text-cx-pumpkin hover:bg-cx-lavender-blush hover:border-cx-pumpkin mt-4 lg:mt-0">
+      <div class="mt-4 text-xl flex items-center justify-center">
+        <a class="link my-4 lg:my-3 mx-2" href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+        <a class="link my-4 lg:my-3 mx-2" href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+        <a class="link my-4 lg:my-3 mx-2" href="#"><ion-icon name="logo-pinterest"></ion-icon></a>
+        <a class="link my-4 lg:my-3 mx-2" href="#"><ion-icon name="mail"></ion-icon></a>
+        <a class="link my-4 lg:my-3 mx-2" href="#"><ion-icon name="heart"></ion-icon></a>
+      </div>
+      <div class="mt-4 text-xl flex items-center justify-center">
+        <span class="mx-2">&#36;<%= @product.price %></span>
+        <button class="px-4 py-2 leading-none border rounded text-cx-lavender-blush bg-cx-pumpkin hover:border-transparent hover:text-cx-pumpkin hover:bg-cx-lavender-blush hover:border-cx-pumpkin mt-4 lg:mt-0">
           Add to cart
         </button>
       </div>
-
-			<div class="mt-6 pb-16 lg:pb-0 w-1/2 flex flex-wrap items-start justify-start">
-        <a class="link pr-4" href="#"><ion-icon name="logo-facebook"></ion-icon></a>
-        <a class="link pr-4" href="#"><ion-icon name="logo-twitter"></ion-icon></a>
-				<a class="link pr-4" href="#"><ion-icon name="logo-pinterest"></ion-icon></a>
-				<a class="link pr-4" href="#"><ion-icon name="mail"></ion-icon></a>
-			</div>
     </div>
   </div>
 </div>
-<br />
+<div class="text-center text-3xl">
+  You might also like
+</div>
+<div class="container my-12 mx-auto px-4 md:px-12">
+  <div class="py-10 border-t text-center">
+    <div class="flex flex-wrap justify-center">
+      <% 4.times do %>
+        <div class="my-1 px-1 w-full md:w-1/2 lg:my-2 lg:px-2 lg:w-1/4">
+          <article class="overflow-hidden rounded border hover:shadow-lg">
+              <a href="#">
+                <img alt="Placeholder" class="block h-auto w-full" src="https://picsum.photos/600/400/?random">
+              </a>
+      
+            <header class="flex items-center justify-between leading-tight p-2 md:p-4">
+                <h1 class="text-lg">
+                    <a class="no-underline hover:underline text-black" href="#">
+                        Test name
+                    </a>
+                </h1>
+                <p class="text-grey-darker text-sm">
+                  &#36; 3.99
+                </p>
+            </header>
+      
+          </article>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
