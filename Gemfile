@@ -13,17 +13,17 @@ gem 'pundit'
 # Use Puma as the app server
 gem 'puma', '~> 4.3'
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 6.0'
+gem 'sass-rails', '~> 6.0', '>= 6.0.0'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
-gem 'webpacker'
+gem 'webpacker', '>= 5.1.1'
 gem 'therubyracer', platforms: :ruby
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'mini_racer', platforms: :ruby
 
 # Use CoffeeScript for .coffee assets and views
-gem 'coffee-rails', '~> 5.0'
+gem 'coffee-rails', '~> 5.0', '>= 5.0.0'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
@@ -44,11 +44,11 @@ gem 'rails_12factor', group: :production
 gem 'bootsnap', '>= 1.1.0', require: false
 
 group :development, :test do
-  gem 'dotenv-rails'
+  gem 'dotenv-rails', '>= 2.7.5'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   # Adds support for Capybara system testing and selenium driver
-  gem 'factory_bot_rails'
+  gem 'factory_bot_rails', '>= 5.2.0'
   gem 'faker'
   gem 'guard-rspec', '~> 4.7'
   gem 'rspec-rails', '~> 4.0.1'
@@ -58,7 +58,7 @@ group :development do
   gem 'annotate'
   gem 'listen', '>= 3.0.5', '< 3.3'
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
-  gem 'web-console', '>= 3.3.0'
+  gem 'web-console', '>= 4.0.2'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
@@ -67,13 +67,13 @@ end
 
 group :test do
   gem 'database_cleaner'
-  gem 'rails-controller-testing'
+  gem 'rails-controller-testing', '>= 1.0.4'
   gem 'shoulda-matchers', '4.3.0'
   gem 'simplecov'
   gem 'codecov'
   gem 'webmock'
   # Adds support for Capybara system testing and selenium driver
-  gem 'capybara', '>= 2.15', '< 4.0'
+  gem 'capybara', '>= 3.32.2', '< 4.0'
   gem 'selenium-webdriver'
   gem 'webdrivers'
 end
