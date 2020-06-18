@@ -1,8 +1,8 @@
 GIT
   remote: https://github.com/plataformatec/devise.git
-  revision: a3c0c652695ad180caa2f17f781753bef9bae330
+  revision: 79d7eddfc30eef4c7d1803c2623fa61fb74f156f
   specs:
-    devise (4.7.1)
+    devise (4.7.2)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
       railties (>= 4.1.0)
@@ -119,7 +119,7 @@ GEM
       railties (>= 4.2.0)
     faker (2.12.0)
       i18n (>= 1.6, < 2)
-    ffi (1.11.3)
+    ffi (1.13.1)
     formatador (0.2.5)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
@@ -147,7 +147,7 @@ GEM
     listen (3.2.1)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
-    loofah (2.5.0)
+    loofah (2.6.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
     lumberjack (1.0.13)
@@ -225,7 +225,7 @@ GEM
       ffi (~> 1.0)
     redis (4.2.1)
     ref (2.0.0)
-    regexp_parser (1.7.0)
+    regexp_parser (1.7.1)
     responders (3.0.1)
       actionpack (>= 5.0)
       railties (>= 5.0)
@@ -255,9 +255,8 @@ GEM
     safe_yaml (1.0.5)
     sass-rails (6.0.0)
       sassc-rails (~> 2.1, >= 2.1.1)
-    sassc (2.0.1)
+    sassc (2.4.0)
       ffi (~> 1.9)
-      rake
     sassc-rails (2.1.2)
       railties (>= 4.0.0)
       sassc (>= 2.0)
@@ -279,7 +278,7 @@ GEM
     spring-watcher-listen (2.0.1)
       listen (>= 2.7, < 4.0)
       spring (>= 1.2, < 3.0)
-    sprockets (4.0.0)
+    sprockets (4.0.2)
       concurrent-ruby (~> 1.0)
       rack (> 1, < 3)
     sprockets-rails (3.2.1)
@@ -291,7 +290,7 @@ GEM
       ref
     thor (1.0.1)
     thread_safe (0.3.6)
-    tilt (2.0.9)
+    tilt (2.0.10)
     turbolinks (5.2.1)
       turbolinks-source (~> 5.2)
     turbolinks-source (5.2.0)
@@ -334,13 +333,13 @@ DEPENDENCIES
   annotate
   bootsnap (>= 1.1.0)
   byebug
-  capybara (>= 2.15, < 4.0)
+  capybara (>= 3.32.2, < 4.0)
   codecov
-  coffee-rails (~> 5.0)
+  coffee-rails (~> 5.0, >= 5.0.0)
   database_cleaner
   devise!
-  dotenv-rails
-  factory_bot_rails
+  dotenv-rails (>= 2.7.5)
+  factory_bot_rails (>= 5.2.0)
   faker
   guard-rspec (~> 4.7)
   jbuilder (~> 2.10)
@@ -350,12 +349,12 @@ DEPENDENCIES
   pundit
   railroady
   rails (= 6.0.3.1)
-  rails-controller-testing
+  rails-controller-testing (>= 1.0.4)
   rails_12factor
   redis (~> 4.2)
   rolify
   rspec-rails (~> 4.0.1)
-  sass-rails (~> 6.0)
+  sass-rails (~> 6.0, >= 6.0.0)
   selenium-webdriver
   shoulda-matchers (= 4.3.0)
   simplecov
@@ -364,10 +363,10 @@ DEPENDENCIES
   therubyracer
   turbolinks (~> 5)
   uglifier (>= 1.3.0)
-  web-console (>= 3.3.0)
+  web-console (>= 4.0.2)
   webdrivers
   webmock
-  webpacker
+  webpacker (>= 5.1.1)
 
 RUBY VERSION
    ruby 2.6.1p33
