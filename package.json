@@ -1,6 +1,9 @@
 {
   "name": "comix",
   "private": true,
+  "scripts": {
+    "watch": "./bin/webpack --watch --colors --progress"
+  },
   "dependencies": {
     "@rails/webpacker": "~5.1.1",
     "core-js": "3",
