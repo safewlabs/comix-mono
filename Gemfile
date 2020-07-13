@@ -35,7 +35,7 @@ gem 'redis', '~> 4.2'
 
 # Use ActiveStorage variant
 gem 'image_processing'
-gem 'mini_magick', '~> 4.8'
+gem 'mini_magick', '~> 4.10'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
