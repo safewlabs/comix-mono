@@ -1,0 +1,21 @@
+<%= form_for( @store, url: { action: "create" }, html: { class: "bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 border w-1/2 sm:w-full" }) do |f| %>
+  <div class="mb-4">
+    <%= f.label :name, class: "block text-gray-700 text-sm font-bold mb-2" %>
+    <%= f.text_field :name, autofocus: true, class: "shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" %>
+  </div>
+  <div class="mb-4">
+   <%= f.label :cover_image, class: "block text-gray-700 text-sm font-bold mb-2" %>
+    <%= f.file_field :cover_image, direct_upload: true %>
+  </div>
+  <div class="mb-4">
+    <%= f.label :display_image, class: "block text-gray-700 text-sm font-bold mb-2" %>
+    <%= f.file_field :display_image, direct_upload: true %>
+  </div>
+  <div class="mb-6">
+    <%= f.label :description, class: "block text-gray-700 text-sm font-bold mb-2" %>
+    <%= f.rich_text_area :description, class: "shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" %>
+  </div>
+  <div class="flex items-center justify-between">
+    <%= f.submit "Create", class: "inline-block px-4 py-2 leading-none border rounded text-cx-lavender-blush bg-cx-pumpkin hover:border-transparent hover:text-cx-pumpkin hover:bg-cx-lavender-blush hover:border-cx-pumpkin mt-4 lg:mt-0" %>
+  </div>
+<% end %>

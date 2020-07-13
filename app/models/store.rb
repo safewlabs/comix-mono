@@ -20,4 +20,8 @@ class Store < ApplicationRecord
   has_many :teams
   has_many :users, through: :teams
   has_one_attached :cover_image
+  has_one_attached :display_image
+  has_rich_text :description
+
+  validates :name, :cover_image, :display_image, :description, presence: true
 end

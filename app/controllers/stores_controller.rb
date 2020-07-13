@@ -13,12 +13,18 @@ class StoresController < ApplicationController
 
   def new
     authorize Store
+    @store = Store.new(owner: current_user)
   end
 
   def edit
   end
 
   def create
+    if @store.save!
+      redirect_to @store
+    else
+      render "new"
+    end
   end
 
   def update
