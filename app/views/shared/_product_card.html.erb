@@ -1,18 +1,13 @@
 <div class="my-1 px-1 w-full md:w-1/2 lg:my-2 lg:px-2 lg:w-1/4">
     <article class="overflow-hidden rounded border hover:shadow-lg">
-
-        <a href="#">
+        <%= link_to product_path(product) do %>
             <img alt="Placeholder" class="block h-auto w-full" src="https://picsum.photos/600/400/?random">
-        </a>
+        <% end %>
 
         <header class="flex items-center justify-between leading-tight p-2 md:p-4">
-            <h1 class="text-lg">
-                <a class="no-underline hover:underline text-black" href="#">
-                    Monster Mash-up
-                </a>
-            </h1>
+            <h1 class="text-lg"><%= product.name %></h1>
             <p class="text-grey-darker text-sm">
-              &#36; 3.99
+            &#36; <%= product.price %>
             </p>
         </header>
 
@@ -24,12 +19,12 @@
                 </p>
             </a>
             <div class="items-end">
-              <a class="no-underline text-grey-darker hover:text-red-dark justify-right" href="#">
+            <a class="no-underline text-grey-darker hover:text-red-dark justify-right" href="#">
                 <ion-icon name="heart"></ion-icon>
-              </a>
-              <a class="no-underline text-grey-darker hover:text-red-dark justify-right" href="#">
+            </a>
+            <a class="no-underline text-grey-darker hover:text-red-dark justify-right" href="#">
                 <ion-icon name="cart"></ion-icon>
-              </a>
+            </a>
             </div>
         </footer>
 

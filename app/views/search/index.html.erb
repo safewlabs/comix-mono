@@ -1,0 +1,14 @@
+<% @stores.each do |store| %>
+    <%= link_to store.name, store_path(store) %>
+<% end %>
+
+<div class="text-center text-4xl">
+    Products
+</div>
+<div class="container my-12 mx-auto px-4 md:px-12">
+    <div class="flex flex-wrap -mx-1 lg:-mx-4 tiles">
+      <% @products.each do |product| %>
+        <%= render 'shared/product_card', product: product %>
+      <% end %>
+    </div>
+</div>

@@ -32,6 +32,7 @@ gem 'jbuilder', '~> 2.10'
 gem 'redis', '~> 4.2'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
+gem 'ransack'
 
 # Use ActiveStorage variant
 gem 'image_processing'
