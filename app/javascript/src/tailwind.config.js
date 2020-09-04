@@ -169,9 +169,7 @@ module.exports = {
         '"Apple Color Emoji"',
         '"Segoe UI Emoji"',
         '"Segoe UI Symbol"',
-        '"Noto Color Emoji"',
-        "Quicksand",
-        "Nunito"
+        '"Noto Color Emoji"'
       ],
       serif: [
         'Georgia',
@@ -185,11 +183,11 @@ module.exports = {
         'Monaco',
         'Consolas',
         '"Liberation Mono"',
-        '"Courier New"',
         'monospace',
       ],
-      hero: ['Ultra', 'serif'],
-      body: ['Slabo 13px', 'serif']
+      hero: ['Space Mono', 'monospace'],
+      body: ['Space Mono', 'monospace'],
+      text: ['Merriweather', 'serif']
     },
     fontSize: {
       xs: '0.75rem',

@@ -5,20 +5,12 @@
   <div class="w-full lg:w-3/5 shadow-2xl rounded-lg mx-6 lg:mx-0">
     <div class="p-4 md:p-12">
       <div class="block lg:hidden rounded-full shadow-xl mx-auto -mt-16 h-48 w-48 bg-cover bg-center" style="background-image: url('https://images-na.ssl-images-amazon.com/images/S/cmx-images-prod/Item/21383/21383._SX360_CLs%7C360,546%7Ccu/cmx-cu-sash-lg.png%7C0,0,361,547%20208,394,152,152_QL80_TTD_.jpg')"></div>
-      <h1 class="text-3xl font-bold pt-8 lg:pt-0"><%= @product.name %></h1>
+      <h1 class="text-3xl font-bold pt-8 lg:pt-0 px-2"><%= @product.name %></h1>
       <div class="mx-auto lg:mx-0 pt-3 border-b-2 divider-line opacity-25"></div>
-      <p class="pt-8 text-xl"><%= @product.description %></p>
-
-      <div class="mt-4 text-xl flex items-center justify-center">
-        <a class="link my-4 lg:my-3 mx-2" href="#"><ion-icon name="logo-facebook"></ion-icon></a>
-        <a class="link my-4 lg:my-3 mx-2" href="#"><ion-icon name="logo-twitter"></ion-icon></a>
-        <a class="link my-4 lg:my-3 mx-2" href="#"><ion-icon name="logo-pinterest"></ion-icon></a>
-        <a class="link my-4 lg:my-3 mx-2" href="#"><ion-icon name="mail"></ion-icon></a>
-        <a class="link my-4 lg:my-3 mx-2" href="#"><ion-icon name="heart"></ion-icon></a>
-      </div>
-      <div class="mt-4 text-xl flex items-center justify-center">
-        <span class="mx-2">&#36;<%= @product.price %></span>
-        <button class="px-4 py-2 leading-none border rounded text-cx-lavender-blush bg-cx-pumpkin hover:border-transparent hover:text-cx-pumpkin hover:bg-cx-lavender-blush hover:border-cx-pumpkin mt-4 lg:mt-0">
+      <div class="pt-8 text-xl text-justify px-2"><%= @product.description %></div>
+      <div class="mt-8 text-xl items-center">
+        <span class="mx-2 border border-solid rounded border-black p-2">&#36;<%= @product.price %></span>
+        <button class="p-3 leading-none border rounded text-cx-lavender-blush bg-cx-pumpkin hover:border-transparent hover:text-cx-pumpkin hover:bg-cx-lavender-blush hover:border-cx-pumpkin">
           Add to cart
         </button>
       </div>
