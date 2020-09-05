@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   get 'dashboard', to: 'dashboards#index', as: 'dashboard'
   
   resources :stores, param: :slug
-  resources :genres, only: :index
+  resources :genres, param: :slug
   resources :products, param: :slug
   resources :creators, param: :slug
   

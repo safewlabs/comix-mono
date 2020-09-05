@@ -1,22 +1,22 @@
 <%= render 'shared/hero_banner' %>
 <%= render 'shared/search_bar' %>
 <div class="text-center text-4xl">
-  Freshly Pressed
+  Genres
 </div>
 <div class="container my-12 mx-auto px-4 md:px-12">
-    <div class="flex flex-wrap -mx-1 lg:-mx-4 tiles">
-      <% @products.each do |product| %>
-        <%= render 'shared/product_card', product: product %>
+    <div class="flex flex-wrap -mx-1 lg:-mx-4 ">
+      <% cache @genres do %>
+        <%= render partial: 'shared/genre_card', collection: @genres, as: :genre %>
       <% end %>
     </div>
 </div>
 <div class="text-center text-4xl">
-  Genres
+  Freshly Pressed
 </div>
 <div class="container my-12 mx-auto px-4 md:px-12">
-    <div class="flex flex-wrap -mx-1 lg:-mx-4 tiles">
-      <% cache @genres do %>
-        <%= render partial: 'shared/genre_card', collection: @genres, as: :genre %>
+    <div class="flex flex-wrap -mx-1 lg:-mx-4 ">
+      <% @products.each do |product| %>
+        <%= render 'shared/product_card', product: product %>
       <% end %>
     </div>
 </div>
@@ -24,7 +24,7 @@
   Categories
 </div>
 <div class="container my-12 mx-auto px-4 md:px-12">
-    <div class="flex flex-wrap -mx-1 lg:-mx-4 tiles">
+    <div class="flex flex-wrap -mx-1 lg:-mx-4 ">
       <%= render partial: 'shared/category_card', collection: @categories, as: :category %>
     </div>
 </div>

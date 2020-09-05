@@ -1,3 +1,16 @@
+# == Schema Information
+#
+# Table name: publications
+#
+#  id               :bigint           not null, primary key
+#  name             :string
+#  bio              :text
+#  publication_type :string
+#  created_at       :datetime         not null
+#  updated_at       :datetime         not null
+#  store_id         :bigint
+#  slug             :string
+#
 require 'rails_helper'
 
 RSpec.describe Publication, type: :model do

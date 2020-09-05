@@ -1,3 +1,19 @@
+# == Schema Information
+#
+# Table name: creators
+#
+#  id         :bigint           not null, primary key
+#  name       :string
+#  bio        :text
+#  website    :string
+#  blog       :string
+#  twitter    :string
+#  instagram  :string
+#  facebook   :string
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#  slug       :string
+#
 FactoryBot.define do
   factory :creator do
     name { Faker::Artist.name }

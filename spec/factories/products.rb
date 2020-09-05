@@ -1,3 +1,20 @@
+# == Schema Information
+#
+# Table name: products
+#
+#  id             :bigint           not null, primary key
+#  name           :string
+#  description    :text
+#  price          :float
+#  page_count     :integer
+#  release_date   :datetime
+#  age_rating     :string
+#  store_id       :bigint
+#  created_at     :datetime         not null
+#  updated_at     :datetime         not null
+#  slug           :string
+#  publication_id :bigint
+#
 FactoryBot.define do
   factory :product do
     name { Faker::Superhero.name }

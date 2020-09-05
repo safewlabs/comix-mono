@@ -2,13 +2,14 @@
 #
 # Table name: stores
 #
-#  id          :bigint(8)        not null, primary key
+#  id          :bigint           not null, primary key
 #  name        :string
 #  description :string
+#  user_id     :bigint
 #  slug        :string
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
-#  owner_id    :bigint(8)
+#  owner_id    :bigint
 #
 
 class Store < ApplicationRecord
