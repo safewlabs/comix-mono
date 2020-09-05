@@ -33,11 +33,4 @@ class Product < ApplicationRecord
   has_one_attached :file
   
   belongs_to :publication
-
-  # validate :attachments_presence
-
-  def attachments_presence
-    errors.add(:issue_cover, "can't be blank") unless issue_cover.attached?
-    errors.add(:file, "can't be blank") unless file.attached?
-  end
 end
