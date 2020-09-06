@@ -1,8 +1,14 @@
-<% @stores.each do |store| %>
-    <%= link_to store.name, store_path(store) %>
+<% if @stors.present? %>
+  <div class="text-center text-4xl">
+      Stores
+  </div>
+
+  <% @stores.each do |store| %>
+      <%= link_to store.name, store_path(store) %>
+  <% end %>
 <% end %>
 
-<div class="text-center text-4xl">
+<div class="text-center text-4xl my-4">
     Products
 </div>
 <div class="container my-12 mx-auto px-4 md:px-12">

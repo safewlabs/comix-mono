@@ -334,6 +334,8 @@ module.exports = {
       full: '100%',
     },
     maxHeight: {
+      tile: "25em",
+      bigtile: "32em",
       full: '100%',
       screen: '100vh',
     },

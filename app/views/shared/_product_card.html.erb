@@ -1,7 +1,11 @@
 <div class="my-1 px-1 w-full md:w-1/2 lg:my-2 lg:px-2 lg:w-1/4">
     <article class="overflow-hidden rounded border hover:shadow-lg">
         <%= link_to product_path(product) do %>
-            <%= image_tag product.issue_cover, class: "block h-auto w-full", width: "600", height: "400" %>
+            <% if product.issue_cover.present? %>
+                <%= image_tag product.issue_cover.variant(resize_to_limit: [600, 400]), class: "block max-h-tile w-full"  %>
+            <% else %>
+                <img src="https://img.icons8.com/dotty/600/000000/full-image.png" class="block h-auto w-full" width="600" height="400"/>
+            <% end %>
         <% end %>
 
         <header class="flex items-center justify-between leading-tight p-2 md:p-4">
@@ -13,7 +17,11 @@
 
         <footer class="flex items-stretch justify-between leading-none p-2 md:p-4">
             <%= link_to store_path(product.store), class: "flex items-center no-underline hover:underline text-black" do %>
-                <%= image_tag product.store.display_image, class: "block rounded-full", width: "32", height: "32" %>
+                <% if product.store.display_image.present? %>
+                    <%= image_tag product.store.display_image.variant(resize_to_limit: [32, 32]), class: "block rounded-full" %>
+                <% else %>
+                    <img src="https://img.icons8.com/dotty/32/000000/full-image.png" class="block h-auto w-full" width="32" height="32"/>
+                <% end %>
                 <p class="ml-2 text-sm">
                     <%= product.store.name %>
                 </p>

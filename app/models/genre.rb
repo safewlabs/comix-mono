@@ -9,8 +9,6 @@
 #
 
 class Genre < ApplicationRecord
-  include Sluggable
-
   has_many :products_genres
   has_many :products, through: :products_genres
 end

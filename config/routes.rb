@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   resources :genres, param: :slug
   resources :products, param: :slug
   resources :creators, param: :slug
+  resources :categories, param: :slug
   
   # pages
   get 'about', to: 'pages#about', as: 'about'
@@ -17,6 +18,11 @@ Rails.application.routes.draw do
     registrations: 'users/registrations',
     sessions: 'users/sessions'
   }
+
+  if Rails.env.development?
+    require 'sidekiq/web'
+    mount Sidekiq::Web => '/sidekiq'
+  end
   
   devise_scope :user do
     get 'sell-on-comix', to: 'users/registrations#creator'
