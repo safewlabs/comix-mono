@@ -148,6 +148,7 @@ module.exports = {
       '48': '12rem',
       '56': '14rem',
       '64': '16rem',
+      '80': '20rem',
       '96': '24rem'
     },
     screens: {
@@ -334,7 +335,7 @@ module.exports = {
       full: '100%',
     },
     maxHeight: {
-      tile: "25em",
+      tile: "20em",
       bigtile: "32em",
       full: '100%',
       screen: '100vh',

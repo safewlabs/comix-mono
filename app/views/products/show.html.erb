@@ -3,12 +3,16 @@
     <% if @product.issue_cover.present? %>
         <%= image_tag @product.issue_cover, class: "shadow-2xl hidden max-h-bigtile rounded-lg lg:block" %>
     <% else %>
-        <img src="https://img.icons8.com/dotty/600/000000/full-image.png" class="shadow-2xl hidden rounded-lg lg:block" />
+        <img src="https://img.icons8.com/dotty/400/000000/full-image.png" class="shadow-2xl hidden rounded-lg lg:block" />
     <% end %>
   </div>
   <div class="w-full lg:w-3/5 shadow-2xl rounded-lg mx-6 lg:mx-0">
     <div class="p-4 md:p-12">
-      <div class="block lg:hidden rounded-full shadow-xl mx-auto -mt-16 h-48 w-48 bg-cover bg-center" style="background-image: url('https://images-na.ssl-images-amazon.com/images/S/cmx-images-prod/Item/21383/21383._SX360_CLs%7C360,546%7Ccu/cmx-cu-sash-lg.png%7C0,0,361,547%20208,394,152,152_QL80_TTD_.jpg')"></div>
+      <% if @product.issue_cover.present? %>
+        <div class="block lg:hidden rounded-full shadow-xl mx-auto -mt-16 h-48 w-48 bg-cover bg-center" style="background-image: url(<%= url_for(@product.issue_cover) %>)"></div>
+      <% else %>
+        <div class="block lg:hidden rounded-full shadow-xl mx-auto -mt-16 h-48 w-48 bg-cover bg-center" style="background-image: url('https://img.icons8.com/dotty/70/000000/full-image.png')"></div>
+      <% end %>
       <h1 class="text-3xl font-bold pt-8 lg:pt-0 px-2"><%= @product.name %></h1>
       <div class="mx-auto lg:mx-0 pt-3 border-b-2 divider-line opacity-25"></div>
       <div class="pt-8 text-md text-justify px-2 tracking-tight"><%= @product.description %></div>

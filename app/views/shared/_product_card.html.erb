@@ -1,15 +1,15 @@
-<div class="my-1 px-1 w-full md:w-1/2 lg:my-2 lg:px-2 lg:w-1/4">
-    <article class="overflow-hidden rounded border hover:shadow-lg">
+<div class="my-1 px-1 lg:my-2 lg:px-2 lg:w-1/4 md:w-1/2 sm:w-full">
+    <article class="overflow-hidden rounded-lg border hover:shadow-lg">
         <%= link_to product_path(product) do %>
             <% if product.issue_cover.present? %>
                 <%= image_tag product.issue_cover.variant(resize_to_limit: [600, 400]), class: "block max-h-tile w-full"  %>
             <% else %>
-                <img src="https://img.icons8.com/dotty/600/000000/full-image.png" class="block h-auto w-full" width="600" height="400"/>
+                <img src="https://img.icons8.com/dotty/200/000000/full-image.png" class="block h-auto p-16 mb-16" width="600" height="400"/>
             <% end %>
         <% end %>
 
         <header class="flex items-center justify-between leading-tight p-2 md:p-4">
-            <h1 class="text-lg"><%= product.name %></h1>
+            <h1 class="text-lg text-left"><%= product.name %></h1>
             <p class="text-grey-darker text-sm border border-solid border-black rounded p-2 w-1/2 text-center">
                 &#36; <%= product.price %>
             </p>
