@@ -236,7 +236,7 @@ GEM
     rb-fsevent (0.10.3)
     rb-inotify (0.10.0)
       ffi (~> 1.0)
-    redis (4.2.1)
+    redis (4.2.2)
     ref (2.0.0)
     regexp_parser (1.7.1)
     responders (3.0.1)
