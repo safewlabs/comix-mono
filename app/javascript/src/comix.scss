@@ -18,3 +18,9 @@ a {
 .divider-line {
   border-color: #ff683a;
 }
+.slide {
+  display: none;
+}
+.slide.slide--current {
+  display: block;
+}

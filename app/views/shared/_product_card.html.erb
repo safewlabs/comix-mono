@@ -1,4 +1,4 @@
-<div class="my-1 px-1 lg:my-2 lg:px-2 lg:w-1/4 md:w-1/2 sm:w-full">
+<li class="splide__slide my-1 px-1 lg:my-2 lg:px-1 lg:w-1/4 md:w-1/2 sm:w-full">
     <article class="overflow-hidden rounded-lg border hover:shadow-lg">
         <%= link_to product_path(product) do %>
             <% if product.issue_cover.present? %>
@@ -27,14 +27,14 @@
                 </p>
             <% end %>
             <div class="items-end">
-                <a class="no-underline text-grey-darker hover:text-red-dark justify-right" href="#">
+                <a class="no-underline text-grey-darker hover:text-red-dark justify-right" title="Favourite" href="#">
                     <ion-icon name="heart"></ion-icon>
                 </a>
-                <a class="no-underline text-grey-darker hover:text-red-dark justify-right" href="#">
+                <a class="no-underline text-grey-darker hover:text-red-dark justify-right" title="Add to Card" href="#">
                     <ion-icon name="cart"></ion-icon>
                 </a>         
             </div>
         </footer>
 
     </article>
-</div>
+</li>

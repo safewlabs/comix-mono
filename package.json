@@ -7,6 +7,7 @@
   "dependencies": {
     "@rails/actiontext": "^6.0.3-2",
     "@rails/webpacker": "~5.1.1",
+    "@splidejs/splide": "^2.4.14",
     "core-js": "3",
     "cssnext": "^1.8.4",
     "stimulus": "^1.1.1",
