@@ -37,7 +37,7 @@ gem 'sidekiq'
 
 # Use ActiveStorage variant
 gem 'image_processing'
-gem 'mini_magick', '~> 4.10'
+gem 'mini_magick', '~> 4.11'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
