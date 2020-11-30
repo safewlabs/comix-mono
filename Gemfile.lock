@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/plataformatec/devise.git
-  revision: 45b831c4ea5a35914037bd27fe88b76d7b3683a4
+  revision: dfbed22cee617992e5f846fdef58b724b6b32ff9
   specs:
     devise (4.7.3)
       bcrypt (~> 3.0)
@@ -109,7 +109,7 @@ GEM
     dotenv-rails (2.7.6)
       dotenv (= 2.7.6)
       railties (>= 3.2)
-    erubi (1.9.0)
+    erubi (1.10.0)
     execjs (2.7.0)
     factory_bot (6.1.0)
       activesupport (>= 5.0.0)
@@ -149,7 +149,7 @@ GEM
     listen (3.3.2)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
-    loofah (2.7.0)
+    loofah (2.8.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
     lumberjack (1.2.8)
@@ -307,7 +307,7 @@ GEM
     turbolinks (5.2.1)
       turbolinks-source (~> 5.2)
     turbolinks-source (5.2.0)
-    tzinfo (1.2.7)
+    tzinfo (1.2.8)
       thread_safe (~> 0.1)
     uglifier (4.2.0)
       execjs (>= 0.3.0, < 3)
@@ -336,7 +336,7 @@ GEM
     websocket-extensions (0.1.5)
     xpath (3.2.0)
       nokogiri (~> 1.8)
-    zeitwerk (2.4.1)
+    zeitwerk (2.4.2)
 
 PLATFORMS
   ruby
