@@ -154,7 +154,7 @@ GEM
     jbuilder (2.11.2)
       activesupport (>= 5.0.0)
     libv8 (8.4.255.0)
-    listen (3.2.1)
+    listen (3.3.4)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
     loofah (2.9.0)
@@ -365,8 +365,8 @@ DEPENDENCIES
   guard-rspec (~> 4.7)
   image_processing
   jbuilder (~> 2.10)
-  listen (>= 3.0.5, < 3.3)
-  mini_magick (~> 4.10)
+  listen (>= 3.0.5, < 3.4)
+  mini_magick (~> 4.11)
   mini_racer
   pg (>= 0.18, < 2.0)
   puma (~> 5.0)
