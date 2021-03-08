@@ -71,7 +71,7 @@ end
 group :test do
   gem 'database_cleaner'
   gem 'rails-controller-testing', '>= 1.0.4'
-  gem 'shoulda-matchers', '4.4.1'
+  gem 'shoulda-matchers', '4.5.1'
   gem 'simplecov'
   gem 'codecov'
   gem 'webmock'
