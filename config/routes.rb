@@ -12,7 +12,8 @@ Rails.application.routes.draw do
   
   # pages
   get 'about', to: 'pages#about', as: 'about'
-  
+  get 'sell-on-comix', to: 'pages#sell_on_comix', as: 'sell-on-comix'
+
   # user management
   devise_for :users, controllers: {
     registrations: 'users/registrations',
@@ -23,9 +24,9 @@ Rails.application.routes.draw do
     require 'sidekiq/web'
     mount Sidekiq::Web => '/sidekiq'
   end
-  
+
   devise_scope :user do
-    get 'sell-on-comix', to: 'users/registrations#creator'
+    get 'creator-signup', to: 'users/registrations#creator'
   end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
