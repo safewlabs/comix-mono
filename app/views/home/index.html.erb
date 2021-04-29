@@ -24,12 +24,9 @@
   Freshly Pressed
 </div>
 <div class="container my-12 mx-auto px-4 md:px-12">
-    <div id="splide" class="splide flex flex-wrap -mx-1 lg:-mx-4">
-      <div class="splide__track">
-        <ul class="splide__list">
-          <% @products.each do |product| %>
-            <%= render 'shared/product_card', product: product %>
-          <% end %>
-        </ul>
+    <div class="flex flex-wrap -mx-1 lg:-mx-4">
+      <% @products.each do |product| %>
+        <%= render 'shared/product_card', product: product %>
+      <% end %>
     </div>
 </div>

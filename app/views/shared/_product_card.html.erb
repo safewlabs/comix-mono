@@ -30,9 +30,9 @@
                 <a class="no-underline text-grey-darker hover:text-red-dark justify-right" title="Favourite" href="#">
                     <ion-icon name="heart"></ion-icon>
                 </a>
-                <a class="no-underline text-grey-darker hover:text-red-dark justify-right" title="Add to Card" href="#">
+                <%= link_to line_items_path(product_id: product.id), method: :post do %>
                     <ion-icon name="cart"></ion-icon>
-                </a>         
+                <% end %>         
             </div>
         </footer>
 

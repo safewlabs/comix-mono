@@ -18,9 +18,11 @@
       <div class="pt-8 text-md text-justify px-2 tracking-tight"><%= @product.description %></div>
       <div class="mt-8 text-xl items-center flex justify-between">
         <span class="mx-2 border border-solid rounded border-black p-2">&#36;<%= @product.price %></span>
-        <button class="p-3 leading-none border rounded text-cx-lavender-blush bg-cx-pumpkin hover:border-transparent hover:text-cx-pumpkin hover:bg-cx-lavender-blush hover:border-cx-pumpkin">
+        <%= button_to line_items_path(product_id: @product.id),
+            class: "p-3 leading-none border rounded text-cx-lavender-blush bg-cx-pumpkin hover:border-transparent hover:text-cx-pumpkin hover:bg-cx-lavender-blush hover:border-cx-pumpkin",
+            method: :post do %>
           Add to cart
-        </button>
+        <% end %> 
       </div>
     </div>
   </div>
