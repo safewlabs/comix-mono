@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/plataformatec/devise.git
-  revision: ef9a2f410413b02b5234d80a73b42e296ebcc863
+  revision: 5d5636f03ac19e8188d99c044d4b5e90124313af
   specs:
     devise (4.7.3)
       bcrypt (~> 3.0)
@@ -146,7 +146,7 @@ GEM
       guard-compat (~> 1.1)
       rspec (>= 2.99.0, < 4.0)
     hashdiff (1.0.1)
-    i18n (1.8.9)
+    i18n (1.8.10)
       concurrent-ruby (~> 1.0)
     image_processing (1.12.1)
       mini_magick (>= 4.9.5, < 5)
@@ -154,7 +154,7 @@ GEM
     jbuilder (2.11.2)
       activesupport (>= 5.0.0)
     libv8 (8.4.255.0)
-    listen (3.5.0)
+    listen (3.5.1)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
     loofah (2.9.0)
@@ -288,7 +288,7 @@ GEM
     shellany (0.0.1)
     shoulda-matchers (4.5.1)
       activesupport (>= 4.2.0)
-    sidekiq (6.2.0)
+    sidekiq (6.2.1)
       connection_pool (>= 2.2.2)
       rack (~> 2.0)
       redis (>= 4.2.0)
