@@ -1,0 +1,48 @@
+version: 2
+updates:
+- package-ecosystem: bundler
+  directory: "/"
+  schedule:
+    interval: daily
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: rspec-rails
+    versions:
+    - 5.0.0
+  - dependency-name: puma
+    versions:
+    - 5.2.0
+    - 5.2.1
+    - 5.2.2
+  - dependency-name: webmock
+    versions:
+    - 3.11.1
+    - 3.11.2
+    - 3.11.3
+    - 3.12.0
+  - dependency-name: rails
+    versions:
+    - 6.1.1
+    - 6.1.2
+    - 6.1.2.1
+    - 6.1.3
+  - dependency-name: faker
+    versions:
+    - 2.15.1
+    - 2.16.0
+  - dependency-name: capybara
+    versions:
+    - 3.35.1
+    - 3.35.3
+  - dependency-name: ransack
+    versions:
+    - 2.4.2
+  - dependency-name: simplecov
+    versions:
+    - 0.21.2
+  - dependency-name: nokogiri
+    versions:
+    - 1.11.1
+  - dependency-name: redis
+    versions:
+    - 4.2.5
