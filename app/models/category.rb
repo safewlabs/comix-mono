@@ -10,10 +10,8 @@
 #
 
 class Category < ApplicationRecord
+  include Sluggable
+
   has_many :products_categories
   has_many :products, through: :products_categories
-
-  def to_param
-    slug
-  end
 end
