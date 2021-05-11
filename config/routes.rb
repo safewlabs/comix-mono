@@ -29,7 +29,7 @@ Rails.application.routes.draw do
     mount Sidekiq::Web => '/sidekiq'
   end
 
-  get 'carts/:id' => "carts#show", as: "cart"
+  get 'carts/current' => "carts#show", as: "cart"
   delete 'carts/:id' => "carts#destroy"
 
   post 'line_items/:id/add', to: "line_items#add_quantity", as: "line_item_add"

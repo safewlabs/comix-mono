@@ -14,7 +14,7 @@ RSpec.describe "home page", type: :request do
   end
 
   it "redirects to sell on comix page" do
-    get "/sell-on-comix"
+    get "/creator-signup"
     expect(response).to render_template(:creator)
     expect(response.body).to include("Start selling with us")
   end

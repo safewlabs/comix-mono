@@ -4,6 +4,7 @@ RSpec.describe "store page", type: :request do
   
   context 'view store page as a creator' do
     let(:user) { create(:user, :creator) }
+    let(:store) { create(:store, user: user) }
     
     it "loads store page" do
       sign_in user
