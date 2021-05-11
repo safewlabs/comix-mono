@@ -6,13 +6,12 @@
 #  name       :string
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
+#  slug       :string
 #
 
 class Genre < ApplicationRecord
+  include Sluggable
+
   has_many :products_genres
   has_many :products, through: :products_genres
-
-  def to_param
-    slug
-  end
 end
