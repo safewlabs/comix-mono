@@ -1,6 +1,6 @@
 ## [Comix](https://comix.life) - A marketplace for independent comics
 
-[ ![Codeship Status for safewlabs/comix-mono](https://app.codeship.com/projects/1b9be7e0-a50e-0135-16d4-669675cbf703/status?branch=new-app)](https://app.codeship.com/projects/255140)
+[![CI](https://github.com/safewlabs/comix-mono/actions/workflows/ci.yml/badge.svg)](https://github.com/safewlabs/comix-mono/actions/workflows/ci.yml)
 [![Maintainability](https://api.codeclimate.com/v1/badges/1482d87626eec74e1697/maintainability)](https://codeclimate.com/github/safewlabs/comix-mono/maintainability)
 [![codecov](https://codecov.io/gh/safewlabs/comix-mono/branch/new-app/graph/badge.svg)](https://codecov.io/gh/safewlabs/comix-mono) 
 
