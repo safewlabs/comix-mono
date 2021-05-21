@@ -10,13 +10,11 @@ class LineItemsController < ApplicationController
         # Iterate the line_item's quantity by one
         @line_item.quantity += 1
       else
-        @line_item = LineItem.new
-        @line_item.cart = current_cart
-        @line_item.product = chosen_product
+        @line_item = LineItem.new(cart: current_cart, product: chosen_product)
       end
 
       # Save and redirect to cart show path
-      @line_item.save
+      @line_item.save!
       redirect_to cart_path(current_cart)
     end
 

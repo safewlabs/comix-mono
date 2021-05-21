@@ -6,7 +6,6 @@ Rails.application.routes.draw do
   root 'home#index'
   get 'search', to: 'search#index', as: 'search'
   
-  get 'dashboard', to: 'dashboards#index', as: 'dashboard'
   
   resources :stores, param: :slug
   resources :genres, param: :slug
@@ -29,8 +28,8 @@ Rails.application.routes.draw do
     mount Sidekiq::Web => '/sidekiq'
   end
 
-  get 'carts/current' => "carts#show", as: "cart"
-  delete 'carts/:id' => "carts#destroy"
+  get 'carts/:id', to: "carts#show", as: "cart"
+  delete 'carts/:id', to: "carts#destroy"
 
   post 'line_items/:id/add', to: "line_items#add_quantity", as: "line_item_add"
   post 'line_items/:id/reduce', to: "line_items#reduce_quantity", as: "line_item_reduce"
@@ -39,6 +38,10 @@ Rails.application.routes.draw do
   delete 'line_items/:id', to: "line_items#destroy"
 
   resources :orders
+
+  namespace :dashboard do
+    get '/', to: 'home#index'
+  end
 
   devise_scope :user do
     get 'creator-signup', to: 'users/registrations#creator'
