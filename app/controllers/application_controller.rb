@@ -1,4 +1,5 @@
 class ApplicationController < ActionController::Base
+  before_action :auth
   include Pundit
     
   protect_from_forgery with: :exception
@@ -6,6 +7,14 @@ class ApplicationController < ActionController::Base
   before_action :current_cart
 
   private
+
+  def auth
+    if Rails.env.production?
+      authenticate_or_request_with_http_basic do |username, password|
+        username == "comixadmin" && password == "BCKtt3%ZnPee"
+      end
+    end
+  end
 
   def user_not_authorized(exception)
     policy_name = exception.policy.class.to_s.underscore
