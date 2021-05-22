@@ -10,7 +10,7 @@
 #
 FactoryBot.define do
   factory :order do
-    user { nil }
+    user
     order_reference { "MyString" }
   end
 end
