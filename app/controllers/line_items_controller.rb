@@ -6,11 +6,11 @@ class LineItemsController < ApplicationController
       current_cart = @current_cart
       if current_cart.products.include?(chosen_product)
         # Find the line_item with the chosen_product
-        @line_item = current_cart.line_items.find_by(:product_id => chosen_product)
+        @line_item = current_cart.line_items.find_by(product_id: chosen_product)
         # Iterate the line_item's quantity by one
         @line_item.quantity += 1
       else
-        @line_item = LineItem.new(cart: current_cart, product: chosen_product)
+        @line_item = LineItem.new(cart: current_cart, product: chosen_product, quantity: 1)
       end
 
       # Save and redirect to cart show path
