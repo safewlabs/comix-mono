@@ -15,7 +15,7 @@ RSpec.describe "load sign up page", type: :feature do
       fill_in "user[password]", with: user[:password]
       fill_in "user[password_confirmation]", with: user[:password]
       click_button "Join"
-      expect(page).to have_content "Create a new Store"
+      expect(page).to have_content "Let's setup your Store"
     end
   end
 
