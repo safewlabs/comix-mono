@@ -18,4 +18,28 @@ RSpec.describe "load home page", type: :feature do
     click_link 'Sell on Comix'
     expect(page).to have_content 'Sell with us'
   end
+
+  context "logged in as creator" do
+    let(:user) { create(:user, :creator) }
+
+    it 'loads dashboard page' do
+      login_as(user, scope: :user)
+      visit "/"
+      expect(page).to have_content 'Dashboard'
+      click_link 'Dashboard'
+      expect(page).to have_content 'Dashboard'
+    end
+  end
+
+  context "logged in as buyer" do
+    let(:user) { create(:user) }
+
+    it 'loads dashboard page' do
+      login_as(user, scope: :user)
+      visit "/"
+      expect(page).to have_content 'Sell on Comix'
+      click_link 'Sell on Comix'
+      expect(page).to have_content 'Sell with us'
+    end
+  end
 end
