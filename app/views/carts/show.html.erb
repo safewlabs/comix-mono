@@ -2,7 +2,6 @@
 <ul>
   <% @cart.line_items.each do |line_item| %>
     <li>Item: <%= line_item.product.name %>/ Price: <%= number_to_currency(line_item.product.price) %>/ Quantity: <%= line_item.quantity %>/ Total Price: <%= number_to_currency(line_item.total_price) %>
-    # See lineItem section below for explanation of line_item links
     <ul>
       <li>
         <%= link_to "Add one", line_item_add_path(line_item), method: :post %>
