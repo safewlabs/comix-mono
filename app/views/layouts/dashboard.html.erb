@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Comix</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_pack_tag 'application' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application' %>
+    <script type="module" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule="" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.js"></script>
+  </head>
+
+  <body>
+    <%= render 'shared/header' %>
+    <div class="text-center text-4xl">
+      Dashboard
+    </div>
+    <div class="container">
+      <div class="flex flex-wrap">
+        <div class="w-1/3 sm:w-hidden">
+          <%= render 'shared/side_bar' %>
+        </div>
+        <div class="w-2/3 sm:w-full">
+          <%= yield %>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
