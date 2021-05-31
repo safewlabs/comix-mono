@@ -90,6 +90,7 @@ GEM
       rack-test (>= 0.6.3)
       regexp_parser (>= 1.5, < 3.0)
       xpath (~> 3.2)
+    chartkick (4.0.4)
     childprocess (3.0.0)
     codecov (0.5.2)
       simplecov (>= 0.15, < 0.22)
@@ -131,6 +132,8 @@ GEM
     formatador (0.2.5)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
+    groupdate (5.2.2)
+      activesupport (>= 5)
     guard (2.16.2)
       formatador (>= 0.2.4)
       listen (>= 2.7, < 4.0)
@@ -361,6 +364,7 @@ DEPENDENCIES
   bootsnap (>= 1.1.0)
   byebug
   capybara (>= 3.32.2, < 4.0)
+  chartkick
   codecov
   coffee-rails (~> 5.0, >= 5.0.0)
   database_cleaner
@@ -368,6 +372,7 @@ DEPENDENCIES
   dotenv-rails (>= 2.7.5)
   factory_bot_rails (>= 5.2.0)
   faker
+  groupdate
   guard-rspec (~> 4.7)
   image_processing
   jbuilder (~> 2.10)

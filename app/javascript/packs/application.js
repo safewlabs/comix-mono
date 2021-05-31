@@ -10,6 +10,7 @@
 import '../src/application'
 import { Application } from "stimulus"
 import { definitionsFromContext } from "stimulus/webpack-helpers"
+import "chartkick/chart.js"
 
 const application = Application.start()
 const context = require.context("controllers", true, /.js$/)

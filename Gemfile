@@ -34,6 +34,8 @@ gem 'redis', '~> 4.2'
 # gem 'bcrypt', '~> 3.1.7'
 gem 'ransack'
 gem 'sidekiq'
+gem 'chartkick'
+gem 'groupdate'
 
 # Use ActiveStorage variant
 gem 'image_processing'
