@@ -15,7 +15,7 @@ RSpec.describe "load home page", type: :feature do
 
   it "redirects to sell on comix page" do
     visit "/"
-    click_link 'Sell on Comix'
+    click_link 'Sell'
     expect(page).to have_content 'Sell with us'
   end
 

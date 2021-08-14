@@ -62,12 +62,14 @@ app/views/shared/_errors.html.erb
 app/views/shared/_sell_with_us.html.erb
 app/views/shared/_category_card.html.erb
 app/views/shared/_header.html.erb
+app/views/shared/_side_bar.html.erb
 app/views/shared/_footer.html.erb
 app/views/shared/_product_card.html.erb
 app/views/shared/_search_bar.html.erb
 app/views/shared/_creator_card.html.erb
 app/views/search/index.html.erb
 app/views/dashboard/home/index.html.erb
+app/views/dashboard/home/products.html.erb
 app/views/carts/show.html.erb
 app/views/layouts/application.html.erb
 app/views/layouts/mailer.html.erb
@@ -402,6 +404,7 @@ public/packs/js/application-367cfe3d4f57b67ce225.js
 public/packs/js/application-3348442efb8ee97230ef.js
 public/packs/js/application-277fd076b1a82478bb10.js
 public/packs/js/application-b469f4295b35e353b652.js.map
+public/packs/js/application-5ad012b1e961fd5f211e.js.map
 public/packs/js/application-a62c5a920077e243796d.js
 public/packs/js/application-bccf8057dfabc07ee532.js
 public/packs/js/application-f345c1e44d98abf11578.js.map
@@ -412,6 +415,7 @@ public/packs/js/application-b751b4e8926a181b28b5.js.map
 public/packs/js/application-255348278c9d18cf457c.js
 public/packs/js/application-3348442efb8ee97230ef.js.map
 public/packs/js/application-cc0f24263474ea8f1e5f.js.map
+public/packs/js/application-397791475431c24feb3e.js.map
 public/packs/js/application-830e11833dc913e20123.js
 public/packs/js/application-5da6fd6150a21f1de14e.js.map
 public/packs/js/application-26e7fc18b2f050dd2b14.js.map
@@ -430,6 +434,7 @@ public/packs/js/application-e57df2330ac27c7adbc4.js.map
 public/packs/js/application-cc42d0895673bd7ac8f3.js
 public/packs/js/application-4c8068d298e4cfca1dbf.js.map
 public/packs/js/application-c81641cd8a416120cfa0.js
+public/packs/js/application-69e0aef28fe6ecaad719.js
 public/packs/js/application-add76ee55df981d44dd4.js
 public/packs/js/application-927c66926846194e9be5.js.map
 public/packs/js/application-de257181bcaa5a39c2ad.js
@@ -446,6 +451,7 @@ public/packs/js/application-90e4f04385e526c63fc3.js
 public/packs/js/application-a69116275daa29aa190f.js.map
 public/packs/js/application-cd14cf7791cd490b950a.js
 public/packs/js/application-4eea7db8bdcc229beb9b.js.map
+public/packs/js/application-397791475431c24feb3e.js
 public/packs/js/application-960fe8e51375fe84252a.js.map
 public/packs/js/application-05e0c5772222d1646e39.js.map
 public/packs/js/application-14211d2faa89efc419e5.js.map
@@ -487,8 +493,10 @@ public/packs/js/application-f28acbebc1fce58f7cb1.js.map
 public/packs/js/application-df5bbdf33169222f9a13.js
 public/packs/js/application-871d771359ca55ed5948.js
 public/packs/js/application-f5c31f39d1330f6d73fb.js
+public/packs/js/application-3d337026581eb6c7334d.js
 public/packs/js/application-ae6d221071a7b5c1e8be.js.map
 public/packs/js/application-a246b4f64b6d7bb70ad3.js
+public/packs/js/application-df71a1fe16a946b072e8.js.map
 public/packs/js/application-8e89e2471490bed48a6d.js.map
 public/packs/js/application-048dc4bee3e784cab82b.js.map
 public/packs/js/application-85cf8f78e9b5fdb95d52.js.map
@@ -555,6 +563,7 @@ public/packs/js/application-55393aad559ee2992aa9.js.map
 public/packs/js/application-f5a52077cff0be1e2956.js.map
 public/packs/js/application-0158ccabdccf4d91a6bc.js
 public/packs/js/application-b05482ee7848f2a5ffaa.js.map
+public/packs/js/application-3d337026581eb6c7334d.js.map
 public/packs/js/application-55ceb0fb2ec8a87cad1a.js
 public/packs/js/application-303c26fa40f8cc46e506.js.map
 public/packs/js/application-75e6ca1ebd1e283a0fec.js
@@ -578,6 +587,8 @@ public/packs/js/application-57351321b51eb0f5344d.js.map
 public/packs/js/application-d76f58510fa899abaafd.js
 public/packs/js/application-25b5c6c8bdc355145b77.js.map
 public/packs/js/application-85cf8f78e9b5fdb95d52.js
+public/packs/js/application-5ad012b1e961fd5f211e.js
+public/packs/js/application-7dfed934c3da40da115b.js.map
 public/packs/js/application-e5ec645736e645bc4758.js
 public/packs/js/application-ec31add7c6b1823fbd68.js
 public/packs/js/application-1fa880f5f3a03e7eadc1.js
@@ -620,6 +631,7 @@ public/packs/js/application-de257181bcaa5a39c2ad.js.map
 public/packs/js/application-c90c108e9a02acda6b62.js
 public/packs/js/application-a21525539bac7313febf.js.map
 public/packs/js/application-52a2f81ca0ac795d0d68.js
+public/packs/js/application-69e0aef28fe6ecaad719.js.map
 public/packs/js/application-55ceb0fb2ec8a87cad1a.js.map
 public/packs/js/application-e95d9c22a9b7f396c7e9.js.map
 public/packs/js/application-90e4f04385e526c63fc3.js.map
@@ -640,6 +652,7 @@ public/packs/js/application-71671bc96bf7e8a0e1c3.js
 public/packs/js/application-a6ec2a75065a1fa35344.js.map
 public/packs/js/application-75d3b66139853b89842e.js
 public/packs/js/application-3803822627373df8d774.js
+public/packs/js/application-7dfed934c3da40da115b.js
 public/packs/js/application-14d0bb21be4ef65e66a3.js.map
 public/packs/js/application-d7bfeeac75928bad5496.js.map
 public/packs/js/application-7c548119ccbad947292b.js
@@ -712,6 +725,7 @@ public/packs/js/application-46c4f246309425b58bbe.js
 public/packs/js/application-509d5a1004ce5f9a0285.js.map
 public/packs/js/application-808609a209bc7bfaa7f0.js.map
 public/packs/js/application-9aaa913f7719ad8ff525.js
+public/packs/js/application-df71a1fe16a946b072e8.js
 public/packs/js/application-3ac59465ff922f2e3496.js
 public/packs/js/application-ec9c75a29c95c8eb6dc8.js
 public/packs/js/application-3885542968349d400ccc.js
@@ -803,6 +817,7 @@ public/packs-test/js/application-5d7c16b6a3cb7c51c2cb.js
 public/packs-test/js/application-70cda7a6aa5fbfe7dd6b.js.map
 public/packs-test/js/application-b3fc01d11f7577d0312e.js.map
 public/packs-test/js/application-5f2621f982675fe33e42.js.map
+public/packs-test/js/application-4f7ea364e8e98f128bcb.js.map
 public/packs-test/js/application-8e3c77444ad4f80c7e73.js
 public/packs-test/js/application-9f3b2777437f1e910a10.js
 public/packs-test/js/application-b6bf935cc863ea72fd3c.js
@@ -816,6 +831,7 @@ public/packs-test/js/application-9f3b2777437f1e910a10.js.map
 public/packs-test/js/application-b6bf935cc863ea72fd3c.js.map
 public/packs-test/js/application-4fbb131e8bb32b7fd531.js
 public/packs-test/js/application-5f2621f982675fe33e42.js
+public/packs-test/js/application-4f7ea364e8e98f128bcb.js
 public/packs-test/js/application-da3b6522efbba0703af5.js.map
 public/packs-test/js/application-e3f86f108fd8fc9d9ac4.js.map
 public/packs-test/js/application-70cda7a6aa5fbfe7dd6b.js
@@ -877,4 +893,4 @@ coverage/codecov-result.json
 coverage/assets/0.10.2/application.css
 coverage/assets/0.10.2/application.js
 <<<<<< network
-{"coverage":{"app/controllers/application_controller.rb":[null,1,1,1,null,1,1,1,null,1,null,1,65,0,0,null,null,null,null,1,2,null,2,2,null,null,1,65,22,22,22,null,0,null,null,null,65,43,43,null,null,null],"app/controllers/carts_controller.rb":[null,1,1,1,null,1,1,null,null,1,0,0,0,0,null,null,1,1,1,null,null],"app/controllers/categories_controller.rb":[null,1,1,1,null,null,1,1,1,null,null],"app/controllers/creators_controller.rb":[null,0,0,0,0,0],"app/controllers/dashboard/home_controller.rb":[null,1,1,5,null,null],"app/controllers/dashboard/products_controller.rb":[null,0,0,0,0,0,null],"app/controllers/genres_controller.rb":[null,1,1,2,null,null,1,0,0,null,null],"app/controllers/home_controller.rb":[null,1,1,8,8,8,null,null],"app/controllers/line_items_controller.rb":[null,0,0,null,0,0,0,0,null,0,null,0,0,0,0,null,null,0,0,0,null,0,0,0,0,0,0,null,0,0,0,0,0,0,0,0,null,0,0,0,0,0,null,0,0,0,0,0],"app/controllers/orders_controller.rb":[null,1,1,1,null,1,1,null,null,1,1,null,null,1,1,null,null,1,0,0,0,0,null,0,0,0,0,null,null,1,null,1,0,null,null],"app/controllers/pages_controller.rb":[null,1,1,null,null,1,null,null],"app/controllers/products_controller.rb":[null,0,0,0,0,0,0],"app/controllers/search_controller.rb":[null,0,0,0,0,0,0,0],"app/controllers/stores_controller.rb":[null,1,1,1,1,null,1,1,1,null,null,1,0,null,null,1,1,1,null,null,1,null,null,1,0,0,0,0,null,0,null,null,null,1,null,null,1,null,null,1,null,1,0,null,null,1,0,null,null],"app/controllers/users/confirmations_controller.rb":[null,null,null,0,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,0],"app/controllers/users/omniauth_callbacks_controller.rb":[null,null,null,0,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,0],"app/controllers/users/passwords_controller.rb":[null,null,null,0,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,0],"app/controllers/users/registrations_controller.rb":[null,null,null,1,1,null,null,null,null,null,null,null,1,6,6,6,null,null,null,1,6,null,6,6,6,2,2,2,2,2,null,0,0,0,null,null,4,4,4,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,1,null,null,1,6,null,null,null,null,null,null,null,null,null,1,2,1,null,1,null,null,null,null,null,null,null,null],"app/controllers/users/sessions_controller.rb":[null,null,null,1,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],"app/controllers/users/unlocks_controller.rb":[null,null,null,0,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,0],"app/models/cart.rb":[null,null,null,null,null,null,null,null,null,1,1,1,null,1,1,1,0,null,1,null,null],"app/models/category.rb":[null,null,null,null,null,null,null,null,null,null,null,null,1,1,null,1,1,null],"app/models/collaboration.rb":[null,null,null,null,null,null,null,null,null,null,null,null,null,1,1,1,null],"app/models/concerns/sluggable.rb":[null,null,1,1,null,1,6,6,null,null,1,12,12,null,null,1,0,null,null,1,null,1,12,null,null],"app/models/creator.rb":[null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,1,1,null,1,1,1,null],"app/models/genre.rb":[null,null,null,null,null,null,null,null,null,null,null,null,1,1,null,1,1,null],"app/models/line_item.rb":[null,null,null,null,null,null,null,null,null,null,null,null,null,1,1,1,1,null,1,0,null,null],"app/models/order.rb":[null,null,null,null,null,null,null,null,null,null,null,1,1,1,null,1,null,1,1,null,null],"app/models/product.rb":[null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,1,1,null,1,1,1,null,1,1,null,1,1,1,null,1,1,null,1,null],"app/models/products_category.rb":[null,null,null,null,null,null,null,null,null,null,null,null,1,1,1,null],"app/models/products_genre.rb":[null,null,null,null,null,null,null,null,null,null,null,null,1,1,1,null],"app/models/publication.rb":[null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,1,1,null,1,1,null],"app/models/role.rb":[null,null,null,null,null,null,null,null,null,null,null,null,null,null,1,1,1,1,1,null],"app/models/store.rb":[null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,1,1,null,1,1,1,1,1,1,1,1,null,1,null],"app/models/team.rb":[null,null,null,null,null,null,null,null,null,null,null,null,1,1,1,null],"app/models/user.rb":[null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,0,null,0,0,null,null,0,0,null,0,0,0,null,null,0],"app/policies/application_policy.rb":[null,1,1,null,1,0,0,null,null,1,0,null,null,1,0,null,null,1,0,null,null,1,0,null,null,1,0,null,null,1,0,null,null,1,0,null,null,1,1,null,1,0,0,null,null,1,0,null,null,null],"app/policies/dashboard_policy.rb":[null,1,1,5,null,null],"app/policies/store_policy.rb":[null,1,1,null,1,6,6,null,null,1,3,null,null,1,3,null,null]}}
+{"coverage":{"app/controllers/application_controller.rb":[null,1,1,1,null,1,1,1,null,1,null,1,10,0,0,null,null,null,null,1,0,null,0,0,null,null,1,10,5,5,5,null,0,null,null,null,10,5,5,null,null,null],"app/controllers/carts_controller.rb":[null,0,0,0,null,0,0,0,null,0,0,0,0,0,0,null,0,0,0,0,0],"app/controllers/categories_controller.rb":[null,0,0,0,0,null,0,0,0,0,0],"app/controllers/creators_controller.rb":[null,0,0,0,0,0],"app/controllers/dashboard/home_controller.rb":[null,1,1,1,null,null],"app/controllers/dashboard/products_controller.rb":[null,0,0,0,0,null,0,0,0,0,null],"app/controllers/genres_controller.rb":[null,0,0,0,0,null,0,0,0,0,0],"app/controllers/home_controller.rb":[null,1,1,5,5,5,null,null],"app/controllers/line_items_controller.rb":[null,0,0,null,0,0,0,0,null,0,null,0,0,0,0,null,null,0,0,0,null,0,0,0,0,0,0,null,0,0,0,0,0,0,0,0,null,0,0,0,0,0,null,0,0,0,0,0],"app/controllers/orders_controller.rb":[null,0,0,0,null,0,0,0,null,0,0,0,null,0,0,0,null,0,0,0,0,0,0,0,0,0,0,0,null,0,null,0,0,0,0],"app/controllers/pages_controller.rb":[null,1,1,null,null,1,null,null],"app/controllers/products_controller.rb":[null,0,0,0,0,0,0],"app/controllers/search_controller.rb":[null,0,0,0,0,0,0,0],"app/controllers/stores_controller.rb":[null,0,0,0,0,null,0,0,0,0,null,0,0,0,null,0,0,0,0,null,0,0,null,0,0,0,0,0,0,0,0,0,null,0,0,null,0,0,null,0,null,0,0,0,null,0,0,0,0],"app/controllers/users/confirmations_controller.rb":[null,null,null,0,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,0],"app/controllers/users/omniauth_callbacks_controller.rb":[null,null,null,0,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,0],"app/controllers/users/passwords_controller.rb":[null,null,null,0,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,0],"app/controllers/users/registrations_controller.rb":[null,null,null,1,1,null,null,null,null,null,null,null,1,0,0,0,null,null,null,1,0,null,0,0,0,0,0,0,0,0,null,0,0,0,null,null,0,0,0,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,1,null,null,1,0,null,null,null,null,null,null,null,null,null,1,0,0,null,0,null,null,null,null,null,null,null,null],"app/controllers/users/sessions_controller.rb":[null,null,null,1,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],"app/controllers/users/unlocks_controller.rb":[null,null,null,0,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,0],"app/models/cart.rb":[null,null,null,null,null,null,null,null,null,1,1,1,null,1,0,0,0,null,0,null,null],"app/models/category.rb":[null,null,null,null,null,null,null,null,null,null,null,null,1,1,null,1,1,null],"app/models/collaboration.rb":[null,null,null,null,null,null,null,null,null,null,null,null,null,0,0,0,0],"app/models/concerns/sluggable.rb":[null,null,1,1,null,1,3,3,null,null,1,0,0,null,null,1,0,null,null,1,null,1,0,null,null],"app/models/creator.rb":[null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,0,0,null,0,0,0,0],"app/models/genre.rb":[null,null,null,null,null,null,null,null,null,null,null,null,1,1,null,1,1,null],"app/models/line_item.rb":[null,null,null,null,null,null,null,null,null,null,null,null,null,0,0,0,0,null,0,0,0,0],"app/models/order.rb":[null,null,null,null,null,null,null,null,null,null,null,0,0,0,null,0,null,0,0,0,0],"app/models/product.rb":[null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,1,1,null,1,1,1,null,1,1,null,1,1,1,null,1,1,null,1,null],"app/models/products_category.rb":[null,null,null,null,null,null,null,null,null,null,null,null,0,0,0,0],"app/models/products_genre.rb":[null,null,null,null,null,null,null,null,null,null,null,null,0,0,0,0],"app/models/publication.rb":[null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,0,0,null,0,0,0],"app/models/role.rb":[null,null,null,null,null,null,null,null,null,null,null,null,null,null,1,1,1,1,1,null],"app/models/store.rb":[null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,0,0,null,0,0,0,0,0,0,0,0,null,0,0],"app/models/team.rb":[null,null,null,null,null,null,null,null,null,null,null,null,0,0,0,0],"app/models/user.rb":[null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,0,null,0,0,null,null,0,0,null,0,0,0,null,null,0],"app/policies/application_policy.rb":[null,0,0,null,0,0,0,0,null,0,0,0,null,0,0,0,null,0,0,0,null,0,0,0,null,0,0,0,null,0,0,0,null,0,0,0,null,0,0,null,0,0,0,0,null,0,0,0,0,0],"app/policies/dashboard_policy.rb":[null,1,1,1,null,null],"app/policies/store_policy.rb":[null,0,0,null,0,0,0,0,null,0,0,0,null,0,0,0,0]}}
