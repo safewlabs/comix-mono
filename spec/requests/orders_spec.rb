@@ -19,13 +19,4 @@ RSpec.describe "Orders", type: :request do
       expect(response).to have_http_status(:success)
     end
   end
-
-  describe "GET /new" do
-    it "returns http success" do
-      sign_in user
-      get "/orders/new"
-      expect(response).to have_http_status(:success)
-    end
-  end
-
 end
