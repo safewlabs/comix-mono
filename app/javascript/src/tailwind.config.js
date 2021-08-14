@@ -121,7 +121,7 @@ module.exports = {
       },
       cx: {
         "grain-yellow": "#f7c759",
-        "beaver": "#9e7f66",
+        "beaver": "#000000",
         "crayola": "#ffb728",
         "lavender-blush": "#ffe8f2",
         "pumpkin": "#ff683a" 

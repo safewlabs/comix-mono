@@ -1,18 +1,62 @@
-<h2>Cart show</h2>
-<ul>
-  <% @cart.line_items.each do |line_item| %>
-    <li>Item: <%= line_item.product.name %>/ Price: <%= number_to_currency(line_item.product.price) %>/ Quantity: <%= line_item.quantity %>/ Total Price: <%= number_to_currency(line_item.total_price) %>
-    <ul>
-      <li>
-        <%= link_to "Add one", line_item_add_path(line_item), method: :post %>
-        <%= link_to "Reduce one", line_item_reduce_path(line_item), method: :post %>
-      </li>
-      <li>
-        <%= link_to "Remove item", line_item_path(line_item), method: :delete %>
-      </li>
-    </ul>
-  <% end %>
-</ul>
-<h3>Sub total: <%= number_to_currency(@cart.sub_total) %></h3>
-<%= link_to "Proceed to checkout", new_order_path %><br>
-<%= link_to "Empty cart", cart_path(@current_cart),method: :delete, data: {confirm: "Are you sure?"} %>
+<div class="flex items-center justify-center flex-wrap">
+  <h1 class="w-full text-center text-cx-beaver font-bold text-4xl py-6">Your Cart</h1>
+  <div class="w-1/2 sm:w-full overflow-hidden p-10 mx-8 rounded-lg border border-orange-500 shadow-lg">
+    <table class="table-auto m-0 m-auto">
+      <thead>
+        <tr>
+          <th class="text-cx-beaver text-xl">Product</th>
+          <th class="text-cx-beaver text-xl">Quantity</th>
+          <th class="text-cx-beaver text-xl">Price</th>
+          <th></th>
+          <th></th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @cart.line_items.each do |line_item| %>
+          <tr>
+            <td class="border border-orange-500 px-4 py-2 text-orange-600 font-medium">
+              <%= line_item.product.name %>
+            </td>
+            <td class="border border-orange-500 px-4 py-2 text-center text-orange-600 font-medium">
+              <%= line_item.quantity %>
+            </td>
+            <td class="border border-orange-500 px-4 py-2 text-orange-600 font-medium">
+              <%= number_to_currency(line_item.product.price) %>
+            </td>
+            <td class="border border-orange-500 px-4 py-2 text-orange-600 text-sm">
+              <%= link_to "+", line_item_add_path(line_item), method: :post %>
+            </td>
+            <td class="border border-orange-500 px-4 py-2 text-orange-600 text-sm">
+              <%= link_to "-", line_item_reduce_path(line_item), method: :post %>
+            </td>
+            <td class="border border-orange-500 px-4 py-2 text-orange-600 font-sm">
+              <%= link_to "Remove item", line_item_path(line_item), method: :delete %>
+            </td>
+          </tr>
+        <% end %>
+        <tr>
+          <td class="border border-orange-500 px-4 py-2 text-orange-600 font-bold font-medium">
+            Sub total
+          </td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="border border-orange-500 px-4 py-2 text-orange-600 font-medium">
+            <%= number_to_currency(@cart.sub_total) %>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="w-full text-center my-8">
+    <%= link_to "Checkout", new_order_path,
+        class: "inline-block px-4 py-2 leading-none border rounded text-cx-beaver border-cx-beaver font-black hover:border-transparent hover:text-cx-lavender-blush hover:bg-cx-pumpkin mt-4 lg:mt-0"
+    %>
+    <%= link_to "Empty cart", cart_path(@current_cart),
+        method: :delete, data: {confirm: "Are you sure?"},
+        class: "inline-block px-4 py-2 leading-none border rounded text-cx-beaver border-cx-beaver font-black hover:border-transparent hover:text-cx-lavender-blush hover:bg-cx-pumpkin mt-4 lg:mt-0"
+    %>
+  </div>
+</div>
