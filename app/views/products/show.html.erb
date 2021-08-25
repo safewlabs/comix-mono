@@ -1,10 +1,29 @@
 <div class="flex flex-wrap h-auto flex-wrap lg:mx-64 my-16">
   <div class="w-full lg:w-2/5">
-    <% if @product.issue_cover.present? %>
-        <%= image_tag @product.issue_cover, class: "shadow-2xl hidden max-h-bigtile rounded-lg lg:block" %>
-    <% else %>
-        <img src="https://img.icons8.com/dotty/400/000000/full-image.png" class="shadow-2xl hidden rounded-lg lg:block" />
-    <% end %>
+    <div class="flex items-center justify-center">
+      <% if @product.issue_cover.present? %>
+          <%= image_tag @product.issue_cover, class: "shadow-2xl hidden max-h-bigtile rounded-lg lg:block" %>
+      <% else %>
+          <img src="https://img.icons8.com/dotty/400/000000/full-image.png" class="shadow-2xl hidden rounded-lg lg:block" />
+      <% end %>
+    </div>
+    <div class="mt-2 text-4xl sm:hidden md:hidden lg:flex items-center justify-center">
+      <span class="mx-2 p-2">&#36;<%= @product.price %></span>
+    </div>
+    <div class="mt-2 text-xl sm:hidden md:hidden lg:flex items-center justify-center">
+      <%= button_to line_items_path(product_id: @product.id),
+          class: "p-4 leading-none border rounded text-cx-lavender-blush bg-cx-pumpkin hover:border-transparent hover:text-cx-pumpkin hover:bg-cx-lavender-blush hover:border-cx-pumpkin",
+          method: :post do %>
+        Add to cart
+      <% end %> 
+    </div>
+  </div>
+  <div class="lg:hidden md:block sm:block w-full">
+    <%= button_to line_items_path(product_id: @product.id),
+        class: "p-4 leading-none border rounded text-cx-lavender-blush bg-cx-pumpkin hover:border-transparent hover:text-cx-pumpkin hover:bg-cx-lavender-blush hover:border-cx-pumpkin",
+        method: :post do %>
+      Add to cart
+    <% end %> 
   </div>
   <div class="w-full lg:w-3/5 shadow-2xl rounded-lg mx-6 lg:mx-0">
     <div class="p-4 md:p-12">
@@ -16,14 +35,6 @@
       <h1 class="text-3xl font-bold pt-8 lg:pt-0 px-2"><%= @product.name %></h1>
       <div class="mx-auto lg:mx-0 pt-3 border-b-2 divider-line opacity-25"></div>
       <div class="pt-8 text-md text-justify px-2 tracking-tight"><%= @product.description %></div>
-      <div class="mt-8 text-xl items-center flex justify-between">
-        <span class="mx-2 border border-solid rounded border-black p-2">&#36;<%= @product.price %></span>
-        <%= button_to line_items_path(product_id: @product.id),
-            class: "p-3 leading-none border rounded text-cx-lavender-blush bg-cx-pumpkin hover:border-transparent hover:text-cx-pumpkin hover:bg-cx-lavender-blush hover:border-cx-pumpkin",
-            method: :post do %>
-          Add to cart
-        <% end %> 
-      </div>
     </div>
   </div>
 </div>

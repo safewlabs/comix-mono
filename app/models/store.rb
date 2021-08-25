@@ -15,11 +15,11 @@
 class Store < ApplicationRecord
   include Sluggable
   
-  belongs_to :owner, class_name: 'User', foreign_key: 'owner_id'
+  belongs_to :user
   has_many :publications
   has_many :products
   has_many :teams
-  has_many :users, through: :teams
+  # has_many :users, through: :teams
   has_one_attached :cover_image
   has_one_attached :display_image
   has_rich_text :description
