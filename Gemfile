@@ -56,12 +56,12 @@ group :development, :test do
   gem 'factory_bot_rails', '>= 5.2.0'
   gem 'faker'
   gem 'guard-rspec', '~> 4.7'
-  gem 'rspec-rails', '~> 5.0.1'
+  gem 'rspec-rails', '~> 5.0.2'
 end
 
 group :development do
   gem 'annotate'
-  gem 'listen', '>= 3.0.5', '< 3.7'
+  gem 'listen', '>= 3.0.5', '< 3.8'
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
   gem 'web-console', '>= 4.0.2'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
