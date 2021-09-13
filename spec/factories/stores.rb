@@ -15,7 +15,7 @@ FactoryBot.define do
   factory :store do
     name { Faker::Artist.name }
     description { Faker::Lorem.paragraph(sentence_count: 2) }
-    association :owner, factory: :user
+    association :user, factory: :user
     display_image { Rack::Test::UploadedFile.new('spec/support/images/gummy-camping.png', 'image/png') }
     cover_image { Rack::Test::UploadedFile.new('spec/support/images/lance-anderson-AJgdNGVNtLg-unsplash.jpg', 'image/jpg') }
     

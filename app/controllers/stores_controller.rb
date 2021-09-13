@@ -4,7 +4,7 @@ class StoresController < ApplicationController
   before_action :set_store, only: [:show, :edit, :update, :destroy]
     
   def index
-    @stores = Store.where(owner: current_user)
+    @stores = Store.where(user: current_user)
     authorize Store
   end
 
@@ -22,7 +22,7 @@ class StoresController < ApplicationController
 
   def create
     @store = Store.new(store_params)
-    @store.owner = current_user
+    @store.user = current_user
     if @store.save!
       redirect_to @store
     else

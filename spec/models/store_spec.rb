@@ -45,7 +45,7 @@ RSpec.describe Store, type: :model do
       let(:store) { build(:store) }
       
       it 'belongs to a user' do
-        expect(store).to belong_to(:owner)
+        expect(store).to belong_to(:user)
       end
     end
     
