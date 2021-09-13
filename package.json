@@ -2,22 +2,46 @@
   "name": "comix",
   "private": true,
   "scripts": {
-    "watch": "bin/webpack --watch --colors --progress"
+    "watch": "bin/webpack-dev-server"
   },
   "dependencies": {
-    "@rails/actiontext": "^6.0.3-2",
-    "@rails/webpacker": "~5.1.1",
-    "chart.js": "^3.3.2",
-    "chartkick": "^4.0.4",
-    "core-js": "3",
-    "cssnext": "^1.8.4",
-    "stimulus": "^1.1.1",
-    "tailwindcss": "^1.0.1",
-    "trix": "^1.2.0"
+    "@fullhuman/postcss-purgecss": "^4.0.3",
+    "@rails/actioncable": "latest",
+    "@rails/actiontext": "^6.1.4-1",
+    "@rails/activestorage": "latest",
+    "@rails/ujs": "^6.1.4-1",
+    "@rails/webpacker": "^6.0.0-rc.5",
+    "autoprefixer": "^10.3.4",
+    "chart.js": "^3.5.1",
+    "chartkick": "^4.0.5",
+    "css-loader": "^6.2.0",
+    "css-minimizer-webpack-plugin": "^3.0.2",
+    "mini-css-extract-plugin": "^2.3.0",
+    "postcss": "^8.3.6",
+    "postcss-flexbugs-fixes": "^5.0.2",
+    "postcss-import": "^14.0.2",
+    "postcss-loader": "^6.1.1",
+    "postcss-preset-env": "^6.7.0",
+    "sass": "^1.39.2",
+    "sass-loader": "^12.1.0",
+    "style-loader": "^3.2.1",
+    "tailwindcss": "^2.2.15",
+    "trix": "^1.2.0",
+    "turbolinks": "^5.2.0",
+    "webpack": "^5.51.1",
+    "webpack-cli": "^4.8.0"
   },
+  "version": "0.1.0",
+  "babel": {
+    "presets": [
+      "./node_modules/@rails/webpacker/package/babel/preset.js"
+    ]
+  },
+  "browserslist": [
+    "defaults"
+  ],
   "devDependencies": {
-    "@babel/plugin-proposal-class-properties": "^7.4.4",
-    "autoprefixer": "^9.5.1",
-    "webpack-dev-server": "^3.9.0"
+    "@webpack-cli/serve": "^1.5.2",
+    "webpack-dev-server": "^4.1.1"
   }
 }

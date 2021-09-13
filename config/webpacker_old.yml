@@ -1,19 +1,34 @@
 # Note: You must restart bin/webpack-dev-server for changes to take effect
 
 default: &default
-  source_path: app/packs
-  source_entry_path: entrypoints
-  public_root_path: public
+  source_path: app/javascript
+  source_entry_path: packs
   public_output_path: packs
   cache_path: tmp/cache/webpacker
-  webpack_compile_output: true
 
-  # Additional paths webpack should look up modules
+  # Additional paths webpack should lookup modules
   # ['app/assets', 'engine/foo/app/assets']
-  additional_paths: []
+  additional_paths: [
+    'app/javascript/src',
+    'app/javascript/styles'
+  ]
 
   # Reload manifest.json on all requests so we reload latest compiled packs
   cache_manifest: false
+
+  extensions:
+    - .js
+    - .sass
+    - .scss
+    - .css
+    - .module.sass
+    - .module.scss
+    - .module.css
+    - .png
+    - .svg
+    - .gif
+    - .jpeg
+    - .jpg
 
 development:
   <<: *default
@@ -24,26 +39,20 @@ development:
     https: false
     host: localhost
     port: 3035
-    # Hot Module Replacement updates modules while the application is running without a full reload
+    public: localhost:3035
     hmr: false
-    client:
-      # Should we show a full-screen overlay in the browser when there are compiler errors or warnings?
-      overlay: true
-      # May also be a string
-      # webSocketURL:
-      #  hostname: "0.0.0.0"
-      #  pathname: "/ws"
-      #  port: 8080
-    # Should we use gzip compression?
+    # Inline should be set to true if using HMR
+    inline: true
+    overlay: true
     compress: true
-    # Note that apps that do not check the host are vulnerable to DNS rebinding attacks
-    allowed_hosts: "all"
-    pretty: true
+    disable_host_check: true
+    use_local_ip: false
+    quiet: false
     headers:
       'Access-Control-Allow-Origin': '*'
-    static:
-      watch:
-        ignored: '**/node_modules/**'
+    watch_options:
+      ignored: /node_modules/
+
 
 test:
   <<: *default

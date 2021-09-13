@@ -1,9 +1,9 @@
 body {
-  @apply .font-body;
+  @apply font-body;
 }
 a {
   text-decoration: none;
-  @apply .font-body  .text-xl .font-normal;
+  @apply font-body text-xl font-normal;
 }
 .navbar-link {
   background-image: linear-gradient(#ff683a, #ff683a);
