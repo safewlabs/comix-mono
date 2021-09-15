@@ -796,41 +796,41 @@
           null
         ]
       },
-      "/Users/saurabhbhatia/comix-mono/app/models/user.rb": {
+      "/Users/saurabhbhatia/comix-mono/app/controllers/creators_controller.rb": {
         "lines": [
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          0,
-          null,
           0,
           0,
-          null,
-          null,
           0,
           0,
-          null,
-          0,
-          0,
-          null,
-          null,
           0
+        ],
+        "branches": {
+        }
+      },
+      "/Users/saurabhbhatia/comix-mono/app/controllers/dashboard/products_controller.rb": {
+        "lines": [
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          null,
+          0,
+          0,
+          null,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          null
         ],
         "branches": {
         }
@@ -900,34 +900,6 @@
         "branches": {
         }
       },
-      "/Users/saurabhbhatia/comix-mono/app/controllers/dashboard/products_controller.rb": {
-        "lines": [
-          0,
-          0,
-          0,
-          0,
-          null,
-          0,
-          0,
-          0,
-          null,
-          0,
-          0,
-          null,
-          0,
-          0,
-          null,
-          0,
-          0,
-          null,
-          0,
-          0,
-          0,
-          null
-        ],
-        "branches": {
-        }
-      },
       "/Users/saurabhbhatia/comix-mono/app/controllers/search_controller.rb": {
         "lines": [
           0,
@@ -941,12 +913,37 @@
         "branches": {
         }
       },
-      "/Users/saurabhbhatia/comix-mono/app/controllers/creators_controller.rb": {
+      "/Users/saurabhbhatia/comix-mono/app/controllers/users/confirmations_controller.rb": {
         "lines": [
+          null,
+          null,
           0,
-          0,
-          0,
-          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
           0
         ],
         "branches": {
@@ -1064,35 +1061,38 @@
         "branches": {
         }
       },
-      "/Users/saurabhbhatia/comix-mono/app/controllers/users/confirmations_controller.rb": {
+      "/Users/saurabhbhatia/comix-mono/app/models/user.rb": {
         "lines": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
           null,
           null,
           0,
           null,
+          0,
+          0,
           null,
           null,
+          0,
+          0,
           null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
+          0,
+          0,
           null,
           null,
           0
@@ -1101,6 +1101,6 @@
         }
       }
     },
-    "timestamp": 1631532699
+    "timestamp": 1631534263
   }
 }
