@@ -20,11 +20,15 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Setup Ruby and install gems
+      - name: Setup Ruby
         uses: ruby/setup-ruby@477b21f02be01bcb8030d50f37cfec92bfa615b6
         with:
           bundler-cache: true
           ruby-version: 3.0.1
+      
+      - name: Install gems
+        run: |
+          bundle install
       
       - name: Checkout Node
         uses: actions/checkout@v2
