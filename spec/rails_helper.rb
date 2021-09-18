@@ -5,6 +5,7 @@ require 'codecov'
 require 'capybara/rspec'
 require 'webmock/rspec'
 require 'devise/test_helpers'
+require 'action_text/system_test_helper'
 
 ENV['RAILS_ENV'] ||= 'test'
 require File.expand_path('../../config/environment', __FILE__)
@@ -76,6 +77,7 @@ RSpec.configure do |config|
   end
   config.include(Shoulda::Matchers::ActiveModel, type: :model)
   config.include(Shoulda::Matchers::ActiveRecord, type: :model)
+  config.include ActionText::SystemTestHelper, type: :system
   # RSpec Rails can automatically mix in different behaviours to your tests
   # based on their file location, for example enabling you to call `get` and
   # `post` in specs under `spec/controllers`.
