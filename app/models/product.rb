@@ -32,6 +32,7 @@ class Product < ApplicationRecord
 
   has_one_attached :issue_cover
   has_one_attached :file
+  has_rich_text :description
   
   belongs_to :publication
 end

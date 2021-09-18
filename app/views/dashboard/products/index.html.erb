@@ -1,36 +1,33 @@
-<h1>Products</h1>
-<table class="table-auto">
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Author</th>
-      <th>Views</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Intro to CSS</td>
-      <td>Adam</td>
-      <td>858</td>
-    </tr>
-    <tr class="bg-emerald-200">
-      <td>A Long and Winding Tour of the History of UI Frameworks and Tools and the Impact on Design</td>
-      <td>Adam</td>
-      <td>112</td>
-    </tr>
-    <tr>
-      <td>Intro to JavaScript</td>
-      <td>Chris</td>
-      <td>1,280</td>
-    </tr>
-  </tbody>
-</table>
-
-<% @products.each do |product| %>
-    <%= product.name %>
-    <ul>
-      <li>Show</li>
-      <li>Edit</li>
-      <li>Delete</li>
-    </ul>
-<% end %>
+<div class="flex flex-wrap">
+  <h1 class="w-full text-center text-cx-beaver font-bold text-4xl py-6">Products</h1>
+  <div class="w-full overflow-hidden p-10">
+    <table class="table-auto m-0 m-auto">
+      <thead>
+        <tr>
+          <th class="text-cx-beaver text-xl">Name</th>
+          <th class="text-cx-beaver text-xl">Price</th>
+          <th></th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @products.each do |product| %>
+          <tr>
+            <td class="border border-orange-500 px-4 py-2 text-orange-600 font-medium">
+              <%= product.name %>
+            </td>
+            <td class="border border-orange-500 px-4 py-2 text-orange-600 font-medium">
+              <%= number_to_currency(product.price) %>
+            </td>
+            <td class="border border-orange-500 px-4 py-2 text-orange-600 text-sm">
+              <%= link_to "Edit", edit_dashboard_product_path(product) %>
+            </td>
+            <td class="border border-orange-500 px-4 py-2 text-orange-600 font-sm">
+              <%= link_to "Delete", dashboard_product_path(product), method: :delete, data: {confirm: "Are you sure?"} %>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>
