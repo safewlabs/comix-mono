@@ -19,6 +19,8 @@
 import Rails from "@rails/ujs"
 import Turbolinks from "turbolinks"
 import * as ActiveStorage from "@rails/activestorage"
+import { Application } from "stimulus"
+import { Modal } from "tailwindcss-stimulus-components"
 import "chartkick/chart.js"
 import "src/application.scss"
 import "controllers/menu_controller.js"
@@ -26,6 +28,8 @@ import "controllers/menu_controller.js"
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
+const application = Application.start();
+application.register('modal', Modal)
 
 require("trix")
 require("@rails/actiontext")

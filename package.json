@@ -26,6 +26,7 @@
     "sass-loader": "^12.1.0",
     "style-loader": "^3.2.1",
     "tailwindcss": "^2.2.15",
+    "tailwindcss-stimulus-components": "^2.2.2",
     "trix": "^1.2.0",
     "turbolinks": "^5.2.0",
     "webpack": "^5.51.1",

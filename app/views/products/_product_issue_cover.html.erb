@@ -1,0 +1,32 @@
+<div class="flex items-center justify-center">
+  <% if product.issue_cover.present? %>
+    <%= image_tag product.issue_cover, class: "shadow-2xl hidden max-h-bigtile rounded-lg lg:block" %>
+  <% else %>
+    <img src="https://img.icons8.com/dotty/400/000000/full-image.png" class="shadow-2xl hidden rounded-lg lg:block" />
+  <% end %>
+</div>
+<div class="mt-2 text-4xl sm:hidden md:hidden lg:flex items-center justify-center">
+  <span class="mx-2 p-2">&#36;<%= product.price %></span>
+</div>
+<div class="mt-2 text-xl sm:hidden md:hidden lg:flex items-center justify-center">
+  <%= button_to line_items_path(product_id: product.id),
+      class: "p-4 leading-none border rounded text-cx-lavender-blush bg-cx-pumpkin hover:border-transparent hover:text-cx-pumpkin hover:bg-cx-lavender-blush hover:border-cx-pumpkin",
+      method: :post do %>
+      Add to cart
+  <% end %> 
+</div>
+<%= render partial: "store_details", locals: { product: @product } %>
+<div class="mt-4 text-xl sm:hidden md:hidden lg:flex items-center justify-center">
+  <div data-controller="modal" data-modal-allow-background-close="false">
+    <a href="#"
+      data-action="click->modal#open"
+      class="p-4 leading-none border rounded text-cx-lavender-blush bg-cx-pumpkin hover:border-transparent hover:text-cx-pumpkin hover:bg-cx-lavender-blush hover:border-cx-pumpkin">
+      <span>Credits</span>
+    </a>
+    <div data-modal-target="container" data-action="click->modal#closeBackground keyup@window->modal#closeWithKeyboard" class="hidden animated fadeIn fixed inset-0 overflow-y-auto flex items-center justify-center" style="z-index: 9999;">
+      <%= render partial: "credits", locals: { product: @product } %>
+    </div>
+  </div>
+</div>
+
+
