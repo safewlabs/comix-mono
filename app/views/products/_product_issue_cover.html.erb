@@ -10,7 +10,7 @@
 </div>
 <div class="mt-2 text-xl sm:hidden md:hidden lg:flex items-center justify-center">
   <%= button_to line_items_path(product_id: product.id),
-      class: "p-4 leading-none border rounded text-cx-lavender-blush bg-cx-pumpkin hover:border-transparent hover:text-cx-pumpkin hover:bg-cx-lavender-blush hover:border-cx-pumpkin",
+      class: "p-4 leading-none border rounded text-cx-lavender-blush bg-cx-purple hover:border-transparent hover:text-cx-purple hover:bg-cx-lavender-blush hover:border-cx-purple",
       method: :post do %>
       Add to cart
   <% end %> 
@@ -20,7 +20,7 @@
   <div data-controller="modal" data-modal-allow-background-close="false">
     <a href="#"
       data-action="click->modal#open"
-      class="p-4 leading-none border rounded text-cx-lavender-blush bg-cx-pumpkin hover:border-transparent hover:text-cx-pumpkin hover:bg-cx-lavender-blush hover:border-cx-pumpkin">
+      class="p-4 leading-none border rounded text-cx-lavender-blush bg-cx-purple hover:border-transparent hover:text-cx-purple hover:bg-cx-lavender-blush hover:border-cx-purple">
       <span>Credits</span>
     </a>
     <div data-modal-target="container" data-action="click->modal#closeBackground keyup@window->modal#closeWithKeyboard" class="hidden animated fadeIn fixed inset-0 overflow-y-auto flex items-center justify-center" style="z-index: 9999;">

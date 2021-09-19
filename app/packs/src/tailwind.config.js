@@ -152,6 +152,7 @@ module.exports = {
         crayola: "#ffb728",
         "lavender-blush": "#ffe8f2",
         pumpkin: "#ff683a",
+        purple: "#7209b7"
       },
     },
   },

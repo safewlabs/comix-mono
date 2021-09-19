@@ -14,34 +14,34 @@
   </div>
   <div id="toggleNav" class="navbar-menu w-full ns:block lg:flex lg:items-center lg:w-auto sm:hidden md:hidden">
     <div class="lg:flex-end">
-      <%= link_to 'About', about_path, class: "block mt-4 lg:inline-block lg:mt-0 text-cx-beaver font-black hover:text-cx-pumpkin mr-4 navbar-link" %>
+      <%= link_to 'About', about_path, class: "block mt-4 lg:inline-block lg:mt-0 text-cx-beaver font-black hover:text-cx-purple mr-4 navbar-link" %>
 
       <% if user_signed_in? %>
         <% if current_user.has_role? :creator %>
           <%= link_to 'Dashboard', dashboard_path, 
-              class: "block mt-4 lg:inline-block lg:mt-0 text-cx-beaver hover:text-cx-pumpkin mr-4 navbar-link font-bold"
+              class: "block mt-4 lg:inline-block lg:mt-0 text-cx-beaver hover:text-cx-purple mr-4 navbar-link font-bold"
           %>
         <% else %>
           <%= link_to 'Sell on Comix', sell_on_comix_path, 
-              class: "block mt-4 lg:inline-block lg:mt-0 text-cx-beaver hover:text-cx-pumpkin mr-4 navbar-link font-bold"
+              class: "block mt-4 lg:inline-block lg:mt-0 text-cx-beaver hover:text-cx-purple mr-4 navbar-link font-bold"
           %>
         <% end %>
         <%= link_to "Profile", edit_user_registration_path,
-            class: "block mt-4 lg:inline-block lg:mt-0 text-cx-beaver hover:text-cx-pumpkin mr-4 font-bold"
+            class: "block mt-4 lg:inline-block lg:mt-0 text-cx-beaver hover:text-cx-purple mr-4 font-bold"
         %>
         <%= link_to "Logout", destroy_user_session_path, 
             method: :delete,
-            class: "inline-block px-4 py-2 leading-none border rounded text-cx-beaver border-cx-beaver font-black hover:border-transparent hover:text-cx-lavender-blush hover:bg-cx-pumpkin mt-4 lg:mt-0"
+            class: "inline-block px-4 py-2 leading-none border rounded text-cx-beaver border-cx-beaver font-black hover:border-transparent hover:text-cx-lavender-blush hover:bg-cx-purple mt-4 lg:mt-0"
         %>
       <% else %>
         <%= link_to "Login", new_user_session_path,
-            class: "block mt-4 lg:inline-block lg:mt-0 text-cx-beaver hover:text-cx-pumpkin mr-4 navbar-link font-bold"
+            class: "block mt-4 lg:inline-block lg:mt-0 text-cx-beaver hover:text-cx-purple mr-4 navbar-link font-bold"
         %>
         <%= link_to "Join", new_user_registration_path,
-            class: "block mt-4 lg:inline-block lg:mt-0 text-cx-beaver hover:text-cx-pumpkin mr-4 navbar-link font-bold"
+            class: "block mt-4 lg:inline-block lg:mt-0 text-cx-beaver hover:text-cx-purple mr-4 navbar-link font-bold"
         %>
         <%= link_to 'Sell', sell_on_comix_path, 
-            class: "block mt-4 lg:inline-block lg:mt-0 bg-black hover:bg-cx-pumpkin p-3 rounded-lg text-white mr-4 navbar-link font-bold"
+            class: "block mt-4 lg:inline-block lg:mt-0 bg-black hover:bg-cx-purple p-3 rounded-lg text-white mr-4 navbar-link font-bold"
         %>
       <% end %>
     </div>
