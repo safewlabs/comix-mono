@@ -15,18 +15,8 @@
       Add to cart
   <% end %> 
 </div>
-<%= render partial: "store_details", locals: { product: @product } %>
-<div class="mt-4 text-xl sm:hidden md:hidden lg:flex items-center justify-center">
-  <div data-controller="modal" data-modal-allow-background-close="false">
-    <a href="#"
-      data-action="click->modal#open"
-      class="p-4 leading-none border rounded text-cx-lavender-blush bg-cx-purple hover:border-transparent hover:text-cx-purple hover:bg-cx-lavender-blush hover:border-cx-purple">
-      <span>Credits</span>
-    </a>
-    <div data-modal-target="container" data-action="click->modal#closeBackground keyup@window->modal#closeWithKeyboard" class="hidden animated fadeIn fixed inset-0 overflow-y-auto flex items-center justify-center" style="z-index: 9999;">
-      <%= render partial: "credits", locals: { product: @product } %>
-    </div>
-  </div>
+<div class="mt-4 text-xl sm:hidden md:hidden lg:flex items-center justify-center px-8">
+  <%= render partial: "credits", locals: { product: @product } %>
 </div>
 
 
