@@ -4,7 +4,6 @@
 #
 #  id             :bigint           not null, primary key
 #  name           :string
-#  description    :text
 #  price          :float
 #  page_count     :integer
 #  release_date   :datetime

@@ -6,7 +6,7 @@
 #  quantity   :integer
 #  product_id :bigint           not null
 #  cart_id    :bigint           not null
-#  order_id   :bigint           not null
+#  order_id   :bigint
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
