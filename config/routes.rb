@@ -42,6 +42,7 @@ Rails.application.routes.draw do
   namespace :dashboard do
     get '/', to: 'home#index'
     resources :products, param: :slug
+    resources :stores, param: :slug
   end
 
   devise_scope :user do

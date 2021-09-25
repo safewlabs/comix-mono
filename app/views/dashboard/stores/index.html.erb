@@ -1,0 +1,29 @@
+<div class="flex flex-wrap">
+  <h1 class="w-full text-center text-cx-beaver font-bold text-4xl py-6">Stores</h1>
+  <div class="w-full overflow-hidden p-10">
+    <table class="table-auto m-0 m-auto">
+      <thead>
+        <tr>
+          <th class="text-cx-beaver text-xl">Name</th>
+          <th></th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @stores.each do |store| %>
+          <tr>
+            <td class="border border-orange-500 px-4 py-2 text-orange-600 font-medium">
+              <%= store.name %>
+            </td>
+            <td class="border border-orange-500 px-4 py-2 text-orange-600 text-sm">
+              <%= link_to "Edit", edit_dashboard_store_path(store) %>
+            </td>
+            <td class="border border-orange-500 px-4 py-2 text-orange-600 font-sm">
+              <%= link_to "Delete", dashboard_store_path(store), method: :delete, data: {confirm: "Are you sure?"} %>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>
