@@ -1,4 +1,5 @@
-<div class="mt-2 text-xl sm:hidden md:hidden lg:flex items-center justify-center">
+<div class="mt-2 text-xl sm:hidden md:hidden lg:flex items-center justify-center items-center px-4">
+
   <img
     alt="..."
     src="https://picsum.photos/800/800/?random"
@@ -6,6 +7,6 @@
     style="max-width: 100px;"
   />
 </div>
-<div class="mt-2 text-xl sm:hidden md:hidden lg:flex items-center justify-center">
-  <%= product.store.name %><br/>
+<div class="mt-4 text-2xl font-bold sm:hidden md:hidden lg:flex items-center justify-center items-center px-4">
+  <%= link_to product.store.name, store_path(product.store) %>
 </div>

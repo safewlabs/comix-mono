@@ -12,14 +12,11 @@
 
   <body>
     <%= render 'shared/header' %>
-    <div class="text-center text-4xl">
-      Sales Dashboard
-    </div>
     <div class="flex flex-wrap text-center">
       <div class="w-1/3 sm:w-hidden px-6">
         <%= render 'shared/side_bar' %>
       </div>
-      <div class="w-2/3 sm:w-full px-6">
+      <div class="w-2/3 sm:w-full">
         <%= yield %>
       </div>
     </div>

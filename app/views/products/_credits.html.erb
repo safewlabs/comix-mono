@@ -4,16 +4,14 @@
             <div class="mt-2 text-xl font-bold sm:hidden md:hidden lg:flex items-start justify-around px-4">
                 Publisher
             </div>
-            <div class="mt-2 text-xl sm:hidden md:hidden lg:flex items-start justify-around items-center px-4">
-                <%= render partial: "store_details", locals: { product: @product } %>
-            </div>
+            <%= render partial: "store_details", locals: { product: @product } %>
             <div class="mt-2 text-xl font-bold sm:hidden md:hidden lg:flex items-start justify-around px-4 pt-4">
                 Credits
             </div>
             <div class="mt-2 text-xl sm:hidden md:hidden lg:flex items-start justify-around px-4">
                 <ul class="text-center">
                     <% @product.collaborations.each do |collaboration| %>
-                        <li><%= collaboration.collaboration_type.capitalize %>: <%= collaboration.creator&.name %></li>
+                        <li><span class="font-bold"><%= collaboration.collaboration_type.capitalize %>:</span> <%= collaboration.creator&.name %></li>
                     <% end %>
                 </ul>
             </div>

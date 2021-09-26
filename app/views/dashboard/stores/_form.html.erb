@@ -1,14 +1,14 @@
-<%= form_for( [:dashboard, @store], local: true, html: { class: "bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 border w-1/2 sm:w-full" }) do |f| %>
+<%= form_for( [:dashboard, @store], local: true, html: { class: "bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 border" }) do |f| %>
     <div class="mb-4">
       <%= f.label :name, class: "block text-gray-700 text-sm font-bold mb-2" %>
       <%= f.text_field :name, autofocus: true, class: "shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" %>
     </div>
     <div class="mb-4">
-     <%= f.label :issue_cover, class: "block text-gray-700 text-sm font-bold mb-2" %>
+     <%= f.label :display_image, class: "block text-gray-700 text-sm font-bold mb-2" %>
       <%= f.file_field :display_image, direct_upload: true %>
     </div>
     <div class="mb-4">
-      <%= f.label :file, class: "block text-gray-700 text-sm font-bold mb-2" %>
+      <%= f.label :cover_image, class: "block text-gray-700 text-sm font-bold mb-2" %>
       <%= f.file_field :cover_image, direct_upload: true %>
     </div>
     <div class="mb-6">
