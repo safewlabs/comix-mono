@@ -1,8 +1,8 @@
 <div class="block lg:hidden">
   <% if product.issue_cover.present? %>
-    <div class="rounded-full shadow-xl mx-auto -mt-16 h-48 w-48 bg-cover bg-center" style="background-image: url(<%= url_for(product.issue_cover) %>)"></div>
+    <div class="rounded-lg shadow-xl mx-auto -mt-16 h-48 w-48 bg-cover bg-center" style="background-image: url(<%= url_for(product.issue_cover) %>)"></div>
   <% else %>
-    <div class="rounded-full shadow-xl mx-auto -mt-16 h-48 w-48 bg-cover bg-center" style="background-image: url('https://img.icons8.com/dotty/70/000000/full-image.png')"></div>
+    <div class="rounded-lg shadow-xl mx-auto -mt-16 h-48 w-48 bg-cover bg-center" style="background-image: url('https://img.icons8.com/dotty/70/000000/full-image.png')"></div>
   <% end %>
   <div class="w-full text-center text-2xl">
     <span class="mx-2 p-2">&#36;<%= product.price %></span>

@@ -1,11 +1,5 @@
 <div class="mt-2 text-xl sm:hidden md:hidden lg:flex items-center justify-center items-center px-4">
-
-  <img
-    alt="..."
-    src="https://picsum.photos/800/800/?random"
-    class="shadow-xl rounded-lg border-none"
-    style="max-width: 100px;"
-  />
+  <%= image_tag product.store.display_image, loading: "lazy", alt: "…", width: "100", height: "100", class: "shadow-xl rounded-lg border-none" %>
 </div>
 <div class="mt-4 text-2xl font-bold sm:hidden md:hidden lg:flex items-center justify-center items-center px-4">
   <%= link_to product.store.name, store_path(product.store) %>
