@@ -9,8 +9,10 @@
         <% end %>
 
         <header class="flex items-center justify-between leading-tight p-2 md:p-4">
-            <h1 class="text-lg text-left w-2/3"><%= product.name.truncate(15, omission: '..') %></h1>
-            <p class="text-grey-darker text-sm border border-solid border-black rounded p-2 w-1/3 text-center">
+            <h1 class="text-lg text-left w-2/3"  title="<%= product.name %>">
+                <%= product.name.truncate(15, omission: '..') %>
+            </h1>
+            <p class="text-grey-darker text-sm border border-dashed border-black rounded p-2 w-1/3 text-center">
                 &#36; <%= product.price %>
             </p>
         </header>
@@ -22,9 +24,9 @@
                 <% else %>
                     <img src="https://img.icons8.com/dotty/32/000000/full-image.png" class="block h-auto w-full" width="32" height="32"/>
                 <% end %>
-                <p class="ml-2 text-sm">
-                    <%= product.store.name %>
-                </p>
+                <span class="ml-2 text-sm" title="<%= product.store.name %>">
+                    <%= product.store.name.truncate(15, omission: '..') %>
+                </span>
             <% end %>
             <div class="items-end">
                 <a class="no-underline text-grey-darker hover:text-red-dark justify-right" title="Favourite" href="#">
