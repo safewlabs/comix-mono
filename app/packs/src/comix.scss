@@ -24,3 +24,7 @@ a {
 .slide.slide--current {
   display: block;
 }
+.hover-fill:hover {
+  stroke: #fc8b7e;
+  fill: #fc8b7e;
+}
