@@ -13,7 +13,7 @@
         <% @stores.each do |store| %>
           <tr>
             <td class="border border-orange-500 px-4 py-2 text-orange-600 font-medium">
-              <%= store.name %>
+              <%= link_to store.name, store_path(store) %>
             </td>
             <td class="border border-orange-500 px-4 py-2 text-orange-600 text-sm">
               <%= link_to "Edit", edit_dashboard_store_path(store) %>

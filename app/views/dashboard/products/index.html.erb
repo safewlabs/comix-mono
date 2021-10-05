@@ -14,7 +14,7 @@
         <% @products.each do |product| %>
           <tr>
             <td class="border border-orange-500 px-4 py-2 text-orange-600 font-medium">
-              <%= product.name %>
+              <%= link_to product.name, product_path(product) %>
             </td>
             <td class="border border-orange-500 px-4 py-2 text-orange-600 font-medium">
               <%= number_to_currency(product.price) %>
