@@ -25,14 +25,21 @@ a {
   display: block;
 }
 
-.hover-fill {
+.favourite-hover-fill {
   &:hover {
     stroke: #c73525 !important;
     fill: #c73525 !important;
   }
 }
 
-.clicked-fill {
+.favourite-clicked-fill {
   stroke: #c73525 !important;
   fill: #c73525 !important;
+}
+
+.cart-hover-fill {
+  &:hover {
+    stroke: #0a8868 !important;
+    fill: #0a8868 !important;
+  }
 }
