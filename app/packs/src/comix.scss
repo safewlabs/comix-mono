@@ -24,7 +24,15 @@ a {
 .slide.slide--current {
   display: block;
 }
-.hover-fill:hover {
-  stroke: #fc8b7e;
-  fill: #fc8b7e;
+
+.hover-fill {
+  &:hover {
+    stroke: #c73525 !important;
+    fill: #c73525 !important;
+  }
+}
+
+.clicked-fill {
+  stroke: #c73525 !important;
+  fill: #c73525 !important;
 }
