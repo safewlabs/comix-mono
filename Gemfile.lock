@@ -133,8 +133,8 @@ GEM
     formatador (0.3.0)
     globalid (0.5.2)
       activesupport (>= 5.0)
-    groupdate (5.2.2)
-      activesupport (>= 5)
+    groupdate (6.0.1)
+      activesupport (>= 5.2)
     guard (2.18.0)
       formatador (>= 0.2.4)
       listen (>= 2.7, < 4.0)
@@ -177,7 +177,7 @@ GEM
     mini_portile2 (2.6.1)
     mini_racer (0.5.0)
       libv8-node (~> 16.10.0.0)
-    minitest (5.14.4)
+    minitest (5.15.0)
     msgpack (1.4.2)
     nenv (0.3.0)
     nio4r (2.5.8)
@@ -355,7 +355,7 @@ GEM
     websocket-extensions (0.1.5)
     xpath (3.2.0)
       nokogiri (~> 1.8)
-    zeitwerk (2.5.1)
+    zeitwerk (2.5.3)
 
 PLATFORMS
   ruby
