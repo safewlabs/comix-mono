@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  @import url('https://fonts.googleapis.com/css2?family=PT+Mono&display=swap');
+  body {
+    @apply font-body;
+  }
+}
