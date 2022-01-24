@@ -35,3 +35,9 @@ We use RSpec as our testing framework. Run the tests using the following command
 ```
 bundle exec rspec
 ```
+
+### Pre-commit hooks
+
+```
+gem install overcommit
+```
