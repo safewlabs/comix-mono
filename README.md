@@ -1,24 +1,37 @@
-# README
+## [Comix](https://comix.life) - A marketplace for independent comics
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+[![CI](https://github.com/safewlabs/comix-mono/actions/workflows/ci.yml/badge.svg?branch=trunk)](https://github.com/safewlabs/comix-mono/actions/workflows/ci.yml)
 
-Things you may want to cover:
+### Stack
 
-* Ruby version
+* Ruby 3.0.1
+* Rails 7
+* PostgreSQL
+* Hotwired
+* Tailwind CSS
+* RSpec, Capybara, FactoryBot, Faker
+* Sidekiq & Redis
 
-* System dependencies
+### Install instructions
 
-* Configuration
+Install all the pre-requisites and clone the repo. cd into the app directory.
 
-* Database creation
+```shell
+$ bundle install
+$ yarn install
+$ rails db:create db:migrate db:seed
+```
 
-* Database initialization
+Then start the server -
 
-* How to run the test suite
+```shell
+$ foreman start -f Procfile.dev
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+### Testing
 
-* Deployment instructions
+We use RSpec as our testing framework. Run the tests using the following command :
 
-* ...
+```
+bundle exec rspec
+```
