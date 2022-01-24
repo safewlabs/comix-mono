@@ -50,5 +50,4 @@ jobs:
           POSTGRES_PASSWORD: postgres
           POSTGRES_PORT: 5432
         run: |
-          bundle exec rails webpacker:compile
           bundle exec rspec
