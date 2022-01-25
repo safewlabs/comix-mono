@@ -6,3 +6,14 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+
+puts "Creating User"
+creator_user = FactoryBot.create(:user, :creator)
+puts "Creating Projects"
+projects = FactoryBot.create_list(:project, 3, user: creator_user)
+projects.each do |project|
+  puts "Creating bundles"
+  bundle = FactoryBot.create(:bundle, project: project)
+  puts "Creating items"
+  FactoryBot.create_list(:item, 3, bundle: bundle)
+end
