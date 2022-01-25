@@ -3,14 +3,14 @@
 FactoryBot.define do
   factory :user do
     email { Faker::Internet.email }
-    password { 'password' }
-    password_confirmation { 'password' }
-  
+    password { "password" }
+    password_confirmation { "password" }
+
     after(:create) do |user|
       user.confirm
       user.add_role(:buyer)
     end
-  
+
     trait :creator do
       after(:create) do |user|
         user.confirm
