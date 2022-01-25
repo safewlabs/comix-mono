@@ -57,6 +57,7 @@ gem "bootsnap", require: false
 # gem "image_processing", "~> 1.2"
 
 group :development, :test do
+  gem 'annotate', github: 'dabit/annotate_models', branch: 'rails-7'
   gem "factory_bot_rails"
   gem "faker", git: "https://github.com/faker-ruby/faker.git", branch: "master"
   gem "rspec-rails", "~> 5.0.0"

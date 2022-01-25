@@ -1,4 +1,13 @@
 GIT
+  remote: https://github.com/dabit/annotate_models.git
+  revision: aa767e19fb3bea5e42304f54802f41924ac4e363
+  branch: rails-7
+  specs:
+    annotate (3.1.1)
+      activerecord (>= 3.2, < 7.1)
+      rake (>= 10.4, < 14.0)
+
+GIT
   remote: https://github.com/faker-ruby/faker.git
   revision: b553111b5211a63ed61a9b689d015e731287ac1f
   branch: master
@@ -310,6 +319,7 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
+  annotate!
   bootsnap
   capybara
   debug
