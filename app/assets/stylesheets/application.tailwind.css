@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 @layer components {
-  @import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap');
   body {
     @apply font-body;
   }
