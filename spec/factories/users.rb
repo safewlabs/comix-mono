@@ -11,10 +11,10 @@ FactoryBot.define do
       user.add_role(:buyer)
     end
 
-    trait :creator do
+    trait :creator_profile do
       after(:create) do |user|
         user.confirm
-        user.add_role(:creator)
+        user.add_role(:creator_profile)
       end
     end
   end

@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
-class CreateCreators < ActiveRecord::Migration[7.0]
+class CreateCreatorProfiles < ActiveRecord::Migration[7.0]
   def change
-    create_table :creators do |t|
+    create_table :creator_profiles do |t|
       t.string :name
       t.text :bio
 

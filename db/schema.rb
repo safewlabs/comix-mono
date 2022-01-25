@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_01_25_122254) do
+ActiveRecord::Schema.define(version: 2022_01_25_131731) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,11 +25,13 @@ ActiveRecord::Schema.define(version: 2022_01_25_122254) do
     t.index ["project_id"], name: "index_bundles_on_project_id"
   end
 
-  create_table "creators", force: :cascade do |t|
+  create_table "creator_profiles", force: :cascade do |t|
     t.string "name"
     t.text "bio"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.bigint "user_id"
+    t.index ["user_id"], name: "index_creator_profiles_on_user_id"
   end
 
   create_table "items", force: :cascade do |t|
@@ -49,6 +51,15 @@ ActiveRecord::Schema.define(version: 2022_01_25_122254) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_projects_on_user_id"
+  end
+
+  create_table "projects_creator_profiles", force: :cascade do |t|
+    t.bigint "project_id", null: false
+    t.bigint "creator_profile_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["creator_profile_id"], name: "index_projects_creator_profiles_on_creator_profile_id"
+    t.index ["project_id"], name: "index_projects_creator_profiles_on_project_id"
   end
 
   create_table "roles", force: :cascade do |t|
@@ -92,6 +103,9 @@ ActiveRecord::Schema.define(version: 2022_01_25_122254) do
   end
 
   add_foreign_key "bundles", "projects"
+  add_foreign_key "creator_profiles", "users"
   add_foreign_key "items", "bundles"
   add_foreign_key "projects", "users"
+  add_foreign_key "projects_creator_profiles", "creator_profiles"
+  add_foreign_key "projects_creator_profiles", "projects"
 end

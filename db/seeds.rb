@@ -9,10 +9,14 @@
 #   Character.create(name: "Luke", movie: movies.first)
 
 puts "Creating User"
-creator_user = FactoryBot.create(:user, :creator)
+creator_user = FactoryBot.create(:user, :creator_profile)
 puts "Creating Projects"
 projects = FactoryBot.create_list(:project, 3, user: creator_user)
 projects.each do |project|
+  puts "Creating creator_profiles"
+  creator_profile = FactoryBot.create(:creator_profile)
+  puts "Assign creator_profiles to projects"
+  project.creator_profiles << creator_profile
   puts "Creating bundles"
   bundle = FactoryBot.create(:bundle, project: project)
   puts "Creating items"
