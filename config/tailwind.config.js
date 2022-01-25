@@ -12,7 +12,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        body: ['PT Mono', 'monospace'],
+        body: ['Space Mono', 'monospace'],
         sans: ['Inter var', ...defaultTheme.fontFamily.sans],
       },
       colors: {
