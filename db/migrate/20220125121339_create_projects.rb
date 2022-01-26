@@ -7,6 +7,7 @@ class CreateProjects < ActiveRecord::Migration[7.0]
       t.text :description
       t.string :funding_goal
       t.references :user, null: false, foreign_key: true
+      t.string :slug, null: false
 
       t.timestamps
     end

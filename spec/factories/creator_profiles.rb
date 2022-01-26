@@ -7,6 +7,7 @@
 #  id         :bigint           not null, primary key
 #  bio        :text
 #  name       :string
+#  slug       :string           not null
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #  user_id    :bigint

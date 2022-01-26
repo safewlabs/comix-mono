@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 2022_01_25_131731) do
     t.decimal "pledge_amount"
     t.text "description"
     t.bigint "project_id", null: false
+    t.string "slug", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["project_id"], name: "index_bundles_on_project_id"
@@ -28,6 +29,7 @@ ActiveRecord::Schema.define(version: 2022_01_25_131731) do
   create_table "creator_profiles", force: :cascade do |t|
     t.string "name"
     t.text "bio"
+    t.string "slug", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "user_id"
@@ -38,6 +40,7 @@ ActiveRecord::Schema.define(version: 2022_01_25_131731) do
     t.string "title"
     t.text "description"
     t.bigint "bundle_id", null: false
+    t.string "slug", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["bundle_id"], name: "index_items_on_bundle_id"
@@ -48,6 +51,7 @@ ActiveRecord::Schema.define(version: 2022_01_25_131731) do
     t.text "description"
     t.string "funding_goal"
     t.bigint "user_id", null: false
+    t.string "slug", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_projects_on_user_id"

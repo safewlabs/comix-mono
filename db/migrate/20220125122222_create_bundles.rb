@@ -7,6 +7,7 @@ class CreateBundles < ActiveRecord::Migration[7.0]
       t.decimal :pledge_amount
       t.text :description
       t.references :project, null: false, foreign_key: true
+      t.string :slug, null: false
 
       t.timestamps
     end

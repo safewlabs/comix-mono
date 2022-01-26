@@ -6,6 +6,7 @@
 #
 #  id          :bigint           not null, primary key
 #  description :text
+#  slug        :string           not null
 #  title       :string
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
@@ -20,5 +21,6 @@
 #  fk_rails_...  (bundle_id => bundles.id)
 #
 class Item < ApplicationRecord
+  include Sluggable
   belongs_to :bundle
 end

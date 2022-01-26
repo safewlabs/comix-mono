@@ -7,6 +7,7 @@
 #  id         :bigint           not null, primary key
 #  bio        :text
 #  name       :string
+#  slug       :string           not null
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #  user_id    :bigint
@@ -20,6 +21,7 @@
 #  fk_rails_...  (user_id => users.id)
 #
 class CreatorProfile < ApplicationRecord
+  include Sluggable
   belongs_to :user, optional: true
   has_many :projects_creator_profiles, dependent: :destroy
   has_many :projects, through: :projects_creator_profiles

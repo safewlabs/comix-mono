@@ -7,6 +7,7 @@
 #  id            :bigint           not null, primary key
 #  description   :text
 #  pledge_amount :decimal(, )
+#  slug          :string           not null
 #  title         :string
 #  created_at    :datetime         not null
 #  updated_at    :datetime         not null

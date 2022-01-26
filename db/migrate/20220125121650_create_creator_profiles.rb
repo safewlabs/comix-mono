@@ -5,6 +5,7 @@ class CreateCreatorProfiles < ActiveRecord::Migration[7.0]
     create_table :creator_profiles do |t|
       t.string :name
       t.text :bio
+      t.string :slug, null: false
 
       t.timestamps
     end
