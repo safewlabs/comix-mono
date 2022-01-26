@@ -8,6 +8,7 @@
 #  description  :text
 #  funding_goal :string
 #  slug         :string           not null
+#  status       :integer          default("draft")
 #  title        :string
 #  created_at   :datetime         not null
 #  updated_at   :datetime         not null
