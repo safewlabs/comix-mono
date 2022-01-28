@@ -8,6 +8,7 @@ Rails.application.routes.draw do
     sign_out: "logout",
     sign_up: "signup"
   }
+  resources :projects, param: :slug
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
