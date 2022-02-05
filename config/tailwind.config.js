@@ -10,11 +10,10 @@ module.exports = {
     './app/views/**/*'
   ],
   theme: {
+    fontFamily: {
+      body: ['Poppins', 'sans-serif']
+    },
     extend: {
-      fontFamily: {
-        body: ['Space Mono', 'monospace'],
-        sans: ['Inter var', ...defaultTheme.fontFamily.sans],
-      },
       colors: {
         cx: {
           "grain-yellow": "#f7c759",

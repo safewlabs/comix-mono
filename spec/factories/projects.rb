@@ -5,6 +5,7 @@
 # Table name: projects
 #
 #  id           :bigint           not null, primary key
+#  blurb        :text
 #  description  :text
 #  funding_goal :string
 #  slug         :string           not null
@@ -26,6 +27,7 @@ FactoryBot.define do
   factory :project do
     association :user
     title { Faker::Lorem.sentence(word_count: 3) }
+    blurb { Faker::Lorem.sentence(word_count: 20)  }
     description { Faker::Lorem.paragraphs(number: 3, supplemental: true) }
     funding_goal { 300.00 }
   end

@@ -1,1 +1,100 @@
-<%= @project.title %>
+<div class="flex flex-col">
+  <div class="w-full text-center py-12 text-5xl font-bold justify-self-center">
+    <%= @project.title %><br/>
+    <span class="text-3xl">
+      By 
+      <% @project.creator_profiles.each do |creator| %>
+        <%= creator.name %>
+      <% end %>
+    </span>
+  </div>
+  <div class="flex flex-row px-24">
+    <div class="w-1/2 flex flex-col items-center justify-center">
+      <iframe class="rounded-lg" width="600" height="400" src="https://www.youtube.com/embed/E7eAMfnXh3U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <div class="w-1/2">
+      <div class="text-xl py-4 border-b border-b-gray-300"><%= @project.blurb %></div>
+      <div class="py-4 flex flex-col">
+        <div class="text-2xl p-2">
+          <span class="font-bold">Raised:</span> $75.00 /
+          <span class="font-bold">Goal:</span> $<%= @project.funding_goal %>
+        </div>
+        <div class="text-2xl p-2">
+          84 Believers
+        </div>
+        <div class="text-2xl p-2">
+          25 Days to go
+        </div>
+        <div class="py-4">
+          <div class="w-full bg-gray-200 rounded-full">
+            <div class="text-xl font-medium background-gradient text-center p-4 leading-none text-white rounded-l-full" style="width: 25%"> 25%</div>
+          </div>
+        </div>
+      </div>
+      <button type="submit" class="mt-10 w-full bg-cx-purple border border-transparent rounded-md py-3 px-8 flex items-center justify-center text-lg font-medium text-white hover:text-black hover:bg-cx-lavender-blush focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cx-lavendar-blush">
+        Pre-Order
+      </button>
+    </div>
+  </div>
+  <!-- Tabs -->
+  <div class="px-24 py-6" data-controller="tabs" data-tabs-active-tab="-mb-px border-l border-t border-r rounded-t">
+    <div class="sm:hidden">
+      <label for="tabs" class="sr-only">Select a tab</label>
+      <!-- Use an "onChange" listener to redirect the user to the selected tab URL. -->
+      <select id="tabs" name="tabs" class="block w-full focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md">
+        <option selected>Project Details</option>
+
+        <option>Timeline</option>
+
+        <option>Comments</option>
+
+        <option>FAQ</option>
+      </select>
+    </div>
+    <div class="hidden sm:block">
+      <nav class="relative z-0 rounded-lg shadow flex divide-x divide-gray-200" aria-label="Tabs">
+        <a href="#"
+          data-tabs-target="tab" data-action="click->tabs#change"
+          class="text-gray-900 rounded-l-lg group relative min-w-0 flex-1 overflow-hidden bg-white py-4 px-4 text-sm font-medium text-center hover:bg-gray-50 focus:z-10" aria-current="page">
+          <span>Project Details</span>
+          <span aria-hidden="true" class="bg-indigo-500 absolute inset-x-0 bottom-0 h-0.5"></span>
+        </a>
+
+        <a href="#"
+          data-tabs-target="tab" data-action="click->tabs#change"
+          class="text-gray-500 hover:text-gray-700 group relative min-w-0 flex-1 overflow-hidden bg-white py-4 px-4 text-sm font-medium text-center hover:bg-gray-50 focus:z-10">
+          <span>Timeline</span>
+          <span aria-hidden="true" class="bg-transparent absolute inset-x-0 bottom-0 h-0.5"></span>
+        </a>
+
+        <a href="#"
+          data-tabs-target="tab" data-action="click->tabs#change"
+          class="text-gray-500 hover:text-gray-700 group relative min-w-0 flex-1 overflow-hidden bg-white py-4 px-4 text-sm font-medium text-center hover:bg-gray-50 focus:z-10">
+          <span>Comments</span>
+          <span aria-hidden="true" class="bg-transparent absolute inset-x-0 bottom-0 h-0.5"></span>
+        </a>
+
+        <a href="#"
+          data-tabs-target="tab" data-action="click->tabs#change"
+          class="text-gray-500 hover:text-gray-700 rounded-r-lg group relative min-w-0 flex-1 overflow-hidden bg-white py-4 px-4 text-sm font-medium text-center hover:bg-gray-50 focus:z-10">
+          <span>FAQ</span>
+          <span aria-hidden="true" class="bg-transparent absolute inset-x-0 bottom-0 h-0.5"></span>
+        </a>
+      </nav>
+    </div>
+    <div class="hidden py-4 px-4 border-l border-b border-r" data-tabs-target="panel">
+      Tab panel 1
+    </div>
+
+    <div class="hidden py-4 px-4 border-l border-b border-r" data-tabs-target="panel">
+      Tab panel 2
+    </div>
+
+    <div class="hidden py-4 px-4 border-l border-b border-r" data-tabs-target="panel">
+      Tab panel 3
+    </div>
+    <div class="hidden py-4 px-4 border-l border-b border-r" data-tabs-target="panel">
+      Tab panel 4
+    </div>
+  </div>
+</div>

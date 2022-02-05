@@ -5,6 +5,7 @@
 # Table name: projects
 #
 #  id           :bigint           not null, primary key
+#  blurb        :text
 #  description  :text
 #  funding_goal :string
 #  slug         :string           not null
