@@ -9,6 +9,9 @@ Rails.application.routes.draw do
     sign_up: "signup"
   }
   resources :projects, param: :slug
+  namespace :dashboard do
+    resources :projects, param: :slug
+  end
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")

@@ -4,6 +4,7 @@ class ProjectsController < ApplicationController
   before_action :set_project
 
   def show
+    @bundles = @project.bundles
   end
 
   private

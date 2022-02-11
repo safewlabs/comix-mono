@@ -1,0 +1,32 @@
+<%= form_with(model: [:dashboard, @project], local: true) do |form| %>
+  <% if @project.errors.any? %>
+    <div id="error_explanation" class="bg-white p-6 rounded text-red-500 mb-5">
+      <h2 class="text-red-500 font-bold"><%= pluralize(@project.errors.count, "error") %> prohibited this @project from being saved:</h2>
+
+      <ul>
+        <% @project.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="mb-6">
+    <%= form.label :title, class: "label" %>
+    <%= form.text_field :title, class: "input" %>
+  </div>
+
+  <div class="mb-6">
+    <%= form.label :funding_goal, class: "label" %>
+    <%= form.text_field :funding_goal, class: "input" %>
+  </div>
+
+  <div class="mb-6">
+    <%= form.label :description, class: "label" %>
+    <%= form.rich_text_area :description, class: "input" %>
+  </div>
+
+  <div class="mb-6">
+    <%= form.submit class: "btn btn-default" %>
+  </div>
+<% end %>

@@ -24,4 +24,5 @@
 class Bundle < ApplicationRecord
   include Sluggable
   belongs_to :project
+  has_one_attached :bundle_cover
 end

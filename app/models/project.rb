@@ -26,8 +26,11 @@
 class Project < ApplicationRecord
   include Sluggable
   belongs_to :user
+  has_rich_text :description
   has_many :projects_creator_profiles, dependent: :destroy
   has_many :creator_profiles, through: :projects_creator_profiles
+  has_one_attached :issue_cover
+  has_many :bundles
 
   enum status: {
     draft: 0,
