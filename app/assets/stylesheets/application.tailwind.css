@@ -2,8 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
 @layer components {
+  @font-face {
+    font-family: 'Poppins';
+    src: url('Poppins-Regular-400.ttf');
+  }
   body {
     @apply font-body;
   }
