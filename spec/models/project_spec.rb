@@ -7,10 +7,12 @@
 #  id           :bigint           not null, primary key
 #  blurb        :text
 #  description  :text
-#  funding_goal :string
+#  funding_goal :decimal(, )
+#  funds_raised :decimal(, )
 #  slug         :string           not null
 #  status       :integer          default("draft")
 #  title        :string
+#  video_url    :string
 #  created_at   :datetime         not null
 #  updated_at   :datetime         not null
 #  user_id      :bigint           not null

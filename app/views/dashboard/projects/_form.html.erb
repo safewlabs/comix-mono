@@ -13,12 +13,22 @@
 
   <div class="mb-6">
     <%= form.label :title, class: "label" %>
+    <%= form.text_field :video_url, class: "input" %>
+  </div>
+
+  <div class="mb-6">
+    <%= form.label :title, class: "label" %>
     <%= form.text_field :title, class: "input" %>
   </div>
 
   <div class="mb-6">
     <%= form.label :funding_goal, class: "label" %>
     <%= form.text_field :funding_goal, class: "input" %>
+  </div>
+
+  <div class="mb-6">
+    <%= form.label :blurb, class: "label" %>
+    <%= form.rich_text_area :blurb, class: "input" %>
   </div>
 
   <div class="mb-6">
