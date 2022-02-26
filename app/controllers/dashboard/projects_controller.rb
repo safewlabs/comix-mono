@@ -19,7 +19,7 @@ class Dashboard::ProjectsController < ApplicationController
 
   private
     def project_params
-      params.require(:project).permit(:title, :description, :issue_cover, :funding_goal)
+      params.require(:project).permit(:title, :blurb, :description, :issue_cover, :funding_goal, :video_url)
     end
 
     def set_project

@@ -11,15 +11,15 @@
     </div>
   </div>
   <div class="flex flex-row px-24">
-    <div class="w-1/2 flex flex-col items-center justify-center">
-      <% if @project.issue_cover.present? %>
-        <%= image_tag @project.issue_cover, class: "shadow-2xl hidden max-h-bigtile rounded-lg lg:block" %>
+    <div class="w-1/2 flex flex-col items-center">
+      <% if @project.video_url.present? %>
+        <%= render(VideoComponent.new(video_url: @project.video_url)) %>
       <% else %>
         <img src="https://img.icons8.com/dotty/400/000000/full-image.png" class="shadow-2xl hidden rounded-lg lg:block" />
       <% end %>
     </div>
     <div class="w-1/2">
-      <div class="text-xl py-4 border-b border-b-gray-300"><%= @project.blurb %></div>
+      <div class="text-xl py-4 border-b border-b-gray-300"><%= @project.blurb.html_safe %></div>
       <div class="py-4 flex flex-col">
         <div class="text-2xl p-2">
           <span class="font-bold">Raised:</span> $75.00 /
@@ -40,7 +40,7 @@
       <button type="submit" class="mt-10 w-full bg-cx-purple border border-transparent rounded-md py-3 px-8 flex items-center justify-center text-lg font-medium text-white hover:text-black hover:bg-cx-lavender-blush focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cx-lavendar-blush">
         Believe
       </button>
-      <div data-controller='toggle' class="my-10">
+      <div data-controller='toggle' class="my-10 pointer-cursor">
         <div data-action='click->toggle#toggle touch->toggle#toggle' class="bg-cx-purple rounded-md text-center text-lg text-white p-4 pointer-cursor">
           FAQ
         </div>

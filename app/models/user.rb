@@ -37,4 +37,5 @@ class User < ApplicationRecord
          :confirmable
   has_many :projects
   has_one :creator_profile
+  has_one_attached :avatar
 end
