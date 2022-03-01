@@ -38,4 +38,6 @@ class User < ApplicationRecord
   has_many :projects
   has_one :creator_profile
   has_one_attached :avatar
+  has_many :backings
+  has_many :projects, through: :backings
 end

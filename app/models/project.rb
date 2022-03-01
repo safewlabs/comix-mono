@@ -27,12 +27,14 @@
 #
 class Project < ApplicationRecord
   include Sluggable
-  belongs_to :user
+  belongs_to :owner, class_name: "User", foreign_key: "user_id"
   has_rich_text :description
   has_many :projects_creator_profiles, dependent: :destroy
   has_many :creator_profiles, through: :projects_creator_profiles
   has_one_attached :issue_cover
-  has_many :bundles
+  has_many :bundles, dependent: :destroy
+  has_many :backings
+  has_many :users, through: :backings
 
   enum status: {
     draft: 0,

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_02_22_105947) do
+ActiveRecord::Schema[7.0].define(version: 2022_03_01_104633) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -50,6 +50,17 @@ ActiveRecord::Schema[7.0].define(version: 2022_02_22_105947) do
     t.bigint "blob_id", null: false
     t.string "variation_digest", null: false
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
+  end
+
+  create_table "backings", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "project_id", null: false
+    t.bigint "bundle_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["bundle_id"], name: "index_backings_on_bundle_id"
+    t.index ["project_id"], name: "index_backings_on_project_id"
+    t.index ["user_id"], name: "index_backings_on_user_id"
   end
 
   create_table "bundles", force: :cascade do |t|
@@ -149,6 +160,9 @@ ActiveRecord::Schema[7.0].define(version: 2022_02_22_105947) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "backings", "bundles"
+  add_foreign_key "backings", "projects"
+  add_foreign_key "backings", "users"
   add_foreign_key "bundles", "projects"
   add_foreign_key "creator_profiles", "users"
   add_foreign_key "items", "bundles"
