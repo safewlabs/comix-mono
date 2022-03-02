@@ -9,7 +9,7 @@ GIT
 
 GIT
   remote: https://github.com/faker-ruby/faker.git
-  revision: cb606b81c9c8048a3b9b044a4619252d16b576ab
+  revision: 8cb62c6ad1076c932220e1063e5d4e90840ed6b9
   branch: master
   specs:
     faker (2.19.0)
@@ -130,7 +130,7 @@ GEM
     hashie (5.0.0)
     i18n (1.10.0)
       concurrent-ruby (~> 1.0)
-    image_processing (1.12.1)
+    image_processing (1.12.2)
       mini_magick (>= 4.9.5, < 5)
       ruby-vips (>= 2.0.17, < 3)
     importmap-rails (1.0.3)
@@ -292,15 +292,15 @@ GEM
       activesupport (>= 4.2.0)
       rack (>= 1.1)
       rubocop (>= 1.7.0, < 2.0)
-    rubocop-rails_config (1.8.3)
+    rubocop-rails_config (1.9.0)
       railties (>= 5.0)
-      rubocop (>= 1.19)
+      rubocop (>= 1.25.1)
       rubocop-ast (>= 1.0.1)
       rubocop-minitest (~> 0.15)
       rubocop-packaging (~> 0.5)
       rubocop-performance (~> 1.11)
       rubocop-rails (~> 2.0)
-    rubocop-rspec (2.8.0)
+    rubocop-rspec (2.9.0)
       rubocop (~> 1.19)
     ruby-progressbar (1.11.0)
     ruby-vips (2.1.4)
@@ -320,7 +320,7 @@ GEM
       sprockets (>= 3.0.0)
     stimulus-rails (1.0.4)
       railties (>= 6.0.0)
-    stripe (5.44.0)
+    stripe (5.45.0)
     strscan (3.0.1)
     tailwindcss-rails (2.0.7-x86_64-darwin)
       railties (>= 6.0.0)
