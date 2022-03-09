@@ -23,7 +23,7 @@
 
   <div class="mb-6">
     <%= form.label :funding_goal, class: "label" %>
-    <%= form.text_field :funding_goal, class: "input" %>
+    <%= form.number_field :funding_goal, class: "input" %>
   </div>
 
   <div class="mb-6">
@@ -35,6 +35,21 @@
     <%= form.label :description, class: "label" %>
     <%= form.rich_text_area :description, class: "input" %>
   </div>
+
+  <%= form.fields_for(:bundles) do |form|  %>
+    <div class="mb-6">
+      <%= form.label :title, class: "label" %>
+      <%= form.text_field :title, class: "input" %>
+    </div>
+    <div class="mb-6">
+      <%= form.label :pledge_amount, class: "label" %>
+      <%= form.number_field :pledge_amount, class: "input" %>
+    </div>
+    <div class="mb-6">
+      <%= form.label :description, class: "label" %>
+      <%= form.rich_text_area :description, class: "input" %>
+    </div>
+  <% end %>
 
   <div class="mb-6">
     <%= form.submit class: "btn btn-default" %>

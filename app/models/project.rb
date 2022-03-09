@@ -33,6 +33,7 @@ class Project < ApplicationRecord
   has_many :creator_profiles, through: :projects_creator_profiles
   has_one_attached :issue_cover
   has_many :bundles, dependent: :destroy
+  accepts_nested_attributes_for :bundles
   has_many :backings
   has_many :users, through: :backings
 

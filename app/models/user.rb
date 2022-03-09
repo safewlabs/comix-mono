@@ -38,10 +38,14 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable,
-         :confirmable
+         :confirmable, :omniauthable, omniauth_providers: [:stripe_connect]
   has_many :projects
   has_one :creator_profile
   has_one_attached :avatar
   has_many :backings
   has_many :projects, through: :backings
+
+  def can_receive_payments?
+    uid? && provider? && access_code? && publishable_key?
+  end
 end
