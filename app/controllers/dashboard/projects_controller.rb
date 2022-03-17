@@ -23,7 +23,7 @@ class Dashboard::ProjectsController < ApplicationController
           CreateBundlePlansJob.perform_later(@project) # you can also perform later if you like
         end
         # ExpireProjectJob.set(wait_until: @project.expires_at).perform_later(@project)
-        format.html { redirect_to @project, notice: 'Project was successfully created.' }
+        format.html { redirect_to @project, notice: "Project was successfully created." }
         format.json { render :show, status: :created, location: @project }
       else
         format.html { render :new }

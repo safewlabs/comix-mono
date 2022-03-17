@@ -12,8 +12,7 @@ module ApplicationHelper
   end
 
   protected
-
-  def stripe_client_id
-    Rails.application.credentials.dig(:stripe, :connect_client_id)
-  end
+    def stripe_client_id
+      Rails.application.credentials.dig(:stripe, :connect_client_id)
+    end
 end

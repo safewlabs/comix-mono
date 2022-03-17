@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class CreateBundlePlansJob
   include Sidekiq::Job
 
@@ -9,8 +11,8 @@ class CreateBundlePlansJob
       Stripe::Plan.create({
         id: "#{bundle.title.parameterize}-bundle_#{bundle.id}",
         amount: (bundle.pledge_amount.to_r * 100).to_i,
-        currency: 'usd',
-        interval: 'month',
+        currency: "usd",
+        interval: "month",
         product: { name: bundle.title },
         nickname: bundle.title.parameterize
       })

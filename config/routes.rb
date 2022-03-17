@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require 'sidekiq/web'
+require "sidekiq/web"
 Rails.application.routes.draw do
   root "home#index"
   get "about", to: "pages#about", as: "about"
@@ -9,7 +9,7 @@ Rails.application.routes.draw do
     sign_out: "logout",
     sign_up: "signup",
   }
-  mount Sidekiq::Web => '/sidekiq'
+  mount Sidekiq::Web => "/sidekiq"
   resources :projects, param: :slug
   namespace :dashboard do
     resources :projects, param: :slug
