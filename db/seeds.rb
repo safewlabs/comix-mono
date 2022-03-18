@@ -18,7 +18,7 @@ projects.each do |project|
   puts "Assign creator_profiles to projects"
   project.creator_profiles << creator_profile
   puts "Creating bundles"
-  bundle = FactoryBot.create(:bundle, project: project)
+  bundle = FactoryBot.create(:bundle, project:)
   puts "Creating items"
-  FactoryBot.create_list(:item, 3, bundle: bundle)
+  FactoryBot.create_list(:item, 3, bundle:)
 end
