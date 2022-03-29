@@ -1,57 +1,61 @@
-<%= form_with(model: [:dashboard, @project], local: true) do |form| %>
-  <% if @project.errors.any? %>
-    <div id="error_explanation" class="bg-white p-6 rounded text-red-500 mb-5">
-      <h2 class="text-red-500 font-bold"><%= pluralize(@project.errors.count, "error") %> prohibited this @project from being saved:</h2>
+<div class="flex flex-col justify-center items-center">
+  <div class="w-2/3">
+    <%= form_with(model: [:dashboard, @project], local: true) do |form| %>
+      <% if @project.errors.any? %>
+        <div id="error_explanation" class="bg-white p-6 rounded text-red-500 mb-5">
+          <h2 class="text-red-500 font-bold"><%= pluralize(@project.errors.count, "error") %> prohibited this @project from being saved:</h2>
 
-      <ul>
-        <% @project.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-      </ul>
+          <ul>
+            <% @project.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+
+      <div class="mb-6">
+        <%= form.label :title, class: "label" %>
+        <%= form.text_field :title, class: "mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" %>
+      </div>
+
+      <div class="mb-6">
+      <%= form.label :video_url, class: "label" %>
+      <%= form.text_field :video_url, class: "mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" %>
     </div>
-  <% end %>
 
-  <div class="mb-6">
-    <%= form.label :title, class: "label" %>
-    <%= form.text_field :title, class: "input" %>
+      <div class="mb-6">
+        <%= form.label :funding_goal, class: "label" %>
+        <%= form.number_field :funding_goal, class: "mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" %>
+      </div>
+
+      <div class="mb-6">
+        <%= form.label :blurb, class: "label" %>
+        <%= form.rich_text_area :blurb, class: "mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" %>
+      </div>
+
+      <div class="mb-6">
+        <%= form.label :description, class: "label" %>
+        <%= form.rich_text_area :description, class: "mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" %>
+      </div>
+
+      <%= form.fields_for(:bundles) do |form|  %>
+        <div class="mb-6">
+          <%= form.label :title, class: "label" %>
+          <%= form.text_field :title, class: "mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" %>
+        </div>
+        <div class="mb-6">
+          <%= form.label :pledge_amount, class: "label" %>
+          <%= form.number_field :pledge_amount, class: "mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" %>
+        </div>
+        <div class="mb-6">
+          <%= form.label :description, class: "label" %>
+          <%= form.rich_text_area :description, class: "mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" %>
+        </div>
+      <% end %>
+
+      <div class="mb-6">
+        <%= form.submit class: "inline-block px-4 py-2 leading-none border rounded text-cx-beaver border-cx-beaver font-black hover:border-transparent hover:text-cx-lavender-blush hover:bg-cx-purple mt-4 lg:mt-0" %>
+      </div>
+    <% end %>
   </div>
-
-  <div class="mb-6">
-  <%= form.label :video_url, class: "label" %>
-  <%= form.text_field :video_url, class: "input" %>
 </div>
-
-  <div class="mb-6">
-    <%= form.label :funding_goal, class: "label" %>
-    <%= form.number_field :funding_goal, class: "input" %>
-  </div>
-
-  <div class="mb-6">
-    <%= form.label :blurb, class: "label" %>
-    <%= form.rich_text_area :blurb, class: "input" %>
-  </div>
-
-  <div class="mb-6">
-    <%= form.label :description, class: "label" %>
-    <%= form.rich_text_area :description, class: "input" %>
-  </div>
-
-  <%= form.fields_for(:bundles) do |form|  %>
-    <div class="mb-6">
-      <%= form.label :title, class: "label" %>
-      <%= form.text_field :title, class: "input" %>
-    </div>
-    <div class="mb-6">
-      <%= form.label :pledge_amount, class: "label" %>
-      <%= form.number_field :pledge_amount, class: "input" %>
-    </div>
-    <div class="mb-6">
-      <%= form.label :description, class: "label" %>
-      <%= form.rich_text_area :description, class: "input" %>
-    </div>
-  <% end %>
-
-  <div class="mb-6">
-    <%= form.submit class: "btn btn-default" %>
-  </div>
-<% end %>
