@@ -22,11 +22,11 @@
       <div class="text-xl py-4 border-b border-b-gray-300"><%= @project.blurb.html_safe %></div>
       <div class="py-4 flex flex-col">
         <div class="text-2xl p-2">
-          <span class="font-bold">Raised:</span> $75.00 /
+          <span class="font-bold">Raised:</span> $<%= @project.funds_raised %> /
           <span class="font-bold">Goal:</span> $<%= @project.funding_goal %>
         </div>
         <div class="text-2xl p-2">
-          84 Believers
+          <%= @project.backings.count %> Believers
         </div>
         <div class="text-2xl p-2">
           25 Days to go

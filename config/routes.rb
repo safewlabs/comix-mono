@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   mount Sidekiq::Web => "/sidekiq"
   resources :projects, param: :slug
   namespace :dashboard do
+    root "home#index"
     resources :projects, param: :slug
   end
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
