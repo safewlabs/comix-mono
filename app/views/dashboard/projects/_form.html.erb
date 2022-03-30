@@ -62,11 +62,9 @@
       <% end %>
 
       <div class="mb-6">
-        <%= link_to dashboard_path class: "inline-block px-4 py-2 leading-none border rounded text-cx-beaver border-cx-beaver font-black hover:border-transparent hover:text-cx-lavender-blush hover:bg-cx-purple mt-4 lg:mt-0" %>
-      </div>
+        <%= link_to 'Cancel', dashboard_projects_path, class: "inline-block px-4 py-2 leading-none border rounded bg-cx-lavender-blush text-cx-beaver border-cx-beaver font-black hover:border-transparent hover:text-cx-lavender-blush hover:bg-cx-purple mt-4 lg:mt-0" %>
 
-      <div class="mb-6">
-        <%= form.submit class: "inline-block px-4 py-2 leading-none border rounded text-cx-beaver border-cx-beaver font-black hover:border-transparent hover:text-cx-lavender-blush hover:bg-cx-purple mt-4 lg:mt-0" %>
+        <%= form.submit class: "inline-block px-4 py-2 leading-none border rounded border-transparent text-cx-lavender-blush bg-cx-purple hover:text-cx-beaver hover:bg-cx-lavender-blush hover:border-cx-beaver font-black mt-4 lg:mt-0" %>
       </div>
     <% end %>
   </div>

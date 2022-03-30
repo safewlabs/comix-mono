@@ -45,6 +45,7 @@ class Dashboard::ProjectsController < ApplicationController
                                       :issue_cover,
                                       :funding_goal,
                                       :video_url,
+                                      :campaign_ends_at,
                                       bundles_attributes: [
                                         :title,
                                         :description,

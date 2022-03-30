@@ -42,6 +42,11 @@ class Project < ApplicationRecord
   validates :campaign_ends_at, presence: true
   validates :description, presence: true
 
+
+  def days_to_go
+    (campaign_ends_at.to_date - Time.now.to_date).to_i
+  end
+
   enum status: {
     draft: 0,
     active: 1,
