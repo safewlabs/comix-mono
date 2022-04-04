@@ -1,0 +1,23 @@
+<div class="nested-form-wrapper" data-new-record="<%= form.object.new_record? %>">
+  <div class="mb-6">
+    <%= form.label :title, class: "label" %>
+    <%= form.text_field :title, class: "mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" %>
+  </div>
+  <div class="mb-6">
+    <%= form.label :pledge_amount, class: "label" %>
+    <%= form.number_field :pledge_amount, class: "mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" %>
+  </div>
+  <div class="mb-6">
+    <%= form.label :description, class: "label" %>
+    <%= form.rich_text_area :description, class: "mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" %>
+  </div>
+
+  <button type="button"
+          data-action="nested-form#remove"
+          class="flex flex-row p-2 items-center leading-none border rounded bg-cx-lavender-blush text-cx-beaver border-cx-beaver font-black hover:border-transparent hover:text-cx-lavender-blush hover:bg-cx-purple">
+    <%= render(Icons::CrossComponent.new) %>
+    Remove bundle
+  </button>
+
+  <%= form.hidden_field :_destroy %>
+</div>

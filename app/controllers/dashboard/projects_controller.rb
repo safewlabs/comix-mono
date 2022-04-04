@@ -50,7 +50,8 @@ class Dashboard::ProjectsController < ApplicationController
                                         :title,
                                         :description,
                                         :pledge_amount,
-                                        :project_id
+                                        :project_id,
+                                        :_destroy
                                       ])
     end
 
