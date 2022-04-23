@@ -10,7 +10,7 @@
       </span>
     </div>
   </div>
-  <div class="flex flex-row px-24">
+  <div class="flex lg:flex-row md:flex-col sm:flex-col">
     <div class="w-1/2 flex flex-col items-center">
       <% if @project.video_url.present? %>
         <%= render(VideoComponent.new(video_url: @project.video_url)) %>
@@ -18,7 +18,7 @@
         <img src="https://img.icons8.com/dotty/400/000000/full-image.png" class="shadow-2xl hidden rounded-lg lg:block" />
       <% end %>
     </div>
-    <div class="w-1/2">
+    <div class="w-1/2 px-16">
       <div class="text-xl py-4 border-b border-b-gray-300"><%= @project.blurb.html_safe %></div>
       <div class="py-4 flex flex-col">
         <div class="text-2xl p-2">
@@ -33,27 +33,15 @@
         </div>
         <div class="py-4">
           <div class="w-full bg-gray-200 rounded-full">
-            <div class="text-xl font-medium background-gradient text-center p-4 leading-none text-white rounded-l-full" style="width: 25%"> 25%</div>
+            <div class="text-xl font-medium background-gradient text-center p-4 leading-none text-white rounded-l-full" style="width: <%= @project.funding_status %>%">
+              <%= @project.funding_status.round %>%
+            </div>
           </div>
         </div>
       </div>
       <button type="submit" class="mt-10 w-full bg-cx-purple border border-transparent rounded-md py-3 px-8 flex items-center justify-center text-lg font-medium text-white hover:text-black hover:bg-cx-lavender-blush focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cx-lavendar-blush">
         Believe
       </button>
-      <div data-controller='toggle' class="my-10 pointer-cursor">
-        <div data-action='click->toggle#toggle touch->toggle#toggle' class="bg-cx-purple rounded-md text-center text-lg text-white p-4 pointer-cursor">
-          FAQ
-        </div>
-        <div data-toggle-target='toggleable' class="m-4 hidden">
-          <ul>
-            <ol>Phasellus ultricies metus congue odio egestas vulputate.</ol>
-            <ol>Integer sed dolor id leo mollis euismod eget id urna.</ol>
-            <ol>Proin porttitor massa sollicitudin pharetra tempor.</ol>
-            <ol>Pellentesque quis urna vitae mi ultrices iaculis.</ol>
-            <ol>Phasellus eget purus vel enim eleifend fermentum nec in nunc</ol>
-          </ul>
-        </div>
-      </div>
     </div>
   </div>
 
@@ -66,7 +54,6 @@
   <div class="px-24 py-6" data-controller="tabs" data-tabs-active-tab="-mb-px border-l border-t border-r rounded-t">
     <div class="sm:hidden">
       <label for="tabs" class="sr-only">Select a tab</label>
-      <!-- Use an "onChange" listener to redirect the user to the selected tab URL. -->
       <select id="tabs" name="tabs" class="block w-full focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md">
         <option selected>Project Details</option>
 

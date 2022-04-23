@@ -34,7 +34,7 @@ class Project < ApplicationRecord
   has_many :creator_profiles, through: :projects_creator_profiles
   has_one_attached :issue_cover
   has_many :bundles, dependent: :destroy
-  accepts_nested_attributes_for :bundles
+  accepts_nested_attributes_for :bundles, reject_if: :all_blank, allow_destroy: true
   has_many :backings
   has_many :users, through: :backings
 
@@ -53,4 +53,9 @@ class Project < ApplicationRecord
     ended: 2,
     archived: 3
   }
+
+  def funding_status
+    return 0 if funds_raised.eql?(0.0)
+    (funds_raised / funding_goal) * 100
+  end
 end

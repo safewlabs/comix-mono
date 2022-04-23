@@ -46,25 +46,15 @@
       <div class="mb-6 text-lg font-bold">
         <h2>Bundles</h2>
       </div>
-      <template data-nested-form-target="template" class="mt-6">
-        <%= form.fields_for(:bundles, child_index: 'NEW_RECORD') do |form|  %>
+
+      <div id='bundles'>
+        <%= form.fields_for(:bundles) do |form|  %>
           <%= render "bundle_form", form: form %>
         <% end %>
-      </template>
-
-      <%= form.fields_for(:bundles) do |form|  %>
-        <%= render "bundle_form", form: form %>
-      <% end %>
-
-      <div data-nested-form-target="target"></div>
-      <div class="my-6">
-        <button type="button"
-                data-action="nested-form#add"
-                class="flex flex-row p-2 items-center leading-none border rounded bg-cx-lavender-blush text-cx-beaver border-cx-beaver font-black hover:border-transparent hover:text-cx-lavender-blush hover:bg-cx-purple">
-          <%= render(Icons::PlusComponent.new) %>
-          Add a bundle
-        </button>
       </div>
+
+      <%= link_to_add_nested(form, :bundles, '#bundles', partial: 'bundle_form') %>
+
       <div class="mb-6">
         <%= link_to 'Cancel', dashboard_projects_path, class: "inline-block px-4 py-2 leading-none border rounded bg-cx-lavender-blush text-cx-beaver border-cx-beaver font-black hover:border-transparent hover:text-cx-lavender-blush hover:bg-cx-purple mt-4 lg:mt-0" %>
 

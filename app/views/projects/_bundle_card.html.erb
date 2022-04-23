@@ -1,4 +1,4 @@
-<li class="my-1 px-1 lg:my-2 lg:px-1 lg:w-1/4 md:w-1/2 sm:w-full list-none cursor-pointer">
+<li class="my-1 px-1 w-full list-none cursor-pointer">
     <article class="overflow-hidden rounded-lg border hover:shadow-lg">
         <% if bundle.bundle_cover.present? %>
             <%= image_tag bundle.bundle_cover.variant(resize_to_limit: [600, 400]), class: "block max-h-tile w-full"  %>

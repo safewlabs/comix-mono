@@ -10,4 +10,5 @@ pin_all_from "app/javascript/controllers", under: "controllers"
 pin "tailwindcss-stimulus-components", to: "https://ga.jspm.io/npm:tailwindcss-stimulus-components@3.0.3/dist/tailwindcss-stimulus-components.modern.js"
 pin "trix"
 pin "@rails/actiontext", to: "actiontext.js"
-pin "stimulus-rails-nested-form", to: "https://ga.jspm.io/npm:stimulus-rails-nested-form@4.0.0/dist/stimulus-rails-nested-form.es.js"
+pin "@rails/activestorage", to: "https://ga.jspm.io/npm:@rails/activestorage@6.1.5/app/assets/javascripts/activestorage.js"
+pin "vanilla-nested", to: "vanilla_nested.js", preload: true

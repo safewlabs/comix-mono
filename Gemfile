@@ -37,6 +37,7 @@ gem "jbuilder"
 gem "redis", "~> 4.0"
 gem "sidekiq"
 
+gem "vanilla_nested", github: "arielj/vanilla-nested", branch: :main
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "kredis"
 gem "money-rails"

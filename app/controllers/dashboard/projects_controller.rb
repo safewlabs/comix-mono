@@ -33,8 +33,16 @@ class Dashboard::ProjectsController < ApplicationController
   end
 
   def update
-    @project.update!(project_params)
-    redirect_to dashboard_projects_path
+    @project.update(project_params)
+    respond_to do |format|
+      if @project.save
+        format.html { redirect_to @project, notice: "Project was successfully updated." }
+        format.json { render :show, status: :created, location: @project }
+      else
+        format.html { render :new }
+        format.json { render json: @project.errors, status: :unprocessable_entity }
+      end
+    end
   end
 
   private
@@ -51,6 +59,7 @@ class Dashboard::ProjectsController < ApplicationController
                                         :description,
                                         :pledge_amount,
                                         :project_id,
+                                        :bundle_cover,
                                         :_destroy
                                       ])
     end
