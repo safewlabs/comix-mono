@@ -3,12 +3,8 @@
 @tailwind utilities;
 
 @layer components {
-  @font-face {
-    font-family: 'Poppins';
-    src: url('Poppins-Regular-400.ttf');
-  }
   body {
-    @apply font-body;
+    @apply font-body font-light;
   }
 
   .background-gradient {
