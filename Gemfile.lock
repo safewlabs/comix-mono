@@ -330,7 +330,7 @@ GEM
       sprockets (>= 3.0.0)
     stimulus-rails (1.0.4)
       railties (>= 6.0.0)
-    stripe (5.53.0)
+    stripe (5.54.0)
     strscan (3.0.1)
     tailwindcss-rails (2.0.8-x86_64-darwin)
       railties (>= 6.0.0)
