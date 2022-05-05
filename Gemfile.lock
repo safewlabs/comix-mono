@@ -189,9 +189,9 @@ GEM
       net-protocol
       timeout
     nio4r (2.5.8)
-    nokogiri (1.13.4-x86_64-darwin)
+    nokogiri (1.13.5-x86_64-darwin)
       racc (~> 1.4)
-    nokogiri (1.13.4-x86_64-linux)
+    nokogiri (1.13.5-x86_64-linux)
       racc (~> 1.4)
     oauth2 (1.4.9)
       faraday (>= 0.17.3, < 3.0)
@@ -330,7 +330,7 @@ GEM
       sprockets (>= 3.0.0)
     stimulus-rails (1.0.4)
       railties (>= 6.0.0)
-    stripe (5.53.0)
+    stripe (5.54.0)
     strscan (3.0.1)
     tailwindcss-rails (2.0.8-x86_64-darwin)
       railties (>= 6.0.0)
