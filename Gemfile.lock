@@ -387,7 +387,7 @@ DEPENDENCIES
   pg
   puma (~> 5.0)
   pundit
-  rails (~> 7.0.0)
+  rails (~> 7.0.3)
   redis (~> 4.0)
   rolify
   rspec-rails (~> 5.1.2)
