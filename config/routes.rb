@@ -2,6 +2,9 @@
 
 require "sidekiq/web"
 Rails.application.routes.draw do
+  namespace :admin do
+    resources :posts, param: :slug
+  end
   root "home#index"
   get "about", to: "pages#about", as: "about"
   devise_for :users, path: "", path_names: {
