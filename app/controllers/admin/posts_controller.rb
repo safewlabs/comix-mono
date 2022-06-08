@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class Admin::PostsController < ApplicationController
+class Admin::PostsController < AdminController
   def new
   end
 

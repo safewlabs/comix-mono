@@ -5,7 +5,7 @@
 # Table name: posts
 #
 #  id           :bigint           not null, primary key
-#  article_type :integer          default(0)
+#  article_type :integer          default("article")
 #  body         :text
 #  slug         :string
 #  summary      :text
