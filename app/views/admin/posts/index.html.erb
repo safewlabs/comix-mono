@@ -30,7 +30,9 @@
                     </td>
                     <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500"><%= post.summary %></td>
                     <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500"><%= post.article_type %></td>
-                    <td><a href="#" class="text-indigo-600 hover:text-indigo-900">Edit</a></td>
+                    <td>
+                      <%= link_to "Edit", edit_admin_post_path(post), class: "text-indigo-600 hover:text-cx-purple" %>
+                    </td>
                 </tr>
               <% end %>
             </tbody>

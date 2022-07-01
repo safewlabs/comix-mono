@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class Admin::PostsController < AdminController
-  before_action :set_post
+  before_action :set_post, only: [:edit, :update]
 
   def index
     @posts = Post.all
@@ -17,6 +17,16 @@ class Admin::PostsController < AdminController
   end
 
   def update
+    @post.update(post_params)
+    respond_to do |format|
+      if @post.save
+        format.html { redirect_to @post, notice: "Post was successfully updated." }
+        format.json { render :show, status: :created, location: @post }
+      else
+        format.html { render :new }
+        format.json { render json: @post.errors, status: :unprocessable_entity }
+      end
+    end
   end
 
   def delete
@@ -25,5 +35,9 @@ class Admin::PostsController < AdminController
   private
     def set_post
       @post = Post.find_by(slug: params[:slug])
+    end
+
+    def post_params
+      params.require(:post).permit(:title, :summary, :body)
     end
 end
