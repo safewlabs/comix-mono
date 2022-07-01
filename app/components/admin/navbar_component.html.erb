@@ -2,7 +2,7 @@
   <div class="flex items-center justify-center flex-no-shrink text-cx-beaver mr-6">
     <%= link_to root_path, class: "flex flex-row items-center" do %>
         <%= render(LogoComponent.new(classes: "w-16")) %>
-        <div class="text-3xl bold font-black self-center">COMI<i>X</i></div>
+        <div class="text-3xl bold font-black self-center">Comi<i>X</i>admin</div>
     <% end %>
   </div>
   <div class="block lg:hidden">
@@ -14,10 +14,11 @@
       <span aria-hidden="true"></span>
     </button>
   </div>
-  <!-- <div id="toggleNav" class="navbar-menu w-full ns:block lg:flex lg:items-center lg:w-auto sm:hidden md:hidden">
+  <div id="toggleNav" class="navbar-menu w-full ns:block lg:flex lg:items-center lg:w-auto sm:hidden md:hidden">
     <div class="lg:flex-end flex flex-row items-center">
-      <%= link_to 'Freshly Pressed', about_path, class: "block mt-4 lg:inline-block lg:mt-0 text-cx-beaver font-black hover:text-cx-purple mr-4 navbar-link" %>
-      <%= link_to 'About', about_path, class: "block mt-4 lg:inline-block lg:mt-0 text-cx-beaver font-black hover:text-cx-purple mr-4 navbar-link" %>
+      <%= button_to destroy_admin_user_session_path, method: :delete, class: "dropdown-item dropdown-logout" do %>
+        <spam class="dropdown-logout-text">Logout</spam>
+      <% end %>
     </div>
-  </div> -->
+  </div>
 </nav>
