@@ -38,6 +38,6 @@ class Admin::PostsController < AdminController
     end
 
     def post_params
-      params.require(:post).permit(:title, :summary, :body)
+      params.require(:post).permit(:title, :summary, :youtube_video_id, :body)
     end
 end

@@ -11,7 +11,10 @@
         </div>
       </div>
       <div class="mt-6 prose prose-indigo prose-lg text-black mx-auto">
-        <%= @post.body.html_safe %>
+        <%= @post.body.html_safe %><br/>
+        <% if @post.youtube_video_id %>
+          <%= render(VideoComponent.new(video_url: @post.youtube_video_id)) %>
+        <% end %>
       </div>
     </div>
   </div>
