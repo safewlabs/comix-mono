@@ -7,11 +7,14 @@
       <a href="https://www.getrevue.co/profile/comix_app/" target="_blank">Read and Subcribe to our newsletter</a>
     </div>
     <div class="mt-12 grid gap-16 pt-12 lg:grid-cols-3 lg:gap-x-5 lg:gap-y-12">
-      <% @posts.each do |post| %>
+      <% @records.each do |post| %>
         <% cache post do %>
           <%= render(Marketing::PostBlurbComponent.new(post: post)) %>
         <% end %>
       <% end %>
+    </div>
+    <div class="mt-12 w-full">
+      <%== pagy_nav(@pagy) %>
     </div>
   </div>
 </div>

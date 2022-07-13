@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 module ApplicationHelper
+  include Pagy::Frontend
   def stripe_url
     "https://connect.stripe.com/oauth/authorize?response_type=code&client_id=#{stripe_client_id}&scope=read_write"
   end

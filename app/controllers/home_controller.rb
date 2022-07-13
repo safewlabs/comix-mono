@@ -2,6 +2,6 @@
 
 class HomeController < ApplicationController
   def index
-    @posts = Post.last(3)
+    @pagy, @records = pagy(Post.order(created_at: :desc))
   end
 end
