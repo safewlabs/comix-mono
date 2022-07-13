@@ -17,7 +17,7 @@ Rails.application.routes.draw do
     sign_in: "login",
     sign_out: "logout",
     sign_up: "signup",
-  }, controllers: { omniauth_callbacks: "omniauth_callbacks" }
+  }
 
   mount Sidekiq::Web => "/sidekiq"
   resources :projects, param: :slug
