@@ -1,10 +1,13 @@
 # frozen_string_literal: true
 
 class Admin::PostsController < AdminController
-  before_action :set_post, only: [:edit, :update]
+  before_action :set_post, only: [:edit, :update, :show]
 
   def index
     @posts = Post.all
+  end
+
+  def show
   end
 
   def new

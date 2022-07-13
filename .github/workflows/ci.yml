@@ -39,7 +39,7 @@ jobs:
           POSTGRES_PORT: 5432
         run: |
           cp config/database.ci.yml config/database.yml
-          bundle exec rails db:create db:migrate
+          bundle exec rails db:migrate
 
       - name: Run tests
         env:
@@ -50,4 +50,5 @@ jobs:
           POSTGRES_PASSWORD: postgres
           POSTGRES_PORT: 5432
         run: |
+          bundle exec rails assets:precompile
           bundle exec rspec

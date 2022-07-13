@@ -3,6 +3,11 @@
 require "rails_helper"
 
 RSpec.describe "Admin::Posts", type: :request do
+  let(:admin_user) { create(:admin_user) }
+  before(:each) do
+    sign_in admin_user
+  end
+
   describe "GET /new" do
     it "returns http success" do
       get "/admin/posts/new"
