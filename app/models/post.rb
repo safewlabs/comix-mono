@@ -8,6 +8,7 @@
 #  article_type     :integer          default("article")
 #  body             :text
 #  slug             :string
+#  status           :integer          default("draft")
 #  summary          :text
 #  title            :string
 #  created_at       :datetime         not null
@@ -20,5 +21,10 @@ class Post < ApplicationRecord
     article: 0,
     interview: 1,
     feature: 2
+  }
+
+  enum status: {
+    draft: 0,
+    published: 1
   }
 end

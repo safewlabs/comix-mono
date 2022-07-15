@@ -8,6 +8,7 @@
 #  article_type     :integer          default("article")
 #  body             :text
 #  slug             :string
+#  status           :integer          default("draft")
 #  summary          :text
 #  title            :string
 #  created_at       :datetime         not null
