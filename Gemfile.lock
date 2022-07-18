@@ -1,9 +1,9 @@
 GIT
   remote: https://github.com/arielj/vanilla-nested.git
-  revision: d1577a01631d05c2673d5d4a30762d04ba87da29
+  revision: ffc35385b7eea901dd4ed0b63153b9f7c0effe6a
   branch: main
   specs:
-    vanilla_nested (1.6.1)
+    vanilla_nested (1.6.2)
 
 GIT
   remote: https://github.com/dabit/annotate_models.git
