@@ -17,6 +17,8 @@
 #
 class Post < ApplicationRecord
   include Sluggable
+  has_rich_text :body
+
   enum article_type: {
     article: 0,
     interview: 1,
