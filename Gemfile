@@ -42,7 +42,7 @@ gem "vanilla_nested", github: "arielj/vanilla-nested", branch: :main
 # gem "kredis"
 gem "money-rails"
 gem "stripe"
-gem "omniauth", "~> 1.9"
+gem "omniauth", "~> 2.1"
 # Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
 # gem "bcrypt", "~> 3.1.7"
 gem "devise"
