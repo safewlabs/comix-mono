@@ -6,8 +6,15 @@
 #
 #  id         :bigint           not null, primary key
 #  bio        :text
+#  facebook   :string
+#  instagram  :string
 #  name       :string
+#  skills     :string
 #  slug       :string           not null
+#  tiktok     :string
+#  twitter    :string
+#  website    :string
+#  youtube    :string
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #  user_id    :bigint
