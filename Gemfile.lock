@@ -1,9 +1,9 @@
 GIT
   remote: https://github.com/arielj/vanilla-nested.git
-  revision: ffc35385b7eea901dd4ed0b63153b9f7c0effe6a
+  revision: 17bc36e840f4f017efd78f76227702dce2b3c97e
   branch: main
   specs:
-    vanilla_nested (1.6.2)
+    vanilla_nested (1.7.0)
 
 GIT
   remote: https://github.com/dabit/annotate_models.git
@@ -16,7 +16,7 @@ GIT
 
 GIT
   remote: https://github.com/faker-ruby/faker.git
-  revision: 45f77721df31780c3bb8a01bc4b03d50380f8e55
+  revision: 6aecb58a34283f58f40cfb05e2245c55e0439190
   branch: master
   specs:
     faker (2.22.0)
@@ -94,8 +94,8 @@ GEM
       public_suffix (>= 2.0.2, < 5.0)
     ast (2.4.2)
     aws-eventstream (1.2.0)
-    aws-partitions (1.615.0)
-    aws-sdk-core (3.131.6)
+    aws-partitions (1.618.0)
+    aws-sdk-core (3.132.0)
       aws-eventstream (~> 1, >= 1.0.2)
       aws-partitions (~> 1, >= 1.525.0)
       aws-sigv4 (~> 1.1)
@@ -127,7 +127,7 @@ GEM
     concurrent-ruby (1.1.10)
     connection_pool (2.2.5)
     crass (1.0.6)
-    debug (1.6.1)
+    debug (1.6.2)
       irb (>= 1.3.6)
       reline (>= 0.3.1)
     devise (4.8.1)
@@ -212,9 +212,9 @@ GEM
     pagy (5.10.1)
       activesupport
     parallel (1.22.1)
-    parser (3.1.2.0)
+    parser (3.1.2.1)
       ast (~> 2.4.1)
-    pg (1.4.2)
+    pg (1.4.3)
     public_suffix (4.0.7)
     puma (5.6.4)
       nio4r (~> 2.0)
@@ -280,22 +280,22 @@ GEM
       rspec-mocks (~> 3.10)
       rspec-support (~> 3.10)
     rspec-support (3.11.0)
-    rubocop (1.33.0)
+    rubocop (1.35.0)
       json (~> 2.3)
       parallel (~> 1.10)
-      parser (>= 3.1.0.0)
+      parser (>= 3.1.2.1)
       rainbow (>= 2.2.2, < 4.0)
       regexp_parser (>= 1.8, < 3.0)
       rexml (>= 3.2.5, < 4.0)
-      rubocop-ast (>= 1.19.1, < 2.0)
+      rubocop-ast (>= 1.20.1, < 2.0)
       ruby-progressbar (~> 1.7)
       unicode-display_width (>= 1.4.0, < 3.0)
-    rubocop-ast (1.19.1)
+    rubocop-ast (1.21.0)
       parser (>= 3.1.1.0)
     rubocop-minitest (0.21.0)
       rubocop (>= 0.90, < 2.0)
-    rubocop-packaging (0.5.1)
-      rubocop (>= 0.89, < 2.0)
+    rubocop-packaging (0.5.2)
+      rubocop (>= 1.33, < 2.0)
     rubocop-performance (1.14.3)
       rubocop (>= 1.7.0, < 2.0)
       rubocop-ast (>= 0.4.0)
@@ -303,7 +303,7 @@ GEM
       activesupport (>= 4.2.0)
       rack (>= 1.1)
       rubocop (>= 1.7.0, < 2.0)
-    rubocop-rails_config (1.10.3)
+    rubocop-rails_config (1.10.5)
       railties (>= 5.0)
       rubocop (>= 1.29.0)
       rubocop-ast (>= 1.0.1)
@@ -317,12 +317,12 @@ GEM
     ruby-vips (2.1.4)
       ffi (~> 1.12)
     rubyzip (2.3.2)
-    selenium-webdriver (4.3.0)
+    selenium-webdriver (4.4.0)
       childprocess (>= 0.5, < 5.0)
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2, < 3.0)
       websocket (~> 1.0)
-    sidekiq (6.5.3)
+    sidekiq (6.5.4)
       connection_pool (>= 2.2.2)
       rack (~> 2.0)
       redis (>= 4.5.0)
@@ -337,9 +337,9 @@ GEM
       railties (>= 6.0.0)
     stripe (7.0.0)
     strscan (3.0.4)
-    tailwindcss-rails (2.0.10-x86_64-darwin)
+    tailwindcss-rails (2.0.12-x86_64-darwin)
       railties (>= 6.0.0)
-    tailwindcss-rails (2.0.10-x86_64-linux)
+    tailwindcss-rails (2.0.12-x86_64-linux)
       railties (>= 6.0.0)
     thor (1.2.1)
     timeout (0.3.0)
@@ -350,7 +350,7 @@ GEM
     tzinfo (2.0.5)
       concurrent-ruby (~> 1.0)
     unicode-display_width (2.2.0)
-    view_component (2.64.0)
+    view_component (2.66.0)
       activesupport (>= 5.0.0, < 8.0)
       concurrent-ruby (~> 1.0)
       method_source (~> 1.0)

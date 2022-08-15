@@ -1,4 +1,4 @@
-# fly.toml file generated for comix on 2022-08-09T21:02:45+10:00
+# fly.toml file generated for comix on 2022-08-09T21:36:57+10:00
 
 app = "comix"
 kill_signal = "SIGINT"
