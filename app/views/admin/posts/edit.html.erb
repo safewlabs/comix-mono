@@ -1,11 +1,24 @@
-<%= form_with model: @post, url: admin_post_path(@post), method: :patch, local: true do |form| %>
-  <%= form.label :title %><br />
-  <%= form.text_field :title %>
-  <%= form.label :summary %><br />
-  <%= form.rich_text_area :summary %>
-  <%= form.label :youtube_video_id %>
-  <%= form.text_field :youtube_video_id %>
-  <%= form.label :body %><br />
-  <%= form.rich_text_area :body %>
-  <%= form.submit %>
-<% end %>
+<div class="pt-6 px-4 sm:px-6 lg:px-8">
+  <div class="sm:flex sm:items-center">
+    <div class="sm:flex-auto">
+      <h1 class="text-xl font-semibold text-gray-900">Editing Post</h1>
+    </div>
+  </div>
+  <div class="mt-8 flex flex-col">
+    <div class="-my-2 -mx-4 overflow-x-auto sm:-mx-6 lg:-mx-8">
+      <div class="inline-block min-w-full py-2 align-middle md:px-6 lg:px-8">
+        <%= form_with model: @post, url: admin_post_path(@post), method: :patch, local: true do |form| %>
+          <%= form.label :title %><br />
+          <%= form.text_field :title %><br />
+          <%= form.label :summary %><br />
+          <%= form.rich_text_area :summary %><br />
+          <%= form.label :youtube_video_id %><br />
+          <%= form.text_field :youtube_video_id %><br />
+          <%= form.label :body %><br />
+          <%= form.rich_text_area :body %><br />
+          <%= form.submit class: "inline-flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:w-auto" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
