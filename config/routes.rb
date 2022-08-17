@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   namespace :admin do
     root "dashboard#index"
     resources :posts, param: :slug
+    resources :profiles, param: :slug
   end
   root "home#index"
   get "about", to: "pages#about", as: "about"
@@ -22,6 +23,7 @@ Rails.application.routes.draw do
   mount Sidekiq::Web => "/sidekiq"
   resources :projects, param: :slug
   resources :posts, param: :slug, only: [:index, :show]
+  resources :profiles, param: :slug, only: [:show]
   namespace :dashboard do
     root "home#index"
     resources :projects, param: :slug
