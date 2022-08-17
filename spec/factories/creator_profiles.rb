@@ -32,5 +32,6 @@ FactoryBot.define do
     association :user
     name { Faker::Lorem.sentence(word_count: 3) }
     bio { Faker::Lorem.paragraphs(number: 3, supplemental: true) }
+    website { Faker::Internet.url }
   end
 end

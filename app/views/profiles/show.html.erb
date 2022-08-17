@@ -39,7 +39,6 @@
             </div>
           </div>
 
-          <!-- Description list -->
           <div class="mt-6 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <dl class="grid grid-cols-1 gap-x-4 gap-y-8 sm:grid-cols-2">
               <div class="sm:col-span-1">
@@ -51,28 +50,46 @@
 
               <div class="sm:col-span-1">
                 <dt class="text-xl font-bold ">Skill</dt>
-                <dd class="mt-1 text-md text-gray-900">Writing, Lettering</dd>
+                <dd class="mt-1 text-md text-gray-900"><%= @creator_profile.skills %></dd>
               </div>
 
               <div class="sm:col-span-1">
                 <dt class="text-xl font-bold ">Website</dt>
-                <dd class="mt-1 text-md text-gray-900">www.craiganderson.art</dd>
+                <dd class="mt-1 text-md text-gray-900">
+                  <%= link_to @creator_profile.website, @creator_profile.website %>
+                </dd>
               </div>
 
               <div class="sm:col-span-1">
                 <dt class="text-xl font-bold">Social</dt>
                 <div class="flex flex-row">
                   <dd class="mt-1 mx-1 text-md text-gray-900">
-                    <ion-icon name="logo-twitter"></ion-icon>
+                    <% if @creator_profile.twitter %>
+                      <%= link_to  "https://twitter.com" do %>
+                        <ion-icon name="logo-twitter"></ion-icon>
+                      <% end %>
+                    <% end %>
                   </dd>
                   <dd class="mt-1 mx-1 text-md text-gray-900">
-                    <ion-icon name="logo-facebook"></ion-icon>
+                    <% if @creator_profile.facebook %>
+                      <%= link_to  "https://facebook.com" do %>
+                        <ion-icon name="logo-facebook"></ion-icon>
+                      <% end %>
+                    <% end %>
                   </dd>
                   <dd class="mt-1 mx-1 text-md text-gray-900">
-                    <ion-icon name="logo-instagram"></ion-icon>
+                    <% if @creator_profile.instagram %>
+                      <%= link_to  "https://instagram.com" do %>
+                        <ion-icon name="logo-instagram"></ion-icon>
+                      <% end %>
+                    <% end %>
                   </dd>
                   <dd class="mt-1 mx-1 text-md text-gray-900">
-                    <ion-icon name="logo-tiktok"></ion-icon>
+                    <% if @creator_profile.instagram %>
+                      <%= link_to  "https://tiktok.com" do %>
+                        <ion-icon name="logo-tiktok"></ion-icon>
+                      <% end %>
+                    <% end %>
                   </dd>
                 </div>
               </div>
