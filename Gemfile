@@ -18,7 +18,7 @@ gem "pg"
 gem "puma", "~> 5.0"
 
 # Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]
-gem "importmap-rails"
+# gem "importmap-rails"
 
 # Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
 gem "turbo-rails", "~> 1.1.1"
@@ -27,7 +27,8 @@ gem "turbo-rails", "~> 1.1.1"
 gem "stimulus-rails"
 
 # Use Tailwind CSS [https://github.com/rails/tailwindcss-rails]
-gem "tailwindcss-rails"
+gem "jsbundling-rails", "~> 1.0"
+gem "cssbundling-rails", "~> 1.1"
 gem "view_component"
 
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
