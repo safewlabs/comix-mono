@@ -11,7 +11,9 @@
 puts "Creating User"
 creator_user = FactoryBot.create(:user, :creator_profile)
 puts "Creating Projects"
-projects = FactoryBot.create_list(:project, 3, user: creator_user)
+projects = FactoryBot.create_list(:project, 3) do |project|
+              project.user = creator_user
+            end
 projects.each do |project|
   puts "Creating creator_profiles"
   creator_profile = FactoryBot.create(:creator_profile)
