@@ -1,7 +1,5 @@
 @tailwind base;
 @tailwind components;
-@tailwind utilities;
-
 @layer components {
   body {
     @apply font-body font-light;
@@ -29,4 +27,5 @@
     }
   }
 }
+@tailwind utilities;
 @import 'actiontext.css';
