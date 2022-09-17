@@ -72,14 +72,14 @@
                   </dd>
                   <dd class="mt-1 mx-1 text-md text-gray-900">
                     <% if @creator_profile.facebook %>
-                      <%= link_to  "https://facebook.com" do %>
+                      <%= link_to  "https://facebook.com/#{@creator_profile.facebook}" do %>
                         <ion-icon name="logo-facebook"></ion-icon>
                       <% end %>
                     <% end %>
                   </dd>
                   <dd class="mt-1 mx-1 text-md text-gray-900">
                     <% if @creator_profile.instagram %>
-                      <%= link_to  "https://instagram.com" do %>
+                      <%= link_to  "https://instagram.com/#{@creator_profile.instagram}" do %>
                         <ion-icon name="logo-instagram"></ion-icon>
                       <% end %>
                     <% end %>
