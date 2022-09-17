@@ -46,7 +46,7 @@ FactoryBot.define do
     trait :creator_profile do
       after(:create) do |user|
         user.confirm
-        user.add_role(:creator_profile)
+        user.add_role(:creator)
       end
     end
   end

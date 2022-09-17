@@ -21,7 +21,7 @@ class Admin::CreatorProfilesController < ApplicationController
     @profile = CreatorProfile.new(profile_params)
     respond_to do |format|
       if @profile.save
-        format.html { redirect_to @profile, notice: "CreatorProfile was successfully created." }
+        format.html { redirect_to profile_path(@profile), notice: "CreatorProfile was successfully created." }
         format.json { render :show, status: :created, location: @profile }
       else
         format.html { render :new }
@@ -34,7 +34,7 @@ class Admin::CreatorProfilesController < ApplicationController
     @profile.update(profile_params)
     respond_to do |format|
       if @profile.save
-        format.html { redirect_to profile_url(@profile), notice: "CreatorProfile was successfully updated." }
+        format.html { redirect_to profile_path(@profile), notice: "CreatorProfile was successfully updated." }
         format.json { render :show, status: :created, location: @profile }
       else
         format.html { render :new }
