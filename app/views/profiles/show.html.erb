@@ -65,7 +65,7 @@
                 <div class="flex flex-row">
                   <dd class="mt-1 mx-1 text-md text-gray-900">
                     <% if @creator_profile.twitter %>
-                      <%= link_to  "https://twitter.com" do %>
+                      <%= link_to  "https://twitter.com/#{@creator_profile.twitter}" do %>
                         <ion-icon name="logo-twitter"></ion-icon>
                       <% end %>
                     <% end %>
