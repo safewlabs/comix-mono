@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   namespace :admin do
     root "dashboard#index"
     resources :posts, param: :slug
-    resources :profiles, param: :slug
+    resources :creator_profiles, param: :slug
   end
   root "home#index"
   get "about", to: "pages#about", as: "about"

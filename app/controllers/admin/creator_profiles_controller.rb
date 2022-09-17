@@ -1,4 +1,6 @@
-class Admin::ProfilesController < ApplicationController
+# frozen_string_literal: true
+
+class Admin::CreatorProfilesController < ApplicationController
   before_action :set_profile, only: [:edit, :update, :show]
 
   def index
