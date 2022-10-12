@@ -34,7 +34,7 @@ gem "view_component"
 gem "jbuilder"
 gem "aws-sdk-s3"
 # Use Redis adapter to run Action Cable in production
-gem "redis", "~> 4.0"
+gem "redis", "~> 5.0"
 gem "sidekiq"
 
 gem "vanilla_nested", github: "arielj/vanilla-nested", branch: :main
