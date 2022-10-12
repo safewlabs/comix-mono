@@ -21,7 +21,8 @@ class Post < ApplicationRecord
   enum article_type: {
     article: 0,
     interview: 1,
-    feature: 2
+    feature: 2,
+    video: 3
   }
 
   enum status: {
