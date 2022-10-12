@@ -18,7 +18,6 @@ Install all the pre-requisites and clone the repo. cd into the app directory.
 
 ```shell
 $ bundle install
-$ yarn install
 $ rails db:create db:migrate db:seed
 ```
 
