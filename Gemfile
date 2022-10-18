@@ -65,7 +65,7 @@ group :development, :test do
   gem "annotate", github: "dabit/annotate_models", branch: "rails-7"
   gem "factory_bot_rails"
   gem "faker", git: "https://github.com/faker-ruby/faker.git", branch: "master"
-  gem "rspec-rails", "~> 6.0.0"
+  gem "rspec-rails", "~> 6.0.1"
   gem "rubocop-rails", require: false
   gem "rubocop-rails_config"
   gem "rubocop-rspec", require: false
