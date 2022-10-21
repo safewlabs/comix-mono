@@ -193,9 +193,9 @@ GEM
     net-smtp (0.3.2)
       net-protocol
     nio4r (2.5.8)
-    nokogiri (1.13.8-x86_64-darwin)
+    nokogiri (1.13.9-x86_64-darwin)
       racc (~> 1.4)
-    nokogiri (1.13.8-x86_64-linux)
+    nokogiri (1.13.9-x86_64-linux)
       racc (~> 1.4)
     omniauth (2.1.0)
       hashie (>= 3.4.6)
@@ -338,7 +338,7 @@ GEM
       railties (>= 6.0.0)
     thor (1.2.1)
     timeout (0.3.0)
-    turbo-rails (1.3.1)
+    turbo-rails (1.3.2)
       actionpack (>= 6.0.0)
       activejob (>= 6.0.0)
       railties (>= 6.0.0)
@@ -404,7 +404,7 @@ DEPENDENCIES
   stimulus-rails
   stripe
   tailwindcss-rails
-  turbo-rails (~> 1.3.0)
+  turbo-rails (~> 1.3.2)
   tzinfo-data
   vanilla_nested!
   view_component
