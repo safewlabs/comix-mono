@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_07_31_052728) do
+ActiveRecord::Schema[7.0].define(version: 2022_10_26_110653) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -96,6 +96,16 @@ ActiveRecord::Schema[7.0].define(version: 2022_07_31_052728) do
     t.index ["project_id"], name: "index_bundles_on_project_id"
   end
 
+  create_table "collaborations", force: :cascade do |t|
+    t.bigint "product_id", null: false
+    t.bigint "creator_profile_id", null: false
+    t.integer "collaboration_type"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["creator_profile_id"], name: "index_collaborations_on_creator_profile_id"
+    t.index ["product_id"], name: "index_collaborations_on_product_id"
+  end
+
   create_table "creator_profiles", force: :cascade do |t|
     t.string "name"
     t.text "bio"
@@ -111,6 +121,13 @@ ActiveRecord::Schema[7.0].define(version: 2022_07_31_052728) do
     t.string "tiktok"
     t.string "youtube"
     t.index ["user_id"], name: "index_creator_profiles_on_user_id"
+  end
+
+  create_table "genres", force: :cascade do |t|
+    t.string "name"
+    t.string "slug"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "items", force: :cascade do |t|
@@ -133,6 +150,28 @@ ActiveRecord::Schema[7.0].define(version: 2022_07_31_052728) do
     t.integer "article_type", default: 0
     t.string "youtube_video_id"
     t.integer "status", default: 0
+  end
+
+  create_table "product_genres", force: :cascade do |t|
+    t.bigint "product_id", null: false
+    t.bigint "genre_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["genre_id"], name: "index_product_genres_on_genre_id"
+    t.index ["product_id"], name: "index_product_genres_on_product_id"
+  end
+
+  create_table "products", force: :cascade do |t|
+    t.string "name"
+    t.float "price"
+    t.integer "page_count"
+    t.datetime "release_date"
+    t.string "age_rating"
+    t.bigint "store_id", null: false
+    t.string "slug"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["store_id"], name: "index_products_on_store_id"
   end
 
   create_table "projects", force: :cascade do |t|
@@ -168,6 +207,15 @@ ActiveRecord::Schema[7.0].define(version: 2022_07_31_052728) do
     t.datetime "updated_at", null: false
     t.index ["name", "resource_type", "resource_id"], name: "index_roles_on_name_and_resource_type_and_resource_id"
     t.index ["resource_type", "resource_id"], name: "index_roles_on_resource"
+  end
+
+  create_table "stores", force: :cascade do |t|
+    t.string "name"
+    t.string "slug"
+    t.bigint "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_stores_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -212,9 +260,15 @@ ActiveRecord::Schema[7.0].define(version: 2022_07_31_052728) do
   add_foreign_key "backings", "projects"
   add_foreign_key "backings", "users"
   add_foreign_key "bundles", "projects"
+  add_foreign_key "collaborations", "creator_profiles"
+  add_foreign_key "collaborations", "products"
   add_foreign_key "creator_profiles", "users"
   add_foreign_key "items", "bundles"
+  add_foreign_key "product_genres", "genres"
+  add_foreign_key "product_genres", "products"
+  add_foreign_key "products", "stores"
   add_foreign_key "projects", "users"
   add_foreign_key "projects_creator_profiles", "creator_profiles"
   add_foreign_key "projects_creator_profiles", "projects"
+  add_foreign_key "stores", "users"
 end

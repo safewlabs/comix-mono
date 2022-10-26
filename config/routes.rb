@@ -13,7 +13,7 @@ Rails.application.routes.draw do
     resources :creator_profiles, param: :slug
   end
   root "home#index"
-  get "about", to: "pages#about", as: "about"
+  get "about-us", to: "pages#about", as: "about"
   devise_for :users, path: "", path_names: {
     sign_in: "login",
     sign_out: "logout",
