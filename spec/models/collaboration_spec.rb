@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # == Schema Information
 #
 # Table name: collaborations
@@ -19,7 +21,7 @@
 #  fk_rails_...  (creator_profile_id => creator_profiles.id)
 #  fk_rails_...  (product_id => products.id)
 #
-require 'rails_helper'
+require "rails_helper"
 
 RSpec.describe Collaboration, type: :model do
   pending "add some examples to (or delete) #{__FILE__}"

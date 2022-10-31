@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # == Schema Information
 #
 # Table name: products
@@ -27,7 +29,7 @@ class Product < ApplicationRecord
   belongs_to :store
   has_many :collaborations
   has_many :creator_profiles, through: :collaborations
-  
+
   has_many :products_genres
   has_many :genres, through: :products_genres
 
