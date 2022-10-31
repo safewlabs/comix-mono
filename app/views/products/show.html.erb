@@ -1,0 +1,12 @@
+<div class="flex flex-wrap h-auto flex-wrap lg:mx-64 my-16">
+  <div class="w-full lg:w-2/5">
+    <%= render(Products::IssueCoverComponent.new(product: @product)) %>
+  </div>
+  <div class="w-full lg:w-3/5 shadow-2xl rounded-lg mx-6 lg:mx-0 p-4 md:p-12">
+    <%= render(Products::IssueCoverMobileComponent.new(product: @product)) %>
+    <%= render(Products::DetailsComponent.new(product: @product)) %>
+  </div>
+</div>
+<% if @other_products.present? %>
+  <%= render(Products::MoreProductsComponent.new(products: @other_products)) %>
+<% end %>

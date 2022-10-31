@@ -28,5 +28,5 @@ class Store < ApplicationRecord
   has_one_attached :display_image
   has_rich_text :description
 
-  validates :name, :cover_image, :display_image, :description, presence: true
+  validates :name, :description, presence: true
 end

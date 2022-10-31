@@ -6,6 +6,7 @@
 #
 #  id           :bigint           not null, primary key
 #  age_rating   :string
+#  description  :text
 #  name         :string
 #  page_count   :integer
 #  price        :float
@@ -25,12 +26,11 @@
 #
 FactoryBot.define do
   factory :product do
-    name { "MyString" }
-    price { 1.5 }
-    page_count { 1 }
-    release_date { "2022-10-26 22:00:21" }
-    age_rating { "MyString" }
-    store { nil }
-    slug { "MyString" }
+    association :store
+    name { Faker::Book.title }
+    price { 5 }
+    page_count { 30 }
+    release_date { 1.year.ago }
+    age_rating { "18+" }
   end
 end

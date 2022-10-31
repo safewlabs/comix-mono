@@ -6,6 +6,7 @@
 #
 #  id           :bigint           not null, primary key
 #  age_rating   :string
+#  description  :text
 #  name         :string
 #  page_count   :integer
 #  price        :float
@@ -30,8 +31,8 @@ class Product < ApplicationRecord
   has_many :collaborations
   has_many :creator_profiles, through: :collaborations
 
-  has_many :products_genres
-  has_many :genres, through: :products_genres
+  has_many :product_genres
+  has_many :genres, through: :product_genres
 
   has_one_attached :issue_cover
   has_one_attached :file

@@ -6,6 +6,7 @@
 #
 #  id           :bigint           not null, primary key
 #  age_rating   :string
+#  description  :text
 #  name         :string
 #  page_count   :integer
 #  price        :float

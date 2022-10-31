@@ -1,0 +1,6 @@
+<div class="mt-2 text-xl sm:hidden md:hidden lg:flex items-center justify-center items-center px-4">
+  <%= image_tag "https://tailwindui.com/img/logos/transistor-logo-gray-400.svg", loading: "lazy", alt: "…", width: "100", height: "100", class: "shadow-xl rounded-lg border-none" %>
+</div>
+<div class="mt-4 text-2xl font-bold sm:hidden md:hidden lg:flex items-center justify-center items-center px-4">
+  <%= link_to @product.store.name, store_path(@product.store) %>
+</div>

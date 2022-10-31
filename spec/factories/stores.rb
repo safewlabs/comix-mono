@@ -21,8 +21,8 @@
 #
 FactoryBot.define do
   factory :store do
-    name { "MyString" }
-    slug { "MyString" }
-    user { nil }
+    association :user
+    name { Faker::Book.publisher }
+    description { Faker::Lorem.paragraph(sentence_count: 4) }
   end
 end

@@ -22,7 +22,7 @@
 #
 FactoryBot.define do
   factory :product_genre do
-    product { nil }
-    genre { nil }
+    association :product
+    association :genre
   end
 end
