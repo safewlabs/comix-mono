@@ -8,12 +8,12 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 puts "Creating Genres"
-genres = Genre.create([{ name: "Horror" }, { name: "Sci-Fi" }, { name: "Fantasy" }, { name: "Crime" }, { name: "Kids" }])
+Genre.create([{ name: "Horror" }, { name: "Sci-Fi" }, { name: "Fantasy" }, { name: "Crime" }, { name: "Kids" }])
 puts "Creating User"
 creator_user = FactoryBot.create(:user, :creator)
-creator_profile = FactoryBot.create(:creator_profile, user: creator_user)
+FactoryBot.create(:creator_profile, user: creator_user)
 creator_user_2 = FactoryBot.create(:user, :creator)
-creator_profile_2 = FactoryBot.create(:creator_profile, user: creator_user_2)
+FactoryBot.create(:creator_profile, user: creator_user_2)
 puts "Creating Store"
 store = FactoryBot.create(:store, user: creator_user)
 puts "Create Products"
