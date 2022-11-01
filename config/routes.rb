@@ -13,6 +13,7 @@ Rails.application.routes.draw do
     resources :creator_profiles, param: :slug
     resources :stores, param: :slug
     resources :products, param: :slug
+    mount Flipper::UI.app(Flipper) => "/flipper"
   end
   root "home#index"
   get "about-us", to: "pages#about", as: "about"
