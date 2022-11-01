@@ -7,18 +7,19 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
-
+puts "Creating Genres"
+Genre.create([{ name: "Horror" }, { name: "Sci-Fi" }, { name: "Fantasy" }, { name: "Crime" }, { name: "Kids" }])
 puts "Creating User"
-creator_user = FactoryBot.create(:user, :creator_profile)
-puts "Creating Projects"
-projects = FactoryBot.create_list(:project, 3, user: creator_user)
-projects.each do |project|
-  puts "Creating creator_profiles"
-  creator_profile = FactoryBot.create(:creator_profile)
-  puts "Assign creator_profiles to projects"
-  project.creator_profiles << creator_profile
-  puts "Creating bundles"
-  bundle = FactoryBot.create(:bundle, project:)
-  puts "Creating items"
-  FactoryBot.create_list(:item, 3, bundle:)
+creator_user = FactoryBot.create(:user, :creator)
+FactoryBot.create(:creator_profile, user: creator_user)
+creator_user_2 = FactoryBot.create(:user, :creator)
+FactoryBot.create(:creator_profile, user: creator_user_2)
+puts "Creating Store"
+store = FactoryBot.create(:store, user: creator_user)
+puts "Create Products"
+FactoryBot.create_list(:product, 24, store:)
+puts "Add products to genres"
+Product.all.each do |product|
+  product.genres << Genre.all.sample(1)
+  product.creator_profiles << CreatorProfile.all.sample(1)
 end

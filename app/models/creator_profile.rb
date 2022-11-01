@@ -29,8 +29,12 @@
 #
 class CreatorProfile < ApplicationRecord
   include Sluggable
+
   belongs_to :user, optional: true
   has_one_attached :avatar
   has_many :projects_creator_profiles, dependent: :destroy
   has_many :projects, through: :projects_creator_profiles
+
+  has_many :collaborations
+  has_many :products, through: :collaborations
 end
