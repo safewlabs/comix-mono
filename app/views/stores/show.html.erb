@@ -1,0 +1,62 @@
+<section class="relative block" style="height: 500px;">
+  <div
+    class="absolute top-0 w-full h-full bg-center bg-cover"
+    style="background-image: url(<%= rails_blob_url(@store.cover_image) %>)"
+  >
+    <span
+      class="w-full h-full absolute opacity-50 bg-black"
+    ></span>
+  </div>
+</section>
+<section class="relative py-16">
+  <div class="container mx-auto px-4">
+    <div
+      class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-xl rounded-lg -mt-64"
+    >
+      <div class="px-6">
+        <div class="flex flex-wrap justify-center">
+          <div
+            class="w-full lg:w-3/12 px-4 lg:order-2 flex justify-center"
+          >
+            <%= image_tag @store.display_image, loading: "lazy", alt: "…", width: "120", height: "120", class: "shadow-xl rounded-lg h-auto align-middle border-none absolute -m-16" %>
+          </div>
+          <div
+            class="w-full lg:w-4/12 px-4 lg:order-3 lg:text-right lg:self-center"
+          >
+          </div>
+          <div class="w-full lg:w-4/12 px-4 lg:order-1"></div>
+        </div>
+        <div class="text-center mt-40">
+          <h3
+            class="text-4xl font-semibold leading-normal mb-2 text-gray-800 mb-2"
+          >
+            <%= @store.name %>
+          </h3>
+          <div
+            class="text-sm leading-normal mt-0 mb-2 text-gray-500 font-bold uppercase"
+          >
+          </div>
+        </div>
+        <div class="mt-10 py-10 border-t border-gray-300 text-center">
+          <div class="flex flex-wrap text-justify justify-center">
+            <div class="w-full lg:w-9/12 px-4">
+              <p class="mb-4 text-lg leading-relaxed text-gray-800">
+                <%= @store.description %>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="text-center text-3xl pb-4">
+          Our work
+        </div>
+        <div class="py-10 border-t text-center">
+          <div class="flex flex-wrap justify-center">
+            <% @store.products.each do |product| %>
+              <%= render 'projects/product_card', product: product %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
