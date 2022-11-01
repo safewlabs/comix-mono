@@ -11,7 +11,7 @@
 #  updated_at :datetime         not null
 #
 class Genre < ApplicationRecord
-    validates :name, uniqueness: true
-    has_many :product_genres
-    has_many :products, through: :product_genres
+  validates :name, uniqueness: true
+  has_many :product_genres
+  has_many :products, through: :product_genres
 end

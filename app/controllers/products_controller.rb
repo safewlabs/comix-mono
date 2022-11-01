@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class ProductsController < ApplicationController
   def show
     @product = Product.find_by(slug: params[:slug])

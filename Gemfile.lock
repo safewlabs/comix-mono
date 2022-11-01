@@ -113,6 +113,7 @@ GEM
     bindex (0.8.1)
     bootsnap (1.13.0)
       msgpack (~> 1.2)
+    brow (0.4.1)
     builder (3.2.4)
     capybara (3.37.1)
       addressable
@@ -144,6 +145,13 @@ GEM
       factory_bot (~> 6.2.0)
       railties (>= 5.0.0)
     ffi (1.15.5)
+    flipper (0.25.2)
+    flipper-active_record (0.25.2)
+      activerecord (>= 4.2, < 8)
+      flipper (~> 0.25.2)
+    flipper-cloud (0.25.2)
+      brow (~> 0.4.1)
+      flipper (~> 0.25.2)
     globalid (1.0.0)
       activesupport (>= 5.0)
     hashie (5.0.0)
@@ -382,6 +390,8 @@ DEPENDENCIES
   devise
   factory_bot_rails
   faker!
+  flipper-active_record
+  flipper-cloud
   image_processing (~> 1.2)
   importmap-rails
   jbuilder
