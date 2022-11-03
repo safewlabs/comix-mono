@@ -144,7 +144,7 @@ GEM
       factory_bot (~> 6.2.0)
       railties (>= 5.0.0)
     ffi (1.15.5)
-    flipper (0.25.2)
+    flipper (0.25.3)
     flipper-active_record (0.25.2)
       activerecord (>= 4.2, < 8)
       flipper (~> 0.25.2)
