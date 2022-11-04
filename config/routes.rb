@@ -30,7 +30,7 @@ Rails.application.routes.draw do
   resources :stores, param: :slug, only: [:show]
   resources :products, param: :slug, only: [:show]
   resources :stores, param: :slug, only: [:show]
-  get 'stores/show'
+  get "stores/show"
 
   namespace :dashboard do
     root "home#index"
