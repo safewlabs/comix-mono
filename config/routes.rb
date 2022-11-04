@@ -14,6 +14,7 @@ Rails.application.routes.draw do
     resources :stores, param: :slug
     resources :products, param: :slug
     mount Flipper::UI.app(Flipper) => "/flipper"
+    mount Sidekiq::Web => "/sidekiq"
   end
   root "home#index"
   get "about-us", to: "pages#about", as: "about"
@@ -23,12 +24,14 @@ Rails.application.routes.draw do
     sign_up: "signup",
   }
 
-  mount Sidekiq::Web => "/sidekiq"
   resources :projects, param: :slug
   resources :posts, param: :slug, only: [:index, :show]
   resources :profiles, param: :slug, only: [:show]
   resources :stores, param: :slug, only: [:show]
   resources :products, param: :slug, only: [:show]
+  resources :stores, param: :slug, only: [:show]
+  get "stores/show"
+
   namespace :dashboard do
     root "home#index"
     resources :projects, param: :slug
