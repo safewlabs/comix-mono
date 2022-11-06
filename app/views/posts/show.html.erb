@@ -10,7 +10,7 @@
           <%= @post.summary.html_safe %>
         </div>
       </div>
-      <div class="mt-6 prose prose-indigo prose-lg text-black mx-auto">
+      <div class="mt-6 prose prose-purple prose-lg text-black mx-auto">
         <%= @post.body.html_safe %><br/>
         <% if @post.youtube_video_id.present? %>
           <%= render(VideoComponent.new(video_url: @post.youtube_video_id)) %>

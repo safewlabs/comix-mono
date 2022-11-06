@@ -2,7 +2,7 @@
   <% if @product.issue_cover.present? %>
     <%= image_tag @product.issue_cover, class: "shadow-2xl hidden max-h-bigtile rounded-lg lg:block" %>
   <% else %>
-    <img src="https://img.icons8.com/dotty/400/000000/full-image.png" class="shadow-2xl hidden rounded-lg lg:block" />
+    <%= image_tag "https://res.cloudinary.com/drg9hguhu/image/upload/v1667569457/comix/78_tage_auf_der_stra%C3%9Fe_des_hasses_000_cover.jpg", class: "shadow-2xl hidden rounded-lg lg:block" %>
   <% end %>
 </div>
 <div class="mt-2 text-4xl sm:hidden md:hidden lg:flex items-center justify-center">
