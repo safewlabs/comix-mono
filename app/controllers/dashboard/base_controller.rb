@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Dashboard::BaseController < ApplicationController
-  layout 'dashboard'
+  layout "dashboard"
 end
