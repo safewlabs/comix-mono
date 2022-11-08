@@ -30,6 +30,8 @@ Rails.application.routes.draw do
   resources :stores, param: :slug, only: [:show]
   resources :products, param: :slug, only: [:show]
   resources :stores, param: :slug, only: [:show]
+  resources :shop, only: [:index]
+
   get "stores/show"
 
   namespace :dashboard do
