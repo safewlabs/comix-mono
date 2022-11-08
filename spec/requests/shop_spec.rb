@@ -3,9 +3,9 @@
 require "rails_helper"
 
 RSpec.describe "Shops", type: :request do
-  describe "GET /show" do
+  describe "GET /shop" do
     it "returns http success" do
-      get "/shop/show"
+      get "/shop"
       expect(response).to have_http_status(:success)
     end
   end
