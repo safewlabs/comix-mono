@@ -9,7 +9,7 @@
         <div class="flex flex-wrap justify-center">
         <% @products.each do |product| %>
           <% cache product do %>
-            <%= render 'projects/product_card', product: product %>
+            <%= render(Products::CardComponent.new(product: product)) %>
           <% end %>
         <% end %>
         </div>

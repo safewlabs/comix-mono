@@ -8,13 +8,6 @@
 <div class="mt-2 text-4xl sm:hidden md:hidden lg:flex items-center justify-center">
   <span class="mx-2 p-2">&#36;<%= @product.price %></span>
 </div>
-<div class="mt-2 text-xl sm:hidden md:hidden lg:flex items-center justify-center">
-  <%= button_to root_path,
-      class: "p-4 leading-none border rounded text-cx-lavender-blush bg-cx-purple hover:border-transparent hover:text-cx-purple hover:bg-cx-lavender-blush hover:border-cx-purple",
-      method: :post do %>
-      Add to cart
-  <% end %> 
-</div>
 <div class="mt-4 text-xl sm:hidden md:hidden lg:flex items-center justify-center px-8">
   <%= render(Products::CreditsComponent.new(product: @product)) %>
 </div>
