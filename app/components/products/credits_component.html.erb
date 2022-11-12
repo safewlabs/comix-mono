@@ -11,7 +11,7 @@
             <div class="mt-2 text-xl sm:hidden md:hidden lg:flex items-start justify-around px-4">
                 <ul class="text-center">
                     <% @product.collaborations.each do |collaboration| %>
-                        <li><span class="font-bold"><%= "Artist" %>:</span> <%= collaboration.creator_profile&.name %></li>
+                        <li><span class="font-bold"><%= collaboration.collaboration_type&.humanize %>:</span> <%= collaboration.creator_profile&.name %></li>
                     <% end %>
                 </ul>
             </div>
