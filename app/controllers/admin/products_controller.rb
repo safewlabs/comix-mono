@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Admin::ProductsController < ApplicationController
   before_action :set_product, only: [:edit, :update, :show]
   before_action :stores_grenre_creators, only: [:new, :edit]
