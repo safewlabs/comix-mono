@@ -18,6 +18,7 @@ Rails.application.routes.draw do
   end
   root "home#index"
   get "about-us", to: "pages#about", as: "about"
+  get "/comics", to: "products#show", as: "comics"
   devise_for :users, path: "", path_names: {
     sign_in: "login",
     sign_out: "logout",
@@ -37,6 +38,8 @@ Rails.application.routes.draw do
   namespace :dashboard do
     root "home#index"
     resources :projects, param: :slug
+    resources :stores, param: :slug
+    resources :products, param: :slug
   end
   resources :backings
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html

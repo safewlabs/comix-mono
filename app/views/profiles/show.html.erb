@@ -103,10 +103,13 @@
 
               <div class="sm:col-span-2">
                 <dt class="text-lg font-bold ">Products</dt>
-                <dd class="flex flex-row">
-                  <%= render "projects/product_card" %>
-                  <%= render "projects/product_card" %>
-                </dd>
+                <div class="container">
+                  <div class="flex flex-wrap justify-center">
+                    <% @creator_profile.collaborations.each do |collaboration| %>
+                      <%= render(Products::CardComponent.new(product: collaboration.product)) %>
+                    <% end %>
+                  </div>
+                </div>
               </div>
             </dl>
           </div>

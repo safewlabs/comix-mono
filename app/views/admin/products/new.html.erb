@@ -1,0 +1,34 @@
+<div class="pt-6 px-4 sm:px-6 lg:px-8">
+  <div class="sm:flex sm:items-center">
+    <div class="sm:flex-auto">
+      <h1 class="text-xl font-semibold text-gray-900">New Store</h1>
+    </div>
+  </div>
+  <div class="mt-8 flex flex-col">
+    <div class="-my-2 -mx-4 overflow-x-auto sm:-mx-6 lg:-mx-8">
+      <div class="inline-block min-w-full py-2 align-middle md:px-6 lg:px-8">
+        <%= form_with model: [:admin, @product] do |form| %>
+          <%= form.label :name %><br />
+          <%= form.text_field :name %><br />
+          <%= form.label :description %><br />
+          <%= form.rich_text_area :description %><br />
+          <%= form.label :price %><br />
+          <%= form.number_field :price %><br />
+          <%= form.label :age_rating %><br />
+          <%= form.text_field :age_rating %><br />
+          <%= form.label :page_count %><br />
+          <%= form.number_field :page_count %><br />
+          <%= form.label :release_date %><br />
+          <%= form.date_field :release_date %><br />
+          <%= form.label :issue_cover %><br />
+          <%= form.file_field :issue_cover %><br />
+          <%= form.select :store_id, @stores.map { |store| [store.name, store.id]}, {}, class: "form-control" %><br/>
+          <%= form.collection_check_boxes :genre_ids, @genres, :id, :name, include_hidden: false %><br/>
+          <%= form.collection_check_boxes :creator_profiles, @creator_profiles, :id, :name, include_hidden: false %><br/>
+          <br/>
+          <%= form.submit class: "inline-flex items-center justify-center rounded-md border border-transparent bg-cx-purple px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-800 focus:ring-offset-2 sm:w-auto" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

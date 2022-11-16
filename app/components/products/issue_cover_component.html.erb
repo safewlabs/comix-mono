@@ -1,19 +1,12 @@
-<div class="flex items-center justify-center">
+<div class="flex items-center justify-center px-12">
   <% if @product.issue_cover.present? %>
     <%= image_tag @product.issue_cover, class: "shadow-2xl hidden max-h-bigtile rounded-lg lg:block" %>
   <% else %>
-    <img src="https://img.icons8.com/dotty/400/000000/full-image.png" class="shadow-2xl hidden rounded-lg lg:block" />
+    <%= image_tag "https://res.cloudinary.com/drg9hguhu/image/upload/v1667569457/comix/78_tage_auf_der_stra%C3%9Fe_des_hasses_000_cover.jpg", class: "shadow-2xl hidden rounded-lg lg:block" %>
   <% end %>
 </div>
 <div class="mt-2 text-4xl sm:hidden md:hidden lg:flex items-center justify-center">
   <span class="mx-2 p-2">&#36;<%= @product.price %></span>
-</div>
-<div class="mt-2 text-xl sm:hidden md:hidden lg:flex items-center justify-center">
-  <%= button_to root_path,
-      class: "p-4 leading-none border rounded text-cx-lavender-blush bg-cx-purple hover:border-transparent hover:text-cx-purple hover:bg-cx-lavender-blush hover:border-cx-purple",
-      method: :post do %>
-      Add to cart
-  <% end %> 
 </div>
 <div class="mt-4 text-xl sm:hidden md:hidden lg:flex items-center justify-center px-8">
   <%= render(Products::CreditsComponent.new(product: @product)) %>

@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class Dashboard::ProjectsController < ApplicationController
+class Dashboard::ProjectsController < Dashboard::BaseController
   before_action :set_project, only: [:show, :edit, :update, :delete]
 
   def index

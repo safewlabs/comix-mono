@@ -5,7 +5,7 @@
   <div class="py-10 border-t text-center">
     <div class="flex flex-wrap justify-center">
       <% @products.each do |product| %>
-        <%= render 'projects/product_card', product: product %>
+        <%= render(Products::CardComponent.new(product: product)) %>
       <% end %>
     </div>
   </div>
