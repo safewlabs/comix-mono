@@ -1,10 +1,10 @@
 <div class="pt-6 px-4 sm:px-6 lg:px-8">
   <div class="sm:flex sm:items-center">
     <div class="sm:flex-auto">
-      <h1 class="text-xl font-semibold text-gray-900">Stores</h1>
+      <h1 class="text-xl font-semibold text-gray-900">Products</h1>
     </div>
     <div class="mt-4 sm:mt-0 sm:ml-16 sm:flex-none">
-      <%= link_to "Add Store", new_admin_store_path, class: "inline-flex items-center justify-center rounded-md border border-transparent bg-cx-purple px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-800 focus:ring-offset-2 sm:w-auto" %>
+      <%= link_to "Add Post", new_admin_product_path, class: "inline-flex items-center justify-center rounded-md border border-transparent bg-cx-purple px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-800 focus:ring-offset-2 sm:w-auto" %>
     </div>
   </div>
   <div class="mt-8 flex flex-col">
@@ -16,22 +16,22 @@
               <tr>
                 <th scope="col" class="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 sm:pl-6">Name</th>
                 <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Description</th>
-                <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Owner</th>
+                <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Store</th>
                 <th scope="col" class="relative py-3.5 pl-3 pr-4 sm:pr-6">
                   <span class="sr-only">Edit</span>
                 </th>
               </tr>
             </thead>
             <tbody class="divide-y divide-gray-200 bg-white">
-              <% @stores.each do |store| %>
+              <% @products.each do |product| %>
                 <tr>
                     <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-6">
-                      <%= store.name %>
+                      <%= product.name %>
                     </td>
-                    <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500"><%= store.description %></td>
-                    <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500"><%= store.user.email %></td>
+                    <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500"><%= product.description %></td>
+                    <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500"><%= product.store.name %></td>
                     <td>
-                      <%= link_to "Edit", edit_admin_store_path(store), class: "text-cx-purple hover:text-cx-purple" %>
+                      <%= link_to "Edit", edit_admin_product_path(product), class: "text-cx-purple hover:text-cx-purple" %>
                     </td>
                 </tr>
               <% end %>
