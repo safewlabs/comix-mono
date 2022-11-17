@@ -4,7 +4,7 @@ class Admin::CreatorProfilesController < ApplicationController
   before_action :set_profile, only: [:edit, :update, :show]
 
   def index
-    @profiles = CreatorProfile.all
+    @pagy, @profiles = pagy(CreatorProfile.all)
   end
 
   def show

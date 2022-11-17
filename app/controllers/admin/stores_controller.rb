@@ -4,7 +4,7 @@ class Admin::StoresController < ApplicationController
   before_action :set_store, only: [:edit, :update, :show]
 
   def index
-    @stores = Store.all
+    @pagy, @stores = pagy(Store.all)
   end
 
   def show
