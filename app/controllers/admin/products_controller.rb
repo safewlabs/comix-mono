@@ -5,7 +5,7 @@ class Admin::ProductsController < ApplicationController
   before_action :stores_grenre_creators, only: [:new, :edit]
 
   def index
-    @products = Product.all
+    @pagy, @products = pagy(Product.all)
   end
 
   def show
