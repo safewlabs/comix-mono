@@ -15,7 +15,7 @@
                     &#36; <%= @product.price %>
                 </p>
             </header>
-            <footer class="flex items-stretch justify-between leading-none p-2 md:p-4">
+            <footer class="flex items-start justify-start leading-none p-2 md:p-4">
                 <%= link_to store_path(@product.store), class: "flex items-center no-underline hover:underline text-black" do %>
                     <% if @product.store.display_image.present? %>
                         <%= image_tag @product.store.display_image.variant(resize_to_limit: [32, 32]), class: "block rounded-lg" %>
