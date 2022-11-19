@@ -14,6 +14,9 @@ module.exports = {
       body: ['Poppins', 'sans-serif']
     },
     extend: {
+      spacing: {
+        '120': '30rem',
+      },
       colors: {
         cx: {
           "grain-yellow": "#f7c759",
