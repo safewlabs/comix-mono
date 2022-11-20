@@ -7,7 +7,7 @@ class Products::CardComponent < ViewComponent::Base
   end
 
   def card_width
-    return "lg:w-1/3" if @number_of_products.nil?
-    "lg:w-1/4"
+    return "w-1/3" if @number_of_products.nil?
+    "w-1/4"
   end
 end
