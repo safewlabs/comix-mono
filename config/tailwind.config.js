@@ -16,6 +16,7 @@ module.exports = {
     extend: {
       spacing: {
         '120': '30rem',
+        '128': '32rem'
       },
       colors: {
         cx: {

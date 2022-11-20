@@ -49,8 +49,8 @@
         <div class="text-center text-3xl pb-4">
           Our work
         </div>
-        <div class="py-10 border-t text-center">
-          <div class="flex flex-wrap justify-center">
+        <div class="py-10 border-t text-center flex items-center justify-center">
+          <div class="flex flex-wrap items-center justify-center lg:w-9/12">
             <% @store.products.each do |product| %>
               <%= render(Products::CardComponent.new(product: product)) %>
             <% end %>
