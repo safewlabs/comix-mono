@@ -5,11 +5,11 @@
   <div class="relative max-w-lg mx-auto divide-y-2 divide-gray-200 lg:max-w-7xl">
     <div>
       <h2 class="text-3xl tracking-tight font-extrabold text-gray-900 sm:text-4xl">Latest Comics</h2>
-    <div class="py-10 border-t text-center">
+    <div class="py-32 border-t text-center">
         <div class="flex flex-wrap justify-center">
         <% @products.each do |product| %>
           <% cache product do %>
-            <%= render(Products::CardComponent.new(product: product)) %>
+            <%= render(Products::CardComponent.new(product: product, number_of_products: 4)) %>
           <% end %>
         <% end %>
         </div>
