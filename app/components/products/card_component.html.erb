@@ -4,7 +4,7 @@
             <% if @product.issue_cover.present? %>
                 <%= image_tag @product.issue_cover, class: "block h-120 w-full" %>
             <% else %>
-                <%= image_tag "https://res.cloudinary.com/drg9hguhu/image/upload/v1667569457/comix/78_tage_auf_der_stra%C3%9Fe_des_hasses_000_cover.jpg", class: "block max-h-tile w-full" %>
+                <%= image_tag "https://res.cloudinary.com/drg9hguhu/image/upload/v1667569457/comix/78_tage_auf_der_stra%C3%9Fe_des_hasses_000_cover.jpg", class: "block h-120 w-full" %>
             <% end %>
 
             <header class="flex items-center justify-between leading-tight p-2 md:p-4">
