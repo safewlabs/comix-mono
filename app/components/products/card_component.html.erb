@@ -1,10 +1,10 @@
 <%= link_to product_path(@product) do %>
-    <div class="my-1 px-1 lg:my-2 lg:px-1 <%= card_width %> list-none cursor-pointer">
+    <div class="my-1 px-1 lg:my-2 lg:px-1 <%= card_width %> md:w-1/2 sm:w-full list-none cursor-pointer">
         <article class="overflow-hidden rounded-lg border hover:shadow-lg">
             <% if @product.issue_cover.present? %>
                 <%= image_tag @product.issue_cover, class: "block h-120 w-full" %>
             <% else %>
-                <%= image_tag "https://res.cloudinary.com/drg9hguhu/image/upload/v1667569457/comix/78_tage_auf_der_stra%C3%9Fe_des_hasses_000_cover.jpg", class: "block h-120 w-full" %>
+                <%= image_tag "https://res.cloudinary.com/drg9hguhu/image/upload/v1667569457/comix/78_tage_auf_der_stra%C3%9Fe_des_hasses_000_cover.jpg", class: "block max-h-tile w-full" %>
             <% end %>
 
             <header class="flex items-center justify-between leading-tight p-2 md:p-4">
