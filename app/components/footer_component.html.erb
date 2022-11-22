@@ -1,37 +1,113 @@
-<nav class="flex flex-col text-justify items-start justify-center flex-wrap bg-cx-lavender-blush p-6 border-b text-md">
-    <div class="grid grid-flow-col auto-cols-max gap-16 text-left py-8 px-36">
-      <ul>
-        <li class="font-bold">Discover</li>
-        <li class="underline hover:text-cx-purple"><%= link_to "Shop Bundles", shop_index_path %></li>
-        <li class="underline hover:text-cx-purple"><%= link_to "For Creators", for_creators_path %></li>
-      </ul>
+<footer aria-label="Site Footer" class="bg-cx-lavender-blush">
+  <div class="mx-auto max-w-screen-xl px-4 pt-16 pb-8 sm:px-6 lg:px-8">
+    <%= render(NewsletterComponent.new()) %>
+    <div class="mt-16 grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-32">
+      <div class="mx-auto max-w-sm lg:max-w-none">
+        <p class="mt-4 text-center text-gray-500 lg:text-left lg:text-lg">
+          Comix is a portfolio management, marketplace, crowdfunding and social place on the internet for Indie comic creators. Our mission
+          is to become a thriving ecosystem for both the creators and fans of Indie comics.
+        </p>
 
-      <ul>
-        <li class="font-bold">Social</li>
-        <li class="underline hover:text-cx-purple"><%= link_to "Twitter", "https://twitter.com/comix_app", target: "blank" %></li>
-        <li class="underline hover:text-cx-purple"><%= link_to "YouTube", "https://youtube.com/@comix_app", target: "blank" %></li>
-        <li class="underline hover:text-cx-purple"><%= link_to "Newsletter", "https://www.getrevue.co/profile/comix_app", target: "blank" %></li>
-      </ul>
+        <div class="mt-6 flex justify-center gap-4 lg:justify-start">
+          <a
+            class="text-gray-700 transition hover:text-gray-700/75"
+            href="https://twitter.com/comix_app"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <span class="sr-only"> Twitter </span>
+            <ion-icon name="logo-twitter" class="h-6 w-6"></ion-icon>
+          </a>
 
-      <ul>
-        <li class="font-bold">Company</li>
-        <li class="underline hover:text-cx-purple"><%= link_to "About Us", about_path %></li>
-        <li class="underline hover:text-cx-purple"><%= link_to "Posts", posts_path%></li>
-        <li class="underline hover:text-cx-purple"><%= mail_to "contact@comix.one", "Email" %></li>
-      </ul>
+          <a
+            class="text-gray-700 transition hover:text-gray-700/75"
+            href="https://youtube.com/@comix_app"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <span class="sr-only"> YouTube </span>
+            <ion-icon name="logo-youtube" class="h-6 w-6"></ion-icon>
+          </a>
 
-      <ul>
-        <li class="font-bold">Legal</li>
-        <li class="underline hover:text-cx-purple"><%= link_to "Privacy Policy", "https://winter-professor-81d.notion.site/Privacy-Policy-1ec85eb827a940b39654db9d3e4847e1", target: "blank" %></li>
-        <li class="underline hover:text-cx-purple"><%= link_to "Terms of Service", "https://winter-professor-81d.notion.site/Terms-of-Service-7a40080fe1684689890e287566f0c732"%></li>
-      </ul>
+          <a
+            class="text-gray-700 transition hover:text-gray-700/75"
+            href="https://instagram.com/comix_app"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <span class="sr-only"> Instagram </span>
+            <ion-icon name="logo-instagram" class="h-6 w-6"></ion-icon>
+          </a>
+
+          <a
+            class="text-gray-700 transition hover:text-gray-700/75"
+            href="https://www.getrevue.co/profile/comix_app"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <span class="sr-only"> Newsletter </span>
+            <ion-icon name="newspaper-outline" class="h-6 w-6"></ion-icon>
+          </a>
+
+          <a
+            class="text-gray-700 transition hover:text-gray-700/75"
+            href="https://github.com/safewlabs/comix"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <span class="sr-only"> GitHub </span>
+            <ion-icon name="logo-github" class="h-6 w-6"></ion-icon>
+          </a>
+        </div>
+      </div>
+
+      <div
+        class="grid grid-cols-1 gap-8 text-center lg:grid-cols-3 lg:text-left"
+      >
+        <div>
+          <strong class="text-gray-900 font-bold"> Discover </strong>
+
+          <nav
+            aria-label="Footer Services Nav"
+            class="mt-6 flex flex-col space-y-1"
+          >
+            <%= link_to "Shop Bundles", shop_index_path, class: "text-gray-700 transition underline hover:text-cx-purple" %>
+            <%= link_to "For Creators", for_creators_path, class: "text-gray-700 transition underline hover:text-cx-purple" %>
+          </nav>
+        </div>
+        <div>
+          <strong class="text-gray-900 font-bold"> About </strong>
+
+          <nav
+            aria-label="Footer About Nav"
+            class="mt-6 flex flex-col space-y-1"
+          >
+          <%= link_to "About Us", about_path, class: "text-gray-700 transition underline hover:text-cx-purple" %>
+          <%= link_to "Posts", posts_path, class: "text-gray-700 transition underline hover:text-cx-purple" %>
+          <%= mail_to "contact@comix.one", "Email", class: "text-gray-700 transition underline hover:text-cx-purple" %>
+          </nav>
+        </div>
+
+        <div>
+          <strong class="font-bold text-gray-900"> Support </strong>
+
+          <nav
+            aria-label="Footer Support Nav"
+            class="mt-6 flex flex-col space-y-1"
+          >
+            <%= link_to "Privacy Policy", "https://winter-professor-81d.notion.site/Privacy-Policy-1ec85eb827a940b39654db9d3e4847e1", target: "blank", class: "text-gray-700 transition underline hover:text-cx-purple" %>
+            <%= link_to "Terms of Service", "https://winter-professor-81d.notion.site/Terms-of-Service-7a40080fe1684689890e287566f0c732", target: "blank", class: "text-gray-700 transition underline hover:text-cx-purple" %>
+          </nav>
+        </div>
+      </div>
     </div>
-    <div class="px-36 py-2">
-      ABN 53 870 537 406
+
+    <div class="mt-16 border-t border-gray-100 pt-8">
+      <p class="text-center text-xs leading-relaxed text-gray-500">
+        © Comix 2022. All rights reserved. ABN 53 870 537 406
+        <br />
+        We’d like to acknowledge the Traditional Owners of the land, the Cabrogal Clan of the Darug Nation and pay our respects to Elders past and present. We extend that respect to Aboriginal and Torres Strait Islander peoples. It is also acknowledged that the land was accessed by peoples of the Tharawal and Gandangara Nations.
+      </p>
     </div>
-    <div class="px-36">We’d like to acknowledge the Traditional Owners of the land,
-        the Cabrogal Clan of the Darug Nation and pay our respects to Elders past and present.
-        We extend that respect to Aboriginal and Torres Strait Islander peoples.
-        It is also acknowledged that the land was accessed by peoples of the Tharawal and Gandangara Nations. 
-    </div>
-</nav>
+  </div>
+</footer>
