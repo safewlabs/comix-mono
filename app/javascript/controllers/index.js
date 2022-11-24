@@ -9,6 +9,7 @@ import "vanilla-nested"
 import { eagerLoadControllersFrom } from "@hotwired/stimulus-loading"
 ActiveStorage.start()
 eagerLoadControllersFrom("controllers", application)
+application.register('menu', MenuController)
 application.register('tabs', Tabs)
 application.register('toggle', Toggle)
 application.register('dropdown', Dropdown)
