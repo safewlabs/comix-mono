@@ -50,11 +50,13 @@
           Our work
         </div>
         <div class="py-10 border-t text-center flex items-center justify-center">
-          <div class="flex flex-wrap items-center justify-center lg:w-9/12">
+          <ul class="grid gap-4 mt-4 sm:grid-cols-2 lg:grid-cols-4">
             <% @store.products.each do |product| %>
-              <%= render(Products::CardComponent.new(product: product)) %>
+              <% cache product do %>
+                <%= render(Products::CardComponent.new(product: product, number_of_products: 4)) %>
+              <% end %>
             <% end %>
-          </div>
+          </ul>
         </div>
       </div>
     </div>

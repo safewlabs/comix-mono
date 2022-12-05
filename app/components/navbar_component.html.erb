@@ -1,31 +1,61 @@
-<nav class="flex items-center justify-between flex-wrap bg-white p-6 border-b text-lg">
-  <div class="flex items-center justify-center flex-no-shrink text-cx-beaver mr-6">
-    <%= link_to root_path, class: "flex flex-row items-center" do %>
-        <%= render(LogoComponent.new(classes: "w-16")) %>
-        <div class="text-3xl bold font-black self-center">COMI<i>X</i></div>
-    <% end %>
-  </div>
-  <div class="block lg:hidden">
-    <button class="navbar-burger flex items-center px-3 py-2 border rounded text-cx-beaver border-lavender-blush hover:text-cx-beaver hover:border-white"
-            aria-label="menu" aria-expanded="false" data-target="toggleNav">
-      <svg class="fill-current h-3 w-3 sm:w-10 sm:h-10" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-    </button>
-  </div>
-  <div id="toggleNav" class="navbar-menu w-full ns:block lg:flex lg:items-center lg:w-auto sm:hidden md:hidden">
-    <div class="lg:flex-end flex flex-row items-center">
-      <%= link_to 'Shop Bundles',
-                  shop_index_path,
-                  class: "block mt-4 lg:inline-block lg:mt-0 text-cx-beaver font-black hover:text-cx-purple mr-4 navbar-link" %>
-      <%= render(CartIconComponent.new()) %>
-      <%= link_to 'For Creators',
+<header aria-label="Site Header" class="bg-white">
+  <div class="mx-auto max-w-screen-xl p-4 lg:px-8">
+    <div class="flex h-16 items-center justify-between">
+      <div class="flex-1 md:flex md:items-center md:gap-12">
+        <%= link_to root_path, class: "flex flex-row items-center" do %>
+            <%= render(LogoComponent.new(classes: "w-16")) %>
+            <div class="text-3xl bold font-black self-center">COMI<i>X</i></div>
+        <% end %>
+      </div>
+
+      <div class="md:flex md:items-center md:gap-12">
+        <nav data-target="topNav" aria-label="Site Nav" class="navbar-menu hidden md:block">
+          <ul class="flex items-center gap-6 text-lg">
+            <li class="flex flex-row">
+              <%= link_to 'Shop Bundles',
+              shop_index_path,
+              class: "text-cx-beaver font-black hover:text-cx-purple font-bold" %>
+            </li>
+              <%= link_to 'For Creators',
                   for_creators_path,
-                  class: "block mt-4 lg:inline-block lg:mt-0 text-cx-beaver font-black hover:text-cx-purple mr-4 navbar-link" %>
-      <%= link_to 'Posts',
-                  posts_path,
-                  class: "block mt-4 lg:inline-block lg:mt-0 text-cx-beaver font-black hover:text-cx-purple mr-4 navbar-link" %>
+                  class: "text-cx-beaver font-black hover:text-cx-purple font-bold" %>
+            </li>
+
+            <li>
+              <%= link_to 'Posts',
+                posts_path,
+                class: "text-cx-beaver font-black hover:text-cx-purple font-bold" %>
+            </li>
+
+            <li>
+              <%= render(CartIconComponent.new()) %>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="flex items-center gap-4">
+          <div class="block md:hidden">
+            <button
+              class="navbar-burger rounded bg-gray-100 p-2 text-gray-600 transition hover:text-gray-600/75"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-</nav>
+</header>
