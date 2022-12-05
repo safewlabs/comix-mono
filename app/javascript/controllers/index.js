@@ -4,6 +4,7 @@ import { application } from "controllers/application"
 import { Tabs, Toggle, Dropdown } from "tailwindcss-stimulus-components"
 import * as ActiveStorage from "@rails/activestorage"
 import "vanilla-nested"
+import MenuController from "./menu_controller"
 
 // Eager load all controllers defined in the import map under controllers/**/*_controller
 import { eagerLoadControllersFrom } from "@hotwired/stimulus-loading"

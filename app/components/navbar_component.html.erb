@@ -9,7 +9,7 @@
       </div>
 
       <div class="md:flex md:items-center md:gap-12">
-        <nav aria-label="Site Nav" class="hidden md:block">
+        <nav data-target="topNav" aria-label="Site Nav" class="navbar-menu hidden md:block">
           <ul class="flex items-center gap-6 text-lg">
             <li class="flex flex-row">
               <%= link_to 'Shop Bundles',
@@ -36,7 +36,9 @@
         <div class="flex items-center gap-4">
           <div class="block md:hidden">
             <button
-              class="rounded bg-gray-100 p-2 text-gray-600 transition hover:text-gray-600/75"
+              data-controller="menu"
+              data-action="menu#click"
+              class="navbar-burger rounded bg-gray-100 p-2 text-gray-600 transition hover:text-gray-600/75"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
