@@ -8,5 +8,4 @@ class PageTitleComponent < ViewComponent::Base
   def full_title
     @title + " | Comix - Discover Indie comics, Crowdfund and Buy"
   end
-
 end
