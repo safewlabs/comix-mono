@@ -7,13 +7,11 @@
   <div class="w-full text-center text-2xl">
     <span class="mx-2 p-2">&#36;<%= @product.price %></span>
   </div>
-  <div data-controller='toggle' class="block lg:hidden w-full text-center">
-    <div data-action="click->toggle#toggle touch->toggle#toggle"
-         class="p-4 leading-none cursor-pointer border rounded text-cx-lavender-blush bg-cx-purple hover:border-transparent hover:text-cx-purple hover:bg-cx-lavender-blush hover:border-cx-purple">
-      Credits
-    </div>
-    <div data-toggle-target='toggleable' class="m-4 hidden">
-      <%= render(Products::CreditsComponent.new(product: @product)) %>
-    </div>
+  <div class="lg:hidden md:block sm:block w-full text-center">
+    <%= button_to root_path,
+        class: "p-4 leading-none border rounded text-cx-lavender-blush bg-cx-purple hover:border-transparent hover:text-cx-purple hover:bg-cx-lavender-blush hover:border-cx-purple",
+        method: :post do %>
+        Credits
+    <% end %>
   </div>
-
+</div>
