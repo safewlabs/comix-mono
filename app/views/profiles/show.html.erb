@@ -1,6 +1,4 @@
-<% content_for :title do %>
-  <%= @creator_profile.name %> | Comix - Discover Indie comics, Crowdfund and Buy
-<% end %>
+<%= render(PageTitleComponent.new(title: @creator_profile.name)) %>
 
 <%= cache @creator_profile do %>
   <div class="h-full flex">

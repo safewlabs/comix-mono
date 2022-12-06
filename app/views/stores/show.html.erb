@@ -1,6 +1,4 @@
-<% content_for :title do %>
-  <%= @store.name %> | Comix - Discover Indie comics, Crowdfund and Buy
-<% end %>
+<%= render(PageTitleComponent.new(title: @store.name)) %>
 
 <section class="relative block" style="height: 500px;">
   <div

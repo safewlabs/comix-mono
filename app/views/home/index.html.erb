@@ -1,7 +1,4 @@
-<% content_for :title do %>
-  Home | Comix - Discover Indie comics, Crowdfund and Buy
-<% end %>
-
+<%= render(PageTitleComponent.new(title: "Home")) %>
 <%= render(Marketing::HeroComponent.new(user: current_user)) %>
 
 <section>

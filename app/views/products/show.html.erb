@@ -1,3 +1,5 @@
+<%= render(PageTitleComponent.new(title: @product.name)) %>
+
 <% cache @product do %>
   <div class="flex flex-wrap h-auto lg:mx-64 my-16">
     <div class="w-full hidden lg:block lg:w-2/5">
