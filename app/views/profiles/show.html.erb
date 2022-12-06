@@ -1,3 +1,7 @@
+<% content_for :title do %>
+  <%= @creator_profile.name %> | Comix - Discover Indie comics, Crowdfund and Buy
+<% end %>
+
 <%= cache @creator_profile do %>
   <div class="h-full flex">
     <div class="flex flex-col min-w-0 flex-1 overflow-hidden">

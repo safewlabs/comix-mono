@@ -1,3 +1,7 @@
+<% content_for :title do %>
+  <%= @post.title %> | Comix - Discover Indie comics, Crowdfund and Buy
+<% end %>
+
 <% cache @post do %>
   <div class="flex flex-col items-center py-16 bg-white overflow-hidden">
     <div class="relative px-4 sm:px-6 lg:px-8">
