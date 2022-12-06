@@ -1,3 +1,5 @@
+<%= render(PageTitleComponent.new(title: @post.title)) %>
+
 <% cache @post do %>
   <div class="flex flex-col items-center py-16 bg-white overflow-hidden">
     <div class="relative px-4 sm:px-6 lg:px-8">

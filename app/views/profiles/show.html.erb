@@ -1,3 +1,5 @@
+<%= render(PageTitleComponent.new(title: @creator_profile.name)) %>
+
 <%= cache @creator_profile do %>
   <div class="h-full flex">
     <div class="flex flex-col min-w-0 flex-1 overflow-hidden">
