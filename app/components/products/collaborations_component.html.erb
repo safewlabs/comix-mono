@@ -1,4 +1,4 @@
-<div class="mt-2 text-xl sm:hidden md:hidden lg:flex items-start justify-around px-4">
+<div class="mt-4 text-xl sm:hidden md:hidden lg:flex items-start justify-around px-4">
     <% @product.collaborations.each do |collaboration| %>
         <%= link_to profile_path(collaboration.creator_profile),
                     class: "hover:text-cx-purple flex flex-col text-center items-center justify-center" do %>

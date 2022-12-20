@@ -1,35 +1,30 @@
 <div class="w-full relative">
     <div class="m-1 bg-white rounded shadow-2xl">
-        <div class="p-8">
-            <%= render(Products::StoreDetailsComponent.new(product: @product)) %>
-            <div class="flex flex-col p-6">
-                <div class="flex flex-col lg:grid lg:grid-cols-3 lg:gap-4 text-center">
-                    <div>
-                        <div class="font-bold">
-                            Genres
-                        </div>
-                        <ul>
-                            <% @product.genres.each do |genre| %>
-                                <li>
-                                    <%= genre.name %>
-                                </li>
-                                <% end %>
-                        </ul>
-                    </div>
-
-                    <div class="flex flex-col">
-                        <span class="font-bold">Age Rating</span>
-                        <%= @product.age_rating %>
-                    </div>
-
-                    <div class="flex flex-col">
-                        <span class="font-bold">Page Count</span>
-                        <%= @product.page_count %>
-                    </div>
+        <%= render(Products::StoreDetailsComponent.new(product: @product)) %>
+        <div class="mt-4 flex flex-col lg:grid lg:grid-cols-3 lg:gap-4 text-center">
+            <div>
+                <div class="font-bold">
+                    Genres
                 </div>
+                <ul>
+                    <% @product.genres.each do |genre| %>
+                        <li>
+                            <%= genre.name %>
+                        </li>
+                        <% end %>
+                </ul>
             </div>
 
-            <%= render(Products::CollaborationsComponent.new(product: @product)) %>
+            <div class="flex flex-col">
+                <span class="font-bold">Age Rating</span>
+                <%= @product.age_rating %>
+            </div>
 
+            <div class="flex flex-col">
+                <span class="font-bold">Page Count</span>
+                <%= @product.page_count %>
+            </div>
         </div>
+        <%= render(Products::CollaborationsComponent.new(product: @product)) %>
     </div>
+</div>
