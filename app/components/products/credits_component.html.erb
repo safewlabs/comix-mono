@@ -1,7 +1,7 @@
 <div class="w-full relative">
     <div class="m-1 bg-white rounded shadow-2xl">
         <%= render(Products::StoreDetailsComponent.new(product: @product)) %>
-        <div class="mt-4 flex flex-col lg:grid lg:grid-cols-3 lg:gap-4 text-center">
+        <div class="py-4 flex flex-col lg:grid lg:grid-cols-3 lg:gap-4 text-center">
             <div>
                 <div class="font-bold">
                     Genres
@@ -25,6 +25,8 @@
                 <%= @product.page_count %>
             </div>
         </div>
-        <%= render(Products::CollaborationsComponent.new(product: @product)) %>
+        <div class="py-4">
+            <%= render(Products::CollaborationsComponent.new(product: @product)) %>
+        </div>
     </div>
 </div>
