@@ -5,9 +5,6 @@
     <%= image_tag "https://res.cloudinary.com/drg9hguhu/image/upload/v1667569457/comix/78_tage_auf_der_stra%C3%9Fe_des_hasses_000_cover.jpg", class: "shadow-2xl hidden rounded-lg lg:block" %>
   <% end %>
 </div>
-<div class="mt-2 text-4xl sm:hidden md:hidden lg:flex items-center justify-center">
+<div class="mt-2 text-4xl hidden lg:flex items-center justify-center">
   <span class="mx-2 p-2">&#36;<%= @product.price %></span>
-</div>
-<div class="mt-4 text-xl sm:hidden md:hidden lg:flex items-center justify-center px-8">
-  <%= render(Products::CreditsComponent.new(product: @product)) %>
 </div>
