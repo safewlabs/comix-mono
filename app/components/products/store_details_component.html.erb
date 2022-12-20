@@ -1,8 +1,8 @@
-<%= link_to store_path(@product.store) do %>
-  <div class="mt-2 text-xl sm:hidden md:hidden lg:flex items-center justify-center items-center px-4">
+<%= link_to store_path(@product.store), class: "flex flex-col items-center justify-center" do %>
+  <div class="mt-2">
     <%= image_tag @product.store.display_image, loading: "lazy", alt: "…", width: "100", height: "100", class: "shadow-xl rounded-lg border-none" %>
   </div>
-  <div class="mt-4 text-2xl hover:text-cx-purple font-bold sm:hidden md:hidden lg:flex items-center justify-center items-center px-4">
+  <div class="mt-4 text-2xl hover:text-cx-purple font-bold">
     <%= @product.store.name %>
   </div>
 <% end %>

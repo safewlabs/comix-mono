@@ -1,17 +1,10 @@
 <div class="block lg:hidden">
   <% if @product.issue_cover.present? %>
-    <div class="rounded-lg shadow-xl mx-auto -mt-16 h-48 w-48 bg-cover bg-center" style="background-image: url(<%= url_for(@product.issue_cover) %>)"></div>
+    <%= image_tag @product.issue_cover, class: "rounded-lg shadow-xl mx-auto -mt-16 h-48 w-48 bg-cover bg-center" %>
   <% else %>
-    <div class="rounded-lg shadow-xl mx-auto -mt-16 h-48 w-48 bg-cover bg-center" style="background-image: url('https://img.icons8.com/dotty/70/000000/full-image.png')"></div>
+    <%= image_tag "https://img.icons8.com/dotty/70/000000/full-image.png", class: "rounded-lg shadow-xl mx-auto -mt-16 h-48 w-48 bg-cover bg-center" %>
   <% end %>
-  <div class="w-full text-center text-2xl">
+  <div class="w-full text-center text-2xl pt-4">
     <span class="mx-2 p-2">&#36;<%= @product.price %></span>
-  </div>
-  <div class="lg:hidden md:block sm:block w-full text-center">
-    <%= button_to root_path,
-        class: "p-4 leading-none border rounded text-cx-lavender-blush bg-cx-purple hover:border-transparent hover:text-cx-purple hover:bg-cx-lavender-blush hover:border-cx-purple",
-        method: :post do %>
-        Credits
-    <% end %>
   </div>
 </div>

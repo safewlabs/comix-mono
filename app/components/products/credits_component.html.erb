@@ -1,47 +1,35 @@
-<div class="max-h-screen w-full max-w-lg relative">
+<div class="w-full relative">
     <div class="m-1 bg-white rounded shadow-2xl">
         <div class="p-8">
-            <div class="mt-2 text-xl font-bold sm:hidden md:hidden lg:flex items-start justify-around px-4">
-                Publisher
-            </div>
             <%= render(Products::StoreDetailsComponent.new(product: @product)) %>
-            <div class="mt-2 text-xl font-bold sm:hidden md:hidden lg:flex items-start justify-around px-4 pt-4">
-                Credits
-            </div>
-            <div class="mt-2 text-xl sm:hidden md:hidden lg:flex items-start justify-around px-4">
-                <ul class="text-center">
-                    <% @product.collaborations.each do |collaboration| %>
-                      <%= link_to profile_path(collaboration.creator_profile), class: "hover:text-cx-purple" do %>
-                        <li><span class="font-bold"><%= collaboration.collaboration_type&.humanize %>:</span> <%= collaboration.creator_profile&.name %></li>
-                      <% end %>
-                    <% end %>
-                </ul>
-            </div>
-            <div class="mt-2 text-xl font-bold sm:hidden md:hidden lg:flex items-start justify-around px-4">
-                Genres
-            </div>
-            <div class="mt-2 text-xl sm:hidden md:hidden lg:flex items-start justify-around px-4">
-                <ul class="text-center">
-                    <% @product.genres.each do |genre| %>
-                        <li><%= genre.name %></li>
-                    <% end %>
-                </ul>
-            </div>
-            <div class="mt-2 text-xl font-bold sm:hidden md:hidden lg:flex items-start justify-around px-4">
-                Book Info
-            </div>
-            <div class="mt-2 text-xl sm:hidden md:hidden lg:flex items-start justify-around px-4">
-                <ul class="text-center">
-                    <li>
-                        <span class="font-bold">Age Rating:</span>
+            <div class="flex flex-col p-6">
+                <div class="flex flex-col lg:grid lg:grid-cols-3 lg:gap-4 text-center">
+                    <div>
+                        <div class="font-bold">
+                            Genres
+                        </div>
+                        <ul>
+                            <% @product.genres.each do |genre| %>
+                                <li>
+                                    <%= genre.name %>
+                                </li>
+                                <% end %>
+                        </ul>
+                    </div>
+
+                    <div class="flex flex-col">
+                        <span class="font-bold">Age Rating</span>
                         <%= @product.age_rating %>
-                    </li>
-                    <li>
-                        <span class="font-bold">Page Count:</span>
+                    </div>
+
+                    <div class="flex flex-col">
+                        <span class="font-bold">Page Count</span>
                         <%= @product.page_count %>
-                    </li>
-                </ul>
+                    </div>
+                </div>
             </div>
+
+            <%= render(Products::CollaborationsComponent.new(product: @product)) %>
+
         </div>
     </div>
-</div>

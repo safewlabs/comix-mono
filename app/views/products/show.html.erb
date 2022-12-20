@@ -9,6 +9,9 @@
       <%= render(Products::IssueCoverMobileComponent.new(product: @product)) %>
       <%= render(Products::DetailsComponent.new(product: @product)) %>
     </div>
+    <div class="mt-4 w-full text-xl sm:hidden md:hidden lg:flex items-center justify-center px-6 lg:px-0">
+      <%= render(Products::CreditsComponent.new(product: @product)) %>
+    </div>
   </div>
 <% end %>
 <% cache @other_products do %>
