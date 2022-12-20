@@ -9,6 +9,8 @@
 #   Character.create(name: "Luke", movie: movies.first)
 puts "Creating Genres"
 Genre.create([{ name: "Horror" }, { name: "Sci-Fi" }, { name: "Fantasy" }, { name: "Crime" }, { name: "Kids" }])
+puts "Creating Admin User"
+admin_user = FactoryBot.create(:admin_user)
 puts "Creating User"
 creator_user = FactoryBot.create(:user, :creator)
 FactoryBot.create(:creator_profile, user: creator_user)

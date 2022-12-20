@@ -52,6 +52,6 @@ class Admin::CreatorProfilesController < ApplicationController
     end
 
     def profile_params
-      params.require(:creator_profile).permit(:name, :bio)
+      params.require(:creator_profile).permit(:name, :avatar, :profile_cover, :bio)
     end
 end

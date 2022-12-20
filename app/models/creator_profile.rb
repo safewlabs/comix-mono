@@ -32,6 +32,7 @@ class CreatorProfile < ApplicationRecord
 
   belongs_to :user, optional: true
   has_one_attached :avatar
+  has_one_attached :profile_cover
   has_many :projects_creator_profiles, dependent: :destroy
   has_many :projects, through: :projects_creator_profiles
 

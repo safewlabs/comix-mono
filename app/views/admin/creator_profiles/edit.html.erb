@@ -10,6 +10,10 @@
         <%= form_with model: @profile, url: admin_creator_profile_path(@profile), method: :patch, local: true do |form| %>
           <%= form.label :name %><br />
           <%= form.text_field :name %><br />
+          <%= form.label :avatar %><br />
+          <%= form.file_field :avatar %><br />
+          <%= form.label :profile_cover %><br />
+          <%= form.file_field :profile_cover %><br />
           <%= form.label :bio %><br />
           <%= form.rich_text_area :bio %><br />
           <%= form.submit class: "inline-flex items-center justify-center rounded-md border border-transparent bg-cx-purple px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-800 focus:ring-offset-2 sm:w-auto" %>
