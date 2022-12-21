@@ -21,7 +21,7 @@ module.exports = {
       colors: {
         cx: {
           "grain-yellow": "#f7c759",
-          beaver: "#000000",
+          beaver: "#9f8170",
           crayola: "#ffb728",
           "lavender-blush": "#ffe8f2",
           pumpkin: "#ff683a",
