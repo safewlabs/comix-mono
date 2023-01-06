@@ -2,6 +2,7 @@
 
 class Admin::CreatorProfilesController < ApplicationController
   before_action :set_profile, only: [:edit, :update, :show]
+  before_action :creator_users
 
   def index
     @pagy, @profiles = pagy(CreatorProfile.all)
@@ -51,7 +52,11 @@ class Admin::CreatorProfilesController < ApplicationController
       @profile = CreatorProfile.find_by(slug: params[:slug])
     end
 
+    def creator_users
+      @creator_users = User.with_role(:creator)
+    end
+
     def profile_params
-      params.require(:creator_profile).permit(:name, :avatar, :profile_cover, :bio)
+      params.require(:creator_profile).permit(:name, :avatar, :profile_cover, :bio, :user_id)
     end
 end
