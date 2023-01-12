@@ -1,0 +1,72 @@
+<div>
+    <%= form.label :name, class: "block text-sm font-medium text-gray-700" %>
+    <div class="mt-1">
+        <%= form.text_field :name, class: "block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm", placeholder: "John Doe" %>
+    </div>
+</div>
+
+<div>
+    <%= form.label :website, class: "block text-sm font-medium text-gray-700" %>
+    <div class="mt-1">
+        <%= form.text_field :website,
+            class: "block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm",
+            placeholder: "https://website.com" %>
+    </div>
+</div>
+
+<div>
+    <%= form.label :twitter, class: "block text-sm font-medium text-gray-700" %>
+    <div class="mt-1">
+        <%= form.text_field :twitter,
+            class: "block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm",
+            placeholder: "comix_app" %>
+    </div>
+</div>
+
+<div>
+    <%= form.label :instagram, class: "block text-sm font-medium text-gray-700" %>
+    <div class="mt-1">
+        <%= form.text_field :instagram,
+        class: "block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm",
+        placeholder: "comix_app" %>
+    </div>
+</div>
+
+<div>
+    <%= form.label :facebook, class: "block text-sm font-medium text-gray-700" %>
+    <div class="mt-1">
+        <%= form.text_field :facebook,
+        class: "block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm",
+        placeholder: "comix_app" %>
+    </div>
+</div>
+
+<div>
+    <%= form.label :tiktok, class: "block text-sm font-medium text-gray-700" %>
+    <div class="mt-1">
+        <%= form.text_field :tiktok,
+        class: "block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm",
+        placeholder: "comix_app" %>
+    </div>
+</div>
+
+<div>
+    <%= form.label :avatar, class: "block text-sm font-medium text-gray-700" %>
+    <div class="mt-1">
+        <%= form.file_field :avatar %>
+    </div>
+</div>
+
+<div>
+    <%= form.label :profile_cover, class: "block text-sm font-medium text-gray-700" %>
+    <div class="mt-1">
+        <%= form.file_field :profile_cover %>
+    </div>
+</div>
+
+<div>
+    <%= form.label :bio, class: "block text-sm font-medium text-gray-700" %>
+    <div class="mt-1">
+        <%= form.rich_text_area :bio, class: "block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" %>
+    </div>
+</div>

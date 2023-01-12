@@ -1,0 +1,26 @@
+<ul class="flex flex-col w-full">
+    <li class="py-4 w-full text-center hover:bg-cx-pumpkin hover:text-white">
+        <%= link_to dashboard_root_path do %>
+            <ion-icon name="home-outline"></ion-icon>
+            Dashboard
+        <% end %>
+    </li>
+    <li class="py-4 w-full text-center hover:bg-cx-pumpkin hover:text-white">
+        <%= link_to dashboard_profiles_path do %>
+            <ion-icon name="person-outline"></ion-icon>
+            Manage Profile
+        <% end %>
+    </li>
+    <li class="py-4 w-full text-center hover:bg-cx-pumpkin hover:text-white">
+        <%= link_to dashboard_stores_path do %>
+            <ion-icon name="storefront-outline"></ion-icon>
+            Manage Stores
+        <% end %>
+    </li>
+    <li class="py-4 w-full text-center hover:bg-cx-pumpkin hover:text-white">
+        <%= link_to dashboard_products_path do %>
+            <ion-icon name="book-outline"></ion-icon>
+            Manage Products
+        <% end %>
+    </li>
+</ul>

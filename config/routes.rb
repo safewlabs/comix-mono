@@ -38,6 +38,7 @@ Rails.application.routes.draw do
 
   namespace :dashboard do
     root "home#index"
+    resources :profiles, param: :slug
     resources :projects, param: :slug
     resources :stores, param: :slug
     resources :products, param: :slug
