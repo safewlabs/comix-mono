@@ -1,0 +1,29 @@
+<div>
+    <%= form.label :name, class: "block text-sm font-medium text-gray-700" %>
+    <div class="mt-1">
+        <%= form.text_field :name, class: "block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm", placeholder: "Acme Comics Inc" %>
+    </div>
+</div>
+
+<div>
+    <%= form.label :display_image, class: "block text-sm font-medium text-gray-700" %>
+    <div class="mt-1">
+        <%= form.file_field :display_image %>
+    </div>
+</div>
+
+<div>
+    <%= form.label :cover_image, class: "block text-sm font-medium text-gray-700" %>
+    <div class="mt-1">
+        <%= form.file_field :cover_image %>
+    </div>
+</div>
+
+<div>
+    <%= form.label :description, class: "block text-sm font-medium text-gray-700" %>
+    <div class="mt-1">
+        <%= form.rich_text_area :description, class: "block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" %>
+    </div>
+</div>
+
+<% form.hidden_field :user_id, value: current_user.id %>

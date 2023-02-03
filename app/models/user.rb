@@ -40,6 +40,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable,
          :confirmable
   has_many :projects
+  has_one :store
   has_one :creator_profile
   has_one_attached :avatar
   has_many :backings
