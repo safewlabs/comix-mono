@@ -28,7 +28,7 @@
 
   <body>
     <main>
-      <%= render(NavbarComponent.new()) %>
+      <%= render(NavbarComponent.new(user: current_user)) %>
       <%= yield %>
       <%= render(FooterComponent.new()) %>
     </main>

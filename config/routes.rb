@@ -19,7 +19,7 @@ Rails.application.routes.draw do
   root "home#index"
   get "about", to: "pages#about", as: "about"
   get "for-creators", to: "pages#for_creators", as: "for_creators"
-  get "comics", to: "products#show", as: "comics"
+  get "comics", to: "products#index", as: "comics"
   devise_for :users, path: "", path_names: {
     sign_in: "login",
     sign_out: "logout",

@@ -5,4 +5,9 @@ class ProductsController < ApplicationController
     @product = Product.find_by(slug: params[:slug])
     @other_products = Product.where.not(id: @product.id).limit(4).order("RANDOM()")
   end
+
+  def index
+    @products = Product.
+    @pagy, @products = pagy(Product.order(created_at: :desc))
+  end
 end
