@@ -7,7 +7,7 @@ class ProductsController < ApplicationController
   end
 
   def index
-    @products = Product.
+    @products = Product.all
     @pagy, @products = pagy(Product.order(created_at: :desc))
   end
 end
