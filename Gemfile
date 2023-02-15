@@ -52,6 +52,7 @@ gem "pagy"
 gem "flipper"
 gem "flipper-active_record"
 gem "flipper-ui"
+gem "meta-tags"
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem "tzinfo-data", platforms: %i[mingw mswin x64_mingw jruby]
