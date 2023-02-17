@@ -13,7 +13,7 @@
           <%= form.label :description %><br />
           <%= form.rich_text_area :description %><br />
           <%= form.label :price %><br />
-          <%= form.number_field :price %><br />
+          <%= form.number_field :price, step: 0.01 %><br />
           <%= form.label :age_rating %><br />
           <%= form.text_field :age_rating %><br />
           <%= form.label :page_count %><br />

@@ -9,7 +9,7 @@
 #  description  :text
 #  name         :string
 #  page_count   :integer
-#  price        :float
+#  price        :decimal(5, 2)
 #  release_date :datetime
 #  slug         :string
 #  created_at   :datetime         not null
