@@ -24,8 +24,8 @@ module ApplicationHelper
       canonical: request.original_url,
       noindex: !Rails.env.production?,
       icon: [
-        { href: image_url('favicon.ico') },
-        { href: image_url('icon.jpg'), rel: 'apple-touch-icon', sizes: '180x180', type: 'image/jpg' },
+        { href: image_url('favicon/favicon.ico') },
+        { href: image_url('favicon/apple-touch-icon.png'), rel: 'apple-touch-icon', sizes: '180x180', type: 'image/jpg' },
       ],
       og: {
         site_name: 'comix.one',
@@ -33,7 +33,7 @@ module ApplicationHelper
         description: 'The most popular movie website in the world', 
         type: 'website',
         url: request.original_url,
-        image: image_url('login-page.png')
+        image: image_url('logo.png')
       }
     }
   end
