@@ -14,7 +14,7 @@ class StoresController < ApplicationController
                     }
                   },
                   og: {
-                    title: :title
+                    title: :title,
                     site_name: :site,
                     image: @store.display_image
                   }
