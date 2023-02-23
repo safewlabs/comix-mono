@@ -14,6 +14,7 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;900&display=swap"
       rel="stylesheet"
     />
+    <%= display_meta_tags(default_meta_tags) %>
     <% if Rails.env.production? %>
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-0WCWWSXZB0"></script>
       <script>

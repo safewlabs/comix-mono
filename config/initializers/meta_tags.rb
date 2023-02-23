@@ -11,7 +11,7 @@ MetaTags.configure do |config|
 
   # Maximum length of the page description. Default is 300.
   # Set to nil or 0 to remove limits.
-  # config.description_limit = 300
+  config.description_limit = 200
 
   # Maximum length of the keywords meta tag. Default is 255.
   # config.keywords_limit = 255
