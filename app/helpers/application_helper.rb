@@ -15,25 +15,25 @@ module ApplicationHelper
 
   def default_meta_tags
     {
-      site: 'comix.one',
-      title: 'Comix',
+      site: "comix.one",
+      title: "Comix",
       reverse: true,
-      separator: '|',
-      description: 'Discover Indie comics, Crowdfund and Buy',
-      keywords: 'indie comics, marketplace, crowdfunding',
+      separator: "|",
+      description: "Discover Indie comics, Crowdfund and Buy",
+      keywords: "indie comics, marketplace, crowdfunding",
       canonical: request.original_url,
       noindex: !Rails.env.production?,
       icon: [
-        { href: image_url('favicon/favicon.ico') },
-        { href: image_url('favicon/apple-touch-icon.png'), rel: 'apple-touch-icon', sizes: '180x180', type: 'image/jpg' },
+        { href: image_url("favicon/favicon.ico") },
+        { href: image_url("favicon/apple-touch-icon.png"), rel: "apple-touch-icon", sizes: "180x180", type: "image/jpg" },
       ],
       og: {
-        site_name: 'comix.one',
-        title: 'Comix',
-        description: 'The most popular movie website in the world', 
-        type: 'website',
+        site_name: "comix.one",
+        title: "Comix",
+        description: "The most popular movie website in the world",
+        type: "website",
         url: request.original_url,
-        image: image_url('logo.png')
+        image: image_url("logo.png")
       }
     }
   end

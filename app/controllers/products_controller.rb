@@ -6,7 +6,7 @@ class ProductsController < ApplicationController
     @other_products = Product.where.not(id: @product.id).limit(4).order("RANDOM()")
     set_meta_tags title: @product.name,
           description: @product.description,
-          keywords: 'Comics, Indie comics',
+          keywords: "Comics, Indie comics",
           twitter: {
             card: "photo",
             image: {

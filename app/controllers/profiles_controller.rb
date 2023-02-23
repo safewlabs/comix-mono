@@ -5,7 +5,7 @@ class ProfilesController < ApplicationController
     @creator_profile = CreatorProfile.find_by(slug: params[:slug])
     set_meta_tags title: @creator_profile.name,
                   description: @creator_profile.bio,
-                  keywords: 'Comics, Indie comics, Indie creator',
+                  keywords: "Comics, Indie comics, Indie creator",
                   twitter: {
                     card: "photo",
                     image: {
