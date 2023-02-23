@@ -4,7 +4,7 @@ class StoresController < ApplicationController
   def show
     @store = Store.find_by(slug: params[:slug])
     set_meta_tags title: @store.name,
-                  keywords: 'Comics, Indie comics',
+                  keywords: "Comics, Indie comics",
                   twitter: {
                     card: "photo",
                     image: {
