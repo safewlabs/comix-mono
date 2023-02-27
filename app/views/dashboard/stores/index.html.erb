@@ -7,19 +7,19 @@
         <%= @store.name %>
     </div>
 
-    #   <div class="flex flex-col">
-    #     <label class="font-bold">Cover Image</label>
-    #     <%= render(CreatorProfiles::CoverImageComponent.new(creator_profile: @store)) %>
-    #   </div>
+      <div class="flex flex-col">
+        <label class="font-bold">Cover Image</label>
+        <%= render(Stores::CoverImageComponent.new(store: @store)) %>
+      </div>
 
-    #   <div class="flex flex-col">
-    #     <label class="font-bold">Avatar</label>
-    #     <%= render(CreatorProfiles::AvatarComponent.new(creator_profile: @store)) %>
-    #   </div>
+      <div class="flex flex-col">
+        <label class="font-bold">Display Image (logo)</label>
+        <%= render(Stores::DisplayImageComponent.new(store: @store)) %>
+      </div>
 
     <div class="flex flex-col lg:flex-row">
         <label class="pr-4 font-bold">Description</label>
-        <%= @store.description.html_safe %>
+        <%= @store.description %>
     </div>
   </div>
 <% else %>
