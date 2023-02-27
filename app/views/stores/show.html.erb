@@ -1,30 +1,13 @@
 <%= render(PageTitleComponent.new(title: @store.name)) %>
 
-<section class="relative block" style="height: 500px;">
-  <div
-    class="absolute top-0 w-full h-full bg-center bg-cover"
-    style="background-image: url(<%= rails_blob_url(@store.cover_image) %>)"
-  >
-  </div>
-</section>
+<%= render(Stores::CoverImageComponent.new(store: @store)) %>
 <section class="relative py-16">
   <div class="container mx-auto px-4">
     <div
       class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-xl rounded-lg -mt-64"
     >
       <div class="px-6">
-        <div class="flex flex-wrap justify-center">
-          <div
-            class="w-full lg:w-3/12 px-4 lg:order-2 flex justify-center"
-          >
-            <%= image_tag @store.display_image, loading: "lazy", alt: "…", width: "120", height: "120", class: "shadow-xl rounded-lg h-auto align-middle border-none absolute -m-16" %>
-          </div>
-          <div
-            class="w-full lg:w-4/12 px-4 lg:order-3 lg:text-right lg:self-center"
-          >
-          </div>
-          <div class="w-full lg:w-4/12 px-4 lg:order-1"></div>
-        </div>
+        <%= render(Stores::DisplayImageComponent.new(store: @store)) %>
         <div class="text-center mt-40">
           <h3
             class="text-4xl font-semibold leading-normal mb-2 text-gray-800 mb-2"
