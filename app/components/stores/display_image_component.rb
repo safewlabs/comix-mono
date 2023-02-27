@@ -4,5 +4,4 @@ class Stores::DisplayImageComponent < ViewComponent::Base
   def initialize(store:)
     @store = store
   end
-
 end
