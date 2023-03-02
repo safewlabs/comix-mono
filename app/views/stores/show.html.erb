@@ -1,12 +1,5 @@
 <%= render(PageTitleComponent.new(title: @store.name)) %>
-
-<section class="relative block" style="height: 500px;">
-  <div
-    class="absolute top-0 w-full h-full bg-center bg-cover"
-    style="background-image: url(<%= rails_blob_url(@store.cover_image) %>)"
-  >
-  </div>
-</section>
+<%= render(Stores::CoverImageComponent.new(store: @store)) %>
 <section class="relative py-16">
   <div class="container mx-auto px-4">
     <div
