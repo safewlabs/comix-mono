@@ -8,6 +8,12 @@
     </div>
 
     <div class="flex flex-col">
+      <label class="font-bold">Display Image</label>
+      <%= render(Stores::DisplayImageComponent.new(store: @store)) %>
+    </div>
+    <br/><br />
+
+    <div class="flex flex-col">
       <label class="font-bold">Banner Image</label>
       <%= render(Stores::CoverImageComponent.new(store: @store)) %>
     </div>
