@@ -360,7 +360,7 @@ GEM
       railties (>= 6.0.0)
     thor (1.2.1)
     timeout (0.3.2)
-    turbo-rails (1.3.3)
+    turbo-rails (1.4.0)
       actionpack (>= 6.0.0)
       activejob (>= 6.0.0)
       railties (>= 6.0.0)
@@ -429,7 +429,7 @@ DEPENDENCIES
   stimulus-rails
   stripe
   tailwindcss-rails
-  turbo-rails (~> 1.3.0)
+  turbo-rails (~> 1.4.0)
   tzinfo-data
   vanilla_nested!
   view_component
