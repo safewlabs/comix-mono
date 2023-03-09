@@ -4,7 +4,7 @@ class Dashboard::ProductComponent < ViewComponent::Base
   def initialize(product:)
     @product = product
   end
-  
+
   def product_image
     if @product.issue_cover.present?
       image_tag(@product.issue_cover,
