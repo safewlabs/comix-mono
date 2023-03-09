@@ -1,0 +1,11 @@
+<div class="w-1/4">
+    <%= product_image %>
+</div>
+
+<div class="w-1/4 text-xl px-4">
+    <%= @product.name %>
+</div>
+
+<div class="w-full text-xl px-4">
+    <%= @product.description.html_safe %>
+</div>

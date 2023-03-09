@@ -1,1 +1,6 @@
-Products
+<h1 class="text-2xl font-bold pb-4">Products</h1>
+<% @products.each do |product| %>
+  <div class="flex flex-row py-4">
+    <%= render(Dashboard::ProductComponent.new(product: product)) %>
+  </div>
+<% end %>

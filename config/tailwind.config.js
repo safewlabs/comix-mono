@@ -18,6 +18,9 @@ module.exports = {
         '120': '30rem',
         '128': '32rem'
       },
+      minHeight: {
+        "80": "80vh"
+      },
       colors: {
         cx: {
           "grain-yellow": "#f7c759",
