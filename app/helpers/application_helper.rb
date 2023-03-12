@@ -30,7 +30,7 @@ module ApplicationHelper
       og: {
         site_name: "comix.one",
         title: "Comix",
-        description: "The most popular movie website in the world",
+        description: "Discover Indie comics, Crowdfund and Buy",
         type: "website",
         url: request.original_url,
         image: image_url("logo.png")

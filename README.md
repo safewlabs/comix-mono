@@ -1,42 +1,132 @@
-## [Comix](https://comix.life) - A marketplace for independent comics
+## <img src="app/assets/images/logo.png" alt="Comix Logo" width="50" /> Comix
 
 [![CI](https://github.com/safewlabs/comix-mono/actions/workflows/ci.yml/badge.svg?branch=trunk)](https://github.com/safewlabs/comix-mono/actions/workflows/ci.yml)
 
-### Stack
+- [Comix](#comix------)
+  * [Stack](#stack)
+  * [Setup](#setup)
+    + [Prerequisites](#prerequisites)
+      - [M1 notes](#m1-notes)
+    + [Secrets](#secrets)
+      - [Adding a new secret](#adding-a-new-secret)
+    + [Install steps](#install-steps)
+    + [Testing](#testing)
+    + [Linting](#linting)
+    + [Pre-Commit hook](#pre-commit-hook)
 
-* Ruby 3.0.1
-* Rails 7
-* PostgreSQL
-* Hotwired
-* Tailwind CSS
-* RSpec, Capybara, FactoryBot, Faker
-* Sidekiq & Redis
+## Stack
 
-### Install instructions
+- Ruby
+- Rails 7
+- Importmaps
+- PostgreSQL
+- Redis
+- Tailwind
+- Hotwired
+- Railway
+- Sidekiq
+- Digitalocean spaces
 
-Install all the pre-requisites and clone the repo. cd into the app directory.
+## Wiki
 
-```shell
-$ bundle install
-$ rails db:create db:migrate db:seed
+Please head over [here](https://www.notion.so/Engineering-Wiki-fa21ba7fd9224a57bbbbb0d2ff64411a?pvs=4) for more engineering related information.
+
+## Setup
+
+### Prerequisites
+
+In order to get the local environment up and running on your machine, you would require the following to be installed :
+
+- Ruby 3.1.1. It is recommended to use a version manager like [rbenv](https://github.com/rbenv/rbenv) or [rvm](https://rvm.io/) in order to manage your rubies.
+- PostgreSQL
+- Redis
+- Vips - `brew install vips`
+
+#### M1 notes
+If installing ruby on M1 architecture, you may have some issues when compiling the Ruby binaries. Try installing it through rbenv using this command:
+
+```
+RUBY_CFLAGS="-Wno-error=implicit-function-declaration"  arch -x86_64 rbenv install 3.0.2
 ```
 
-Then start the server -
+### Secrets
 
-```shell
+We manage api keys and secrets via [Rails credentails](https://edgeguides.rubyonrails.org/security.html#environmental-security). This means credentials are all committed to repo via a credentials file. Our setup is the following -
+
+- Global credentails file - config/credentials.yml.emc. You need a `config/master.key` in order to decrypt the secrets run your development server.
+
+#### Adding a new secret
+
+For adding a secret to development and test
+
+```
+$ EDITOR="vim" bin/rails credentials:edit
+```
+
+For Staging and production
+
+```
+$ EDITOR="vim" bin/rails credentials:edit --environment staging
+```
+
+To view the existing credentials you could do something like -
+
+```
+$ bin/rails credentials:show
+$ bin/rails credentials:show --environment staging
+```
+
+### Install steps
+
+Once the repo is cloned, you need to run the following commands to install all the dependencies and create the database.
+
+```
+$ cp .env.example .env
+$ bundle install
+$ yarn install
+$ rails db:create db:migrate
+$ rails db:seed
+```
+
+The easiest way to start the server is to install the foreman gem and run the server using your procfile.
+
+```
+$ gem install foreman
 $ foreman start -f Procfile.dev
 ```
 
+Now navigate to [localhost:3000](localhost:3000) to see the home page of the app. Sidekiq is available at [localhost:3000/admin/sidekiq](localhost:3000/admin/sidekiq)
+
 ### Testing
 
-We use RSpec as our testing framework. Run the tests using the following command :
+We use [rspec](https://rspec.info/) for testing. In order to run your test suite locally simply run from your app directory -
 
 ```
-bundle exec rspec
+$ bundle exec rspec
 ```
 
-### Pre-commit hooks
+### Linting
+
+For linting our ruby code, we use rubocop. It is recommended to run an autocorrect to keep your
+code clean and conform with the rubocop rules. You can do so by -
 
 ```
-gem install overcommit
+$ bundle exec rubocop -A
 ```
+
+### Error logging & Monitoring
+
+We use [Sentry](https://sentry.io) to log production errors.
+
+### Pre-Commit hook
+
+We use [overcommit](https://nicedoc.io/sds/overcommit) to run our pre-commit hooks. Install this by -
+
+```
+$ gem install overcommit
+
+# Inside project's root directory
+$ overcommit --install
+```
+
+You're all set 🙌 !!
