@@ -1,4 +1,4 @@
-# ![Comix logo](./app/assets/images/logo.png | width=32)
+<img src="app/assets/images/logo.png" alt="Comix Logo" width="50" />
 
 [![CI](https://github.com/safewlabs/comix-mono/actions/workflows/ci.yml/badge.svg?branch=trunk)](https://github.com/safewlabs/comix-mono/actions/workflows/ci.yml)
 
