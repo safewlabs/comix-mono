@@ -29,7 +29,7 @@
 
   <body class="h-full">
     <main>
-      <%= render(NavbarComponent.new()) %>
+      <%= render(NavbarComponent.new(user: current_user)) %>
       <div class="flex flex-row min-h-80">
         <div class="hidden lg:flex lg:w-1/5 bg-gray-100">
           <%= render(Dashboard::SidebarNavComponent.new()) %>

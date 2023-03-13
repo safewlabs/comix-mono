@@ -28,12 +28,12 @@ class Product < ApplicationRecord
   include Sluggable
 
   belongs_to :store
-  has_many :collaborations
+  has_many :collaborations, dependent: :destroy
   has_many :creator_profiles, through: :collaborations
 
-  has_many :product_genres
+  has_many :product_genres, dependent: :destroy
   has_many :genres, through: :product_genres
 
-  has_one_attached :issue_cover
-  has_one_attached :file
+  has_one_attached :issue_cover, dependent: :destroy
+  has_one_attached :file, dependent: :destroy
 end
