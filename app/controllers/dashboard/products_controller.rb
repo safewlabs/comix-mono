@@ -65,7 +65,6 @@ class Dashboard::ProductsController < Dashboard::BaseController
     end
 
     def stores_grenre_creators
-      @stores = Store.all
       @genres = Genre.all
       @creator_profiles = CreatorProfile.all
     end
