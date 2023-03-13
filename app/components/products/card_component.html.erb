@@ -1,5 +1,5 @@
 <li>
-  <%= link_to product_path(@product), class: "block overflow-hidden group" do %>
+  <%= link_to product_path(@product), class: "flex overflow-hidden group" do %>
     <%= product_image %>
     <div class="relative pt-3 bg-white">
         <h3 class="text-lg text-gray-700 group-hover:underline group-hover:underline-offset-4">
@@ -7,9 +7,8 @@
         </h3>
 
         <%= link_to store_path(@product.store), class: "mt-2 flex flex-row items-center" do %>
-            <%= store_image %>
             <span class="sr-only"> Store name </span>
-            <span class="tracking-wider text-gray-900 pl-4 hover:underline hover:underline-offset-4">
+            <span class="tracking-wider text-gray-900 hover:underline hover:underline-offset-4">
                 <%= @product.store.name.truncate(15, omission: '..') %>
             </span>
         <% end %>
