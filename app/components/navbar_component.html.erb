@@ -15,16 +15,21 @@
               <%= link_to 'Browse Comics',
               comics_path,
               class: "text-black font-black hover:text-cx-purple font-bold" %>
-            </li>
-              <%= link_to 'For Creators',
-                  for_creators_path,
-                  class: "text-black font-black hover:text-cx-purple font-bold" %>
-            </li>
-
             <li>
-              <%= link_to 'Posts',
+              <%= link_to 'Blog',
                 posts_path,
                 class: "text-black font-black hover:text-cx-purple font-bold" %>
+            </li>
+            </li>
+              <% if @user && @user.has_role?(:creator) %>
+                <%= link_to 'Dashboard',
+                    dashboard_root_path,
+                    class: "text-black font-black hover:text-cx-purple font-bold" %>
+              <% else %>
+                <%= link_to 'For Creators',
+                    for_creators_path,
+                    class: "text-black font-black hover:text-cx-purple font-bold" %>
+              <% end %>
             </li>
             <% if @user %>
               <li>
