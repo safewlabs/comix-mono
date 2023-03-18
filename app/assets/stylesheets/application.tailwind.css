@@ -28,6 +28,10 @@
     -webkit-text-fill-color: transparent;
   }
 
+  .product-card-height {
+    max-height: 450px !important;
+  }
+
   @keyframes gradient {
     0% {
       background-position: 0% 50%;
