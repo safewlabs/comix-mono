@@ -15,11 +15,11 @@ class Products::CardComponent < ViewComponent::Base
     if @product.issue_cover.present?
       image_tag(@product.issue_cover,
                 alt: @product.name,
-                class: "product-card-height w-full rounded-lg object-cover transition duration-500 group-hover:scale-105")
+                class: "h-[350px] w-full rounded-lg object-cover transition duration-500 group-hover:scale-105 sm:h-[450px]")
     else
       image_tag("https://res.cloudinary.com/drg9hguhu/image/upload/v1667569457/comix/78_tage_auf_der_stra%C3%9Fe_des_hasses_000_cover.jpg",
                 alt: "placeholder image",
-                class: "product-card-height w-full rounded-lg object-cover transition duration-500 group-hover:scale-105 sm:h-[450px]")
+                class: "h-[350px] w-full rounded-lg object-cover transition duration-500 group-hover:scale-105 sm:h-[450px]")
     end
   end
 
