@@ -161,6 +161,9 @@ GEM
     groupdate (6.2.0)
       activesupport (>= 5.2)
     hashie (5.0.0)
+    httparty (0.21.0)
+      mini_mime (>= 1.0.0)
+      multi_xml (>= 0.5.2)
     i18n (1.12.0)
       concurrent-ruby (~> 1.0)
     image_processing (1.12.2)
@@ -203,6 +206,7 @@ GEM
       money (~> 6.13)
       railties (>= 3.0)
     msgpack (1.6.1)
+    multi_xml (0.6.0)
     net-imap (0.3.4)
       date
       net-protocol
@@ -411,6 +415,7 @@ DEPENDENCIES
   flipper-active_record
   flipper-ui
   groupdate
+  httparty
   image_processing (~> 1.2)
   importmap-rails
   jbuilder
