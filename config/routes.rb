@@ -35,6 +35,8 @@ Rails.application.routes.draw do
   resources :shop, only: [:index]
 
   get "stores/show"
+  get "stripe/connect", to: "stripe#connect", as: :stripe_connect
+  get "stripe/dashboard/:user_id", to: "stripe#dashboard", as: :stripe_dashboard
 
   namespace :dashboard do
     root "home#index"
@@ -42,6 +44,7 @@ Rails.application.routes.draw do
     resources :projects, param: :slug
     resources :stores, param: :slug
     resources :products, param: :slug
+    resources :payments, param: :slug
   end
   resources :backings
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
