@@ -12,6 +12,9 @@
                 <%= @product.store.name %>
             </span>
         <% end %>
+      <form action="/payments/stripe/checkout" method="POST">
+        <button type="submit" id="checkout-button" class="inline-flex items-center justify-center rounded-md border border-transparent bg-cx-purple px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-800 focus:ring-offset-2 sm:w-auto">Checkout</button>
+      </form>
     </div>
   <% end %>
 </li>
