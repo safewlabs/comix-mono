@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Payments::StripeController < ApplicationController
   def checkout
     Stripe.api_key = Rails.application.credentials.dig(:stripe, :private_key)
@@ -10,20 +12,20 @@ class Payments::StripeController < ApplicationController
     session = Stripe::Checkout::Session.create(
         success_url: "http://localhost:3000/payments/stripe/success",
         cancel_url: "http://localhost:3000/payments/stripe/cancel",
-        mode: 'payment',
+        mode: "payment",
         line_items: [{
             # For metered billing, do not pass quantity
             quantity: 1,
-            price: 'price_1Mo62cFwwA337V7VCVefmRbM',
+            price: "price_1Mo62cFwwA337V7VCVefmRbM",
         }],
         customer_email: "saurabh.a.bhatia@gmail.com"
-    )
+      )
     redirect_to(session.url, allow_other_host: true, status: :see_other)
   end
 
   def success
     session = Stripe::Checkout::Session.retrieve(params[:session_id])
-    customer = Stripe::Customer.retrieve(session.customer)
+    Stripe::Customer.retrieve(session.customer)
   end
 
   def cancel
