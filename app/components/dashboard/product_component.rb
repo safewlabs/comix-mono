@@ -16,4 +16,12 @@ class Dashboard::ProductComponent < ViewComponent::Base
                 class: "h-[350px] w-full rounded-lg object-cover transition duration-500 group-hover:scale-105 sm:h-[450px]")
     end
   end
+
+  def product_file
+    link_to file.record.name, rails_blob_path(file, disposition: "preview")
+  end
+
+  def file
+    @product.file_attachment
+  end
 end
