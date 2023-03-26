@@ -4,4 +4,16 @@ class Stores::DisplayImageComponent < ViewComponent::Base
   def initialize(store:)
     @store = store
   end
+
+  def store_display_image
+    if @store.display_image.present?
+      image_tag(@store.display_image,
+                loading: "lazy", alt: @store.name, width: "120", height: "120",
+                class: "shadow-xl rounded-lg h-auto align-middle border-none absolute -m-16")
+    else
+      image_tag("https://placehold.co/120x120",
+                alt: "placeholder image", width: "100", height: "100",
+                class: "shadow-xl rounded-lg h-auto align-middle border-none absolute -m-16")
+    end
+  end
 end

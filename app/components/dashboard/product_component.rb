@@ -18,7 +18,11 @@ class Dashboard::ProductComponent < ViewComponent::Base
   end
 
   def product_file
-    link_to file.record.name, rails_blob_path(file, disposition: "preview")
+    return nil unless @product.file_attachment.present?
+    link_to "View Pdf",
+            rails_blob_url(file, disposition: "preview"),
+            target: "_blank",
+            class: "text-gray-700 transition underline hover:text-cx-purple"
   end
 
   def file

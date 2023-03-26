@@ -23,7 +23,7 @@ class Store < ApplicationRecord
   include Sluggable
 
   belongs_to :user
-  has_many :products
+  has_many :products, dependent: :destroy
   has_one_attached :cover_image
   has_one_attached :display_image
   has_rich_text :description
