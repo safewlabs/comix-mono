@@ -31,6 +31,13 @@
                     class: "text-black font-black hover:text-cx-purple font-bold" %>
               <% end %>
             </li>
+            <% unless @user %>
+              <li>
+                <%= link_to 'Login',
+                  new_user_session_path,
+                  class: "text-black font-black hover:text-cx-purple font-bold" %>
+              </li>
+            <% end %>
             <% if @user %>
               <li>
                 <div class="inline-block text-sm px-4 py-2 leading-none rounded no-underline text-gray hover:text-gray-900 hover:bg-white mt-4 lg:mt-0">

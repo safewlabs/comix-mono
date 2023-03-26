@@ -10,6 +10,7 @@
 <div class="w-1/2 text-xl px-4 flex flex-col">
     <h2 class="text-lg font-bold">Actions</h2>
     <%= link_to "View", dashboard_product_path(@product), class: "text-gray-700 transition underline hover:text-cx-purple" %>
+    <%= product_file %>
     <%= link_to "Edit", edit_dashboard_product_path(@product), class: "text-gray-700 transition underline hover:text-cx-purple" %>
     <%= link_to "Delete", dashboard_product_path(@product),
                 data: { "turbo-method": :delete, turbo_confirm: 'Are you sure you want to delete this product?' },
