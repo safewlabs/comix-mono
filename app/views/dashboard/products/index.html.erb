@@ -5,3 +5,6 @@
     <%= render(Dashboard::ProductComponent.new(product: product)) %>
   </div>
 <% end %>
+<div class="mt-12 w-full">
+  <%== pagy_nav(@pagy) %>
+</div>
