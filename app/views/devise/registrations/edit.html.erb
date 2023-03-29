@@ -7,7 +7,7 @@
   <div class="mt-8 flex flex-col">
     <div class="-my-2 -mx-4 overflow-x-auto sm:-mx-6 lg:-mx-8">
       <div class="flex flex-col items-center min-w-full py-2 px-6 align-middle">
-        <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+        <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put, 'data-turbo' => "false" }) do |f| %>
           <%= render "devise/shared/error_messages", resource: resource %>        
           <div class="field">
               <%= f.label :email, class: "block text-sm font-medium text-gray-700" %>
