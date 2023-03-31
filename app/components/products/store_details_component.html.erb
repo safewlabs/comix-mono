@@ -1,8 +1,8 @@
 <%= link_to store_path(@product.store), class: "flex flex-col items-center justify-center py-4" do %>
-  <div class="mt-16">
+  <div class="mt-4">
     <%= render(Stores::DisplayImageComponent.new(store: @product.store)) %>
   </div>
-  <div class="mt-16 text-2xl hover:text-cx-purple font-bold">
+  <div class="mt-4 text-2xl hover:text-cx-purple font-bold">
     <%= @product.store.name %>
   </div>
 <% end %>
