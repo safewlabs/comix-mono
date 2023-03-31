@@ -65,28 +65,28 @@
                   <dt class="text-xl font-bold">Social</dt>
                   <div class="flex flex-row">
                     <dd class="mt-1 mx-1 text-md text-gray-900">
-                      <% if @creator_profile.twitter %>
+                      <% if @creator_profile.twitter.present? %>
                         <%= link_to  "https://twitter.com/#{@creator_profile.twitter}" do %>
                           <ion-icon name="logo-twitter"></ion-icon>
                         <% end %>
                       <% end %>
                     </dd>
                     <dd class="mt-1 mx-1 text-md text-gray-900">
-                      <% if @creator_profile.facebook %>
+                      <% if @creator_profile.facebook.present? %>
                         <%= link_to  "https://facebook.com/#{@creator_profile.facebook}" do %>
                           <ion-icon name="logo-facebook"></ion-icon>
                         <% end %>
                       <% end %>
                     </dd>
                     <dd class="mt-1 mx-1 text-md text-gray-900">
-                      <% if @creator_profile.instagram %>
+                      <% if @creator_profile.instagram.present? %>
                         <%= link_to  "https://instagram.com/#{@creator_profile.instagram}" do %>
                           <ion-icon name="logo-instagram"></ion-icon>
                         <% end %>
                       <% end %>
                     </dd>
                     <dd class="mt-1 mx-1 text-md text-gray-900">
-                      <% if @creator_profile.tiktok %>
+                      <% if @creator_profile.tiktok.present? %>
                         <%= link_to  "https://tiktok.com" do %>
                           <ion-icon name="logo-tiktok"></ion-icon>
                         <% end %>
