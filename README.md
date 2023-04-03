@@ -23,7 +23,7 @@
 - Redis
 - Tailwind
 - Hotwired
-- Railway
+- Railway ( hosting the app )
 - Sidekiq
 - Digitalocean spaces
 
