@@ -81,7 +81,6 @@ $ bin/rails credentials:show --environment staging
 Once the repo is cloned, you need to run the following commands to install all the dependencies and create the database.
 
 ```
-$ cp .env.example .env
 $ bundle install
 $ yarn install
 $ rails db:create db:migrate
