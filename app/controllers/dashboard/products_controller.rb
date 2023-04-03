@@ -6,7 +6,11 @@ class Dashboard::ProductsController < Dashboard::BaseController
   before_action :stores_grenre_creators, only: [:new, :edit]
 
   def index
-    @pagy, @products = pagy(@store.products)
+    if @store
+      @pagy, @products = pagy(@store.products)
+    else
+      @products = []
+    end
   end
 
   def show

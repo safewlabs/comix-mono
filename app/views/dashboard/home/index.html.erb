@@ -1,6 +1,9 @@
 <h1 class="text-2xl font-bold pb-4">Dashboard</h1>
 
 <div>
-    <h2>Coming Soon ( chart only for representational purposes) </h2>
-    <%= line_chart current_user.store.products.group_by_day(:created_at).count %>
+    <h2>Coming Soon, please use links of the left</h2>
+    <% if current_user.store %>
+        <h2>Chart only for representational purposes</h2>
+        <%= line_chart current_user.store.products.group_by_day(:created_at).count %>
+    <% end %>
 </div>
