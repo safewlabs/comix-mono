@@ -49,7 +49,9 @@ Rails.application.routes.draw do
     resources :profiles, param: :slug
     resources :projects, param: :slug
     resources :stores, param: :slug
-    resources :products, param: :slug
+    resources :products, param: :slug do
+      get :add_products_to_stripe, on: :collection
+    end
     resources :payments, param: :slug
   end
   resources :backings
