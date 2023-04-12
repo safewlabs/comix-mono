@@ -65,7 +65,16 @@ Rails.application.configure do
   # config.active_job.queue_name_prefix = "comix_7_production"
 
   config.action_mailer.perform_caching = true
-  config.action_mailer.default_url_options = { host: "beta.comix.life" }
+  config.action_mailer.default_url_options = { host: "comix.one" }
+  config.action_mailer.smtp_settings = {
+    address: "smtp.sendgrid.net",
+    port: 587,
+    domain: "comix.one",
+    user_name: "apikey",
+    password: Rails.application.credentials.dig(:sendgrid, :api_key),
+    authentication: "plain",
+    enable_starttls_auto: true
+  }
 
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
