@@ -71,7 +71,7 @@ Rails.application.configure do
     port: 587,
     domain: "comix.one",
     user_name: "apikey",
-    password: Rails.application.credentials.sendgrid_api_key,
+    password: Rails.application.credentials.dig(:sendgrid_api_key),
     authentication: "plain",
     enable_starttls_auto: true
   }
