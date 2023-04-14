@@ -29,7 +29,6 @@
 
   <body>
     <main>
-      <%= render(AnnouncementComponent.new()) %>
       <%= render(NavbarComponent.new(user: current_user)) %>
       <%= yield %>
       <%= render(FooterComponent.new()) %>
