@@ -12,7 +12,7 @@ class AddProductToStripeJob
     Stripe.api_key = Rails.application.credentials.dig(:stripe, :private_key)
     stripe_product = upload_product_to_stripe(product)
     stripe_product_price = upload_price_to_stripe(product, stripe_product[:id])
-    product.update(stripe_product_id: stripe_product[:id], stripe_price_id: stripe_product_price[:id] )
+    product.update(stripe_product_id: stripe_product[:id], stripe_price_id: stripe_product_price[:id])
   end
 
   def find_product(id)
