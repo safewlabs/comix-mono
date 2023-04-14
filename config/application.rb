@@ -12,6 +12,9 @@ module Comix
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.0
+    if ENV["PIPELINE_ENV"].present?
+      Rails.application.config.credentials.content_path = Rails.root.join("config/credentials/#{ENV["PIPELINE_ENV"]}.yml.enc")
+    end
     # Configuration for the application, engines, and railties goes here.
     #
     # These settings can be overridden in specific environments using the files
