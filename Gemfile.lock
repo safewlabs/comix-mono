@@ -162,7 +162,7 @@ GEM
       sanitize (< 7)
     globalid (1.1.0)
       activesupport (>= 5.0)
-    groupdate (6.2.0)
+    groupdate (6.2.1)
       activesupport (>= 5.2)
     hashie (5.0.0)
     httparty (0.21.0)
