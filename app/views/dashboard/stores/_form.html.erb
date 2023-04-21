@@ -1,26 +1,34 @@
 <div>
-    <%= form.label :name, class: "block text-sm font-medium text-gray-700" %>
+    <%= form.label :name, class: "block text-sm font-medium text-gray-700 py-2" %>
     <div class="mt-1">
         <%= form.text_field :name, class: "block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm", placeholder: "Acme Comics Inc" %>
     </div>
 </div>
 
 <div>
-    <%= form.label :display_image, class: "block text-sm font-medium text-gray-700" %>
+    <%= form.label :display_image, class: "block text-sm font-medium text-gray-700 py-2" %>
     <div class="mt-1">
-        <%= form.file_field :display_image %>
+        <% if @store.display_image.attached? %>
+          <%= image_tag(rails_representation_url(@store.display_image, host: ENV["HOSTNAME"])) %>
+        <% end %>
+        <div class="mt-1">
+          <%= form.file_field :display_image %>
+        </div>
     </div>
 </div>
 
 <div>
-    <%= form.label :cover_image, class: "block text-sm font-medium text-gray-700" %>
+    <%= form.label :banner_image, class: "block text-sm font-medium text-gray-700 py-2" %>
+    <% if @store.cover_image.attached? %>
+      <%= image_tag(rails_representation_url(@store.cover_image, host: ENV["HOSTNAME"])) %>
+    <% end %>
     <div class="mt-1">
         <%= form.file_field :cover_image %>
     </div>
 </div>
 
 <div>
-    <%= form.label :description, class: "block text-sm font-medium text-gray-700" %>
+    <%= form.label :description, class: "block text-sm font-medium text-gray-700 py-2" %>
     <div class="mt-1">
         <%= form.rich_text_area :description, class: "block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" %>
     </div>
