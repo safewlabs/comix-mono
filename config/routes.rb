@@ -2,6 +2,8 @@
 
 require "sidekiq/web"
 Rails.application.routes.draw do
+  resources :fcbd
+
   devise_for :admin_users, path: "admin", path_names: {
     sign_in: "login",
     sign_out: "logout"
