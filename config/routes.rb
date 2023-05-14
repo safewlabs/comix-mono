@@ -2,6 +2,15 @@
 
 require "sidekiq/web"
 Rails.application.routes.draw do
+  mount_graphql_devise_for(
+    User,
+    at: 'api/v1',
+    skip: [:register]
+  )
+  if Rails.env.development?
+    mount GraphiQL::Rails::Engine, at: "/graphiql", graphql_path: "/graphql"
+  end
+  post "/graphql", to: "graphql#execute"
   resources :fcbd
 
   devise_for :admin_users, path: "admin", path_names: {

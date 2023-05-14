@@ -36,12 +36,13 @@
 #  index_users_on_uid_and_provider      (uid,provider) UNIQUE
 #
 class User < ApplicationRecord
-  rolify
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :validatable,
-         :confirmable
+         :recoverable, :rememberable, :trackable, :validatable,
+         :confirmable, :omniauthable
+  include GraphqlDevise::Authenticatable
+  rolify
   has_many :projects
   has_one :store
   has_one :creator_profile
