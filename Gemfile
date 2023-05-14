@@ -48,8 +48,8 @@ gem "omniauth", "~> 2.1"
 gem "devise"
 gem "rolify"
 gem "pundit"
-gem 'graphql'
-gem 'graphql_devise'
+gem "graphql"
+gem "graphql_devise"
 gem "pagy"
 gem "flipper"
 gem "flipper-active_record"

@@ -2,11 +2,6 @@
 
 require "sidekiq/web"
 Rails.application.routes.draw do
-  mount_graphql_devise_for(
-    User,
-    at: 'api/v1',
-    skip: [:register]
-  )
   if Rails.env.development?
     mount GraphiQL::Rails::Engine, at: "/graphiql", graphql_path: "/graphql"
   end
@@ -17,6 +12,12 @@ Rails.application.routes.draw do
     sign_in: "login",
     sign_out: "logout"
   }
+
+  mount_graphql_devise_for(
+    User,
+    at: "api/v1",
+    skip: [:register]
+  )
 
   namespace :admin do
     root "dashboard#index"
