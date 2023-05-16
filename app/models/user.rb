@@ -21,6 +21,8 @@
 #  reset_password_sent_at :datetime
 #  reset_password_token   :string
 #  sign_in_count          :integer          default(0), not null
+#  tokens                 :json
+#  uid                    :string           default(""), not null
 #  unconfirmed_email      :string
 #  created_at             :datetime         not null
 #  updated_at             :datetime         not null
@@ -31,14 +33,16 @@
 #  index_users_on_confirmation_token    (confirmation_token) UNIQUE
 #  index_users_on_email                 (email) UNIQUE
 #  index_users_on_reset_password_token  (reset_password_token) UNIQUE
+#  index_users_on_uid_and_provider      (uid,provider) UNIQUE
 #
 class User < ApplicationRecord
-  rolify
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :validatable,
-         :confirmable
+         :recoverable, :rememberable, :trackable, :validatable,
+         :confirmable, :omniauthable
+  include GraphqlDevise::Authenticatable
+  rolify
   has_many :projects
   has_one :store
   has_one :creator_profile

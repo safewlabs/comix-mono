@@ -21,6 +21,8 @@
 #  reset_password_sent_at :datetime
 #  reset_password_token   :string
 #  sign_in_count          :integer          default(0), not null
+#  tokens                 :json
+#  uid                    :string           default(""), not null
 #  unconfirmed_email      :string
 #  created_at             :datetime         not null
 #  updated_at             :datetime         not null
@@ -31,12 +33,14 @@
 #  index_users_on_confirmation_token    (confirmation_token) UNIQUE
 #  index_users_on_email                 (email) UNIQUE
 #  index_users_on_reset_password_token  (reset_password_token) UNIQUE
+#  index_users_on_uid_and_provider      (uid,provider) UNIQUE
 #
 FactoryBot.define do
   factory :user do
     email { Faker::Internet.email }
     password { "password" }
     password_confirmation { "password" }
+    uid { SecureRandom.uuid }
 
     after(:create) do |user|
       user.confirm

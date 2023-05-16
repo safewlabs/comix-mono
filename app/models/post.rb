@@ -22,7 +22,8 @@ class Post < ApplicationRecord
     article: 0,
     interview: 1,
     feature: 2,
-    video: 3
+    video: 3,
+    news: 4
   }
 
   enum status: {
