@@ -6,6 +6,7 @@
 #
 #  id         :bigint           not null, primary key
 #  bio        :text
+#  email      :string
 #  facebook   :string
 #  instagram  :string
 #  name       :string
