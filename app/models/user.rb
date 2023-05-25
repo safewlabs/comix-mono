@@ -47,8 +47,13 @@ class User < ApplicationRecord
   has_one :store
   has_one :creator_profile
   has_one_attached :avatar
-  has_many :backings
+  has_many :backings, dependent: :destroy
   has_many :projects, through: :backings
+  has_many :creator_profiles_managers, dependent: :destroy
+  has_many :mananged_profiles,
+           class_name: "CreatorProfile",
+           foreign_key: :creator_profile_id,
+           through: :creator_profiles_managers
 
   def can_receive_payments?
     uid? && provider? && access_code? && publishable_key?

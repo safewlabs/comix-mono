@@ -36,6 +36,11 @@ class CreatorProfile < ApplicationRecord
   has_one_attached :profile_cover
   has_many :projects_creator_profiles, dependent: :destroy
   has_many :projects, through: :projects_creator_profiles
+  has_many :creator_profiles_managers, dependent: :destroy
+  has_many :managers,
+           class_name: "User",
+           foreign_key: :user_id,
+           through: :creator_profiles_managers
 
   has_many :collaborations
   has_many :products, through: :collaborations
