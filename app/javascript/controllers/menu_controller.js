@@ -5,7 +5,7 @@ export default class extends Controller {
   click() {
     this.targets.element.classList.toggle("sm:hidden");
     // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
-    // el.classList.toggle('sm:hidden');
+    el.classList.toggle('sm:hidden');
     
   }
   // connect() {
