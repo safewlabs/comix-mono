@@ -115,7 +115,7 @@ $ bundle exec rubocop -A
 
 ### Error logging & Monitoring
 
-We use [Sentry](https://sentry.io) to log production errors.
+We use [Honeybadger](https://honeybadger.io) to log production errors and manage uptime.
 
 ### Pre-Commit hook
 
