@@ -5,6 +5,7 @@ class Dashboard::ProfilesController < Dashboard::BaseController
 
   def index
     @profile = current_user.creator_profile
+    @mananged_profiles = current_user.mananged_profiles
   end
 
   def show
