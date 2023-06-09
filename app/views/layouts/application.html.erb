@@ -17,14 +17,7 @@
     <script src="https://js.stripe.com/v3/"></script>
     <%= display_meta_tags(default_meta_tags) %>
     <% if Rails.env.production? %>
-      <script async src="https://www.googletagmanager.com/gtag/js?id=G-0WCWWSXZB0"></script>
-      <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'G-0WCWWSXZB0');
-      </script>
+      <script async src="https://analytics.umami.is/script.js" data-website-id="0f958b0f-bfdf-4e7e-b6e7-f9a72a07cc37"></script>
     <% end %>
   </head>
 
