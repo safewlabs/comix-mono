@@ -50,7 +50,7 @@ class User < ApplicationRecord
   has_many :backings, dependent: :destroy
   has_many :projects, through: :backings
   has_many :creator_profiles_managers, dependent: :destroy
-  has_many :mananged_profiles,
+  has_many :managed_profiles,
            class_name: "CreatorProfile",
            foreign_key: :creator_profile_id,
            through: :creator_profiles_managers

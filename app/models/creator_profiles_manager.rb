@@ -21,6 +21,6 @@
 #  fk_rails_...  (user_id => users.id)
 #
 class CreatorProfilesManager < ApplicationRecord
-  belongs_to :mananged_profiles, class_name: "CreatorProfile", foreign_key: :creator_profile_id
+  belongs_to :managed_profiles, class_name: "CreatorProfile", foreign_key: :creator_profile_id
   belongs_to :managers, class_name: "User", foreign_key: :user_id
 end

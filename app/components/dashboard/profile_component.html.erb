@@ -1,0 +1,17 @@
+<div class="w-1/2 flex flex-col">
+    <div class="text-xl">
+      <%= @profile.name %>
+    </div>
+    <div class="py-4 w-1/2">
+      <%= render(CreatorProfiles::AvatarComponent.new(creator_profile: @profile)) %>
+    </div>
+</div>
+
+<div class="w-1/2 text-xl px-4 flex flex-col">
+    <h2 class="text-lg font-bold">Actions</h2>
+    <%= link_to "View", dashboard_profile_path(@profile), class: "text-gray-700 transition underline hover:text-cx-purple" %>
+    <%= link_to "Edit", edit_dashboard_profile_path(@profile), class: "text-gray-700 transition underline hover:text-cx-purple" %>
+    <%= link_to "Delete", dashboard_profile_path(@profile),
+                data: { "turbo-method": :delete, turbo_confirm: 'Are you sure you want to delete this product?' },
+                class: "text-gray-700 transition underline hover:text-cx-purple" %>
+</div>
