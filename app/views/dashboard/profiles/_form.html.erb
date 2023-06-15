@@ -15,6 +15,15 @@
 </div>
 
 <div>
+    <%= form.label :email, class: "block text-sm font-medium text-gray-700" %>
+    <div class="mt-1">
+        <%= form.text_field :email,
+            class: "block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm",
+            placeholder: "john.doe@test.com" %>
+    </div>
+</div>
+
+<div>
     <%= form.label :twitter, class: "block text-sm font-medium text-gray-700" %>
     <div class="mt-1">
         <%= form.text_field :twitter,

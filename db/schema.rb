@@ -120,7 +120,17 @@ ActiveRecord::Schema[7.0].define(version: 2023_05_26_062922) do
     t.string "instagram"
     t.string "tiktok"
     t.string "youtube"
+    t.string "email"
     t.index ["user_id"], name: "index_creator_profiles_on_user_id"
+  end
+
+  create_table "creator_profiles_managers", force: :cascade do |t|
+    t.bigint "creator_profile_id", null: false
+    t.bigint "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["creator_profile_id"], name: "index_creator_profiles_managers_on_creator_profile_id"
+    t.index ["user_id"], name: "index_creator_profiles_managers_on_user_id"
   end
 
   create_table "flipper_features", force: :cascade do |t|
@@ -285,6 +295,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_05_26_062922) do
   add_foreign_key "collaborations", "creator_profiles"
   add_foreign_key "collaborations", "products"
   add_foreign_key "creator_profiles", "users"
+  add_foreign_key "creator_profiles_managers", "creator_profiles"
+  add_foreign_key "creator_profiles_managers", "users"
   add_foreign_key "items", "bundles"
   add_foreign_key "product_genres", "genres"
   add_foreign_key "product_genres", "products"

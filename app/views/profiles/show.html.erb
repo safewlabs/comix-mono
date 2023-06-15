@@ -45,7 +45,11 @@
                 <div class="sm:col-span-1">
                   <dt class="text-xl font-bold ">Email</dt>
                   <dd class="mt-1 text-md text-gray-900 hover:text-blue-500 underline">
-                      <%= mail_to @creator_profile.user.email %>
+                      <% if @creator_profile.user %>
+                        <%= mail_to @creator_profile.user.email %>
+                      <% else %>
+                        <%= mail_to @creator_profile.email %>
+                      <% end %>
                   </dd>
                 </div>
 

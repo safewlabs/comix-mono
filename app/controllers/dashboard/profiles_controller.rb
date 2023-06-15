@@ -5,6 +5,7 @@ class Dashboard::ProfilesController < Dashboard::BaseController
 
   def index
     @profile = current_user.creator_profile
+    @managed_profiles = current_user.managed_profiles
   end
 
   def show
@@ -21,6 +22,7 @@ class Dashboard::ProfilesController < Dashboard::BaseController
     @profile = CreatorProfile.new(profile_params)
     respond_to do |format|
       if @profile.save
+        @profile.managers << current_user
         format.html { redirect_to profile_path(@profile), notice: "CreatorProfile was successfully created." }
         format.json { render :show, status: :created, location: @profile }
       else
@@ -49,6 +51,6 @@ class Dashboard::ProfilesController < Dashboard::BaseController
     end
 
     def profile_params
-      params.require(:creator_profile).permit(:name, :avatar, :profile_cover, :bio, :website, :twitter, :instagram, :facebook, :tiktok)
+      params.require(:creator_profile).permit(:name, :avatar, :profile_cover, :bio, :website, :twitter, :instagram, :facebook, :tiktok, :email)
     end
 end
