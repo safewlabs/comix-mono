@@ -16,3 +16,4 @@ pin "@hotwired/turbo", to: "https://ga.jspm.io/npm:@hotwired/turbo@7.3.0/dist/tu
 pin "@rails/actioncable/src", to: "https://ga.jspm.io/npm:@rails/actioncable@7.0.4-2/src/index.js"
 pin "chartkick", to: "chartkick.js"
 pin "Chart.bundle", to: "Chart.bundle.js"
+pin "@pdftron/pdfjs-express", to: "https://ga.jspm.io/npm:@pdftron/pdfjs-express@8.7.4/webviewer.min.js"
