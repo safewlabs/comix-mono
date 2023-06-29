@@ -11,7 +11,6 @@
         <%= link_to "Browse all", comics_path, class: "inline-flex items-center justify-center rounded-md border border-transparent bg-cx-purple px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-800 focus:ring-offset-2 sm:w-auto" %>
       </div>
     </header>
-
     <ul class="grid gap-4 mt-4 sm:grid-cols-2 lg:grid-cols-4">
       <% @products.each do |product| %>
         <% cache product do %>
@@ -21,6 +20,81 @@
     </ul>
   </div>
 </section>
+
+<div id="creators" class="max-w-screen-xl px-4 py-8 mx-auto sm:px-6 sm:py-12 lg:px-8">
+  <h2 class="text-xl font-bold text-gray-900 sm:text-3xl pb-4">
+    For Creators
+  </h2>
+  <div class="flex flex-row">
+    <div class="px-2">
+      <div class="my-1 w-full">
+          <article class="overflow-hidden rounded-lg border hover:shadow-lg">
+              <header class="flex items-center justify-center leading-tight p-2 md:p-4">
+                  <h1 class="text-lg">
+                      <p class="no-underline hover:underline text-black">
+                          <%= image_tag "pixeltrue-web-design-1.svg" %>
+                      </p>
+                  </h1>
+              </header>
+          </article>
+      </div>
+      <div class="flex my-1 w-full text-center mt-2">
+          <div class="text-2xl no-underline text-black m-auto">
+              Create &amp; Sell your work.<br/>
+              <div class="text-lg">
+                You can bring your work to life with our crowdfunding, sell back catalogue &amp; issues
+                on our marketplace or add it to your crowdfunding campaign in just a few clicks!
+              </div>
+          </div>
+      </div>
+    </div>
+    <div class="px-2">
+      <div class="my-1 w-full">
+          <article class="overflow-hidden rounded-lg border hover:shadow-lg">
+              <header class="flex items-center justify-center leading-tight p-2 md:p-4">
+                  <h1 class="text-lg">
+                      <p class="no-underline hover:underline text-black">
+                          <%= image_tag "pixeltrue-seo-1.svg" %>
+                      </p>
+                  </h1>
+              </header>
+          </article>
+      </div>
+      <div class="flex my-1 w-full text-center mt-2">
+          <div class="text-2xl no-underline text-black m-auto">
+              Get discovered<br/>
+              <div class="text-lg">
+                Get discovered by new people through our marketplace.
+              </div>
+          </div>
+      </div>
+    </div>
+    <div class="px-2">
+      <div class="my-1 w-full">
+          <article class="overflow-hidden rounded-lg border hover:shadow-lg">
+              <header class="flex items-center justify-center leading-tight p-2 md:p-4">
+                  <h1 class="text-xl">
+                      <p class="no-underline hover:underline text-black">
+                          <%= image_tag "pixeltrue-study-from-books-1.svg" %>
+                      </p>
+                  </h1>
+              </header>
+          </article>
+      </div>
+      <div class="flex my-1 w-full text-center mt-2">
+          <div class="text-2xl no-underline text-black m-auto">
+              Speak directly with your fans.<br/>
+              <div class="text-lg">
+                Speak with your fans directly, retain them, survey ideas and retain them.
+              </div></br/>
+          </div>
+      </div>
+    </div>
+  </div>
+  <div class="mt-2 pb-4 w-full flex justify-center">
+    <%= link_to "Join us as a creator", for_creators_path, class: "inline-flex items-center justify-center rounded-md border border-transparent bg-cx-purple px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-800 focus:ring-offset-2 sm:w-auto" %>
+  </div>
+</div>
 
 <div class="bg-white pt-6 px-4 sm:px-6 lg:pb-8 lg:px-8">
   <div class="relative max-w-lg mx-auto lg:max-w-7xl px-8">

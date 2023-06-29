@@ -2,8 +2,8 @@
 
 class PagesController < ApplicationController
   def about
-    set_meta_tags title: "About Us",
-      description: "About Us page",
+    set_meta_tags title: "Our Story",
+      description: "Our Story page",
       keywords: "Comics, Indie comics"
   end
 
