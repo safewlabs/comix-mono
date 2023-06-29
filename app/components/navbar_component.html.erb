@@ -6,30 +6,28 @@
             <%= render(LogoComponent.new(classes: "w-16")) %>
             <div class="text-3xl bold font-black self-center">COMI<i>X</i></div>
         <% end %>
+
+        <ul class="flex items-center gap-4 text-lg">
+          <li class="flex flex-row">
+            <%= link_to 'Our Story',
+              about_path,
+              class: "text-black font-black hover:text-cx-purple font-bold" %>
+          <li>
+          <li>
+            <%= link_to 'Articles',
+              posts_path,
+              class: "text-black font-black hover:text-cx-purple font-bold" %>
+          </li>
+        </ul>
       </div>
 
       <div class="md:flex md:items-center md:gap-12">
         <nav data-target="topNav" aria-label="Site Nav" class="navbar-menu hidden md:block">
           <ul class="flex items-center gap-6 text-lg">
             <li class="flex flex-row">
-              <%= link_to 'Browse Comics',
+              <%= link_to 'Comics',
               comics_path,
               class: "text-black font-black hover:text-cx-purple font-bold" %>
-            <li>
-              <%= link_to 'Blog',
-                posts_path,
-                class: "text-black font-black hover:text-cx-purple font-bold" %>
-            </li>
-            </li>
-              <% if @user && @user.has_role?(:creator) %>
-                <%= link_to 'Dashboard',
-                    dashboard_root_path,
-                    class: "text-black font-black hover:text-cx-purple font-bold" %>
-              <% else %>
-                <%= link_to 'For Creators',
-                    for_creators_path,
-                    class: "text-black font-black hover:text-cx-purple font-bold" %>
-              <% end %>
             </li>
             <% unless @user %>
               <li>
@@ -38,6 +36,17 @@
                   class: "text-black font-black hover:text-cx-purple font-bold" %>
               </li>
             <% end %>
+            </li>
+              <% if @user && @user.has_role?(:creator) %>
+                <%= link_to 'Dashboard',
+                    dashboard_root_path,
+                    class: "text-black font-black hover:text-cx-purple font-bold" %>
+              <% else %>
+                <%= link_to 'For Creators',
+                    "#creators",
+                    class: "px-4 py-3 leading-none border rounded text-black border-black font-black hover:border-transparent hover:text-cx-lavender-blush hover:bg-cx-purple mt-4 lg:mt-0" %>
+              <% end %>
+            </li>
             <% if @user %>
               <li>
                 <div class="inline-block text-sm px-4 py-2 leading-none rounded no-underline text-gray hover:text-gray-900 hover:bg-white mt-4 lg:mt-0">
