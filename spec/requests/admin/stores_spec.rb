@@ -9,7 +9,7 @@ RSpec.describe "Admin::Stores", type: :request do
       sign_in admin_user
     end
   end
-  
+
   describe "GET /index" do
     pending "add some examples (or delete) #{__FILE__}"
   end

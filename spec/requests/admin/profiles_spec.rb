@@ -9,7 +9,7 @@ RSpec.describe "Admin::Profiles", type: :request do
       sign_in admin_user
     end
   end
-  
+
   describe "GET /index" do
     it "returns http success" do
       get "/admin/creator_profiles"
