@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class Admin::CreatorProfilesController < ApplicationController
+class Admin::CreatorProfilesController < AdminController
   before_action :set_profile, only: [:edit, :update, :show]
   before_action :creator_users
 

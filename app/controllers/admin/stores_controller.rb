@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class Admin::StoresController < ApplicationController
+class Admin::StoresController < AdminController
   before_action :set_store, only: [:edit, :update, :show]
 
   def index
