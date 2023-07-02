@@ -3,11 +3,9 @@
 require "rails_helper"
 
 RSpec.describe "Admin::Stores", type: :request do
-  describe "GET /index" do
-    let(:admin_user) { create(:admin_user) }
-    before do
-      sign_in admin_user
-    end
+  let(:admin_user) { create(:admin_user) }
+  before do
+    sign_in admin_user
   end
 
   describe "GET /index" do
