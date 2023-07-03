@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class Admin::ProductsController < AdminController
-  before_action :set_product, only: [:edit, :update, :show]
+  before_action :set_product, only: [:edit, :update, :show, :add_product_to_stripe]
   before_action :stores_grenre_creators, only: [:new, :edit]
 
   def index
@@ -47,12 +47,9 @@ class Admin::ProductsController < AdminController
   def delete
   end
 
-  def add_products_to_stripe
-    products = @store.products
-    products.each do |product|
-      next if product.stripe_product_id.present? || product.stripe_price_id.present?
-      AddProductToStripeJob.perform_async(product.id)
-    end
+  def add_product_to_stripe
+    AddProductToStripeJob.perform_async(@product.id)
+    format.html { redirect_to @product, notice: "Uploading product to stripe" }
   end
 
   private
