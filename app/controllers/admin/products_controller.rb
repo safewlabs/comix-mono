@@ -47,6 +47,14 @@ class Admin::ProductsController < AdminController
   def delete
   end
 
+  def add_products_to_stripe
+    products = @store.products
+    products.each do |product|
+      next if product.stripe_product_id.present? || product.stripe_price_id.present?
+      AddProductToStripeJob.perform_async(product.id)
+    end
+  end
+
   private
     def set_product
       @product = Product.find_by(slug: params[:slug])

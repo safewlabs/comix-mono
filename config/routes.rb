@@ -22,7 +22,9 @@ Rails.application.routes.draw do
     resources :posts, param: :slug
     resources :creator_profiles, param: :slug
     resources :stores, param: :slug
-    resources :products, param: :slug
+    resources :products, param: :slug do
+      get :add_products_to_stripe, on: :collection
+    end
     mount Flipper::UI.app(Flipper) => "/flipper"
     mount Sidekiq::Web => "/sidekiq"
   end
