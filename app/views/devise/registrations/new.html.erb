@@ -1,29 +1,53 @@
-<h2>Sign up</h2>
+<div class="min-h-full flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+  <div class="max-w-md w-full space-y-8">
+    <div>
+      <h2 class="mt-6 text-center text-3xl font-extrabold text-gray-900">Sign up and start reading</h2>
+    </div>
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { 'data-turbo' => "false", class: "mt-8 space-y-6" }) do |f| %>
+      <div class="rounded-md shadow-sm -space-y-px">
+        <div>
+          <label for="email-address" class="sr-only">Email address</label>
+          <%= f.email_field :email,
+                            autofocus: true,
+                            autocomplete: "email",
+                            placeholder: "Email",
+                            class: "appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-purple-800 focus:border-purple-800 focus:z-10 sm:text-sm" %>
+        </div>
+        <div>
+          <label for="password" class="sr-only">Password</label>
+          <%= f.password_field :password,
+                               placeholder: "Password",
+                               autocomplete: "current-password",
+                               class: "appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-purple-800 focus:border-purple-800 focus:z-10 sm:text-sm" %>
+        </div>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { 'data-turbo' => "false" }) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
+        <div>
+          <label for="password-confirmation" class="sr-only">Password Confirmation</label>
+          <%= f.password_field :password_confirmation,
+                               placeholder: "Retype Password",
+                               autocomplete: "current-password",
+                               class: "appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-purple-800 focus:border-purple-800 focus:z-10 sm:text-sm" %>
+        </div>
+      </div>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+      <div class="flex items-center justify-between">
+        <div class="flex items-center">
+          <%= f.check_box :remember_me, class: "h-4 w-4 text-cx-purple focus:ring-cx-purple border-gray-300 rounded" %>
+          <%= f.label :remember_me, class: "ml-2 block text-sm text-gray-900" %>
+        </div>
+      </div>
+
+      <div>
+        <button type="submit" class="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white hover:bg-black bg-cx-purple focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-800">
+          <span class="absolute left-0 inset-y-0 flex items-center pl-3">
+            <svg class="h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd" />
+            </svg>
+          </span>
+          Sign up
+        </button>
+      </div>
+    <% end %>
+    <%= render "devise/shared/links" %>
   </div>
-
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+</div>
