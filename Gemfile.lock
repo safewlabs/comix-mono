@@ -175,8 +175,8 @@ GEM
       graphql (>= 1.8, < 2.1)
       rails (>= 4.2, < 7.1)
       zeitwerk
-    groupdate (6.2.1)
-      activesupport (>= 5.2)
+    groupdate (6.3.0)
+      activesupport (>= 6.1)
     hashie (5.0.0)
     honeybadger (5.2.1)
     httparty (0.21.0)
