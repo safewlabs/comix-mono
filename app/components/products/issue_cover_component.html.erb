@@ -5,6 +5,16 @@
     <%= image_tag "https://res.cloudinary.com/drg9hguhu/image/upload/v1667569457/comix/78_tage_auf_der_stra%C3%9Fe_des_hasses_000_cover.jpg", class: "shadow-2xl hidden rounded-lg lg:block" %>
   <% end %>
 </div>
-<div class="mt-2 text-4xl hidden lg:flex items-center justify-center">
+<div class="mt-2 text-4xl hidden lg:flex flex-col items-center justify-center">
   <span class="mx-2 p-2">&#36;<%= @product.price %></span>
+  <% if @product.id.eql?(19)%>
+    <stripe-buy-button
+      buy-button-id="buy_btn_1NQ7VjAmbWwX6VD37EsuGTsv"
+      publishable-key="pk_live_51N1OpJAmbWwX6VD3OcMhfFc7toOia7iBbAwrEfL8aaohXqWfGYzxMAjB4ShLQKeR2avCbLU7HsUICuzQXb6kQ9eY00FXQEZvaU"
+    >
+    </stripe-buy-button>
+  <% end %>
 </div>
+<script async
+  src="https://js.stripe.com/v3/buy-button.js">
+</script>
