@@ -50,7 +50,7 @@ Rails.application.routes.draw do
   get "stripe/dashboard/:user_id", to: "stripe#dashboard", as: :stripe_dashboard
 
   namespace :payments do
-    post "stripe/checkout", to: "stripe#checkout", as: :stripe_checkout
+    get "stripe/checkout", to: "stripe#checkout", as: :stripe_checkout
     get "stripe/success", to: "stripe#success", as: :stripe_success
     get "stripe/cancel", to: "stripe#cancel", as: :stripe_cancel
   end
