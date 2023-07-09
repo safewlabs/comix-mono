@@ -22,6 +22,7 @@ class Admin::ProductsController < AdminController
     @product = Product.new(product_params)
     respond_to do |format|
       if @product.save
+        AddProductToStripeJob.perform_async(@product.id)
         format.html { redirect_to @product, notice: "Product was successfully created." }
         format.json { render :show, status: :created, location: @product }
       else
@@ -45,11 +46,6 @@ class Admin::ProductsController < AdminController
   end
 
   def delete
-  end
-
-  def add_product_to_stripe
-    AddProductToStripeJob.perform_async(@product.id)
-    format.html { redirect_to @product, notice: "Uploading product to stripe" }
   end
 
   private
