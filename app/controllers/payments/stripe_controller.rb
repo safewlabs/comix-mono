@@ -16,8 +16,16 @@ class Payments::StripeController < ApplicationController
         line_items: [{
             # For metered billing, do not pass quantity
             quantity: 1,
-            price: "price_1Mo62cFwwA337V7VCVefmRbM",
+            price: "price id",
         }],
+        payment_intent_data: {
+          on_behalf_of: "account id",
+          application_fee_amount: compute_application_fee_amount(500, 1),
+          # The account receiving the funds, as passed from the client.
+          transfer_data: {
+            destination: "account id"
+          },
+        },
         customer_email: "saurabh.a.bhatia@gmail.com"
       )
     redirect_to(session.url, allow_other_host: true, status: :see_other)
@@ -29,5 +37,10 @@ class Payments::StripeController < ApplicationController
   end
 
   def cancel
+  end
+
+  def compute_application_fee_amount(base_price, quantity)
+    # Take a 10% cut.
+    (0.1 * base_price * quantity).to_i
   end
 end
