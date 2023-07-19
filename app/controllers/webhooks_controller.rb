@@ -27,17 +27,11 @@ class WebhooksController < ApplicationController
 
       line_items = session.line_items
       customer_email = event["data"]["object"]["customer_email"]
-      fulfill_order(customer_email, line_items)
+      line_items.each do |line_item|
+        FulfillOrderJob.perform_async(customer_email, line_item.price.id)
+      end
 
       render json: { message: "success" }
     end
-  end
-
-  def fulfill_order(customer_email, line_items)
-    stripe_price_id = line_items.first.price.id
-    user = User.find_by(email: customer_email)
-    product = Product.find_by(stripe_price_id:)
-    Purchase.create!(user:, product:)
-    FulfillProductMailer.with(user:).send_product(product).deliver_later
   end
 end
