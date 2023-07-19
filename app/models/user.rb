@@ -54,6 +54,8 @@ class User < ApplicationRecord
            class_name: "CreatorProfile",
            foreign_key: :creator_profile_id,
            through: :creator_profiles_managers
+  has_many :purchases, dependent: :destroy
+  has_many :products, through: :purchases
 
   def can_receive_payments?
     uid? && provider? && access_code? && publishable_key?

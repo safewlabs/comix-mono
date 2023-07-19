@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_05_26_062922) do
+ActiveRecord::Schema[7.0].define(version: 2023_07_19_115534) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -228,6 +228,15 @@ ActiveRecord::Schema[7.0].define(version: 2023_05_26_062922) do
     t.index ["project_id"], name: "index_projects_creator_profiles_on_project_id"
   end
 
+  create_table "purchases", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "product_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["product_id"], name: "index_purchases_on_product_id"
+    t.index ["user_id"], name: "index_purchases_on_user_id"
+  end
+
   create_table "roles", force: :cascade do |t|
     t.string "name"
     t.string "resource_type"
@@ -304,5 +313,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_05_26_062922) do
   add_foreign_key "projects", "users"
   add_foreign_key "projects_creator_profiles", "creator_profiles"
   add_foreign_key "projects_creator_profiles", "projects"
+  add_foreign_key "purchases", "products"
+  add_foreign_key "purchases", "users"
   add_foreign_key "stores", "users"
 end

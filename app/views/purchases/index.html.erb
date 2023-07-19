@@ -1,0 +1,17 @@
+<%= render(PageTitleComponent.new(title: "Home")) %>
+
+<section>
+  <div class="max-w-screen-xl px-4 py-8 mx-auto sm:px-6 sm:py-12 lg:px-8">
+    <h1 class="text-2xl font-bold pb-4">Purchase History</h1>
+    <% @purchases.each do |purchase| %>
+      <div class="flex flex-row py-4">
+        <%= render(Products::PurchasedComponent.new(product: purchase.product)) %>
+      </div>
+    <% end %>
+    <% if @pagy %>
+      <div class="mt-12 w-full">
+        <%== pagy_nav(@pagy) %>
+      </div>
+    <% end %>
+  </div>
+</section>
