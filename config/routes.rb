@@ -32,7 +32,7 @@ Rails.application.routes.draw do
   get "about", to: "pages#about", as: "about"
   get "for-creators", to: "pages#for_creators", as: "for_creators"
   get "comics", to: "products#index", as: "comics"
-  devise_for :users, path: "", path_names: {
+  devise_for :users, controllers: { registrations: "users/registrations" }, path: "", path_names: {
     sign_in: "login",
     sign_out: "logout",
     sign_up: "signup",
@@ -66,6 +66,8 @@ Rails.application.routes.draw do
     resources :payments, param: :slug
   end
   resources :backings
+  resources :purchases, only: [:index]
+  resources :webhooks, only: [:create]
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
