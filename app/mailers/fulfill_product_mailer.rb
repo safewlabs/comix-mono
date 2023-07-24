@@ -2,7 +2,8 @@
 
 class FulfillProductMailer < ApplicationMailer
   def send_product(product)
+    @user = params[:user]
     @product = product
-    mail(to: params[:user].email, subject: "Your Comic #{@product.name} is ready")
+    mail(to: @user.email, subject: "Your Comic #{@product.name} is ready")
   end
 end

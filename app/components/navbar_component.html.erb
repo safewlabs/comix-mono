@@ -1,3 +1,6 @@
+<% if @user && !@user.confirmed? %>
+  <%= render(AnnouncementComponent.new(user: @user)) %>
+<% end %>
 <header aria-label="Site Header" class="bg-white">
   <div class="mx-auto max-w-screen-xl p-4 lg:px-8">
     <div class="flex h-16 items-center justify-between">

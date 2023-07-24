@@ -34,5 +34,12 @@ FactoryBot.define do
     page_count { 30 }
     release_date { 1.year.ago }
     age_rating { "18+" }
+    after(:build) do |product|
+      product.issue_cover.attach(
+        io: File.open(Rails.root.join("spec", "support", "images", "issue-cover.jpg")),
+        filename: "issue-cover.jpg",
+        content_type: "image/jpeg"
+      )
+    end
   end
 end
