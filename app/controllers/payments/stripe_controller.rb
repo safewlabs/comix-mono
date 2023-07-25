@@ -32,7 +32,7 @@ class Payments::StripeController < ApplicationController
           destination: stripe_account_id
         },
       },
-      customer_email: "saurabh.a.bhatia@gmail.com"
+      customer_email: current_user.email
     )
     redirect_to(session.url, allow_other_host: true, status: :see_other)
   end
