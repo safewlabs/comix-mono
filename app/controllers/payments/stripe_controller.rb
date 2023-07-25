@@ -27,6 +27,7 @@ class Payments::StripeController < ApplicationController
       payment_intent_data: {
         on_behalf_of: stripe_account_id,
         application_fee_amount: compute_application_fee_amount(product_price_in_cents),
+        receipt_email: current_user.email,
         # The account receiving the funds, as passed from the client.
         transfer_data: {
           destination: stripe_account_id
