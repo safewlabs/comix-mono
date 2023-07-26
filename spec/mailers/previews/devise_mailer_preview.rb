@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # spec/mailers/previews/devise_mailer_preview.rb
 
 class DeviseMailerPreview < ActionMailer::Preview
