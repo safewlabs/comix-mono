@@ -3,6 +3,6 @@
 class PurchasesController < ApplicationController
   before_action :authenticate_user!
   def index
-    @pagy, @purchases = pagy(Purchase.order(created_at: :desc))
+    @pagy, @purchases = pagy(current_user.purchases.order(created_at: :desc))
   end
 end
