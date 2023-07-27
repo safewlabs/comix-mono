@@ -43,7 +43,7 @@ class Payments::StripeController < ApplicationController
   end
 
   def cancel
-    redirect_to root_path
+    redirect_to product_path(@product)
   end
 
   def compute_application_fee_amount(base_price)
