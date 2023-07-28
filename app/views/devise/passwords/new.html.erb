@@ -5,6 +5,7 @@
       <h2 class="mt-6 text-center text-3xl font-extrabold text-gray-900">Forgot your password?</h2>
     </div>
     <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post, class: "mt-8 space-y-6" }) do |f| %>
+      <%= render "devise/shared/error_messages", resource: resource %>
       <div class="rounded-md shadow-sm -space-y-px">
         <div>
           <label for="email-address" class="sr-only">Email address</label>

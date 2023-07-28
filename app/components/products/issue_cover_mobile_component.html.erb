@@ -1,10 +1,15 @@
 <div class="block lg:hidden">
   <% if @product.issue_cover.present? %>
-    <%= image_tag @product.issue_cover, class: "rounded-lg shadow-xl mx-auto -mt-16 h-48 w-48 bg-cover bg-center" %>
+    <%= image_tag @product.issue_cover, class: "rounded-lg shadow-xl mx-auto -mt-16 h-auto w-48 bg-cover bg-center" %>
   <% else %>
     <%= image_tag "https://img.icons8.com/dotty/70/000000/full-image.png", class: "rounded-lg shadow-xl mx-auto -mt-16 h-48 w-48 bg-cover bg-center" %>
   <% end %>
-  <div class="w-full text-center text-2xl pt-4">
+  <div class="flex flex-col w-full text-center text-2xl pt-4">
     <span class="mx-2 p-2">&#36;<%= @product.price %></span>
+    <% if is_onboarded? %>
+      <%= link_to "Buy", payments_stripe_checkout_path(product_id: @product.id), class: "inline-flex items-center justify-center rounded-md border border-transparent bg-cx-purple px-8 py-2 text-xl font-medium text-white shadow-sm hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-800 focus:ring-offset-2 sm:w-auto", data: { turbo: false } %>
+    <% else %>
+      Coming Soon
+    <% end %>
   </div>
 </div>
