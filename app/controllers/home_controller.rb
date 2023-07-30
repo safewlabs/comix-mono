@@ -2,7 +2,12 @@
 
 class HomeController < ApplicationController
   def index
-    @products = Product.last(4)
+    @onboarded_products = Product.where(store: Store.where(user: User.where.not(stripe_user_id: nil)))
+                                 .order("RANDOM()")
+                                 .take(4)
+    @coming_soon_products = Product.where(store: Store.where(user: User.where(stripe_user_id: nil)))
+                                   .order("RANDOM()")
+                                   .take(4)
     @posts = Post.published.last(3)
     set_meta_tags title: "Home",
       description: "Comix home",
