@@ -19,10 +19,10 @@ class Products::PurchasedComponent < ViewComponent::Base
 
   def product_file
     return nil unless @product.file_attachment.present?
-    link_to "Download Pdf",
+    link_to "Download",
             rails_blob_url(file, disposition: "attachment"),
             target: "_blank",
-            class: "text-gray-700 transition underline hover:text-cx-purple"
+            class: "inline-flex text-center rounded-md border border-transparent bg-cx-purple px-8 py-2 text-xl font-medium text-white shadow-sm hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-800 focus:ring-offset-2 sm:w-auto"
   end
 
   def file
