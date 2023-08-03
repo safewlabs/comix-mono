@@ -4,9 +4,10 @@
   <div class="text-center pt-8 text-4xl font-bold">
     For Creators
   </div>
-  <div class="container my-12">
-      <div class="flex flex-wrap -mx-1 lg:-mx-4">
-        <div class="my-1 w-full md:w-1/2 lg:my-2 lg:px-2 lg:w-1/2">
+  <div class="max-w-screen-xl px-4 py-8 mx-auto sm:px-6 sm:py-12 lg:px-8">
+    <div class="flex flex-row">
+      <div class="px-2">
+        <div class="my-1 w-full">
             <article class="overflow-hidden rounded-lg border hover:shadow-lg">
                 <header class="flex items-center justify-center leading-tight p-2 md:p-4">
                     <h1 class="text-lg">
@@ -17,24 +18,18 @@
                 </header>
             </article>
         </div>
-        <div class="flex my-1 w-full md:w-1/2 lg:my-2 lg:px-2 lg:w-1/2 text-center">
-            <div class="text-4xl no-underline text-black m-auto">
-                Create &amp; Post your work.<br/>
-                <div class="text-xl">
-                  You can bring your work to life with our crowdfunding, sell back catalogue
+        <div class="flex my-1 w-full text-center mt-2">
+            <div class="text-2xl no-underline text-black m-auto">
+                Create &amp; Sell your work.<br/>
+                <div class="text-lg">
+                  You can bring your work to life with our crowdfunding, sell back catalogue &amp; issues
                   on our marketplace or add it to your crowdfunding campaign in just a few clicks!
                 </div>
             </div>
         </div>
-        <div class="flex my-1 w-full md:w-1/2 lg:my-2 lg:px-2 lg:w-1/2 text-center">
-            <div class="text-4xl no-underline text-black m-auto">
-                Get discovered<br/>
-                <div class="text-xl">
-                  Get discovered by new people through our marketplace.
-                </div>
-            </div>
-        </div>
-        <div class="my-1 w-full md:w-1/2 lg:my-2 lg:px-2 lg:w-1/2">
+      </div>
+      <div class="px-2">
+        <div class="my-1 w-full">
             <article class="overflow-hidden rounded-lg border hover:shadow-lg">
                 <header class="flex items-center justify-center leading-tight p-2 md:p-4">
                     <h1 class="text-lg">
@@ -45,10 +40,20 @@
                 </header>
             </article>
         </div>
-        <div class="my-1 w-full md:w-1/2 lg:my-2 lg:px-2 lg:w-1/2">
+        <div class="flex my-1 w-full text-center mt-2">
+            <div class="text-2xl no-underline text-black m-auto">
+                Get discovered<br/>
+                <div class="text-lg">
+                  Get discovered by new people through our marketplace.
+                </div>
+            </div>
+        </div>
+      </div>
+      <div class="px-2">
+        <div class="my-1 w-full">
             <article class="overflow-hidden rounded-lg border hover:shadow-lg">
                 <header class="flex items-center justify-center leading-tight p-2 md:p-4">
-                    <h1 class="text-lg">
+                    <h1 class="text-xl">
                         <p class="no-underline hover:underline text-black">
                             <%= image_tag "pixeltrue-study-from-books-1.svg" %>
                         </p>
@@ -56,17 +61,24 @@
                 </header>
             </article>
         </div>
-        <div class="flex my-1 w-full md:w-1/2 lg:my-2 lg:px-2 lg:w-1/2 text-center">
-            <div class="text-4xl no-underline text-black m-auto">
+        <div class="flex my-1 w-full text-center mt-2">
+            <div class="text-2xl no-underline text-black m-auto">
                 Speak directly with your fans.<br/>
-                <div class="text-xl">
+                <div class="text-lg">
                   Speak with your fans directly, retain them, survey ideas and retain them.
                 </div></br/>
-                <%= mail_to "contact@comix.one", "Get onboard",
-                    class: "px-4 leading-none border rounded text-black border-black font-black hover:border-transparent hover:text-cx-lavender-blush hover:bg-cx-purple mt-4 lg:mt-0"
-                %>
             </div>
         </div>
+      </div>
+    </div>
+  </div>
+  <div class="container my-12">
+      <div class="flex flex-wrap -mx-1 lg:-mx-4 text-center">
+        <p class="mb-4">
+            At this point, we're accepting Indie cretors and small press that have a back-catalogue and new projects planned this year.
+            Please fill out the form below and we will be in touch asap to get you onboard!
+        </p>
+        <iframe class="airtable-embed" src="https://airtable.com/embed/shrDp4z8uPE4qBXb1?backgroundColor=purple" frameborder="0" onmousewheel="" width="100%" height="533" style="background: transparent; border: 1px solid #ccc;"></iframe>
       </div>
   </div>
 </div>

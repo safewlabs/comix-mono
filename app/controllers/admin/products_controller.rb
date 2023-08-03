@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-class Admin::ProductsController < ApplicationController
-  before_action :set_product, only: [:edit, :update, :show]
+class Admin::ProductsController < AdminController
+  before_action :set_product, only: [:edit, :update, :show, :add_product_to_stripe]
   before_action :stores_grenre_creators, only: [:new, :edit]
 
   def index
@@ -22,6 +22,7 @@ class Admin::ProductsController < ApplicationController
     @product = Product.new(product_params)
     respond_to do |format|
       if @product.save
+        AddProductToStripeJob.perform_async(@product.id)
         format.html { redirect_to @product, notice: "Product was successfully created." }
         format.json { render :show, status: :created, location: @product }
       else

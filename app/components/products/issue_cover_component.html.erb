@@ -5,6 +5,11 @@
     <%= image_tag "https://res.cloudinary.com/drg9hguhu/image/upload/v1667569457/comix/78_tage_auf_der_stra%C3%9Fe_des_hasses_000_cover.jpg", class: "shadow-2xl hidden rounded-lg lg:block" %>
   <% end %>
 </div>
-<div class="mt-2 text-4xl hidden lg:flex items-center justify-center">
+<div class="mt-2 text-4xl hidden lg:flex flex-col items-center justify-center">
   <span class="mx-2 p-2">&#36;<%= @product.price %></span>
+  <% if is_onboarded? %>
+    <%= link_to "Buy", payments_stripe_checkout_path(product_id: @product.id), class: "inline-flex items-center justify-center rounded-md border border-transparent bg-cx-purple px-8 py-2 text-xl font-medium text-white shadow-sm hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-800 focus:ring-offset-2 sm:w-auto", data: { turbo: false } %>
+  <% else %>
+    Coming Soon
+  <% end %>
 </div>

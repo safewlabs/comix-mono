@@ -36,6 +36,9 @@ class Product < ApplicationRecord
   has_many :product_genres, dependent: :destroy
   has_many :genres, through: :product_genres
 
+  has_many :purchases, dependent: :destroy
+  has_many :user, through: :purchases
+
   has_one_attached :issue_cover, dependent: :destroy
   has_one_attached :file_attachment, dependent: :destroy
 end
