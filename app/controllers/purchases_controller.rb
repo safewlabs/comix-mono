@@ -5,4 +5,8 @@ class PurchasesController < ApplicationController
   def index
     @pagy, @purchases = pagy(current_user.purchases.order(created_at: :desc))
   end
+
+  def show
+    @product = Product.find_by(slug: params[:slug])
+  end
 end
