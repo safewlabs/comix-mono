@@ -3,7 +3,10 @@
 require "sidekiq/web"
 Rails.application.routes.draw do
   mount GraphiQL::Rails::Engine, at: "/graphiql", graphql_path: "/graphql"
+
+  get "/graphql", to: "graphql#execute"
   post "/graphql", to: "graphql#execute"
+
   devise_for :admin_users, path: "admin", path_names: {
     sign_in: "login",
     sign_out: "logout"
@@ -11,8 +14,8 @@ Rails.application.routes.draw do
 
   mount_graphql_devise_for(
     User,
-    at: "api/v1",
-    skip: [:register]
+    at: '/graphql_auth',
+    base_controller: CookiesController
   )
 
   namespace :admin do
