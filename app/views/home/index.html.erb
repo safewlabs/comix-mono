@@ -8,7 +8,11 @@
         Trending Comics
       </h2>
       <div class="mt-4">
-        <%= link_to "Browse all", comics_path, class: "inline-flex items-center justify-center rounded-md border border-transparent bg-cx-purple px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-800 focus:ring-offset-2 sm:w-auto" %>
+        <%= link_to "Browse all",
+                    comics_path,
+                    class: "inline-flex items-center justify-center rounded-md border border-transparent bg-cx-purple px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-800 focus:ring-offset-2 sm:w-auto",
+                    data: { "umami-event": "Home-Browse-All-Comics-Click" }
+        %>
       </div>
     </header>
     <ul class="grid gap-4 mt-4 sm:grid-cols-2 lg:grid-cols-4">
