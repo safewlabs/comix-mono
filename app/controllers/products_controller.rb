@@ -24,7 +24,6 @@ class ProductsController < ApplicationController
 
   def index
     onboarded_products = Product.where(store: Store.where(user: User.where.not(stripe_user_id: nil)))
-                                .order("RANDOM()")
     @pagy, @products = pagy(onboarded_products)
     set_meta_tags title: "Buy Comics",
           description: "Buy Comics by Indie Creators",
