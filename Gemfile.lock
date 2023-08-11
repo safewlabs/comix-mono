@@ -389,7 +389,7 @@ GEM
       sprockets (>= 3.0.0)
     stimulus-rails (1.2.2)
       railties (>= 6.0.0)
-    stripe (8.6.0)
+    stripe (8.7.0)
     tailwindcss-rails (2.0.30-x86_64-darwin)
       railties (>= 6.0.0)
     tailwindcss-rails (2.0.30-x86_64-linux)
