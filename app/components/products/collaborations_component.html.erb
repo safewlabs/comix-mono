@@ -4,7 +4,7 @@
                     class: "hover:text-cx-purple flex flex-col text-center items-center justify-center" do %>
             <%= render(CreatorProfiles::AvatarComponent.new(creator_profile: collaboration.creator_profile)) %>
             <div><%= collaboration.creator_profile&.name %></div>
-            <div><%= collaboration.collaboration_type&.humanize %></div>
+            <div><%= collaboration.creator_profile&.skills %></div>
         <% end %>
     <% end %>
 </div>
