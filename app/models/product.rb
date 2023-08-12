@@ -29,7 +29,7 @@
 class Product < ApplicationRecord
   include Sluggable
 
-  belongs_to :store
+  belongs_to :store, touch: true
   has_many :collaborations, dependent: :destroy
   has_many :creator_profiles, through: :collaborations
 
