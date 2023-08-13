@@ -28,6 +28,12 @@
 #
 class Product < ApplicationRecord
   include Sluggable
+  include PgSearch::Model
+  pg_search_scope :search_comics, against: [:name, :description], associated_against: {
+    store: [:name],
+    creator_profiles: [:name],
+    genres: [:name]
+  }
 
   belongs_to :store, touch: true
   has_many :collaborations, dependent: :destroy
