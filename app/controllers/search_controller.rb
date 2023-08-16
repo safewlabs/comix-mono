@@ -7,7 +7,7 @@ class SearchController < ApplicationController
     else
       @products = []
     end
-    
+
     respond_to do |format|
       format.turbo_stream
     end
