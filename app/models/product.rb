@@ -45,6 +45,8 @@ class Product < ApplicationRecord
   has_many :purchases, dependent: :destroy
   has_many :user, through: :purchases
 
-  has_one_attached :issue_cover, dependent: :destroy
+  has_one_attached :issue_cover, dependent: :destroy do |attachable|
+    attachable.variant :thumb, resize_to_fill: [150, 200]
+  end
   has_one_attached :file_attachment, dependent: :destroy
 end

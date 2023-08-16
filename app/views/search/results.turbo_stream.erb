@@ -1,0 +1,3 @@
+<%= turbo_stream.update "search_results" do %>
+  <%= render Search::ResultsComponent.new(products: @products) %>
+<% end %>

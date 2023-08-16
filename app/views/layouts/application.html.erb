@@ -20,6 +20,7 @@
   <body>
     <main>
       <%= render(NavbarComponent.new(user: current_user)) %>
+      <div id="search_results" class="z-50 absolute bg-white w-1/3 px-4 shadow-2xl rounded-b-lg border-b border-x" style="left:35%"></div>
       <%= yield %>
       <%= render(FooterComponent.new()) %>
     </main>
