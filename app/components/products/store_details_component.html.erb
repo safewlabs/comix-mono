@@ -2,7 +2,7 @@
   <div class="mt-4">
     <%= render(Stores::DisplayImageComponent.new(store: @product.store)) %>
   </div>
-  <div class="mt-4 text-2xl hover:text-cx-purple font-bold">
+  <div class="mt-4 text-2xl hover:text-cx-purple hover:underline font-bold">
     <%= @product.store.name %>
   </div>
 <% end %>
