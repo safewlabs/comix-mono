@@ -51,6 +51,6 @@ class Dashboard::ProfilesController < Dashboard::BaseController
     end
 
     def profile_params
-      params.require(:creator_profile).permit(:name, :avatar, :profile_cover, :bio, :website, :twitter, :instagram, :facebook, :tiktok, :email)
+      params.require(:creator_profile).permit(:name, :skills, :avatar, :profile_cover, :bio, :website, :twitter, :instagram, :facebook, :tiktok, :email)
     end
 end
