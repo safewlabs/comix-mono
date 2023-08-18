@@ -7,12 +7,12 @@ import * as ActiveStorage from "@rails/activestorage"
 import "vanilla-nested"
 import "chartkick"
 import "Chart.bundle"
-import NavbarController from "./navbar_controller.js"
+// import NavbarController from "../controllers/navbar_controller"
 
 // Eager load all controllers defined in the import map under controllers/**/*_controller
 ActiveStorage.start()
 eagerLoadControllersFrom("controllers", application)
-application.register('navbar', NavbarController)
+// application.register('navbar', NavbarController)
 application.register('tabs', Tabs)
 application.register('toggle', Toggle)
 application.register('dropdown', Dropdown)
