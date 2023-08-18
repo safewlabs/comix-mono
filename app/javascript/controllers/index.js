@@ -6,13 +6,13 @@ import * as ActiveStorage from "@rails/activestorage"
 import "vanilla-nested"
 import "chartkick"
 import "Chart.bundle"
-// import MenuController from "./menu_controller"
+import NavbarController from "./navbar_controller"
 
 // Eager load all controllers defined in the import map under controllers/**/*_controller
 import { eagerLoadControllersFrom } from "@hotwired/stimulus-loading"
 ActiveStorage.start()
 eagerLoadControllersFrom("controllers", application)
-// application.register('menu', MenuController)
+application.register('navbar', NavbarController)
 application.register('tabs', Tabs)
 application.register('toggle', Toggle)
 application.register('dropdown', Dropdown)
