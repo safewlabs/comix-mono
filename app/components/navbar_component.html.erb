@@ -105,11 +105,11 @@
         <%= link_to 'Articles', posts_path, class: "text-black font-black hover:text-cx-purple font-bold" %>
       </div>
       <div class="px-2 py-1">
-        <%= link_to 'Comics', comics_path, class: "text-black font-black hover:text-cx-purple font-bold" %>
+        <%= link_to 'Comics', comics_path, data: { "umami-event": "Mobile-Comics-Link-Click" }, class: "text-black font-black hover:text-cx-purple font-bold" %>
       </div>
       <% unless @user %>
         <div class="px-2 py-1">
-          <%= link_to 'Login', new_user_session_path, class: "text-black font-black hover:text-cx-purple font-bold" %>
+          <%= link_to 'Login', new_user_session_path, data: { "umami-event": "Mobile-Login-Link-Click" }, class: "text-black font-black hover:text-cx-purple font-bold" %>
         </div>
       <% else %>
         <div class="px-2 py-1">
