@@ -25,3 +25,4 @@ pin "module", to: "https://ga.jspm.io/npm:@jspm/core@2.0.1/nodelibs/browser/modu
 pin "path", to: "https://ga.jspm.io/npm:@jspm/core@2.0.1/nodelibs/browser/path.js"
 pin "process", to: "https://ga.jspm.io/npm:@jspm/core@2.0.1/nodelibs/browser/process-production.js"
 pin "vm", to: "https://ga.jspm.io/npm:@jspm/core@2.0.1/nodelibs/browser/vm.js"
+pin "tiny-slider", to: "https://ga.jspm.io/npm:tiny-slider@2.9.4/dist/tiny-slider.js"
