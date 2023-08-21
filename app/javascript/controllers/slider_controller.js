@@ -18,9 +18,11 @@ export default class extends Controller {
         responsive: {
           350: {
             items: 2,
+            gutter: 10,
           },
           500: {
             items: 4,
+            gutter: 20,
           },
         },
       });
