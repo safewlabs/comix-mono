@@ -8,14 +8,15 @@ export default class extends Controller {
         items: 4,
         slideBy: 'page',
         arrowKeys: true,
-        autoplayHoverPause: true,
         speed: 300,
-        autoplay: true,
         controls: false,
+        autoplay: true,
+        autoplayHoverPause: true,
+        autoplayButtonOutput: false,
         responsive: {
             350: {
-              items: 1,
-              controls: true,
+              items: 2,
+              controls: false,
               edgePadding: 30
             },
             500: {
