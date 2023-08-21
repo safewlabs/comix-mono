@@ -15,7 +15,7 @@
         %>
       </div>
     </header>
-    <ul class="items-slider grid gap-4 mt-4 sm:grid-cols-2 lg:grid-cols-4">
+    <ul class="items-slider">
       <% @onboarded_products .each do |product| %>
         <% cache product do %>
           <%= render(Products::CardComponent.new(product: product, number_of_products: 4)) %>
