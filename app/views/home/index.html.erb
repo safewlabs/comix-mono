@@ -16,7 +16,7 @@
       </div>
     </header>
     <ul class="items-slider">
-      <% @onboarded_products .each do |product| %>
+      <% @onboarded_products.each do |product| %>
         <% cache product do %>
           <%= render(Products::CardComponent.new(product: product, number_of_products: 4)) %>
         <% end %>
