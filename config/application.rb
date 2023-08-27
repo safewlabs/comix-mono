@@ -26,12 +26,11 @@ module Comix
     Rails.application.config.assets.paths << Rails.root.join("app", "assets", "fonts")
     config.middleware.use Rack::Cors do
       allow do
-        origins '*'
-        resource '*',
+        origins "*"
+        resource "*",
                  headers: :any,
                  expose: %w(access-token expiry token-type uid client),
                  methods: %i(get post options put delete)
-    
       end
     end
   end

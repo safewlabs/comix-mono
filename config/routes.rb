@@ -2,7 +2,7 @@
 
 require "sidekiq/web"
 Rails.application.routes.draw do
-  Rails.env.development?
+  if Rails.env.development?
     mount GraphiQL::Rails::Engine, at: "/graphiql", graphql_path: "/graphql"
   end
 
@@ -16,7 +16,7 @@ Rails.application.routes.draw do
 
   mount_graphql_devise_for(
     User,
-    at: '/graphql_auth',
+    at: "/graphql_auth",
     base_controller: CookiesController
   )
 
