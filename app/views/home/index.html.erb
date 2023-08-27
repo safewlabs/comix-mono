@@ -1,18 +1,22 @@
 <%= render(PageTitleComponent.new(title: "Home")) %>
 <%= render(Marketing::HeroComponent.new(user: current_user)) %>
 
-<section>
+<section data-controller="slider">
   <div class="max-w-screen-xl px-4 py-8 mx-auto sm:px-6 sm:py-12 lg:px-8">
     <header>
       <h2 class="text-xl font-bold text-gray-900 sm:text-3xl">
         Trending Comics
       </h2>
       <div class="mt-4">
-        <%= link_to "Browse all", comics_path, class: "inline-flex items-center justify-center rounded-md border border-transparent bg-cx-purple px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-800 focus:ring-offset-2 sm:w-auto" %>
+        <%= link_to "Browse all",
+                    comics_path,
+                    class: "inline-flex items-center justify-center rounded-md border border-transparent bg-cx-purple px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-800 focus:ring-offset-2 sm:w-auto",
+                    data: { "umami-event": "Home-Browse-All-Comics-Click" }
+        %>
       </div>
     </header>
-    <ul class="grid gap-4 mt-4 sm:grid-cols-2 lg:grid-cols-4">
-      <% @onboarded_products .each do |product| %>
+    <ul class="items-slider">
+      <% @onboarded_products.each do |product| %>
         <% cache product do %>
           <%= render(Products::CardComponent.new(product: product, number_of_products: 4)) %>
         <% end %>
@@ -21,14 +25,14 @@
   </div>
 </section>
 
-<section>
+<section data-controller="slider">
   <div class="max-w-screen-xl px-4 py-8 mx-auto sm:px-6 sm:py-12 lg:px-8">
     <header>
       <h2 class="text-xl font-bold text-gray-900 sm:text-3xl">
         Coming Soon
       </h2>
     </header>
-    <ul class="grid gap-4 mt-4 sm:grid-cols-2 lg:grid-cols-4">
+    <ul class="items-slider">
       <% @coming_soon_products.each do |product| %>
         <% cache product do %>
           <%= render(Products::CardComponent.new(product: product, number_of_products: 4)) %>

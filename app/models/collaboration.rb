@@ -22,8 +22,8 @@
 #  fk_rails_...  (product_id => products.id)
 #
 class Collaboration < ApplicationRecord
-  belongs_to :product
-  belongs_to :creator_profile
+  belongs_to :product, touch: true
+  belongs_to :creator_profile, touch: true
 
   enum collaboration_type: { writer: 0, artist: 1, letterrer: 2, color: 3 }
 end

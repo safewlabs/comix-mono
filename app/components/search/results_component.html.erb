@@ -1,0 +1,15 @@
+<ul>
+  <% @products.each do |product| %>
+    <li class="py-2">
+      <%= link_to product_path(product), class: "border border-gray-600 rounded inset-xl p-2 flex flex-row overflow-hidden group justify-center underline cursor-pointer", data: {"umami-event": "Search-Product-Click", "umami-event-product": product.name} do %>
+        <div class="w-1/2">
+          <%= product_image(product) %>
+        </div>
+        <div class="w-1/2 py-4 text-xl">
+          <%= highlight(product.name, params.dig(:search_term)) %><br/>
+          <%= product.store.name %>
+        </div>
+      <% end %>
+    </li>
+  <% end %>
+</ul>

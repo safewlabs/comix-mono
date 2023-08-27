@@ -21,6 +21,6 @@
 #  fk_rails_...  (user_id => users.id)
 #
 class Purchase < ApplicationRecord
-  belongs_to :user
-  belongs_to :product
+  belongs_to :user, touch: true
+  belongs_to :product, touch: true
 end

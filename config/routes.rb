@@ -39,6 +39,11 @@ Rails.application.routes.draw do
     sign_up: "signup",
   }
 
+  resources :search do
+    collection do
+      post :results
+    end
+  end
   resources :projects, param: :slug
   resources :posts, param: :slug, only: [:index, :show]
   resources :profiles, param: :slug, only: [:show]

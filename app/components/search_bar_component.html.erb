@@ -1,0 +1,7 @@
+<%= form_with url: results_search_index_path, method: :post do |form| %>
+    <%= form.search_field :search_term,
+                          value: params[:search_term],
+                          oninput: "this.form.requestSubmit()",
+                          class: "h-10 w-full rounded-lg border-none bg-white pe-10 ps-4 text-sm shadow-sm sm:w-56",
+                          placeholder: "Search for Products" %>
+<% end %>

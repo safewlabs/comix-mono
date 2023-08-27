@@ -28,8 +28,14 @@
 #
 class Product < ApplicationRecord
   include Sluggable
+  include PgSearch::Model
+  pg_search_scope :search_comics, against: [:name, :description], associated_against: {
+    store: [:name],
+    creator_profiles: [:name],
+    genres: [:name]
+  }
 
-  belongs_to :store
+  belongs_to :store, touch: true
   has_many :collaborations, dependent: :destroy
   has_many :creator_profiles, through: :collaborations
 
@@ -39,6 +45,8 @@ class Product < ApplicationRecord
   has_many :purchases, dependent: :destroy
   has_many :user, through: :purchases
 
-  has_one_attached :issue_cover, dependent: :destroy
+  has_one_attached :issue_cover, dependent: :destroy do |attachable|
+    attachable.variant :thumb, resize_to_fill: [150, 200]
+  end
   has_one_attached :file_attachment, dependent: :destroy
 end

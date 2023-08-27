@@ -1,8 +1,12 @@
 <% if @user && !@user.confirmed? %>
   <%= render(AnnouncementComponent.new(user: @user)) %>
 <% end %>
-<header aria-label="Site Header" class="bg-white">
-  <div class="mx-auto max-w-screen-xl p-4 lg:px-8">
+<header
+  data-controller="navbar"
+  data-navbar-state-value="false"
+  aria-label="Site Header"
+  class="bg-white">
+  <div class="hidden lg:block mx-auto max-w-screen-xl p-4 lg:px-8">
     <div class="flex h-16 items-center justify-between">
       <div class="flex-1 md:flex md:items-center md:gap-12">
         <%= link_to root_path, class: "flex flex-row items-center" do %>
@@ -14,18 +18,19 @@
           <li class="flex flex-row">
             <%= link_to 'Our Story',
               about_path,
-              class: "text-black font-black hover:text-cx-purple font-bold" %>
+              class: "text-black font-black hover:text-cx-purple font-bold hidden lg:block" %>
           <li>
           <li>
             <%= link_to 'Articles',
               posts_path,
-              class: "text-black font-black hover:text-cx-purple font-bold" %>
+              class: "text-black font-black hover:text-cx-purple font-bold hidden lg:block" %>
           </li>
         </ul>
+        <%= render(SearchBarComponent.new()) %>
       </div>
 
       <div class="md:flex md:items-center md:gap-12">
-        <nav data-target="topNav" aria-label="Site Nav" class="navbar-menu hidden md:block">
+        <nav aria-label="Site Nav" class="navbar-menu hidden md:block">
           <ul class="flex items-center gap-6 text-lg">
             <li class="flex flex-row">
               <%= link_to 'Comics',
@@ -55,7 +60,7 @@
                 <div class="inline-block text-sm px-4 py-2 leading-none rounded no-underline text-gray hover:text-gray-900 hover:bg-white mt-4 lg:mt-0">
                   <div class="relative" data-controller="dropdown">
                     <div data-action="click->dropdown#toggle click@window->dropdown#hide" role="button" data-dropdown-target="button" tabindex="0" class="inline-block select-none">
-                      <span class="appearance-none flex items-center inline-block text-gray-700">
+                      <span class="appearance-none flex items-center text-gray-700">
                         <%= render(Icons::AvatarComponent.new()) %>
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" class="h-4 w-4"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"></path></svg>
                       </span>
@@ -73,30 +78,46 @@
             <% end %>
           </ul>
         </nav>
-
-        <div class="flex items-center gap-4">
-          <div class="block md:hidden">
-            <button
-              class="navbar-burger rounded bg-gray-100 p-2 text-gray-600 transition hover:text-gray-600/75"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="h-5 w-5"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
-              </svg>
-            </button>
-          </div>
-        </div>
       </div>
+    </div>
+  </div>
+
+    <div class="flex justify-between px-4 py-1 sm:p-0 items-center lg:hidden">
+      <%= link_to root_path, class: "flex flex-row items-center" do %>
+          <%= render(LogoComponent.new(classes: "w-16")) %>
+          <div class="text-3xl bold font-black self-center">COMI<i>X</i></div>
+      <% end %>
+      <div class="sm:hidden">
+        <button class="rounded bg-gray-100 p-2 text-gray-600 transition hover:text-gray-600/75"
+          type="button"
+          data-action="click->navbar#toggle" >
+          <span class="sr-only">Open main menu</span>
+          <svg class="h-8 w-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+            <path data-navbar-target="x"    stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" class="hidden" />
+            <path data-navbar-target="bars" stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div class="hidden lg:hidden sm:flex sm:flex-row px-2 pt-2 pb-4 sm:pb-2" data-navbar-target="menu">
+      <div class="px-2 py-1">
+        <%= link_to 'Articles', posts_path, class: "text-black font-black hover:text-cx-purple font-bold" %>
+      </div>
+      <div class="px-2 py-1">
+        <%= link_to 'Comics', comics_path, data: { "umami-event": "Mobile-Comics-Link-Click" }, class: "text-black font-black hover:text-cx-purple font-bold" %>
+      </div>
+      <% unless @user %>
+        <div class="px-2 py-1">
+          <%= link_to 'Login', new_user_session_path, data: { "umami-event": "Mobile-Login-Link-Click" }, class: "text-black font-black hover:text-cx-purple font-bold" %>
+        </div>
+      <% else %>
+        <div class="px-2 py-1">
+          <%= link_to 'Sign Out', destroy_user_session_path, data: {turbo_method: :delete}, class: "underline font-black hover:text-cx-purple font-bold" %>
+        </div>
+      <% end %>
+
+      <%= render(SearchBarComponent.new()) %>
     </div>
   </div>
 </header>

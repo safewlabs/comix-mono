@@ -7,7 +7,7 @@
   <div class="mt-8 flex flex-col">
     <div class="-my-2 -mx-4 overflow-x-auto sm:-mx-6 lg:-mx-8">
       <div class="inline-block min-w-full py-2 align-middle md:px-6 lg:px-8">
-        <%= form_with url: new_dashboard_store_path(@store) do |form| %>
+        <%= form_with model: [:dashboard, @store] do |form| %>
           <%= render partial: "form", locals: { form: form } %>
           <%= form.submit class: "inline-flex items-center justify-center rounded-md border border-transparent bg-cx-purple px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-800 focus:ring-offset-2 sm:w-auto" %>
         <% end %>

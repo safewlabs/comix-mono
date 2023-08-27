@@ -22,6 +22,7 @@ class Admin::CreatorProfilesController < AdminController
     @profile = CreatorProfile.new(profile_params)
     respond_to do |format|
       if @profile.save
+        @profile.managers << current_user
         format.html { redirect_to profile_path(@profile), notice: "CreatorProfile was successfully created." }
         format.json { render :show, status: :created, location: @profile }
       else

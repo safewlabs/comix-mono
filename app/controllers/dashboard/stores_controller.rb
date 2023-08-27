@@ -49,6 +49,6 @@ class Dashboard::StoresController < Dashboard::BaseController
       end
 
       def store_params
-        params.require(:store).permit(:name, :slug, :description, :cover_image, :display_image, :user_id)
+        params.require(:store).permit(:name, :description, :cover_image, :display_image, :user_id)
       end
 end

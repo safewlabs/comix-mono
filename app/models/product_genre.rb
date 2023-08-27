@@ -21,6 +21,6 @@
 #  fk_rails_...  (product_id => products.id)
 #
 class ProductGenre < ApplicationRecord
-  belongs_to :product
-  belongs_to :genre
+  belongs_to :product, touch: true
+  belongs_to :genre, touch: true
 end
