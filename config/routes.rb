@@ -2,7 +2,9 @@
 
 require "sidekiq/web"
 Rails.application.routes.draw do
-  mount GraphiQL::Rails::Engine, at: "/graphiql", graphql_path: "/graphql"
+  if Rails.env.development?
+    mount GraphiQL::Rails::Engine, at: "/graphiql", graphql_path: "/graphql"
+  end
   post "/graphql", to: "graphql#execute"
   devise_for :admin_users, path: "admin", path_names: {
     sign_in: "login",
