@@ -13,13 +13,6 @@ Rails.application.routes.draw do
     sign_in: "login",
     sign_out: "logout"
   }
-
-  mount_graphql_devise_for(
-    User,
-    at: "/graphql_auth",
-    base_controller: CookiesController
-  )
-
   namespace :admin do
     root "dashboard#index"
     resources :posts, param: :slug

@@ -7,7 +7,7 @@ class ComixSchema < GraphQL::Schema
     query:            Types::QueryType,
     mutation:         Types::MutationType,
     resource_loaders: [
-      GraphqlDevise::ResourceLoader.new(User, only: [:login, :logout, :update_password_with_token, :send_password_reset_with_token])
+      GraphqlDevise::ResourceLoader.new(User, only: [:login, :logout, :update_password_with_token, :send_password_reset_with_token, :confirm_registration_with_token])
     ]
   )
 
