@@ -4,7 +4,7 @@ class GraphqlController < ApplicationController
   # If accessing from outside this domain, nullify the session
   # This allows for outside API access while preventing CSRF attacks,
   # but you'll have to authenticate your user separately
-  protect_from_forgery with: :exception
+  protect_from_forgery unless: -> { request.format.json? }
   skip_before_action :verify_authenticity_token
   include GraphqlDevise::SetUserByToken
   include ActionController::Cookies
