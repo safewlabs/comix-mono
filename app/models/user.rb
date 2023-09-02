@@ -58,15 +58,16 @@ class User < ApplicationRecord
            through: :creator_profiles_managers
   has_many :purchases, dependent: :destroy
   has_many :products, through: :purchases
-  validates :first_name, :last_name, :email, :password, presence: true
-  validates_confirmation_of :password
-  before_validation :set_uid
+  # validates :first_name, :last_name, :email, :password, presence: true
+  # validates_confirmation_of :password
+  before_validation :set_uid_provider
 
   def can_receive_payments?
     uid? && provider? && access_code? && publishable_key?
   end
 
-  def set_uid
-    self.uid = SecureRandom.uuid
+  def set_uid_provider
+    self.provider = "email"
+    self.uid = self.email
   end
 end

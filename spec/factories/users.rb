@@ -44,7 +44,7 @@ FactoryBot.define do
     email { Faker::Internet.email }
     password { "password" }
     password_confirmation { "password" }
-    uid { SecureRandom.uuid }
+    uid { email }
 
     after(:create) do |user|
       user.confirm

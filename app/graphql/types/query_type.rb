@@ -12,7 +12,16 @@ module Types
     field_class GraphqlDevise::Types::BaseField
     field :test_field, String, null: false,
       description: "An example field added by the generator"
-    def test_field
+    field :purchases, [Types::PurchaseType], description: "List of Purchases for a user" do
+      argument :user_id, ID, required: true
+    end
+
+    def purchases(user_id:)
+      Purchase.where(user_id:)
+    end
+
+    def
+    def(test_field)
       "Hello World!"
     end
   end

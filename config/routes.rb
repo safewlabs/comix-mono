@@ -5,18 +5,14 @@ Rails.application.routes.draw do
   if Rails.env.development?
     mount GraphiQL::Rails::Engine, at: "/graphiql", graphql_path: "/graphql"
   end
+
+  get "/graphql", to: "graphql#execute"
   post "/graphql", to: "graphql#execute"
+
   devise_for :admin_users, path: "admin", path_names: {
     sign_in: "login",
     sign_out: "logout"
   }
-
-  mount_graphql_devise_for(
-    User,
-    at: "api/v1",
-    skip: [:register]
-  )
-
   namespace :admin do
     root "dashboard#index"
     resources :posts, param: :slug
