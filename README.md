@@ -129,3 +129,108 @@ $ overcommit --install
 ```
 
 You're all set 🙌 !!
+
+### API Doc
+
+Mutations
+
+`userLogin` mutation is used for logging into the a user's account. In order to make subsequent requests, you would need `accessToken`, `client` and `uid`. So make sure you extract that for the next one.
+
+```
+mutation UserLogin {
+    userLogin(email: "lyman@breitenberg-jacobson.biz", password: "password") {
+        authenticatable {
+            confirmationSentAt
+            confirmedAt
+            createdAt
+            currentSignInAt
+            currentSignInIp
+            email
+            firstName
+            id
+            lastName
+            lastSignInAt
+            lastSignInIp
+            purchasesCount
+            rememberCreatedAt
+            signInCount
+            unconfirmedEmail
+            updatedAt
+        }
+        credentials {
+            accessToken
+            client
+            expiry
+            tokenType
+            uid
+        }
+    }
+}
+```
+
+Logout
+
+```
+mutation UserLogout {
+    userLogout {
+        authenticatable {
+            confirmationSentAt
+            confirmedAt
+            createdAt
+            currentSignInAt
+            currentSignInIp
+            email
+            firstName
+            id
+            lastName
+            lastSignInAt
+            lastSignInIp
+            purchasesCount
+            rememberCreatedAt
+            signInCount
+            unconfirmedEmail
+            updatedAt
+        }
+    }
+}
+```
+
+Queries
+
+For all the queries, you would need to pass the headers you've received from the `userLogin` mutation, somewhat like below :
+
+```
+const client = new ApolloClient({
+  cache,
+  link: new HttpLink({
+    uri: 'http://localhost:3000/graphql',
+    headers: {
+      "access-token": asyncStorage.getItem('access-token'),
+      "client": asyncStorage.getItem('client'),
+      "uid": asyncStorage.getItem('uid')
+    },
+  }),
+});
+```
+
+```
+query Purchases {
+    purchases(userId: "65") {
+        id
+        product {
+            ageRating
+            createdAt
+            description
+            fileAttachment
+            id
+            name
+            pageCount
+            price
+            releaseDate
+            slug
+            storeId
+            updatedAt
+        }
+    }
+}
+```
