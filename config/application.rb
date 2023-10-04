@@ -24,14 +24,5 @@ module Comix
     # config.eager_load_paths << Rails.root.join("extras")
     Rails::Html::WhiteListSanitizer.allowed_tags << "iframe"
     Rails.application.config.assets.paths << Rails.root.join("app", "assets", "fonts")
-    config.middleware.use Rack::Cors do
-      allow do
-        origins "*"
-        resource "*",
-                 headers: :any,
-                 expose: %w(access-token expiry token-type uid client),
-                 methods: %i(get post options put delete)
-      end
-    end
   end
 end
