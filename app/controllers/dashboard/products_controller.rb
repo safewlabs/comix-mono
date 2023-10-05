@@ -27,6 +27,7 @@ class Dashboard::ProductsController < Dashboard::BaseController
     @product = Product.new(product_params)
     respond_to do |format|
       if @product.save
+        AddProductToStripeJob.perform_async(@product.id)
         format.html { redirect_to [:dashboard, @product], notice: "Product was successfully created." }
         format.json { render :show, status: :created, location: @product }
       else
