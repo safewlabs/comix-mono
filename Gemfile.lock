@@ -203,7 +203,7 @@ GEM
     jmespath (1.6.2)
     json (2.6.3)
     language_server-protocol (3.17.0.3)
-    loofah (2.21.3)
+    loofah (2.21.4)
       crass (~> 1.0.2)
       nokogiri (>= 1.12.0)
     mail (2.8.1)
@@ -410,7 +410,7 @@ GEM
       railties (>= 6.0.0)
     thor (1.2.2)
     timeout (0.4.0)
-    turbo-rails (1.4.0)
+    turbo-rails (1.5.0)
       actionpack (>= 6.0.0)
       activejob (>= 6.0.0)
       railties (>= 6.0.0)
@@ -489,7 +489,7 @@ DEPENDENCIES
   stimulus-rails
   stripe
   tailwindcss-rails
-  turbo-rails (~> 1.4.0)
+  turbo-rails (~> 1.5.0)
   tzinfo-data
   vanilla_nested!
   view_component
