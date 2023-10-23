@@ -194,6 +194,8 @@ GEM
     importmap-rails (1.2.1)
       actionpack (>= 6.0.0)
       railties (>= 6.0.0)
+    invisible_captcha (2.1.0)
+      rails (>= 5.2)
     io-console (0.6.0)
     irb (1.8.3)
       rdoc
@@ -241,6 +243,8 @@ GEM
     net-smtp (0.4.0)
       net-protocol
     nio4r (2.5.9)
+    nokogiri (1.15.4-arm64-darwin)
+      racc (~> 1.4)
     nokogiri (1.15.4-x86_64-darwin)
       racc (~> 1.4)
     nokogiri (1.15.4-x86_64-linux)
@@ -410,6 +414,8 @@ GEM
       railties (>= 6.0.0)
     stringio (3.0.8)
     stripe (10.0.0)
+    tailwindcss-rails (2.0.31-arm64-darwin)
+      railties (>= 6.0.0)
     tailwindcss-rails (2.0.31-x86_64-darwin)
       railties (>= 6.0.0)
     tailwindcss-rails (2.0.31-x86_64-linux)
@@ -447,6 +453,7 @@ GEM
     zeitwerk (2.6.12)
 
 PLATFORMS
+  arm64-darwin-22
   x86_64-darwin-21
   x86_64-linux
 
@@ -472,6 +479,7 @@ DEPENDENCIES
   httparty
   image_processing (~> 1.2)
   importmap-rails
+  invisible_captcha
   jbuilder
   meta-tags
   money-rails
