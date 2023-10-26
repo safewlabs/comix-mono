@@ -21,7 +21,7 @@ gem "puma", "~> 6.0"
 gem "importmap-rails"
 
 # Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
-gem "turbo-rails", "~> 1.4.0"
+gem "turbo-rails", "~> 1.5.0"
 
 # Hotwire's modest JavaScript framework [https://stimulus.hotwired.dev]
 gem "stimulus-rails"
@@ -36,6 +36,7 @@ gem "aws-sdk-s3"
 # Use Redis adapter to run Action Cable in production
 gem "redis", "~> 5.0"
 gem "sidekiq"
+gem "invisible_captcha"
 
 gem "vanilla_nested", github: "arielj/vanilla-nested", branch: :main
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]

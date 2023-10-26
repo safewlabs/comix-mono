@@ -30,6 +30,7 @@
                             placeholder: "Email",
                             class: "appearance-none rounded-md relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-purple-800 focus:border-purple-800 focus:z-10 sm:text-sm" %>
         </div>
+        <%= f.invisible_captcha :sub_name %>
         <div class="pt-2 pb-4">
           <label for="password" class="sr-only">Password</label>
           <% if @minimum_password_length %>
