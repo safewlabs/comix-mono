@@ -12,6 +12,7 @@
 #  price             :decimal(5, 2)
 #  release_date      :datetime
 #  slug              :string
+#  video_url         :string
 #  created_at        :datetime         not null
 #  updated_at        :datetime         not null
 #  store_id          :bigint           not null

@@ -2,7 +2,7 @@
 
 import { application } from "controllers/application"
 import { eagerLoadControllersFrom } from "@hotwired/stimulus-loading"
-import { Tabs, Toggle, Dropdown } from "tailwindcss-stimulus-components"
+import { Tabs, Toggle, Dropdown, Modal } from "tailwindcss-stimulus-components"
 import * as ActiveStorage from "@rails/activestorage"
 import "vanilla-nested"
 import "chartkick"
@@ -14,3 +14,4 @@ eagerLoadControllersFrom("controllers", application)
 application.register('tabs', Tabs)
 application.register('toggle', Toggle)
 application.register('dropdown', Dropdown)
+application.register('modal', Modal)

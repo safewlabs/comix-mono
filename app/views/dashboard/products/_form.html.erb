@@ -60,6 +60,15 @@
     </div>
 </div>
 
+<div>
+    <%= form.label :video_url, class: "block text-sm font-medium text-gray-700 py-2" %>
+    <div class="mt-1">
+        <%= form.text_field :video_url,
+            class: "block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm",
+            placeholder: "Paste the YouTube video code after v=" %>
+    </div>
+</div>
+
 <%= form.hidden_field :store_id, value: @store.id %>
 
 <div>
