@@ -28,6 +28,7 @@ Rails.application.routes.draw do
   get "about", to: "pages#about", as: "about"
   get "for-creators", to: "pages#for_creators", as: "for_creators"
   get "comics", to: "products#index", as: "comics"
+  get "comics/:grenre_slug", to: "products#genres", as: "genres"
   devise_for :users, controllers: { registrations: "users/registrations" }, path: "", path_names: {
     sign_in: "login",
     sign_out: "logout",

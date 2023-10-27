@@ -11,7 +11,8 @@ module.exports = {
   ],
   theme: {
     fontFamily: {
-      body: ['Poppins', 'sans-serif']
+      body: ['Poppins', 'sans-serif'],
+      horror: ['Creepster']
     },
     extend: {
       spacing: {
