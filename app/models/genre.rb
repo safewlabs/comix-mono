@@ -11,7 +11,6 @@
 #  updated_at :datetime         not null
 #
 class Genre < ApplicationRecord
-  include Sluggable
   validates :name, uniqueness: true
   has_many :product_genres
   has_many :products, through: :product_genres

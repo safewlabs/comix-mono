@@ -7,7 +7,7 @@
       <% cache @genres, expires_in: 60.seconds do %>
         <% @genres.each do |genre| %>
           <li class="p-6 border border-solid border-gray-300 rounded-xl mx-4 font-bold text-xl">
-            <%= link_to genre.name, genres_path(genre.name) %>
+            <%= link_to genre.name, genres_path(genre.slug) %>
           </li>
         <% end %>
       <% end %>
