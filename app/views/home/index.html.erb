@@ -1,6 +1,20 @@
 <%= render(PageTitleComponent.new(title: "Home")) %>
 <%= render(Marketing::HeroComponent.new(user: current_user)) %>
 
+<section>
+  <div class="max-w-screen-xl px-4 py-8 mx-auto sm:px-6 sm:py-12 lg:px-8">
+    <ul class="flex flex-row justify-center items-center">
+      <% cache @genres, expires_in: 60.seconds do %>
+        <% @genres.each do |genre| %>
+          <li class="p-6 border border-solid border-gray-300 rounded-xl mx-4 font-bold text-xl">
+            <%= link_to genre.name, genres_path(genre.name) %>
+          </li>
+        <% end %>
+      <% end %>
+    </ul>
+  </div>
+</section>
+
 <section data-controller="slider">
   <div class="max-w-screen-xl px-4 py-8 mx-auto sm:px-6 sm:py-12 lg:px-8">
     <header>

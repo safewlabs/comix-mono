@@ -2,6 +2,7 @@
 
 class HomeController < ApplicationController
   def index
+    @genres = Genre.all
     @onboarded_products = Product.where(store: Store.where(user: User.where.not(stripe_user_id: nil)))
                                  .order("RANDOM()")
                                  .take(8)
