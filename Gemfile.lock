@@ -171,7 +171,7 @@ GEM
     graphiql-rails (1.9.0)
       railties
       sprockets-rails
-    graphql (2.1.5)
+    graphql (2.1.6)
       racc (~> 1.4)
     graphql_devise (1.4.0)
       devise_token_auth (>= 0.1.43, < 2.0)
@@ -275,7 +275,7 @@ GEM
       nio4r (~> 2.0)
     pundit (2.3.1)
       activesupport (>= 3.0.0)
-    racc (1.7.1)
+    racc (1.7.2)
     rack (2.2.8)
     rack-cors (2.0.1)
       rack (>= 2.0.0)
