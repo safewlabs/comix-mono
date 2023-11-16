@@ -1,5 +1,5 @@
 <li>
-  <%= link_to product_path(@creator_profile), class: "flex flex-col items-center justify-center overflow-hidden group", data: {"umami-event": "Creator-Card-Creator-Click", "umami-event-product": @creator_profile.name} do %>
+  <%= link_to profile_path(@creator_profile), class: "flex flex-col items-center justify-center overflow-hidden group", data: {"umami-event": "Creator-Card-Creator-Click", "umami-event-product": @creator_profile.name} do %>
     <%= render(CreatorProfiles::CoverImageComponent.new(creator_profile: @creator_profile, class_names: "rounded-lg")) %>
     <div class="-mt-4">
         <%= render(CreatorProfiles::AvatarComponent.new(creator_profile: @creator_profile)) %>
