@@ -9,6 +9,7 @@ class HomeController < ApplicationController
     @coming_soon_products = Product.where(store: Store.where(user: User.where(stripe_user_id: nil)))
                                    .order("RANDOM()")
                                    .take(8)
+    @creator_profiles = CreatorProfile.order("RANDOM()").take(8)
     @posts = Post.published.last(3)
     set_meta_tags title: "Home",
       description: "Comix home",
