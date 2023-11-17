@@ -10,7 +10,7 @@ gem "rails", "~> 7.0.3"
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "propshaft"
-
+gem "terser"
 # Use postgres as the database for Active Record
 gem "pg"
 
