@@ -8,15 +8,22 @@ module Types
     field :page_count, Integer
     field :release_date, GraphQL::Types::ISO8601DateTime
     field :age_rating, String
-    field :store_id, Integer, null: false
     field :slug, String
     field :created_at, GraphQL::Types::ISO8601DateTime, null: false
     field :updated_at, GraphQL::Types::ISO8601DateTime, null: false
     field :description, String
     field :file_attachment, String
+    field :issue_cover, String
+    field :store, Types::StoreType, null: false
 
     def file_attachment
       Rails.application.routes.url_helpers.rails_blob_url(object.file_attachment,
+                                                          disposition: "preview",
+                                                          host: "comix.one")
+    end
+
+    def issue_cover
+      Rails.application.routes.url_helpers.rails_blob_url(object.issue_cover,
                                                           disposition: "preview",
                                                           host: "comix.one")
     end
