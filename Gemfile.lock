@@ -336,7 +336,7 @@ GEM
     rspec-mocks (3.12.6)
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.12.0)
-    rspec-rails (6.0.4)
+    rspec-rails (6.1.0)
       actionpack (>= 6.1)
       activesupport (>= 6.1)
       railties (>= 6.1)
@@ -497,7 +497,7 @@ DEPENDENCIES
   rails (~> 7.0.3)
   redis (~> 5.0)
   rolify
-  rspec-rails (~> 6.0.0)
+  rspec-rails (~> 6.1.0)
   rubocop-rails
   rubocop-rails_config
   rubocop-rspec
