@@ -2,7 +2,7 @@
 <%= render(Marketing::HeroComponent.new(user: current_user)) %>
 
 <section>
-  <div class="max-w-screen-xl px-4 py-8 mx-auto sm:px-6 sm:py-12 lg:px-8">
+  <div class="max-w-screen-xl px-4 py-2 mx-auto sm:px-6 lg:px-8">
     <ul class="flex flex-wrap flex-row justify-center items-center">
       <% cache @genres, expires_in: 60.seconds do %>
         <% @genres.each do |genre| %>
@@ -16,7 +16,7 @@
 </section>
 
 <section data-controller="slider">
-  <div class="max-w-screen-xl px-4 py-8 mx-auto sm:px-6 sm:py-12 lg:px-8">
+  <div class="max-w-screen-xl px-4 py-2 mx-auto sm:px-6 lg:px-8">
     <header>
       <h2 class="text-xl font-bold text-gray-900 sm:text-3xl">
         Creators
@@ -33,7 +33,7 @@
 </section>
 
 <section data-controller="slider">
-  <div class="max-w-screen-xl px-4 py-8 mx-auto sm:px-6 sm:py-12 lg:px-8">
+  <div class="max-w-screen-xl px-4 py-2 mx-auto sm:px-6 lg:px-8">
     <header>
       <h2 class="text-xl font-bold text-gray-900 sm:text-3xl">
         Trending Comics
@@ -56,8 +56,79 @@
   </div>
 </section>
 
+<section>
+  <div class="max-w-screen-xl px-4 py-2 mx-auto sm:px-6 lg:px-8">
+    <header>
+      <h2 class="text-xl font-bold text-gray-900 sm:text-3xl">
+        Featured on
+      </h2>
+    </header>
+    <ul class="flex flex-row">
+      <li class="p-8 text-center text-lg font-bold">
+        <a href="https://indiecomicszone.com/interview-with-saurabh-bhatia-comix-one/"
+           class="flex flex-col"
+           target="_blank">
+          <img src="https://res.cloudinary.com/drg9hguhu/image/upload/v1701517285/indiecomicszone_aeuvvv.jpg"
+               class="rounded-lg"
+               width="200px" />
+          Indie Comics Zone
+        </a>
+      </li>
+      <li class="p-8 text-center text-lg font-bold">
+        <a href="https://geek-network.com/comix-comics-platform/"
+           class="flex flex-col"
+           target="_blank">
+          <img src="https://res.cloudinary.com/drg9hguhu/image/upload/v1701517285/GN-Logo-Gradient_nmmhzu.png"
+               class="rounded-lg"
+               width="200px" />
+          Geek Network
+        </a>
+      </li>
+      <li class="p-8 text-center text-lg font-bold">
+        <a href="https://www.youtube.com/watch?v=V4Rs0fcFdpY"
+           class="flex flex-col"
+            target="_blank">
+          <img src="https://res.cloudinary.com/drg9hguhu/image/upload/v1701517285/world-at-war-comics_nnggj9.jpg"
+               class="rounded-lg"
+               width="200px" />
+          World at war comics
+        </a>
+      </li>
+      <li class="p-8 text-center text-lg font-bold">
+        <a href="https://scpod.net/episodes/comixone-the-place-for-independent-comics"
+           class="flex flex-col" >
+          <img src="https://res.cloudinary.com/drg9hguhu/image/upload/v1701517286/Spoiler-Country-Logo-2020-Sqaure_ebnrmn.jpg"
+               class="rounded-lg"
+               width="200px" />
+          Spoiler Country
+        </a>
+      </li>
+
+      <li class="p-8 text-center text-lg font-bold">
+        <a href="https://www.youtube.com/watch?v=Zt0pka6jboA"
+           class="flex flex-col" >
+          <img src="https://res.cloudinary.com/drg9hguhu/image/upload/v1701517285/solo-nerd-bird_x6fni3.jpg"
+               class="rounded-lg"
+               width="200px" />
+          Solo Nerd Bird
+        </a>
+      </li>
+
+      <li class="p-8 text-center text-lg font-bold flex items-center justify-center">
+        <a href="https://comics.3millionyears.co.uk/p/spotlight-comix"
+           class="flex flex-col" >
+          <img src="https://res.cloudinary.com/drg9hguhu/image/upload/v1701562941/3my_mmiqmo.jpg"
+               class="rounded-lg"
+               width="200px" />
+          3 Million Years
+        </a>
+      </li>
+    </ul>
+  </div>
+</section>
+
 <section data-controller="slider">
-  <div class="max-w-screen-xl px-4 py-8 mx-auto sm:px-6 sm:py-12 lg:px-8">
+  <div class="max-w-screen-xl px-4 py-2 mx-auto sm:px-6 lg:px-8">
     <header>
       <h2 class="text-xl font-bold text-gray-900 sm:text-3xl">
         Coming Soon
@@ -73,7 +144,7 @@
   </div>
 </section>
 
-<div id="creators" class="max-w-screen-xl px-4 py-8 mx-auto sm:px-6 sm:py-12 lg:px-8">
+<div id="creators" class="max-w-screen-xl px-4 py-2 mx-auto sm:px-6 lg:px-8">
   <h2 class="text-xl font-bold text-gray-900 sm:text-3xl pb-4">
     For Creators
   </h2>
