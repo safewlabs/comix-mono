@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_11_16_061016) do
+ActiveRecord::Schema[7.0].define(version: 2023_12_22_015022) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -96,6 +96,11 @@ ActiveRecord::Schema[7.0].define(version: 2023_11_16_061016) do
     t.index ["project_id"], name: "index_bundles_on_project_id"
   end
 
+  create_table "carts", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "collaborations", force: :cascade do |t|
     t.bigint "product_id", null: false
     t.bigint "creator_profile_id", null: false
@@ -165,6 +170,24 @@ ActiveRecord::Schema[7.0].define(version: 2023_11_16_061016) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["bundle_id"], name: "index_items_on_bundle_id"
+  end
+
+  create_table "line_items", force: :cascade do |t|
+    t.integer "quantity"
+    t.bigint "product_id", null: false
+    t.bigint "cart_id", null: false
+    t.bigint "order_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["cart_id"], name: "index_line_items_on_cart_id"
+    t.index ["order_id"], name: "index_line_items_on_order_id"
+    t.index ["product_id"], name: "index_line_items_on_product_id"
+  end
+
+  create_table "orders", force: :cascade do |t|
+    t.string "order_reference"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "pg_search_documents", force: :cascade do |t|
@@ -320,6 +343,9 @@ ActiveRecord::Schema[7.0].define(version: 2023_11_16_061016) do
   add_foreign_key "creator_profiles_managers", "creator_profiles"
   add_foreign_key "creator_profiles_managers", "users"
   add_foreign_key "items", "bundles"
+  add_foreign_key "line_items", "carts"
+  add_foreign_key "line_items", "orders"
+  add_foreign_key "line_items", "products"
   add_foreign_key "product_genres", "genres"
   add_foreign_key "product_genres", "products"
   add_foreign_key "products", "stores"

@@ -43,6 +43,7 @@ class Product < ApplicationRecord
   has_many :product_genres, dependent: :destroy
   has_many :genres, through: :product_genres
 
+  has_many :line_items
   has_many :purchases, dependent: :destroy
   has_many :user, through: :purchases
 
