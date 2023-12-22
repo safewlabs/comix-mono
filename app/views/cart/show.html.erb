@@ -7,8 +7,8 @@
         Cart
       </h2>
     </header>
-    <ul class="flex flex-wrap flex-row justify-center items-center">
-      
-    </ul>
+    <div class="flex flex-wrap justify-center items-center">
+      <%= render(CartComponent.new(cart: @current_cart))
+    </div>
   </div>
 </section>

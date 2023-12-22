@@ -4,6 +4,7 @@ class ApplicationController < ActionController::Base
   include Pagy::Backend
   helper_method :current_user
   helper_method :current_admin_user
+  before_action :set_current_cart
 
   protected
     def after_sign_in_path_for(resource)
@@ -35,5 +36,14 @@ class ApplicationController < ActionController::Base
     def user_not_authorized
       flash[:alert] = "You are not authorized to perform this action."
       redirect_to(request.referrer || root_path)
+    end
+
+    def set_current_cart
+      @current_cart ||= Cart.find_by(id: session[:cart_id])
+
+      if session[:cart_id] == nil
+        @current_cart = Cart.create
+        session[:cart_id] = @current_cart.id
+      end
     end
 end

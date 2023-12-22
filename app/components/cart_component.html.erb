@@ -1,0 +1,8 @@
+<%= turbo_frame_tag "cart" do %>
+    <h2>Cart</h2>
+    <% if line_items.count > 0 %>
+      <% line_items.each do |line_item| do %>
+        <%= render(Cart::ItemComponent.new(item: line_item)) %>
+      <% end %>
+    <% end %>
+<% end %>
