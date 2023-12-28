@@ -170,7 +170,7 @@ GEM
     graphiql-rails (1.9.0)
       railties
       sprockets-rails
-    graphql (2.1.9)
+    graphql (2.1.10)
       racc (~> 1.4)
     graphql_devise (1.4.0)
       devise_token_auth (>= 0.1.43, < 2.0)
