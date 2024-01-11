@@ -5,7 +5,6 @@
 import { application } from "./application"
 import { Tabs, Toggle, Dropdown, Modal } from "tailwindcss-stimulus-components"
 import * as ActiveStorage from "@rails/activestorage"
-import "chartkick/chart.js"
 import NavbarController from "./navbar_controller"
 import SliderController from "./slider_controller"
 
