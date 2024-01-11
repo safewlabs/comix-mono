@@ -1,9 +1,6 @@
 <h1 class="text-2xl font-bold pb-4">Dashboard</h1>
 
 <div>
-    <h2>Coming Soon, please use links of the left</h2>
-    <% if current_user.store %>
-        <h2>Chart only for representational purposes</h2>
-        <%= line_chart current_user.store.products.group_by_day(:created_at).count %>
-    <% end %>
+    <h2>Welcome to your Dashboard</h2>
+    <p>Please use links of the left to navigate your Dashboard</p>
 </div>
