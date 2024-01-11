@@ -5,42 +5,25 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby "3.1.1"
 
-# Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.3"
-
-# The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
-gem "propshaft"
-gem "terser"
-# Use postgres as the database for Active Record
 gem "pg"
-
-# Use the Puma web server [https://github.com/puma/puma]
 gem "puma", "~> 6.0"
 
+gem "propshaft"
+gem "terser"
 gem "jsbundling-rails"
 gem "cssbundling-rails"
-# Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]
-# gem "importmap-rails"
-
-# Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
 gem "turbo-rails", "~> 1.5.0"
-
-# Hotwire's modest JavaScript framework [https://stimulus.hotwired.dev]
 gem "stimulus-rails"
-
-# Use Tailwind CSS [https://github.com/rails/tailwindcss-rails]
-# gem "tailwindcss-rails"
 gem "view_component"
 
-# Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jbuilder"
 gem "aws-sdk-s3"
-# Use Redis adapter to run Action Cable in production
+
 gem "redis", "~> 5.0"
 gem "sidekiq"
 gem "invisible_captcha"
 
-gem "vanilla_nested", github: "arielj/vanilla-nested", branch: :main
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "kredis"
 gem "money-rails"
@@ -70,8 +53,6 @@ gem "tzinfo-data", platforms: %i[mingw mswin x64_mingw jruby]
 
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", require: false
-# Use Sass to process CSS
-# gem "sassc-rails"
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 gem "image_processing", "~> 1.2"
@@ -79,7 +60,7 @@ gem "image_processing", "~> 1.2"
 group :development, :test do
   gem "annotate", github: "dabit/annotate_models", branch: "rails-7"
   gem "factory_bot_rails"
-  gem "faker", git: "https://github.com/faker-ruby/faker.git", branch: "master"
+  gem "faker", git: "https://github.com/faker-ruby/faker.git", branch: "main"
   gem "rspec-rails", "~> 6.1.0"
   gem "rubocop-rails", require: false
   gem "rubocop-rails_config"
@@ -91,7 +72,7 @@ end
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem "web-console"
-
+  gem "graphiql-rails"
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
   # gem "rack-mini-profiler"
 
@@ -105,4 +86,3 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
-gem "graphiql-rails", group: :development

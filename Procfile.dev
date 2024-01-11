@@ -1,4 +1,4 @@
 web: bin/rails server -p 3000
+js: yarn build --watch
+css: yarn build:css --watch
 workers: bundle exec sidekiq
-js: npm run build --watch
-css: npm run build:css --watch
