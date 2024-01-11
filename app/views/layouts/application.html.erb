@@ -19,6 +19,7 @@
     <% if Rails.env.production? %>
       <script async src="https://analytics.umami.is/script.js" data-website-id="0f958b0f-bfdf-4e7e-b6e7-f9a72a07cc37"></script>
     <% end %>
+    <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
   </head>
 
   <body>
