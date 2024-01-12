@@ -13,7 +13,16 @@
 #  title            :string
 #  created_at       :datetime         not null
 #  updated_at       :datetime         not null
+#  author_id        :bigint
 #  youtube_video_id :string
+#
+# Indexes
+#
+#  index_posts_on_author_id  (author_id)
+#
+# Foreign Keys
+#
+#  fk_rails_...  (author_id => authors.id)
 #
 class Post < ApplicationRecord
   include Sluggable
@@ -30,4 +39,6 @@ class Post < ApplicationRecord
     draft: 0,
     published: 1
   }
+
+  belongs_to :author, optional: true
 end

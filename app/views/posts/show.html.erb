@@ -16,6 +16,7 @@
         <% if @post.youtube_video_id.present? %>
           <%= render(VideoComponent.new(video_url: @post.youtube_video_id)) %>
         <% end %>
+        <%= render(Posts::AuthorComponent.new(@post.author)) %>
       </div>
     </div>
   </div>

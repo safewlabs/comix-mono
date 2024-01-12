@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_01_11_041908) do
+ActiveRecord::Schema[7.0].define(version: 2024_01_12_051808) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -72,6 +72,13 @@ ActiveRecord::Schema[7.0].define(version: 2024_01_11_041908) do
     t.index ["admin_user_id", "role_id"], name: "index_admin_users_roles_on_admin_user_id_and_role_id"
     t.index ["admin_user_id"], name: "index_admin_users_roles_on_admin_user_id"
     t.index ["role_id"], name: "index_admin_users_roles_on_role_id"
+  end
+
+  create_table "authors", force: :cascade do |t|
+    t.string "name"
+    t.text "bio"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "backings", force: :cascade do |t|
@@ -209,6 +216,8 @@ ActiveRecord::Schema[7.0].define(version: 2024_01_11_041908) do
     t.integer "article_type", default: 0
     t.string "youtube_video_id"
     t.integer "status", default: 0
+    t.bigint "author_id"
+    t.index ["author_id"], name: "index_posts_on_author_id"
   end
 
   create_table "product_genres", force: :cascade do |t|
@@ -346,6 +355,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_01_11_041908) do
   add_foreign_key "line_items", "carts"
   add_foreign_key "line_items", "orders"
   add_foreign_key "line_items", "products"
+  add_foreign_key "posts", "authors"
   add_foreign_key "product_genres", "genres"
   add_foreign_key "product_genres", "products"
   add_foreign_key "products", "stores"
