@@ -38,7 +38,6 @@ gem "redis", "~> 5.0"
 gem "sidekiq"
 gem "invisible_captcha"
 
-gem "vanilla_nested", github: "arielj/vanilla-nested", branch: :main
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "kredis"
 gem "money-rails"
@@ -57,8 +56,6 @@ gem "flipper-active_record"
 gem "flipper-ui"
 gem "meta-tags"
 gem "pg_search"
-gem "chartkick"
-gem "groupdate"
 gem "httparty"
 gem "dotenv-rails"
 gem "honeybadger"

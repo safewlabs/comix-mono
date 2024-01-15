@@ -14,8 +14,6 @@ pin "@rails/activestorage", to: "https://ga.jspm.io/npm:@rails/activestorage@7.0
 pin "vanilla-nested", to: "vanilla_nested.js", preload: true
 pin "@hotwired/turbo", to: "https://ga.jspm.io/npm:@hotwired/turbo@7.3.0/dist/turbo.es2017-esm.js"
 pin "@rails/actioncable/src", to: "https://ga.jspm.io/npm:@rails/actioncable@7.0.4-2/src/index.js"
-pin "chartkick", to: "chartkick.js"
-pin "Chart.bundle", to: "Chart.bundle.js"
 pin "pdf.js", to: "https://ga.jspm.io/npm:pdf.js@0.1.0/index.js"
 pin "buffer", to: "https://ga.jspm.io/npm:@jspm/core@2.0.1/nodelibs/browser/buffer.js"
 pin "child_process", to: "https://ga.jspm.io/npm:@jspm/core@2.0.1/nodelibs/browser/child_process.js"

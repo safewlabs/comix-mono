@@ -4,9 +4,6 @@ import { application } from "controllers/application"
 import { eagerLoadControllersFrom } from "@hotwired/stimulus-loading"
 import { Tabs, Toggle, Dropdown, Modal } from "tailwindcss-stimulus-components"
 import * as ActiveStorage from "@rails/activestorage"
-import "vanilla-nested"
-import "chartkick"
-import "Chart.bundle"
 
 // Eager load all controllers defined in the import map under controllers/**/*_controller
 ActiveStorage.start()
