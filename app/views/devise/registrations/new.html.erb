@@ -7,7 +7,7 @@
       <div class="rounded-md shadow-sm -space-y-px">
         <%= render "devise/shared/error_messages", resource: resource %>
         <div>
-          <label for="email-address" class="sr-only">First Name</label>
+          <label for="first-name" class="sr-only">First Name</label>
           <%= f.text_field :first_name,
                             autofocus: true,
                             autocomplete: "first_name",
@@ -15,7 +15,7 @@
                             class: "appearance-none rounded-md relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-purple-800 focus:border-purple-800 focus:z-10 sm:text-sm" %>
         </div>
         <div class="py-4">
-          <label for="email-address" class="sr-only">Last Name</label>
+          <label for="last-name" class="sr-only">Last Name</label>
           <%= f.text_field :last_name,
                             autofocus: true,
                             autocomplete: "last_name",

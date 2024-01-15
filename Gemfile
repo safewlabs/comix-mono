@@ -10,7 +10,7 @@ gem "rails", "~> 7.0.3"
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "propshaft"
-gem "terser"
+gem "rack-brotli"
 # Use postgres as the database for Active Record
 gem "pg"
 
@@ -77,7 +77,7 @@ gem "image_processing", "~> 1.2"
 group :development, :test do
   gem "annotate", github: "dabit/annotate_models", branch: "rails-7"
   gem "factory_bot_rails"
-  gem "faker", git: "https://github.com/faker-ruby/faker.git", branch: "master"
+  gem "faker", github: "faker-ruby/faker", branch: :main
   gem "rspec-rails", "~> 6.1.0"
   gem "rubocop-rails", require: false
   gem "rubocop-rails_config"
@@ -89,7 +89,7 @@ end
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem "web-console"
-
+  gem "graphiql-rails"
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
   # gem "rack-mini-profiler"
 
@@ -103,4 +103,3 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
-gem "graphiql-rails", group: :development
