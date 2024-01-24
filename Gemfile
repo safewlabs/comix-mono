@@ -8,6 +8,8 @@ ruby "3.1.1"
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.3"
 
+gem "jsbundling-rails"
+gem "cssbundling-rails"
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "propshaft"
 gem "rack-brotli"
@@ -17,9 +19,6 @@ gem "pg"
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", "~> 6.0"
 
-# Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]
-gem "importmap-rails"
-
 # Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
 gem "turbo-rails", "~> 1.5.0"
 
@@ -27,7 +26,6 @@ gem "turbo-rails", "~> 1.5.0"
 gem "stimulus-rails"
 
 # Use Tailwind CSS [https://github.com/rails/tailwindcss-rails]
-gem "tailwindcss-rails"
 gem "view_component"
 
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
