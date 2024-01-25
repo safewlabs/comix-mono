@@ -3,11 +3,10 @@
         <%= link_to "Back to Purchases", purchases_path, class: "px-4 underline" %>
         <h1 class="text-2xl font-bold py-4"><%= @product.name %></h1>
     </div>
-    <iframe id="pdf-js-viewer"
-        src=<%= product_file_url %>
-        title="webviewer"
-        frameborder="0"
-        width="1000"
-        height="1000">
-    </iframe>
+    <div data-controller="pdf-viewer"
+         data-navbar-target="pdf"
+         data-pdf-viewer-pdf-value='<%= product_file_url %>'
+         id='viewer'
+         class="w-full h-screen px-8"  
+         style={{"margin":"0 auto"}}></div>
 </div>

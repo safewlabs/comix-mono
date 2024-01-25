@@ -7,9 +7,11 @@ import { Tabs, Toggle, Dropdown, Modal } from "tailwindcss-stimulus-components"
 
 import NavbarController from "./navbar_controller"
 import SliderController from "./slider_controller"
+import PdfViewerController from "./pdf_viewer_controller"
 
 application.register("navbar", NavbarController)
 application.register("slider", SliderController)
+application.register("pdf-viewer", PdfViewerController)
 application.register('tabs', Tabs)
 application.register('toggle', Toggle)
 application.register('dropdown', Dropdown)
