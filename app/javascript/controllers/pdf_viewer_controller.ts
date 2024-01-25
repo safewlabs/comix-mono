@@ -1,7 +1,6 @@
 import { Controller } from "@hotwired/stimulus"
 import WebViewer from '@pdftron/webviewer'
 
-// Connects to data-controller="pdf-viewer"
 export default class extends Controller {
   declare pdfValue: string
   static values = { pdf: String }
