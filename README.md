@@ -18,7 +18,7 @@
 
 - Ruby
 - Rails 7
-- Importmaps
+- ESbuild
 - PostgreSQL
 - Redis
 - Tailwind
