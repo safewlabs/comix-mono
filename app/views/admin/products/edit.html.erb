@@ -25,6 +25,9 @@
           <%= form.label :issue_cover %><br />
           <%= form.file_field :issue_cover %><br />
           <%= form.label :file_attachment %><br />
+          <% if @product.file_attachment.attached? %>
+              <%= image_tag(rails_representation_url(@product.file_attachment.preview(resize_to_limit: [310, 480]), host: ENV["HOSTNAME"])) %>
+          <% end %>
           <%= form.file_field :file_attachment %><br />
           <%= form.select :store_id, @stores.map { |store| [store.name, store.id]}, {}, class: "form-control" %><br/>
           <%= form.collection_check_boxes :genre_ids, @genres, :id, :name, include_hidden: false %><br/>

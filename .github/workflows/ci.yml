@@ -50,5 +50,6 @@ jobs:
           POSTGRES_PASSWORD: postgres
           POSTGRES_PORT: 5432
         run: |
+          bundle exec rails test:prepare
           bundle exec rails assets:precompile
           bundle exec rspec

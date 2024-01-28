@@ -54,7 +54,7 @@ class Admin::ProductsController < AdminController
     end
 
     def product_params
-      params.require(:product).permit(:name, :user_id, :issue_cover, :description, :age_rating, :page_count, :price, :release_date, :store_id, :video_url, creator_profile_ids: [], genre_ids: [])
+      params.require(:product).permit(:name, :user_id, :issue_cover, :file_attachment, :description, :age_rating, :page_count, :price, :release_date, :store_id, :video_url, creator_profile_ids: [], genre_ids: [])
     end
 
     def stores_grenre_creators
