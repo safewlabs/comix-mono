@@ -1,8 +1,40 @@
 <%= turbo_frame_tag "cart" do %>
-    <h2>Cart</h2>
-    <% if line_items.count > 0 %>
-      <% line_items.each do |line_item| do %>
-        <%= render(Cart::ItemComponent.new(item: line_item)) %>
-      <% end %>
-    <% end %>
+  <section>
+    <div class="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
+      <div class="mx-auto max-w-3xl">
+        <header class="text-center">
+          <h1 class="text-xl font-bold text-gray-900 sm:text-3xl">Your Cart</h1>
+        </header>
+        <div class="mt-8">
+          <ul class="space-y-4">
+            <% if line_items.count > 0 %>
+              <% line_items.each do |line_item| %>
+                <li class="flex items-center gap-4">
+                  <%= render(Cart::ItemComponent.new(line_item: line_item)) %>
+                </li>
+              <% end %>
+            <% end %>
+          </ul>
+
+          <div class="mt-8 flex justify-end border-t border-gray-100 pt-8">
+            <div class="w-screen max-w-lg space-y-4">
+              <dl class="space-y-0.5 text-sm text-gray-700">
+                <div class="flex justify-between !text-base font-medium px-4">
+                  <dt>Total</dt>
+                  <dd><%= formatted_total %></dd>
+                </div>
+              </dl>
+
+              <div class="flex justify-end">
+                <%= link_to "Checkout",
+                  payments_stripe_checkout_path,
+                  class: "inline-flex items-center justify-center rounded-md border border-transparent bg-cx-purple px-8 py-2 text-xl font-medium text-white shadow-sm hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-800 focus:ring-offset-2 sm:w-auto"
+                %>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 <% end %>

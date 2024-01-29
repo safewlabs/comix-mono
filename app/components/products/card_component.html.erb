@@ -1,4 +1,4 @@
-<li>
+<li id="<%= dom_id @product %>">
   <%= link_to product_path(@product), class: "flex overflow-hidden group", data: {"umami-event": "Product-Card-Product-Click", "umami-event-product": @product.name} do %>
     <%= product_image %>
     <div class="relative pt-3 bg-white">

@@ -48,8 +48,8 @@ Rails.application.routes.draw do
   resources :stores, param: :slug, only: [:show]
   resources :cart, only: [:show] do
     collection do
-      get "cart/add"
-      post "cart/remove"
+      post "add", to: "cart#add", as: :add
+      post "remove", to: "cart#remove", as: :remove
     end
   end
 

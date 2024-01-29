@@ -12,12 +12,19 @@ class Payments::StripeController < ApplicationController
     # {CHECKOUT_SESSION_ID} is a string literal; do not change it!
     # the actual Session ID is returned in the query parameter when your customer
     # is redirected to the success page.
-    product_price_in_cents = @product.price * 100
-    stripe_account_id = @product.store.user.stripe_user_id
     hostname = ENV["HOSTNAME"]
+    line_items = []
+    @current_cart.line_items.each do |line_item|
+      line_items << {
+                      quantity: 1,
+                      price: line_item.product.stripe_price_id
+                    }
+    end
+    transfer_group_name = "ORDER-#{SecureRandom.hex(10)}"
+    @current_cart.line_items.first.product.id
     session = Stripe::Checkout::Session.create(
       success_url: "#{hostname}/payments/stripe/success?session_id={CHECKOUT_SESSION_ID}",
-      cancel_url: "#{hostname}/payments/stripe/cancel?product_id=#{@product.id}",
+      cancel_url: "#{hostname}/payments/stripe/cancel",
       mode: "payment",
       line_items: [{
           # For metered billing, do not pass quantity
@@ -25,13 +32,7 @@ class Payments::StripeController < ApplicationController
           price: @product.stripe_price_id,
       }],
       payment_intent_data: {
-        on_behalf_of: stripe_account_id,
-        application_fee_amount: compute_application_fee_amount(product_price_in_cents),
-        receipt_email: current_user.email,
-        # The account receiving the funds, as passed from the client.
-        transfer_data: {
-          destination: stripe_account_id
-        },
+        transfer_group: transfer_group_name
       },
       customer_email: current_user.email
     )
@@ -43,7 +44,7 @@ class Payments::StripeController < ApplicationController
   end
 
   def cancel
-    redirect_to product_path(@product)
+    redirect_to cart_path(@current_cart)
   end
 
   def compute_application_fee_amount(base_price)

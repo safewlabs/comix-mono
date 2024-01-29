@@ -51,4 +51,8 @@ class Product < ApplicationRecord
     attachable.variant :thumb, resize_to_fill: [150, 200]
   end
   has_one_attached :file_attachment, dependent: :destroy
+
+  def formatted_price
+    Money.new(price * 100, "USD").format
+  end
 end

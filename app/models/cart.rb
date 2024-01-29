@@ -10,4 +10,9 @@
 #
 class Cart < ApplicationRecord
   has_many :line_items
+
+  def total
+    total_amount = line_items.to_a.sum { |line_item| line_item.total }
+    total_amount * 100
+  end
 end

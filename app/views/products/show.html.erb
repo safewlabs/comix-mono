@@ -1,7 +1,7 @@
 <%= render(PageTitleComponent.new(title: @product.name)) %>
 
 <% cache @product, expires_in: 60.seconds do %>
-  <div class="flex flex-wrap h-auto lg:mx-64 my-16">
+  <div id="<%= dom_id @product %>" class="flex flex-wrap h-auto lg:mx-64 my-16">
     <div class="w-full lg:w-2/5">
       <%= render(Products::IssueCoverComponent.new(product: @product)) %>
     </div>

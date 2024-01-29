@@ -2,13 +2,8 @@
 
 <section>
   <div class="max-w-screen-xl px-4 py-2 mx-auto sm:px-6 lg:px-8">
-    <header>
-      <h2 class="text-xl font-bold text-gray-900 sm:text-3xl">
-        Cart
-      </h2>
-    </header>
     <div class="flex flex-wrap justify-center items-center">
-      <%= render(CartComponent.new(cart: @current_cart))
+      <%= render(CartComponent.new(cart: @current_cart)) %>
     </div>
   </div>
 </section>
