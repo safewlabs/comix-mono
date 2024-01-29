@@ -2,7 +2,6 @@
 
 class Payments::StripeController < ApplicationController
   before_action :authenticate_user!
-  before_action :set_product, only: [:checkout, :cancel]
 
   def checkout
     Stripe.api_key = Rails.application.credentials.dig(:stripe, :private_key)
@@ -26,15 +25,12 @@ class Payments::StripeController < ApplicationController
       success_url: "#{hostname}/payments/stripe/success?session_id={CHECKOUT_SESSION_ID}",
       cancel_url: "#{hostname}/payments/stripe/cancel",
       mode: "payment",
-      line_items: [{
-          # For metered billing, do not pass quantity
-          quantity: 1,
-          price: @product.stripe_price_id,
-      }],
+      line_items:,
+      customer_email: current_user.email,
       payment_intent_data: {
+        receipt_email: current_user.email,
         transfer_group: transfer_group_name
-      },
-      customer_email: current_user.email
+      }
     )
     redirect_to(session.url, allow_other_host: true, status: :see_other)
   end
@@ -50,9 +46,5 @@ class Payments::StripeController < ApplicationController
   def compute_application_fee_amount(base_price)
     # Take a 10% cut.
     (0.1 * base_price).to_i
-  end
-
-  def set_product
-    @product = Product.find(params[:product_id])
   end
 end
