@@ -11,7 +11,7 @@ export default class extends Controller {
     console.log("value", this.pdfValue);
     WebViewer({
       path: '/webviewer',
-      licenseKey: 'sUyJU9whNTtuWZNe2yYG',
+      licenseKey: 'demo:1707478433289:7f4a651c0300000000074e0002d2d802fa4936f5c0ce295cc12e3d70d6',
       initialDoc: this.pdfValue,
     }, element).then((instance) => {
       
