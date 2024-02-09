@@ -3,7 +3,8 @@ import WebViewer from '@pdftron/webviewer'
 
 export default class extends Controller {
   declare pdfValue: string
-  static values = { pdf: String }
+  declare licenseValue: string
+  static values = { pdf: String, license: String }
   static targets = ["pdf"]
 
   connect() {
@@ -11,7 +12,7 @@ export default class extends Controller {
     console.log("value", this.pdfValue);
     WebViewer({
       path: '/webviewer',
-      licenseKey: 'sUyJU9whNTtuWZNe2yYG',
+      licenseKey: this.licenseValue,
       initialDoc: this.pdfValue,
     }, element).then((instance) => {
       
