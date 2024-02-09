@@ -45,7 +45,8 @@ class ProductsController < ApplicationController
 
   def index
     onboarded_products = Product.where(store: Store.where(user: User.where.not(stripe_user_id: nil)))
-    @pagy, @products = pagy(onboarded_products)
+    ordered_products = onboarded_products.order('updated_at DESC')
+    @pagy, @products = pagy(ordered_products)
     set_meta_tags title: "Buy Comics",
           description: "Buy Comics by Indie Creators",
           keywords: "Comics, Indie comics",
