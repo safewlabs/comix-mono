@@ -12,13 +12,8 @@ class Payments::StripeController < ApplicationController
     # the actual Session ID is returned in the query parameter when your customer
     # is redirected to the success page.
     hostname = ENV["HOSTNAME"]
-    line_items = []
-    @current_cart.line_items.map do |line_item|
-      item = {
-        quantity: 1,
-        price: line_item.product.stripe_price_id
-      }
-      line_items << item
+    line_items = @current_cart.line_items.map do |line_item|
+      { quantity: 1, price: line_item.product.stripe_price_id }
     end
     transfer_group_name = "ORDER-#{SecureRandom.hex(10)}"
 
