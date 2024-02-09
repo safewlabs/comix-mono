@@ -32,7 +32,7 @@ gem "view_component"
 gem "jbuilder"
 gem "aws-sdk-s3"
 # Use Redis adapter to run Action Cable in production
-gem "redis", "~> 5.0"
+gem "redis", "~> 5.1"
 gem "sidekiq"
 gem "invisible_captcha"
 
