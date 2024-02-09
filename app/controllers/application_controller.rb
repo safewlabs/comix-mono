@@ -42,7 +42,7 @@ class ApplicationController < ActionController::Base
       cart_id = session[:cart_id] || params[:id]
       @current_cart ||= Cart.find_by(id: cart_id)
 
-      if @current_cart.eql?(nil)
+      if @current_cart.nil?
         @current_cart = Cart.create
         session[:cart_id] = @current_cart.id
       end

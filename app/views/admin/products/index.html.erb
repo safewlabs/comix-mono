@@ -29,7 +29,7 @@
                       <%= product.name %>
                     </td>
                     <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500"><%= product.description %></td>
-                    <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500"><%= product.store.name %></td>
+                    <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500"><%= product.store_name %></td>
                     <td>
                       <%= link_to "Add Product to Stripe", add_product_to_stripe_admin_product_path(product), class: "text-cx-purple hover:text-cx-purple" %> |
                       <%= link_to "Edit", edit_admin_product_path(product), class: "text-cx-purple hover:text-cx-purple" %>

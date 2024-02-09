@@ -55,4 +55,8 @@ class Product < ApplicationRecord
   def formatted_price
     Money.new(price * 100, "USD").format
   end
+
+  def store_name
+    store.name
+  end
 end

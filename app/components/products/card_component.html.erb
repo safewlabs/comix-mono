@@ -9,10 +9,10 @@
         <%= link_to store_path(@product.store),
             class: "mt-2 flex flex-row items-center",
             data: { "umami-event": "Product-Card-Store-Click",
-                    "umami-event-store": @product.store.name } do %>
+                    "umami-event-store": @product.store_name } do %>
             <span class="sr-only"> Store name </span>
             <span class="tracking-wider text-gray-900 hover:underline hover:underline-offset-4">
-                <%= @product.store.name %>
+                <%= @product.store_name %>
             </span>
         <% end %>
     </div>

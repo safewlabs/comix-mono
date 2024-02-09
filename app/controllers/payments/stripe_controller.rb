@@ -13,14 +13,15 @@ class Payments::StripeController < ApplicationController
     # is redirected to the success page.
     hostname = ENV["HOSTNAME"]
     line_items = []
-    @current_cart.line_items.each do |line_item|
-      line_items << {
-                      quantity: 1,
-                      price: line_item.product.stripe_price_id
-                    }
+    @current_cart.line_items.map do |line_item|
+      item = {
+        quantity: 1,
+        price: line_item.product.stripe_price_id
+      }
+      line_items << item
     end
     transfer_group_name = "ORDER-#{SecureRandom.hex(10)}"
-    @current_cart.line_items.first.product.id
+
     session = Stripe::Checkout::Session.create(
       success_url: "#{hostname}/payments/stripe/success?session_id={CHECKOUT_SESSION_ID}",
       cancel_url: "#{hostname}/payments/stripe/cancel",
