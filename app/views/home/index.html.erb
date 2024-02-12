@@ -19,13 +19,13 @@
   <div class="max-w-screen-xl px-4 py-2 mx-auto sm:px-6 lg:px-8">
     <header>
       <h2 class="text-xl font-bold text-gray-900 sm:text-3xl">
-        Creators
+        New Releases
       </h2>
     </header>
     <ul class="items-slider">
-      <% cache @creator_profiles, expires_in: 60.seconds do %>
-        <% @creator_profiles.each do |creator_profile| %>
-          <%= render(CreatorProfiles::CardComponent.new(creator_profile: creator_profile)) %>
+      <% cache @recent_products, expires_in: 60.seconds do %>
+        <% @recent_products.each do |product| %>
+          <%= render(Products::CardComponent.new(product: product, number_of_products: 4)) %>
         <% end %>
       <% end %>
     </ul>
@@ -36,13 +36,13 @@
   <div class="max-w-screen-xl px-4 py-2 mx-auto sm:px-6 lg:px-8">
     <header>
       <h2 class="text-xl font-bold text-gray-900 sm:text-3xl">
-        New Releases
+        Creators
       </h2>
     </header>
     <ul class="items-slider">
-      <% cache @recent_products, expires_in: 60.seconds do %>
-        <% @recent_products.each do |product| %>
-          <%= render(Products::CardComponent.new(product: product, number_of_products: 4)) %>
+      <% cache @creator_profiles, expires_in: 60.seconds do %>
+        <% @creator_profiles.each do |creator_profile| %>
+          <%= render(CreatorProfiles::CardComponent.new(creator_profile: creator_profile)) %>
         <% end %>
       <% end %>
     </ul>
