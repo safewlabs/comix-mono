@@ -13,4 +13,8 @@ class Products::PdfComponent < ViewComponent::Base
   def file
     @product.file_attachment
   end
+
+  def viewer_api_key
+    Rails.application.credentials.dig(:appryse_license_key)
+  end
 end
