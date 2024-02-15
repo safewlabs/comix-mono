@@ -23,7 +23,7 @@ class ProductsController < ApplicationController
   end
 
   def genres
-    @genre = Genre.find_by(slug: params[:grenre_slug])
+    @genre = Genre.find_by(slug: params[:genre_slug])
     @pagy, @products = pagy(@genre.products)
     set_meta_tags title: "Buy Comics | #{@genre.name}",
           description: "Buy Comics by Indie Creators",
@@ -43,10 +43,32 @@ class ProductsController < ApplicationController
           }
   end
 
+  def free_comics
+    @genre = Genre.find_by(slug: params[:genre_slug])
+    @pagy, @products = pagy(@genre.products)
+    set_meta_tags title: "Free Comics | #{@genre.name}",
+          description: "Buy Comics by Indie Creators",
+          keywords: "Comics, Indie comics",
+          twitter: {
+            card: "photo",
+            image: {
+              _: @products.first.issue_cover,
+              width: 200,
+              height: 200
+            }
+          },
+          og: {
+            title: :title,
+            site_name: :site,
+            image: @products.first.issue_cover
+          }
+  end
+
   def index
-    onboarded_products = Product.where(store: Store.where(user: User.where.not(stripe_user_id: nil)))
-    ordered_products = onboarded_products.order('updated_at DESC')
-    @pagy, @products = pagy(ordered_products)
+    @genre = Genre.all
+    @age_ratings = Product.pluck(:age_rating).uniq
+    @pagy, @products = pagy(Product.where(store: Store.where(user: User.where.not(stripe_user_id: nil)))
+                                   .order("updated_at DESC"))
     set_meta_tags title: "Buy Comics",
           description: "Buy Comics by Indie Creators",
           keywords: "Comics, Indie comics",
