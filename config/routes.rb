@@ -42,7 +42,7 @@ Rails.application.routes.draw do
   end
   resources :projects, param: :slug
   resources :posts, param: :slug, only: [:index, :show]
-  resources :profiles, param: :slug, only: [:show]
+  resources :profiles, param: :slug, only: [:show, :index]
   resources :stores, param: :slug, only: [:show]
   resources :products, param: :slug, only: [:show]
   resources :stores, param: :slug, only: [:show]
