@@ -1,0 +1,22 @@
+<%= render(PageTitleComponent.new(title: "Creators Index")) %>
+
+<section>
+  <div class="max-w-screen-xl px-4 py-8 mx-auto sm:px-6 sm:py-12 lg:px-8">
+    <header>
+      <h2 class="text-xl font-bold text-gray-900 sm:text-3xl">
+        Our Creators
+      </h2>
+    </header>
+
+    <ul class="grid gap-4 mt-4 sm:grid-cols-2 lg:grid-cols-3">
+      <% cache @creator_profiles, expires_in: 60.seconds do %>
+        <% @creator_profiles.each do |creator_profile| %>
+          <%= render(CreatorProfiles::CardComponent.new(creator_profile: creator_profile)) %>
+        <% end %>
+      <% end %>
+    </ul>
+  </div>
+  <div class="text-center w-full">
+    <%== pagy_nav(@pagy) %>
+  </div>
+</section>
