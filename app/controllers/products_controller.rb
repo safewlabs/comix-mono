@@ -44,9 +44,9 @@ class ProductsController < ApplicationController
   end
 
   def free_comics
-    @genre = Genre.find_by(slug: params[:genre_slug])
-    @pagy, @products = pagy(@genre.products)
-    set_meta_tags title: "Free Comics | #{@genre.name}",
+    products = Product.free
+    @pagy, @products = pagy(products)
+    set_meta_tags title: "Free Comics",
           description: "Buy Comics by Indie Creators",
           keywords: "Comics, Indie comics",
           twitter: {

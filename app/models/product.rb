@@ -35,6 +35,7 @@ class Product < ApplicationRecord
     creator_profiles: [:name],
     genres: [:name]
   }
+  scope :free, lambda { where(price: 0) }
 
   belongs_to :store, touch: true
   has_many :collaborations, dependent: :destroy
