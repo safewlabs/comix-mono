@@ -2,7 +2,7 @@
 
 class Users::RegistrationsController < Devise::RegistrationsController
   before_action :configure_permitted_parameters, if: :devise_controller?
-  invisible_captcha only: [:create, :update], honeypot: :sub_name
+  invisible_captcha only: [:create], honeypot: :sub_name
 
   def create
     super

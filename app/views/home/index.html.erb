@@ -19,8 +19,32 @@
   <div class="max-w-screen-xl px-4 py-2 mx-auto sm:px-6 lg:px-8">
     <header>
       <h2 class="text-xl font-bold text-gray-900 sm:text-3xl">
+        New Releases
+      </h2>
+    </header>
+    <ul class="items-slider">
+      <% cache @recent_products, expires_in: 60.seconds do %>
+        <% @recent_products.each do |product| %>
+          <%= render(Products::CardComponent.new(product: product, number_of_products: 4)) %>
+        <% end %>
+      <% end %>
+    </ul>
+  </div>
+</section>
+
+<section data-controller="slider">
+  <div class="max-w-screen-xl px-4 py-2 mx-auto sm:px-6 lg:px-8">
+    <header>
+      <h2 class="text-xl font-bold text-gray-900 sm:text-3xl">
         Creators
       </h2>
+      <div class="my-4">
+        <%= link_to "Browse all",
+                    profiles_path,
+                    class: "inline-flex items-center justify-center rounded-md border border-transparent bg-cx-purple px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-800 focus:ring-offset-2 sm:w-auto",
+                    data: { "umami-event": "Home-Browse-All-Comics-Click" }
+        %>
+      </div>
     </header>
     <ul class="items-slider">
       <% cache @creator_profiles, expires_in: 60.seconds do %>
@@ -125,23 +149,6 @@
           3 Million Years
         </a>
       </li>
-    </ul>
-  </div>
-</section>
-
-<section data-controller="slider">
-  <div class="max-w-screen-xl px-4 py-2 mx-auto sm:px-6 lg:px-8">
-    <header>
-      <h2 class="text-xl font-bold text-gray-900 sm:text-3xl">
-        Coming Soon
-      </h2>
-    </header>
-    <ul class="items-slider">
-      <% cache @coming_soon_products, expires_in: 60.seconds do %>
-        <% @coming_soon_products.each do |product| %>
-          <%= render(Products::CardComponent.new(product: product, number_of_products: 4)) %>
-        <% end %>
-      <% end %>
     </ul>
   </div>
 </section>
