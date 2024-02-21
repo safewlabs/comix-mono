@@ -38,8 +38,8 @@ class ProductsController < ApplicationController
   end
 
   def set_meta_tags(title, description, image)
-    set_meta_tags title: title,
-          description: description,
+    set_meta_tags title:,
+          description:,
           keywords: "Comics, Indie comics",
           twitter: {
             card: "photo",
@@ -52,6 +52,7 @@ class ProductsController < ApplicationController
           og: {
             title: :title,
             site_name: :site,
-            image: image
+            image:
+        }
   end
 end
