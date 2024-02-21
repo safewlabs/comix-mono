@@ -30,11 +30,12 @@
 class Product < ApplicationRecord
   include Sluggable
   include PgSearch::Model
-  pg_search_scope :search_comics, against: [:name, :description], associated_against: {
+  pg_search_scope :search_comics, against: [:name, :description, :price, :age_rating], associated_against: {
     store: [:name],
     creator_profiles: [:name],
-    genres: [:name]
+    genres: [:name],
   }
+
   scope :free, lambda { where(price: 0) }
 
   belongs_to :store, touch: true
