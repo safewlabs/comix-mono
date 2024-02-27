@@ -173,7 +173,7 @@ GEM
       rails (>= 4.2, < 7.1)
       zeitwerk
     hashie (5.0.0)
-    honeybadger (5.5.0)
+    honeybadger (5.5.1)
     httparty (0.21.0)
       mini_mime (>= 1.0.0)
       multi_xml (>= 0.5.2)
