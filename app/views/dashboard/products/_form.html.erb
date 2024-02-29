@@ -72,7 +72,7 @@
 <%= form.hidden_field :store_id, value: @store.id %>
 
 <div>
-    <%= form.label :genre, class: "block text-sm font-medium text-gray-700 py-2" %>
+    <%= form.label "Tags", class: "block text-sm font-medium text-gray-700 py-2" %>
     <div class="mt-1">
         <%= form.collection_check_boxes :genre_ids, @genres, :id, :name, include_hidden: false %>
     </div>
