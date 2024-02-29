@@ -4,7 +4,7 @@
         <%= render(Products::StoreDetailsComponent.new(product: @product)) %>
         <div class="py-4 flex flex-col lg:grid lg:grid-cols-3 lg:gap-4 text-center">
             <div>
-                <span class="font-bold">Genres</span>
+                <span class="font-bold">Tags</span>
                 <ul>
                     <% @product.genres.each do |genre| %>
                         <li><%= genre.name %></li>
