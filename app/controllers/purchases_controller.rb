@@ -8,7 +8,7 @@ class PurchasesController < ApplicationController
 
   def free_purchase
     product = Product.find(params[:product_id])
-    purchase = Purchase.new(user: current_user, product: product)
+    purchase = Purchase.new(user: current_user, product:)
     respond_to do |format|
       if purchase.save
         format.html { redirect_to purchases_path, notice: "Your comic is ready to read" }
