@@ -20,7 +20,6 @@
                     free_purchase_purchases_path(product_id: @product.id),
                     class: "text-black font-black hover:text-cx-purple font-bold hidden lg:block text-lg",
                     data: { turbo: false,
-                            turbo_method: :post,
                             "umami-event": "Product-Page-Get-Mobile-Free-Click",
                             "umami-event-product": @product.name } %>
         <% else %>
