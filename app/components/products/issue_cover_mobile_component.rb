@@ -21,7 +21,7 @@ class Products::IssueCoverMobileComponent < ViewComponent::Base
   end
 
   def issue_cta
-    buy_button if is_onboarded? && !is_free?
+    return buy_button if is_onboarded? && !is_free?
     return login_and_read_link if is_free? && @user.nil?
     return get_free_button if is_free? && @user && !is_purchased?
     return read_button if is_free? && @user && is_purchased?
