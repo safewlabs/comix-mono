@@ -50,8 +50,4 @@ class Product < ApplicationRecord
     attachable.variant :thumb, resize_to_fill: [150, 200]
   end
   has_one_attached :file_attachment, dependent: :destroy
-
-  def is_purchased?(user)
-    purchases.find_by(user:)
-  end
 end

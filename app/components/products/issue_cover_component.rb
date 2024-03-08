@@ -1,9 +1,8 @@
 # frozen_string_literal: true
 
 class Products::IssueCoverComponent < ViewComponent::Base
-  def initialize(product:, user:)
+  def initialize(product:)
     @product = product
-    @user = user
   end
 
   def is_onboarded?
