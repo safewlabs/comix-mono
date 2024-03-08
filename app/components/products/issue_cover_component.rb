@@ -21,7 +21,7 @@ class Products::IssueCoverComponent < ViewComponent::Base
   end
 
   def issue_cta
-    buy_button if is_onboarded? && !is_free?
+    return buy_button if is_onboarded? && !is_free?
     return login_and_read_link if is_free? && @user.nil?
     return get_free_button if is_free? && @user && !is_purchased?
     return read_button if is_free? && @user && is_purchased?
@@ -31,7 +31,7 @@ class Products::IssueCoverComponent < ViewComponent::Base
   def buy_button
     link_to "Buy",
             payments_stripe_checkout_path(product_id: @product.id),
-            class: "text-black font-black hover:text-cx-purple font-bold hidden lg:block",
+            class: "inline-flex items-center justify-center rounded-md border border-transparent bg-cx-purple px-8 py-2 text-xl font-medium text-white shadow-sm hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-800 focus:ring-offset-2 sm:w-auto",
             data: { turbo: false,
                     "umami-event": "Product-Page-Buy-Click",
                     "umami-event-product": @product.name }
