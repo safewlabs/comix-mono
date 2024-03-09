@@ -1,7 +1,9 @@
 <li>
   <%= link_to profile_path(@creator_profile), class: "flex flex-col items-center justify-center overflow-hidden group", data: {"umami-event": "Creator-Card-Creator-Click", "umami-event-product": @creator_profile.name} do %>
-    <%= render(CreatorProfiles::CoverImageComponent.new(creator_profile: @creator_profile, class_names: "rounded-lg")) %>
-    <div class="-mt-4">
+    <% if @show_cover %>
+      <%= render(CreatorProfiles::CoverImageComponent.new(creator_profile: @creator_profile, class_names: "rounded-lg")) %>
+    <% end %>
+    <div class="<%= head_class %>">
         <%= render(CreatorProfiles::AvatarComponent.new(creator_profile: @creator_profile)) %>
     </div>
     <h3 class="mt-6 text-base font-semibold leading-7 tracking-tight text-gray-900">

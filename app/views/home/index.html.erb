@@ -49,7 +49,7 @@
     <ul class="items-slider">
       <% cache @creator_profiles, expires_in: 60.seconds do %>
         <% @creator_profiles.each do |creator_profile| %>
-          <%= render(CreatorProfiles::CardComponent.new(creator_profile: creator_profile)) %>
+          <%= render(CreatorProfiles::CardComponent.new(creator_profile: creator_profile, show_cover: false)) %>
         <% end %>
       <% end %>
     </ul>
