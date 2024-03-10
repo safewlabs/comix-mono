@@ -47,7 +47,7 @@ class Products::IssueCoverComponent < ViewComponent::Base
   end
 
   def get_free_button
-    link_to "Login and Read for free",
+    link_to "Read for free",
              free_purchase_purchases_path(product_id: @product.id),
              class: "inline-flex items-center justify-center rounded-md border border-transparent bg-cx-purple px-8 py-2 text-xl font-medium text-white shadow-sm hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-800 focus:ring-offset-2 sm:w-auto",
              data: { turbo: false,
