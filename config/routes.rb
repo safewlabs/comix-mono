@@ -68,7 +68,9 @@ Rails.application.routes.draw do
     resources :payments, param: :slug
   end
   resources :backings
-  resources :purchases, only: [:index, :show], param: :slug
+  resources :purchases, param: :slug do
+    get :free_purchase, on: :collection
+  end
   resources :webhooks, only: [:create]
 
   direct :cdn_image do |model, options|
