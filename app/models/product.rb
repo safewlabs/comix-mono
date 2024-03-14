@@ -59,4 +59,8 @@ class Product < ApplicationRecord
   def store_name
     store.name
   end
+
+  def is_purchased?(user)
+    purchases.find_by(user:)
+  end
 end

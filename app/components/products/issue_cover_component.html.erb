@@ -7,17 +7,7 @@
 </div>
 <div class="mt-2 text-4xl hidden lg:flex flex-col items-center justify-center">
   <span class="mx-2 p-2">&#36;<%= @product.price %></span>
-  <% if is_onboarded? %>
-    <%= form_with(url: add_cart_index_path) do |f| %>
-      <%= f.hidden_field :id, value: @product.id %>
-      <%= f.hidden_field :quantity, value: 1 %>
-      <%= f.submit "Add to cart",
-                  class: "inline-flex items-center justify-center rounded-md border border-transparent cursor-pointer bg-cx-purple px-8 py-2 text-xl font-medium text-white shadow-sm hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-800 focus:ring-offset-2 sm:w-auto"
-      %>
-    <% end %>
-  <% else %>
-    Coming Soon
-  <% end %>
+  <%= issue_cta %>
 </div>
 <% if @product.video_url.present? %>
   <div data-controller="modal" data-action="keydown.esc->modal#close" tabindex="-1" class="relative z-10 flex items-center justify-center py-4">

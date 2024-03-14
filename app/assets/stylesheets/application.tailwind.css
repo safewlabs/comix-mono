@@ -2,44 +2,67 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer components {
-  body {
-    @apply font-body font-light;
+body {
+  @apply font-body font-light;
+}
+
+.background-gradient {
+  background: linear-gradient(90deg, rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(252, 176, 69, 1) 100%);
+}
+
+.button-gradient {
+  background: linear-gradient(90deg, rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(252, 176, 69, 1) 100%);
+}
+
+.hero-gradient {
+  background: linear-gradient(-45deg, #f7c759, #e73c7e, #ffb728, #7209b7);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+
+.font-gradient {
+  font-size: 72px;
+  background: linear-gradient(90deg, rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(252, 176, 69, 1) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
   }
 
-  .background-gradient {
-    background: linear-gradient(90deg, rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(252, 176, 69, 1) 100%);
+  50% {
+    background-position: 100% 50%;
   }
 
-  .button-gradient {
-    background: linear-gradient(90deg, rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(252, 176, 69, 1) 100%);
+  100% {
+    background-position: 0% 50%;
   }
+}
 
-  .hero-gradient {
-    background: linear-gradient(-45deg, #f7c759, #e73c7e, #ffb728, #7209b7);
-    background-size: 400% 400%;
-    animation: gradient 15s ease infinite;
-  }
-
-  .font-gradient {
-    font-size: 72px;
-    background: linear-gradient(90deg, rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(252, 176, 69, 1) 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-
-  @keyframes gradient {
-    0% {
-      background-position: 0% 50%;
+.pagy {
+  @apply flex justify-center gap-1 text-xs font-medium py-2;
+  .page {
+    a {
+      @apply block rounded-lg px-3 py-1 bg-gray-200;
+      &:hover {
+        @apply bg-gray-300;
+      }
     }
-
-    50% {
-      background-position: 100% 50%;
+    &.active a {
+      @apply text-white bg-gray-400 cursor-default;
     }
-
-    100% {
-      background-position: 0% 50%;
+    &.disabled a {
+      @apply text-gray-300 bg-gray-100 cursor-default;
+    }
+    &.gap { }  /* if you need to customize it */
+  }
+  .pagy-combo-input, &.pagy-items-selector-js {
+    @apply inline-block whitespace-nowrap bg-gray-200 rounded-lg px-3 py-0.5;
+    input {
+      @apply bg-gray-100 border-none rounded-md;
     }
   }
 }

@@ -13,6 +13,17 @@
     <%= javascript_include_tag "application", "data-turbo-track": "reload", type: "module" %>
     <script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=64e2ab109dffd400137beb24&product=sop' async='async'></script>
     <!--[if (lt IE 9)]><script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/min/tiny-slider.helper.ie8.js"></script><![endif]-->
+    <!-- Hotjar Tracking Code for https://www.comix.one -->
+    <script>
+        (function(h,o,t,j,a,r){
+            h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+            h._hjSettings={hjid:3902945,hjsv:6};
+            a=o.getElementsByTagName('head')[0];
+            r=o.createElement('script');r.async=1;
+            r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+            a.appendChild(r);
+        })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+    </script>
     <%= display_meta_tags(default_meta_tags) %>
     <% if Rails.env.production? %>
       <script async src="https://analytics.umami.is/script.js" data-website-id="0f958b0f-bfdf-4e7e-b6e7-f9a72a07cc37"></script>

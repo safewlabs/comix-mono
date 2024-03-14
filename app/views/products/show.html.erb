@@ -3,10 +3,10 @@
 <% cache @product, expires_in: 60.seconds do %>
   <div id="<%= dom_id @product %>" class="flex flex-wrap h-auto lg:mx-64 my-16">
     <div class="w-full lg:w-2/5">
-      <%= render(Products::IssueCoverComponent.new(product: @product)) %>
+      <%= render(Products::IssueCoverComponent.new(product: @product, user: current_user)) %>
     </div>
     <div class="w-full lg:w-3/5 shadow-2xl rounded-lg mx-6 lg:mx-0 p-4 md:p-12">
-      <%= render(Products::IssueCoverMobileComponent.new(product: @product)) %>
+      <%= render(Products::IssueCoverMobileComponent.new(product: @product, user: current_user)) %>
       <%= render(Products::DetailsComponent.new(product: @product)) %>
     </div>
     <div class="mt-4 w-full text-xl sm:hidden md:hidden lg:flex items-center justify-center px-6 lg:px-0">
