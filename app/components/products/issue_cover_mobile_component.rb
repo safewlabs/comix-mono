@@ -40,7 +40,7 @@ class Products::IssueCoverMobileComponent < ViewComponent::Base
   def login_and_read_link
     link_to "Login and Read for free",
              free_purchase_purchases_path(product_id: @product.id),
-             class: "text-black font-black hover:text-cx-purple font-bold hidden lg:block text-lg",
+             class: "text-black font-black hover:text-cx-purple font-bold lg:hidden block text-lg",
              data: { turbo: false,
                      "umami-event": "Product-Page-Get-Free-Click",
                      "umami-event-product": @product.name }
