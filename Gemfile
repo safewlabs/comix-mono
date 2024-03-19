@@ -72,7 +72,7 @@ group :development, :test do
   gem "annotate", github: "dabit/annotate_models", branch: "rails-7"
   gem "factory_bot_rails"
   gem "faker", github: "faker-ruby/faker", branch: :main
-  gem "rspec-rails", "~> 6.1.1"
+  gem "rspec-rails", "~> 6.1.2"
   gem "rubocop-rails", require: false
   gem "rubocop-rails_config"
   gem "rubocop-rspec", require: false
