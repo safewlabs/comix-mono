@@ -18,6 +18,7 @@ class Payments::StripeController < ApplicationController
     session = Stripe::Checkout::Session.create(
       success_url: "#{hostname}/payments/stripe/success?session_id={CHECKOUT_SESSION_ID}",
       cancel_url: "#{hostname}/payments/stripe/cancel?product_id=#{@product.id}",
+      allow_promotion_codes: true,
       mode: "payment",
       line_items: [{
           # For metered billing, do not pass quantity
