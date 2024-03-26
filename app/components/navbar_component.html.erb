@@ -63,6 +63,11 @@
                 </div>
               </div>
             </li>
+            <li class="flex flex-row">
+              <%= link_to cart_path(@cart) , class: "text-black font-black hover:text-cx-purple" do %>
+                <ion-icon name="cart-outline" class="h-6 w-6 font-bold"></ion-icon>
+              <% end %>
+            </li>
             <% unless @user %>
               <li>
                 <%= link_to 'Login',
