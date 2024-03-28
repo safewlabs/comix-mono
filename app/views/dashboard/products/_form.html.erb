@@ -48,6 +48,7 @@
     <% if @product.file_attachment.attached? %>
         <%= image_tag(rails_representation_url(@product.file_attachment.preview(resize_to_limit: [310, 480]), host: ENV["HOSTNAME"])) %>
     <% end %>
+    <%= form.label "Comic PDF", class: "block text-sm font-medium text-gray-700 py-2" %>
     <div class="mt-1">
         <%= form.file_field :file_attachment, class: "block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" %>
     </div>
