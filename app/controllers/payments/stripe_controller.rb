@@ -5,7 +5,7 @@ class Payments::StripeController < ApplicationController
 
   def checkout
     Stripe.api_key = Rails.application.credentials.dig(:stripe, :private_key)
-
+    redirect_to(cart_path(@current_cart)) if @current_cart.line_items.nil?
     # See https://stripe.com/docs/api/checkout/sessions/create
     # for additional parameters to pass.
     # {CHECKOUT_SESSION_ID} is a string literal; do not change it!

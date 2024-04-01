@@ -63,11 +63,6 @@
                 </div>
               </div>
             </li>
-            <li class="flex flex-row">
-              <%= link_to cart_path(@cart) , class: "text-black font-black hover:text-cx-purple" do %>
-                <ion-icon name="cart-outline" class="h-6 w-6 font-bold"></ion-icon>
-              <% end %>
-            </li>
             <% unless @user %>
               <li>
                 <%= link_to 'Login',
@@ -84,6 +79,14 @@
                 <%= link_to 'For Creators',
                     for_creators_path,
                     class: "px-4 py-3 leading-none border rounded text-black border-black font-black hover:border-transparent hover:text-cx-lavender-blush hover:bg-cx-purple mt-4 lg:mt-0" %>
+              <% end %>
+            </li>
+            <li class="flex flex-row">
+              <%= link_to cart_path(@cart) , class: "text-black font-black hover:text-cx-purple" do %>
+                <ion-icon name="cart-outline" class="h-8 w-8 font-bold"></ion-icon>
+                <span id="line_items_count">
+                  <%= line_items.count %>
+                </span>
               <% end %>
             </li>
             <% if @user %>

@@ -5,4 +5,8 @@ class NavbarComponent < ViewComponent::Base
     @user = user
     @cart = cart
   end
+
+  def line_items
+    @cart.line_items
+  end
 end

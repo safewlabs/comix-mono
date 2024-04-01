@@ -10,14 +10,18 @@ class CartController < ApplicationController
     current_line_item = @current_cart.line_items.find_by(product_id: @product.id)
     if current_line_item && quantity > 0
       current_line_item
-    elsif quantity <= 0
+    elsif current_line_item && quantity <= 0
       current_line_item.destroy
     else
       @current_cart.line_items.create(product: @product, quantity:)
     end
     respond_to do |format|
       format.html { redirect_to cart_path(@current_cart) }
-      format.turbo_stream
+      format.turbo_stream do
+        render turbo_stream: [
+          turbo_stream.update("line_items_count", html: line_items_count)
+        ]
+      end
     end
   end
 
@@ -26,7 +30,15 @@ class CartController < ApplicationController
     @line_item.destroy
 
     respond_to do |format|
-      format.turbo_stream
+      format.turbo_stream do
+        render turbo_stream: [
+          turbo_stream.update("line_items_count", html: line_items_count)
+        ]
+      end
     end
+  end
+
+  def line_items_count
+    @current_cart.line_items.count
   end
 end
