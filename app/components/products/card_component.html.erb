@@ -1,9 +1,12 @@
-<li>
-  <%= link_to product_path(@product), class: "flex overflow-hidden group", data: {"umami-event": "Product-Card-Product-Click", "umami-event-product": @product.name} do %>
+<li class="hover:drop-shadow-xl hover:p-2">
+  <%= link_to product_path(@product), class: "flex flex-col overflow-hidden group", data: {"umami-event": "Product-Card-Product-Click", "umami-event-product": @product.name} do %>
     <%= product_image %>
+    <div class="p-2 bg-cx-lavender-blush ml-2 -mt-12 w-1/5">
+      &#36; <%= @product.price %>
+    </div>
     <div class="relative pt-3 bg-white">
         <h3 class="text-lg text-gray-700 group-hover:underline group-hover:underline-offset-4">
-            <%= @product.name %>
+            <%= @product.name %><br/>
         </h3>
 
         <%= link_to store_path(@product.store),

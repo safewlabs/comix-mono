@@ -2,12 +2,19 @@
 <%= render(Marketing::HeroComponent.new(user: current_user)) %>
 
 <section>
-  <div class="max-w-screen-xl px-4 py-2 mx-auto sm:px-6 lg:px-8">
+  <div class="max-w-screen-xl p-4 mx-auto sm:px-6 lg:px-8">
+    <header>
+      <h2 class="text-xl font-bold text-gray-900 sm:text-3xl">
+        Tags
+      </h2>
+    </header>
     <ul class="flex flex-wrap flex-row justify-center items-center">
       <% cache @genres, expires_in: 60.seconds do %>
         <% @genres.each do |genre| %>
-          <li class="p-3 hover:underline border border-solid border-gray-300 rounded-xl mx-4 my-2 font-bold text-xl">
-            <%= link_to genre.name, genres_path(genre.slug), data: { "umami-event": "Home-Genre-Click" } %>
+          <li class="p-3 mx-4 my-2 font-bold text-xl">
+            <%= link_to genre.name, genres_path(genre.slug), data: { "umami-event": "Home-Genre-Click" },
+                class: "underline hover:text-cx-purple"
+            %>
           </li>
         <% end %>
       <% end %>
@@ -15,14 +22,14 @@
   </div>
 </section>
 
-<section data-controller="slider">
+<section>
   <div class="max-w-screen-xl px-4 py-2 mx-auto sm:px-6 lg:px-8">
     <header>
       <h2 class="text-xl font-bold text-gray-900 sm:text-3xl">
         New Releases
       </h2>
     </header>
-    <ul class="items-slider">
+    <ul class="grid gap-4 mt-4 sm:grid-cols-2 lg:grid-cols-4">
       <% cache @recent_products, expires_in: 60.seconds do %>
         <% @recent_products.each do |product| %>
           <%= render(Products::CardComponent.new(product: product, number_of_products: 4)) %>
@@ -32,21 +39,20 @@
   </div>
 </section>
 
-<section data-controller="slider">
+<section>
   <div class="max-w-screen-xl px-4 py-2 mx-auto sm:px-6 lg:px-8">
     <header>
       <h2 class="text-xl font-bold text-gray-900 sm:text-3xl">
         Creators
-      </h2>
-      <div class="my-4">
-        <%= link_to "Browse all",
-                    profiles_path,
-                    class: "inline-flex items-center justify-center rounded-md border border-transparent bg-cx-purple px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-800 focus:ring-offset-2 sm:w-auto",
-                    data: { "umami-event": "Home-Browse-All-Comics-Click" }
+        <%= link_to profiles_path,
+                    class: "inline-flex items-center justify-center font-extrabold pl-2 underline text-cx-purple hover:text-black text-xl sm:w-auto",
+                    data: { "umami-event": "Home-Browse-All-Comics-Click" } do
         %>
-      </div>
+          Browse all <ion-icon name="arrow-forward-outline" class="underline"></ion-icon>
+        <% end %>
+      </h2>
     </header>
-    <ul class="items-slider">
+    <ul class="grid gap-4 mt-4 sm:grid-cols-2 lg:grid-cols-4">
       <% cache @creator_profiles, expires_in: 60.seconds do %>
         <% @creator_profiles.each do |creator_profile| %>
           <%= render(CreatorProfiles::CardComponent.new(creator_profile: creator_profile)) %>
@@ -56,21 +62,20 @@
   </div>
 </section>
 
-<section data-controller="slider">
+<section>
   <div class="max-w-screen-xl px-4 py-2 mx-auto sm:px-6 lg:px-8">
     <header>
       <h2 class="text-xl font-bold text-gray-900 sm:text-3xl">
         Trending Comics
-      </h2>
-      <div class="mt-4">
-        <%= link_to "Browse all",
-                    comics_path,
-                    class: "inline-flex items-center justify-center rounded-md border border-transparent bg-cx-purple px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-800 focus:ring-offset-2 sm:w-auto",
-                    data: { "umami-event": "Home-Browse-All-Comics-Click" }
+        <%= link_to comics_path,
+                    class: "inline-flex items-center justify-center font-extrabold pl-2 underline text-cx-purple hover:text-black text-xl sm:w-auto",
+                    data: { "umami-event": "Home-Browse-All-Comics-Click" } do
         %>
-      </div>
+          Browse all <ion-icon name="arrow-forward-outline" class="underline"></ion-icon>
+        <% end %>
+      </h2>
     </header>
-    <ul class="items-slider">
+    <ul class="grid gap-4 mt-4 sm:grid-cols-2 lg:grid-cols-4">
       <% cache @onboarded_products, expires_in: 60.seconds do %>
         <% @onboarded_products.each do |product| %>
             <%= render(Products::CardComponent.new(product: product, number_of_products: 4)) %>
@@ -235,7 +240,12 @@
       <h2 class="text-3xl tracking-tight font-extrabold text-gray-900 sm:text-4xl">Freshly Pressed</h2>
       <p class="mt-3 text-xl text-gray-500 sm:mt-4">Articles, Interviews &amp; News from the universe of Comix!</p>
       <div class="mt-2 pb-4 w-full">
-        <%= link_to "Browse all", posts_path, class: "inline-flex items-center justify-center rounded-md border border-transparent bg-cx-purple px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-800 focus:ring-offset-2 sm:w-auto" %>
+        <%= link_to profiles_path,
+              class: "inline-flex items-center justify-center font-extrabold underline text-cx-purple hover:text-black text-xl sm:w-auto",
+              data: { "umami-event": "Home-Browse-All-Comics-Click" } do
+        %>
+          Browse all <ion-icon name="arrow-forward-outline" class="underline"></ion-icon>
+        <% end %>
       </div>
     </div>
     <div class="mt-3 grid gap-16 lg:grid-cols-3 lg:gap-x-5 lg:gap-y-12">
