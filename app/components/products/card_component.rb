@@ -15,7 +15,7 @@ class Products::CardComponent < ViewComponent::Base
     if @product.issue_cover.present?
       image_tag(@product.issue_cover,
                 alt: @product.name,
-                class: "h-100 w-full object-cover transition duration-500 sm:h-72 rounded-lg")
+                class: "h-100 w-full object-cover transition duration-500 sm:h-72")
     else
       image_tag("https://res.cloudinary.com/drg9hguhu/image/upload/v1667569457/comix/78_tage_auf_der_stra%C3%9Fe_des_hasses_000_cover.jpg",
                 alt: "placeholder image",
