@@ -8,7 +8,7 @@
       </h2>
     </header>
 
-    <ul class="grid gap-4 mt-4 grid-cols-3">
+    <ul class="grid gap-4 mt-4 grid-cols-4">
       <% cache @creator_profiles, expires_in: 60.seconds do %>
         <% @creator_profiles.each do |creator_profile| %>
           <%= render(CreatorProfiles::CardComponent.new(creator_profile: creator_profile)) %>
