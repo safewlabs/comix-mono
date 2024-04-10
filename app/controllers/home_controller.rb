@@ -7,6 +7,7 @@ class HomeController < ApplicationController
     @onboarded_products = onboarded_products.order("RANDOM()").take(12)
     @recent_products = onboarded_products.order(created_at: :desc).take(12)
     @creator_profiles = CreatorProfile.order("RANDOM()").take(8)
+    @stores = Store.order("RANDOM()").take(8)
 
     @posts = Post.published.last(3)
     set_meta_tags title: "Home",

@@ -45,7 +45,7 @@ Rails.application.routes.draw do
   resources :profiles, param: :slug, only: [:show, :index]
   resources :stores, param: :slug, only: [:show]
   resources :products, param: :slug, only: [:show]
-  resources :stores, param: :slug, only: [:show]
+  resources :stores, param: :slug, only: [:index, :show]
   resources :cart, only: [:show] do
     collection do
       post "add", to: "cart#add", as: :add
