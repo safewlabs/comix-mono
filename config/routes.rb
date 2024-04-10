@@ -45,7 +45,7 @@ Rails.application.routes.draw do
   resources :profiles, param: :slug, only: [:show, :index]
   resources :stores, param: :slug, only: [:show]
   resources :products, param: :slug, only: [:show]
-  resources :stores, param: :slug, only: [:show]
+  resources :stores, param: :slug, only: [:index, :show]
 
   get "stores/show"
   get "stripe/connect", to: "stripe#connect", as: :stripe_connect
