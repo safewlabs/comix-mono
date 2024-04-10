@@ -3,11 +3,6 @@
 
 <section class="py-4">
   <div class="max-w-screen-xl p-4 mx-auto sm:px-6 lg:px-8">
-    <header>
-      <h2 class="text-xl font-bold text-gray-900 sm:text-3xl">
-        Tags
-      </h2>
-    </header>
     <ul class="flex flex-wrap flex-row justify-center items-center">
       <% cache @genres, expires_in: 60.seconds do %>
         <% @genres.each do |genre| %>
