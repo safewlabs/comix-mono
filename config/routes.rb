@@ -46,6 +46,12 @@ Rails.application.routes.draw do
   resources :stores, param: :slug, only: [:show]
   resources :products, param: :slug, only: [:show]
   resources :stores, param: :slug, only: [:show]
+  resources :cart, only: [:show] do
+    collection do
+      post "add", to: "cart#add", as: :add
+      post "remove", to: "cart#remove", as: :remove
+    end
+  end
 
   get "stores/show"
   get "stripe/connect", to: "stripe#connect", as: :stripe_connect

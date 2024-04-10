@@ -81,6 +81,14 @@
                     class: "px-4 py-3 leading-none border rounded text-black border-black font-black hover:border-transparent hover:text-cx-lavender-blush hover:bg-cx-purple mt-4 lg:mt-0" %>
               <% end %>
             </li>
+            <li class="flex flex-row">
+              <%= link_to cart_path(@cart) , class: "text-black font-black hover:text-cx-purple" do %>
+                <ion-icon name="cart-outline" class="h-8 w-8 font-bold"></ion-icon>
+                <span id="line_items_count">
+                  <%= line_items.count %>
+                </span>
+              <% end %>
+            </li>
             <% if @user %>
               <li>
                 <div class="inline-block text-sm px-4 py-2 leading-none rounded no-underline text-gray hover:text-gray-900 hover:bg-white mt-4 lg:mt-0">
