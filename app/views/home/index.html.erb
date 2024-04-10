@@ -52,7 +52,7 @@
         <% end %>
       </h2>
     </header>
-    <ul class="grid gap-3 mt-4 sm:grid-cols-2 lg:grid-cols-3">
+    <ul class="grid gap-4 mt-4 sm:grid-cols-2 lg:grid-cols-4">
       <% cache @stores, expires_in: 60.seconds do %>
         <% @stores.each do |store| %>
           <%= render(Stores::CardComponent.new(store: store)) %>
