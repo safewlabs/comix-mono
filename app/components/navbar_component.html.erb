@@ -82,9 +82,9 @@
               <% end %>
             </li>
             <li class="flex flex-row">
-              <%= link_to cart_path(@cart) , class: "text-black font-black hover:text-cx-purple" do %>
+              <%= link_to cart_path(@cart) , class: "flex text-black font-black hover:text-cx-purple text-center" do %>
                 <ion-icon name="cart-outline" class="h-8 w-8 font-bold"></ion-icon>
-                <span id="line_items_count">
+                <span id="line_items_count" class="pl-2 pt-1">
                   <%= line_items.count %>
                 </span>
               <% end %>
