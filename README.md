@@ -223,14 +223,28 @@ query Purchases {
             description
             fileAttachment
             id
+            issueCover
             name
             pageCount
             price
             releaseDate
             slug
-            storeId
+            updatedAt
+            collaborations {
+                creatorProfile {
+                    name
+                    formattedBio
+                    avatar
+                }
+            }
+            store {
+                displayImage
+                id
+                name
+            }
             updatedAt
         }
     }
 }
+
 ```

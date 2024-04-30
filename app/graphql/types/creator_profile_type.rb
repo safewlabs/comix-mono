@@ -4,6 +4,7 @@ module Types
   class CreatorProfileType < Types::BaseObject
     field :id, ID, null: false
     field :name, String
+    field :skills, String
     field :formatted_bio, String
     field :avatar, String, null: false
 
