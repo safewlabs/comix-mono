@@ -5,7 +5,7 @@ module Types
     field :id, ID, null: false
     field :name, String
     field :formatted_bio, String
-    field :avatar, String
+    field :avatar, String, null: false
 
     def avatar
       if object.avatar.present?
