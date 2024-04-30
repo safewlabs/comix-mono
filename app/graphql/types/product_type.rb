@@ -15,6 +15,11 @@ module Types
     field :file_attachment, String
     field :issue_cover, String
     field :store, Types::StoreType, null: false
+    field :collaborations, [Types::CollaborationType], null: true
+
+    def collaborations
+      object.collaborations
+    end
 
     def file_attachment
       Rails.application.routes.url_helpers.rails_blob_url(object.file_attachment,
