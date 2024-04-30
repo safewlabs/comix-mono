@@ -234,6 +234,7 @@ query Purchases {
                 creatorProfile {
                     name
                     formattedBio
+                    skills
                     avatar
                 }
             }
