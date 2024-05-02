@@ -16,10 +16,12 @@ class CartController < ApplicationController
       @current_cart.line_items.create(product: @product, quantity:)
     end
     respond_to do |format|
+      flash.now[:success] = "#{@product.name} added to cart!"
       format.html { redirect_to cart_path(@current_cart) }
       format.turbo_stream do
         render turbo_stream: [
-          turbo_stream.update("line_items_count", html: line_items_count)
+          turbo_stream.update("line_items_count", html: line_items_count),
+          turbo_stream.update("flash-message", FlashMessageComponent.new(flash:).render_in(view_context))
         ]
       end
     end
@@ -32,7 +34,8 @@ class CartController < ApplicationController
     respond_to do |format|
       format.turbo_stream do
         render turbo_stream: [
-          turbo_stream.update("line_items_count", html: line_items_count)
+          turbo_stream.update("line_items_count", html: line_items_count),
+          turbo_stream.update("cart", CartComponent.new(cart: @current_cart).render_in(view_context))
         ]
       end
     end

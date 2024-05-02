@@ -1,0 +1,7 @@
+<div id="flash-message" class="flex text-white bg-cx-purple text-center justify-center">
+  <% @flash.each do |type, message| %>
+    <div class="alert alert-<%= type %>">
+      <%= message %>
+    </div>
+  <% end %>
+</div>
