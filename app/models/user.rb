@@ -58,6 +58,7 @@ class User < ApplicationRecord
            through: :creator_profiles_managers
   has_many :purchases, dependent: :destroy
   has_many :products, through: :purchases
+  has_many :orders
   # validates :first_name, :last_name, :email, :password, presence: true
   # validates_confirmation_of :password
   before_validation :set_uid_provider

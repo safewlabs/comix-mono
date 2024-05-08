@@ -15,7 +15,10 @@ class Payments::StripeController < ApplicationController
     line_items = @current_cart.line_items.map do |line_item|
       { quantity: 1, price: line_item.product.stripe_price_id }
     end
+
     transfer_group_name = "ORDER-#{SecureRandom.hex(10)}"
+    order = current_user.orders.create(order_reference: transfer_group_name, cart: @current_cart)
+    order.line_items << @current_cart.line_items
 
     session = Stripe::Checkout::Session.create(
       success_url: "#{hostname}/payments/stripe/success?session_id={CHECKOUT_SESSION_ID}",
@@ -37,10 +40,5 @@ class Payments::StripeController < ApplicationController
 
   def cancel
     redirect_to cart_path(@current_cart)
-  end
-
-  def compute_application_fee_amount(base_price)
-    # Take a 10% cut.
-    (0.1 * base_price).to_i
   end
 end

@@ -10,6 +10,7 @@
 #
 class Cart < ApplicationRecord
   has_many :line_items, dependent: :destroy
+  has_many :orders
 
   def total
     total_amount = line_items.to_a.sum { |line_item| line_item.total }
