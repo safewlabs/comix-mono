@@ -3,11 +3,13 @@
 class FulfillOrderJob
   include Sidekiq::Job
 
-  def perform(customer_email, stripe_price_id)
+  def perform(customer_email, stripe_product_ids)
     user = User.find_by(email: customer_email)
-    product = Product.find_by(stripe_price_id:)
+    products = Product.where(stripe_product_id: stripe_product_ids)
 
-    Purchase.create!(user:, product:)
-    FulfillProductMailer.with(user:).send_product(product).deliver_later
+    products.each do |product|
+      Purchase.create!(user:, product:)
+      FulfillProductMailer.with(user:).send_product(product).deliver_later
+    end
   end
 end

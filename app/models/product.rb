@@ -43,6 +43,7 @@ class Product < ApplicationRecord
   has_many :product_genres, dependent: :destroy
   has_many :genres, through: :product_genres
 
+  has_many :line_items
   has_many :purchases, dependent: :destroy
   has_many :user, through: :purchases
 
@@ -50,6 +51,14 @@ class Product < ApplicationRecord
     attachable.variant :thumb, resize_to_fill: [150, 200]
   end
   has_one_attached :file_attachment, dependent: :destroy
+
+  def formatted_price
+    Money.new(price * 100, "USD").format
+  end
+
+  def store_name
+    store.name
+  end
 
   def is_purchased?(user)
     purchases.find_by(user:)

@@ -1,0 +1,23 @@
+<%= line_item_image %>
+<div class="flex flex-col text-center justify-center">
+    <h3 class="text-lg text-gray-900"><%= product.name %></h3>
+    <dl class="mt-0.5 space-y-px text-md text-gray-600">
+        <div>
+            <dt class="inline">Publisher:</dt>
+            <dd class="inline"><%= product.store_name %></dd>
+        </div>
+
+        <div>
+            <dt class="inline">Medium:</dt>
+            <dd class="inline">Digital</dd>
+        </div>
+    </dl>
+</div>
+
+<div class="flex flex-1 items-center justify-center gap-2">
+    <h3 class="px-4"><%= product.formatted_price %></h2>
+    <%= link_to remove_cart_index_path(id: @line_item.id),
+        data: { turbo_method: :post } do %>
+        <ion-icon name="trash-outline"></ion-icon>
+    <% end %>
+</div>
