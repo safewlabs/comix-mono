@@ -174,7 +174,7 @@ GEM
       rails (>= 4.2, < 7.1)
       zeitwerk
     hashie (5.0.0)
-    honeybadger (5.8.1)
+    honeybadger (5.9.0)
     httparty (0.22.0)
       csv
       mini_mime (>= 1.0.0)
