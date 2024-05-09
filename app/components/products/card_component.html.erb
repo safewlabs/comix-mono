@@ -21,4 +21,12 @@
         <% end %>
     </div>
   <% end %>
+  <div class="w-full">
+    <%= link_to "Add to Cart",
+        add_cart_index_path(id: @product.id),
+        class: "inline-flex items-center justify-center rounded-md border border-transparent bg-cx-purple px-8 py-2 text-md font-medium text-white shadow-sm hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-800 focus:ring-offset-2 w-full",
+        data: { turbo_method: :post,
+            "umami-event": "Product-Card-Add-Cart-Click",
+            "umami-event-product": @product.name } %>
+  </div>
 </li>
