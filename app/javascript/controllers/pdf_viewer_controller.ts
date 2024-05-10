@@ -19,7 +19,13 @@ export default class extends Controller {
       // change to dark mode
       instance.UI.setTheme('dark');
       instance.UI.setFitMode('Width')
-      instance.Core.documentViewer.addEventListener('documentLoaded', () => {})
+      instance.UI.disableElements(['ribbons']);
+      instance.UI.setToolbarGroup('toolbarGroup-View');
+      const LayoutMode = instance.UI.LayoutMode;
+      instance.UI.setLayoutMode(LayoutMode.FacingCover);
+      instance.Core.documentViewer.addEventListener('documentLoaded', () => {
+        instance.UI.setZoomLevel(1.5);
+      })
     });
   }
 }
