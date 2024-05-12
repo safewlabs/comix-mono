@@ -87,8 +87,8 @@ GEM
       public_suffix (>= 2.0.2, < 6.0)
     ast (2.4.2)
     aws-eventstream (1.3.0)
-    aws-partitions (1.925.0)
-    aws-sdk-core (3.194.2)
+    aws-partitions (1.927.0)
+    aws-sdk-core (3.195.0)
       aws-eventstream (~> 1, >= 1.3.0)
       aws-partitions (~> 1, >= 1.651.0)
       aws-sigv4 (~> 1.8)
@@ -174,7 +174,7 @@ GEM
       rails (>= 4.2, < 7.1)
       zeitwerk
     hashie (5.0.0)
-    honeybadger (5.9.0)
+    honeybadger (5.10.0)
     httparty (0.22.0)
       csv
       mini_mime (>= 1.0.0)
@@ -317,7 +317,7 @@ GEM
       redis-client (>= 0.22.0)
     redis-client (0.22.1)
       connection_pool
-    regexp_parser (2.9.0)
+    regexp_parser (2.9.1)
     reline (0.5.6)
       io-console (~> 0.5)
     responders (3.1.1)
@@ -408,7 +408,7 @@ GEM
     stimulus-rails (1.3.3)
       railties (>= 6.0.0)
     stringio (3.1.0)
-    stripe (11.3.0)
+    stripe (11.4.0)
     thor (1.3.1)
     timeout (0.4.1)
     turbo-rails (2.0.5)
