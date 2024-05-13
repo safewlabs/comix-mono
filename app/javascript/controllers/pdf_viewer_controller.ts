@@ -19,7 +19,7 @@ export default class extends Controller {
       // change to dark mode
       instance.UI.setTheme('dark');
       instance.UI.setFitMode('Width')
-      instance.UI.disableElements(['ribbons']);
+      instance.UI.disableElements(['ribbons', 'downloadButton', 'printButton', 'saveAsButton']);
       instance.UI.setToolbarGroup('toolbarGroup-View');
       const LayoutMode = instance.UI.LayoutMode;
       instance.UI.setLayoutMode(LayoutMode.FacingCover);
