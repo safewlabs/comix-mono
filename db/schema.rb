@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_05_07_080040) do
+ActiveRecord::Schema[7.0].define(version: 2024_05_13_114211) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -239,6 +239,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_05_07_080040) do
     t.string "stripe_price_id"
     t.string "stripe_product_id"
     t.string "video_url"
+    t.boolean "disable_download", default: false
     t.index ["store_id"], name: "index_products_on_store_id"
   end
 

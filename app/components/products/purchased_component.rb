@@ -18,7 +18,7 @@ class Products::PurchasedComponent < ViewComponent::Base
   end
 
   def product_file
-    return nil unless @product.file_attachment.present?
+    return nil if !@product.file_attachment.present? || @product.disable_download
     link_to "Download",
             rails_blob_url(file, disposition: "attachment"),
             target: "_blank",

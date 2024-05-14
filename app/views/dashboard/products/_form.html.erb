@@ -54,6 +54,11 @@
     </div>
 </div>
 
+<div class="flex flex-row py-4">
+    <%= form.label "Disable Download Link for PDF", class: "block text-sm font-medium text-gray-700 px-2" %>
+    <%= form.check_box :disable_download %>
+</div>
+
 <div>
     <%= form.label :release_date, class: "block text-sm font-medium text-gray-700 py-2" %>
     <div class="mt-1">
