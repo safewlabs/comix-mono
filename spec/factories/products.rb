@@ -7,6 +7,7 @@
 #  id                :bigint           not null, primary key
 #  age_rating        :string
 #  description       :text
+#  disable_download  :boolean          default(FALSE)
 #  name              :string
 #  page_count        :integer
 #  price             :decimal(5, 2)
