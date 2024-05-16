@@ -5,7 +5,7 @@
   data-controller="navbar"
   data-navbar-state-value="false"
   aria-label="Site Header"
-  class="bg-white">
+  class="bg-white border-b border-b-grey-500">
   <div class="hidden lg:block mx-auto max-w-screen-xl p-4 lg:px-8">
     <div class="flex h-16 items-center justify-between">
       <div class="flex-1 md:flex md:items-center md:gap-12">
@@ -15,70 +15,89 @@
         <% end %>
 
         <ul class="flex items-center gap-4 text-lg">
+          <li>
+            <div data-controller="dropdown" data-action="click->dropdown#toggle click@window->dropdown#hide">
+              <div id="dropdown-button" class="relative inline-block">
+                <div role="button" tabindex="0" data-dropdown-target="button" class="inline-block select-none">
+                  <span class="appearance-none flex items-center inline-block">
+                    <span class="text-black font-black hover:text-cx-purple font-bold hidden lg:block">
+                      Browse By
+                    </span>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" class="fill-current h-4 w-4"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"></path></svg>
+                  </span>
+                </div>
+                <div data-dropdown-target="menu"
+                      data-transition-enter="transition ease-out duration-200"
+                      data-transition-enter-from="opacity-0 translate-y-1"
+                      data-transition-enter-to="opacity-100 translate-y-0"
+                      data-transition-leave="transition ease-in duration-150"
+                      data-transition-leave-from="opacity-100 translate-y-0"
+                      data-transition-leave-to="opacity-0 translate-y-1"
+                      class="hidden absolute top-4 right-0 z-10 mt-5 flex w-screen max-w-max">
+                  <div class="text-sm bg-white shadow-lg rounded border overflow-hidden w-32">
+                    <%= link_to 'Comic',
+                      comics_path,
+                      class: "text-black text-base font-black hover:text-cx-purple font-bold hidden lg:block no-underline block pl-4 py-2 hover:bg-gray-100 whitespace-no-wrap" %>
+                    <%= link_to 'Creator',
+                      profiles_path,
+                      class: "text-black text-base font-black hover:text-cx-purple font-bold hidden lg:block no-underline block pl-4 py-2 hover:bg-gray-100 whitespace-no-wrap" %>
+                    <%= link_to 'Store',
+                      stores_path,
+                      class: "text-black text-base font-black hover:text-cx-purple font-bold hidden lg:block no-underline block pl-4 py-2 hover:bg-gray-100 whitespace-no-wrap" %>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <% unless @user && @user.has_role?(:creator) %>
+              <%= link_to 'For Creators',
+                  for_creators_path,
+                  class: "text-black font-black hover:text-cx-purple font-bold" %>
+            <% end %>
+          </li>
           <li class="flex flex-row">
-            <%= link_to 'Comics',
-              comics_path,
-              class: "text-black font-black hover:text-cx-purple font-bold" %>
-          <li>
-          <li>
-            <%= link_to 'Creators',
-              profiles_path,
-              class: "text-black font-black hover:text-cx-purple font-bold hidden lg:block" %>
+            <div data-controller="dropdown" data-action="click->dropdown#toggle click@window->dropdown#hide">
+              <div id="dropdown-button" class="relative inline-block">
+                <div role="button" tabindex="0" data-dropdown-target="button" class="inline-block select-none">
+                  <span class="appearance-none flex items-center inline-block">
+                    <span class="text-black font-black hover:text-cx-purple font-bold hidden lg:block">
+                      About Us
+                    </span>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" class="fill-current h-4 w-4"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"></path></svg>
+                  </span>
+                </div>
+                <div data-dropdown-target="menu"
+                      data-transition-enter="transition ease-out duration-200"
+                      data-transition-enter-from="opacity-0 translate-y-1"
+                      data-transition-enter-to="opacity-100 translate-y-0"
+                      data-transition-leave="transition ease-in duration-150"
+                      data-transition-leave-from="opacity-100 translate-y-0"
+                      data-transition-leave-to="opacity-0 translate-y-1"
+                      class="hidden absolute top-4 right-0 z-10 mt-5 flex w-screen max-w-max">
+                  <div class="text-sm bg-white shadow-lg rounded border overflow-hidden w-32">
+                    <%= link_to 'Blog',
+                      posts_path,
+                      class: "text-black text-base font-black hover:text-cx-purple font-bold hidden lg:block no-underline block pl-4 py-2 hover:bg-gray-100 whitespace-no-wrap" %>
+                    <%= link_to 'Our Story',
+                      about_path,
+                      class: "text-black text-base font-black hover:text-cx-purple font-bold hidden lg:block no-underline block pl-4 py-2 hover:bg-gray-100 whitespace-no-wrap" %>
+                  </div>
+                </div>
+              </div>
+            </div>
           </li>
         </ul>
-        <%= render(SearchBarComponent.new()) %>
       </div>
 
       <div class="md:flex md:items-center md:gap-12">
         <nav aria-label="Site Nav" class="navbar-menu hidden md:block">
           <ul class="flex items-center gap-6 text-lg">
-            <li class="flex flex-row">
-              <div data-controller="dropdown" data-action="click->dropdown#toggle click@window->dropdown#hide">
-                <div id="dropdown-button" class="relative inline-block">
-                  <div role="button" tabindex="0" data-dropdown-target="button" class="inline-block select-none">
-                    <span class="appearance-none flex items-center inline-block">
-                      <span class="text-black font-black hover:text-cx-purple font-bold hidden lg:block">
-                        About Us
-                      </span>
-                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" class="fill-current h-4 w-4"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"></path></svg>
-                    </span>
-                  </div>
-                  <div data-dropdown-target="menu"
-                        data-transition-enter="transition ease-out duration-200"
-                        data-transition-enter-from="opacity-0 translate-y-1"
-                        data-transition-enter-to="opacity-100 translate-y-0"
-                        data-transition-leave="transition ease-in duration-150"
-                        data-transition-leave-from="opacity-100 translate-y-0"
-                        data-transition-leave-to="opacity-0 translate-y-1"
-                        class="hidden absolute top-4 right-0 z-10 mt-5 flex w-screen max-w-max">
-                    <div class="text-sm bg-white shadow-lg rounded border overflow-hidden w-32">
-                      <%= link_to 'Blog',
-                        posts_path,
-                        class: "text-black text-base font-black hover:text-cx-purple font-bold hidden lg:block no-underline block pl-4 py-2 hover:bg-gray-100 whitespace-no-wrap" %>
-                      <%= link_to 'Our Story',
-                        about_path,
-                        class: "text-black text-base font-black hover:text-cx-purple font-bold hidden lg:block no-underline block pl-4 py-2 hover:bg-gray-100 whitespace-no-wrap" %>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <% unless @user %>
-              <li>
-                <%= link_to 'Login',
-                  new_user_session_path,
-                  class: "text-black font-black hover:text-cx-purple font-bold" %>
-              </li>
-            <% end %>
-            </li>
+            <li>
               <% if @user && @user.has_role?(:creator) %>
                 <%= link_to 'Dashboard',
                     dashboard_root_path,
                     class: "text-black font-black hover:text-cx-purple font-bold" %>
-              <% else %>
-                <%= link_to 'For Creators',
-                    for_creators_path,
-                    class: "px-4 py-3 leading-none border rounded text-black border-black font-black hover:border-transparent hover:text-cx-lavender-blush hover:bg-cx-purple mt-4 lg:mt-0" %>
               <% end %>
             </li>
             <li class="flex flex-row">
@@ -89,6 +108,19 @@
                 </span>
               <% end %>
             </li>
+            <% unless @user %>
+              <li>
+                <%= link_to 'Login',
+                  new_user_session_path,
+                  class: "text-black font-black hover:text-cx-purple font-bold" %>
+              </li>
+              <li>
+                <%= link_to 'Sign Up & Read',
+                  new_user_registration_path,
+                  class: "px-4 py-3 leading-none border rounded text-black border-black font-black hover:border-transparent hover:text-cx-lavender-blush hover:bg-cx-purple mt-4 lg:mt-0" %>
+
+              </li>
+            <% end %>
             <% if @user %>
               <li>
                 <div class="inline-block text-sm px-4 py-2 leading-none rounded no-underline text-gray hover:text-gray-900 hover:bg-white mt-4 lg:mt-0">
@@ -150,8 +182,6 @@
           <%= link_to 'Sign Out', destroy_user_session_path, data: {turbo_method: :delete}, class: "underline font-black hover:text-cx-purple font-bold" %>
         </div>
       <% end %>
-
-      <%= render(SearchBarComponent.new()) %>
     </div>
   </div>
 </header>

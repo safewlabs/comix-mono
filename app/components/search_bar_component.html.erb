@@ -1,7 +1,7 @@
-<%= form_with url: results_search_index_path, method: :post do |form| %>
+<%= form_with url: results_search_index_path, class: "w-full flex justify-center", method: :post do |form| %>
     <%= form.search_field :search_term,
                           value: params[:search_term],
                           oninput: "this.form.requestSubmit()",
-                          class: "h-10 w-full rounded-lg border-none bg-white pe-10 ps-4 text-sm shadow-sm sm:w-56",
+                          class: "h-10 w-1/2 rounded-lg border border-grey-300 bg-white pe-10 ps-4 text-sm shadow-sm",
                           placeholder: "Search for Products" %>
 <% end %>
