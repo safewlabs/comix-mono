@@ -43,23 +43,20 @@ body {
 }
 
 .pagy {
-  @apply flex justify-center gap-1 text-xs font-medium py-2;
-  .page {
-    a {
-      @apply block rounded-lg px-3 py-1 bg-gray-200;
-      &:hover {
-        @apply bg-gray-300;
-      }
-    }
-    &.active a {
-      @apply text-white bg-gray-400 cursor-default;
-    }
-    &.disabled a {
-      @apply text-gray-300 bg-gray-100 cursor-default;
-    }
-    &.gap { }  /* if you need to customize it */
+  @apply flex space-x-1 font-normal text-sm text-gray-500;
+  a:not(.gap) {
+    @apply block rounded-lg px-3 py-1 bg-gray-200;  
   }
-  .pagy-combo-input, &.pagy-items-selector-js {
+  a:not(.gap):hover {
+    @apply bg-gray-300 cursor-pointer;
+  }
+  a:not(.gap):not([href]) { /* disabled links */
+    @apply text-gray-300 bg-gray-100 cursor-default;
+  }
+  a:not(.gap).current {
+    @apply text-white bg-gray-400;
+  }
+  label {
     @apply inline-block whitespace-nowrap bg-gray-200 rounded-lg px-3 py-0.5;
     input {
       @apply bg-gray-100 border-none rounded-md;

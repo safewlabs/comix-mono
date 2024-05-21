@@ -13,8 +13,6 @@
         <% end %>
       <% end %>
     </div>
-    <div class="mt-12 w-full">
-      <%== pagy_nav(@pagy) %>
-    </div>
+    <%= render(PaginationComponent.new(pagy: @pagy)) %>
   </div>
 </div>
