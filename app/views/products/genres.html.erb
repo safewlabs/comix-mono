@@ -16,7 +16,5 @@
       <% end %>
     </ul>
   </div>
-  <div class="text-center w-full">
-    <%== pagy_nav(@pagy) %>
-  </div>
+  <%= render(PaginationComponent.new(pagy: @pagy)) %>
 </section>
