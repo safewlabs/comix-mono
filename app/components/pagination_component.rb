@@ -6,5 +6,4 @@ class PaginationComponent < ApplicationComponent
   def initialize(pagy:)
     @pagy = pagy
   end
-
 end
