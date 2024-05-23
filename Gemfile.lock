@@ -267,7 +267,7 @@ GEM
     pg_search (2.3.6)
       activerecord (>= 5.2)
       activesupport (>= 5.2)
-    propshaft (0.8.0)
+    propshaft (0.9.0)
       actionpack (>= 7.0.0)
       activesupport (>= 7.0.0)
       rack
@@ -334,7 +334,7 @@ GEM
     redis-client (0.22.1)
       connection_pool
     regexp_parser (2.9.1)
-    reline (0.5.6)
+    reline (0.5.7)
       io-console (~> 0.5)
     responders (3.1.1)
       actionpack (>= 5.2)
