@@ -26,13 +26,13 @@ class CartComponent < ApplicationComponent
     link_to "Login to Checkout",
             new_user_session_path,
             data: { turbo: false },
-            class: "inline-flex items-center justify-center rounded-md border border-transparent bg-cx-purple px-8 py-2 text-xl font-medium text-white shadow-sm hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-800 focus:ring-offset-2 sm:w-auto" 
+            class: "inline-flex items-center justify-center rounded-md border border-transparent bg-cx-purple px-8 py-2 text-xl font-medium text-white shadow-sm hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-800 focus:ring-offset-2 sm:w-auto"
   end
 
   def checkout_button
     link_to "Checkout",
             payments_stripe_checkout_path,
             data: { turbo: false },
-            class: "inline-flex items-center justify-center rounded-md border border-transparent bg-cx-purple px-8 py-2 text-xl font-medium text-white shadow-sm hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-800 focus:ring-offset-2 sm:w-auto" 
+            class: "inline-flex items-center justify-center rounded-md border border-transparent bg-cx-purple px-8 py-2 text-xl font-medium text-white shadow-sm hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-800 focus:ring-offset-2 sm:w-auto"
   end
 end
