@@ -7,13 +7,13 @@ class ApplicationController < ActionController::Base
   before_action :set_current_cart
 
   protected
-    # def after_sign_in_path_for(resource)
-    #   if resource.has_role?(:creator)
-    #     dashboard_root_path
-    #   else
-    #     stored_location_for(resource) || super
-    #   end
-    # end
+    def after_sign_in_path_for(resource)
+      if resource.has_role?(:creator)
+        dashboard_root_path
+      else
+        stored_location_for(resource) || super
+      end
+    end
 
     def after_sign_out_path_for(resource)
       if resource.to_s.eql?("admin_user")
