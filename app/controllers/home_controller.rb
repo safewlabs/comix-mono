@@ -3,7 +3,7 @@
 class HomeController < ApplicationController
   def index
     @genres = Genre.published
-    onboarded_products = Product.where(store: Store.where(user: User.where.not(stripe_user_id: nil)))
+    onboarded_products = Product.published.where(store: Store.where(user: User.where.not(stripe_user_id: nil)))
     @onboarded_products = onboarded_products.order("RANDOM()").take(12)
     @recent_products = onboarded_products.order(created_at: :desc).take(12)
     @creator_profiles = CreatorProfile.order("RANDOM()").take(8)
