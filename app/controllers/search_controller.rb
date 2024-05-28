@@ -3,7 +3,7 @@
 class SearchController < ApplicationController
   def results
     if params.dig(:search_term).present?
-      @products = Product.search_comics(params[:search_term])
+      @products = Product.published.search_comics(params[:search_term])
     else
       @products = []
     end
