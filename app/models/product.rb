@@ -13,6 +13,7 @@
 #  price             :decimal(5, 2)
 #  release_date      :datetime
 #  slug              :string
+#  status            :integer          default("draft")
 #  video_url         :string
 #  created_at        :datetime         not null
 #  updated_at        :datetime         not null
@@ -52,6 +53,12 @@ class Product < ApplicationRecord
     attachable.variant :thumb, resize_to_fill: [150, 200]
   end
   has_one_attached :file_attachment, dependent: :destroy
+
+  enum status: {
+    draft: 0,
+    published: 1,
+    unpublished: 2
+  }
 
   def formatted_price
     Money.new(price * 100, "USD").format

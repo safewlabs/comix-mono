@@ -13,6 +13,7 @@
 #  price             :decimal(5, 2)
 #  release_date      :datetime
 #  slug              :string
+#  status            :integer          default("draft")
 #  video_url         :string
 #  created_at        :datetime         not null
 #  updated_at        :datetime         not null
