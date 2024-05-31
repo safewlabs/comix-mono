@@ -1,9 +1,8 @@
 # frozen_string_literal: true
 
 class CartComponent < ApplicationComponent
-  def initialize(cart:, user: nil)
+  def initialize(cart:)
     @cart = cart
-    @user = user
   end
 
   def line_items
@@ -15,7 +14,7 @@ class CartComponent < ApplicationComponent
   end
 
   def login_and_checkout
-    if @user
+    if current_user
       checkout_button
     else
       login_button
