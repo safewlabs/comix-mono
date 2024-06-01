@@ -17,7 +17,6 @@ class CartController < ApplicationController
     end
     respond_to do |format|
       flash.now[:success] = "#{@product.name} added to cart!"
-      format.html { redirect_to cart_path(@current_cart) }
       format.turbo_stream do
         render turbo_stream: [
           turbo_stream.update("line_items_count", html: line_items_count),
