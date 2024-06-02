@@ -21,7 +21,7 @@
         <% end %>
     </div>
   <% end %>
-  <% if @product.price.eql?(0) %>
+  <% if !@product.price.eql?(0) %>
     <div class="w-full">
       <%= button_to "Add to Cart",
           add_cart_index_path(id: @product.id),
