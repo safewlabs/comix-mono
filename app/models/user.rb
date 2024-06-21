@@ -44,6 +44,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable,
          :confirmable, :omniauthable
   include GraphqlDevise::Authenticatable
+  devise :omniauthable, omniauth_providers: [:google_oauth2]
   rolify
   has_many :projects
   has_one :store
@@ -70,5 +71,10 @@ class User < ApplicationRecord
   def set_uid_provider
     self.provider = "email"
     self.uid = self.email
+  end
+
+  def self.from_google(u)
+    create_with(uid: u[:uid], provider: "google",
+                password: Devise.friendly_token[0, 20]).find_or_create_by!(email: u[:email])
   end
 end
