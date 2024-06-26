@@ -5,7 +5,11 @@
     <%= image_tag "https://img.icons8.com/dotty/70/000000/full-image.png", class: "rounded-lg shadow-xl mx-auto -mt-16 h-48 w-48 bg-cover bg-center" %>
   <% end %>
   <div class="flex flex-col w-full text-center text-2xl pt-4">
-    <span class="mx-2 p-2">&#36;<%= @product.price %></span>
+    <span class="mx-2 p-2">&#36; <%= @product.price %></span>
+    <div class="flex flex-col text-base items-center align-middle	">
+      <div class="flex flex-row items-center"><ion-icon name="book-outline"></ion-icon>&nbsp;Download or Read In Our Reader</div>
+      <div class="flex flex-row items-center"><ion-icon name="document-outline"></ion-icon>&nbsp;PDF</div>
+    </div>
     <%= issue_cta %>
   </div>
 </div>
