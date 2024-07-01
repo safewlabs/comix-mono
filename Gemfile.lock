@@ -9,7 +9,7 @@ GIT
 
 GIT
   remote: https://github.com/faker-ruby/faker.git
-  revision: 0812ef04463ee9024abbfaaf959ae7759aa82c1e
+  revision: 3eaedf4c74e943b8e36bf1d9a02c6fdde287b2ba
   branch: main
   specs:
     faker (3.4.1)
@@ -160,7 +160,9 @@ GEM
     factory_bot_rails (6.4.3)
       factory_bot (~> 6.4)
       railties (>= 5.0.0)
-    ffi (1.17.0)
+    ffi (1.17.0-arm64-darwin)
+    ffi (1.17.0-x86_64-darwin)
+    ffi (1.17.0-x86_64-linux-gnu)
     flipper (1.3.0)
       concurrent-ruby (< 2)
     flipper-active_record (1.3.0)
