@@ -4,6 +4,7 @@
 
 import { application } from "./application"
 import { Tabs, Toggle, Dropdown, Modal } from "tailwindcss-stimulus-components"
+import Lightbox from '@stimulus-components/lightbox'
 
 import NavbarController from "./navbar_controller"
 import SliderController from "./slider_controller"
@@ -16,3 +17,4 @@ application.register('tabs', Tabs)
 application.register('toggle', Toggle)
 application.register('dropdown', Dropdown)
 application.register('modal', Modal)
+application.register('lightbox', Lightbox)

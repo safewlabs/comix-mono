@@ -65,3 +65,4 @@ body {
 }
 
 @import 'actiontext.css';
+@import '~lightgallery/scss/lightgallery.css'
