@@ -45,6 +45,7 @@ class ProductsController < ApplicationController
 
   def index
     onboarded_products = Product.published.where(store: Store.where(user: User.where.not(stripe_user_id: nil)))
+    @genres = Genre.all
     @pagy, @products = pagy(onboarded_products)
     set_meta_tags title: "Buy Comics",
           description: "Buy Comics by Indie Creators",
