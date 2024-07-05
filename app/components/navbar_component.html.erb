@@ -61,8 +61,8 @@
               class: "text-black text-base font-black hover:text-cx-purple font-bold hidden lg:block no-underline block pl-4 py-2 hover:underline whitespace-no-wrap" %>
           </li>
         </ul>
+        <%= render(SearchBarComponent.new()) %>
       </div>
-      <%= render(SearchBarComponent.new()) %>
       <div class="md:flex md:items-center md:gap-12">
         <nav aria-label="Site Nav" class="navbar-menu hidden md:block">
           <ul class="flex items-center gap-6 text-lg">
@@ -122,9 +122,8 @@
   </div>
 
     <div class="flex justify-between px-4 py-1 sm:p-0 items-center lg:hidden">
-      <%= link_to root_path, class: "flex flex-row items-center" do %>
+      <%= link_to root_path, class: "flex flex-row items-center m-4" do %>
           <%= render(LogoComponent.new(classes: "w-16")) %>
-          <div class="text-3xl bold font-black self-center">COMI<i>X</i></div>
       <% end %>
       <div class="sm:hidden">
         <button class="rounded bg-gray-100 p-2 text-gray-600 transition hover:text-gray-600/75"
