@@ -11,7 +11,7 @@ module.exports = {
   ],
   theme: {
     fontFamily: {
-      body: ["IBM Plex Mono", 'monospace']
+      body: ["JetBrains Mono", 'monospace']
     },
     extend: {
       spacing: {
