@@ -1,9 +1,12 @@
-<div class="min-h-full flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
-  <div class="max-w-md w-full space-y-8">
+<div class="min-h-full flex flex-row items-center justify-center">
+  <div class="lg:w-1/2 lg:block hidden">
+    <img class="w-full object-fill" src="https://res.cloudinary.com/drg9hguhu/image/upload/v1720149878/Comix_NAIDOC_jcrw1a.jpg" />
+  </div>
+  <div class="lg:w-1/2 w-full flex flex-col items-center justify-center">
     <div>
-      <h2 class="mt-6 text-center text-3xl font-extrabold text-gray-900">Sign up and start reading</h2>
+      <h2 class="mt-6 text-center text-3xl font-extrabold text-gray-900">Sign up for a free account</h2>
     </div>
-    <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { 'data-turbo' => "false", class: "mt-8 space-y-6" }) do |f| %>
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { 'data-turbo' => "false", class: "mt-8 space-y-6 w-2/3" }) do |f| %>
       <div class="rounded-md shadow-sm -space-y-px">
         <%= render "devise/shared/error_messages", resource: resource %>
         <div>
@@ -66,6 +69,8 @@
         </button>
       </div>
     <% end %>
-    <%= render "devise/shared/links" %>
+    <div class="mt-4">
+      <%= render "devise/shared/links" %>
+    </div>
   </div>
 </div>
