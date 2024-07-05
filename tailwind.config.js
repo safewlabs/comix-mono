@@ -11,7 +11,7 @@ module.exports = {
   ],
   theme: {
     fontFamily: {
-      body: ['Poppins', 'sans-serif']
+      body: ["IBM Plex Mono", 'monospace']
     },
     extend: {
       spacing: {
@@ -23,6 +23,7 @@ module.exports = {
       },
       colors: {
         cx: {
+          "bleached-cedar": "#3D1A37",
           "grain-yellow": "#f7c759",
           beaver: "#9f8170",
           crayola: "#ffb728",

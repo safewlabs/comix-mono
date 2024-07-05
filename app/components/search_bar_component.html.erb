@@ -1,4 +1,4 @@
-<%= form_with url: results_search_index_path, class: "w-full flex justify-center", method: :post do |form| %>
+<%= form_with url: results_search_index_path, class: "w-1/2 flex justify-start", method: :post do |form| %>
     <%= form.search_field :search_term,
                           value: params[:search_term],
                           oninput: "this.form.requestSubmit()",
