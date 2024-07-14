@@ -1,7 +1,7 @@
 <li id="<%= dom_id @product %>" class="hover:drop-shadow-xl hover:p-2">
   <%= link_to product_path(@product), class: "flex flex-col overflow-hidden group rounded-lg", data: {"umami-event": "Product-Card-Product-Click", "umami-event-product": @product.name} do %>
     <%= product_image %>
-    <div class="p-2 bg-cx-lavender-blush -mt-12 w-1/4 text-center"
+    <div class="p-2 bg-cx-lavender-blush -mt-12 w-fit text-center"
          style="border-top-right-radius: 0.5rem;">
       &#36; <%= @product.price %>
     </div>
