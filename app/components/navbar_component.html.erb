@@ -145,6 +145,14 @@
       <div class="px-2 py-1">
         <%= link_to 'Comics', comics_path, data: { "umami-event": "Mobile-Comics-Link-Click" }, class: "text-black font-black hover:text-cx-purple font-bold" %>
       </div>
+      <div class="px-2 py-1">
+        <%= link_to cart_path(@cart) , class: "flex text-black font-black hover:text-cx-purple text-center" do %>
+          <ion-icon name="cart-outline" class="h-8 w-8 font-bold"></ion-icon>
+          <span id="line_items_count" class="pl-2 pt-1">
+            <%= line_items.count %>
+          </span>
+        <% end %>
+      </div>
       <% unless @user %>
         <div class="px-2 py-1">
           <%= link_to 'Login', new_user_session_path, data: { "umami-event": "Mobile-Login-Link-Click" }, class: "text-black font-black hover:text-cx-purple font-bold" %>

@@ -29,8 +29,8 @@ class Products::IssueCoverMobileComponent < ViewComponent::Base
   end
 
   def buy_button
-    link_to "Buy",
-            payments_stripe_checkout_path(product_id: @product.id),
+    link_to "Add to Cart",
+            add_cart_index_path(id: @product.id),
             class: "inline-flex items-center justify-center rounded-md border border-transparent bg-cx-purple px-8 py-2 text-xl font-medium text-white shadow-sm hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-800 focus:ring-offset-2 sm:w-auto",
             data: { turbo: false,
                     "umami-event": "Product-Page-Buy-Click",
@@ -41,9 +41,9 @@ class Products::IssueCoverMobileComponent < ViewComponent::Base
     link_to "Login and Read for free",
              free_purchase_purchases_path(product_id: @product.id),
              class: "text-black font-black hover:text-cx-purple font-bold lg:hidden block text-lg",
-             data: { turbo: false,
-                     "umami-event": "Product-Page-Get-Free-Click",
-                     "umami-event-product": @product.name }
+              data: { turbo_method: :post,
+                      "umami-event": "Product-Page-Add-Cart-Click",
+                      "umami-event-product": @product.name }
   end
 
   def get_free_button
