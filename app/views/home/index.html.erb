@@ -24,7 +24,7 @@
         New Releases
       </h2>
     </header>
-    <ul class="grid gap-4 mt-4 sm:grid-cols-2 lg:grid-cols-4">
+    <ul class="grid gap-4 mt-4 sm:grid-cols-6 lg:grid-cols-4">
       <% cache @recent_products, expires_in: 60.seconds do %>
         <% @recent_products.each do |product| %>
           <%= render(Products::CardComponent.new(product: product, number_of_products: 4)) %>
