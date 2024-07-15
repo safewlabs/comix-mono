@@ -109,7 +109,7 @@
                 <div class="sm:col-span-2">
                   <dt class="text-lg font-bold ">Products</dt>
                   <div class="py-10 border-t text-center">
-                    <ul class="grid gap-4 mt-4 sm:grid-cols-2 lg:grid-cols-4">
+                    <ul class="grid gap-4 mt-4 sm:grid-cols-6 lg:grid-cols-3">
                       <% @creator_profile.collaborations.each do |collaboration| %>
                         <%= render(Products::CardComponent.new(product: collaboration.product)) %>
                       <% end %>
