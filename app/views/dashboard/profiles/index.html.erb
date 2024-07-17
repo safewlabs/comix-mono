@@ -1,12 +1,12 @@
 <h1 class="text-2xl font-bold pb-4">Profile</h1>
 <% if @profile.present? %>
-  <%= link_to "View or Edit Your Profile", dashboard_profile_path(@profile), class: "inline-flex items-center justify-center rounded-md border border-transparent bg-cx-purple px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-800 focus:ring-offset-2 sm:w-auto" %>
+  <%= link_to "View or Edit Your Profile", dashboard_profile_path(@profile), class: "inline-flex items-center justify-center -md border border-transparent bg-cx-purple px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-800 focus:ring-offset-2 sm:w-auto" %>
 <% else %>
   <p>You don't have a profile yet</p>
-  <%= link_to "Create your Profile", new_dashboard_profile_path, class: "inline-flex items-center justify-center rounded-md border border-transparent bg-cx-purple px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-800 focus:ring-offset-2 sm:w-auto" %>  
+  <%= link_to "Create your Profile", new_dashboard_profile_path, class: "inline-flex items-center justify-center -md border border-transparent bg-cx-purple px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-800 focus:ring-offset-2 sm:w-auto" %>  
 <% end %>
 
-<%= link_to "Create a collaborator profile", new_dashboard_profile_path, class: "inline-flex items-center justify-center rounded-md border border-transparent bg-cx-purple px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-800 focus:ring-offset-2 sm:w-auto" %>
+<%= link_to "Create a collaborator profile", new_dashboard_profile_path, class: "inline-flex items-center justify-center -md border border-transparent bg-cx-purple px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-800 focus:ring-offset-2 sm:w-auto" %>
 
 <% @managed_profiles.each do |managed_profile| %>
   <div class="flex flex-row py-4">

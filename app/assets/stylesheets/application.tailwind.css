@@ -45,7 +45,7 @@ body {
 .pagy {
   @apply flex space-x-1 font-normal text-sm text-gray-500;
   a:not(.gap) {
-    @apply block rounded-lg px-3 py-1 bg-gray-200;  
+    @apply block px-3 py-1 bg-gray-200;  
   }
   a:not(.gap):hover {
     @apply bg-gray-300 cursor-pointer;
@@ -57,9 +57,9 @@ body {
     @apply text-white bg-gray-400;
   }
   label {
-    @apply inline-block whitespace-nowrap bg-gray-200 rounded-lg px-3 py-0.5;
+    @apply inline-block whitespace-nowrap bg-gray-200 px-3 py-0.5;
     input {
-      @apply bg-gray-100 border-none rounded-md;
+      @apply bg-gray-100 border-none -md;
     }
   }
 }

@@ -1,8 +1,8 @@
 <div class="flex items-center justify-center px-12">
   <% if @product.issue_cover.present? %>
-    <%= image_tag @product.issue_cover, class: "shadow-2xl hidden max-h-bigtile rounded-lg lg:block" %>
+    <%= image_tag @product.issue_cover, class: "shadow-2xl hidden max-h-bigtile lg:block" %>
   <% else %>
-    <%= image_tag "https://res.cloudinary.com/drg9hguhu/image/upload/v1667569457/comix/78_tage_auf_der_stra%C3%9Fe_des_hasses_000_cover.jpg", class: "shadow-2xl hidden rounded-lg lg:block" %>
+    <%= image_tag "https://res.cloudinary.com/drg9hguhu/image/upload/v1667569457/comix/78_tage_auf_der_stra%C3%9Fe_des_hasses_000_cover.jpg", class: "shadow-2xl hidden lg:block" %>
   <% end %>
 </div>
 <div class="mt-2 text-4xl hidden lg:flex flex-col items-center justify-center">
@@ -16,7 +16,7 @@
 <% if @product.video_url.present? %>
   <div data-controller="modal" data-action="keydown.esc->modal#close" tabindex="-1" class="relative z-10 flex items-center justify-center py-4">
     <button href="#" data-action="click->modal#open"
-            class="hidden lg:inline-flex items-center justify-center rounded-md border border-transparent bg-cx-purple px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-800 focus:ring-offset-2 sm:w-auto">
+            class="hidden lg:inline-flex items-center justify-center -md border border-transparent bg-cx-purple px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-800 focus:ring-offset-2 sm:w-auto">
             Trailer
     </button>
 
@@ -34,12 +34,12 @@
       <!-- Modal Container -->
       <div data-modal-target="container" class="max-h-screen relative">
         <!-- Modal Card -->
-        <div class="m-1 bg-white rounded shadow">
+        <div class="m-1 bg-white shadow">
           <div class="p-8 text-center">
             <h2 class="text-2xl font-bold mb-4">Trailer</h2>
             <%= render(VideoComponent.new(video_url: @product.video_url)) %>
             <div class="flex justify-center items-center flex-wrap mt-6">
-              <button class="inline-flex items-center justify-center rounded-md border border-transparent bg-cx-purple px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-800 focus:ring-offset-2 sm:w-auto" data-action="click->modal#close:prevent">Close</button>
+              <button class="inline-flex items-center justify-center -md border border-transparent bg-cx-purple px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-800 focus:ring-offset-2 sm:w-auto" data-action="click->modal#close:prevent">Close</button>
             </div>
           </div>
         </div>

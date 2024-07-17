@@ -15,17 +15,19 @@ class Products::CardComponent < ViewComponent::Base
     if @product.issue_cover.present?
       image_tag(@product.issue_cover,
                 alt: @product.name,
-                class: "h-[450px] w-full object-cover sm:h-[450px] rounded-lg")
+                style: "height:450px;",
+                class: "w-full object-cover transition duration-500")
     else
       image_tag("https://res.cloudinary.com/drg9hguhu/image/upload/v1667569457/comix/78_tage_auf_der_stra%C3%9Fe_des_hasses_000_cover.jpg",
                 alt: "placeholder image",
-                class: "h-[450px] w-full object-cover sm:h-[450px] rounded-lg")
+                style: "height:350px",
+                class: "w-full object-cover transition duration-500")
     end
   end
 
   def store_image
     if @product.store.display_image.present?
-      image_tag(@product.store.display_image.variant(resize_to_limit: [32, 32]), class: "block rounded-lg")
+      image_tag(@product.store.display_image.variant(resize_to_limit: [32, 32]), class: "block ")
     else
       image_tag("https://img.icons8.com/dotty/32/000000/full-image.png", width: "32", height: "32")
     end

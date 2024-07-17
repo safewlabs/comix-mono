@@ -33,7 +33,7 @@
                       data-transition-leave-from="opacity-100 translate-y-0"
                       data-transition-leave-to="opacity-0 translate-y-1"
                       class="hidden absolute top-4 right-0 z-10 mt-5 flex w-screen max-w-max">
-                  <div class="text-sm bg-white shadow-lg rounded border overflow-hidden w-32">
+                  <div class="text-sm bg-white shadow-lg border overflow-hidden w-32">
                     <%= link_to 'Comics',
                       comics_path,
                       class: "text-black text-base font-black hover:text-cx-purple font-bold hidden lg:block no-underline block pl-4 py-2 hover:underline whitespace-no-wrap" %>
@@ -90,13 +90,13 @@
               <li>
                 <%= link_to 'Sign Up',
                   new_user_registration_path,
-                  class: "px-4 py-3 leading-none border rounded text-black border-black font-black hover:border-transparent hover:text-cx-lavender-blush hover:bg-cx-purple mt-4 lg:mt-0" %>
+                  class: "px-4 py-3 leading-none border text-black border-black font-black hover:border-transparent hover:text-cx-lavender-blush hover:bg-cx-purple mt-4 lg:mt-0" %>
 
               </li>
             <% end %>
             <% if @user %>
               <li>
-                <div class="inline-block text-sm px-4 py-2 leading-none rounded no-underline text-gray hover:text-gray-900 hover:bg-white mt-4 lg:mt-0">
+                <div class="inline-block text-sm px-4 py-2 leading-none no-underline text-gray hover:text-gray-900 hover:bg-white mt-4 lg:mt-0">
                   <div class="relative" data-controller="dropdown">
                     <div data-action="click->dropdown#toggle click@window->dropdown#hide" role="button" data-dropdown-target="button" tabindex="0" class="inline-block select-none">
                       <span class="appearance-none flex items-center text-gray-700">
@@ -105,7 +105,7 @@
                       </span>
                     </div>
                     <div data-dropdown-target="menu" class="absolute right-0 mt-2 z-50 hidden">
-                      <div class="bg-white shadow rounded border overflow-hidden">
+                      <div class="bg-white shadow border overflow-hidden">
                           <%= link_to 'Purchases',  purchases_path, data: {action: "click->dropdown#toggle"}, class: 'no-underline block pl-8 py-3 text-gray-900 bg-white hover:bg-gray-300 whitespace-nowrap' %>
                           <%= link_to 'Account',  edit_user_registration_path, data: {action: "click->dropdown#toggle"}, class: 'no-underline block pl-8 py-3 text-gray-900 bg-white hover:bg-gray-300 whitespace-nowrap' %>
                           <%= link_to 'Sign Out', destroy_user_session_path, data: {action: "click->dropdown#toggle", turbo_method: :delete}, class: 'no-underline block px-8 py-3 border-t text-gray-900 bg-white hover:bg-gray-300 whitespace-nowrap' %>
@@ -126,7 +126,7 @@
           <%= render(LogoComponent.new(classes: "w-16")) %>
       <% end %>
       <div class="sm:hidden">
-        <button class="rounded bg-gray-100 p-2 text-gray-600 transition hover:text-gray-600/75"
+        <button class="bg-gray-100 p-2 text-gray-600 transition hover:text-gray-600/75"
           type="button"
           data-action="click->navbar#toggle" >
           <span class="sr-only">Open main menu</span>

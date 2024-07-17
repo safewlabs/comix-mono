@@ -12,7 +12,7 @@
           <div class="field my-4">
               <%= f.label :email, class: "block text-sm font-medium text-gray-700" %>
               <div class="mt-1">
-                  <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm", placeholder: "Acme Comics Inc" %>
+                  <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "block w-full -md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm", placeholder: "Acme Comics Inc" %>
               </div>
           </div>
         
@@ -26,30 +26,30 @@
                 <em><%= @minimum_password_length %> characters minimum</em>
               <% end %>
               <div class="mt-1">
-                <%= f.password_field :password, autocomplete: "new-password", class: "block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" %>
+                <%= f.password_field :password, autocomplete: "new-password", class: "block w-full -md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" %>
               </div>
           </div>
         
           <div class="field my-4">
             <%= f.label "Confirm New Password", class: "block text-sm font-medium text-gray-700" %>
             <div>
-              <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" %>
+              <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "block w-full -md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" %>
             </div>
           </div>
         
           <div class="field my-4">
             <%= f.label :current_password, class: "block text-sm font-medium text-gray-700" %> <i>(we need your current password to confirm your changes)</i><br />
             <div class="mt-1">
-              <%= f.password_field :current_password, autocomplete: "current-password", class: "block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" %>
+              <%= f.password_field :current_password, autocomplete: "current-password", class: "block w-full -md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" %>
             </div>
           </div>
         
           <div class="actions py-4">
-            <%= f.submit "Update", class: "inline-flex items-center justify-center rounded-md border border-transparent bg-cx-purple px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-800 focus:ring-offset-2 sm:w-auto" %>
+            <%= f.submit "Update", class: "inline-flex items-center justify-center -md border border-transparent bg-cx-purple px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-800 focus:ring-offset-2 sm:w-auto" %>
           </div>
         <% end %>
 
-        <p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, form_class: "inline-flex items-center justify-center rounded-md border border-transparent bg-red-800 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-red-500 focus:outline-none focus:ring-2 focus:ring-purple-800 focus:ring-offset-2 sm:w-auto" %></p>
+        <p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, form_class: "inline-flex items-center justify-center -md border border-transparent bg-red-800 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-red-500 focus:outline-none focus:ring-2 focus:ring-purple-800 focus:ring-offset-2 sm:w-auto" %></p>
 
         <%= link_to "Back", :back %>
       
