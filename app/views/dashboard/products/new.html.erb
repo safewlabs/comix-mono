@@ -11,11 +11,11 @@
           <%= form_with model: [:dashboard, @product] do |form| %>
             <%= render partial: "form", locals: { form: form } %>
             <br/>
-            <%= form.submit class: "inline-flex items-center justify-center rounded-md border border-transparent bg-cx-purple px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-800 focus:ring-offset-2 sm:w-auto" %>
+            <%= form.submit class: "inline-flex items-center justify-center border border-transparent bg-cx-purple px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-800 focus:ring-offset-2 sm:w-auto" %>
           <% end %>
         <% else %>
             <p>You don't have a store setup at the moment, please set up a store first</p><br/>
-            <%= link_to "Create a Store", new_dashboard_store_path, class: "inline-flex items-center justify-center rounded-md border border-transparent bg-cx-purple px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-800 focus:ring-offset-2 sm:w-auto" %>
+            <%= link_to "Create a Store", new_dashboard_store_path, class: "inline-flex items-center justify-center border border-transparent bg-cx-purple px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-800 focus:ring-offset-2 sm:w-auto" %>
         <% end %>
       </div>
     </div>
