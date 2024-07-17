@@ -17,7 +17,7 @@
           <%= form.label :display_image %><br />
           <%= form.file_field :display_image %><br />
           <%= form.select :user_id, @creator_users.map { |creator| [creator.email, creator.id]}, {}, class: "form-control" %>
-          <%= form.submit class: "inline-flex items-center justify-center -md border border-transparent bg-cx-purple px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-800 focus:ring-offset-2 sm:w-auto" %>
+          <%= form.submit class: "inline-flex items-center justify-center border border-transparent bg-cx-purple px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-800 focus:ring-offset-2 sm:w-auto" %>
         <% end %>
       </div>
     </div>

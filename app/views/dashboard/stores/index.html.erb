@@ -1,6 +1,6 @@
 <h1 class="text-2xl font-bold pb-4">Store</h1>
 <% if @store %>
-  <%= link_to "Edit Store", edit_dashboard_store_path(@store), class: "inline-flex items-center justify-center -md border border-transparent bg-cx-purple px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-800 focus:ring-offset-2 sm:w-auto" %>
+  <%= link_to "Edit Store", edit_dashboard_store_path(@store), class: "inline-flex items-center justify-center border border-transparent bg-cx-purple px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-800 focus:ring-offset-2 sm:w-auto" %>
   <div class="py-4">
     <div class="flex flex-col lg:flex-row">
         <label class="pr-4 font-bold">Store Name</label>
@@ -24,5 +24,5 @@
     </div>
   </div>
 <% else %>
-  <%= link_to "Create a Store", new_dashboard_store_path, class: "inline-flex items-center justify-center -md border border-transparent bg-cx-purple px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-800 focus:ring-offset-2 sm:w-auto" %>  
+  <%= link_to "Create a Store", new_dashboard_store_path, class: "inline-flex items-center justify-center border border-transparent bg-cx-purple px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-800 focus:ring-offset-2 sm:w-auto" %>  
 <% end %>

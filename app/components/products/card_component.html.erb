@@ -1,5 +1,5 @@
 <li id="<%= dom_id @product %>" class="py-4">
-  <%= link_to product_path(@product), class: "group block hover:drop-shadow	", data: {"umami-event": "Product-Card-Product-Click", "umami-event-product": @product.name} do %>
+  <%= link_to product_path(@product), class: "group block", data: {"umami-event": "Product-Card-Product-Click", "umami-event-product": @product.name} do %>
     <%= product_image %>
 
     <div class="mt-1.5">

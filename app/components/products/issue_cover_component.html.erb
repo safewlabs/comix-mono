@@ -16,7 +16,7 @@
 <% if @product.video_url.present? %>
   <div data-controller="modal" data-action="keydown.esc->modal#close" tabindex="-1" class="relative z-10 flex items-center justify-center py-4">
     <button href="#" data-action="click->modal#open"
-            class="hidden lg:inline-flex items-center justify-center -md border border-transparent bg-cx-purple px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-800 focus:ring-offset-2 sm:w-auto">
+            class="hidden lg:inline-flex items-center justify-center border border-transparent bg-cx-purple px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-800 focus:ring-offset-2 sm:w-auto">
             Trailer
     </button>
 
@@ -39,7 +39,7 @@
             <h2 class="text-2xl font-bold mb-4">Trailer</h2>
             <%= render(VideoComponent.new(video_url: @product.video_url)) %>
             <div class="flex justify-center items-center flex-wrap mt-6">
-              <button class="inline-flex items-center justify-center -md border border-transparent bg-cx-purple px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-800 focus:ring-offset-2 sm:w-auto" data-action="click->modal#close:prevent">Close</button>
+              <button class="inline-flex items-center justify-center border border-transparent bg-cx-purple px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-800 focus:ring-offset-2 sm:w-auto" data-action="click->modal#close:prevent">Close</button>
             </div>
           </div>
         </div>

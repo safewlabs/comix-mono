@@ -22,7 +22,7 @@ class Products::PurchasedComponent < ViewComponent::Base
     link_to "Download",
             rails_blob_url(file, disposition: "attachment"),
             target: "_blank",
-            class: "inline-flex text-center -md border border-transparent bg-cx-purple px-8 py-2 text-xl font-medium text-white shadow-sm hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-800 focus:ring-offset-2 sm:w-auto"
+            class: "inline-flex text-center border border-transparent bg-cx-purple px-8 py-2 text-xl font-medium text-white shadow-sm hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-800 focus:ring-offset-2 sm:w-auto"
   end
 
   def file

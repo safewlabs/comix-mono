@@ -59,7 +59,7 @@ body {
   label {
     @apply inline-block whitespace-nowrap bg-gray-200 px-3 py-0.5;
     input {
-      @apply bg-gray-100 border-none -md;
+      @apply bg-gray-100 border-none;
     }
   }
 }
