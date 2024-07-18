@@ -20,7 +20,7 @@ class Products::CardComponent < ViewComponent::Base
     else
       image_tag("https://res.cloudinary.com/drg9hguhu/image/upload/v1667569457/comix/78_tage_auf_der_stra%C3%9Fe_des_hasses_000_cover.jpg",
                 alt: "placeholder image",
-                style: "height:350px",
+                style: "height:450px",
                 class: "w-full object-cover transition duration-500")
     end
   end
