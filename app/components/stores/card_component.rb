@@ -13,7 +13,7 @@ class Stores::CardComponent < ViewComponent::Base
     else
       image_tag("https://placehold.co/320x320",
                 alt: "placeholder image", width: "100", height: "100",
-                class: "shadow-xl rounded-lg h-auto align-middle border-none w-full")
+                class: "shadow-xl h-auto align-middle border-none w-full")
     end
   end
 end

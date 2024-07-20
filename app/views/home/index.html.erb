@@ -24,7 +24,7 @@
         New Releases
       </h2>
     </header>
-    <ul class="grid gap-4 mt-4 sm:grid-cols-2 lg:grid-cols-4">
+    <ul class="grid gap-4 mt-4 sm:grid-cols-6 lg:grid-cols-4">
       <% cache @recent_products, expires_in: 60.seconds do %>
         <% @recent_products.each do |product| %>
           <%= render(Products::CardComponent.new(product: product, number_of_products: 4)) %>
@@ -116,7 +116,7 @@
            class="flex flex-col"
            target="_blank">
           <img src="https://res.cloudinary.com/drg9hguhu/image/upload/v1701517285/indiecomicszone_aeuvvv.jpg"
-               class="rounded-lg"
+               class=""
                width="200px" />
           Indie Comics Zone
         </a>
@@ -126,7 +126,7 @@
            class="flex flex-col"
            target="_blank">
           <img src="https://res.cloudinary.com/drg9hguhu/image/upload/v1701517285/GN-Logo-Gradient_nmmhzu.png"
-               class="rounded-lg"
+               class=""
                width="200px" />
           Geek Network
         </a>
@@ -136,7 +136,7 @@
            class="flex flex-col"
             target="_blank">
           <img src="https://res.cloudinary.com/drg9hguhu/image/upload/v1701517285/world-at-war-comics_nnggj9.jpg"
-               class="rounded-lg"
+               class=""
                width="200px" />
           World at war comics
         </a>
@@ -146,7 +146,7 @@
            class="flex flex-col"
            target="_blank">
           <img src="https://res.cloudinary.com/drg9hguhu/image/upload/v1701517286/Spoiler-Country-Logo-2020-Sqaure_ebnrmn.jpg"
-               class="rounded-lg"
+               class=""
                width="200px" />
           Spoiler Country
         </a>
@@ -156,7 +156,7 @@
         <a href="https://www.youtube.com/watch?v=Zt0pka6jboA"
            class="flex flex-col" >
           <img src="https://res.cloudinary.com/drg9hguhu/image/upload/v1701517285/solo-nerd-bird_x6fni3.jpg"
-               class="rounded-lg"
+               class=""
                width="200px" />
           Solo Nerd Bird
         </a>
@@ -167,7 +167,7 @@
            class="flex flex-col"
            target="_blank">
           <img src="https://res.cloudinary.com/drg9hguhu/image/upload/v1701562941/3my_mmiqmo.jpg"
-               class="rounded-lg"
+               class=""
                width="200px" />
           3 Million Years
         </a>
@@ -183,7 +183,7 @@
   <div class="flex flex-row">
     <div class="px-2">
       <div class="my-1 w-full">
-          <article class="overflow-hidden rounded-lg border hover:shadow-lg">
+          <article class="overflow-hidden border hover:shadow-lg">
               <header class="flex items-center justify-center leading-tight p-2 md:p-4">
                   <h1 class="text-lg">
                       <p class="no-underline hover:underline text-black">
@@ -205,7 +205,7 @@
     </div>
     <div class="px-2">
       <div class="my-1 w-full">
-          <article class="overflow-hidden rounded-lg border hover:shadow-lg">
+          <article class="overflow-hidden border hover:shadow-lg">
               <header class="flex items-center justify-center leading-tight p-2 md:p-4">
                   <h1 class="text-lg">
                       <p class="no-underline hover:underline text-black">
@@ -226,7 +226,7 @@
     </div>
     <div class="px-2">
       <div class="my-1 w-full">
-          <article class="overflow-hidden rounded-lg border hover:shadow-lg">
+          <article class="overflow-hidden border hover:shadow-lg">
               <header class="flex items-center justify-center leading-tight p-2 md:p-4">
                   <h1 class="text-xl">
                       <p class="no-underline hover:underline text-black">
@@ -247,7 +247,7 @@
     </div>
   </div>
   <div class="mt-2 pb-4 w-full flex justify-center">
-    <%= link_to "Join us as a creator", for_creators_path, class: "inline-flex items-center justify-center rounded-md border border-transparent bg-cx-purple px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-800 focus:ring-offset-2 sm:w-auto" %>
+    <%= link_to "Join us as a creator", for_creators_path, class: "inline-flex items-center justify-center border border-transparent bg-cx-purple px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-800 focus:ring-offset-2 sm:w-auto" %>
   </div>
 </div>
 
