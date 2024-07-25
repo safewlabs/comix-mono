@@ -17,16 +17,19 @@
 #  video_url         :string
 #  created_at        :datetime         not null
 #  updated_at        :datetime         not null
+#  series_id         :bigint
 #  store_id          :bigint           not null
 #  stripe_price_id   :string
 #  stripe_product_id :string
 #
 # Indexes
 #
-#  index_products_on_store_id  (store_id)
+#  index_products_on_series_id  (series_id)
+#  index_products_on_store_id   (store_id)
 #
 # Foreign Keys
 #
+#  fk_rails_...  (series_id => series.id)
 #  fk_rails_...  (store_id => stores.id)
 #
 FactoryBot.define do

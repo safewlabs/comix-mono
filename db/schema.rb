@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_05_28_070710) do
+ActiveRecord::Schema[7.1].define(version: 2024_07_23_120007) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -241,6 +241,8 @@ ActiveRecord::Schema[7.1].define(version: 2024_05_28_070710) do
     t.string "video_url"
     t.boolean "disable_download", default: false
     t.integer "status", default: 0
+    t.bigint "series_id"
+    t.index ["series_id"], name: "index_products_on_series_id"
     t.index ["store_id"], name: "index_products_on_store_id"
   end
 
@@ -286,6 +288,13 @@ ActiveRecord::Schema[7.1].define(version: 2024_05_28_070710) do
     t.datetime "updated_at", null: false
     t.index ["name", "resource_type", "resource_id"], name: "index_roles_on_name_and_resource_type_and_resource_id"
     t.index ["resource_type", "resource_id"], name: "index_roles_on_resource"
+  end
+
+  create_table "series", force: :cascade do |t|
+    t.string "title"
+    t.text "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "stores", force: :cascade do |t|
@@ -357,6 +366,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_05_28_070710) do
   add_foreign_key "orders", "users"
   add_foreign_key "product_genres", "genres"
   add_foreign_key "product_genres", "products"
+  add_foreign_key "products", "series"
   add_foreign_key "products", "stores"
   add_foreign_key "projects", "users"
   add_foreign_key "projects_creator_profiles", "creator_profiles"
