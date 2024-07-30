@@ -24,6 +24,7 @@ class Payments::StripeController < ApplicationController
       success_url: "#{hostname}/payments/stripe/success?session_id={CHECKOUT_SESSION_ID}",
       cancel_url: "#{hostname}/payments/stripe/cancel",
       mode: "payment",
+      allow_promotion_codes: true,
       line_items:,
       customer_email: current_user.email,
       payment_intent_data: {
