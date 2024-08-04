@@ -8,7 +8,11 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 puts "Creating Genres"
-Genre.create([{ name: "Horror" }, { name: "Sci-Fi" }, { name: "Fantasy" }, { name: "Crime" }, { name: "Kids" }])
+Genre.create([{ name: "Horror", slug: "Horror".parameterize },
+              { name: "Sci-Fi", slug: "Sci-Fi".parameterize },
+              { name: "Fantasy", slug: "Fantasy".parameterize },
+              { name: "Crime", slug: "Crime".parameterize },
+              { name: "Kids", slug: "Kids".parameterize }])
 puts "Creating Admin User"
 FactoryBot.create(:admin_user)
 puts "Creating User"
