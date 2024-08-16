@@ -34,6 +34,13 @@
 </div>
 
 <div>
+    <%= form.label :status, class: "block text-sm font-medium text-gray-700 py-2"  %>
+    <div class="mt-1">
+        <%= form.select :status, options_for_select(Product.statuses.map {|key, value| [key.titleize, Product.statuses.key(value)]}, @product.status) %>
+    </div>
+</div>
+
+<div>
     <%= form.label :issue_cover, class: "block text-sm font-medium text-gray-700 py-2" %>
     <% if @product.issue_cover.attached? %>
         <%= image_tag(rails_representation_url(@product.issue_cover, host: ENV["HOSTNAME"])) %>
