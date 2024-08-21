@@ -2,6 +2,7 @@
 
 require "sidekiq/web"
 Rails.application.routes.draw do
+  get 'landing/index'
   if Rails.env.development?
     mount GraphiQL::Rails::Engine, at: "/graphiql", graphql_path: "/graphql"
   end
@@ -46,6 +47,11 @@ Rails.application.routes.draw do
   resources :stores, param: :slug, only: [:show]
   resources :products, param: :slug, only: [:show]
   resources :stores, param: :slug, only: [:index, :show]
+  resources :landing, only: [:index] do
+    collection do
+      get :star_gazers
+    end
+  end
   resources :cart, only: [:show] do
     collection do
       post "add", to: "cart#add", as: :add
