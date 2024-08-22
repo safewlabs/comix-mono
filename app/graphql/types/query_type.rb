@@ -15,9 +15,15 @@ module Types
     field :purchases, [Types::PurchaseType], description: "List of Purchases for a user" do
       argument :user_id, ID, required: true
     end
+    field :free_comics, [Types::ProductType], description: "List of Free comics available to read at this time"
 
     def purchases(user_id:)
       Purchase.where(user_id:)
+    end
+
+    def free_comics
+      genre = Genre.find_by(slug: "free-comics")
+      genre.products.published
     end
 
     def
