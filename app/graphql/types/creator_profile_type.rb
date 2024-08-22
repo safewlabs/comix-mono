@@ -7,6 +7,13 @@ module Types
     field :skills, String
     field :formatted_bio, String
     field :avatar, String, null: false
+    field :twitter, String
+    field :website, String
+    field :youtube, String
+    field :tiktok, String
+    field :facebook, String
+    field :instagram, String
+    field :email, String
 
     def avatar
       if object.avatar.present?
