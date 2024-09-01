@@ -43,6 +43,7 @@ gem "omniauth", "~> 2.1"
 # Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
 # gem "bcrypt", "~> 3.1.7"
 gem "devise"
+gem "recaptcha"
 gem "rolify"
 gem "pundit"
 gem "graphql"
