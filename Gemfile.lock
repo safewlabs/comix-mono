@@ -9,7 +9,7 @@ GIT
 
 GIT
   remote: https://github.com/faker-ruby/faker.git
-  revision: caa55073c3217c65c4929c49d48cf5b0617d5fb6
+  revision: b09aa0dbc01ae2c5ed94f4b26964bc16f311d0e5
   branch: main
   specs:
     faker (3.4.2)
