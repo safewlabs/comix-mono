@@ -15,6 +15,7 @@
 #  last_name              :string
 #  last_sign_in_at        :datetime
 #  last_sign_in_ip        :string
+#  mark_for_deletion      :boolean
 #  provider               :string
 #  publishable_key        :string
 #  remember_created_at    :datetime
