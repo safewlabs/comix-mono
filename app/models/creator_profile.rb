@@ -42,6 +42,6 @@ class CreatorProfile < ApplicationRecord
            foreign_key: :user_id,
            through: :creator_profiles_managers
 
-  has_many :collaborations
+  has_many :collaborations, dependent: :destroy
   has_many :products, through: :collaborations
 end

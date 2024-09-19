@@ -17,6 +17,7 @@
 #  last_name              :string
 #  last_sign_in_at        :datetime
 #  last_sign_in_ip        :string
+#  mark_for_deletion      :boolean
 #  provider               :string
 #  publishable_key        :string
 #  remember_created_at    :datetime
@@ -45,20 +46,19 @@ class User < ApplicationRecord
          :confirmable, :omniauthable
   include GraphqlDevise::Authenticatable
   rolify
-  has_many :projects
-  has_one :store
-  has_one :creator_profile
-  has_one_attached :avatar
+  has_one :store, dependent: :destroy
+  has_one :creator_profile, dependent: :destroy
+  has_one_attached :avatar, dependent: :destroy
   has_many :backings, dependent: :destroy
-  has_many :projects, through: :backings
+  has_many :projects, through: :backings, dependent: :destroy
   has_many :creator_profiles_managers, dependent: :destroy
   has_many :managed_profiles,
            class_name: "CreatorProfile",
            foreign_key: :creator_profile_id,
-           through: :creator_profiles_managers
+           through: :creator_profiles_managers, dependent: :destroy
   has_many :purchases, dependent: :destroy
   has_many :products, through: :purchases
-  has_many :orders
+  has_many :orders, dependent: :destroy
   # validates :first_name, :last_name, :email, :password, presence: true
   # validates_confirmation_of :password
   before_validation :set_uid_provider
