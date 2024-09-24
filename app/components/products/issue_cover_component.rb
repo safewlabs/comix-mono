@@ -21,6 +21,7 @@ class Products::IssueCoverComponent < ViewComponent::Base
   end
 
   def issue_cta
+    return coming_soon_text if @product.draft?
     return buy_button if is_onboarded? && !is_free?
     return login_and_read_link if is_free? && @user.nil?
     return get_free_button if is_free? && @user && !is_purchased?
