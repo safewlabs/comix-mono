@@ -59,7 +59,7 @@ class User < ApplicationRecord
   has_many :purchases, dependent: :destroy
   has_many :products, through: :purchases
   has_many :orders, dependent: :destroy
-
+  validates_confirmation_of :password, on: :create
   before_validation :set_uid_provider
 
   def can_receive_payments?
