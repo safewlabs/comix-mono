@@ -7,21 +7,22 @@ export default class extends Controller {
     sliders.forEach((slider) => {
       tns({
         container: slider,
-        items: 4,
+        items: 1,
+        autoWidth: true,
         slideBy: "page",
         arrowKeys: true,
-        speed: 300,
+        speed: 400,
         controls: false,
         autoplay: true,
         autoplayHoverPause: true,
         autoplayButtonOutput: false,
         responsive: {
           350: {
-            items: 2,
+            items: 1,
             gutter: 10,
           },
           500: {
-            items: 4,
+            items: 1,
             gutter: 20,
           },
         },
