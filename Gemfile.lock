@@ -9,7 +9,7 @@ GIT
 
 GIT
   remote: https://github.com/faker-ruby/faker.git
-  revision: b5a034c7c6d901ee89cbd7d751c87e4c8ed80915
+  revision: 7ab4a7504ab16eba7829a257189c8140da18b47a
   branch: main
   specs:
     faker (3.4.2)
@@ -432,7 +432,7 @@ GEM
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
     unicode-display_width (2.6.0)
-    view_component (3.17.0)
+    view_component (3.18.0)
       activesupport (>= 5.2.0, < 8.0)
       concurrent-ruby (~> 1.0)
       method_source (~> 1.0)
