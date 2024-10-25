@@ -13,17 +13,15 @@ Rails.application.routes.draw do
     sign_in: "login",
     sign_out: "logout"
   }
+
   namespace :admin do
-    root "dashboard#index"
-    resources :posts, param: :slug
-    resources :creator_profiles, param: :slug
-    resources :stores, param: :slug
-    resources :products, param: :slug do
-      get :add_product_to_stripe, on: :member
+    authenticate(:admin_user) do
+      mount Motor::Admin => "/panel"
+      mount Flipper::UI.app(Flipper) => "/flipper"
+      mount Sidekiq::Web => "/sidekiq"
     end
-    mount Flipper::UI.app(Flipper) => "/flipper"
-    mount Sidekiq::Web => "/sidekiq"
   end
+
   root "home#index"
   get "about", to: "pages#about", as: "about"
   get "for-creators", to: "pages#for_creators", as: "for_creators"
