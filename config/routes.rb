@@ -16,7 +16,7 @@ Rails.application.routes.draw do
 
   namespace :admin do
     authenticate(:admin_user) do
-      mount Motor::Admin => "/panel"
+      mount Motor::Admin => "/"
       mount Flipper::UI.app(Flipper) => "/flipper"
       mount Sidekiq::Web => "/sidekiq"
     end
