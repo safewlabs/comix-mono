@@ -200,7 +200,7 @@ GEM
       rails (>= 4.2, < 7.2)
       zeitwerk
     hashie (5.0.0)
-    honeybadger (5.16.0)
+    honeybadger (5.20.1)
       logger
     httparty (0.22.0)
       csv
