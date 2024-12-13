@@ -38,6 +38,13 @@ Rails.application.routes.draw do
       post :results
     end
   end
+
+  namespace :api do
+    namespace :v1 do
+      get "new_releases", to: "products#new_releases", as: "new_releases"
+    end
+  end
+
   resources :projects, param: :slug
   resources :posts, param: :slug, only: [:index, :show]
   resources :profiles, param: :slug, only: [:show, :index]
