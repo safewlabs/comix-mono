@@ -46,6 +46,9 @@ Rails.application.routes.draw do
         get "top_ten", to: "products#top_ten", on: :collection
       end
       resources :genres, only: :index
+      resources :stores do
+        get "random", to: "stores#random", on: :collection
+      end
     end
   end
 
