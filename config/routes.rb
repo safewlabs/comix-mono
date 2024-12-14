@@ -42,6 +42,7 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       get "new_releases", to: "products#new_releases", as: "new_releases"
+      get "top_ten", to: "products#top_ten", as: "top_ten"
     end
   end
 
