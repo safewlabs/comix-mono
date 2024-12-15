@@ -49,6 +49,9 @@ Rails.application.routes.draw do
       resources :stores do
         get "random", to: "stores#random", on: :collection
       end
+      resources :posts do
+        get "latest", to: "posts#latest", on: :collection
+      end
     end
   end
 
