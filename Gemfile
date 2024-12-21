@@ -30,6 +30,7 @@ gem "view_component"
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jbuilder"
 gem "aws-sdk-s3"
+gem "airrecord"
 # Use Redis adapter to run Action Cable in production
 gem "redis", "~> 5.3"
 gem "sidekiq"
