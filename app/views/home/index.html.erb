@@ -4,7 +4,7 @@
 <section class="py-4">
   <div class="max-w-screen-xl p-4 mx-auto sm:px-6 lg:px-8">
     <ul class="flex flex-wrap flex-row justify-center items-center">
-      <% cache @genres, expires_in: 60.seconds do %>
+      <% cache @genres do %>
         <% @genres.each do |genre| %>
           <li class="p-3 mx-4 my-2 font-bold text-xl">
             <%= link_to genre.name, genres_path(genre.slug), data: { "umami-event": "Home-Genre-Click" },
@@ -25,7 +25,7 @@
       </h2>
     </header>
     <ul class="grid gap-4 mt-4 sm:grid-cols-6 lg:grid-cols-4">
-      <% cache @recent_products, expires_in: 60.seconds do %>
+      <% cache @recent_products do %>
         <% @recent_products.each do |product| %>
           <%= render(Products::CardComponent.new(product: product, number_of_products: 4)) %>
         <% end %>
@@ -48,7 +48,7 @@
       </h2>
     </header>
     <ul class="grid gap-4 mt-4 sm:grid-cols-2 lg:grid-cols-4">
-      <% cache @stores, expires_in: 60.seconds do %>
+      <% cache @stores do %>
         <% @stores.each do |store| %>
           <%= render(Stores::CardComponent.new(store: store)) %>
         <% end %>
@@ -71,7 +71,7 @@
       </h2>
     </header>
     <ul class="grid gap-4 mt-4 sm:grid-cols-2 lg:grid-cols-4">
-      <% cache @creator_profiles, expires_in: 60.seconds do %>
+      <% cache @creator_profiles do %>
         <% @creator_profiles.each do |creator_profile| %>
           <%= render(CreatorProfiles::CardComponent.new(creator_profile: creator_profile)) %>
         <% end %>
@@ -94,7 +94,7 @@
       </h2>
     </header>
     <ul class="grid gap-4 mt-4 sm:grid-cols-2 lg:grid-cols-4">
-      <% cache @onboarded_products, expires_in: 60.seconds do %>
+      <% cache @onboarded_products do %>
         <% @onboarded_products.each do |product| %>
             <%= render(Products::CardComponent.new(product: product, number_of_products: 4)) %>
         <% end %>
@@ -267,7 +267,7 @@
       </div>
     </div>
     <div class="mt-3 grid gap-16 lg:grid-cols-3 lg:gap-x-5 lg:gap-y-12">
-      <% cache @posts, expires_in: 60.seconds do %>
+      <% cache @posts do %>
         <% @posts.each do |post| %>
           <%= render(Marketing::PostBlurbComponent.new(post: post)) %>
         <% end %>
