@@ -4,8 +4,8 @@
 <section class="py-4">
   <div class="max-w-screen-xl p-4 mx-auto sm:px-6 lg:px-8">
     <ul class="flex flex-wrap flex-row justify-center items-center">
-      <% cache @genres do %>
-        <% @genres.each do |genre| %>
+      <% @genres.each do |genre| %>
+        <% cache genre do %>
           <li class="p-3 mx-4 my-2 font-bold text-xl">
             <%= link_to genre.name, genres_path(genre.slug), data: { "umami-event": "Home-Genre-Click" },
                 class: "underline hover:text-cx-purple"
@@ -25,8 +25,8 @@
       </h2>
     </header>
     <ul class="grid gap-4 mt-4 sm:grid-cols-6 lg:grid-cols-4">
-      <% cache @recent_products do %>
-        <% @recent_products.each do |product| %>
+      <% @recent_products.each do |product| %>
+        <% cache product do %>
           <%= render(Products::CardComponent.new(product: product, number_of_products: 4)) %>
         <% end %>
       <% end %>
@@ -48,8 +48,8 @@
       </h2>
     </header>
     <ul class="grid gap-4 mt-4 sm:grid-cols-2 lg:grid-cols-4">
-      <% cache @stores do %>
-        <% @stores.each do |store| %>
+      <% @stores.each do |store| %>
+        <% cache store do %>
           <%= render(Stores::CardComponent.new(store: store)) %>
         <% end %>
       <% end %>
@@ -71,8 +71,8 @@
       </h2>
     </header>
     <ul class="grid gap-4 mt-4 sm:grid-cols-2 lg:grid-cols-4">
-      <% cache @creator_profiles do %>
-        <% @creator_profiles.each do |creator_profile| %>
+      <% @creator_profiles.each do |creator_profile| %>
+        <% cache creator_profile do %>
           <%= render(CreatorProfiles::CardComponent.new(creator_profile: creator_profile)) %>
         <% end %>
       <% end %>
@@ -94,9 +94,9 @@
       </h2>
     </header>
     <ul class="grid gap-4 mt-4 sm:grid-cols-2 lg:grid-cols-4">
-      <% cache @onboarded_products do %>
-        <% @onboarded_products.each do |product| %>
-            <%= render(Products::CardComponent.new(product: product, number_of_products: 4)) %>
+      <% @onboarded_products.each do |product| %>
+        <% cache product do %>
+          <%= render(Products::CardComponent.new(product: product, number_of_products: 4)) %>
         <% end %>
       <% end %>
     </ul>
@@ -267,8 +267,8 @@
       </div>
     </div>
     <div class="mt-3 grid gap-16 lg:grid-cols-3 lg:gap-x-5 lg:gap-y-12">
-      <% cache @posts do %>
-        <% @posts.each do |post| %>
+      <% @posts.each do |post| %>
+        <% cache post do %>
           <%= render(Marketing::PostBlurbComponent.new(post: post)) %>
         <% end %>
       <% end %>
