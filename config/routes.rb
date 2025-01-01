@@ -39,6 +39,9 @@ Rails.application.routes.draw do
     end
   end
 
+  get "dropbox/auth", to: "dropbox#auth"
+  get "dropbox/auth_callback", to: "dropbox#auth_callback"
+
   namespace :api do
     namespace :v1 do
       resources :products  do
@@ -87,6 +90,7 @@ Rails.application.routes.draw do
       get :add_products_to_stripe, on: :collection
     end
     resources :payments, param: :slug
+    resources :bulk_upload, only: [:index]
   end
   resources :backings
   resources :purchases, param: :slug do

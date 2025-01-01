@@ -35,6 +35,7 @@ gem "airrecord"
 gem "redis", "~> 5.3"
 gem "sidekiq"
 gem "invisible_captcha"
+gem "dropbox_api"
 
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "kredis"
