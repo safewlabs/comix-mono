@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class DropboxController < ApplicationController
   # Example call:
   # GET /dropbox/auth
@@ -24,14 +26,13 @@ class DropboxController < ApplicationController
   end
 
   private
+    def authenticator
+      client_id = Rails.application.credentials.dig(:dropbox, :client_id)
+      client_secret = Rails.application.credentials.dig(:dropbox, :client_secret)
+      DropboxApi::Authenticator.new(client_id, client_secret)
+    end
 
-  def authenticator
-    client_id = Rails.application.credentials.dig(:dropbox, :client_id)
-    client_secret = Rails.application.credentials.dig(:dropbox, :client_secret)
-    DropboxApi::Authenticator.new(client_id, client_secret)
-  end
-
-  def redirect_uri
-    dropbox_auth_callback_url # => http://localhost:3000/dropbox/auth_callback
-  end
+    def redirect_uri
+      dropbox_auth_callback_url # => http://localhost:3000/dropbox/auth_callback
+    end
 end

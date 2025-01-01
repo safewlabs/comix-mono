@@ -11,7 +11,7 @@ class UploadFilesFromDropboxJob
       comic_result = files_list.entries.select { |entry| entry.name.include?(product.name) }
       temporary_link = client.get_temporary_link(comic_result.first.id)
       pdf_url = URI.open(temporary_link.link)
-      product.file_attachment.attach(io: pdf_url, filename: temporary_link.metadata.name, content_type: 'application/pdf')
+      product.file_attachment.attach(io: pdf_url, filename: temporary_link.metadata.name, content_type: "application/pdf")
       product.save!
     end
   end
