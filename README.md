@@ -37,7 +37,7 @@ Please head over [here](https://www.notion.so/Engineering-Wiki-fa21ba7fd9224a57b
 
 In order to get the local environment up and running on your machine, you would require the following to be installed :
 
-- Ruby 3.1.1. It is recommended to use a version manager like [rbenv](https://github.com/rbenv/rbenv) or [rvm](https://rvm.io/) in order to manage your rubies.
+- Ruby 3.3.4. It is recommended to use a version manager like [rbenv](https://github.com/rbenv/rbenv) or [rvm](https://rvm.io/) in order to manage your rubies.
 - PostgreSQL
 - Redis
 - Vips - `brew install vips`
