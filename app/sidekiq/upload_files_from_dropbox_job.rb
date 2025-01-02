@@ -1,5 +1,6 @@
 # frozen_string_literal: true
-require 'open-uri'
+
+require "open-uri"
 
 class UploadFilesFromDropboxJob
   include Sidekiq::Job
@@ -11,7 +12,7 @@ class UploadFilesFromDropboxJob
     store.products.each do |product|
       puts product.name
       comic_result = files_list.entries.select { |entry| entry.name.include?(product.name) }
-      next if (comic_result.blank?)
+      next if comic_result.blank?
       comic = comic_result.first
       temporary_link = client.get_temporary_link(comic.id)
       pdf_url = URI.open(temporary_link.link)
