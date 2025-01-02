@@ -10,6 +10,7 @@ class UploadFilesFromDropboxJob
     client = DropboxApi::Client.new(token)
     files_list = client.list_folder("/COMIX files")
     store.products.each do |product|
+      next if product.file_attachment.present?
       puts product.name
       comic_result = files_list.entries.select { |entry| entry.name.include?(product.name) }
       next if comic_result.blank?
