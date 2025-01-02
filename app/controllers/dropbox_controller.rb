@@ -22,7 +22,7 @@ class DropboxController < ApplicationController
     # background jobs to perform calls to Dropbox API such as the following.
     UploadFilesFromDropboxJob.perform_async(token)
 
-    redirect_to dashboard_bulk_upload_path
+    redirect_to dashboard_bulk_upload_index_path
   end
 
   private
