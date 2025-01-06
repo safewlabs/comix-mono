@@ -3,7 +3,10 @@
 class ProductsController < ApplicationController
   def show
     @product = Product.find_by(slug: params[:slug])
-    if @product.published?
+    if @product.unpublished?
+      redirect_to root_path
+      flash[:error] = "The comic you're looking for, was not found"
+    else
       @other_products = Product.published.where.not(id: @product.id).limit(4).order("RANDOM()")
       set_meta_tags title: @product.name,
             description: @product.description,
@@ -21,9 +24,6 @@ class ProductsController < ApplicationController
               site_name: :site,
               image: @product.issue_cover
             }
-    else
-      redirect_to root_path
-      flash[:error] = "The comic you're looking for was not found"
     end
   end
 
