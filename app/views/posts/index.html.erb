@@ -7,8 +7,8 @@
       <p class="mt-3 text-xl text-gray-500 sm:mt-4">Articles, Interviews &amp; News from the universe of Comix!</p>
     </div>
     <div class="mt-3 grid gap-16 pt-12 lg:grid-cols-3 lg:gap-x-5 lg:gap-y-12">
-      <% cache @posts, expires_in: 60.seconds do %>
-        <% @posts.each do |post| %>
+      <% @posts.each do |post| %>
+        <% cache post do %>
           <%= render(Marketing::PostBlurbComponent.new(post: post)) %>
         <% end %>
       <% end %>
