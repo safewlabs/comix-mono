@@ -23,4 +23,6 @@
 class ProductGenre < ApplicationRecord
   belongs_to :product, touch: true
   belongs_to :genre, touch: true
+
+  validates :product, :genre, presence: true
 end

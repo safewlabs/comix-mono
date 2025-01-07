@@ -23,4 +23,6 @@
 class ProjectsCreatorProfile < ApplicationRecord
   belongs_to :project
   belongs_to :creator_profile
+
+  validates :project, :creator_profile, presence: true
 end

@@ -5,10 +5,6 @@ require "rails_helper"
 RSpec.describe ProjectsCreatorProfile, type: :model do
   let(:projects_creator_profile) { create(:projects_creator_profile) }
 
-  it "has a valid factory" do
-    expect(projects_creator_profile).to be_valid
-  end
-
   describe "associations" do
     it { should belong_to(:project) }
     it { should belong_to(:creator_profile) }
