@@ -24,6 +24,8 @@
 #
 FactoryBot.define do
   factory :order do
+    cart
+    user
     order_reference { "MyString" }
   end
 end

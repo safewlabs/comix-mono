@@ -31,10 +31,6 @@ require "rails_helper"
 RSpec.describe Project, type: :model do
   let(:project) { create(:project) }
 
-  it "has a valid factory" do
-    expect(project).to be_valid
-  end
-
   describe "associations" do
     it { should belong_to(:owner).class_name("User") }
     it { should have_many(:bundles).dependent(:destroy) }

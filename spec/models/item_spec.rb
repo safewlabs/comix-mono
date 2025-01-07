@@ -23,5 +23,31 @@
 require "rails_helper"
 
 RSpec.describe Item, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  let(:item) { create(:item) }
+
+  describe "associations" do
+    it { should belong_to(:bundle) }
+  end
+
+  describe "validations" do
+    it { should validate_presence_of(:bundle_id) }
+  end
+
+  describe "instance methods" do
+    describe "#to_param" do
+      it "returns the slug" do
+        expect(item.to_param).to eq(item.slug)
+      end
+    end
+  end
+
+  describe "sluggable module" do
+    it "does not change the slug on update" do
+      item = build(:item)
+      item.save
+      old_slug = item.slug
+      item.update(title: "New Title")
+      expect(item.slug).to eq(old_slug)
+    end
+  end
 end

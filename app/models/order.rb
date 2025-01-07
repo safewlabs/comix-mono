@@ -26,5 +26,7 @@ class Order < ApplicationRecord
   has_many :line_items
   belongs_to :user
   belongs_to :cart
+  validates :cart_id, :user_id, presence: true
+
   enum status: { draft: 0, success: 1, cancelled: 2, failed: 3 }
 end

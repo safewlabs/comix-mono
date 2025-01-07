@@ -35,7 +35,7 @@ RSpec.describe ProductGenre, type: :model do
     it { should validate_presence_of(:genre) }
   end
 
- describe "product" do
+  describe "product" do
     it "returns the product" do
       expect(product_genre.product).to be_a(Product)
     end
@@ -63,6 +63,5 @@ RSpec.describe ProductGenre, type: :model do
     it "returns the correct genre" do
       expect(product_genre.genre).to eq(product_genre.genre)
     end
-
   end
 end
