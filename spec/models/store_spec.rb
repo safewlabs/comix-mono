@@ -22,5 +22,21 @@
 require "rails_helper"
 
 RSpec.describe Store, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  let(:store) { build(:store) }
+
+  # Validations
+  it { is_expected.to validate_presence_of(:name) }
+  it { is_expected.to validate_presence_of(:description) }
+
+  # Associations
+  it { is_expected.to belong_to(:user) }
+  it { is_expected.to have_many(:products).dependent(:destroy) }
+
+  # Attachments
+  it { is_expected.to have_one_attached(:cover_image) }
+  it { is_expected.to have_one_attached(:display_image) }
+  it { is_expected.to have_rich_text(:description) }
+
+  # TODO: Build shared examples for Sluggable
+  # it_behaves_like "sluggable"
 end
