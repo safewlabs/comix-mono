@@ -54,6 +54,9 @@ class Product < ApplicationRecord
   end
   has_one_attached :file_attachment, dependent: :destroy
 
+  validates :store_id, presence: true
+  validates :price, numericality: { greater_than_or_equal_to: 0 }
+
   enum status: {
     draft: 0,
     published: 1,
