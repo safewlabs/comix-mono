@@ -27,5 +27,22 @@
 require "rails_helper"
 
 RSpec.describe LineItem, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  let(:line_item) { create(:line_item) }
+
+  describe "associations" do
+    it { should belong_to(:product) }
+    it { should belong_to(:cart) }
+    it { should belong_to(:order).optional }
+  end
+
+  describe "instance methods" do
+    let(:product) { create(:product, price: 10) }
+    let(:line_item) { create(:line_item, product: product) }
+
+    describe "#total" do
+      it "returns the total price of the line item" do
+        expect(line_item.total).to eq(10)
+      end
+    end
+  end
 end
