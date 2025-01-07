@@ -22,7 +22,7 @@
 #
 FactoryBot.define do
   factory :creator_profiles_manager do
-    cerator_profile { nil }
-    manager_id { 1 }
+    association :managed_profiles, factory: :creator_profile
+    association :managers, factory: :user
   end
 end
