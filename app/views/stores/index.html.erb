@@ -9,8 +9,8 @@
     </header>
 
     <ul class="grid gap-4 mt-4 grid-cols-3">
-      <% cache @stores, expires_in: 60.seconds do %>
-        <% @stores.each do |store| %>
+      <% @stores.each do |store| %>
+        <% cache store do %>
           <%= render(Stores::CardComponent.new(store: store)) %>
         <% end %>
       <% end %>

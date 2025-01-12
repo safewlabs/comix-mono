@@ -3,23 +3,28 @@
 class ProductsController < ApplicationController
   def show
     @product = Product.find_by(slug: params[:slug])
-    @other_products = Product.published.where.not(id: @product.id).limit(4).order("RANDOM()")
-    set_meta_tags title: @product.name,
-          description: @product.description,
-          keywords: "Comics, Indie comics",
-          twitter: {
-            card: "photo",
-            image: {
-              _: @product.issue_cover,
-              width: 200,
-              height: 200
+    if @product.unpublished?
+      redirect_to root_path
+      flash[:error] = "The comic you're looking for, was not found"
+    else
+      @other_products = Product.published.where.not(id: @product.id).limit(4).order("RANDOM()")
+      set_meta_tags title: @product.name,
+            description: @product.description,
+            keywords: "Comics, Indie comics",
+            twitter: {
+              card: "photo",
+              image: {
+                _: @product.issue_cover,
+                width: 200,
+                height: 200
+              }
+            },
+            og: {
+              title: :title,
+              site_name: :site,
+              image: @product.issue_cover
             }
-          },
-          og: {
-            title: :title,
-            site_name: :site,
-            image: @product.issue_cover
-          }
+    end
   end
 
   def genres

@@ -1,6 +1,6 @@
 <%= render(PageTitleComponent.new(title: @creator_profile.name)) %>
 
-<%= cache @creator_profile, expires_in: 60.seconds do %>
+<%= cache @creator_profile do %>
   <div class="h-full flex">
     <div class="flex flex-col min-w-0 flex-1 overflow-hidden">
       <div class="flex-1 relative z-0 flex overflow-hidden">
@@ -111,7 +111,12 @@
                   <div class="py-10 border-t text-center">
                     <ul class="grid gap-4 mt-4 sm:grid-cols-6 lg:grid-cols-3">
                       <% @creator_profile.collaborations.each do |collaboration| %>
-                        <%= render(Products::CardComponent.new(product: collaboration.product)) %>
+                        <% product = collaboration.product %>
+                        <% if product.published? %>
+                          <%= cache product do %>
+                            <%= render(Products::CardComponent.new(product: product)) %>
+                          <% end %>
+                        <% end %>
                       <% end %>
                     </ul>
                   </div>
