@@ -41,6 +41,7 @@ RSpec.describe Item, type: :model do
     end
   end
 
+  # TODO: Build shared examples for Sluggable
   describe "sluggable module" do
     it "does not change the slug on update" do
       item = build(:item)
