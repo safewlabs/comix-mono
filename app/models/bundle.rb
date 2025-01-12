@@ -27,4 +27,6 @@ class Bundle < ApplicationRecord
   has_many :backings
   has_many :items
   has_one_attached :bundle_cover
+
+  validates :project_id, presence: true
 end

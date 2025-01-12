@@ -24,5 +24,16 @@
 require "rails_helper"
 
 RSpec.describe Bundle, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  let(:bundle) { create(:bundle) }
+
+  describe "associations" do
+    it { should belong_to(:project) }
+    it { should have_many(:backings) }
+    it { should have_many(:items) }
+    it { should have_one_attached(:bundle_cover) }
+  end
+
+  describe "validations" do
+    it { should validate_presence_of(:project_id) }
+  end
 end
