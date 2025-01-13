@@ -214,8 +214,9 @@ GEM
       rails (>= 6.0, < 7.3)
       zeitwerk
     hashie (5.0.0)
-    honeybadger (5.26.1)
+    honeybadger (5.26.2)
       logger
+      ostruct
     httparty (0.22.0)
       csv
       mini_mime (>= 1.0.0)
@@ -241,7 +242,7 @@ GEM
     jwt (2.10.1)
       base64
     language_server-protocol (3.17.0.3)
-    logger (1.6.4)
+    logger (1.6.5)
     loofah (2.24.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.12.0)
@@ -309,6 +310,7 @@ GEM
       rack (>= 2.2.3)
       rack-protection
     orm_adapter (0.5.0)
+    ostruct (0.6.1)
     pagy (9.3.3)
     parallel (1.26.3)
     parser (3.3.6.0)
