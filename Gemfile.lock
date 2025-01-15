@@ -9,7 +9,7 @@ GIT
 
 GIT
   remote: https://github.com/faker-ruby/faker.git
-  revision: b9ef4e9117e917cce9a171349981ad63a39a9e4d
+  revision: 789251c0d24833597e0aba0d8a7ba6776bad812e
   branch: main
   specs:
     faker (3.5.1)
@@ -102,8 +102,8 @@ GEM
       activerecord (>= 5.2, < 8.2)
       activesupport (>= 5.2, < 8.2)
     aws-eventstream (1.3.0)
-    aws-partitions (1.1029.0)
-    aws-sdk-core (3.214.1)
+    aws-partitions (1.1037.0)
+    aws-sdk-core (3.215.1)
       aws-eventstream (~> 1, >= 1.3.0)
       aws-partitions (~> 1, >= 1.992.0)
       aws-sigv4 (~> 1.9)
@@ -111,11 +111,11 @@ GEM
     aws-sdk-kms (1.96.0)
       aws-sdk-core (~> 3, >= 3.210.0)
       aws-sigv4 (~> 1.5)
-    aws-sdk-s3 (1.176.1)
+    aws-sdk-s3 (1.177.0)
       aws-sdk-core (~> 3, >= 3.210.0)
       aws-sdk-kms (~> 1)
       aws-sigv4 (~> 1.5)
-    aws-sigv4 (1.10.1)
+    aws-sigv4 (1.11.0)
       aws-eventstream (~> 1, >= 1.0.2)
     base64 (0.2.0)
     bcrypt (3.1.20)
@@ -137,7 +137,7 @@ GEM
       regexp_parser (>= 1.5, < 3.0)
       xpath (~> 3.2)
     concurrent-ruby (1.3.4)
-    connection_pool (2.4.1)
+    connection_pool (2.5.0)
     crass (1.0.6)
     cssbundling-rails (1.4.1)
       railties (>= 6.0.0)
@@ -152,10 +152,10 @@ GEM
       railties (>= 4.1.0)
       responders
       warden (~> 1.2.3)
-    devise_token_auth (1.2.4)
+    devise_token_auth (1.2.5)
       bcrypt (~> 3.0)
       devise (> 3.5.2, < 5)
-      rails (>= 4.2.0, < 7.3)
+      rails (>= 4.2.0, < 8.1)
     diff-lcs (1.5.1)
     dotenv (3.1.7)
     dotenv-rails (3.1.7)
@@ -214,8 +214,9 @@ GEM
       rails (>= 6.0, < 7.3)
       zeitwerk
     hashie (5.0.0)
-    honeybadger (5.26.1)
+    honeybadger (5.26.2)
       logger
+      ostruct
     httparty (0.22.0)
       csv
       mini_mime (>= 1.0.0)
@@ -241,7 +242,7 @@ GEM
     jwt (2.10.1)
       base64
     language_server-protocol (3.17.0.3)
-    logger (1.6.4)
+    logger (1.6.5)
     loofah (2.24.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.12.0)
@@ -282,7 +283,7 @@ GEM
       uri
     net-http-persistent (4.0.5)
       connection_pool (~> 2.2)
-    net-imap (0.5.4)
+    net-imap (0.5.5)
       date
       net-protocol
     net-pop (0.1.2)
@@ -309,6 +310,7 @@ GEM
       rack (>= 2.2.3)
       rack-protection
     orm_adapter (0.5.0)
+    ostruct (0.6.1)
     pagy (9.3.3)
     parallel (1.26.3)
     parser (3.3.6.0)
@@ -343,7 +345,8 @@ GEM
       base64 (>= 0.1.0)
       logger (>= 1.6.0)
       rack (>= 3.0.0, < 4)
-    rack-session (2.0.0)
+    rack-session (2.1.0)
+      base64 (>= 0.1.0)
       rack (>= 3.0.0)
     rack-test (2.2.0)
       rack (>= 1.3)
@@ -384,7 +387,7 @@ GEM
       psych (>= 4.0.0)
     redis (5.3.0)
       redis-client (>= 0.22.0)
-    redis-client (0.23.0)
+    redis-client (0.23.1)
       connection_pool
     regexp_parser (2.10.0)
     reline (0.6.0)
@@ -411,7 +414,7 @@ GEM
       rspec-mocks (~> 3.13)
       rspec-support (~> 3.13)
     rspec-support (3.13.2)
-    rubocop (1.69.2)
+    rubocop (1.70.0)
       json (~> 2.3)
       language_server-protocol (>= 3.17.0)
       parallel (~> 1.10)
@@ -430,7 +433,7 @@ GEM
       rubocop-ast (>= 1.31.1, < 2.0)
     rubocop-packaging (0.5.2)
       rubocop (>= 1.33, < 2.0)
-    rubocop-performance (1.23.0)
+    rubocop-performance (1.23.1)
       rubocop (>= 1.48.1, < 2.0)
       rubocop-ast (>= 1.31.1, < 2.0)
     rubocop-rails (2.28.0)
@@ -452,7 +455,7 @@ GEM
     ruby-vips (2.2.2)
       ffi (~> 1.12)
       logger
-    rubyzip (2.3.2)
+    rubyzip (2.4.1)
     sanitize (6.1.3)
       crass (~> 1.0.2)
       nokogiri (>= 1.12.0)
@@ -469,7 +472,7 @@ GEM
     stimulus-rails (1.3.4)
       railties (>= 6.0.0)
     stringio (3.1.2)
-    stripe (13.3.0)
+    stripe (13.3.1)
     thor (1.3.2)
     timeout (0.4.3)
     turbo-rails (2.0.11)
@@ -477,7 +480,7 @@ GEM
       railties (>= 6.0.0)
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
-    unicode-display_width (3.1.3)
+    unicode-display_width (3.1.4)
       unicode-emoji (~> 4.0, >= 4.0.4)
     unicode-emoji (4.0.4)
     uri (1.0.2)
@@ -498,7 +501,8 @@ GEM
       rubyzip (>= 1.3.0)
       selenium-webdriver (~> 4.0, < 4.11)
     websocket (1.2.11)
-    websocket-driver (0.7.6)
+    websocket-driver (0.7.7)
+      base64
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
     xpath (3.2.0)
