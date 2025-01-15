@@ -20,7 +20,8 @@ class DropboxController < ApplicationController
 
     # If you persist this token, you can use it in subsequent requests or
     # background jobs to perform calls to Dropbox API such as the following.
-    UploadFilesFromDropboxJob.perform_async(token)
+    # UploadFilesFromDropboxJob.perform_async(token)
+    UploadThumbnailsFromDropboxJob.perform_async(token)
 
     redirect_to dashboard_bulk_upload_index_path
   end
