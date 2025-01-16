@@ -16,7 +16,7 @@ class UploadThumbnailsFromDropboxJob
       comic = comic_result.first
       thumbnail_batch = client.get_thumbnail_batch([comic.path_lower], size: :w640h480)
       image_string = thumbnail_batch.entries.first.thumbnail
-      image = decoded_image(image_string, comic_name)
+      image = decoded_image(image_string, comic.name)
       product.update(issue_cover: image)
     end
   end
