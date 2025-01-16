@@ -15,6 +15,7 @@ class UploadThumbnailsFromDropboxJob
       next if comic_result.blank?
       comic = comic_result.first
       thumbnail_batch = client.get_thumbnail_batch([comic.path_lower], size: :w640h480)
+      next if thumbnail_batch.entries.blank?
       image_string = thumbnail_batch.entries.first.thumbnail
       image = decoded_image(image_string, comic.name)
       product.update(issue_cover: image)
@@ -23,7 +24,7 @@ class UploadThumbnailsFromDropboxJob
 end
 
 def decoded_image(image_string, comic_name)
-  decoded_data = Base64.decode64(image_string.split(",")[1])
+  decoded_data = Base64.decode64(image_string)
   {
     io:           StringIO.new(decoded_data),
     content_type: "image/jpeg",
