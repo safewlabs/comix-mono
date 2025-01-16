@@ -15,7 +15,7 @@ class UploadThumbnailsFromDropbox
       comic_result = files_list.entries.select { |entry| entry.name.include?(product.name) }
       next if comic_result.blank?
       comic = comic_result.first
-      thumbnail_batch = client.get_thumbnail_batch(comic.id)
+      thumbnail_batch = client.get_thumbnail_batch(comic.id, size: :w640h480)
       image_string = thumbnail_batch.entries.first.thumbnail
       image = decoded_image(image_string, comic_name)
       product.update(issue_cover: image)
