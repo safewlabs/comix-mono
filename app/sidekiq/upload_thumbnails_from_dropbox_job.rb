@@ -2,7 +2,7 @@
 
 require "open-uri"
 
-class UploadThumbnailsFromDropbox
+class UploadThumbnailsFromDropboxJob
   include Sidekiq::Job
 
   def perform(token)
