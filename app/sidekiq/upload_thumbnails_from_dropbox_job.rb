@@ -6,7 +6,7 @@ class UploadThumbnailsFromDropboxJob
   include Sidekiq::Job
 
   def perform(token)
-    store = Store.find 1
+    store = Store.find 64
     client = DropboxApi::Client.new(token)
     files_list = client.list_folder("/COMIX files")
     store.products.each do |product|
