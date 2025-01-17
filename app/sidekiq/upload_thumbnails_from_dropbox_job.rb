@@ -16,7 +16,7 @@ class UploadThumbnailsFromDropboxJob
       next if comic_result.blank?
       comic = comic_result.first
       thumbnail_batch = client.get_thumbnail_batch([comic.path_lower], size: :w640h480)
-      if (thumbnail_batch.entries.first.class.eql?(DropboxApi::Errors::UnsupportedImageError))
+      if thumbnail_batch.entries.first.class.eql?(DropboxApi::Errors::UnsupportedImageError)
         unsupported_images.push(comic.name)
       else
         image_string = thumbnail_batch.entries.first.thumbnail
