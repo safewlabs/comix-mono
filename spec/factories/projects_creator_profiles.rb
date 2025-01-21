@@ -21,7 +21,7 @@
 #  fk_rails_...  (project_id => projects.id)
 #
 FactoryBot.define do
-  factory :projects_creator_profiles do
+  factory :projects_creator_profile do
     association :project
     association :creator_profile
   end

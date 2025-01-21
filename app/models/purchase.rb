@@ -23,4 +23,7 @@
 class Purchase < ApplicationRecord
   belongs_to :user, touch: true
   belongs_to :product, touch: true
+
+  validates :user_id, presence: true
+  validates :product_id, presence: true
 end

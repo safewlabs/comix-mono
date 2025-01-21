@@ -23,5 +23,39 @@
 require "rails_helper"
 
 RSpec.describe Purchase, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  let(:user) { create(:user) }
+  let(:product) { create(:product) }
+  let(:purchase) { build(:purchase, user: user, product: product) }
+
+  describe "validations" do
+    it { should validate_presence_of(:user_id) }
+    it { should validate_presence_of(:product_id) }
+  end
+
+  describe "associations" do
+    it { should belong_to(:user) }
+    it { should belong_to(:product) }
+  end
+
+  describe "touch" do
+    it "touches the user" do
+      user = create(:user)
+      purchase = create(:purchase, user: user)
+      user_updated_at = user.updated_at
+
+      purchase.touch
+
+      expect(user.updated_at).to be > user_updated_at
+    end
+
+    it "touches the product" do
+      product = create(:product)
+      purchase = create(:purchase, product: product)
+      product_updated_at = product.updated_at
+
+      purchase.touch
+
+      expect(product.updated_at).to be > product_updated_at
+    end
+  end
 end

@@ -23,4 +23,6 @@
 class Item < ApplicationRecord
   include Sluggable
   belongs_to :bundle
+
+  validates :bundle_id, presence: true
 end

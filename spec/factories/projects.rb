@@ -28,9 +28,10 @@
 #
 FactoryBot.define do
   factory :project do
-    association :user
+    association :owner, factory: :user
     title { Faker::Lorem.sentence(word_count: 3) }
     blurb { Faker::Lorem.sentence(word_count: 20)  }
+    campaign_ends_at { Faker::Date.between(from: 1.week.ago, to: 1.week.from_now) }
     description { Faker::Lorem.paragraphs(number: 3, supplemental: true) }
     funding_goal { 300.00 }
   end

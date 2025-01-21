@@ -23,5 +23,10 @@
 require "rails_helper"
 
 RSpec.describe CreatorProfilesManager, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  let(:creator_profiles_manager) { create(:creator_profiles_manager) }
+
+  describe "associations" do
+    it { should belong_to(:managed_profiles).class_name("CreatorProfile").with_foreign_key(:creator_profile_id) }
+    it { should belong_to(:managers).class_name("User").with_foreign_key(:user_id) }
+  end
 end

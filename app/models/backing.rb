@@ -27,4 +27,6 @@ class Backing < ApplicationRecord
   belongs_to :user
   belongs_to :project
   belongs_to :bundle
+
+  validates :user, :project, :bundle, presence: true
 end

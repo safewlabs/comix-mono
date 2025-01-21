@@ -22,7 +22,7 @@
 #
 FactoryBot.define do
   factory :purchase do
-    user { nil }
-    product { nil }
+    user
+    product
   end
 end

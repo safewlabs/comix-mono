@@ -21,5 +21,20 @@
 require "rails_helper"
 
 RSpec.describe AdminUser, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  let(:admin_user) { create(:admin_user) }
+
+  describe "associations" do
+    it { should have_and_belong_to_many(:roles) }
+  end
+
+  describe "validations" do
+    # it { should validate_presence_of(:email).with_default("") }
+    it { should validate_uniqueness_of(:email).case_insensitive }
+  end
+
+  describe "roles" do
+    it "is an admin" do
+      expect(admin_user.has_role?(:admin)).to be true
+    end
+  end
 end

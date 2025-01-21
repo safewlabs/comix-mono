@@ -10,5 +10,14 @@
 #
 FactoryBot.define do
   factory :cart do
+    trait :with_line_items do
+      transient do
+        line_items_count { 2 }
+      end
+
+      after(:create) do |cart, evaluator|
+        create_list(:line_item, evaluator.line_items_count, cart: cart)
+      end
+    end
   end
 end

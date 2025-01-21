@@ -18,6 +18,8 @@
 class Post < ApplicationRecord
   include Sluggable
 
+  # NOTE: There should be a validation for the presence of the title and body. Perhaps also for the presence of the summary.
+
   enum article_type: {
     article: 0,
     interview: 1,

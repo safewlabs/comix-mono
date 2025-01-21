@@ -24,5 +24,16 @@
 require "rails_helper"
 
 RSpec.describe Collaboration, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  let(:collaboration) { create(:collaboration) }
+
+  describe "associations" do
+    it { should belong_to(:product).touch(true) }
+    it { should belong_to(:creator_profile).touch(true) }
+  end
+
+  describe "enums" do
+    it "defines the correct collaboration_type values" do
+      expect(Collaboration.collaboration_types.keys).to match_array(%w[writer artist letterer color])
+    end
+  end
 end

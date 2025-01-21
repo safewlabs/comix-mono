@@ -26,9 +26,9 @@
 #
 FactoryBot.define do
   factory :line_item do
-    quantity { 1 }
-    product { nil }
-    cart { nil }
+    product
+    cart
     order { nil }
+    quantity { 1 }
   end
 end

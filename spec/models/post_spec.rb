@@ -18,5 +18,15 @@
 require "rails_helper"
 
 RSpec.describe Post, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  let(:post) { create(:post) }
+
+  describe "enums" do
+    it "defines the correct article_type values" do
+      expect(Post.article_types.keys).to match_array(%w[article interview feature video news])
+    end
+
+    it "defines the correct status values" do
+      expect(Post.statuses.keys).to match_array(%w[draft published])
+    end
+  end
 end
