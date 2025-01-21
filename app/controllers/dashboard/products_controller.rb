@@ -38,9 +38,11 @@ class Dashboard::ProductsController < Dashboard::BaseController
   end
 
   def update
-    @product.update(product_params)
+    @product.assign_attributes(product_params)
+    price_changed = @product.price_changed?
     respond_to do |format|
       if @product.save
+        UpdateProductToStripeJob.perform_async(@product.id, price_changed)
         format.html { redirect_to [:dashboard, @product], notice: "Product was successfully updated." }
         format.json { render :show, status: :created, location: @product }
       else
