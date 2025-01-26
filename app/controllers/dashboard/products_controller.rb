@@ -76,7 +76,7 @@ class Dashboard::ProductsController < Dashboard::BaseController
     end
 
     def product_params
-      params.require(:product).permit(:name, :user_id, :issue_cover, :file_attachment, :description, :age_rating, :page_count, :price, :release_date, :store_id, :video_url, :disable_download, :status, creator_profile_ids: [], genre_ids: [])
+      params.require(:product).permit(:name, :user_id, :issue_cover, :file_attachment, :preview_pdf, :description, :age_rating, :page_count, :price, :release_date, :store_id, :video_url, :disable_download, :status, creator_profile_ids: [], genre_ids: [])
     end
 
     def stores_grenre_creators

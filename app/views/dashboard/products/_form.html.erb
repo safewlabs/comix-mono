@@ -51,13 +51,24 @@
 </div>
 
 <div>
-    <%= form.label :file_attachment, class: "block text-sm font-medium text-gray-700 py-2" %>
+    <%= form.label "Comic PDF", class: "block text-sm font-medium text-gray-700 py-2" %>
     <% if @product.file_attachment.attached? %>
         <%= image_tag(rails_representation_url(@product.file_attachment.preview(resize_to_limit: [310, 480]), host: ENV["HOSTNAME"])) %>
     <% end %>
     <%= form.label "Comic PDF", class: "block text-sm font-medium text-gray-700 py-2" %>
     <div class="mt-1">
         <%= form.file_field :file_attachment, class: "block w-full border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" %>
+    </div>
+</div>
+
+<div>
+    <%= form.label :preview_pdf, class: "block text-sm font-medium text-gray-700 py-2" %>
+    <% if @product.preview_pdf.attached? %>
+        <%= image_tag(rails_representation_url(@product.preview_pdf.preview(resize_to_limit: [310, 480]), host: ENV["HOSTNAME"])) %>
+    <% end %>
+    <%= form.label "Preview PDF", class: "block text-sm font-medium text-gray-700 py-2" %>
+    <div class="mt-1">
+        <%= form.file_field :preview_pdf, class: "block w-full border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" %>
     </div>
 </div>
 

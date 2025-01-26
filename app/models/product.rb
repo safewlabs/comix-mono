@@ -53,6 +53,7 @@ class Product < ApplicationRecord
     attachable.variant :thumb, resize_to_fill: [150, 200]
   end
   has_one_attached :file_attachment, dependent: :destroy
+  has_one_attached :preview_pdf, dependent: :destroy
 
   validates :store_id, presence: true
   validates :price, numericality: { greater_than_or_equal_to: 0 }
