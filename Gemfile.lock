@@ -205,9 +205,10 @@ GEM
       activesupport (>= 6.1)
     graphiql-rails (1.10.1)
       railties
-    graphql (2.4.8)
+    graphql (2.4.9)
       base64
       fiber-storage
+      logger
     graphql_devise (2.0.0)
       devise_token_auth (>= 0.1.43, < 2.0)
       graphql (>= 1.8, < 2.5)
