@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class Products::PdfComponent < ViewComponent::Base
-  def initialize(product:)
+  def initialize(product:, type: nil)
     @product = product
   end
 
@@ -11,7 +11,11 @@ class Products::PdfComponent < ViewComponent::Base
   end
 
   def file
-    @product.file_attachment
+    if type.eql?("preview")
+      @product.preview_pdf
+    else
+      @product.file_attachment
+    end
   end
 
   def viewer_api_key
