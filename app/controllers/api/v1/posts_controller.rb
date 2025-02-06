@@ -2,6 +2,6 @@
 
 class Api::V1::PostsController < ApplicationController
   def latest
-    @posts = Post.published.last(3)
+    @posts = Post.published.last(6)
   end
 end
