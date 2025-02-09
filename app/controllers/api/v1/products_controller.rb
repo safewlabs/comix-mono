@@ -3,6 +3,11 @@
 class Api::V1::ProductsController < ApplicationController
   before_action :onboarded_products
 
+  def index
+    @pagy, @products = pagy(Product.all)
+    @pagination = pagy_metadata(@pagy)
+  end
+
   def new_releases
     @new_releases = onboarded_products.order(created_at: :desc).take(12)
   end
