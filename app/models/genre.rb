@@ -19,4 +19,5 @@ class Genre < ApplicationRecord
     published: 0,
     unpublished: 1
   }
+  has_one_attached :cover, dependent: :destroy
 end
