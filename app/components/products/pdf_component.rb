@@ -3,15 +3,21 @@
 class Products::PdfComponent < ViewComponent::Base
   def initialize(product:, type: nil)
     @product = product
+    @type = type
   end
 
-  def product_file_url
-    return nil unless @product.file_attachment.present?
-    rails_blob_url(file, disposition: "preview")
+  def file_url
+    if @type.eql?("preview")
+      return nil unless @product.preview_pdf.present?
+      rails_blob_url(file, disposition: "preview")
+    else
+      return nil unless @product.file_attachment.present?
+      rails_blob_url(file, disposition: "preview")
+    end
   end
 
   def file
-    if type.eql?("preview")
+    if @type.eql?("preview")
       @product.preview_pdf
     else
       @product.file_attachment

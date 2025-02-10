@@ -8,7 +8,7 @@ class HomeController < ApplicationController
     @recent_products = onboarded_products.order(created_at: :desc).take(12)
     @creator_profiles = CreatorProfile.order("RANDOM()").take(8)
     @stores = Store.order("RANDOM()").take(8)
-    @markosia_store = Store.find(64)
+    @markosia_store = Store.find(1)
     @markosia_products = @markosia_store.products.published.order("RANDOM()").take(8)
 
     @posts = Post.published.last(6)

@@ -25,7 +25,19 @@ class Dashboard::ProductComponent < ViewComponent::Base
             class: "text-gray-700 transition underline hover:text-cx-purple"
   end
 
+  def product_preview_file
+    return nil unless @product.preview_pdf.present?
+    link_to "View Preview Pdf",
+            rails_blob_url(preview_file, disposition: "preview"),
+            target: "_blank",
+            class: "text-gray-700 transition underline hover:text-cx-purple"
+  end
+
   def file
     @product.file_attachment
+  end
+
+  def preview_file
+    @product.preview_pdf
   end
 end
