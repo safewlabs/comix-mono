@@ -94,6 +94,9 @@ Rails.application.routes.draw do
     end
     resources :payments, param: :slug
     resources :bulk_upload, only: [:index]
+    resources :backers do
+      get :bulk_upload, on: :collection
+    end
   end
   resources :backings
   resources :purchases, param: :slug do
