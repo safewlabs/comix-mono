@@ -48,7 +48,7 @@ Rails.application.routes.draw do
         get "new_releases", to: "products#new_releases", on: :collection
         get "top_ten", to: "products#top_ten", on: :collection
       end
-      resources :genres, only: :index
+      resources :genres, param: :slug, only: [:index, :show]
       resources :stores do
         get "random", to: "stores#random", on: :collection
       end
