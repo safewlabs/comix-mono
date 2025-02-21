@@ -3,13 +3,13 @@
 class HomeController < ApplicationController
   def index
     @genres = Genre.published
-    onboarded_products = Product.includes([:issue_cover_attachment])
+    onboarded_products = Product.includes([:issue_cover_attachment, :store])
                                 .published.where(store: onboarded_stores)
     @onboarded_products = onboarded_products.order("RANDOM()").take(12)
     @recent_products = onboarded_products.order(created_at: :desc).take(12)
     @creator_profiles = CreatorProfile.includes([:avatar_attachment]).order("RANDOM()").take(8)
     @stores = Store.includes([:display_image_attachment]).order("RANDOM()").take(8)
-    @markosia_store = Store.find(1)
+    @markosia_store = Store.find(64)
     @markosia_products = @markosia_store.products.includes([:issue_cover_attachment]).published.order("RANDOM()").take(8)
 
     @posts = Post.published.last(6)
