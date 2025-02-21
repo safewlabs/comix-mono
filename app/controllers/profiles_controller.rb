@@ -2,7 +2,7 @@
 
 class ProfilesController < ApplicationController
   def index
-    @pagy, @creator_profiles = pagy(CreatorProfile.all)
+    @pagy, @creator_profiles = pagy(CreatorProfile.includes([:avatar_attachment]).all)
     set_meta_tags title: "Buy Comics",
           description: "Indie Comic Book Creator Index",
           keywords: "Comics, Indie comics, Indie creator",
@@ -22,7 +22,8 @@ class ProfilesController < ApplicationController
   end
 
   def show
-    @creator_profile = CreatorProfile.find_by(slug: params[:slug])
+    @creator_profile = CreatorProfile.includes([:avatar_attachment]).find_by(slug: params[:slug])
+    @collaborations = @creator_profile.collaborations.includes(:product)
     set_meta_tags title: @creator_profile.name,
                   description: @creator_profile.bio,
                   keywords: "Comics, Indie comics, Indie creator",
