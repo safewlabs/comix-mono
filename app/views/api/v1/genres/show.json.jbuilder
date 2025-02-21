@@ -1,7 +1,8 @@
 # frozen_string_literal: true
 
 json.data do
-  json.array! @products do |product|
+  json.genre_name @genre.name
+  json.products @products do |product|
     json.name product.name
     json.slug product.slug
     json.price product.formatted_price
