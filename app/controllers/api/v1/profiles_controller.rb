@@ -6,7 +6,7 @@ class Api::V1::ProfilesController < ApplicationController
   end
 
   def index
-    @pagy, @creator_profiles = pagy(CreatorProfile.all)
+    @pagy, @creator_profiles = pagy(CreatorProfile.includes([:avatar_attachment]).all)
     @pagination = pagy_metadata(@pagy)
   end
 end

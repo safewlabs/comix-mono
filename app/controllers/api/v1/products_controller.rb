@@ -4,7 +4,7 @@ class Api::V1::ProductsController < ApplicationController
   before_action :onboarded_products
 
   def index
-    @pagy, @products = pagy(Product.all)
+    @pagy, @products = pagy(Product.includes([:issue_cover_attachment, :store]).all)
     @pagination = pagy_metadata(@pagy)
   end
 
@@ -17,6 +17,6 @@ class Api::V1::ProductsController < ApplicationController
   end
 
   def onboarded_products
-    Product.published.where(store: Store.where(user: User.where.not(stripe_user_id: nil)))
+    Product.includes([:issue_cover_attachment, :store]).published.where(store: Store.where(user: User.where.not(stripe_user_id: nil)))
   end
 end
