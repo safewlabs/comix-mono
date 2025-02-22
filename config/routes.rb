@@ -55,7 +55,7 @@ Rails.application.routes.draw do
       resources :posts do
         get "latest", to: "posts#latest", on: :collection
       end
-      resources :profiles do
+      resources :profiles, param: :slug do
         get "home_profiles", to: "profiles#home_profiles", on: :collection
       end
     end
