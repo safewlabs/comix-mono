@@ -10,7 +10,7 @@
 
     <ul class="grid gap-4 mt-4 grid-cols-4">
       <% @creator_profiles.each do |creator_profile| %>
-        <% cache creator_profiles do %>
+        <% cache creator_profile do %>
           <%= render(CreatorProfiles::CardComponent.new(creator_profile: creator_profile)) %>
         <% end %>
       <% end %>
