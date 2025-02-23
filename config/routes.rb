@@ -44,7 +44,7 @@ Rails.application.routes.draw do
 
   namespace :api do
     namespace :v1 do
-      resources :products  do
+      resources :products, param: :slug   do
         get "new_releases", to: "products#new_releases", on: :collection
         get "top_ten", to: "products#top_ten", on: :collection
       end
@@ -52,7 +52,7 @@ Rails.application.routes.draw do
       resources :stores, param: :slug do
         get "random", to: "stores#random", on: :collection
       end
-      resources :posts do
+      resources :posts, param: :slug do
         get "latest", to: "posts#latest", on: :collection
       end
       resources :profiles, param: :slug do

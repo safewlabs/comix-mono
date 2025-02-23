@@ -8,6 +8,16 @@ class Api::V1::ProductsController < ApplicationController
     @pagination = pagy_metadata(@pagy)
   end
 
+  def show
+    @product = Product.includes([:issue_cover_attachment, :collaborations, :genres, :store])
+                            .find_by(slug: params[:slug])
+    @other_products = Product.includes([:issue_cover_attachment, :store])
+                            .published
+                            .where
+                            .not(id: @product.id).limit(4)
+                            .order("RANDOM()")
+  end
+
   def new_releases
     @new_releases = onboarded_products.order(created_at: :desc).take(12)
   end
