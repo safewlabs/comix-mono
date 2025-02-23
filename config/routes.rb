@@ -49,7 +49,7 @@ Rails.application.routes.draw do
         get "top_ten", to: "products#top_ten", on: :collection
       end
       resources :genres, param: :slug, only: [:index, :show]
-      resources :stores do
+      resources :stores, param: :slug do
         get "random", to: "stores#random", on: :collection
       end
       resources :posts do
