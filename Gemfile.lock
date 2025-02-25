@@ -207,7 +207,7 @@ GEM
       raabro (~> 1.4)
     globalid (1.2.1)
       activesupport (>= 6.1)
-    graphiql-rails (1.10.1)
+    graphiql-rails (1.10.2)
       railties
     graphql (2.4.10)
       base64
