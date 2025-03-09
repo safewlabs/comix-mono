@@ -6,7 +6,7 @@
       </span>
     </div>
   </div>
-  <%= link_to post_path(@post), class: "block mt-4" do %>
+  <%= link_to post_path(@post), data: { turbo: false }, class: "block mt-4" do %>
     <div class="text-xl font-semibold text-gray-900">
       <%= @post.title %>
     </div>
