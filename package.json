@@ -13,7 +13,7 @@
     "@tailwindcss/typography": "^0.5.10",
     "@thoughtbot/superglue": "^1.0.1",
     "autoprefixer": "^10.4.17",
-    "esbuild": "^0.19.12",
+    "esbuild": "^0.25.0",
     "html-react-parser": "^5.2.2",
     "postcss": "^8.4.33",
     "react": "^19.0.0",
