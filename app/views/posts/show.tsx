@@ -35,7 +35,14 @@ export default function PostShow() {
           article_type={article_type}
         />
       )}
-      {isMobile && <MobilePost />}
+      {isMobile && (
+        <MobilePost
+          title={title}
+          body={body}
+          summary={summary}
+          article_type={article_type}
+        />
+      )}
     </>
   );
 }
