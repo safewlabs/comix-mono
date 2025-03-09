@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class PostsController < ApplicationController
-  before_action :use_jsx_rendering_defaults
+  before_action :use_jsx_rendering_defaults, only: [:show]
 
   def index
     @pagy, @posts = pagy(Post.published.order(created_at: :desc))
