@@ -98,6 +98,7 @@ Rails.application.routes.draw do
   resources :backings
   resources :purchases, param: :slug do
     get :free_purchase, on: :collection
+    get :staff_purchase, on: :collection
   end
   resources :webhooks, only: [:create]
 
