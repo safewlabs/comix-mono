@@ -1,6 +1,33 @@
 # frozen_string_literal: true
 
 class ApplicationController < ActionController::Base
+  # Enables Superglue rendering defaults for sensible view directories.
+  #
+  # without `use_jsx_rendering_defaults`:
+  #
+  # ```
+  # app/views/posts/
+  #  - index.jsx
+  #  - index.json.props
+  #  - index.html.erb
+  # ```
+  #
+  # with `use_jsx_rendering_defaults`:
+  #
+  # ```
+  # app/views/posts/
+  #   - index.jsx
+  #   - index.json.props
+  # ```
+  #
+  # before_action :use_jsx_rendering_defaults
+  #
+  #
+  # The html template used when `use_jsx_rendering_defaults` is enabled.
+  # Defaults to "application/superglue".
+  #
+  # superglue_template "application/superglue"
+
   include Pagy::Backend
   helper_method :current_user
   helper_method :current_admin_user
