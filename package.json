@@ -14,6 +14,7 @@
     "@thoughtbot/superglue": "^1.0.1",
     "autoprefixer": "^10.4.17",
     "esbuild": "^0.19.12",
+    "html-react-parser": "^5.2.2",
     "postcss": "^8.4.33",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
