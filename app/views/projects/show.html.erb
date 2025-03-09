@@ -1,7 +1,114 @@
-<div class="px-32">
-  <div class="sedra-campaign-widget">
-    <sedra-widget campaignid="2" themecolor="#7209B7" backersfontcolor="#000000" blurbfontcolor="#000000" campaignfontcolor="#000000" commentsfontcolor="#000000" contactfontcolor="#000000" creatorfontcolor="#000000" faqfontcolor="#000000" fundingfontcolor="#000000" paymentfontcolor="#000000" profilefontcolor="#000000" rewardsfontcolor="#000000" streamsfontcolor="#000000" tabbackgroundcolor="#FFFFFF" tabselectedfontcolor="#000000" tabunselectedfontcolor="#000000" topfontcolor="#000000" fontfamily="Poppins">
-    </sedra-widget>
-    <script type="text/javascript" src="https://miaufxz4w542.atlas.thrinacia.com/widget/production/getwidget.js"></script>
+<%= render(PageTitleComponent.new(title: @project.title)) %>
+<div class="flex flex-col">
+  <div class="w-full text-center py-12 text-5xl font-bold justify-self-center">
+    <%= @project.title %><br/>
+    <div class="py-4">
+      <span class="text-3xl">
+        <% @project.creator_profiles.each do |creator| %>
+          <img class="inline-block h-14 w-14 rounded-md" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+          <%= creator.name %>
+        <% end %>
+      </span>
+    </div>
+  </div>
+  <div class="flex lg:flex-row md:flex-col sm:flex-col">
+    <div class="w-1/2 flex flex-col items-center">
+      <% if @project.video_url.present? %>
+        <%= render(VideoComponent.new(video_url: @project.video_url)) %>
+      <% else %>
+        <img src="https://img.icons8.com/dotty/400/000000/full-image.png" class="shadow-2xl hidden rounded-lg lg:block" />
+      <% end %>
+    </div>
+    <div class="w-1/2 px-16">
+      <div class="text-xl py-4 border-b border-b-gray-300"><%= @project.blurb.html_safe %></div>
+      <div class="py-4 flex flex-col">
+        <div class="text-2xl p-2">
+          <span class="font-bold">Raised:</span> $<%= @project.funds_raised %> /
+          <span class="font-bold">Goal:</span> $<%= @project.funding_goal %>
+        </div>
+        <div class="text-2xl p-2">
+          <%= @project.backings.count %> Believers
+        </div>
+        <div class="text-2xl p-2">
+          <%= @project.days_to_go %> Days to go
+        </div>
+        <div class="py-4">
+          <div class="w-full bg-gray-200 rounded-full">
+            <div class="text-xl font-medium background-gradient text-center p-4 leading-none text-white rounded-l-full" style="width: <%= @project.funding_status %>%">
+              <%= @project.funding_status.round %>%
+            </div>
+          </div>
+        </div>
+      </div>
+      <button type="submit" class="mt-10 w-full bg-cx-purple border border-transparent rounded-md py-3 px-8 flex items-center justify-center text-lg font-medium text-white hover:text-black hover:bg-cx-lavender-blush focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cx-lavendar-blush">
+        Believe
+      </button>
+    </div>
+  </div>
+
+  <!-- Bundles -->
+  <div class="px-24 py-6">
+    <h1 class="text-center text-5xl font-bold py-6">Bundles</h1>
+    <%= render partial: "bundles", locals: { bundles: @bundles } %>
+  </div>
+  <!-- Tabs -->
+  <div class="px-24 py-6" data-controller="tabs" data-tabs-active-tab="-mb-px border-l border-t border-r rounded-t">
+    <div class="sm:hidden">
+      <label for="tabs" class="sr-only">Select a tab</label>
+      <select id="tabs" name="tabs" class="block w-full focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md">
+        <option selected>Project Details</option>
+
+        <option>Risks</option>
+
+        <option>Project updates</option>
+
+        <option>More from the creator</option>
+      </select>
+    </div>
+    <div class="hidden sm:block">
+      <nav class="relative z-0 rounded-lg shadow flex divide-x divide-gray-200" aria-label="Tabs">
+        <a href="#"
+          data-tabs-target="tab" data-action="click->tabs#change"
+          class="text-gray-900 rounded-l-lg group relative min-w-0 flex-1 overflow-hidden bg-white py-4 px-4 text-sm font-medium text-center hover:bg-gray-50 focus:z-10" aria-current="page">
+          <span>Project Details</span>
+          <span aria-hidden="true" class="bg-indigo-500 absolute inset-x-0 bottom-0 h-0.5"></span>
+        </a>
+
+        <a href="#"
+          data-tabs-target="tab" data-action="click->tabs#change"
+          class="text-gray-500 hover:text-gray-700 group relative min-w-0 flex-1 overflow-hidden bg-white py-4 px-4 text-sm font-medium text-center hover:bg-gray-50 focus:z-10">
+          <span>Risks</span>
+          <span aria-hidden="true" class="bg-transparent absolute inset-x-0 bottom-0 h-0.5"></span>
+        </a>
+
+        <a href="#"
+          data-tabs-target="tab" data-action="click->tabs#change"
+          class="text-gray-500 hover:text-gray-700 group relative min-w-0 flex-1 overflow-hidden bg-white py-4 px-4 text-sm font-medium text-center hover:bg-gray-50 focus:z-10">
+          <span>Project updates</span>
+          <span aria-hidden="true" class="bg-transparent absolute inset-x-0 bottom-0 h-0.5"></span>
+        </a>
+
+        <a href="#"
+          data-tabs-target="tab" data-action="click->tabs#change"
+          class="text-gray-500 hover:text-gray-700 group relative min-w-0 flex-1 overflow-hidden bg-white py-4 px-4 text-sm font-medium text-center hover:bg-gray-50 focus:z-10">
+          <span>More from the creator</span>
+          <span aria-hidden="true" class="bg-transparent absolute inset-x-0 bottom-0 h-0.5"></span>
+        </a>
+      </nav>
+    </div>
+    <div class="hidden py-4 px-4 border-l border-b border-r" data-tabs-target="panel">
+      <%= render partial: "project_details", locals: { project: @project } %>
+    </div>
+
+    <div class="hidden py-4 px-4 border-l border-b border-r" data-tabs-target="panel">
+      <%= render partial: "risks" %>
+    </div>
+
+    <div class="hidden py-4 px-4 border-l border-b border-r" data-tabs-target="panel">
+      <%= render partial: "project_updates" %>
+    </div>
+    <div class="hidden py-4 px-4 border-l border-b border-r" data-tabs-target="panel">
+      <%= render partial: "community" %>
+    </div>
   </div>
 </div>
