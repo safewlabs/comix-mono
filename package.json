@@ -25,7 +25,8 @@
     "tailwindcss-stimulus-components": "^4.0.4",
     "tiny-slider": "^2.9.4",
     "trix": "^2.1.12",
-    "update-browserslist-db": "^1.0.13"
+    "update-browserslist-db": "^1.0.13",
+    "vite-plugin-full-reload": "^1.2.0"
   },
   "scripts": {
     "build": "esbuild app/javascript/*.* --bundle --sourcemap --format=esm --outdir=app/assets/builds --public-path=/assets",
@@ -36,6 +37,9 @@
     "@thoughtbot/candy_wrapper": "^0.0.3",
     "@types/node": "^22.13.9",
     "@types/react": "^19.0.10",
-    "@types/react-dom": "^19.0.4"
+    "@types/react-dom": "^19.0.4",
+    "sass": "^1.85.1",
+    "vite": "^5.0.0",
+    "vite-plugin-ruby": "^5.1.0"
   }
 }
