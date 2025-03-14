@@ -1,0 +1,73 @@
+@use '../variables.scss' as *;
+
+.storesPageLayoutWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  width: 100%;
+  padding: 40px;
+  background-image: url('../../assets/background/creators-page-background.svg');
+}
+
+.storeImageAndName {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.imageContainer {
+  position: relative;
+  width: 240px;
+  height: 240px;
+  @include respond-to('md', 'max') {
+    width: 175px;
+    height: 175px;
+  }
+}
+
+.storeImage {
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  object-fit: contain;
+  border: 1px solid $border-gray;
+  background-color: white;
+  @include respond-to('md', 'max') {
+    width: 175px;
+    height: 175px;
+  }
+}
+
+.eyeWithBackground {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: rgba(93, 47, 85, 0.7);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+
+  .imageContainer:hover & {
+    opacity: 1;
+  }
+}
+
+.storeName {
+  font-family: 'JetBrainsMono-Bold';
+  font-size: 16px;
+  color: $primary-purple;
+  @include respond-to('md', 'max') {
+    font-size: 12px;
+  }
+}

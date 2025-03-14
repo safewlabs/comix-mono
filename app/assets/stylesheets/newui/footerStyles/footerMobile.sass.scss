@@ -1,0 +1,134 @@
+@use '../variables.scss' as *;
+
+.footerWrapperMobile {
+  width: 100%;
+  background-image: url('../../assets/background/footer-grainy-background.svg');
+  background-color: $darker-primary-purple;
+  background-repeat: repeat-y;
+  position: relative;
+  top: 50px;
+}
+
+.footerContentWrapperMobile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 60px;
+  padding: 30px 10px;
+}
+
+.groupOfLinks {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  color: white;
+  font-family: 'JetBrainsMono-Regular';
+  gap: 13px;
+}
+
+.newsletterSignupMobile {
+  font-family: 'JetBrainsMono-Regular';
+  width: 434px;
+  height: 220px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 10px;
+  padding-left: 30px;
+  position: relative;
+  @include respond-to('sm', 'max') {
+    width: 363px;
+    height: 219px;
+    align-self: center;
+    padding-left: 10px;
+  }
+  @include respond-to('sm', 'range', 'mdxl') {
+    width: 280px;
+    height: 180px;
+  }
+}
+
+.newsLetterSignupTitleMobile {
+  color: $darker-primary-purple;
+  font-family: 'JetBrainsMono-Bold';
+  font-size: 24px;
+  @include respond-to('sm', 'max') {
+    font-size: 22px;
+  }
+  @include respond-to('sm', 'range', 'mdxl') {
+    font-size: 12px;
+  }
+}
+
+.newsLetterSignupTaglineMobile {
+  color: $tagline-mauve;
+  font-size: 16px;
+  font-family: 'JetBrainsMono-Regular';
+  @include respond-to('sm', 'max') {
+    font-size: 14px;
+    font-family: 'JetBrainsMono-Regular';
+  }
+  @include respond-to('sm', 'range', 'mdxl') {
+    font-size: 10px;
+  }
+}
+
+.newsletterInputMobile {
+  width: 262px;
+  height: 44px;
+  border: 1px solid #d8d5e3;
+  border-radius: 3px;
+  padding-left: 10px;
+  @include respond-to('sm', 'max') {
+    width: 233px;
+    height: 44px;
+    font-size: 14px;
+  }
+  @include respond-to('sm', 'range', 'mdxl') {
+    width: 133px;
+    height: 44px;
+    font-size: 10px;
+  }
+}
+
+.newsletterButtonMobile {
+  width: 107px;
+  height: 44px;
+  background-color: $darker-primary-purple;
+  color: white;
+  border-radius: 3px;
+  width: 95px;
+  height: 44px;
+  @include respond-to('sm', 'max') {
+    font-size: 14px;
+  }
+  @include respond-to('sm', 'range', 'mdxl') {
+    font-size: 10px;
+  }
+}
+
+.inputAndButtonMobile {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+}
+
+.subscribeIconMobile {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  @include respond-to('sm', 'max') {
+    right: 10px;
+  }
+  @include respond-to('sm', 'range', 'mdxl') {
+    width: 50px;
+    top: 5px;
+    right: 20px;
+  }
+  @include respond-to('xs', 'max') {
+    top: 15px;
+  }
+}

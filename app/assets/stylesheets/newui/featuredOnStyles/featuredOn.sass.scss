@@ -1,0 +1,83 @@
+@use '../variables.scss' as *;
+
+.featuredOnWrapper {
+  background-color: white;
+  height: 501px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  overflow: hidden;
+}
+
+.title {
+  margin-top: 48px;
+  width: 96vw;
+  color: $primary-purple;
+  font-family: 'JetBrainsMono-Bold';
+  font-size: 24px;
+}
+
+.marquee {
+  width: 100%;
+  overflow: hidden;
+  margin-top: 36px;
+  height: 252px;
+  position: relative;
+}
+
+.marqueeContent {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  animation: scroll 190s linear infinite;
+  width: max-content;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.marqueeContent:hover {
+  animation-play-state: paused;
+}
+
+.imageAndTitle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  @include respond-to('sm', 'max') {
+    width: 173px;
+    height: 218px;
+  }
+}
+
+.image {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  cursor: pointer;
+  @include respond-to('sm', 'max') {
+    width: 173px;
+    height: 168px;
+  }
+}
+
+.name {
+  color: $primary-purple;
+  font-size: 18px;
+  font-family: 'JetBrainsMono-Bold';
+  margin-top: 8px;
+  @include respond-to('sm', 'max') {
+    font-size: 14px;
+  }
+}

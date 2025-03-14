@@ -1,0 +1,69 @@
+@use '../variables.scss' as *;
+
+.creatorsSectionWrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 30px;
+  margin-bottom: 45px;
+  padding-top: 50px;
+  background-image: url('../../assets/background/creators-background.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.titleAndButtons {
+  margin-left: 30px;
+  @include respond-to('mdxl', 'max') {
+    margin-left: 0px;
+  }
+}
+
+.creatorsWrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin-top: 40px;
+}
+
+.creatorImageNameAndTitle {
+  width: 203px;
+  height: 253px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  .creatorName {
+    font-family: 'JetBrainsMono-Bold';
+    font-size: 14px;
+    color: $primary-purple;
+    margin-top: 10px;
+  }
+  .creatorSkills {
+    font-family: 'JetBrainsMono-Medium';
+    font-size: 10px;
+    text-align: center;
+    color: $title-mauve;
+  }
+  @include respond-to('sm', 'max') {
+    width: 120px;
+    height: 200px;
+  }
+}
+
+.creatorImage {
+  width: 188px;
+  height: 188px;
+  border-radius: 50%;
+  object-fit: cover;
+  filter: brightness(0.9) saturate(0%);
+  background-color: white;
+  @include respond-to('sm', 'max') {
+    width: 120px;
+    height: 120px;
+  }
+}

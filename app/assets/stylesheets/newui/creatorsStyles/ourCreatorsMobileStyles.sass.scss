@@ -1,0 +1,145 @@
+@use '../variables.scss' as *;
+
+.creatorsPageLayoutWrapperMobile {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: row;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: fit-content;
+  gap: 30px;
+  background-image: url('../../assets/background/our-creators-mobile-background.svg');
+  background-size: contain;
+  background-position: center;
+  background-repeat: repeat;
+  margin-bottom: 120px;
+  @include respond-to('xs', 'max') {
+    .creatorsPageLayoutWrapperMobile {
+      gap: 10px;
+    }
+  }
+}
+
+.creatorsPageListWrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 10px;
+}
+
+.creatorCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 153px;
+  position: relative;
+  &:hover .eyeWithBackground {
+    opacity: 1;
+    z-index: 2;
+  }
+  @include respond-to('xs', 'max') {
+    width: 123px;
+  }
+}
+
+.creatorImage {
+  width: 153px;
+  height: 149px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid $border-gray;
+  position: relative;
+  @include respond-to('xs', 'max') {
+    width: 123px;
+    height: 119px;
+  }
+}
+
+.creatorNameAndSkills {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 188px;
+  margin-top: 20px;
+  position: relative;
+  @include respond-to('xs', 'max') {
+    width: 123px;
+  }
+}
+
+.creatorName {
+  font-family: 'JetBrainsMono-Bold';
+  font-size: 16px;
+  color: $primary-purple;
+  text-align: center;
+  @include respond-to('xs', 'max') {
+    font-size: 12px;
+  }
+}
+
+.creatorSkills {
+  font-family: 'JetBrainsMono-Regular';
+  color: $title-mauve;
+  font-size: 11px;
+  text-align: center;
+  &:hover + .creatorSkillsBanner {
+    visibility: visible;
+    position: absolute;
+    top: 60px;
+    background-color: $light-accent;
+    width: 153px;
+    font-family: 'JetBrainsMono-Regular';
+    color: $title-mauve;
+    font-size: 11px;
+    text-align: center;
+  }
+  @include respond-to('xs', 'max') {
+    font-size: 9px;
+  }
+}
+
+.creatorSkillsBanner {
+  visibility: hidden;
+  position: absolute;
+  background-color: $light-accent;
+  width: 153px;
+  top: 60px;
+  font-family: 'JetBrainsMono-Regular';
+  color: $title-mauve;
+  font-size: 12px;
+  text-align: center;
+  padding: 10px;
+  z-index: 5;
+  @include respond-to('xs', 'max') {
+    width: 123px;
+  }
+}
+
+.eyeWithBackground {
+  width: 153px;
+  height: 149px;
+  border-radius: 50%;
+  background-color: rgba(93, 47, 85, 0.7);
+  position: absolute;
+  left: 0;
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+
+  .imageContainer:hover & {
+    opacity: 1;
+    z-index: 3;
+  }
+  @include respond-to('xs', 'max') {
+    width: 123px;
+    height: 119px;
+    z-index: 3;
+  }
+}

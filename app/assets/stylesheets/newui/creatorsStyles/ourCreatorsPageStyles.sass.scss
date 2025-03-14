@@ -1,0 +1,110 @@
+@use '../variables.scss' as *;
+
+.creatorsPageLayoutWrapperWeb {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  gap: 20px;
+  width: 100%;
+  padding: 20px;
+  background-image: url('../../assets/background/creators-page-background.svg');
+}
+
+.creatorsPageListWrapperWeb {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin: 10px;
+}
+
+.creatorCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 188px;
+  height: 300px;
+  position: relative;
+  &:hover .eyeWithBackground {
+    opacity: 1;
+  }
+}
+
+.creatorImage {
+  width: 188px;
+  height: 188px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid $border-gray;
+  position: relative;
+  background-color: white;
+}
+
+.creatorNameAndSkills {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 188px;
+  margin-top: 20px;
+  position: relative;
+}
+
+.creatorName {
+  font-family: 'JetBrainsMono-Bold';
+  font-size: 16px;
+  color: $primary-purple;
+  text-align: center;
+}
+
+.creatorSkills {
+  font-family: 'JetBrainsMono-Regular';
+  color: $title-mauve;
+  font-size: 12px;
+  text-align: center;
+  &:hover + .creatorSkillsBanner {
+    visibility: visible;
+    position: absolute;
+    top: 60px;
+    background-color: $light-accent;
+    width: 188px;
+    font-family: 'JetBrainsMono-Regular';
+    color: $title-mauve;
+    font-size: 12px;
+    text-align: center;
+    padding: 10px;
+  }
+}
+
+.creatorSkillsBanner {
+  visibility: hidden;
+  position: absolute;
+  background-color: $light-accent;
+  width: 188px;
+  top: 60px;
+  font-family: 'JetBrainsMono-Regular';
+  color: $title-mauve;
+  font-size: 12px;
+  text-align: center;
+  padding: 10px;
+  z-index: 5;
+}
+
+.eyeWithBackground {
+  width: 188px;
+  height: 188px;
+  border-radius: 50%;
+  background-color: rgba(93, 47, 85, 0.7);
+  position: absolute;
+  left: 0;
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+
+  .imageContainer:hover & {
+    opacity: 1;
+  }
+}

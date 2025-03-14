@@ -1,0 +1,27 @@
+@use '../variables.scss' as *;
+
+.storesWrapperMobile {
+  position: relative;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url('../../assets/background/stores-background-mobile.svg');
+  background-size: cover;
+  background-position: center;
+}
+
+.storesListTwo {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}

@@ -1,0 +1,14 @@
+@use './variables.scss' as *;
+
+.appParentWrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding-top: 64px;
+  @include respond-to(xs, 'max') {
+    padding-top: 0px;
+  }
+}
