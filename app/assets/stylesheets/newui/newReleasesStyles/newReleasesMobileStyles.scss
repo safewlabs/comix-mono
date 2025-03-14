@@ -1,0 +1,118 @@
+@use '../variables.scss' as *;
+
+.newReleasesMobileWrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-image: url('../../assets/background/new-releases-background.svg');
+  background-repeat: repeat-y;
+  background-size: auto;
+  @include respond-to('xs', 'max') {
+    margin-top: 84px;
+  }
+}
+
+.newReleasesMobileBackground {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: $faded-lavender-background;
+  background-repeat: repeat-y;
+  background-size: auto;
+  padding-bottom: 32px;
+}
+
+.titleMobile {
+  align-self: flex-start;
+  color: $primary-purple;
+  font-family: 'JetBrainsMono-Bold';
+  font-size: 24px;
+  margin-left: 32px;
+}
+
+.taglineMobile {
+  width: 365px;
+  align-self: flex-start;
+  p {
+    font-family: 'JetBrainsMono-Medium';
+    font-size: 18x;
+    align-self: flex-start;
+    margin-top: 15px;
+    color: $text-gray;
+    margin-left: 30px;
+  }
+}
+
+.cardGroup {
+  margin-top: 25px;
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.newReleaseMobileCard {
+  position: relative;
+  width: 330px;
+  height: 460px;
+  border-radius: 8px;
+  padding: 20px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border: 1.02px solid $border-gray;
+
+  .comicMobileImage {
+    width: 331px;
+    height: 360px;
+    border-radius: 8px;
+    border: 1.02px solid #eeeeee;
+  }
+  &:hover {
+    border: 1.02px solid black;
+    box-shadow:
+      rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em,
+      rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em,
+      rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+  }
+}
+
+.newReleaseNameAndStoreMobile {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-self: flex-start;
+  gap: 8px;
+  .newReleaseNameMobile {
+    font-size: 16px;
+    font-family: 'JetBrainsMono-Bold';
+    line-height: 18px;
+    color: $primary-purple;
+  }
+  .newReleaseStoreMobile {
+    color: $title-mauve;
+    font-size: 14px;
+    font-family: 'JetBrainsMono-Medium';
+    line-height: 19.88px;
+  }
+}
+
+.priceTagMobile {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  z-index: 1;
+}
+
+.priceAmountMobile {
+  position: absolute;
+  bottom: 35px;
+  right: 46px;
+  font-size: 14px;
+  z-index: 2;
+}

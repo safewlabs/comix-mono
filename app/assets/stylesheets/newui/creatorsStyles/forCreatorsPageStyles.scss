@@ -1,0 +1,46 @@
+@use '../variables.scss' as *;
+
+.forCreatorsPageLayoutWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 40px;
+  background-image: url('../../assets/background/creators-page-background.svg');
+  @include respond-to('md', 'max') {
+    margin-top: 100px;
+  }
+}
+
+.forCreatorsPageTitle {
+  font-family: 'JetBrainsMono-Bold';
+  font-size: 24px;
+  margin: 0px 0 100px 0;
+  @include respond-to('md', 'max') {
+    margin: 0px 0 140px 0;
+  }
+}
+
+.forCreatorsPageText {
+  font-family: 'JetBrainsMono-Bold';
+  font-size: 18px;
+  text-align: center;
+  margin: 50px 0 140px 0;
+  @include respond-to('md', 'max') {
+    margin: 50px 0 100px 0;
+  }
+}
+
+.airtableEmbedWrapper {
+  width: 100%;
+}
+.airtableEmbed {
+  background-color: transparent;
+  border: 1px solid #ccc;
+  width: 100%;
+  height: 1208px;
+  @include respond-to('md', 'max') {
+    height: 1223px;
+  }
+}

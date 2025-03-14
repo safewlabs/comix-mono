@@ -1,0 +1,23 @@
+@use './variables.scss' as *;
+
+.backAndForwardButtonsWeb {
+  gap: 6px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  button {
+    font-family: 'JetBrainsMono-Bold';
+    background-color: white;
+    border: 1px solid $border-gray;
+    font-size: 16px;
+    color: $primary-purple;
+    padding-top: 14px;
+    padding-right: 17px;
+    padding-bottom: 14px;
+    padding-left: 17px;
+    &:hover {
+      border: 1px solid black;
+    }
+  }
+}

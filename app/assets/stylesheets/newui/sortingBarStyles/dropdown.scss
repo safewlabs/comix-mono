@@ -1,0 +1,9 @@
+@use '../variables.scss' as *;
+
+.dropdown {
+  padding: 8px 12px;
+  border: 1px solid $main-lavender;
+  select {
+    padding-right: 20px;
+  }
+}

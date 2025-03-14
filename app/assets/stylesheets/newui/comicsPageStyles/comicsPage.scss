@@ -1,0 +1,94 @@
+@use '../variables.scss' as *;
+
+.comicsPageLayoutWrapper {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  gap: 20px;
+  width: 100%;
+  padding: 20px;
+}
+
+.genrePageListWrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.comicsPageListWrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 10px;
+}
+
+.newReleaseCard {
+  position: relative;
+  width: 262px;
+  height: 471px;
+  border-radius: 8px;
+  padding: 16px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  .comicImage {
+    width: 230px;
+    height: 357px;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transition: transform 0.2s ease-in-out;
+    &:hover {
+      transform: scale(1.03);
+    }
+  }
+  &:hover {
+    .priceTag {
+      transform: scale(1.04);
+    }
+    .priceAmount {
+      transform: scale(1.04);
+    }
+  }
+}
+
+.newReleaseNameAndStore {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 8px;
+  .newReleaseName {
+    font-size: 16px;
+    font-family: 'JetBrainsMono-Bold';
+    line-height: 22.72px;
+    color: $primary-purple;
+  }
+  .newReleaseStore {
+    color: $title-mauve;
+    font-size: 14px;
+    font-family: 'JetBrainsMono-Medium';
+    line-height: 19.88px;
+  }
+}
+
+.priceTag {
+  position: absolute;
+  top: 328px;
+  left: 170px;
+  z-index: 1;
+  transition: transform 0.2s ease-in-out;
+}
+
+.priceAmount {
+  position: absolute;
+  top: 334px;
+  left: 183px;
+  font-size: 13px;
+  z-index: 2;
+  transition: transform 0.2s ease-in-out;
+}

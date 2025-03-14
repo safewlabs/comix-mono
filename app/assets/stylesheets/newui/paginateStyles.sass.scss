@@ -1,0 +1,35 @@
+@use './variables.scss' as *;
+
+.paginateWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 10px;
+  padding: 20px;
+}
+
+.paginationNumberButtons {
+  font-family: 'JetBrainsMono-Medium';
+
+  color: $title-mauve;
+  width: 40px;
+  height: 40px;
+  border: 1px solid $border-gray;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.currentPageNumber {
+  color: $darker-primary-purple;
+  font-family: 'JetBrainsMono-Medium';
+  width: 40px;
+  height: 40px;
+  border: 1px solid $darker-primary-purple;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
