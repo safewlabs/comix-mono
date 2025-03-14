@@ -1,6 +1,6 @@
 inherit_gem:
   rubocop-rails_config:
     - config/rails.yml
-require: 
+plugins: 
   - rubocop-rails
   - rubocop-rspec
