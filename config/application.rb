@@ -23,6 +23,6 @@ module Comix
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
     # Rails::Html::WhiteListSanitizer.allowed_tags << "iframe"
-    # Rails.application.config.assets.paths << Rails.root.join("app", "assets", "fonts")
+    Rails.application.config.assets.paths << Rails.root.join("app", "assets", "fonts")
   end
 end

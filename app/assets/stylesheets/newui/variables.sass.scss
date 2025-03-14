@@ -1,0 +1,139 @@
+@use 'sass:map';
+
+@font-face {
+  font-family: 'JetBrainsMono-ExtraLight';
+  src: url("JetBrainsMono-ExtraLight.ttf")
+    format('truetype');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'JetBrainsMono-Light';
+  src: url('JetBrainsMono-Light.ttf')
+    format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'JetBrainsMono-Regular';
+  src: url('JetBrainsMono-Regular.ttf')
+    format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'JetBrainsMono-Medium';
+  src: url('JetBrainsMono-Medium.ttf')
+    format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'JetBrainsMono-Bold';
+  src: url('JetBrainsMono-SemiBold.ttf')
+    format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'JetBrainsMono-Bold';
+  src: url('JetBrainsMono-Bold.ttf')
+    format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'JetBrainsMono-ExtraBold';
+  src: url('JetBrainsMono-ExtraBold.ttf')
+    format('truetype');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+/*
+* Color Variables
+*/
+$white-button: white;
+$primary-purple: #5d2f55;
+$main-lavender: rgba(225, 190, 255, 1);
+$background-lightLavender: #fdfbff;
+$main-color: #e1beff;
+$darker-primary-purple: #3d1a37;
+$mauve: #a08f9d;
+$title-mauve: #836c7f;
+$tagline-mauve: #9a8897;
+$border-gray: #d2d2d2;
+$faded-lavender-background: rgba(249, 242, 255, 0.65);
+$text-gray: rgba(109, 108, 108, 1);
+$background-faded-purple: #4c2345cc;
+$background-offwhite: #d9d9d9;
+$text-dark-gray: #1b1b1b;
+$marketing-background-lavander: #faf4ff;
+$lightGray-text: #d5d7da;
+$button-background: #f4e7ff00;
+$light-accent: #f4e7ff;
+$checkbox-gray: #d5d7da;
+/**
+* Device breakpoints
+*/
+$breakpoint-xxs: 320px;
+$breakpoint-xms: 429px;
+$breakpoint-xmms: 430px;
+$breakpoint-xs: 480px;
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 1024px;
+$breakpoint-xl: 1280px;
+$breakpoint-mdxl: 1422px;
+$breakpoint-xxl: 1440px;
+$breakpoint-xxxl: 1880px;
+$breakpoint-4k: 1920px;
+
+/**
+* Mixin that dynamically produces media queries based on breakpoint parameters
+*/
+@mixin respond-to($breakpoint, $type: 'max', $next-breakpoint: null) {
+  $breakpoints: (
+    xxs: 320px,
+    xms: 429px,
+    xmms: 430px,
+    xs: 480px,
+    sm: 576px,
+    md: 768px,
+    lg: 1024px,
+    xl: 1280px,
+    mdxl: 1422px,
+    xxl: 1440px,
+    xxxl: 1880px,
+    '4k': 1920px,
+  );
+
+  $value: map.get($breakpoints, $breakpoint);
+
+  @if $type == 'max' {
+    @media (max-width: #{$value}) {
+      @content;
+    }
+  } @else if $type == 'min' {
+    @media (min-width: #{$value}) {
+      @content;
+    }
+  } @else if $type == 'range' and $next-breakpoint != null {
+    $next-value: map.get($breakpoints, $next-breakpoint);
+    @media (min-width: #{$value}) and (max-width: #{$next-value}) {
+      @content;
+    }
+  }
+}
