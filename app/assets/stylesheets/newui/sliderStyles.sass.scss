@@ -1,4 +1,4 @@
-@use '../styles/variables.scss' as *;
+@use './variables.sass.scss' as *;
 
 .range-slider .range-slider__range {
   background: $darker-primary-purple;
