@@ -1,7 +1,7 @@
 import React from 'react';
-import { TEXT } from '~/components/layout/forCreatorsPage/ForCreatorsPage';
-// import '~/styles/creatorsStyles/forCreatorsPageStyles.scss';
-// import '~/styles/shimmerLoader.scss';
+import '@assets/stylesheets/newui/shimmerLoader.sass.scss';
+import '@assets/stylesheets/newui/creatorsStyles/forCreatorsPageStyles.sass.scss';
+import { TEXT } from '@javascript/components/layout/forCreatorsPage/ForCreatorsPage';
 
 export const ForCreatorsLoading = () => {
   return (

@@ -1,9 +1,9 @@
-import { FC } from 'react';
-import { Top10Comics } from './Top10Comics';
-import TitleAndTaglineMobile from '~/components/common/TitleAndTaglineMobile';
-import ComicCardMobile from '../newReleases/ComicCardMobile';
-import Button from '~/components/common/Button';
 import '~/styles/top10ComicsStyles/top10ComicsMobileStyles.scss';
+import React,{ FC } from 'react';
+import { Top10Comics } from './Top10Comics';
+import ComicCardMobile from '../newReleases/ComicCardMobile';
+import Button from '@javascript/components/common/Button';
+import TitleAndTaglineMobile from '@javascript/components/common/TitleAndTaglineMobile';
 
 const Top10ComicsMobile: FC<Top10Comics> = ({ top10Comics }) => {
   return (

@@ -1,8 +1,7 @@
-import { FC } from 'react';
-import '~/styles/appMarketing.scss';
-
-import marketingBackgroundImage from '../../../../assets/background/marketing-content-image copy.svg';
-import AppDownloadButtonSvg from 'assets/icons/AppDownloadButtonSvg';
+import React, { FC } from 'react';
+import '@assets/stylesheets/newui/appMarketing.sass.scss';
+// import marketingBackgroundImage from '../../../../assets/background/marketing-content-image copy.svg';
+// import AppDownloadButtonSvg from 'assets/icons/AppDownloadButtonSvg';
 
 const AppMarketing: FC = () => {
   return (
@@ -12,7 +11,7 @@ const AppMarketing: FC = () => {
       aria-label="App Marketing Section"
     >
       <img
-        src={marketingBackgroundImage}
+        // src={marketingBackgroundImage}
         alt="Background promoting the Comix One app"
         className="marketingBackgroundImage"
       />
@@ -23,7 +22,7 @@ const AppMarketing: FC = () => {
         className="appDownloadButton"
         aria-label="Download the Comix One app from the Apple App Store"
       >
-        <AppDownloadButtonSvg />
+        {/* <AppDownloadButtonSvg /> */}
       </a>
     </div>
   );

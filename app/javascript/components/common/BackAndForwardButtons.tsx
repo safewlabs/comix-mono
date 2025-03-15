@@ -1,8 +1,7 @@
-import React from 'react';
-import { FC } from 'react';
-import BackButtonSvg from 'assets/icons/BackButtonSvg';
-import ForwardButtonSvg from 'assets/icons/ForwardButtonSvg';
-// import '~/styles/backAndForwardButtons.scss';
+import React, {FC} from 'react';
+import BackButtonSvg from '@assets/icons/BackButtonSvg';
+import ForwardButtonSvg from '@assets/icons/ForwardButtonSvg';
+import '@assets/stylesheets/newui/backAndForwardButtons.sass.scss';
 
 interface BackAndForwardButtonsProps {
   onBack?: () => void;
