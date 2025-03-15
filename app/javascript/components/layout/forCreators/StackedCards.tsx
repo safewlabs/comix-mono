@@ -4,7 +4,6 @@ import ForCreators2 from '@assets/forCreators/for-creators-2.svg';
 import ForCreators3 from '@assets/forCreators/for-creators-3.svg';
 import '@assets/stylesheets/newui/creatorsStyles/stackedCards.sass.scss';
 
-
 export const stakedCardsData = [
   {
     heading: 'Create, showcase, and sell your work effortlessly.',

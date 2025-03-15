@@ -1,7 +1,7 @@
-import { FC } from 'react';
-import TitleAndButtons from '~/components/common/TitleAndButtons';
-import Tagline from '~/components/common/Tagline';
-import '~/styles/creatorsStyles/creators.scss';
+import React from 'react';
+import TitleAndButtons from '@javascript/components/common/TitleAndButtons';
+import Tagline from '@javascript/components/common/Tagline';
+import '@assets/stylesheets/newui/creatorsStyles/creators.scss';
 
 const dummyList = new Array(12).fill(null);
 
@@ -17,7 +17,7 @@ const CreatorSectionLoadingWeb = () => {
       </div>
       <Tagline tagline={'Meet The Creators Behind Your Favorite Comics.'} />
       <div className="creatorsWrapper">
-        {dummyList.map((li, index) => (
+        {dummyList.map((index) => (
           <div key={index} className="creatorImageNameAndTitle">
             <div className="creatorImage shimmerLoader"></div>
             <div className="creatorSectionNameShimmer shimmerLoader"></div>

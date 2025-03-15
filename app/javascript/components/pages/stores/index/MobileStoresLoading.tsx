@@ -1,9 +1,7 @@
-import React from 'react'
+import React from 'react';
 
 const MobileStoresLoading = () => {
-  return (
-    <div>MobileStoresLoading</div>
-  )
-}
+  return <div>MobileStoresLoading</div>;
+};
 
-export default MobileStoresLoading
+export default MobileStoresLoading;

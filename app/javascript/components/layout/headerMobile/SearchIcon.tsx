@@ -1,5 +1,6 @@
-import SearchIcon from '../../../../assets/icons/search-icon.svg';
-import '~/styles/headerStyles/headerMobile.scss';
+import React from 'react';
+import SearchIcon from '@assets/icons/search-icon.svg';
+import '@assets/stylesheets/newui/headerStyles/headerMobile.scss';
 
 const SearchIconComponent = () => {
   return (

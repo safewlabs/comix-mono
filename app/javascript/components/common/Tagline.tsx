@@ -1,4 +1,4 @@
-import React, {FC} from 'react';
+import React, { FC } from 'react';
 import '@assets/stylesheets/newui/webApp.sass.scss';
 
 interface TaglineProp {

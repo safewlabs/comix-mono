@@ -1,8 +1,9 @@
-import TitleAndTaglineMobile from '~/components/common/TitleAndTaglineMobile';
-import Button from '~/components/common/Button';
-import '~/styles/storesStyles/storesMobile.scss';
-import '~/styles/shimmerLoader.scss';
-import '~/styles/storesStyles/stores.scss';
+import React from 'react';
+import TitleAndTaglineMobile from '@javascript/components/common/TitleAndTaglineMobile';
+import Button from '@javascript/components/common/Button';
+import '@assets/stylesheets/newui/storesStyles/storesMobile.scss';
+import '@assets/stylesheets/newui/shimmerLoader.scss';
+import '@assets/stylesheets/newui/storesStyles/stores.scss';
 
 const dummyList = new Array(14).fill(null);
 
@@ -15,7 +16,7 @@ const StoresMobileLoading = () => {
       />
       <div className="storesListTwo">
         {dummyList.map((index) => (
-          <div key={`${crypto.randomUUID()}`}>
+          <div key={`${crypto.randomUUID()}-${index}`}>
             <div className="storeCard">
               <div className="storeImage shimmerLoader"></div>
               <div className="storeTitleShimmerLoader shimmerLoader"></div>

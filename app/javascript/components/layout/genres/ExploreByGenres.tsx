@@ -1,10 +1,10 @@
-import { FC, useRef } from 'react';
-import TitleAndButtons from '~/components/common/TitleAndButtons';
+import React, { FC, useRef } from 'react';
+import TitleAndButtons from '../../common/TitleAndButtons';
 import BackAndForwardButtons from '../../common/BackAndForwardButtons';
-import { handleScroll } from '~/components/common/handleScroll';
-import Tagline from '~/components/common/Tagline';
-import '~/styles/titleAndButtons.scss';
-import '~/styles/exploreByGenresStyles/exploreByGenres.scss';
+import { handleScroll } from '../../common/handleScroll';
+import Tagline from '../../common/Tagline';
+import '@assets/stylesheets/newui/titleAndButtons.sass.scss';
+import '@assets/stylesheets/newui/exploreByGenresStyles/exploreByGenres.sass.scss';
 
 export interface ExploreByGenres {
   cover?: string;
@@ -17,7 +17,7 @@ export interface ExploreByGenresProps {
 }
 
 const ExploreByGenres: FC<ExploreByGenresProps> = ({ exploreByGenres }) => {
-  const exploreByGenresRef = useRef<HTMLDivElement>(null);
+  const exploreByGenresRef = useRef<HTMLDivElement>(null!);
 
   return (
     <section

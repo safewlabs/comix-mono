@@ -1,6 +1,7 @@
-import TitleAndTaglineMobile from '~/components/common/TitleAndTaglineMobile';
-import Button from '~/components/common/Button';
-import '~/styles/top10ComicsStyles/top10ComicsMobileStyles.scss';
+import React from 'react';
+import TitleAndTaglineMobile from '@javascript/components/common/TitleAndTaglineMobile';
+import Button from '@javascript/components/common/Button';
+import '@assets/stylesheets/newui/top10ComicsStyles/top10ComicsMobileStyles.scss';
 
 const dummyList = new Array(10).fill(null);
 
@@ -15,7 +16,7 @@ const Top10ComicsMobileLoading = () => {
         {dummyList.map((index) => (
           <div
             className="newReleaseMobileCard shimmerLoaderPurple"
-            key={`${crypto.randomUUID()}`}
+            key={`${crypto.randomUUID()}-${index}`}
           ></div>
         ))}
       </div>

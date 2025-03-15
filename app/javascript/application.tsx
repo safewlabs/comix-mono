@@ -3,21 +3,23 @@ import { createRoot } from 'react-dom/client';
 import { Application, VisitResponse } from '@thoughtbot/superglue';
 import { buildVisitAndRemote } from './application_visit';
 import { pageIdentifierToPageComponent } from './page_to_page_mapping';
-import { store } from './store'
+import { store } from './store';
 
 // Stimulus controllers, delete when moved fully to react
-import "@hotwired/turbo-rails"
-import "./controllers"
-import "trix"
-import "@rails/actiontext"
+import '@hotwired/turbo-rails';
+import './controllers';
+import 'trix';
+import '@rails/actiontext';
 
 declare global {
-  interface Window { SUPERGLUE_INITIAL_PAGE_STATE: VisitResponse; }
+  interface Window {
+    SUPERGLUE_INITIAL_PAGE_STATE: VisitResponse;
+  }
 }
 
-if (typeof window !== "undefined") {
-  document.addEventListener("DOMContentLoaded", function () {
-    const appEl = document.getElementById("app");
+if (typeof window !== 'undefined') {
+  document.addEventListener('DOMContentLoaded', function () {
+    const appEl = document.getElementById('app');
     const location = window.location;
 
     if (appEl) {
@@ -43,4 +45,3 @@ if (typeof window !== "undefined") {
     }
   });
 }
-

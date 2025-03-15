@@ -1,7 +1,8 @@
+import React from 'react';
 import HamburgerMenu from './HamburgerMenu';
 import SearchIconComponent from './SearchIcon';
 import ComixHeaderMobileLogo from './ComixHeaderMobileLogo';
-import '~/styles/headerStyles/headerMobile.scss';
+import '@assets/stylesheets/newui/headerStyles/headerMobile.scss';
 
 const HeaderMobile = () => {
   return (

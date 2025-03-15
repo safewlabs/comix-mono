@@ -1,6 +1,7 @@
-import Tagline from '~/components/common/Tagline';
-import TitleAndButtons from '~/components/common/TitleAndButtons';
-import '~/styles/latestStyles/latestFromComix.scss';
+import React from 'react';
+import '@assets/stylesheets/newui/latestStyles/latestFromComix.scss';
+import Tagline from '@javascript/components/common/Tagline';
+import TitleAndButtons from '@javascript/components/common/TitleAndButtons';
 
 const dummyList = new Array(3).fill(null);
 
@@ -20,7 +21,7 @@ const LatestFromComixLoadingWeb = () => {
         }
       />
       <div className="latestFromComixList">
-        {dummyList.map((el, index) => (
+        {dummyList.map((index) => (
           <div
             className="latestFromComixCard shimmerLoader"
             key={`${index}-${crypto.randomUUID()}`}

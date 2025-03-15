@@ -1,7 +1,8 @@
-import TitleAndTaglineMobile from '~/components/common/TitleAndTaglineMobile';
-import Button from '~/components/common/Button';
-import '~/styles/exploreByGenresStyles/exploreByGenresMobileStyles.scss';
-import '~/styles/shimmerLoader.scss';
+import React from 'react';
+import '@assets/stylesheets/newui/exploreByGenresStyles/exploreByGenresMobileStyles.scss';
+import '@assets/stylesheets/newui/shimmerLoader.scss';
+import TitleAndTaglineMobile from '@javascript/components/common/TitleAndTaglineMobile';
+import Button from '@javascript/components/common/Button';
 
 const dummyArr = new Array(14).fill(null);
 
@@ -20,7 +21,7 @@ const ExploreByGenresMobileLoading = () => {
         role="list"
         aria-label="List of comic genres"
       >
-        {dummyArr.map((li, index) => (
+        {dummyArr.map((index) => (
           <div key={index} className="genreCardMobile shimmerLoaderPurple">
             <div className="genreImageMobile shimmerLoaderPurple" />
           </div>

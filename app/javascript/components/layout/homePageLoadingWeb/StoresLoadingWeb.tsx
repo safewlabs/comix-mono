@@ -1,7 +1,8 @@
-import Tagline from '~/components/common/Tagline';
-import TitleAndButtons from '~/components/common/TitleAndButtons';
-import '~/styles/storesStyles/stores.scss';
-import '~/styles/shimmerLoader.scss';
+import React from 'react';
+import '@assets/stylesheets/newui/storesStyles/stores.scss';
+import '@assets/stylesheets/newui/shimmerLoader.scss';
+import Tagline from '@javascript/components/common/Tagline';
+import TitleAndButtons from '@javascript/components/common/TitleAndButtons';
 
 const dummyList = new Array(20).fill(null);
 

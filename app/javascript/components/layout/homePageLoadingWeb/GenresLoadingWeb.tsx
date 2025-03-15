@@ -1,16 +1,16 @@
-import { useRef } from 'react';
-import TitleAndButtons from '~/components/common/TitleAndButtons';
-import BackAndForwardButtons from '../../common/BackAndForwardButtons';
-import { handleScroll } from '~/components/common/handleScroll';
-import Tagline from '~/components/common/Tagline';
-import '~/styles/titleAndButtons.scss';
-import '~/styles/exploreByGenresStyles/exploreByGenres.scss';
-import '~/styles/shimmerLoader.scss';
+import React, { useRef } from 'react';
+import BackAndForwardButtons from '@javascript/components/common/BackAndForwardButtons';
+import TitleAndButtons from '@javascript/components/common/TitleAndButtons';
+import Tagline from '@javascript/components/common/Tagline';
+import { handleScroll } from '@javascript/components/common/handleScroll';
+import '@assets/stylesheets/newui/titleAndButtons.scss';
+import '@assets/stylesheets/newui/exploreByGenresStyles/exploreByGenres.scss';
+import '@assets/stylesheets/newui/shimmerLoader.scss';
 
 const dummyList = new Array(20).fill(null);
 
 const GenresLoadingWeb = () => {
-  const exploreByGenresRef = useRef<HTMLDivElement>(null);
+  const exploreByGenresRef = useRef<HTMLDivElement | null>(null);
 
   return (
     <section
@@ -25,8 +25,14 @@ const GenresLoadingWeb = () => {
         />
         <div className="titleAndButtons">
           <BackAndForwardButtons
-            onBack={() => handleScroll(exploreByGenresRef, 'left')}
-            onForward={() => handleScroll(exploreByGenresRef, 'right')}
+            onBack={() =>
+              exploreByGenresRef.current &&
+              handleScroll({ current: exploreByGenresRef.current }, 'left')
+            }
+            onForward={() =>
+              exploreByGenresRef.current &&
+              handleScroll({ current: exploreByGenresRef.current }, 'right')
+            }
             aria-label="Scroll genres"
           />
         </div>

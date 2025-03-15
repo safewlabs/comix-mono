@@ -1,9 +1,10 @@
-import Edge from '../../../../assets/background/new-releases-lavender-background-edge.svg';
-import Button from '~/components/common/Button';
-import TitleAndTaglineMobile from '~/components/common/TitleAndTaglineMobile';
-import '~/styles/newReleasesStyles/newReleases.scss';
-import '~/styles/newReleasesStyles/newReleasesMobileStyles.scss';
-import '~/styles/shimmerLoader.scss';
+import React from 'react';
+import Edge from '@assets/background/new-releases-lavender-background-edge.svg';
+import Button from '@javascript/components/common/Button';
+import TitleAndTaglineMobile from '@javascript/components/common/TitleAndTaglineMobile';
+import '@assets/stylesheets/newui/newReleasesStyles/newReleases.scss';
+import '@assets/stylesheets/newui/newReleasesStyles/newReleasesMobileStyles.scss';
+import '@assets/stylesheets/newui/shimmerLoader.scss';
 
 const dummyList = new Array(12).fill(null);
 
@@ -18,7 +19,7 @@ const NewReleasesMobileLoading = () => {
         />
         <div>
           {dummyList.map((index) => (
-            <div className="cardGroup" key={`${crypto.randomUUID()}`}>
+            <div className="cardGroup" key={`${crypto.randomUUID()}-${index}`}>
               <div className="newReleaseMobileCard shimmerLoaderPurple"></div>
             </div>
           ))}

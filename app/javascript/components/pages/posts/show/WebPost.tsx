@@ -1,6 +1,6 @@
-import React from "react";
-import parse from "html-react-parser";
-import TitleAndButtons from "@javascript/components/common/TitleAndButtons";
+import React from 'react';
+import parse from 'html-react-parser';
+import TitleAndButtons from '@javascript/components/common/TitleAndButtons';
 
 type PostProps = {
   title: string;
@@ -32,7 +32,11 @@ export default function WebPost(props: PostProps) {
           {parse(summary)}
         </div>
       </div>
-      <TitleAndButtons title={"All Posts"} routeText={"/posts"} buttonText={"All Posts"} />
+      <TitleAndButtons
+        title={'All Posts'}
+        routeText={'/posts'}
+        buttonText={'All Posts'}
+      />
     </div>
   );
 }

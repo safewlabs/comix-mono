@@ -1,6 +1,6 @@
-import { FC } from 'react';
-import ComixLogo from '../../../../assets/logos/Comix Logo.svg';
-import '~/styles/headerStyles/headerMobile.scss';
+import React, { FC } from 'react';
+import ComixLogo from '@assets/logos/Comix Logo.svg';
+import '@assets/stylesheets/newui/headerStyles/headerMobile.sass.scss';
 
 const ComixHeaderMobileLogo: FC = () => {
   return (

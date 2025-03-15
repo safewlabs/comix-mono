@@ -1,15 +1,16 @@
-import { useRef } from 'react';
-import TitleAndButtons from '~/components/common/TitleAndButtons';
-import BackAndForwardButtons from '../../common/BackAndForwardButtons';
-import { handleScroll } from '~/components/common/handleScroll';
-import Tagline from '~/components/common/Tagline';
-import '~/styles/titleAndButtons.scss';
-import '~/styles/top10ComicsStyles/top10Comics.scss';
+import React, { useRef } from 'react';
+import { handleScroll } from '@javascript/components/common/handleScroll';
+import Tagline from '@javascript/components/common/Tagline';
+import TitleAndButtons from '@javascript/components/common/TitleAndButtons';
+import '@assets/stylesheets/newui/titleAndButtons.scss';
+import '@assets/stylesheets/newui/top10ComicsStyles/top10Comics.scss';
+import BackAndForwardButtons from '@javascript/components/common/BackAndForwardButtons';
 
 const dummmyList = new Array(20).fill(null);
 
 const Top10ComicsLoadingWeb = () => {
-  const top10ComicsWrapperRef = useRef<HTMLDivElement>(null);
+  const top10ComicsWrapperRef = useRef<HTMLDivElement | null>(null);
+
   return (
     <div className="top10ComicsWrapperWeb">
       <div className="titlesAndButtonsWrapperTwo">
@@ -20,8 +21,8 @@ const Top10ComicsLoadingWeb = () => {
         />
         <div className="titleAndButtons">
           <BackAndForwardButtons
-            onBack={() => handleScroll(top10ComicsWrapperRef, 'left')}
-            onForward={() => handleScroll(top10ComicsWrapperRef, 'right')}
+            onBack={() => top10ComicsWrapperRef.current && handleScroll({current: top10ComicsWrapperRef.current}, 'left')}
+            onForward={() => top10ComicsWrapperRef.current && handleScroll({current : top10ComicsWrapperRef.current}, 'right')}
           />
         </div>
       </div>

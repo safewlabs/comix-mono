@@ -1,6 +1,6 @@
-import { FC } from 'react';
-import SearchIcon from '../../../../assets/icons/search-icon.svg';
-import '~/styles/headerStyles/header.scss';
+import React, { FC } from 'react';
+import SearchIcon from '@assets/icons/search-icon.svg';
+import '@assets/stylesheets/newui/headerStyles/header.sass.scss';
 
 const HeaderInput: FC = () => {
   return (

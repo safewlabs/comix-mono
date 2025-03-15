@@ -1,4 +1,4 @@
-import React, {FC} from 'react';
+import React, { FC } from 'react';
 import BackButtonSvg from '@assets/icons/BackButtonSvg';
 import ForwardButtonSvg from '@assets/icons/ForwardButtonSvg';
 import '@assets/stylesheets/newui/backAndForwardButtons.sass.scss';

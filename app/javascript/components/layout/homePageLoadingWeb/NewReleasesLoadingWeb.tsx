@@ -1,17 +1,17 @@
-import { useRef } from 'react';
-import Edge from '../../../../assets/background/new-releases-lavender-background-edge.svg';
-import { handleScroll } from '~/components/common/handleScroll';
-import BackAndForwardButtons from '../../common/BackAndForwardButtons';
-import TitleAndButtons from '~/components/common/TitleAndButtons';
-import Tagline from '~/components/common/Tagline';
-import '~/styles/newReleasesStyles/newReleases.scss';
-import '~/styles/titleAndButtons.scss';
-import '~/styles/shimmerLoader.scss';
+import React, { useRef } from 'react';
+import Edge from '@assets/stylesheets/newui/background/new-releases-lavender-background-edge.svg';
+import { handleScroll } from '@javascript/components/common/handleScroll';
+import TitleAndButtons from '@javascript/components/common/TitleAndButtons';
+import Tagline from '@javascript/components/common/Tagline';
+import BackAndForwardButtons from '@javascript/components/common/BackAndForwardButtons';
+import '@assets/stylesheets/newui/newReleasesStyles/newReleases.scss';
+import '@assets/stylesheets/newui/titleAndButtons.scss';
+import '@assets/stylesheets/newui/shimmerLoader.scss';
 
 const dummmyList = new Array(20).fill(null);
 
 const NewReleasesLoadingWeb = () => {
-  const listWrapperRef = useRef<HTMLDivElement>(null);
+  const listWrapperRef = useRef<HTMLDivElement | null>(null);
   return (
     <div className="newReleasesWrapperOne">
       <img src={Edge} alt="edge" className="edgeOne" />
@@ -24,8 +24,8 @@ const NewReleasesLoadingWeb = () => {
           />
           <div className="titleAndButtonsCommon">
             <BackAndForwardButtons
-              onBack={() => handleScroll(listWrapperRef, 'left')}
-              onForward={() => handleScroll(listWrapperRef, 'right')}
+              onBack={() => listWrapperRef.current && handleScroll({current: listWrapperRef.current}, 'left')}
+              onForward={() => listWrapperRef.current && handleScroll({current: listWrapperRef.current}, 'right')}
             />
           </div>
         </div>

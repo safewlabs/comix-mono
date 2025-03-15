@@ -1,8 +1,9 @@
-import TitleAndTaglineMobile from '~/components/common/TitleAndTaglineMobile';
-import '~/styles/latestStyles/latestFromComix.scss';
-import '~/styles/latestStyles/latestFromComixMobileStyles.scss';
-import '~/styles/shimmerLoader.scss';
-import Button from '~/components/common/Button';
+import React from 'react';
+import TitleAndTaglineMobile from '@javascript/components/common/TitleAndTaglineMobile';
+import Button from '@javascript/components/common/Button';
+import '@assets/stylesheets/newui/latestStyles/latestFromComix.scss';
+import '@assets/stylesheets/newui/latestStyles/latestFromComixMobileStyles.scss';
+import '@assets/stylesheets/newui/shimmerLoader.scss';
 
 const dummyList = new Array(3).fill(null);
 
@@ -16,7 +17,7 @@ const LatestFromComixMobileLoading = () => {
       <div className="cardGroupMobile">
         {dummyList.map((index) => (
           <div
-            key={`${crypto.randomUUID()}`}
+            key={`${crypto.randomUUID()}-${index}`}
             className="latestFromComixCard shimmerLoader"
           ></div>
         ))}
