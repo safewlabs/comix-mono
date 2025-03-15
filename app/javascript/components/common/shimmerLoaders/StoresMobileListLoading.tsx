@@ -1,7 +1,7 @@
 import React from 'react';
-// import '~/styles/storesStyles/storesPageStyling.scss';
-// import '~/styles/storesStyles/storesPageMobile.scss';
-// import '~/styles/shimmerLoader.scss';
+import '@assets/stylesheets/newui/storesStyles/storesPageStyling.sass.scss';
+import '@assets/stylesheets/newui/storesStyles/storesPageMobile.sass.scss';
+import '@assets/stylesheets/newui/shimmerLoader.sass.scss';
 
 const storesArrayMobile = new Array(20).fill(null);
 

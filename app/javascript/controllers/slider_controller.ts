@@ -1,15 +1,15 @@
-import { tns } from "tiny-slider";
-import { Controller } from "@hotwired/stimulus";
+import { tns } from 'tiny-slider';
+import { Controller } from '@hotwired/stimulus';
 
 export default class extends Controller {
   connect() {
-    let sliders = document.querySelectorAll(".items-slider");
+    let sliders = document.querySelectorAll('.items-slider');
     sliders.forEach((slider) => {
       tns({
         container: slider,
         items: 1,
         autoWidth: true,
-        slideBy: "page",
+        slideBy: 'page',
         arrowKeys: true,
         speed: 400,
         controls: false,

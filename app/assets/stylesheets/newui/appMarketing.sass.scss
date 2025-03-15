@@ -1,7 +1,8 @@
-@use './variables.scss' as *;
+@use './variables.sass.scss' as *;
 
 .appMarketingBackgroundWeb {
   background-color: $marketing-background-lavander;
+  // background-color: variables.$marketing-background-lavander;
   width: 100%;
   height: 500px;
   display: flex;

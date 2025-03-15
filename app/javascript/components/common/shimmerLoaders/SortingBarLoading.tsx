@@ -1,10 +1,12 @@
 import React from 'react';
 import { FC } from 'react';
-// import '~/styles/sortingBarStyles/sortingBarWeb.scss';
-// import '~/styles/shimmerLoader.scss';
+import '@assets/stylesheets/newui/sortingBarStyles/sortingBarWeb.sass.scss';
+import '@assets/stylesheets/newui/shimmerLoader.sass.scss';
+
 type SortingBarLoadingProps = {
   title: string;
 };
+
 const SortingBarLoading: FC<SortingBarLoadingProps> = ({ title }) => {
   return (
     <div className="sortingBar">

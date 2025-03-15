@@ -1,4 +1,4 @@
-@use '../styles/variables.scss' as *;
+@use './variables.sass.scss' as *;
 
 .filtersContainer {
   border: 1px solid $main-lavender;
@@ -49,6 +49,7 @@
   height: 26px;
   background-color: $button-background;
   border: 1px solid $border-gray;
+  // border: 1px solid $border-gray;
   &:hover {
     border: 1px solid black;
   }

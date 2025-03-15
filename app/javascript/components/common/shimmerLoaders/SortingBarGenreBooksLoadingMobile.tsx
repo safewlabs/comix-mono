@@ -1,12 +1,13 @@
 import React from 'react';
 import { FC, ReactNode } from 'react';
-// import '~/styles/sortingBarStyles/sortingBarMobile.scss';
-// import '~/styles/shimmerLoader.scss';
+import '@assets/stylesheets/newui/sortingBarStyles/sortingBarMobile.sass.scss';
+import '@assets/stylesheets/newui/shimmerLoader.sass.scss';
 
 type SortingLoadingMobileProps = {
   title: string;
   children?: ReactNode;
 };
+
 const SortingBarGenreBooksLoadingMobile: FC<SortingLoadingMobileProps> = ({
   title,
 }) => {

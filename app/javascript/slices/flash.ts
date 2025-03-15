@@ -1,12 +1,12 @@
-import { createSlice } from "@reduxjs/toolkit";
-import { saveResponse, beforeVisit } from "@thoughtbot/superglue";
+import { createSlice } from '@reduxjs/toolkit';
+import { saveResponse, beforeVisit } from '@thoughtbot/superglue';
 
-type FlashState = Record<string, any>
+type FlashState = Record<string, any>;
 
 const initialState: FlashState = {};
 
 export const flashSlice = createSlice({
-  name: "flash",
+  name: 'flash',
   initialState: initialState,
   reducers: {
     clearFlash(state, { payload }: { payload: string }) {

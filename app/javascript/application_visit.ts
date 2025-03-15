@@ -3,8 +3,8 @@ import {
   ApplicationVisit,
   SuperglueStore,
   BuildVisitAndRemote,
-} from "@thoughtbot/superglue";
-import { visit, remote } from "@thoughtbot/superglue/action_creators";
+} from '@thoughtbot/superglue';
+import { visit, remote } from '@thoughtbot/superglue/action_creators';
 
 /**
  * This function returns a wrapped visit and remote that will be used by UJS,
@@ -62,7 +62,7 @@ export const buildVisitAndRemote: BuildVisitAndRemote = (
          * a form submission to replace history instead of the usual push.
          */
         const navigatonAction = !!dataset?.sgReplace
-          ? "replace"
+          ? 'replace'
           : meta.navigationAction;
         ref.current?.navigateTo(meta.pageKey, {
           action: navigatonAction,
@@ -106,12 +106,12 @@ export const buildVisitAndRemote: BuildVisitAndRemote = (
           window.location = response.url;
         } else {
           if (response.status >= 400 && response.status < 500) {
-            window.location.href = "/400.html";
+            window.location.href = '/400.html';
             return;
           }
 
           if (response.status >= 500) {
-            window.location.href = "/500.html";
+            window.location.href = '/500.html';
             return;
           }
         }

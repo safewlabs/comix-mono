@@ -1,6 +1,6 @@
 import React from 'react';
-// import '~/styles/shimmerLoader.scss';
-// import '~/styles/comicsPageStyles/comicsPageMobile.scss';
+import '@assets/stylesheets/newui/comicsPageStyles/comicsPageMobile.sass.scss';
+import '@assets/stylesheets/newui/shimmerLoader.sass.scss';
 
 const dummyComicsList = new Array(20).fill(null);
 
