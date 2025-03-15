@@ -1,9 +1,9 @@
-import { FC } from 'react';
-import Dropdown from '../../common/Dropdown';
-import BackAndForwardButtons from '../../common/BackAndForwardButtons';
-import TitleAndButtons from '~/components/common/TitleAndButtons';
-import '~/styles/TitleAndButtons.scss';
-import '~/styles/latestStyles/latestFeeds.scss';
+import React, { FC } from 'react';
+import '@assets/stylesheets/newui/TitleAndButtons.scss';
+import '@assets/stylesheets/newui/latestStyles/latestFeeds.scss';
+import Dropdown from '@javascript/components/common/Dropdown';
+import BackAndForwardButtons from '@javascript/components/common/BackAndForwardButtons';
+import TitleAndButtons from '@javascript/components/common/TitleAndButtons';
 
 const LatestFeeds: FC = () => {
   return (

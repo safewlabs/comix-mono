@@ -1,8 +1,7 @@
-import { useState } from 'react';
-import DownArrowIcon from '../../../../assets/icons/down-arrow-icon-2.svg';
-import UpArrowIcon from '../../../../assets/icons/up-arrow-icon.svg';
-import { useSearchParams } from '@remix-run/react';
-import '~/styles/filtersStyles.scss';
+import React, { useState, useEffect } from 'react';
+import DownArrowIcon from '@assets/icons/down-arrow-icon-2.svg';
+import UpArrowIcon from '@assets/icons/up-arrow-icon.svg';
+import '@assets/stylesheets/newui/filtersStyles.scss';
 
 const skillsList = [
   'Artist',
@@ -22,17 +21,31 @@ const skillsList = [
 
 const OurCreatorsFilter = () => {
   const [showOptions, setShowOptions] = useState<boolean>(true);
-  const [searchParams, setSearchParams] = useSearchParams();
+  const [selectedSkills, setSelectedSkills] = useState<string[]>([]);
 
+  // Update selectedSkills from URL query parameters on component mount
+  useEffect(() => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const skillsFromUrl = urlParams.getAll('skills');
+    setSelectedSkills(skillsFromUrl);
+  }, []);
+
+  // Handle skill change and update URL query parameters
   const handleSkillsChange = (skillName: string, checked: boolean) => {
-    const params = new URLSearchParams(searchParams);
-    const currentSkills = params.getAll('skills');
-    params.delete('skills');
     const newSkills = checked
-      ? [...currentSkills, skillName]
-      : currentSkills.filter((skill) => skill !== skillName);
-    newSkills.forEach((skill) => params.append('skills', skill));
-    setSearchParams(params, { replace: true });
+      ? [...selectedSkills, skillName]
+      : selectedSkills.filter((skill) => skill !== skillName);
+
+    setSelectedSkills(newSkills);
+
+    const params = new URLSearchParams(window.location.search);
+    params.delete('skills'); // Remove existing skills query params
+    newSkills.forEach((skill) => params.append('skills', skill)); // Add new skills
+    window.history.replaceState(
+      {},
+      '',
+      `${window.location.pathname}?${params.toString()}`
+    );
   };
 
   return (
@@ -42,7 +55,7 @@ const OurCreatorsFilter = () => {
         <button onClick={() => setShowOptions(!showOptions)}>
           <img
             src={showOptions ? DownArrowIcon : UpArrowIcon}
-            alt="down-arrow-icon"
+            alt="toggle-arrow"
           />
         </button>
       </div>
@@ -55,7 +68,7 @@ const OurCreatorsFilter = () => {
                 type="checkbox"
                 className="genreCheckbox"
                 value={skill}
-                checked={searchParams.getAll('tags').includes(skill)}
+                checked={selectedSkills.includes(skill)}
                 onChange={(e) => handleSkillsChange(skill, e.target.checked)}
                 aria-labelledby={`tag-${skill}`}
               />

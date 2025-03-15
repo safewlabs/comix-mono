@@ -1,12 +1,12 @@
-import { FC, useRef } from 'react';
+import React, { FC, useRef } from 'react';
 import Edge from '../../../../assets/background/new-releases-lavender-background-edge.svg';
+import TitleAndButtons from '@javascript/components/common/TitleAndButtons';
+import Tagline from '@javascript/components/common/Tagline';
+import { handleScroll } from '@javascript/components/common/handleScroll';
 import BackAndForwardButtons from '../../common/BackAndForwardButtons';
-import TitleAndButtons from '~/components/common/TitleAndButtons';
-import { handleScroll } from '~/components/common/handleScroll';
 import ComicCard from './ComicCard';
-import Tagline from '~/components/common/Tagline';
-import '~/styles/newReleasesStyles/newReleases.scss';
-import '~/styles/titleAndButtons.scss';
+import '@assets/stylesheets/newui/newReleasesStyles/newReleases.scss';
+import '@assets/stylesheets/newui/titleAndButtons.scss';
 
 export interface ComicData {
   name: string;
@@ -35,8 +35,8 @@ const NewReleases: FC<NewReleasesProps> = ({ newReleases = [] }) => {
           />
           <div className="titleAndButtonsCommon">
             <BackAndForwardButtons
-              onBack={() => handleScroll(listWrapperRef, 'left')}
-              onForward={() => handleScroll(listWrapperRef, 'right')}
+              onBack={() => listWrapperRef.current && handleScroll({current : listWrapperRef.current}, 'left')}
+              onForward={() => listWrapperRef.current && handleScroll({current: listWrapperRef.current}, 'right')}
             />
           </div>
         </div>

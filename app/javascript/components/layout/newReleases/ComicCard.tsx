@@ -1,7 +1,7 @@
-import { FC } from 'react';
+import React, { FC } from 'react';
 import { ComicData } from './NewReleases';
-import PriceTagIcon from '../../../../assets/icons/price-tag-icon.svg';
-import '~/styles/newReleasesStyles/newReleases.scss';
+import PriceTagIcon from '@assets/icons/price-tag-icon.svg';
+import '@assets/stylesheets/newui/newReleasesStyles/newReleases.scss';
 
 export interface ComicCardProps {
   index: number;

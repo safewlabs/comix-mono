@@ -1,12 +1,12 @@
-import { FC } from 'react';
-import Tagline from '~/components/common/Tagline';
-import TitleAndButtons from '~/components/common/TitleAndButtons';
-import latestDummy1 from '../../../../assets/latestFromComix/latest-from-comix-1.svg';
-import latestDummy2 from '../../../../assets/latestFromComix/latest-from-comix-2.svg';
-import latestDummy3 from '../../../../assets/latestFromComix/latest-from-comix-3.svg';
-import tagIcon from '../../../../assets/icons/tag-icon.svg';
+import React, { FC } from 'react';
+import Tagline from '@javascript/components/common/Tagline';
+import TitleAndButtons from '@javascript/components/common/TitleAndButtons';
+import latestDummy1 from '@assets/latestFromComix/latest-from-comix-1.svg';
+import latestDummy2 from '@assets/latestFromComix/latest-from-comix-2.svg';
+import latestDummy3 from '@assets/latestFromComix/latest-from-comix-3.svg';
+import tagIcon from '@assets/icons/tag-icon.svg';
 import parse from 'html-react-parser';
-import '~/styles/latestStyles/latestFromComix.scss';
+import '@assets/stylesheets/newui/latestStyles/latestFromComix.scss';
 
 export const latestFromComixDummyImages = [
   latestDummy1,

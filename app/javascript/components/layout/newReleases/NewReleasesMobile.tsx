@@ -1,10 +1,10 @@
-import { FC } from 'react';
-import Edge from '../../../../assets/background/new-releases-lavender-background-edge.svg';
+import React, { FC } from 'react';
+import Edge from '@assets/background/new-releases-lavender-background-edge.svg';
 import ComicCardMobile from './ComicCardMobile';
-import Button from '~/components/common/Button';
-import TitleAndTaglineMobile from '~/components/common/TitleAndTaglineMobile';
-import '~/styles/newReleasesStyles/newReleases.scss';
-import '~/styles/newReleasesStyles/newReleasesMobileStyles.scss';
+import Button from '@javascript/components/common/Button';
+import TitleAndTaglineMobile from '@javascript/components/common/TitleAndTaglineMobile';
+import '@assets/stylesheets/newui/newReleasesStyles/newReleases.scss';
+import '@assets/stylesheets/newui/newReleasesStyles/newReleasesMobileStyles.scss';
 
 export interface ComicData {
   name: string;

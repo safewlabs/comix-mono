@@ -1,8 +1,8 @@
-import { FC, useState } from 'react';
+import React, { FC, useState } from 'react';
 import { OurCreatorsPageLayoutProps } from './OurCreatorsPageLayout';
-import EyeIcon from '../../../../assets/icons/eye-icon.svg';
-import '~/styles/creatorsStyles/ourCreatorsPageStyles.scss';
-import '~/styles/shimmerLoader.scss';
+import EyeIcon from '@assets/icons/eye-icon.svg';
+import '@assets/stylesheets/newui/creatorsStyles/ourCreatorsPageStyles.scss';
+import '@assets/stylesheets/newui/shimmerLoader.scss';
 
 const AvatarImage: FC<{ src: string; alt: string }> = ({ src, alt }) => {
   const [isLoaded, setIsLoaded] = useState(false);

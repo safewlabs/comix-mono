@@ -1,6 +1,6 @@
-import { FC, ReactNode, useState } from 'react';
-import HamburgerIcon from '../../../../assets/icons/hamburger-menu-black.svg';
-import '~/styles/sortingBarStyles/sortingBarMobile.scss';
+import React, { FC, ReactNode, useState } from 'react';
+import HamburgerIcon from '@assets/icons/hamburger-menu-black.svg';
+import '@assets/stylesheets/newui/sortingBarStyles/sortingBarMobile.scss';
 
 type FiltersMenuProps = {
   children: ReactNode;

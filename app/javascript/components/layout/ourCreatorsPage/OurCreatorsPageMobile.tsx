@@ -1,6 +1,6 @@
-import { FC } from 'react';
-import EyeIcon from '../../../../assets/icons/eye-icon.svg';
-import '~/styles/creatorsStyles/ourCreatorsMobileStyles.scss';
+import React, { FC } from 'react';
+import EyeIcon from '@assets/icons/eye-icon.svg';
+import '@assets/stylesheets/newui/creatorsStyles/ourCreatorsMobileStyles.scss';
 
 interface PaginationObj {
   count: number;
