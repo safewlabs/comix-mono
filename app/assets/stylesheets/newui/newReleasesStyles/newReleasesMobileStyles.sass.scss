@@ -1,4 +1,4 @@
-@use '../variables.scss' as *;
+@use '../variables.sass.scss' as *;
 
 .newReleasesMobileWrapper {
   position: relative;
@@ -42,7 +42,7 @@
     font-size: 18x;
     align-self: flex-start;
     margin-top: 15px;
-    color: $text-gray;
+    color: rgba(109, 108, 108, 1);
     margin-left: 30px;
   }
 }

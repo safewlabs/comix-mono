@@ -1,59 +1,70 @@
+// Import variables first so they're available to all other files
+@use "./newui/variables.sass.scss" as *;
+
+// Layout components
+@use "./newui/headerStyles/header.sass.scss";
+@use "./newui/headerStyles/headerMobile.sass.scss";
+@use "./newui/footerStyles/footer.sass.scss";
+@use "./newui/footerStyles/footerMobile.sass.scss";
+@use "./newui/mainSection.sass.scss";
+
+// Core components
 @use "./newui/TitleAndButtons.sass.scss";
-@use "./newui/appMarketing.sass.scss";
 @use "./newui/backAndForwardButtons.sass.scss";
 @use "./newui/webApp.sass.scss";
-@use "./newui/variables.sass.scss";
+@use "./newui/appMarketing.sass.scss";
+
+// Comics related styles
 @use "./newui/comicsPageStyles/comicsPage.sass.scss";
 @use "./newui/comicsPageStyles/comicsPageMobile.sass.scss";
+
+// Creators related styles
 @use "./newui/creatorsStyles/creators.sass.scss";
 @use "./newui/creatorsStyles/creatorsMobile.sass.scss";
 @use "./newui/creatorsStyles/forCreators.sass.scss";
 @use "./newui/creatorsStyles/forCreatorsPageStyles.sass.scss";
 @use "./newui/creatorsStyles/ourCreatorsMobileStyles.sass.scss";
 @use "./newui/creatorsStyles/ourCreatorsPageStyles.sass.scss";
-@use "./newui//creatorsStyles/stackedCards.sass.scss";
+@use "./newui/creatorsStyles/stackedCards.sass.scss";
+
+// Genre and exploration styles
 @use "./newui/exploreByGenresStyles/exploreByGenres.sass.scss";
 @use "./newui/exploreByGenresStyles/exploreByGenresMobileStyles.sass.scss";
+
+// Featured content styles
 @use "./newui/featuredOnStyles/featuredOn.sass.scss";
 @use "./newui/featuredOnStyles/featuredOnMobileStyles.sass.scss";
+
+// Filter and sorting styles
 @use "./newui/filtersStyles.sass.scss";
-@use "./newui/footerStyles/footer.sass.scss";
-@use "./newui/footerStyles/footerMobile.sass.scss";
-@use "./newui/headerStyles/header.sass.scss";
-@use "./newui/headerStyles/headerMobile.sass.scss";
-@use "./newui/latestStyles/latestFeeds.sass.scss";
-@use "./newui/latestStyles/latestFromComix.sass.scss";
-@use "./newui/latestStyles/latestFromComixMobileStyles.sass.scss";
-@use "./newui/mainSection.sass.scss";
-@use "./newui/mobileIndexStyles.sass.scss";
-@use "./newui/newReleasesStyles/newReleases.sass.scss";
-@use "./newui/newReleasesStyles/newReleasesMobileStyles.sass.scss";
-@use "./newui/ourStoryStyles.sass.scss";
-@use "./newui/paginateStyles.sass.scss";
-@use "./newui/shimmerLoader.sass.scss";
-@use "./newui/sliderStyles.sass.scss";
 @use "./newui/sortingBarStyles/dropdown.sass.scss";
 @use "./newui/sortingBarStyles/hamburgerMenuStyles.sass.scss";
 @use "./newui/sortingBarStyles/sortingBarMobile.sass.scss";
 @use "./newui/sortingBarStyles/sortingBarWeb.sass.scss";
+
+// Latest content styles
+@use "./newui/latestStyles/latestFeeds.sass.scss";
+@use "./newui/latestStyles/latestFromComix.sass.scss";
+@use "./newui/latestStyles/latestFromComixMobileStyles.sass.scss";
+
+// New releases styles
+@use "./newui/newReleasesStyles/newReleases.sass.scss";
+@use "./newui/newReleasesStyles/newReleasesMobileStyles.sass.scss";
+
+// Store related styles
 @use "./newui/storeFrontPageStyles/storeFrontPageWebStyles.sass.scss";
 @use "./newui/storesStyles/stores.sass.scss";
 @use "./newui/storesStyles/storesMobile.sass.scss";
 @use "./newui/storesStyles/storesPageMobile.sass.scss";
 @use "./newui/storesStyles/storesPageStyling.sass.scss";
+
+// Top 10 comics styles
 @use "./newui/top10ComicsStyles/top10Comics.sass.scss";
 @use "./newui/top10ComicsStyles/top10ComicsMobileStyles.sass.scss";
-// @use "";
-// @use "";
-// @use "";
-// @use "";
-// @use "";
-// @use "";
-// @use "";
-// @use "";
-// @use "";
-// @use "";
-// @use "";
-// @use "";
-// @use "";
-// @use "";
+
+// Other utility styles
+@use "./newui/mobileIndexStyles.sass.scss";
+@use "./newui/ourStoryStyles.sass.scss";
+@use "./newui/paginateStyles.sass.scss";
+@use "./newui/shimmerLoader.sass.scss";
+@use "./newui/sliderStyles.sass.scss"; 
