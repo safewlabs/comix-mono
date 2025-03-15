@@ -1,6 +1,6 @@
+import React, { useState, FC } from 'react';
 import { stakedCardsData } from './StackedCards';
-import { useState, FC } from 'react';
-import '~/styles/creatorsStyles/stackedCards.scss';
+import '@assets/stylesheets/newui/creatorsStyles/stackedCards.sass.scss';
 
 const StackedCardsMobile: FC = () => {
   const [hoveredIndex, setHoveredIndex] = useState(0);

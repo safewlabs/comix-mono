@@ -1,8 +1,8 @@
 import React from 'react';
 import FooterLogoAndTagline from './FooterLogoAndTagline';
 import FooterBottomContent from './FooterBottomContent';
-import '~/styles/footerStyles/footerMobile.scss';
 import FooterNewsletterSignupMobile from './FooterNewsletterSignupMobile';
+import '@assets/stylesheets/newui/footerStyles/footerMobile.sass.scss';
 
 interface Link {
   href: string;

@@ -1,12 +1,12 @@
-import { FC } from 'react';
-import '~/styles/footerStyles/footer.scss';
-import ComixLogo from '../../../../assets/logos/Comix Logo.svg';
-import xIcon from '../../../../assets/icons/x-icon.svg';
-import ytIcon from '../../../../assets/icons/youtube-icon.svg';
-import igIcon from '../../../../assets/icons/instagram-icon.png';
-import blogIcon from '../../../../assets/icons/blog-icon.svg';
-import githubIcon from '../../../../assets/icons/github-icon.svg';
-import blueSkyIcon from '../../../../assets/icons/bluesky-icon.svg';
+import React, { FC } from 'react';
+import '@assets/stylesheets/newui/footerStyles/footer.sass.scss';
+import ComixLogo from '@assets/logos/Comix Logo.svg';
+import xIcon from '@assets/icons/x-icon.svg';
+import ytIcon from '@assets/icons/youtube-icon.svg';
+import blogIcon from '@assets/icons/blog-icon.svg';
+import githubIcon from '@assets/icons/github-icon.svg';
+import blueSkyIcon from '@assets/icons/bluesky-icon.svg';
+import igIcon from '@assets/icons/instagram-icon.png';
 
 const footerTagline =
   'A Hub For Indie Comic Creators And Fans. Explore Stories, Discover New Artists, And Join a Vibrant Community.';

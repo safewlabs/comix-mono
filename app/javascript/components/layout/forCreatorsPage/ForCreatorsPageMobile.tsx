@@ -1,8 +1,9 @@
+import React from 'react';
 import StackedCardsMobileScreen from '../forCreators/StackerCardsMobileScreen';
-import '~/styles/creatorsStyles/forCreatorsPageStyles.scss';
 import AirtableForm from './AirtableForm';
 import { TEXT } from './ForCreatorsPage';
 import { FC } from 'react';
+import '@assets/stylesheets/newui/creatorsStyles/forCreatorsPageStyles.sass.scss';
 
 const ForCreatorsPageMobile: FC = () => {
   return (

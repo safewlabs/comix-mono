@@ -1,6 +1,6 @@
-import { FC } from 'react';
-import subscribeIcon from '../../../../assets/icons/subscribe-container.svg';
-import '~/styles/footerStyles/footer.scss';
+import React, { FC } from 'react';
+import subscribeIcon from '@assets/icons/subscribe-container.svg';
+import '@assets/stylesheets/newui/footerStyles/footer.sass.scss';
 
 const FooterNewsletterSignup: FC = () => {
   return (

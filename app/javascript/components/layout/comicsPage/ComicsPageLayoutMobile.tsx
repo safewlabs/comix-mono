@@ -1,6 +1,6 @@
-import { FC } from 'react';
+import React, { FC } from 'react';
 import ComicsPageCardMobile from './ComicsPageCardMobile';
-import '~/styles/comicsPageStyles/comicsPageMobile.scss';
+import '@assets/stylesheets/newui/comicsPageStyles/comicsPageMobile.sass.scss';
 
 export interface PaginationTypes {
   prev_url: string;

@@ -1,5 +1,5 @@
-import { FC } from 'react';
-import '~/styles/footerStyles/footer.scss';
+import React, { FC } from 'react';
+import '@assets/stylesheets/newui/footerStyles/footer.sass.scss';
 
 interface Link {
   href: string;

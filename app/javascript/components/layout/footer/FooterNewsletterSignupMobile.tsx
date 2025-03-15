@@ -1,5 +1,6 @@
-import subscribeIcon from '../../../../assets/icons/subscribe-container.svg';
-import '~/styles/footerStyles/footerMobile.scss';
+import React from 'react';
+import subscribeIcon from '@assets/icons/subscribe-container.svg';
+import '@assets/stylesheets/newui/footerStyles/footerMobile.sass.scss';
 
 const FooterNewsletterSignupMobile = () => {
   return (

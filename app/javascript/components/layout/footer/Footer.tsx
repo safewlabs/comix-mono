@@ -1,9 +1,9 @@
-import { FC } from 'react';
+import React, { FC } from 'react';
 import FooterLogoAndTagline from './FooterLogoAndTagline';
 import FooterNewsletterSignup from './FooterNewsletterSignup';
 import FooterTable from './FooterTable';
 import FooterBottomContent from './FooterBottomContent';
-import '~/styles/footerStyles/footer.scss';
+import '@assets/stylesheets/newui/footerStyles/footer.sass.scss';
 
 const Footer: FC = () => {
   return (

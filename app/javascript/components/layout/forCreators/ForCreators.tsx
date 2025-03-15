@@ -1,8 +1,8 @@
-import { FC } from 'react';
-import TitleAndButtons from '~/components/common/TitleAndButtons';
-import Tagline from '~/components/common/Tagline';
+import React, { FC } from 'react';
+import TitleAndButtons from '@javascript/components/common/TitleAndButtons';
+import Tagline from '@javascript/components/common/Tagline';
 import StackedCards from './StackedCards';
-import '~/styles/creatorsStyles/forCreators.scss';
+import '@assets/stylesheets/newui/creatorsStyles/forCreators.sass.scss';
 
 const ForCreators: FC = () => {
   return (

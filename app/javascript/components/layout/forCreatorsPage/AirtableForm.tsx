@@ -1,5 +1,6 @@
-import '~/styles/shimmerLoader.scss';
-import '~/styles/creatorsStyles/forCreatorsPageStyles.scss';
+import React from 'react';
+import '@assets/stylesheets/newui/shimmerLoader.scss';
+import '@assets/stylesheets/newui/creatorsStyles/forCreatorsPageStyles.scss';
 
 const AirtableForm = () => {
   return (

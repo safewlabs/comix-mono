@@ -23,6 +23,7 @@
   },
   "include": [
     "app/javascript/**/*",
-    "app/views/**/*"
+    "app/views/**/*",
+    "app/javascript/types/**/*"
   ],
 }

@@ -1,7 +1,7 @@
-import { FC } from 'react';
-import TitleAndTaglineMobile from '~/components/common/TitleAndTaglineMobile';
-import Button from '~/components/common/Button';
-import '~/styles/creatorsStyles/forCreators.scss';
+import React, { FC } from 'react';
+import TitleAndTaglineMobile from '@javascript/components/common/TitleAndTaglineMobile';
+import Button from '@javascript/components/common/Button';
+import '@assets/stylesheets/newui/creatorsStyles/forCreators.sass.scss';
 import StackedCardsMobile from './StackedCardsMobile';
 
 const ForCreatorsMobile: FC = () => {

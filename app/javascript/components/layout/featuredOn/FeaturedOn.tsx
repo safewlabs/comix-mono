@@ -1,12 +1,12 @@
-import { FC } from 'react';
-import ThreeMillionYearsImg from '../../../../assets/featured/3-million-years.svg';
-import GeekNetworkImg from '../../../../assets/featured/geek-network.svg';
-import IndieComicsZoneImg from '../../../../assets/featured/indie-comics-zone.svg';
-import SoloNerdBirdImg from '../../../../assets/featured/solo-nerd-bird.svg';
-import SpoilerCountyImg from '../../../../assets/featured/spoiler-county.svg';
-import WorldAtWarComicsImg from '../../../../assets/featured/world-at-war-comics.svg';
-import Tagline from '~/components/common/Tagline';
-import '~/styles/featuredOnStyles/featuredOn.scss';
+import React, { FC } from 'react';
+import ThreeMillionYearsImg from '@assets/featured/3-million-years.svg';
+import GeekNetworkImg from '@assets/featured/geek-network.svg';
+import IndieComicsZoneImg from '@assets/featured/indie-comics-zone.svg';
+import SoloNerdBirdImg from '@assets/featured/solo-nerd-bird.svg';
+import SpoilerCountyImg from '@assets/featured/spoiler-county.svg';
+import WorldAtWarComicsImg from '@assets/featured/world-at-war-comics.svg';
+import Tagline from '@javascript/components/common/Tagline';
+import '@assets/stylesheets/newui/featuredOnStyles/featuredOn.sass.scss';
 
 export const featuredOnDummyData = [
   {
@@ -54,7 +54,7 @@ const FeaturedOn: FC = () => {
       <Tagline tagline={'Explore Comics Featured Across Various Platforms.'} />
       <div className="marquee">
         <div className="marqueeContent">
-          {marqueeData.map((featured, index) => (
+          {marqueeData.map((featured) => (
             <div
               key={crypto.randomUUID()}
               className="imageAndTitle"
