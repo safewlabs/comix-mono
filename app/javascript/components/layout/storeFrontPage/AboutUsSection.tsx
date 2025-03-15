@@ -1,5 +1,5 @@
-import { FC } from 'react';
-import '~/styles/storeFrontPageStyles/storeFrontPageWebStyles.scss';
+import React, { FC } from 'react';
+import '@assets/stylesheets/newui/storeFrontPageStyles/storeFrontPageWebStyles.sass.scss';
 import parse from 'html-react-parser';
 
 type AboutUsProps = {

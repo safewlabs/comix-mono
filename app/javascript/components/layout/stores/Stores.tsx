@@ -1,8 +1,8 @@
-import { FC } from 'react';
-import Tagline from '~/components/common/Tagline';
-import TitleAndButtons from '~/components/common/TitleAndButtons';
+import React, { FC } from 'react';
+import Tagline from '@javascript/components/common/Tagline';
+import TitleAndButtons from '@javascript/components/common/TitleAndButtons';
 import StoresCard from './StoresCard';
-import '~/styles/storesStyles/stores.scss';
+import '@assets/stylesheets/newui/storesStyles/stores.sass.scss';
 
 export interface StoreTypes {
   name: string;

@@ -2,8 +2,8 @@ import React, { useRef } from 'react';
 import { handleScroll } from '@javascript/components/common/handleScroll';
 import Tagline from '@javascript/components/common/Tagline';
 import TitleAndButtons from '@javascript/components/common/TitleAndButtons';
-import '@assets/stylesheets/newui/titleAndButtons.scss';
-import '@assets/stylesheets/newui/top10ComicsStyles/top10Comics.scss';
+import '@assets/stylesheets/newui/titleAndButtons.sass.scss';
+import '@assets/stylesheets/newui/top10ComicsStyles/top10Comics.sass.scss';
 import BackAndForwardButtons from '@javascript/components/common/BackAndForwardButtons';
 
 const dummmyList = new Array(20).fill(null);
@@ -27,7 +27,7 @@ const Top10ComicsLoadingWeb = () => {
         </div>
       </div>
       <Tagline
-        tagline={' See The Hottest Comics That Everyone’s Talking About.'}
+        tagline={"See The Hottest Comics That Everyone's Talking About."}
       />
       <div className="top10ComicsListWrapperWeb" ref={top10ComicsWrapperRef}>
         {dummmyList.map((index) => (

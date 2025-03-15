@@ -1,5 +1,6 @@
+import React from 'react';
 import OurWorkSectionMobile from './OurWorkSectionMobile';
-import '~/styles/storeFrontPageStyles/storeFrontPageMobileStyles.scss';
+import '@assets/stylesheets/newui/storeFrontPageStyles/storeFrontPageMobileStyles.sass.scss';
 
 const SocialFeedMobile = () => {
   return (

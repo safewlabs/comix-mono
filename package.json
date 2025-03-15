@@ -20,6 +20,7 @@
     "postcss-scss": "^4.0.9",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-range-slider-input": "^3.2.1",
     "react-redux": "^9.2.0",
     "react-responsive": "^10.0.1",
     "stimulus-use": "^0.52.2",

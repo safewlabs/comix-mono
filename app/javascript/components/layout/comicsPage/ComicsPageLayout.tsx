@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import '@assets/stylesheets/newui/comicsPageStyles/comicsPage.sass.scss';
-// import Filters from './ComicsPageFilters';
 import ComicsPageList from './ComicsPageList';
+import ComicsPageFilters from './ComicsPageFilters';
 
 export interface PaginationTypes {
   prev_url: string;
@@ -31,9 +31,8 @@ const ComicsPageLayout: FC<ComicsPageLayoutProps> = ({ latestComics }) => {
         <h2 id="filters" className="sr-only">
           Filters
         </h2>
-        {/* <Filters /> */}
+        <ComicsPageFilters/>
       </aside>
-
       <main className="comicsListSection">
         <h2 id="comicsList" className="sr-only">
           Comics List

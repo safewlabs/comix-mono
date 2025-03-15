@@ -1,5 +1,6 @@
+import React from 'react';
 import { storePageData } from '~/utils/dummyData/storePageData';
-import '~/styles/storeFrontPageStyles/storeFrontPageMobileStyles.scss';
+import '@assets/stylesheets/newui/storeFrontPageStyles/storeFrontPageMobileStyles.sass.scss';
 
 const StoreInfoCardMobile = () => {
   return (

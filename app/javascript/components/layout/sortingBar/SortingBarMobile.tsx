@@ -1,9 +1,9 @@
-import { FC, ReactNode, useState } from 'react';
+import React, { FC, ReactNode, useState } from 'react';
 import * as Select from '@radix-ui/react-select';
-import DownArrowIcon from '../../../../assets/icons/down-arrow-icon-2 copy.svg';
-import UpArrowIcon from '../../../../assets/icons/up-arrow-icon copy.svg';
+import DownArrowIcon from '@assets/icons/down-arrow-icon-2 copy.svg';
+import UpArrowIcon from '@assets/icons/up-arrow-icon copy.svg';
 import FiltersMenu from './FiltersMenu';
-import '~/styles/sortingBarStyles/sortingBarMobile.scss';
+import '@assets/stylesheets/newui/sortingBarStyles/sortingBarMobile.sass.scss';
 
 export interface SortingBarProps {
   title: string;

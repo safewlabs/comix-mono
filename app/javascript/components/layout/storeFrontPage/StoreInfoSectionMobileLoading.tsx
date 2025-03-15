@@ -1,4 +1,5 @@
-import '~/styles/storeFrontPageStyles/storeFrontPageMobileStyles.scss';
+import React from 'react';
+import '@assets/stylesheets/newui/storeFrontPageStyles/storeFrontPageMobileStyles.sass.scss';
 import StoreInfoCardMobileLoading from './StoreInfoCardMobileLoading';
 import AboutUsSectionLoading from './AboutUsSectionLoading';
 import SocialFeedMobileLoading from './SocialFeedMobileLoading';

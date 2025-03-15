@@ -1,3 +1,4 @@
+import React from 'react';
 import '~/styles/storeFrontPageStyles/storeFrontPageWebStyles.scss';
 import SocialFeedCarousel from './SocialFeedCarousel';
 import OurWorkSection from './OurWorkSection';

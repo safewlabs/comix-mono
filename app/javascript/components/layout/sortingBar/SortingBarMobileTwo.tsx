@@ -1,8 +1,8 @@
-import { FC, ReactNode, useState } from 'react';
+import React, { FC, ReactNode, useState } from 'react';
 import * as Select from '@radix-ui/react-select';
-import DownArrowIcon from '../../../../assets/icons/down-arrow-icon-2 copy.svg';
-import UpArrowIcon from '../../../../assets/icons/up-arrow-icon copy.svg';
-import '~/styles/sortingBarStyles/sortingBarMobile.scss';
+import DownArrowIcon from '@assets/icons/down-arrow-icon-2 copy.svg';
+import UpArrowIcon from '@assets/icons/up-arrow-icon copy.svg';
+import '@assets/stylesheets/newui/sortingBarStyles/sortingBarMobile.sass.scss';
 
 export interface SortingBarProps {
   title: string;
@@ -74,10 +74,8 @@ const SortingDropdown: FC<{
 const SortingBarMobileTwo: FC<SortingBarProps> = ({
   title,
   onSortChange,
-  children,
 }) => {
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
-
   const handleDropdownToggle = (name: string, isOpen: boolean) => {
     setOpenDropdown(isOpen ? name : null);
   };

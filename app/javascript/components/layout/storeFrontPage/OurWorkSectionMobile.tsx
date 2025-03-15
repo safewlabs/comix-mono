@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import React, { FC } from 'react';
 import { storePageData } from '~/utils/dummyData/storePageData';
 import '~/styles/storeFrontPageStyles/storeFrontPageMobileStyles.scss';
 import ComicsPageCardMobile from '../comicsPage/ComicsPageCardMobile';

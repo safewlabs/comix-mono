@@ -1,4 +1,5 @@
 import { storePageData } from '~/utils/dummyData/storePageData';
+import React from 'react';
 
 const StoreInfoCard = () => {
   return (

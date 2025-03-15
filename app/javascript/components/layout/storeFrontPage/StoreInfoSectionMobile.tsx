@@ -1,6 +1,6 @@
-import { FC } from 'react';
+import React, { FC } from 'react';
 import StoreInfoCardMobile from './StoreInfoCardMobile';
-import '~/styles/storeFrontPageStyles/storeFrontPageMobileStyles.scss';
+import '@assets/stylesheets/newui/storeFrontPageStyles/storeFrontPageMobileStyles.sass.scss';
 import AboutUsSection from './AboutUsSection';
 import SocialFeedMobile from './SocialFeedMobile';
 

@@ -1,3 +1,4 @@
+import React from 'react';
 import StoreInfoCardLoading from './StoreInfoCardLoading';
 import AboutUsSectionLoading from './AboutUsSectionLoading';
 import SocialFeedLoading from './SocialFeedLoading';

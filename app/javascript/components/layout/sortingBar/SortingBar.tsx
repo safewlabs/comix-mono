@@ -2,7 +2,7 @@ import React, { FC, useState } from 'react';
 import * as Select from '@radix-ui/react-select';
 import DownArrowIcon from '@assets/icons/down-arrow-icon-2 copy.svg';
 import UpArrowIcon from '@assets/icons/up-arrow-icon copy.svg';
-import '@assets/stylesheets/newui/sortingBarStyles/sortingBarWeb.scss';
+import '@assets/stylesheets/newui/sortingBarStyles/sortingBarWeb.sass.scss';
 
 export interface SortingBarProps {
   title: string;

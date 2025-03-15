@@ -1,9 +1,8 @@
-import { FC } from 'react';
+import React, { FC, useState } from 'react';
 import { SortingDropdown } from './SortingBar';
-import { useState } from 'react';
 import { SortingBarProps } from './SortingBarMobile';
 import { priceSortingOptions } from './SortingBar';
-import '~/styles/sortingBarStyles/sortingBarWeb.scss';
+import '@assets/stylesheets/newui/sortingBarStyles/sortingBarWeb.sass.scss';
 
 const Options1 = {
   options: [

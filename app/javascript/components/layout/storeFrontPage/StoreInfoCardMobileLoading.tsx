@@ -1,5 +1,6 @@
-import '~/styles/storeFrontPageStyles/storeFrontPageMobileStyles.scss';
-import '~/styles/shimmerLoader.scss';
+import React from 'react';
+import '@assets/stylesheets/newui/storeFrontPageStyles/storeFrontPageMobileStyles.sass.scss';
+import '@assets/stylesheets/newui/shimmerLoader.scss';
 
 const StoreInfoCardMobileLoading = () => {
   return (

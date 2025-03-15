@@ -1,9 +1,9 @@
-import { FC } from 'react';
+import React, { FC } from 'react';
 import { StoresProps } from './Stores';
-import TitleAndTaglineMobile from '~/components/common/TitleAndTaglineMobile';
+import TitleAndTaglineMobile from '@javascript/components/common/TitleAndTaglineMobile';
+import Button from '@javascript/components/common/Button';
 import StoresCard from './StoresCard';
-import Button from '~/components/common/Button';
-import '~/styles/storesStyles/storesMobile.scss';
+import '@assets/stylesheets/newui/storesStyles/storesMobile.sass.scss';
 
 const StoresMobile: FC<StoresProps> = ({ storesData }) => {
   return (

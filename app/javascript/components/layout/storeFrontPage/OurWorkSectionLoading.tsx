@@ -1,5 +1,6 @@
-import '~/styles/shimmerLoader.scss';
-import '~/styles/comicsPageStyles/comicsPage.scss';
+import React from 'react';
+import '@assets/stylesheets/newui/shimmerLoader.sass.scss';
+import '@assets/stylesheets/newui/comicsPageStyles/comicsPage.sass.scss';
 
 const dummyList = new Array(6).fill(null);
 
@@ -8,8 +9,8 @@ const OurWorkSectionLoading = () => {
     <div className="ourWorkSectionWrapper">
       <div className="ourWorkTitle">OUR WORK</div>
       <div className="ourWorkListWrapper">
-        {dummyList.map((li) => (
-          <div key={crypto.randomUUID()} className="storeFrontCard">
+        {dummyList.map((index) => (
+          <div key={`${index}-${crypto.randomUUID()}`} className="storeFrontCard">
             <div className="comicImage shimmerLoader"></div>
             <div className="shimmerLoader newReleaseNameLoading"></div>
             <div className="shimmerLoader newReleaseStoreLoading"></div>

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import DownArrowIcon from '@assets/icons/down-arrow-icon-2.svg';
 import UpArrowIcon from '@assets/icons/up-arrow-icon.svg';
-import '@assets/stylesheets/newui/filtersStyles.scss';
+import '@assets/stylesheets/newui/filtersStyles.sass.scss';
 
 const skillsList = [
   'Artist',
