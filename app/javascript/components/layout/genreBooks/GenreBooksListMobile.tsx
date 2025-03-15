@@ -1,12 +1,12 @@
-import { FC } from 'react';
+import React, { FC } from 'react';
 import { GenreBooksListProps } from './GenreBooksList';
 import ComicsPageCardMobile from '../comicsPage/ComicsPageCardMobile';
-import '~/styles/comicsPageStyles/comicsPageMobile.scss';
+import '@assets/stylesheets/newui/comicsPageStyles/comicsPageMobile.sass.scss';
 
 const GenreBooksListMobile: FC<GenreBooksListProps> = ({ sortedComics }) => {
   return (
     <div className="comicsPageMobileWrapper">
-      {sortedComics.map((latestComic, index) => (
+      {sortedComics.map((latestComic: any, index: any) => (
         <a
           key={index}
           href={`https://www.comix.one/products/${latestComic.slug}`}

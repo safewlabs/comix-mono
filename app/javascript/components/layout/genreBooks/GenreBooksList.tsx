@@ -1,16 +1,17 @@
-import { FC } from 'react';
-import { BookDataType } from '~/utils/dummyData/genreBooksData';
-import '~/styles/comicsPageStyles/comicsPage.scss';
+import React, { FC } from 'react';
+// import { BookDataType } from '~/utils/dummyData/genreBooksData';
+import '@assets/stylesheets/newui/comicsPageStyles/comicsPage.sass.scss';
 import ComicsPageCard from '../comicsPage/ComicsPageCard';
 
 export type GenreBooksListProps = {
-  sortedComics: BookDataType[];
+  // sortedComics: BookDataType[];
+  sortedComics: any;
 };
 
 const GenreBooksList: FC<GenreBooksListProps> = ({ sortedComics }) => {
   return (
     <div className="genrePageListWrapper">
-      {sortedComics.map((comicData, index) => (
+      {sortedComics.map((comicData: any, index: any) => (
         <a
           href={`https://www.comix.one/products/${comicData.slug}`}
           key={index}
