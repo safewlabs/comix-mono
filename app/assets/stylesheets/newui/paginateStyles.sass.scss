@@ -1,4 +1,4 @@
-@use './variables.sass.scss';
+@use './variables.sass.scss' as *;
 
 .paginateWrapper {
   display: flex;

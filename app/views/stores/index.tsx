@@ -6,7 +6,7 @@ import MobileStores from "@javascript/components/pages/stores/index/MobileStores
 
 export default function Stores() {
   const storesPageData = useContent<any>();
-
+// console.log(storesPageData)
   const isWeb = useMediaQuery({
     query: "(min-width: 768px)",
   });
