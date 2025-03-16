@@ -35,8 +35,7 @@ esbuild.context({
     '.png': 'dataurl',
     '.jpg': 'dataurl',
     '.gif': 'dataurl',
-    '.svg': 'jsx',
-    '.svg': 'tsx',
+    '.svg': 'dataurl',
   },
 }).then(context => {
   if (process.argv.includes("--watch")) {

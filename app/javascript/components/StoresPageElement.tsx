@@ -1,5 +1,5 @@
 import React, { FC, useState } from 'react';
-import { StoresObj } from './StoresPage';
+import { StoresObj } from './layout/storesPage/StoresPage';
 import EyeIcon from '@assets/icons/eye-icon.svg';
 
 interface StoresPageElementProps {
@@ -8,7 +8,7 @@ interface StoresPageElementProps {
 
 const StoresPageElement: FC<StoresPageElementProps> = ({ storesObj }) => {
   const [isLoaded, setIsLoaded] = useState(false);
-console.log({EyeIcon})
+
   return (
     <div className="storeImageAndName">
       <div className="imageContainer">
@@ -27,4 +27,4 @@ console.log({EyeIcon})
   );
 };
 
-export default StoresPageElement;
+export default StoresPageElement; 
