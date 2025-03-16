@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import '@assets/stylesheets/newui/storesStyles/stores.sass.scss';
+// import '@assets/stylesheets/newui/storesStyles/stores.sass.scss';
 
 interface StoreCardProps {
   storeImage: string;

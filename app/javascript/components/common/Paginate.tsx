@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import { Link } from 'react-router-dom'; 
 import BackButtonSvg from '@assets/icons/BackButtonSvg';
 import ForwardButtonSvg from '@assets/icons/ForwardButtonSvg';
-import '@assets/stylesheets/newui/paginateStyles.sass.scss';
+// import '@assets/stylesheets/newui/paginateStyles.sass.scss';
 
 export type PaginateProp = {
   currentPage: number;

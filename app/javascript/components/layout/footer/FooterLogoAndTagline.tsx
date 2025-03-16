@@ -1,11 +1,11 @@
 import React, { FC } from 'react';
-import '@assets/stylesheets/newui/footerStyles/footer.sass.scss';
+// import '@assets/stylesheets/newui/footerStyles/footer.sass.scss';
 import ComixLogo from '@assets/logos/Comix Logo.svg';
 import xIcon from '@assets/icons/x-icon.svg';
 import ytIcon from '@assets/icons/youtube-icon.svg';
 import blogIcon from '@assets/icons/blog-icon.svg';
 import githubIcon from '@assets/icons/github-icon.svg';
-import blueSkyIcon from '@assets/icons/bluesky-icon.svg';
+// import blueSkyIcon from '@assets/icons/bluesky-icon.svg';
 import igIcon from '@assets/icons/instagram-icon.png';
 
 const footerTagline =
@@ -37,11 +37,11 @@ const socialLinks = [
     alt: 'github-social-link',
     href: 'https://github.com/safewlabs/comix-mono',
   },
-  {
-    src: blueSkyIcon,
-    alt: 'bluesky-social-link',
-    href: 'https://bsky.app/profile/comix.bsky.social',
-  },
+  // {
+  //   src: blueSkyIcon,
+  //   alt: 'bluesky-social-link',
+  //   href: 'https://bsky.app/profile/comix.bsky.social',
+  // },
 ];
 
 const SocialIcon: FC<{ src: string; alt: string; href: string }> = ({

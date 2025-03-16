@@ -1,6 +1,6 @@
 import React from 'react';
-import '@assets/stylesheets/newui/shimmerLoader.sass.scss';
-import '@assets/stylesheets/newui/creatorsStyles/ourCreatorsPageStyles.sass.scss';
+// import '@assets/stylesheets/newui/shimmerLoader.sass.scss';
+// import '@assets/stylesheets/newui/creatorsStyles/ourCreatorsPageStyles.sass.scss';
 
 const dummyCreators = new Array(20).fill(null);
 

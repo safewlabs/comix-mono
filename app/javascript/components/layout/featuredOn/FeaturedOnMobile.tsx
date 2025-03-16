@@ -1,8 +1,8 @@
 import React, { FC } from 'react';
 import { featuredOnDummyData } from './FeaturedOn';
 import TitleAndTaglineMobile from '@javascript/components/common/TitleAndTaglineMobile';
-import '@assets/stylesheets/newui/featuredOnStyles/featuredOnMobileStyles.sass.scss';
-import '@assets/stylesheets/newui/featuredOnStyles/featuredOn.sass.scss';
+// import '@assets/stylesheets/newui/featuredOnStyles/featuredOnMobileStyles.sass.scss';
+// import '@assets/stylesheets/newui/featuredOnStyles/featuredOn.sass.scss';
 
 const FeaturedOnMobile: FC = () => {
   return (

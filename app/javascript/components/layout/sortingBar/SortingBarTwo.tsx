@@ -2,7 +2,7 @@ import React, { FC, useState } from 'react';
 import { SortingDropdown } from './SortingBar';
 import { SortingBarProps } from './SortingBarMobile';
 import { priceSortingOptions } from './SortingBar';
-import '@assets/stylesheets/newui/sortingBarStyles/sortingBarWeb.sass.scss';
+// import '@assets/stylesheets/newui/sortingBarStyles/sortingBarWeb.sass.scss';
 
 const Options1 = {
   options: [

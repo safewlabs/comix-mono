@@ -2,7 +2,7 @@ import React from 'react';
 import HamburgerMenu from './HamburgerMenu';
 import SearchIconComponent from './SearchIcon';
 import ComixHeaderMobileLogo from './ComixHeaderMobileLogo';
-import '@assets/stylesheets/newui/headerStyles/headerMobile.sass.scss';
+// // import '@assets/stylesheets/newui/headerStyles/headerMobile.sass.scss';
 
 const HeaderMobile = () => {
   return (

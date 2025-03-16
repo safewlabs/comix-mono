@@ -3,7 +3,7 @@ import FooterLogoAndTagline from './FooterLogoAndTagline';
 import FooterNewsletterSignup from './FooterNewsletterSignup';
 import FooterTable from './FooterTable';
 import FooterBottomContent from './FooterBottomContent';
-import '@assets/stylesheets/newui/footerStyles/footer.sass.scss';
+// import '@assets/stylesheets/newui/footerStyles/footer.sass.scss';
 
 const Footer: FC = () => {
   return (

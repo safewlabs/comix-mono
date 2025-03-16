@@ -1,8 +1,8 @@
 import React, { FC } from 'react';
-import '@assets/stylesheets/newui/storeFrontPageStyles/storeFrontPageWebStyles.sass.scss';
+// import '@assets/stylesheets/newui/storeFrontPageStyles/storeFrontPageWebStyles.sass.scss';
 import { storePageData } from '@javascript/utils/dummyData/storePageData';
-import '@assets/stylesheets/newui/shimmerLoader.sass.scss';
-import '@assets/stylesheets/newui/comicsPageStyles/comicsPage.sass.scss';
+// import '@assets/stylesheets/newui/shimmerLoader.sass.scss';
+// import '@assets/stylesheets/newui/comicsPageStyles/comicsPage.sass.scss';
 
 const OurWorkSection: FC = () => {
   const ourWorkBooksList = storePageData.data.products;

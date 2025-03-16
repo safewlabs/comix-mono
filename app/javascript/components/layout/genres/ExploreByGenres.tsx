@@ -3,8 +3,8 @@ import TitleAndButtons from '../../common/TitleAndButtons';
 import BackAndForwardButtons from '../../common/BackAndForwardButtons';
 import { handleScroll } from '../../common/handleScroll';
 import Tagline from '../../common/Tagline';
-import '@assets/stylesheets/newui/titleAndButtons.sass.scss';
-import '@assets/stylesheets/newui/exploreByGenresStyles/exploreByGenres.sass.scss';
+// import '@assets/stylesheets/newui/titleAndButtons.sass.scss';
+// import '@assets/stylesheets/newui/exploreByGenresStyles/exploreByGenres.sass.scss';
 
 export interface ExploreByGenres {
   cover?: string;

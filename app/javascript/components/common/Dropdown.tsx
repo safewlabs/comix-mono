@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '@assets/stylesheets/newui/sortingBarStyles/dropdown.sass.scss';
+// import '@assets/stylesheets/newui/sortingBarStyles/dropdown.sass.scss';
 
 const Dropdown: React.FC = () => {
   const [selectedOption, setSelectedOption] = useState<string>('');

@@ -2,7 +2,7 @@ import React from 'react';
 import FooterLogoAndTagline from './FooterLogoAndTagline';
 import FooterBottomContent from './FooterBottomContent';
 import FooterNewsletterSignupMobile from './FooterNewsletterSignupMobile';
-import '@assets/stylesheets/newui/footerStyles/footerMobile.sass.scss';
+// import '@assets/stylesheets/newui/footerStyles/footerMobile.sass.scss';
 
 interface Link {
   href: string;

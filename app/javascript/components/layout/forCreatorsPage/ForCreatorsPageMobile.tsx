@@ -3,7 +3,7 @@ import StackedCardsMobileScreen from '../forCreators/StackerCardsMobileScreen';
 import AirtableForm from './AirtableForm';
 import { TEXT } from './ForCreatorsPage';
 import { FC } from 'react';
-import '@assets/stylesheets/newui/creatorsStyles/forCreatorsPageStyles.sass.scss';
+// import '@assets/stylesheets/newui/creatorsStyles/forCreatorsPageStyles.sass.scss';
 
 const ForCreatorsPageMobile: FC = () => {
   return (

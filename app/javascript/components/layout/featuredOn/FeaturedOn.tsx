@@ -6,7 +6,7 @@ import SoloNerdBirdImg from '@assets/featured/solo-nerd-bird.svg';
 import SpoilerCountyImg from '@assets/featured/spoiler-county.svg';
 import WorldAtWarComicsImg from '@assets/featured/world-at-war-comics.svg';
 import Tagline from '@javascript/components/common/Tagline';
-import '@assets/stylesheets/newui/featuredOnStyles/featuredOn.sass.scss';
+// import '@assets/stylesheets/newui/featuredOnStyles/featuredOn.sass.scss';
 
 export const featuredOnDummyData = [
   {

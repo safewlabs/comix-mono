@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import '@assets/stylesheets/newui/exploreByGenresStyles/exploreByGenres.sass.scss';
+// import '@assets/stylesheets/newui/exploreByGenresStyles/exploreByGenres.sass.scss';
 
 type GenreObj = {
   name: string;

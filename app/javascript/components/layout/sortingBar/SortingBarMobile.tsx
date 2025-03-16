@@ -3,7 +3,7 @@ import * as Select from '@radix-ui/react-select';
 import DownArrowIcon from '@assets/icons/down-arrow-icon-2 copy.svg';
 import UpArrowIcon from '@assets/icons/up-arrow-icon copy.svg';
 import FiltersMenu from './FiltersMenu';
-import '@assets/stylesheets/newui/sortingBarStyles/sortingBarMobile.sass.scss';
+// // import '@assets/stylesheets/newui/sortingBarStyles/sortingBarMobile.sass.scss';
 
 export interface SortingBarProps {
   title: string;

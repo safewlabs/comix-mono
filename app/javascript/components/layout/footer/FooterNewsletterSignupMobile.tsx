@@ -1,6 +1,6 @@
 import React from 'react';
 import subscribeIcon from '@assets/icons/subscribe-container.svg';
-import '@assets/stylesheets/newui/footerStyles/footerMobile.sass.scss';
+// import '@assets/stylesheets/newui/footerStyles/footerMobile.sass.scss';
 
 const FooterNewsletterSignupMobile = () => {
   return (

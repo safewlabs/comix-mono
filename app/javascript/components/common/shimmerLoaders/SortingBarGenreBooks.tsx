@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
-import '@assets/stylesheets/newui/sortingBarStyles/sortingBarWeb.sass.scss';
-import '@assets/stylesheets/newui/shimmerLoader.sass.scss';
+// import '@assets/stylesheets/newui/sortingBarStyles/sortingBarWeb.sass.scss';
+// import '@assets/stylesheets/newui/shimmerLoader.sass.scss';
 
 type SortingBarLoadingProps = {
   title: string;

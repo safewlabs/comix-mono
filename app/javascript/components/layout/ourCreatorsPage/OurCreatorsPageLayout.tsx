@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import OurCreatorsPageList from './OurCreatorsPageList';
 import OurCreatorsFilter from './OurCreatorsFilter';
-import '@assets/stylesheets/newui/creatorsStyles/ourCreatorsPageStyles.sass.scss';
+// import '@assets/stylesheets/newui/creatorsStyles/ourCreatorsPageStyles.sass.scss';
 
 export interface CreatorObjectType {
   avatar: string;

@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import ProgressBar from './ProgressBar';
-import '@assets/stylesheets/newui/mainSection.sass.scss';
+// import '@assets/stylesheets/newui/mainSection.sass.scss';
 
 const MainSection: FC = () => {
   return (

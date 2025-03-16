@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import '@assets/stylesheets/newui/storesStyles/storesPageMobile.sass.scss';
+// // import '@assets/stylesheets/newui/storesStyles/storesPageMobile.sass.scss';
 import StoresPageElement from './StoresPageElement';
 
 interface StoreDataObj {

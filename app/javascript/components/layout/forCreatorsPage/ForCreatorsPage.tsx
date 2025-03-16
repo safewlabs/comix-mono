@@ -1,7 +1,7 @@
 import React from 'react';
 import StackedCards from '../forCreators/StackedCards';
 import AirtableForm from './AirtableForm';
-import '@assets/stylesheets/newui/creatorsStyles/forCreatorsPageStyles.sass.scss';
+// import '@assets/stylesheets/newui/creatorsStyles/forCreatorsPageStyles.sass.scss';
 
 export const TEXT =
   "At this point, we're only accepting Indie cretors and small press that have a back-catalogue and new projects planned this year. Please fill out the form below and we will be in touch asap to get you onboard!";

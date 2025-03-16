@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import StoresPageElement from './StoresPageElement';
-import '@assets/stylesheets/newui/storesStyles/storesPageStyling.sass.scss';
+// // import '@assets/stylesheets/newui/storesStyles/storesPageStyling.sass.scss';
 
 export interface StoresObj {
   name: string;

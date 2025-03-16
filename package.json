@@ -1,6 +1,7 @@
 {
   "name": "app",
   "private": true,
+  "type": "module",
   "dependencies": {
     "@hotwired/stimulus": "^3.2.2",
     "@hotwired/turbo-rails": "^7.3.0",
@@ -34,7 +35,7 @@
   "scripts": {
     "lint": "eslint 'app/javascript/**/*.{ts,tsx}'",
     "format": "prettier --write 'app/javascript/**/*.{ts,tsx}'",
-    "build": "esbuild app/javascript/*.* --bundle --sourcemap --format=esm --outdir=app/assets/builds --public-path=/assets",
+    "build": "node esbuild.config.js",
     "build:scss": "sass ./app/assets/stylesheets/application.sass.scss:./app/assets/builds/newui.css --no-source-map --load-path=node_modules",
     "build:css": "tailwindcss -i ./app/assets/stylesheets/application.tailwind.css -o ./app/assets/builds/application.css --minify"
   },

@@ -1,9 +1,9 @@
 import React from 'react';
 import TitleAndTaglineMobile from '@javascript/components/common/TitleAndTaglineMobile';
 import Button from '@javascript/components/common/Button';
-import '@assets/stylesheets/newui/storesStyles/storesMobile.sass.scss';
-import '@assets/stylesheets/newui/shimmerLoader.sass.scss';
-import '@assets/stylesheets/newui/storesStyles/stores.sass.scss';
+// import '@assets/stylesheets/newui/storesStyles/storesMobile.sass.scss';
+// import '@assets/stylesheets/newui/shimmerLoader.sass.scss';
+// import '@assets/stylesheets/newui/storesStyles/stores.sass.scss';
 
 const dummyList = new Array(14).fill(null);
 

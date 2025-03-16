@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import { ExploreByGenresProps } from './ExploreByGenres';
 import TitleAndTaglineMobile from '../../common/TitleAndTaglineMobile';
 import Button from '../../common/Button';
-import '@assets/stylesheets/newui/exploreByGenresStyles/exploreByGenresMobileStyles.sass.scss';
+// import '@assets/stylesheets/newui/exploreByGenresStyles/exploreByGenresMobileStyles.sass.scss';
 
 const ExploreByGenresMobile: FC<ExploreByGenresProps> = ({
   exploreByGenres,

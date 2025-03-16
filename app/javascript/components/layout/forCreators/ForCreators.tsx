@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import TitleAndButtons from '@javascript/components/common/TitleAndButtons';
 import Tagline from '@javascript/components/common/Tagline';
 import StackedCards from './StackedCards';
-import '@assets/stylesheets/newui/creatorsStyles/forCreators.sass.scss';
+// import '@assets/stylesheets/newui/creatorsStyles/forCreators.sass.scss';
 
 const ForCreators: FC = () => {
   return (

@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import { GenreBooksListProps } from './GenreBooksList';
 import ComicsPageCardMobile from '../comicsPage/ComicsPageCardMobile';
-import '@assets/stylesheets/newui/comicsPageStyles/comicsPageMobile.sass.scss';
+// import '@assets/stylesheets/newui/comicsPageStyles/comicsPageMobile.sass.scss';
 
 const GenreBooksListMobile: FC<GenreBooksListProps> = ({ sortedComics }) => {
   return (

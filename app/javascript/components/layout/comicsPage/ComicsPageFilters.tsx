@@ -3,8 +3,8 @@ import RangeSlider from 'react-range-slider-input';
 import DownArrowIcon from '@assets/icons/down-arrow-icon-2.svg';
 import UpArrowIcon from '@assets/icons/up-arrow-icon.svg';
 import 'react-range-slider-input/dist/style.css';
-import '@assets/stylesheets/newui/sliderStyles.sass.scss';
-import '@assets/stylesheets/newui/filtersStyles.sass.scss';
+// import '@assets/stylesheets/newui/sliderStyles.sass.scss';
+// import '@assets/stylesheets/newui/filtersStyles.sass.scss';
 
 type GenreObj = {
   cover?: string;

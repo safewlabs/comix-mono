@@ -4,8 +4,8 @@ import BackAndForwardButtons from '@javascript/components/common/BackAndForwardB
 import ComicCard from '../newReleases/ComicCard';
 import { handleScroll } from '@javascript/components/common/handleScroll';
 import Tagline from '@javascript/components/common/Tagline';
-import '@assets/stylesheets/newui/titleAndButtons.sass.scss';
-import '@assets/stylesheets/newui/top10ComicsStyles/top10Comics.sass.scss';
+// import '@assets/stylesheets/newui/titleAndButtons.sass.scss';
+// import '@assets/stylesheets/newui/top10ComicsStyles/top10Comics.sass.scss';
 
 export interface Top10Comic {
   name: string;
