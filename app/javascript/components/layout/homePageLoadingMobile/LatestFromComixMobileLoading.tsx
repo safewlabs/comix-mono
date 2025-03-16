@@ -1,9 +1,9 @@
 import React from 'react';
 import TitleAndTaglineMobile from '@javascript/components/common/TitleAndTaglineMobile';
 import Button from '@javascript/components/common/Button';
-import '@assets/stylesheets/newui/latestStyles/latestFromComix.scss';
-import '@assets/stylesheets/newui/latestStyles/latestFromComixMobileStyles.scss';
-import '@assets/stylesheets/newui/shimmerLoader.scss';
+import '@assets/stylesheets/newui/latestStyles/latestFromComix.sass.scss';
+import '@assets/stylesheets/newui/latestStyles/latestFromComixMobileStyles.sass.scss';
+import '@assets/stylesheets/newui/shimmerLoader.sass.scss';
 
 const dummyList = new Array(3).fill(null);
 

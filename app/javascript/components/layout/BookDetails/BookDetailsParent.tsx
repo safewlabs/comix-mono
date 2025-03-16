@@ -1,6 +1,6 @@
 import React from 'react';
-// import { productDetailsData } from '~/utils/dummyData/productDetailsData';
 
+import { productDetailsData } from '@javascript/utils/dummyData/productDetailsData';
 const BookDetailsParent = () => {
   return (
     <div
@@ -19,7 +19,7 @@ const BookDetailsParent = () => {
           left: 0,
           width: '100%',
           height: '100%',
-          // backgroundImage: `url(https://www.comix.one${productDetailsData.data.issue_cover})`,
+          backgroundImage: `url(https://www.comix.one${productDetailsData.data.issue_cover})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           filter: 'blur(6px)',

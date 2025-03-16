@@ -1,6 +1,5 @@
-import { FC } from 'react';
-import '~/styles/storesStyles/storesPageMobile.scss';
-
+import React, { FC } from 'react';
+import '@assets/stylesheets/newui/storesStyles/storesPageMobile.sass.scss';
 import StoresPageElement from './StoresPageElement';
 
 interface StoreDataObj {

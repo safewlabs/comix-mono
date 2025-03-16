@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import HamburgerIcon from '@assets/icons/hamburger-menu-icon.svg';
-import '@assets/stylesheets/newui/sortingBarStyles/hamburgerMenuStyles.scss';
+import '@assets/stylesheets/newui/sortingBarStyles/hamburgerMenuStyles.sass.scss';
 
 const NAV_LINK_LABELS_AND_ROUTES = [
   { label: 'Comics', route: '/comics' },

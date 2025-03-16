@@ -1,11 +1,11 @@
-import { FC, useRef } from 'react';
-import TitleAndButtons from '~/components/common/TitleAndButtons';
-import BackAndForwardButtons from '../../common/BackAndForwardButtons';
+import React, { FC, useRef } from 'react';
+import TitleAndButtons from '@javascript/components/common/TitleAndButtons';
+import BackAndForwardButtons from '@javascript/components/common/BackAndForwardButtons';
 import ComicCard from '../newReleases/ComicCard';
-import { handleScroll } from '~/components/common/handleScroll';
-import Tagline from '~/components/common/Tagline';
-import '~/styles/titleAndButtons.scss';
-import '~/styles/top10ComicsStyles/top10Comics.scss';
+import { handleScroll } from '@javascript/components/common/handleScroll';
+import Tagline from '@javascript/components/common/Tagline';
+import '@assets/stylesheets/newui/titleAndButtons.sass.scss';
+import '@assets/stylesheets/newui/top10ComicsStyles/top10Comics.sass.scss';
 
 export interface Top10Comic {
   name: string;
@@ -31,8 +31,8 @@ const Top10Comics: FC<Top10Comics> = ({ top10Comics }) => {
         />
         <div className="titleAndButtons">
           <BackAndForwardButtons
-            onBack={() => handleScroll(top10ComicsWrapperRef, 'left')}
-            onForward={() => handleScroll(top10ComicsWrapperRef, 'right')}
+            onBack={() => top10ComicsWrapperRef.current && handleScroll({current : top10ComicsWrapperRef.current}, 'left')}
+            onForward={() => top10ComicsWrapperRef.current && handleScroll({current: top10ComicsWrapperRef.current}, 'right')}
           />
         </div>
       </div>

@@ -1,6 +1,6 @@
 import React from 'react';
-import '@assets/stylesheets/newui/exploreByGenresStyles/exploreByGenresMobileStyles.scss';
-import '@assets/stylesheets/newui/shimmerLoader.scss';
+import '@assets/stylesheets/newui/exploreByGenresStyles/exploreByGenresMobileStyles.sass.scss';
+import '@assets/stylesheets/newui/shimmerLoader.sass.scss';
 import TitleAndTaglineMobile from '@javascript/components/common/TitleAndTaglineMobile';
 import Button from '@javascript/components/common/Button';
 

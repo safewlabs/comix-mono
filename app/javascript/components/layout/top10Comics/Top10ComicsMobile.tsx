@@ -1,4 +1,4 @@
-import '~/styles/top10ComicsStyles/top10ComicsMobileStyles.scss';
+import '@assets/stylesheets/newui/top10ComicsStyles/top10ComicsMobileStyles.sass.scss';
 import React, { FC } from 'react';
 import { Top10Comics } from './Top10Comics';
 import ComicCardMobile from '../newReleases/ComicCardMobile';

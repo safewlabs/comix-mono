@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
-import { storePageData } from '~/utils/dummyData/storePageData';
-import '~/styles/storeFrontPageStyles/storeFrontPageMobileStyles.scss';
+import { storePageData } from '@javascript/utils/dummyData/storePageData';
+import '@assets/stylesheets/newui/storeFrontPageStyles/storeFrontPageMobileStyles.sass.scss';
 import ComicsPageCardMobile from '../comicsPage/ComicsPageCardMobile';
 
 const OurWorkSectionMobile: FC = () => {

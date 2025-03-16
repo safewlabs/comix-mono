@@ -1,11 +1,10 @@
 import React, { FC } from 'react';
-// import { BookDataType } from '~/utils/dummyData/genreBooksData';
+import { BookDataType } from '@javascript/utils/dummyData/genreBooksData';
 import '@assets/stylesheets/newui/comicsPageStyles/comicsPage.sass.scss';
 import ComicsPageCard from '../comicsPage/ComicsPageCard';
 
 export type GenreBooksListProps = {
-  // sortedComics: BookDataType[];
-  sortedComics: any;
+  sortedComics: BookDataType[];
 };
 
 const GenreBooksList: FC<GenreBooksListProps> = ({ sortedComics }) => {

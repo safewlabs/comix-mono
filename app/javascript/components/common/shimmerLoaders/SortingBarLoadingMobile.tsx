@@ -1,5 +1,4 @@
-import React from 'react';
-import { FC, ReactNode } from 'react';
+import React, { FC, ReactNode } from 'react';
 import FiltersMenu from '@javascript/components/layout/sortingBar/FiltersMenu';
 import '@assets/stylesheets/newui/shimmerLoader.sass.scss';
 import '@assets/stylesheets/newui/sortingBarStyles/sortingBarMobile.sass.scss';
