@@ -1,7 +1,7 @@
 import React from 'react';
 import TitleAndTaglineMobile from '@javascript/components/common/TitleAndTaglineMobile';
 import Button from '@javascript/components/common/Button';
-import '@assets/stylesheets/newui/top10ComicsStyles/top10ComicsMobileStyles.sass.scss';
+// import '@assets/stylesheets/newui/top10ComicsStyles/top10ComicsMobileStyles.sass.scss';
 
 const dummyList = new Array(10).fill(null);
 

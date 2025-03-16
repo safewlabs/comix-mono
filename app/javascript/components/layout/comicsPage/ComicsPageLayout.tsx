@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import '@assets/stylesheets/newui/comicsPageStyles/comicsPage.sass.scss';
+// import '@assets/stylesheets/newui/comicsPageStyles/comicsPage.sass.scss';
 import ComicsPageList from './ComicsPageList';
 import ComicsPageFilters from './ComicsPageFilters';
 

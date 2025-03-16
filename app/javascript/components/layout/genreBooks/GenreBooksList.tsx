@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import { BookDataType } from '@javascript/utils/dummyData/genreBooksData';
-import '@assets/stylesheets/newui/comicsPageStyles/comicsPage.sass.scss';
+// import '@assets/stylesheets/newui/comicsPageStyles/comicsPage.sass.scss';
 import ComicsPageCard from '../comicsPage/ComicsPageCard';
 
 export type GenreBooksListProps = {

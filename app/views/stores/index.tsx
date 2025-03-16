@@ -4,9 +4,19 @@ import { useMediaQuery } from "react-responsive";
 import WebStores from "@javascript/components/pages/stores/index/WebStores";
 import MobileStores from "@javascript/components/pages/stores/index/MobileStores";
 
-export default function Stores() {
-  const storesPageData = useContent<any>();
-// console.log(storesPageData)
+export interface StoreTypes {
+  name: string;
+  display_image: string;
+  slug: string;
+}
+
+export interface StoresProps {
+  stores: StoreTypes[];
+}
+
+export default function StoresIndex() {
+  const { stores } = useContent<StoresProps>();
+  console.log(stores)
   const isWeb = useMediaQuery({
     query: "(min-width: 768px)",
   });
@@ -18,10 +28,10 @@ export default function Stores() {
   return (
     <>
       {isWeb && (
-        <WebStores storesPageData={storesPageData}/>
+        <WebStores storesPageData={stores}/>
       )}
       {isMobile && (
-        <MobileStores  storesPageData={storesPageData}/>
+        <MobileStores  storesPageData={stores}/>
       )}
     </>
   );

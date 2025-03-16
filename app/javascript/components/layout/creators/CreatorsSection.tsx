@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import TitleAndButtons from '@javascript/components/common/TitleAndButtons';
 import Tagline from '@javascript/components/common/Tagline';
-import '@assets/stylesheets/newui/creatorsStyles/creators.sass.scss';
+// import '@assets/stylesheets/newui/creatorsStyles/creators.sass.scss';
 
 export interface CreatorData {
   name: string;

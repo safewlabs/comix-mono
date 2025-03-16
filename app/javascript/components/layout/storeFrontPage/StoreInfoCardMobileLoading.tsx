@@ -1,6 +1,6 @@
 import React from 'react';
-import '@assets/stylesheets/newui/storeFrontPageStyles/storeFrontPageMobileStyles.sass.scss';
-import '@assets/stylesheets/newui/shimmerLoader.sass.scss';
+// import '@assets/stylesheets/newui/storeFrontPageStyles/storeFrontPageMobileStyles.sass.scss';
+// import '@assets/stylesheets/newui/shimmerLoader.sass.scss';
 
 const StoreInfoCardMobileLoading = () => {
   return (

@@ -1,6 +1,7 @@
 // import your page component #todo fix output of new lines
 // e.g import PostsEdit from '../views/posts/edit'
 import PostShow from '@views/posts/show';
+import StoreIndex from '@views/stores/index';
 // Mapping between your props template to Component, you must add to this
 // to register any new page level component you create. If you are using the
 // scaffold, it will auto append the identifers for you.
@@ -30,6 +31,7 @@ import PostShow from '@views/posts/show';
 //
 const pageIdentifierToPageComponent = {
   'posts/show': PostShow,
+  'stores/index': StoreIndex,
 };
 
 export { pageIdentifierToPageComponent };

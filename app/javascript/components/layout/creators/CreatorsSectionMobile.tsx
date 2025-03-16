@@ -2,8 +2,8 @@ import React, { FC } from 'react';
 import { CreatorSectionProps } from './CreatorsSection';
 import TitleAndTaglineMobile from '@javascript/components/common/TitleAndTaglineMobile';
 import Button from '@javascript/components/common/Button';
-import '@assets/stylesheets/newui/creatorsStyles/creatorsMobile.sass.scss';
-import '@assets/stylesheets/newui/creatorsStyles/creators.sass.scss';
+// import '@assets/stylesheets/newui/creatorsStyles/creatorsMobile.sass.scss';
+// import '@assets/stylesheets/newui/creatorsStyles/creators.sass.scss';
 
 const CreatorsSectionMobile: FC<CreatorSectionProps> = ({ creatorsData }) => {
   const creatorsDataArray = creatorsData.data;

@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import { ComixLogoSvg } from '@assets/logos/ComixLogoSvg';
-import '@assets/stylesheets/newui/headerStyles/header.sass.scss';
+// import '@assets/stylesheets/newui/headerStyles/header.sass.scss';
 
 const ComixHeaderLogo: FC = () => {
   return (

@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import CartIcon from '@assets/icons/cart-icon.svg';
-import '@assets/stylesheets/newui/headerStyles/header.sass.scss';
+// import '@assets/stylesheets/newui/headerStyles/header.sass.scss';
 
 const UserActions: FC = () => {
   return (

@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import '@assets/stylesheets/newui/appMarketing.sass.scss';
+// import '@assets/stylesheets/newui/appMarketing.sass.scss';
 import appDownloadButton from '@assets/icons/app-download-button.svg';
 import marketingBackgroundMobileImage from '@assets/background/marketing-content-image-mobile.svg';
 import qrCodeGraphic from '@assets/background/qr-code-graphic-mobile.svg';

@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import '@assets/stylesheets/newui/webApp.sass.scss';
+// import '@assets/stylesheets/newui/webApp.sass.scss';
 
 interface TaglineProp {
   tagline: string;

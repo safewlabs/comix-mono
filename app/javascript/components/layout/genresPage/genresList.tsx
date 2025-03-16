@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import { Link } from 'react-router-dom'; 
-import '@assets/stylesheets/newui/exploreByGenresStyles/exploreByGenres.sass.scss';
+// import '@assets/stylesheets/newui/exploreByGenresStyles/exploreByGenres.sass.scss';
 
 type GenreObj = {
   name: string;

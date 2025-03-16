@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import ProgressSegmentIcon from '@assets/icons/progress-segment-icon.svg';
 import ProgressSegmentUnfilledIcon from '@assets/icons/progress-secment-unfilled-icon.png';
-import '@assets/stylesheets/newui/mainSection.sass.scss';
+// import '@assets/stylesheets/newui/mainSection.sass.scss';
 
 const ProgressBar: FC = () => {
   return (

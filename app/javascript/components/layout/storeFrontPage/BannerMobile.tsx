@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import '@assets/stylesheets/newui/storeFrontPageStyles/storeFrontPageMobileStyles.sass.scss';
+// import '@assets/stylesheets/newui/storeFrontPageStyles/storeFrontPageMobileStyles.sass.scss';
 
 type BannerProps = {
   image?: string;

@@ -2,7 +2,7 @@ import React, { useState, FC } from 'react';
 import ForCreators1 from '@assets/forCreators/for-creators-1.svg';
 import ForCreators2 from '@assets/forCreators/for-creators-2.svg';
 import ForCreators3 from '@assets/forCreators/for-creators-3.svg';
-import '@assets/stylesheets/newui/creatorsStyles/stackedCards.sass.scss';
+// import '@assets/stylesheets/newui/creatorsStyles/stackedCards.sass.scss';
 
 export const stakedCardsData = [
   {

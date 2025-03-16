@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import ComicsPageCard from './ComicsPageCard';
 import { ComicsPageLayoutProps } from './ComicsPageLayout';
-import '@assets/stylesheets/newui/comicsPageStyles/comicsPage.sass.scss';
+// import '@assets/stylesheets/newui/comicsPageStyles/comicsPage.sass.scss';
 
 const ComicsPageList: FC<ComicsPageLayoutProps> = ({ latestComics }) => {
   return (

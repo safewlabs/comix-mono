@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import '@assets/stylesheets/newui/newReleasesStyles/newReleasesMobileStyles.sass.scss';
+// import '@assets/stylesheets/newui/newReleasesStyles/newReleasesMobileStyles.sass.scss';
 
 interface TitleAndTaglineProps {
   title: string;

@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
-import '@assets/stylesheets/newui/TitleAndButtons.sass.scss';
-import '@assets/stylesheets/newui/latestStyles/latestFeeds.sass.scss';
+// import '@assets/stylesheets/newui/TitleAndButtons.sass.scss';
+// import '@assets/stylesheets/newui/latestStyles/latestFeeds.sass.scss';
 import Dropdown from '@javascript/components/common/Dropdown';
 import BackAndForwardButtons from '@javascript/components/common/BackAndForwardButtons';
 import TitleAndButtons from '@javascript/components/common/TitleAndButtons';

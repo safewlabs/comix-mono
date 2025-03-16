@@ -1,7 +1,7 @@
 import React from 'react';
 import StoryBackground from '@assets/background/our-story-story-background.svg';
 import OurMissionImage from '@assets/background/our-mission-image.svg';
-import '@assets/stylesheets/newui/ourStoryStyles.sass.scss';
+// import '@assets/stylesheets/newui/ourStoryStyles.sass.scss';
 
 const OurStoryPageLayout = () => {
   return (

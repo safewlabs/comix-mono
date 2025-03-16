@@ -1,5 +1,5 @@
 import React from 'react';
-import '@assets/stylesheets/newui/storeFrontPageStyles/storeFrontPageWebStyles.sass.scss';
+// import '@assets/stylesheets/newui/storeFrontPageStyles/storeFrontPageWebStyles.sass.scss';
 import shareIcon from '@assets/icons/share-icon.svg';
 import backIcon from '@assets/icons/back-icon-white-fill.svg';
 

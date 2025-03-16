@@ -2,8 +2,8 @@ import React, { useRef } from 'react';
 import { handleScroll } from '@javascript/components/common/handleScroll';
 import Tagline from '@javascript/components/common/Tagline';
 import TitleAndButtons from '@javascript/components/common/TitleAndButtons';
-import '@assets/stylesheets/newui/titleAndButtons.sass.scss';
-import '@assets/stylesheets/newui/top10ComicsStyles/top10Comics.sass.scss';
+// import '@assets/stylesheets/newui/titleAndButtons.sass.scss';
+// import '@assets/stylesheets/newui/top10ComicsStyles/top10Comics.sass.scss';
 import BackAndForwardButtons from '@javascript/components/common/BackAndForwardButtons';
 
 const dummmyList = new Array(20).fill(null);

@@ -3,7 +3,7 @@ import { StoresProps } from './Stores';
 import TitleAndTaglineMobile from '@javascript/components/common/TitleAndTaglineMobile';
 import Button from '@javascript/components/common/Button';
 import StoresCard from './StoresCard';
-import '@assets/stylesheets/newui/storesStyles/storesMobile.sass.scss';
+// import '@assets/stylesheets/newui/storesStyles/storesMobile.sass.scss';
 
 const StoresMobile: FC<StoresProps> = ({ storesData }) => {
   return (

@@ -6,7 +6,7 @@ import latestDummy2 from '@assets/latestFromComix/latest-from-comix-2.svg';
 import latestDummy3 from '@assets/latestFromComix/latest-from-comix-3.svg';
 import tagIcon from '@assets/icons/tag-icon.svg';
 import parse from 'html-react-parser';
-import '@assets/stylesheets/newui/latestStyles/latestFromComix.sass.scss';
+// import '@assets/stylesheets/newui/latestStyles/latestFromComix.sass.scss';
 
 export const latestFromComixDummyImages = [
   latestDummy1,

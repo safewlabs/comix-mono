@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import Tagline from '@javascript/components/common/Tagline';
 import TitleAndButtons from '@javascript/components/common/TitleAndButtons';
 import StoresCard from './StoresCard';
-import '@assets/stylesheets/newui/storesStyles/stores.sass.scss';
+// // import '@assets/stylesheets/newui/storesStyles/stores.sass.scss';
 
 export interface StoreTypes {
   name: string;

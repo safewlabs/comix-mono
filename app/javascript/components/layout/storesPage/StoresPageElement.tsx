@@ -1,8 +1,8 @@
 import React, { FC, useState } from 'react';
 import { StoresObj } from './StoresPage';
 import EyeIcon from '@assets/icons/eye-icon.svg';
-import '@assets/stylesheets/newui/storesStyles/storesPageStyling.sass.scss';
-import '@assets/stylesheets/newui/shimmerLoader.sass.scss';
+// // import '@assets/stylesheets/newui/storesStyles/storesPageStyling.sass.scss';
+// // import '@assets/stylesheets/newui/shimmerLoader.sass.scss';
 
 interface StoresPageElementProps {
   storesObj: StoresObj;
