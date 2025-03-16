@@ -7,7 +7,6 @@
 #  id               :bigint           not null, primary key
 #  blurb            :text
 #  campaign_ends_at :datetime
-#  description      :text
 #  funding_goal     :decimal(, )
 #  funds_raised     :decimal(, )
 #  slug             :string           not null

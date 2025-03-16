@@ -7,7 +7,6 @@
 #  id               :bigint           not null, primary key
 #  blurb            :text
 #  campaign_ends_at :datetime
-#  description      :text
 #  funding_goal     :decimal(, )
 #  funds_raised     :decimal(, )
 #  slug             :string           not null
@@ -55,7 +54,9 @@ class Project < ApplicationRecord
   }
 
   def funding_status
+    return "Campaign not launched" if funds_raised.nil?
     return 0 if funds_raised.eql?(0.0)
-    (funds_raised / funding_goal) * 100
+    money_raised = (funds_raised / funding_goal) * 100
+    money_raised.round
   end
 end

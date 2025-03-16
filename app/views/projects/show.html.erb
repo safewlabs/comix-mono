@@ -35,7 +35,7 @@
         <div class="py-4">
           <div class="w-full bg-gray-200 rounded-full">
             <div class="text-xl font-medium background-gradient text-center p-4 leading-none text-white rounded-l-full" style="width: <%= @project.funding_status %>%">
-              <%= @project.funding_status.round %>%
+              <%= @project.funding_status %>%
             </div>
           </div>
         </div>
@@ -106,9 +106,6 @@
 
     <div class="hidden py-4 px-4 border-l border-b border-r" data-tabs-target="panel">
       <%= render partial: "project_updates" %>
-    </div>
-    <div class="hidden py-4 px-4 border-l border-b border-r" data-tabs-target="panel">
-      <%= render partial: "community" %>
     </div>
   </div>
 </div>
