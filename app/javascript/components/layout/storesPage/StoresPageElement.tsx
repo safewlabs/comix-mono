@@ -8,7 +8,7 @@ interface StoresPageElementProps {
 
 const StoresPageElement: FC<StoresPageElementProps> = ({ storesObj }) => {
   const [isLoaded, setIsLoaded] = useState(false);
-console.log({EyeIcon})
+  
   return (
     <div className="storeImageAndName">
       <div className="imageContainer">
