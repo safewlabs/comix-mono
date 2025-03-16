@@ -1,0 +1,9 @@
+# frozen_string_literal: true
+
+json.stores do
+  json.array! @stores do |store|
+    json.name store.name
+    json.slug store.slug
+    json.display_image url_for(store.display_image) if store.display_image.present?
+  end
+end

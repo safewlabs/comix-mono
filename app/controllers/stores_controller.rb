@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 class StoresController < ApplicationController
+  before_action :use_jsx_rendering_defaults, only: [:index]
+
   def index
     stores = Store.order("RANDOM()")
     @pagy, @stores = pagy(stores)

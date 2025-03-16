@@ -1,6 +1,6 @@
 import React, { FC, useState } from 'react';
 import { StoresObj } from './StoresPage';
-// import EyeIcon from '@assets/icons/eye-icon.svg';
+import EyeIcon from '@assets/icons/eye-icon.svg';
 // // import '@assets/stylesheets/newui/storesStyles/storesPageStyling.sass.scss';
 // // import '@assets/stylesheets/newui/shimmerLoader.sass.scss';
 
@@ -21,7 +21,7 @@ const StoresPageElement: FC<StoresPageElementProps> = ({ storesObj }) => {
           onLoad={() => setIsLoaded(true)}
         />
         <div className="eyeWithBackground">
-          {/* <img src={EyeIcon} alt="eye-icon" /> */}
+          <img src={EyeIcon} alt="eye-icon" />
         </div>
       </div>
       <p className="storeName">{storesObj.name}</p>
