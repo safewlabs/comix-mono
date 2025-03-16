@@ -1,12 +1,12 @@
 import React, { FC, useRef } from 'react';
-import Edge from '../../../../assets/background/new-releases-lavender-background-edge.svg';
+import Edge from '@assets/background/new-releases-lavender-background-edge.svg';
 import TitleAndButtons from '@javascript/components/common/TitleAndButtons';
 import Tagline from '@javascript/components/common/Tagline';
 import { handleScroll } from '@javascript/components/common/handleScroll';
 import BackAndForwardButtons from '../../common/BackAndForwardButtons';
 import ComicCard from './ComicCard';
-import '@assets/stylesheets/newui/newReleasesStyles/newReleases.scss';
-import '@assets/stylesheets/newui/titleAndButtons.scss';
+import '@assets/stylesheets/newui/newReleasesStyles/newReleases.sass.scss';
+import '@assets/stylesheets/newui/titleAndButtons.sass.scss';
 
 export interface ComicData {
   name: string;

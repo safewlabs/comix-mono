@@ -4,9 +4,9 @@ import { handleScroll } from '@javascript/components/common/handleScroll';
 import TitleAndButtons from '@javascript/components/common/TitleAndButtons';
 import Tagline from '@javascript/components/common/Tagline';
 import BackAndForwardButtons from '@javascript/components/common/BackAndForwardButtons';
-import '@assets/stylesheets/newui/newReleasesStyles/newReleases.scss';
-import '@assets/stylesheets/newui/titleAndButtons.scss';
-import '@assets/stylesheets/newui/shimmerLoader.scss';
+import '@assets/stylesheets/newui/newReleasesStyles/newReleases.sass.scss';
+import '@assets/stylesheets/newui/titleAndButtons.sass.scss';
+import '@assets/stylesheets/newui/shimmerLoader.sass.scss';
 
 const dummmyList = new Array(20).fill(null);
 

@@ -3,9 +3,9 @@ import BackAndForwardButtons from '@javascript/components/common/BackAndForwardB
 import TitleAndButtons from '@javascript/components/common/TitleAndButtons';
 import Tagline from '@javascript/components/common/Tagline';
 import { handleScroll } from '@javascript/components/common/handleScroll';
-import '@assets/stylesheets/newui/titleAndButtons.scss';
-import '@assets/stylesheets/newui/exploreByGenresStyles/exploreByGenres.scss';
-import '@assets/stylesheets/newui/shimmerLoader.scss';
+import '@assets/stylesheets/newui/titleAndButtons.sass.scss';
+import '@assets/stylesheets/newui/exploreByGenresStyles/exploreByGenres.sass.scss';
+import '@assets/stylesheets/newui/shimmerLoader.sass.scss';
 
 const dummyList = new Array(20).fill(null);
 

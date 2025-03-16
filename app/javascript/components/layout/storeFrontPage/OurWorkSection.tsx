@@ -1,6 +1,6 @@
-import '@assets/stylesheets/newui/storeFrontPageStyles/storeFrontPageWebStyles.sass.scss';
-import { storePageData } from '~/utils/dummyData/storePageData';
 import React, { FC } from 'react';
+import '@assets/stylesheets/newui/storeFrontPageStyles/storeFrontPageWebStyles.sass.scss';
+import { storePageData } from '@javascript/utils/dummyData/storePageData';
 import '@assets/stylesheets/newui/shimmerLoader.sass.scss';
 import '@assets/stylesheets/newui/comicsPageStyles/comicsPage.sass.scss';
 

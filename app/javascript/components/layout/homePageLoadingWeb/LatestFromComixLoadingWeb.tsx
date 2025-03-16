@@ -1,5 +1,5 @@
 import React from 'react';
-import '@assets/stylesheets/newui/latestStyles/latestFromComix.scss';
+import '@assets/stylesheets/newui/latestStyles/latestFromComix.sass.scss';
 import Tagline from '@javascript/components/common/Tagline';
 import TitleAndButtons from '@javascript/components/common/TitleAndButtons';
 

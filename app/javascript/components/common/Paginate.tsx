@@ -1,8 +1,7 @@
-import React from 'react';
-import { FC } from 'react';
-// import { Link } from '@remix-run/react';
-// import BackButtonSvg from '@assets/icons/BackButtonSvg';
-// import ForwardButtonSvg from '@assets/icons/ForwardButtonSvg';
+import React, { FC } from 'react';
+import { Link } from 'react-router-dom'; 
+import BackButtonSvg from '@assets/icons/BackButtonSvg';
+import ForwardButtonSvg from '@assets/icons/ForwardButtonSvg';
 import '@assets/stylesheets/newui/paginateStyles.sass.scss';
 
 export type PaginateProp = {
@@ -18,37 +17,37 @@ const Paginate: FC<PaginateProp> = ({ currentPage }) => {
     >
       {currentPage > 1 && (
         <div className="paginationNumberButtons">
-          {/* <Link
+          <Link
             to={`?page=${currentPage - 1}`}
             aria-label="Go to previous page"
           >
             <BackButtonSvg />
-          </Link> */}
+          </Link>
         </div>
       )}
       <div className="currentPageNumber" aria-current="page">
         {currentPage}
       </div>
       <div className="paginationNumberButtons">
-        {/* <Link
+        <Link
           to={`?page=${currentPage + 1}`}
           aria-label={`Go to page ${currentPage + 1}`}
         >
           {currentPage + 1}
-        </Link> */}
+        </Link>
       </div>
       <div className="paginationNumberButtons">
-        {/* <Link
+        <Link
           to={`?page=${currentPage + 2}`}
           aria-label={`Go to page ${currentPage + 2}`}
         >
           {currentPage + 2}
-        </Link> */}
+        </Link>
       </div>
       <div className="paginationNumberButtons">
-        {/* <Link to={`?page=${currentPage + 1}`} aria-label="Go to next page">
+        <Link to={`?page=${currentPage + 1}`} aria-label="Go to next page">
           <ForwardButtonSvg />
-        </Link> */}
+        </Link>
       </div>
     </div>
   );

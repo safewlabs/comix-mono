@@ -1,5 +1,4 @@
-import React from 'react';
-import { FC } from 'react';
+import React, { FC } from 'react';
 import '@assets/stylesheets/newui/sortingBarStyles/sortingBarWeb.sass.scss';
 import '@assets/stylesheets/newui/shimmerLoader.sass.scss';
 

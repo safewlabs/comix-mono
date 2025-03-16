@@ -3,8 +3,8 @@ import parse from 'html-react-parser';
 import tagIcon from '@assets/icons/tag-icon.svg';
 import { LatestFromComixProps } from './LatestFromComix';
 import { latestFromComixDummyImages } from './LatestFromComix';
-import '@assets/stylesheets/newui/latestStyles/latestFromComix.scss';
-import '@assets/stylesheets/newui/latestStyles/latestFromComixMobileStyles.scss';
+import '@assets/stylesheets/newui/latestStyles/latestFromComix.sass.scss';
+import '@assets/stylesheets/newui/latestStyles/latestFromComixMobileStyles.sass.scss';
 import TitleAndTaglineMobile from '@javascript/components/common/TitleAndTaglineMobile';
 import Button from '@javascript/components/common/Button';
 

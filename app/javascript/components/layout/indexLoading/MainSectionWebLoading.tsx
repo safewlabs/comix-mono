@@ -1,5 +1,5 @@
 import React from 'react';
-import '@assets/stylesheets/newui/mainSection.scss';
+import '@assets/stylesheets/newui/mainSection.sass.scss';
 
 const MainSectionWebLoading = () => {
   return (
