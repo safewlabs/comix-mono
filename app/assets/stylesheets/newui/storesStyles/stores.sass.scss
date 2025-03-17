@@ -1,0 +1,81 @@
+@use '../variables.sass.scss' as *;
+
+.storesWrapperOne {
+  position: relative;
+  padding-top: 80px;
+  width: 100%;
+  height: 700px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url('../../assets/background/stores-background.svg');
+}
+
+.titleButtonsFour {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 96vw;
+}
+
+.storesListOne {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  overflow: auto;
+  height: auto;
+  width: 100%;
+  gap: 16px;
+  position: absolute;
+  padding-left: 30px;
+  padding-right: 30px;
+  top: 210px;
+  scrollbar-width: none;
+}
+
+.storeCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 313px;
+  height: 400px;
+  gap: 16px;
+  @include respond-to('sm', 'max') {
+    width: 174px;
+    height: 218px;
+  }
+  .storeImage {
+    object-fit: contain;
+    width: 313px;
+    height: 313px;
+    background-color: white;
+    border-radius: 16px;
+    border: 1px solid $border-gray;
+    @include respond-to('sm', 'max') {
+      width: 174px;
+      height: 159px;
+    }
+  }
+  .storeTitle {
+    color: $primary-purple;
+    font-size: 18px;
+    font-family: 'JetBrainsMono-Bold';
+    align-self: flex-start;
+    @include respond-to('sm', 'max') {
+      font-size: 15px;
+      align-self: center;
+    }
+  }
+}
+
+.storeTitleShimmerLoader {
+  width: 150px;
+  height: 16px;
+}

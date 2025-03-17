@@ -1,0 +1,214 @@
+@use './variables.sass.scss' as *;
+
+@keyframes shimmer {
+  0% {
+    background-position: -200px 0;
+  }
+  100% {
+    background-position: 200px 0;
+  }
+}
+
+.shimmerDropdown {
+  width: 140px;
+  height: 35px;
+}
+
+.shimmerFilter {
+  margin-top: 30px;
+  width: 255px;
+  height: 920px;
+  border-radius: 8px;
+}
+
+.shimmerFilterCreatorsPage {
+  width: 255px;
+  height: 555px;
+  margin-top: 30px;
+  border-radius: 8px;
+}
+
+.shimmerLoader {
+  background: linear-gradient(to right, #f0f0f0 8%, #e0e0e0 18%, #f0f0f0 33%);
+  background-size: 200px 100%;
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  animation: shimmer 2s infinite linear;
+}
+
+.shimmerLoaderPurple {
+  background: linear-gradient(to right, #efebf2 8%, #f7edff 18%, #efebf2 33%);
+  background-size: 200px 100%;
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  animation: shimmer 2s infinite linear;
+}
+.shimmerComicImage {
+  width: 230px;
+  height: 357px;
+  border-radius: 8px;
+}
+
+.shimmerCreatorCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 188px;
+  height: 300px;
+  gap: 15px;
+}
+
+.shimmerCreatorImage {
+  width: 188px;
+  height: 188px;
+  border-radius: 50%;
+}
+
+.shimmerCreatorNameAndSkills {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 188px;
+  margin-top: 20px;
+  gap: 10px;
+}
+
+.shimmerCreatorName {
+  width: 188px;
+  height: 30px;
+}
+
+.shimmerCreatorSkills {
+  width: 188px;
+  height: 10px;
+}
+
+.creatorNameLoading {
+  width: 94px;
+  height: 18px;
+  margin: 20px 5px 5px 5px;
+}
+
+.storeNameLoading {
+  width: 160px;
+  height: 18px;
+}
+.creatorSkillsLoading {
+  width: 94px;
+  height: 10px;
+  margin-bottom: 3px;
+}
+
+.shimmerStoreImage {
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  @include respond-to('md', 'max') {
+    width: 175px;
+    height: 175px;
+  }
+}
+
+.shimmerStoreName {
+  width: 240px;
+  height: 20px;
+}
+
+.cardContainerMobileShimmer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 539px;
+  width: 563px;
+  position: relative;
+  border-radius: 20px;
+  top: -85px;
+  @include respond-to('sm', 'max') {
+    width: 363px;
+  }
+}
+.cardContainerShimmer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 562px;
+  width: 1392px;
+  position: relative;
+  border-radius: 20px;
+  top: -60px;
+  @include respond-to('sm', 'max') {
+    height: 1859px;
+    width: 363px;
+  }
+  @include respond-to('sm', 'range', 'mdxl') {
+    height: 662px;
+    width: 563px;
+  }
+}
+
+.dropdownMenuSegment {
+  width: 140px;
+  height: 35px;
+}
+
+.dropdownMenuSegmentShimmer {
+  width: 90px;
+  height: 35px;
+}
+
+.newReleaseNameLoading {
+  width: 163px;
+  height: 22px;
+}
+
+.newReleaseStoreLoading {
+  width: 163px;
+  height: 20px;
+}
+
+.genreCardShimmer {
+  min-width: 248px;
+  min-height: 248px;
+}
+
+.storeCardShimmer {
+  width: 313px;
+  height: 313px;
+  border-radius: 16px;
+  @include respond-to('sm', 'max') {
+    width: 174px;
+    height: 159px;
+  }
+}
+
+.storeTitleShimmer {
+  width: 300px;
+  height: 20px;
+  margin-top: 16px;
+}
+
+.creatorSectionNameShimmer {
+  width: 140px;
+  height: 16px;
+  margin-top: 10px;
+}
+.creatorSectionSkillsShimmer {
+  width: 140px;
+  height: 14px;
+  margin-top: 10px;
+}
+
+.creatorSectionNameShimmerMobile {
+  width: 100px;
+  height: 16px;
+  margin-top: 10px;
+}
+.creatorSectionSkillsShimmerMobile {
+  width: 100px;
+  height: 14px;
+  margin-top: 10px;
+}

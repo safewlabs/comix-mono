@@ -1,0 +1,85 @@
+@use './variables.sass.scss' as *;
+
+.filtersContainer {
+  border: 1px solid $main-lavender;
+  width: 255px;
+  height: fit-content;
+  border-radius: 8px;
+  margin-top: 30px;
+  gap: 16px;
+  background-color: $background-lightLavender;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  font-family: 'JetBrainsMono-Bold';
+  color: black;
+  padding: 16px;
+}
+
+.title {
+  font-size: 16px;
+}
+
+.rangeAndButton {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+
+.range {
+  font-family: 'JetBrainsMono-Regular';
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 10px;
+}
+
+.sliderWrapper {
+  width: 100%;
+  margin-bottom: 16px;
+}
+.applyButton {
+  width: 66px;
+  height: 26px;
+  background-color: $button-background;
+  border: 1px solid $border-gray;
+  // border: 1px solid $border-gray;
+  &:hover {
+    border: 1px solid black;
+  }
+}
+
+.dividerLine {
+  width: 223px;
+  border: 0.5px solid $light-accent;
+  height: 1px;
+}
+
+.arrowAndTitle {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+}
+
+.genresList {
+  font-family: 'JetBrainsMono-Regular';
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  font-size: 14px;
+  gap: 16px;
+}
+.genreCheckbox {
+  margin-right: 5px;
+  border: 1px solid $checkbox-gray;
+}

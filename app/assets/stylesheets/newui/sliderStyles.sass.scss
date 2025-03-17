@@ -1,0 +1,10 @@
+@use './variables.sass.scss' as *;
+
+.range-slider .range-slider__range {
+  background: $darker-primary-purple;
+}
+
+.range-slider .range-slider__thumb {
+  border: 1px solid $darker-primary-purple;
+  background-color: $background-lightLavender;
+}

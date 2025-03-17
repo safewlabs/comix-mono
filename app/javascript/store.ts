@@ -1,17 +1,17 @@
-import { configureStore } from "@reduxjs/toolkit";
-import { useDispatch, useSelector, useStore } from "react-redux";
-import { flashSlice } from "./slices/flash";
+import { configureStore } from '@reduxjs/toolkit';
+import { useDispatch, useSelector, useStore } from 'react-redux';
+import { flashSlice } from './slices/flash';
 import {
   beforeVisit,
   beforeFetch,
   beforeRemote,
   rootReducer,
-} from "@thoughtbot/superglue";
+} from '@thoughtbot/superglue';
 
 const { pages, superglue } = rootReducer;
 
 export const store = configureStore({
-  devTools: process.env.NODE_ENV !== "production",
+  devTools: process.env.NODE_ENV !== 'production',
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({
       serializableCheck: {

@@ -1,0 +1,146 @@
+@use './variables.sass.scss' as *;
+
+.ourStoryPageLayoutWrapper {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url('../../assets/background/creators-page-background.svg');
+  padding: 70px 60px;
+  gap: 60px;
+}
+
+.imageAndStoryWrapper1 {
+  position: relative;
+}
+
+.imageAndStoryWrapper2 {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  @include respond-to(xl, 'max') {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    .ourMissionImage {
+      width: 100%;
+    }
+  }
+}
+
+.ourMissionContent {
+  color: $darker-primary-purple;
+  .heading {
+    font-family: 'JetBrainsMono-Bold';
+    font-size: 24px;
+  }
+  .bulletPoints {
+    list-style: disc;
+    font-family: 'JetBrainsMono-light';
+    font-size: 18px;
+    line-height: 40px;
+    padding-left: 18px;
+    @include respond-to(xl, 'max') {
+      font-size: 14px;
+      line-height: 26px;
+    }
+  }
+}
+
+.storyWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  position: absolute;
+  bottom: 50px;
+  left: 50px;
+  color: white;
+  width: 70%;
+  gap: 30px;
+  .ourStoryHeading {
+    font-family: 'JetBrainsMono-Bold';
+    font-size: 4rem;
+  }
+  .ourStoryContent {
+    font-family: 'JetBrainsMono-Regular';
+    font-size: 1.1rem;
+  }
+  @include respond-to(xl, 'max') {
+    width: 100%;
+    padding: 10px;
+    bottom: 20px;
+    left: 0px;
+    gap: 10px;
+    .ourStoryHeading {
+      font-family: 'JetBrainsMono-Bold';
+      font-size: 2rem;
+    }
+    .ourStoryContent {
+      font-family: 'JetBrainsMono-Regular';
+      font-size: 1rem;
+    }
+  }
+}
+
+.howWereDifferentWrapper {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  width: 100%;
+  height: auto;
+  padding: 150px 20px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../../assets/background/how-were-different.svg');
+    background-size: cover;
+    background-position: center;
+    filter: blur(15px);
+    z-index: -2;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: -1;
+  }
+
+  .howWereDifferentText {
+    text-align: center;
+    width: 75%;
+    position: relative;
+    z-index: 1;
+  }
+
+  .howWereDifferentHeading {
+    font-family: 'JetBrainsMono-Bold';
+    font-size: 24px;
+  }
+
+  .howWereDifferentPara {
+    font-family: 'JetBrainsMono-light';
+    font-size: 18px;
+  }
+}

@@ -1,0 +1,68 @@
+@use '../variables.sass.scss' as *;
+
+.forCreatorsWrapperWeb {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: white;
+  width: 100%;
+  height: 680px;
+  margin-top: 80px;
+  @include respond-to(mdxl, 'max') {
+    margin-top: 30px;
+    height: 720px;
+  }
+}
+
+.forCreatorsWrapperMobile {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: white;
+  width: 100%;
+  height: 680px;
+  margin-top: 80px;
+  @include respond-to(mdxl, 'max') {
+    margin-top: 30px;
+    height: 720px;
+  }
+}
+
+.titleButtonsFive {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 96vw;
+}
+
+.stackedCardsWrapperWeb {
+  position: absolute;
+  top: 180px;
+  @include respond-to(mdxl, 'max') {
+    top: 240px;
+  }
+}
+
+.stackedCardsWrapperMobile {
+  top: 280px;
+  @include respond-to(mdxl, 'max') {
+    top: 440px;
+  }
+}
+
+.stackedCardsWrapperScreenMobile {
+  top: 280px;
+  @include respond-to(mdxl, 'max') {
+    top: 240px;
+  }
+}
+
+.joinUsButtonMobile {
+  position: relative;
+  top: 150px;
+}

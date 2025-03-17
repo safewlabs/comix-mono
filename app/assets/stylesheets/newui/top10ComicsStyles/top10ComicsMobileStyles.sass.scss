@@ -1,0 +1,48 @@
+@use '../variables.sass.scss' as *;
+
+.top10ComicsMobileWrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-image: url('/assets/background/top-10-comics-background.svg');
+  background-repeat: repeat-y;
+  background-size: auto;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.cardParentMobile {
+  position: relative;
+}
+.cardGroupMobile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.top10RankNumberMobile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 85px;
+  height: 85px;
+  background-color: $background-faded-purple;
+  position: absolute;
+  top: 79px;
+  left: 22px;
+  z-index: 4;
+  border: 1px solid white;
+  border-radius: 8px 0 8px 0;
+  .number {
+    color: white;
+    font-family: 'JetBrainsMono-Bold';
+    font-size: 56px;
+  }
+}

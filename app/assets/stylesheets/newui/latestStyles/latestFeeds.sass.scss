@@ -1,0 +1,8 @@
+@use '../variables.sass.scss' as *;
+
+.latestFeedsWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 95%;
+}

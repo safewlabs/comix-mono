@@ -1,0 +1,20 @@
+@use './variables.sass.scss' as *;
+
+.webApp {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  font-family: 'JetBrains Mono', monospace;
+  width: 100%;
+}
+
+.applicationTagline {
+  font-family: 'JetBrainsMono-Medium';
+  font-size: 16x;
+  align-self: flex-start;
+  margin-left: 30px;
+  margin-top: 20px;
+  color: $text-gray;
+}
