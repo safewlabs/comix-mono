@@ -2,6 +2,7 @@
 
 class StoresController < ApplicationController
   before_action :use_jsx_rendering_defaults, only: [:index]
+  layout "newui", only: [:index]
 
   def index
     stores = Store.order("RANDOM()")

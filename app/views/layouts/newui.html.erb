@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= yield :title %></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag "application", "trix", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag "newui", "trix", "data-turbo-track": "reload" %>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
+    <%= javascript_include_tag "application", "data-turbo-track": "reload", type: "module" %>
+    <script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=64e2ab109dffd400137beb24&product=sop' async='async'></script>
+    <!--[if (lt IE 9)]><script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/min/tiny-slider.helper.ie8.js"></script><![endif]-->
+    <script async src="https://ga.jspm.io/npm:es-module-shims@1.8.2/dist/es-module-shims.js" data-turbo-track="reload"></script> 
+    <!-- Hotjar Tracking Code for https://www.comix.one -->
+    <script>
+        (function(h,o,t,j,a,r){
+            h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+            h._hjSettings={hjid:3902945,hjsv:6};
+            a=o.getElementsByTagName('head')[0];
+            r=o.createElement('script');r.async=1;
+            r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+            a.appendChild(r);
+        })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+    </script>
+    <%= display_meta_tags(default_meta_tags) %>
+    <% if Rails.env.production? %>
+      <script defer src="https://cloud.umami.is/script.js" data-website-id="0f958b0f-bfdf-4e7e-b6e7-f9a72a07cc37"></script>
+    <% end %>
+  </head>
+
+  <body>
+    <main>
+      <%= yield %>
+    </main>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  </body>
+</html>
