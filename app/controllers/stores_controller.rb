@@ -2,7 +2,9 @@
 
 class StoresController < ApplicationController
   before_action :use_jsx_rendering_defaults, only: [:index]
-  layout "newui", only: [:index]
+  if Flipper.enabled?(:newui)
+    layout "newui", only: [:index]
+  end
 
   def index
     stores = Store.order("RANDOM()")
