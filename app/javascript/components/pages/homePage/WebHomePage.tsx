@@ -8,14 +8,14 @@ import ForCreators from '@javascript/components/layout/forCreators/ForCreators'
 
 const WebHomePage = () => {
   return (
-    <>
-    <Header/>
-    <MainSection/>
-    <FeaturedOn/>
-    <ForCreators/>
-    <AppMarketing/>
-    <Footer/>
-    </>
+    <div className="webApp">
+      <Header/>
+      <MainSection/>
+      <FeaturedOn/>
+      <ForCreators/>
+      <AppMarketing/>
+      <Footer/>
+    </div>
   )
 }
 
