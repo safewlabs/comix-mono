@@ -1,6 +1,11 @@
 # frozen_string_literal: true
 
 class ProfilesController < ApplicationController
+  before_action :use_jsx_rendering_defaults, only: [:index]
+  if Flipper.enabled?(:newui)
+    layout "newui", only: [:index]
+  end
+
   def index
     @pagy, @creator_profiles = pagy(CreatorProfile.includes([:avatar_attachment]).all)
     set_meta_tags title: "Buy Comics",
