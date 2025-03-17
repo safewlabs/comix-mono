@@ -1,0 +1,20 @@
+<%= render(PageTitleComponent.new(title: "Stores Index")) %>
+
+<section>
+  <div class="max-w-screen-xl px-4 py-8 mx-auto sm:px-6 sm:py-12 lg:px-8">
+    <header>
+      <h2 class="text-xl font-bold text-gray-900 sm:text-3xl">
+        Our Stores
+      </h2>
+    </header>
+
+    <ul class="grid gap-4 mt-4 grid-cols-3">
+      <% @stores.each do |store| %>
+        <% cache store do %>
+          <%= render(Stores::CardComponent.new(store: store)) %>
+        <% end %>
+      <% end %>
+    </ul>
+  </div>
+  <%= render(PaginationComponent.new(pagy: @pagy)) %>
+</section>
