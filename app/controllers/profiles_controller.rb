@@ -2,9 +2,7 @@
 
 class ProfilesController < ApplicationController
   before_action :use_jsx_rendering_defaults, only: [:index]
-  if Flipper.enabled?(:newui)
-    layout "newui", only: [:index]
-  end
+  layout "newui", only: [:index]
 
   def index
     @pagy, @creator_profiles = pagy(CreatorProfile.includes([:avatar_attachment]).all)
