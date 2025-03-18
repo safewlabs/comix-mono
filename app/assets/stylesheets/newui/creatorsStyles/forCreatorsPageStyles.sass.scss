@@ -7,7 +7,7 @@
   align-items: center;
   width: 100%;
   padding: 40px;
-  background-image: url('../../assets/background/creators-page-background.svg');
+  background-image: url('../../../background/creators-page-background.svg');
   @include respond-to('md', 'max') {
     margin-top: 100px;
   }

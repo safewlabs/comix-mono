@@ -10,11 +10,11 @@
   align-items: center;
   height: fit-content;
   gap: 30px;
-  background-image: url('../../assets/background/our-creators-mobile-background.svg');
+  // background-image: url('../../assets/background/our-creators-mobile-background.svg');
   background-size: contain;
   background-position: center;
   background-repeat: repeat;
-  margin-bottom: 120px;
+  // margin-bottom: 120px;
   @include respond-to('xs', 'max') {
     .creatorsPageLayoutWrapperMobile {
       gap: 10px;
@@ -29,14 +29,14 @@
   margin: 10px;
 }
 
-.creatorCard {
+.creatorCardMobile {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   width: 153px;
   position: relative;
-  &:hover .eyeWithBackground {
+  &:hover .eyeWithBackgroundMobile {
     opacity: 1;
     z-index: 2;
   }
@@ -45,7 +45,7 @@
   }
 }
 
-.creatorImage {
+.creatorImageMobile {
   width: 153px;
   height: 149px;
   border-radius: 50%;
@@ -58,7 +58,7 @@
   }
 }
 
-.creatorNameAndSkills {
+.creatorNameAndSkillsMobile {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -71,7 +71,7 @@
   }
 }
 
-.creatorName {
+.creatorNameMobile {
   font-family: 'JetBrainsMono-Bold';
   font-size: 16px;
   color: $primary-purple;
@@ -81,7 +81,7 @@
   }
 }
 
-.creatorSkills {
+.creatorSkillsMobile {
   font-family: 'JetBrainsMono-Regular';
   color: $title-mauve;
   font-size: 11px;
@@ -102,7 +102,7 @@
   }
 }
 
-.creatorSkillsBanner {
+.creatorSkillsBannerMobile {
   visibility: hidden;
   position: absolute;
   background-color: $light-accent;
@@ -119,7 +119,7 @@
   }
 }
 
-.eyeWithBackground {
+.eyeWithBackgroundMobile {
   width: 153px;
   height: 149px;
   border-radius: 50%;

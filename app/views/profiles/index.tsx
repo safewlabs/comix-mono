@@ -26,10 +26,10 @@ export default function ProfilesIndex() {
   return (
     <>
       {isWeb && (
-        <WebProfiles />
+        <WebProfiles creatorsPageData={creatorsPageData}/>
       )}
       {isMobile && (
-        <MobileProfiles/>
+        <MobileProfiles creatorsPageData={creatorsPageData}/>
       )}
     </>
   );
