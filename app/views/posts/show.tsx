@@ -3,14 +3,10 @@ import { useContent } from "@thoughtbot/superglue";
 import { useMediaQuery } from "react-responsive";
 import MobilePost from "@javascript/components/pages/posts/show/MobilePost";
 import WebPost from "@javascript/components/pages/posts/show/WebPost";
+import PostType from "@javascript/types/post";
 
 type PostProps = {
-  post: {
-    title: string;
-    body: string;
-    summary: string;
-    article_type: string;
-  };
+  post: PostType;
 };
 
 export default function PostShow() {

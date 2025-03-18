@@ -1,6 +1,9 @@
 # frozen_string_literal: true
 
 class ProductsController < ApplicationController
+  before_action :use_jsx_rendering_defaults, only: [:index]
+  layout "newui", only: [:index]
+
   def show
     @product = Product.includes([:issue_cover_attachment, :store]).find_by(slug: params[:slug])
     if @product.unpublished?
@@ -56,6 +59,7 @@ class ProductsController < ApplicationController
     onboarded_products = Product.includes([:issue_cover_attachment, :store])
                                  .published.where(store: Store.where(user: User.where.not(stripe_user_id: nil)))
     @pagy, @products = pagy(onboarded_products)
+    @pagination = pagy_metadata(@pagy)
     set_meta_tags title: "Buy Comics",
           description: "Buy Comics by Indie Creators",
           keywords: "Comics, Indie comics",
