@@ -61,7 +61,7 @@ const OurCreatorsPageMobile: FC<ProfilesProps> = ({
         >
           <div className="creatorCardMobile">
             <img
-              className="creatorImageMobile"
+              className="creatorImageMobile shimmerLoader"
               src={`https://comix.one${creatorData.avatar}`}
               alt={creatorData.slug}
             />
