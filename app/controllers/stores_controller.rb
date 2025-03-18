@@ -9,6 +9,7 @@ class StoresController < ApplicationController
   def index
     stores = Store.order("RANDOM()")
     @pagy, @stores = pagy(stores)
+    @pagination = pagy_metadata(@pagy)
     set_meta_tags title: "Buy Comics",
           description: "Buy Comics by Indie Creators",
           keywords: "Comics, Indie comics",

@@ -6,6 +6,7 @@ class ProfilesController < ApplicationController
 
   def index
     @pagy, @creator_profiles = pagy(CreatorProfile.includes([:avatar_attachment]).all)
+    @pagination = pagy_metadata(@pagy)
     set_meta_tags title: "Buy Comics",
           description: "Indie Comic Book Creator Index",
           keywords: "Comics, Indie comics, Indie creator",

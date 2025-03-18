@@ -3,6 +3,7 @@ import { useContent } from "@thoughtbot/superglue";
 import { useMediaQuery } from "react-responsive";
 import WebProfiles from "@javascript/components/pages/profiles/WebProfiles";
 import MobileProfiles from "@javascript/components/pages/profiles/MobileProfiles";
+import PaginationTypes from "@javascript/types/pagination";
 
 export interface ProfileTypes {
   name: string;
@@ -17,7 +18,9 @@ export interface ProfilesProps {
 
 export default function ProfilesIndex() {
   const { profiles } = useContent<ProfilesProps>();
-  console.log(profiles)
+  const { pagination } = useContent<PaginationTypes>();
+  console.log(profiles);
+  console.log(pagination);
   const isWeb = useMediaQuery({
     query: "(min-width: 768px)",
   });

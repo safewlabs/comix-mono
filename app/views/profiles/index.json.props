@@ -8,3 +8,7 @@ json.profiles do
     json.avatar url_for(creator_profile.avatar) if creator_profile.avatar.present?
   end
 end
+
+json.pagination do
+  json.extract! @pagination, :prev_url, :next_url, :count, :page, :next
+end
