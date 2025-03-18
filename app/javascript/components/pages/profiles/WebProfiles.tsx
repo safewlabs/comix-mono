@@ -19,9 +19,9 @@ const WebProfiles : FC<WebProfilesProps>= ({creatorsPageData}) => {
   return (
     <>
       <Header/>
-      {/* Write a Sorting function and pass it here */}
+      {/* Write a Sorting function/Fetch sorted data and pass it here */}
       <SortingBar title="OUR CREATORS" onSortChange={() => {}}/> 
-        {/* Pass the sorted data here  */}
+      {/* Pass the sorted data here  */}
       <OurCreatorsPageLayout creatorsPageData={creatorsPageData}/>
       <AppMarketing/>
       <Footer/>

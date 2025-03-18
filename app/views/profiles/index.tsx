@@ -32,7 +32,7 @@ const { profiles: creatorsPageData } = useContent<ProfilesProps>();
         <WebProfiles creatorsPageData={creatorsPageData}/>
       )}
       {isMobile && (
-        <MobileProfiles/>
+        <MobileProfiles creatorsPageData={creatorsPageData}/>
       )}
     </>
   );
