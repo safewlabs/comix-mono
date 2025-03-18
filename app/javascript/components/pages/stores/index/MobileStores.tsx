@@ -4,15 +4,10 @@ import HeaderMobile from '@javascript/components/layout/headerMobile/HeaderMobil
 import AppMarketingMobile from '@javascript/components/layout/appMarketing/AppMarketingMobile';
 import FooterMobile from '@javascript/components/layout/footer/FooterMobile';
 import SortingBarMobile from '@javascript/components/layout/sortingBar/SortingBarMobile';
-
-export interface StoreTypes {
-  name: string;
-  display_image: string;
-  slug: string;
-}
+import StoreType from '@javascript/types/store';
 
 export interface MobileStoresProps {
-  storesPageData: StoreTypes[];
+  storesPageData: StoreType[];
 }
 
 const MobileStores: FC<MobileStoresProps> = ({ storesPageData }) => {

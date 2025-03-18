@@ -3,20 +3,18 @@ import { useContent } from "@thoughtbot/superglue";
 import { useMediaQuery } from "react-responsive";
 import WebStores from "@javascript/components/pages/stores/index/WebStores";
 import MobileStores from "@javascript/components/pages/stores/index/MobileStores";
-
-export interface StoreTypes {
-  name: string;
-  display_image: string;
-  slug: string;
-}
+import PaginationType from "@javascript/types/pagination";
+import StoreType from "@javascript/types/store";
 
 export interface StoresProps {
-  stores: StoreTypes[];
+  stores: StoreType[];
+  pagination: PaginationType;
 }
 
 export default function StoresIndex() {
-  const { stores } = useContent<StoresProps>();
+  const { stores, pagination } = useContent<StoresProps>();
   console.log(stores)
+  console.log(pagination);
   const isWeb = useMediaQuery({
     query: "(min-width: 768px)",
   });

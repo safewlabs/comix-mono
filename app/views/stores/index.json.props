@@ -7,3 +7,7 @@ json.stores do
     json.display_image url_for(store.display_image) if store.display_image.present?
   end
 end
+
+json.pagination do
+  json.extract! @pagination, :prev_url, :next_url, :count, :page, :next
+end

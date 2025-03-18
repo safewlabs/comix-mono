@@ -8,3 +8,7 @@ json.profiles do
     json.skills creator_profile.skills
   end
 end
+
+json.pagination do
+  json.extract! @pagination, :prev_url, :next_url, :count, :page, :next
+end
