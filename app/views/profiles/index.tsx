@@ -1,8 +1,8 @@
 import React from "react";
 import { useContent } from "@thoughtbot/superglue";
 import { useMediaQuery } from "react-responsive";
-import WebProfiles from "@javascript/components/pages/profiles/WebProfiles";
-import MobileProfiles from "@javascript/components/pages/profiles/MobileProfiles";
+import WebProfiles from "@javascript/components/pages/profiles/index/WebProfiles";
+import MobileProfiles from "@javascript/components/pages/profiles/index/MobileProfiles";
 import PaginationType from "@javascript/types/pagination";
 import ProfileType from "@javascript/types/profile";
 
@@ -26,10 +26,10 @@ export default function ProfilesIndex() {
   return (
     <>
       {isWeb && (
-        <WebProfiles creatorsPageData={creatorsPageData}/>
+        <WebProfiles creatorsPageData={profiles}/>
       )}
       {isMobile && (
-        <MobileProfiles creatorsPageData={creatorsPageData}/>
+        <MobileProfiles creatorsPageData={profiles}/>
       )}
     </>
   );
