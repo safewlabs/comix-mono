@@ -2,6 +2,7 @@
 
 class HomeController < ApplicationController
   before_action :use_jsx_rendering_defaults, only: [:index]
+  layout "newui", only: [:index]
 
   def index
     @genres = Genre.published
