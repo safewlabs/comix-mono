@@ -4,7 +4,7 @@ import { useMediaQuery } from "react-responsive";
 import WebProfiles from "@javascript/components/pages/profiles/WebProfiles";
 import MobileProfiles from "@javascript/components/pages/profiles/MobileProfiles";
 import PaginationType from "@javascript/types/pagination";
-import { ProfileType } from "@javascript/types/profile";
+import ProfileType from "@javascript/types/profile";
 
 export interface ProfilesProps {
   profiles: ProfileType[];
