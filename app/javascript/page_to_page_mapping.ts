@@ -3,6 +3,7 @@
 import PostShow from '@views/posts/show';
 import StoreIndex from '@views/stores/index';
 import ProfilesIndex from '@views/profiles/index';
+import HomeIndex from '@views/home/index';
 // Mapping between your props template to Component, you must add to this
 // to register any new page level component you create. If you are using the
 // scaffold, it will auto append the identifers for you.
@@ -34,6 +35,7 @@ const pageIdentifierToPageComponent = {
   'posts/show': PostShow,
   'stores/index': StoreIndex,
   'profiles/index': ProfilesIndex,
+  'home/index': HomeIndex,
 };
 
 export { pageIdentifierToPageComponent };

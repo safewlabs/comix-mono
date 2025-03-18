@@ -3,7 +3,7 @@ import React, { FC } from 'react';
 import ComicsPageList from './ComicsPageList';
 import ComicsPageFilters from './ComicsPageFilters';
 
-export interface PaginationTypes {
+export interface PaginationType {
   prev_url: string;
   next_url: string;
   count: number;

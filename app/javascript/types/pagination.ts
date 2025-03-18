@@ -1,4 +1,4 @@
-export default interface PaginationTypes {
+export default interface PaginationType {
   pagination: {
     prev_url: string;
     next_url: string;

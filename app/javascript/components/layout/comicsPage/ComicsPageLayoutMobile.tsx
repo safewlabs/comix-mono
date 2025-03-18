@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import ComicsPageCardMobile from './ComicsPageCardMobile';
 // import '@assets/stylesheets/newui/comicsPageStyles/comicsPageMobile.sass.scss';
 
-export interface PaginationTypes {
+export interface PaginationType {
   prev_url: string;
   next_url: string;
   count: number;
@@ -21,7 +21,7 @@ export interface ComicsPageType {
 
 export interface ComicsPageLayout {
   data: ComicsPageType[];
-  pagination: PaginationTypes;
+  pagination: PaginationType;
 }
 
 export interface ComicsPageLayoutProps {
