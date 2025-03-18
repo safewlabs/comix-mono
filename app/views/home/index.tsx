@@ -1,8 +1,8 @@
 import React from 'react';
 import { useContent } from '@thoughtbot/superglue';
 import { useMediaQuery } from 'react-responsive';
-import MobileHome from '@javascript/components/pages/home/MobileHome';
-import WebHome from '@javascript/components/pages/home/WebHome';
+import MobileHome from '@javascript/components/pages/home/index/MobileHome';
+import WebHome from '@javascript/components/pages/home/index/WebHome';
 import ProductType from '@javascript/types/product';
 import GenreType from '@javascript/types/genre';
 import StoreType from '@javascript/types/store';
