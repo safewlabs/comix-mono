@@ -9,7 +9,7 @@ GIT
 
 GIT
   remote: https://github.com/faker-ruby/faker.git
-  revision: e50707200cdecb4110e207d87bb1db7b11ad3e7e
+  revision: 4630319305a258660bb19eac47a0017b4128f539
   branch: main
   specs:
     faker (3.5.1)
@@ -102,7 +102,7 @@ GEM
       activerecord (>= 5.2, < 8.2)
       activesupport (>= 5.2, < 8.2)
     aws-eventstream (1.3.2)
-    aws-partitions (1.1063.0)
+    aws-partitions (1.1068.0)
     aws-sdk-core (3.220.1)
       aws-eventstream (~> 1, >= 1.3.0)
       aws-partitions (~> 1, >= 1.992.0)
@@ -213,7 +213,7 @@ GEM
       activesupport (>= 6.1)
     graphiql-rails (1.10.4)
       railties
-    graphql (2.4.11)
+    graphql (2.4.14)
       base64
       fiber-storage
       logger
@@ -223,7 +223,7 @@ GEM
       rails (>= 6.0, < 7.3)
       zeitwerk
     hashie (5.0.0)
-    honeybadger (5.26.4)
+    honeybadger (5.27.0)
       logger
       ostruct
     httparty (0.22.0)
@@ -248,7 +248,7 @@ GEM
     jmespath (1.6.2)
     jsbundling-rails (1.3.1)
       railties (>= 6.0.0)
-    json (2.10.1)
+    json (2.10.2)
     jwt (2.10.1)
       base64
     language_server-protocol (3.17.0.4)
@@ -271,7 +271,7 @@ GEM
       benchmark
       logger
     mini_mime (1.1.5)
-    minitest (5.25.4)
+    minitest (5.25.5)
     monetize (1.13.0)
       money (~> 6.12)
     money (6.19.0)
@@ -306,11 +306,11 @@ GEM
     net-smtp (0.5.1)
       net-protocol
     nio4r (2.7.4)
-    nokogiri (1.18.3-arm64-darwin)
+    nokogiri (1.18.4-arm64-darwin)
       racc (~> 1.4)
-    nokogiri (1.18.3-x86_64-darwin)
+    nokogiri (1.18.4-x86_64-darwin)
       racc (~> 1.4)
-    nokogiri (1.18.3-x86_64-linux-gnu)
+    nokogiri (1.18.4-x86_64-linux-gnu)
       racc (~> 1.4)
     oauth2 (1.4.11)
       faraday (>= 0.17.3, < 3.0)
@@ -327,7 +327,7 @@ GEM
       rack-protection
     orm_adapter (0.5.0)
     ostruct (0.6.1)
-    pagy (9.3.3)
+    pagy (9.3.4)
     parallel (1.26.3)
     parser (3.3.7.1)
       ast (~> 2.4.1)
@@ -358,7 +358,7 @@ GEM
       activesupport (>= 3.0.0)
     raabro (1.4.0)
     racc (1.8.1)
-    rack (3.1.11)
+    rack (3.1.12)
     rack-brotli (2.0.0)
       brotli (>= 0.3)
       rack (>= 3)
@@ -437,7 +437,7 @@ GEM
       rspec-mocks (~> 3.13)
       rspec-support (~> 3.13)
     rspec-support (3.13.2)
-    rubocop (1.73.2)
+    rubocop (1.74.0)
       json (~> 2.3)
       language_server-protocol (~> 3.17.0.2)
       lint_roller (~> 1.1.0)
@@ -448,7 +448,7 @@ GEM
       rubocop-ast (>= 1.38.0, < 2.0)
       ruby-progressbar (~> 1.7)
       unicode-display_width (>= 2.4.0, < 4.0)
-    rubocop-ast (1.38.1)
+    rubocop-ast (1.39.0)
       parser (>= 3.3.1.0)
     rubocop-md (2.0.0)
       lint_roller (~> 1.1)
@@ -469,14 +469,14 @@ GEM
       rack (>= 1.1)
       rubocop (>= 1.72.1, < 2.0)
       rubocop-ast (>= 1.38.0, < 2.0)
-    rubocop-rails_config (1.16.0)
-      rubocop (>= 1.57.0)
-      rubocop-ast (>= 1.26.0)
+    rubocop-rails_config (1.17.0)
+      rubocop (>= 1.72.2)
+      rubocop-ast (>= 1.38.0)
       rubocop-md
-      rubocop-minitest (~> 0.22)
+      rubocop-minitest (~> 0.37)
       rubocop-packaging (~> 0.5)
-      rubocop-performance (~> 1.11)
-      rubocop-rails (~> 2.0)
+      rubocop-performance (~> 1.24)
+      rubocop-rails (~> 2.30)
     rubocop-rspec (3.5.0)
       lint_roller (~> 1.1)
       rubocop (~> 1.72, >= 1.72.1)
@@ -505,7 +505,7 @@ GEM
       railties (>= 6.0.0)
     stringio (3.1.5)
     stripe (13.5.0)
-    superglue (1.1.0)
+    superglue (1.1.1)
       actionpack (>= 7.0, < 9.0)
       form_props (~> 0.2)
       props_template (~> 0.37)
