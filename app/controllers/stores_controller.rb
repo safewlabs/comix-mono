@@ -1,10 +1,8 @@
 # frozen_string_literal: true
 
 class StoresController < ApplicationController
-  before_action :use_jsx_rendering_defaults, only: [:index]
-  if Flipper.enabled?(:newui)
-    layout "newui", only: [:index]
-  end
+  before_action :use_jsx_rendering_defaults
+  layout "newui"
 
   def index
     stores = Store.order("RANDOM()")
