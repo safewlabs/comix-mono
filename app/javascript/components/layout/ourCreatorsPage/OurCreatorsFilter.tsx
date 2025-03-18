@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import DownArrowIcon from '@assets/icons/down-arrow-icon-2.svg';
-import UpArrowIcon from '@assets/icons/up-arrow-icon.svg';
+import DownArrowIcon from '../../icons/DownArrowIcon';
+import UpArrowIcon from '../../icons/UpArrowIcon';
 // import '@assets/stylesheets/newui/filtersStyles.sass.scss';
 
 const skillsList = [
@@ -51,12 +51,9 @@ const OurCreatorsFilter = () => {
   return (
     <div className="filtersContainer">
       <div className="arrowAndTitle">
-        <p className="title">SKILLS</p>
+        <p className="skillsFilterTitle">SKILLS</p>
         <button onClick={() => setShowOptions(!showOptions)}>
-          <img
-            src={showOptions ? DownArrowIcon : UpArrowIcon}
-            alt="toggle-arrow"
-          />
+          {showOptions ? <DownArrowIcon /> : <UpArrowIcon />}
         </button>
       </div>
       <div className="dividerLine"></div>

@@ -31,15 +31,15 @@ const OurCreatorsPageList: FC<OurCreatorsPageLayoutProps> = ({
           href={`https://www.comix.one/profiles/${creatorData.slug}`}
         >
           <AvatarImage
-            src={`https://comix.one${creatorData.avatar}`}
+            src={`https://comix.one/${creatorData.avatar}`}
             alt={creatorData.slug}
           />
-          <div className="eyeWithBackground">
+          <div className="eyeWithBackground1">
             <img src={EyeIcon} alt="eye-icon" />
           </div>
           <div className="creatorNameAndSkills">
             <p className="creatorName">{creatorData.name}</p>
-            {creatorData.skills.length > 30 ? (
+            {creatorData?.skills && creatorData.skills.length > 30 ? (
               <>
                 <p className="creatorSkills">
                   {`${creatorData.skills.slice(0, 30)}...`}
@@ -47,7 +47,7 @@ const OurCreatorsPageList: FC<OurCreatorsPageLayoutProps> = ({
                 <p className="creatorSkillsBanner">{creatorData.skills}</p>
               </>
             ) : (
-              <p className="creatorSkills">{creatorData.skills}</p>
+              <p className="creatorSkills">{creatorData?.skills || ''}</p>
             )}
           </div>
         </a>
