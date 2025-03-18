@@ -1,14 +1,15 @@
 import React, { FC } from 'react';
-import { Link } from 'react-router-dom'; 
+// Remove React Router import
+// import { Link } from 'react-router-dom'; 
 import BackButtonSvg from '@assets/icons/BackButtonSvg';
 import ForwardButtonSvg from '@assets/icons/ForwardButtonSvg';
 // import '@assets/stylesheets/newui/paginateStyles.sass.scss';
 
 export type PaginateProp = {
-  currentPage: number;
+  currentPage?: number;
 };
 
-const Paginate: FC<PaginateProp> = ({ currentPage }) => {
+const Paginate: FC<PaginateProp> = ({ currentPage = 1}) => {
   return (
     <div
       className="paginateWrapper"
@@ -17,37 +18,37 @@ const Paginate: FC<PaginateProp> = ({ currentPage }) => {
     >
       {currentPage > 1 && (
         <div className="paginationNumberButtons">
-          <Link
-            to={`?page=${currentPage - 1}`}
+          <a
+            href={`?page=${currentPage - 1}`}
             aria-label="Go to previous page"
           >
             <BackButtonSvg />
-          </Link>
+          </a>
         </div>
       )}
       <div className="currentPageNumber" aria-current="page">
         {currentPage}
       </div>
       <div className="paginationNumberButtons">
-        <Link
-          to={`?page=${currentPage + 1}`}
+        <a
+          href={`?page=${currentPage + 1}`}
           aria-label={`Go to page ${currentPage + 1}`}
         >
           {currentPage + 1}
-        </Link>
+        </a>
       </div>
       <div className="paginationNumberButtons">
-        <Link
-          to={`?page=${currentPage + 2}`}
+        <a
+          href={`?page=${currentPage + 2}`}
           aria-label={`Go to page ${currentPage + 2}`}
         >
           {currentPage + 2}
-        </Link>
+        </a>
       </div>
       <div className="paginationNumberButtons">
-        <Link to={`?page=${currentPage + 1}`} aria-label="Go to next page">
+        <a href={`?page=${currentPage + 1}`} aria-label="Go to next page">
           <ForwardButtonSvg />
-        </Link>
+        </a>
       </div>
     </div>
   );

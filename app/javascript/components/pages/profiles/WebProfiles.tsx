@@ -4,6 +4,7 @@ import Footer from '@javascript/components/layout/footer/Footer'
 import Header from '@javascript/components/layout/header/Header'
 import SortingBar from '@javascript/components/layout/sortingBar/SortingBar'
 import OurCreatorsPageLayout from '@javascript/components/layout/ourCreatorsPage/OurCreatorsPageLayout'
+import Paginate from '@javascript/components/common/Paginate'
 
 interface ProfileType {
   avatar? : string;
@@ -14,8 +15,10 @@ interface ProfileType {
 
 type WebProfilesProps = {
   creatorsPageData: ProfileType[];
+  pageCount?: number;
 }
-const WebProfiles : FC<WebProfilesProps>= ({creatorsPageData}) => {
+
+const WebProfiles : FC<WebProfilesProps>= ({creatorsPageData, pageCount}) => {
   return (
     <>
       <Header/>
@@ -23,6 +26,7 @@ const WebProfiles : FC<WebProfilesProps>= ({creatorsPageData}) => {
       <SortingBar title="OUR CREATORS" onSortChange={() => {}}/> 
       {/* Pass the sorted data here  */}
       <OurCreatorsPageLayout creatorsPageData={creatorsPageData}/>
+      <Paginate currentPage={pageCount}/>
       <AppMarketing/>
       <Footer/>
     </>
