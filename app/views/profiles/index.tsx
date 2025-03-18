@@ -5,10 +5,10 @@ import WebProfiles from "@javascript/components/pages/profiles/WebProfiles";
 import MobileProfiles from "@javascript/components/pages/profiles/MobileProfiles";
 
 export interface ProfileTypes {
+  avatar?: string;
   name: string;
   skills: string;
   slug: string;
-  avatar: string;
 }
 
 export interface ProfilesProps {
@@ -16,8 +16,8 @@ export interface ProfilesProps {
 }
 
 export default function ProfilesIndex() {
-  const { profiles } = useContent<ProfilesProps>();
-  console.log(profiles)
+const { profiles: creatorsPageData } = useContent<ProfilesProps>();
+  console.log(creatorsPageData)
   const isWeb = useMediaQuery({
     query: "(min-width: 768px)",
   });
@@ -29,7 +29,7 @@ export default function ProfilesIndex() {
   return (
     <>
       {isWeb && (
-        <WebProfiles />
+        <WebProfiles creatorsPageData={creatorsPageData}/>
       )}
       {isMobile && (
         <MobileProfiles/>

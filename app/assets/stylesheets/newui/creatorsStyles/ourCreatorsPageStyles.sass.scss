@@ -6,7 +6,7 @@
   gap: 20px;
   width: 100%;
   padding: 20px;
-  background-image: url('../../assets/background/creators-page-background.svg');
+  background-image: url('/images/creators-page-background.svg');
 }
 
 .creatorsPageListWrapperWeb {
@@ -25,7 +25,7 @@
   width: 188px;
   height: 300px;
   position: relative;
-  &:hover .eyeWithBackground {
+  &:hover .eyeWithBackground1 {
     opacity: 1;
   }
 }
@@ -90,7 +90,7 @@
   z-index: 5;
 }
 
-.eyeWithBackground {
+.eyeWithBackground1 {
   width: 188px;
   height: 188px;
   border-radius: 50%;
