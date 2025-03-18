@@ -9,7 +9,7 @@ import StoreType from '@javascript/types/store';
 import PostType from '@javascript/types/post';
 import ProfileType from '@javascript/types/profile';
 
-export interface StoresProps {
+export interface HomeProps {
   new_releases: ProductType[];
   top_ten: ProductType[];
   genres: GenreType[];
@@ -18,9 +18,9 @@ export interface StoresProps {
   home_profiles: ProfileType[];
 }
 
-export default function StoresIndex() {
+export default function HomeIndex() {
   const { new_releases, top_ten, genres, random_stores, latest_posts, home_profiles } =
-    useContent<StoresProps>();
+    useContent<HomeProps>();
   console.log('new releases', new_releases);
   console.log('top ten', top_ten);
   console.log('genre', genres);
