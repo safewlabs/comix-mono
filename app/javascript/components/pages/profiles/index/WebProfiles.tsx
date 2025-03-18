@@ -4,13 +4,7 @@ import Footer from '@javascript/components/layout/footer/Footer'
 import Header from '@javascript/components/layout/header/Header'
 import SortingBar from '@javascript/components/layout/sortingBar/SortingBar'
 import OurCreatorsPageLayout from '@javascript/components/layout/ourCreatorsPage/OurCreatorsPageLayout'
-
-interface ProfileType {
-  avatar? : string;
-  name: string;
-  skills: string;
-  slug: string
-}
+import ProfileType from '@javascript/types/profile'
 
 type WebProfilesProps = {
   creatorsPageData: ProfileType[];
