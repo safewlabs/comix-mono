@@ -9,7 +9,8 @@ import TitleAndTaglineMobile from '@javascript/components/common/TitleAndTagline
 import Button from '@javascript/components/common/Button';
 
 const LatestFromComixMobile: FC<LatestFromComixProps> = ({
-  latestFromComix,
+  // latestFromComix,
+  latest_posts,
 }) => {
   return (
     <div className="latestComixMobileWrapper">
@@ -18,7 +19,7 @@ const LatestFromComixMobile: FC<LatestFromComixProps> = ({
         tagline="Explore Our Newest Articles, Interviews, And Updates From The Vibrant Universe Of Comix!"
       />
       <div className="cardGroupMobile">
-        {latestFromComix.slice(0, 3).map((latest, index) => (
+        {latest_posts.slice(0, 3).map((latest, index) => (
           <div
             className="latestFromComixCard"
             key={`${crypto.randomUUID()}-${index}`}

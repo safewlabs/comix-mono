@@ -18,6 +18,7 @@ import ExploreByGenres from '@javascript/components/layout/genres/ExploreByGenre
 import Stores from '@javascript/components/layout/stores/Stores';
 import LatestFromComix from '@javascript/components/layout/latestFromComix/LatestFromComix';
 import CreatorsSection from '@javascript/components/layout/creators/CreatorsSection';
+
 type WebHomeProps = {
   new_releases: ProductType[];
   top_ten: ProductType[];
@@ -26,6 +27,7 @@ type WebHomeProps = {
   latest_posts: PostType[];
   home_profiles: ProfileType[];
 };
+
 const WebHome: FC<WebHomeProps> = ({
   new_releases,
   top_ten,
