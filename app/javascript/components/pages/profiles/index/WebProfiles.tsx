@@ -15,10 +15,10 @@ interface ProfileType {
 
 type WebProfilesProps = {
   creatorsPageData: ProfileType[];
-  pageCount?: number;
+  pageNumber?: number;
 }
 
-const WebProfiles : FC<WebProfilesProps>= ({creatorsPageData, pageCount}) => {
+const WebProfiles : FC<WebProfilesProps>= ({creatorsPageData, pageNumber}) => {
   return (
     <>
       <Header/>
@@ -26,7 +26,7 @@ const WebProfiles : FC<WebProfilesProps>= ({creatorsPageData, pageCount}) => {
       <SortingBar title="OUR CREATORS" onSortChange={() => {}}/> 
       {/* Pass the sorted data here  */}
       <OurCreatorsPageLayout creatorsPageData={creatorsPageData}/>
-      <Paginate currentPage={pageCount}/>
+      <Paginate currentPage={pageNumber}/>
       <AppMarketing/>
       <Footer/>
     </>
