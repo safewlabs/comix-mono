@@ -1,16 +1,18 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { useContent } from "@thoughtbot/superglue";
 import { useMediaQuery } from "react-responsive";
 import WebProfiles from "@javascript/components/pages/profiles/index/WebProfiles";
 import MobileProfiles from "@javascript/components/pages/profiles/index/MobileProfiles";
 import ProfileType from "@javascript/types/profile";
+import WebProfilesLoading from "@javascript/components/pages/profiles/index/WebProfilesLoading";
+import MobileProfilesLoading from "@javascript/components/pages/profiles/index/MobileProfilesLoading";
 
 export interface PaginationType {
   count: number;
   next?: number;
   next_url: string;
   page: number;
-  prev_url: string; 
+  prev_url: string;
 }
 
 export interface ProfilesProps {
@@ -19,25 +21,25 @@ export interface ProfilesProps {
 }
 
 export default function ProfilesIndex() {
-  const { profiles: creatorsPageData , pagination} = useContent<ProfilesProps>();
-  const pageNumber = pagination?.page;
+  const { profiles: creatorsPageData, pagination } = useContent<ProfilesProps>();
+  const [loading, setLoading] = useState(true);
+  
+  useEffect(() => {
+    if (creatorsPageData && pagination) {
+      setLoading(false);
+    }
+  }, [creatorsPageData, pagination]);
 
-  console.log(pagination)
-  const isWeb = useMediaQuery({
-    query: "(min-width: 768px)",
-  });
-
-  const isMobile = useMediaQuery({
-    query: "(max-width: 768px)",
-  });
+  const isWeb = useMediaQuery({ query: "(min-width: 768px)" });
+  const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
 
   return (
     <>
       {isWeb && (
-        <WebProfiles creatorsPageData={creatorsPageData} pageNumber={pageNumber}/>
+        loading ? <WebProfilesLoading /> : <WebProfiles creatorsPageData={creatorsPageData} pageNumber={pagination?.page} />
       )}
       {isMobile && (
-        <MobileProfiles creatorsPageData={creatorsPageData} pageNumber={pageNumber}/>
+        loading ? <MobileProfilesLoading /> : <MobileProfiles creatorsPageData={creatorsPageData} pageNumber={pagination?.page} />
       )}
     </>
   );
