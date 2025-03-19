@@ -80,7 +80,7 @@ class Dashboard::ProductsController < Dashboard::BaseController
     end
 
     def stores_grenre_creators
-      @genres = Genre.all
+      @genres = Genre.all.includes([:cover_attachment])
       @creator_profiles = CreatorProfile.all
     end
 end

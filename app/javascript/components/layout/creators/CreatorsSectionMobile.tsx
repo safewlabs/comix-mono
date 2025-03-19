@@ -5,8 +5,8 @@ import Button from '@javascript/components/common/Button';
 // import '@assets/stylesheets/newui/creatorsStyles/creatorsMobile.sass.scss';
 // import '@assets/stylesheets/newui/creatorsStyles/creators.sass.scss';
 
-const CreatorsSectionMobile: FC<CreatorSectionProps> = ({ creatorsData }) => {
-  const creatorsDataArray = creatorsData.data;
+const CreatorsSectionMobile: FC<CreatorSectionProps> = ({ home_profiles }) => {
+  // const creatorsDataArray = creatorsData.data;
 
   return (
     <div className="creatorsMobileWrapper">
@@ -15,7 +15,7 @@ const CreatorsSectionMobile: FC<CreatorSectionProps> = ({ creatorsData }) => {
         tagline="Empowering Creators To Showcase, Sell, And Connect With Their Audience Like Never Before."
       />
       <div className="creatorsList">
-        {creatorsDataArray.slice(0, 6).map((creatorData, index) => (
+        {home_profiles.slice(0, 6).map((creatorData, index) => (
           <div className="creatorImageNameAndTitle" key={index}>
             <img
               className="creatorImage"

@@ -11,7 +11,7 @@ export interface MobileStoresProps {
 }
 
 const MobileStores: FC<MobileStoresProps> = ({ storesPageData }) => {
-  console.log(storesPageData)
+  console.log(storesPageData);
   return (
     <>
       <HeaderMobile />

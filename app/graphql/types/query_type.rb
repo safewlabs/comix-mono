@@ -22,7 +22,7 @@ module Types
     end
 
     def free_comics
-      genre = Genre.find_by(slug: "free-comics")
+      genre = Genre.includes([:cover_attachment]).find_by(slug: "free-comics")
       genre.products.published
     end
 

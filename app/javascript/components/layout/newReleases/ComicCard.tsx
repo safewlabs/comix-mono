@@ -1,11 +1,13 @@
 import React, { FC } from 'react';
-import { ComicData } from './NewReleases';
+// import { ComicData } from './NewReleases';
 import PriceTagIcon from '@assets/icons/price-tag-icon.svg';
+import { ProductType } from '@javascript/types/applicationTypes';
 // import '@assets/stylesheets/newui/newReleasesStyles/newReleases.sass.scss';
 
 export interface ComicCardProps {
   index: number;
-  comicData: ComicData;
+  // comicData: ComicData;
+  comicData: ProductType;
 }
 
 const ComicCard: FC<ComicCardProps> = ({ index, comicData }) => {

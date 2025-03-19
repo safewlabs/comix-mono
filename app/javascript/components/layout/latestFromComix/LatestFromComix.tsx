@@ -6,6 +6,7 @@ import latestDummy2 from '@assets/latestFromComix/latest-from-comix-2.svg';
 import latestDummy3 from '@assets/latestFromComix/latest-from-comix-3.svg';
 import tagIcon from '@assets/icons/tag-icon.svg';
 import parse from 'html-react-parser';
+import { PostType } from '@javascript/types/applicationTypes';
 // import '@assets/stylesheets/newui/latestStyles/latestFromComix.sass.scss';
 
 export const latestFromComixDummyImages = [
@@ -22,10 +23,11 @@ export interface LatestPost {
 }
 
 export interface LatestFromComixProps {
-  latestFromComix: LatestPost[];
+  // latestFromComix: LatestPost[];
+  latest_posts: PostType[];
 }
 
-const LatestFromComix: FC<LatestFromComixProps> = ({ latestFromComix }) => {
+const LatestFromComix: FC<LatestFromComixProps> = ({ latest_posts }) => {
   return (
     <div className="latestFromComixWrapper">
       <div className="titleButtons">
@@ -41,7 +43,7 @@ const LatestFromComix: FC<LatestFromComixProps> = ({ latestFromComix }) => {
         }
       />
       <div className="latestFromComixList">
-        {latestFromComix.slice(0, 3).map((latest, index) => (
+        {latest_posts.slice(0, 3).map((latest, index) => (
           <div
             className="latestFromComixCard"
             key={`${index}-${crypto.randomUUID()}`}

@@ -5,7 +5,8 @@ import Button from '../../common/Button';
 // import '@assets/stylesheets/newui/exploreByGenresStyles/exploreByGenresMobileStyles.sass.scss';
 
 const ExploreByGenresMobile: FC<ExploreByGenresProps> = ({
-  exploreByGenres,
+  // exploreByGenres,
+  genres,
 }) => {
   return (
     <section
@@ -21,7 +22,7 @@ const ExploreByGenresMobile: FC<ExploreByGenresProps> = ({
         role="list"
         aria-label="List of comic genres"
       >
-        {exploreByGenres.map((genre, index) => (
+        {genres.map((genre, index) => (
           <div
             className="genreCardMobile"
             key={index}

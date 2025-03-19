@@ -2,8 +2,8 @@ import React, { FC } from 'react';
 // import '@assets/stylesheets/newui/headerStyles/header.sass.scss';
 
 const NAV_LINK_LABELS_AND_ROUTES = [
-  { label: 'Comics', route: '/comics' },
-  { label: 'Creators', route: '/creators' },
+  { label: 'Comics', route: '/products' },
+  { label: 'Creators', route: '/profiles' },
   { label: 'Stores', route: '/stores' },
   { label: 'Publish', route: '/publish' },
   { label: 'Crowdfunding', route: 'https://diebold.comix.one/' },

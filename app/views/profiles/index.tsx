@@ -3,7 +3,10 @@ import { useContent } from '@thoughtbot/superglue';
 import { useMediaQuery } from 'react-responsive';
 import WebProfiles from '@javascript/components/pages/profiles/index/WebProfiles';
 import MobileProfiles from '@javascript/components/pages/profiles/index/MobileProfiles';
-import { ProfileType, PaginationType } from '@javascript/types/applicationTypes';
+import {
+  ProfileType,
+  PaginationType,
+} from '@javascript/types/applicationTypes';
 import WebProfilesLoading from '@javascript/components/pages/profiles/index/WebProfilesLoading';
 import MobileProfilesLoading from '@javascript/components/pages/profiles/index/MobileProfilesLoading';
 

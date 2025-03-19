@@ -5,7 +5,7 @@ import Button from '@javascript/components/common/Button';
 import StoresCard from './StoresCard';
 // import '@assets/stylesheets/newui/storesStyles/storesMobile.sass.scss';
 
-const StoresMobile: FC<StoresProps> = ({ storesData }) => {
+const StoresMobile: FC<StoresProps> = ({ random_stores }) => {
   return (
     <div className="storesWrapperMobile">
       <TitleAndTaglineMobile
@@ -13,10 +13,10 @@ const StoresMobile: FC<StoresProps> = ({ storesData }) => {
         tagline="Browse And Support Comics Merchandise."
       />
       <div className="storesListTwo">
-        {storesData.map((storeData, index) => (
+        {random_stores.map((storeData, index) => (
           <div key={index}>
             <StoresCard
-              storeImage={storeData.issue_cover}
+              storeImage={storeData.display_image || ''}
               storeTitle={storeData.name}
               storeSlug={storeData.slug}
             />

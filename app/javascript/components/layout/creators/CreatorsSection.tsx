@@ -1,6 +1,7 @@
 import React, { FC } from 'react';
 import TitleAndButtons from '@javascript/components/common/TitleAndButtons';
 import Tagline from '@javascript/components/common/Tagline';
+import { ProfileType } from '@javascript/types/applicationTypes';
 // import '@assets/stylesheets/newui/creatorsStyles/creators.sass.scss';
 
 export interface CreatorData {
@@ -24,23 +25,24 @@ export interface CreatorsData {
 }
 
 export interface CreatorSectionProps {
-  creatorsData: CreatorsData;
+  // creatorsData: CreatorsData;
+  home_profiles: ProfileType[];
 }
 
-const CreatorsSection: FC<CreatorSectionProps> = ({ creatorsData }) => {
-  const creatorsDataArray = creatorsData.data;
+const CreatorsSection: FC<CreatorSectionProps> = ({ home_profiles }) => {
+  // const creatorsDataArray = creatorsData.data;
   return (
     <div className="creatorsSectionWrapper">
       <div className="titleAndButtons">
         <TitleAndButtons
-          routeText={'/creators'}
+          routeText={'/profiles'}
           title={'CREATORS'}
           buttonText={'VIEW ALL'}
         />
       </div>
       <Tagline tagline={'Meet The Creators Behind Your Favorite Comics.'} />
       <div className="creatorsWrapper">
-        {creatorsDataArray.slice(0, 12).map((creatorData, index) => (
+        {home_profiles.slice(0, 12).map((creatorData, index) => (
           <a
             href={`https://www.comix.one/profiles/${creatorData.slug}`}
             key={`${crypto.randomUUID()}-${index}`}

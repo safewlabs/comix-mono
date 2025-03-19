@@ -35,7 +35,7 @@ class ProductsController < ApplicationController
   end
 
   def genres
-    @genre = Genre.find_by(slug: params[:grenre_slug])
+    @genre = Genre.includes([:cover_attachment]).find_by(slug: params[:grenre_slug])
     @pagy, @products = pagy(@genre.products.includes([:issue_cover_attachment, :store]).published)
     set_meta_tags title: "Buy Comics | #{@genre.name}",
           description: "Buy Comics by Indie Creators",

@@ -5,7 +5,7 @@ import ComicCardMobile from '../newReleases/ComicCardMobile';
 import Button from '@javascript/components/common/Button';
 import TitleAndTaglineMobile from '@javascript/components/common/TitleAndTaglineMobile';
 
-const Top10ComicsMobile: FC<Top10Comics> = ({ top10Comics }) => {
+const Top10ComicsMobile: FC<Top10Comics> = ({ top_ten }) => {
   return (
     <div className="top10ComicsMobileWrapper">
       <TitleAndTaglineMobile
@@ -14,7 +14,7 @@ const Top10ComicsMobile: FC<Top10Comics> = ({ top10Comics }) => {
       />
       <div>
         <div className="cardGroupMobile">
-          {top10Comics.map((comic, index) => (
+          {top_ten.map((comic, index) => (
             <div className="cardParentMobile" key={index}>
               <div className="top10RankNumberMobile">
                 <p className="number">{index + 1}</p>
