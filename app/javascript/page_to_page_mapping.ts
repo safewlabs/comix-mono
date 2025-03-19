@@ -2,6 +2,7 @@
 // e.g import PostsEdit from '../views/posts/edit'
 import PostShow from '@views/posts/show';
 import StoreIndex from '@views/stores/index';
+import StoreShow from '@views/stores/show';
 import ProfilesIndex from '@views/profiles/index';
 import HomeIndex from '@views/home/index';
 import ProductsIndex from '@views/products/index';
@@ -35,6 +36,7 @@ import ProductsIndex from '@views/products/index';
 const pageIdentifierToPageComponent = {
   'posts/show': PostShow,
   'stores/index': StoreIndex,
+  'stores/show': StoreShow,
   'profiles/index': ProfilesIndex,
   'home/index': HomeIndex,
   'products/index': ProductsIndex,
