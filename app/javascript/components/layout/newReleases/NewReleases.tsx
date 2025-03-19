@@ -5,6 +5,7 @@ import Tagline from '@javascript/components/common/Tagline';
 import { handleScroll } from '@javascript/components/common/handleScroll';
 import BackAndForwardButtons from '../../common/BackAndForwardButtons';
 import ComicCard from './ComicCard';
+import { ProductType } from '@javascript/types/applicationTypes';
 // import '@assets/stylesheets/newui/newReleasesStyles/newReleases.sass.scss';
 // import '@assets/stylesheets/newui/titleAndButtons.sass.scss';
 
@@ -18,10 +19,11 @@ export interface ComicData {
 }
 
 export interface NewReleasesProps {
-  newReleases: ComicData[];
+  // new_releases: ComicData[];
+  new_releases: ProductType[];
 }
 
-const NewReleases: FC<NewReleasesProps> = ({ newReleases = [] }) => {
+const NewReleases: FC<NewReleasesProps> = ({ new_releases = [] }) => {
   const listWrapperRef = useRef<HTMLDivElement>(null);
   return (
     <div className="newReleasesWrapperOne">
@@ -50,7 +52,7 @@ const NewReleases: FC<NewReleasesProps> = ({ newReleases = [] }) => {
           tagline={'See The Hottest Comics That Everyone’s Talking About.'}
         />
         <div className="newReleasesListWrapperOne" ref={listWrapperRef}>
-          {newReleases.map((newRelease, index) => (
+          {new_releases.map((newRelease, index) => (
             <a
               href={`https://www.comix.one/products/${newRelease.slug}`}
               key={index}

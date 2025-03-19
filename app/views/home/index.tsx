@@ -45,7 +45,14 @@ export default function HomeIndex() {
 
   return (
     <>
-      {isWeb && <WebHome />}
+      {isWeb && (
+        <WebHome
+          new_releases={new_releases}
+          top_ten={top_ten}
+          genres={genres}
+          random_stores={random_stores}
+        />
+      )}
       {isMobile && <MobileHome />}
     </>
   );

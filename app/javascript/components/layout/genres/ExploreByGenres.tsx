@@ -3,6 +3,7 @@ import TitleAndButtons from '../../common/TitleAndButtons';
 import BackAndForwardButtons from '../../common/BackAndForwardButtons';
 import { handleScroll } from '../../common/handleScroll';
 import Tagline from '../../common/Tagline';
+import { GenreType } from '@javascript/types/applicationTypes';
 // import '@assets/stylesheets/newui/titleAndButtons.sass.scss';
 // import '@assets/stylesheets/newui/exploreByGenresStyles/exploreByGenres.sass.scss';
 
@@ -13,10 +14,11 @@ export interface ExploreByGenres {
 }
 
 export interface ExploreByGenresProps {
-  exploreByGenres: ExploreByGenres[];
+  // exploreByGenres: ExploreByGenres[];
+  genres: GenreType[];
 }
 
-const ExploreByGenres: FC<ExploreByGenresProps> = ({ exploreByGenres }) => {
+const ExploreByGenres: FC<ExploreByGenresProps> = ({ genres }) => {
   const exploreByGenresRef = useRef<HTMLDivElement>(null!);
 
   return (
@@ -45,7 +47,7 @@ const ExploreByGenres: FC<ExploreByGenresProps> = ({ exploreByGenres }) => {
         role="list"
         aria-label="List of comic genres"
       >
-        {exploreByGenres.map((genre, index) => (
+        {genres.map((genre, index) => (
           <a
             key={index}
             href={`https://www.comix.one/comics/${genre.slug}`}
