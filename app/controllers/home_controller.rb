@@ -9,9 +9,6 @@ class HomeController < ApplicationController
     @recent_products = onboarded_products.order(created_at: :desc).take(12)
     @creator_profiles = CreatorProfile.includes([:avatar_attachment]).order("RANDOM()").take(8)
     @stores = Store.includes([:display_image_attachment]).order("RANDOM()").take(8)
-    @markosia_store = Store.find(1)
-    @markosia_products = @markosia_store.products.includes([:issue_cover_attachment]).published.order("RANDOM()").take(8)
-
     @posts = Post.published.last(6)
     set_meta_tags title: "Home",
       description: "Comix home",

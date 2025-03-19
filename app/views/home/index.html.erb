@@ -21,28 +21,6 @@
   <div class="max-w-screen-xl px-4 py-2 mx-auto sm:px-6 lg:px-8">
     <header>
       <h2 class="text-xl font-bold text-gray-900 sm:text-3xl">
-        Discover Markosia
-        <%= link_to store_path(@markosia_store),
-              class: "inline-flex items-center justify-center font-extrabold pl-2 underline text-cx-purple hover:text-black text-xl sm:w-auto",
-              data: { "umami-event": "Home-Browse-Marokia-Store-Click" } do %>
-            Browse all <ion-icon name="arrow-forward-outline" class="underline"></ion-icon>
-        <% end %>
-      </h2>
-    </header>
-    <ul class="grid gap-4 mt-4 sm:grid-cols-6 lg:grid-cols-4">
-      <% @markosia_products.each do |product| %>
-        <% cache product do %>
-          <%= render(Products::CardComponent.new(product: product, number_of_products: 4)) %>
-        <% end %>
-      <% end %>
-    </ul>
-  </div>
-</section>
-
-<section class="py-4">
-  <div class="max-w-screen-xl px-4 py-2 mx-auto sm:px-6 lg:px-8">
-    <header>
-      <h2 class="text-xl font-bold text-gray-900 sm:text-3xl">
         New Releases
       </h2>
     </header>
