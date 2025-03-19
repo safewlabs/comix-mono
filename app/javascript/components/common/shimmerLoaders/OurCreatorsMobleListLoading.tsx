@@ -8,8 +8,8 @@ const OurCreatorsMobleListLoading = () => {
   return (
     <div className="creatorsPageLayoutWrapperMobile">
       {dummyCreatorsList.map((index) => (
-        <div key={`${index}-${crypto.randomUUID()}`} className="creatorCard">
-          <img className="creatorImage shimmerLoader" />
+        <div key={`${index}-${crypto.randomUUID()}`} className="creatorCardMobile">
+          <img className="creatorImageMobile shimmerLoader" />
           <div className="creatorNameLoading shimmerLoader"></div>
           <div className="creatorSkillsLoading shimmerLoader"></div>
           <div className="creatorSkillsLoading shimmerLoader"></div>

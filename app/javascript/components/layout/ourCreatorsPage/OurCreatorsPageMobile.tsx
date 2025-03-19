@@ -3,29 +3,6 @@ import EyeIcon from '../../icons/EyeIcon';
 
 // import '@assets/stylesheets/newui/creatorsStyles/ourCreatorsMobileStyles.sass.scss';
 
-// interface PaginationObj {
-//   count: number;
-//   next: number;
-//   next_url: string;
-//   page: number;
-//   prev_url: string;
-// }
-
-// interface CreatorsDataObj {
-//   avatar: string;
-//   name: string;
-//   skills: string;
-//   slug: string;
-// }
-
-// interface CreatorsPagePayload {
-//   data: CreatorsDataObj[];
-//   pagination?: PaginationObj;
-// }
-
-// interface CreatorsPageMobileProps {
-//   creatorsPageData: CreatorsPagePayload;
-// }
 export interface ProfileTypes {
   avatar?: string;
   name: string;
@@ -48,8 +25,6 @@ const OurCreatorsPageMobile: FC<ProfilesProps> = ({
     backgroundSize: 'contain',
     backgroundPosition: 'center',
     backgroundRepeat: 'repeat',
-    paddingTop: '100px',
-    paddingBottom: '120px',
   };
   
   return (
