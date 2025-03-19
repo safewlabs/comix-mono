@@ -59,7 +59,7 @@ class Admin::ProductsController < AdminController
 
     def stores_grenre_creators
       @stores = Store.all
-      @genres = Genre.all
+      @genres = Genre.all.includes([:cover_attachment])
       @creator_profiles = CreatorProfile.all
     end
 end

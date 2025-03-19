@@ -5,7 +5,7 @@ class HomeController < ApplicationController
   layout "newui", only: [:index]
 
   def index
-    @genres = Genre.published
+    @genres = Genre.published.includes([:cover_attachment])
     onboarded_products = Product.includes([:issue_cover_attachment, :store])
                                 .published.where(store: onboarded_stores)
     @onboarded_products = onboarded_products.order("RANDOM()").take(12)
