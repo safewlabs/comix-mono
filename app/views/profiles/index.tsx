@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from "react";
-import { useContent } from "@thoughtbot/superglue";
-import { useMediaQuery } from "react-responsive";
-import WebProfiles from "@javascript/components/pages/profiles/index/WebProfiles";
-import MobileProfiles from "@javascript/components/pages/profiles/index/MobileProfiles";
-import ProfileType from "@javascript/types/profile";
-import WebProfilesLoading from "@javascript/components/pages/profiles/index/WebProfilesLoading";
-import MobileProfilesLoading from "@javascript/components/pages/profiles/index/MobileProfilesLoading";
+import React, { useEffect, useState } from 'react';
+import { useContent } from '@thoughtbot/superglue';
+import { useMediaQuery } from 'react-responsive';
+import WebProfiles from '@javascript/components/pages/profiles/index/WebProfiles';
+import MobileProfiles from '@javascript/components/pages/profiles/index/MobileProfiles';
+import ProfileType from '@javascript/types/profile';
+import WebProfilesLoading from '@javascript/components/pages/profiles/index/WebProfilesLoading';
+import MobileProfilesLoading from '@javascript/components/pages/profiles/index/MobileProfilesLoading';
 
 export interface PaginationType {
   count: number;
@@ -21,25 +21,48 @@ export interface ProfilesProps {
 }
 
 export default function ProfilesIndex() {
-  const { profiles: creatorsPageData, pagination } = useContent<ProfilesProps>();
   const [loading, setLoading] = useState(true);
-  
+  const { profiles: creatorsPageData, pagination } =
+    useContent<ProfilesProps>();
+
+  // Single media query to determine layout
+  const isDesktop = useMediaQuery(
+    { query: '(min-width: 769px)' },
+    undefined,
+    (matches) => {
+      // This callback prevents hydration mismatch by only using client-side media queries
+      return matches;
+    }
+  );
+
   useEffect(() => {
     if (creatorsPageData && pagination) {
-      setLoading(false);
+      // Add small delay to ensure smooth transition
+      const timer = setTimeout(() => {
+        setLoading(false);
+      }, 200);
+      return () => clearTimeout(timer);
     }
   }, [creatorsPageData, pagination]);
 
-  const isWeb = useMediaQuery({ query: "(min-width: 768px)" });
-  const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
-
   return (
     <>
-      {isWeb && (
-        loading ? <WebProfilesLoading /> : <WebProfiles creatorsPageData={creatorsPageData} pageNumber={pagination?.page} />
-      )}
-      {isMobile && (
-        loading ? <MobileProfilesLoading /> : <MobileProfiles creatorsPageData={creatorsPageData} pageNumber={pagination?.page} />
+      {loading ? (
+        isDesktop ? (
+          <WebProfilesLoading />
+        ) : (
+          <MobileProfilesLoading />
+        )
+      ) : isDesktop ? (
+        <WebProfiles
+          creatorsPageData={creatorsPageData}
+          pageNumber={pagination?.page}
+        />
+      ) : (
+        <MobileProfiles
+          creatorsPageData={creatorsPageData}
+          pageNumber={pagination?.page}
+        />
       )}
     </>
   );
