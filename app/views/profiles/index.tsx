@@ -25,7 +25,6 @@ export default function ProfilesIndex() {
   const { profiles: creatorsPageData, pagination } =
     useContent<ProfilesProps>();
 
-  console.log(creatorsPageData);
   // Single media query to determine layout
   const isDesktop = useMediaQuery(
     { query: '(min-width: 769px)' },
