@@ -5,16 +5,10 @@ import SortingBarMobile from '@javascript/components/layout/sortingBar/SortingBa
 import OurCreatorsFilter from '@javascript/components/layout/ourCreatorsPage/OurCreatorsFilter'
 import React, {FC} from 'react'
 import OurCreatorsPageMobile from '@javascript/components/layout/ourCreatorsPage/OurCreatorsPageMobile'
-
-export interface ProfileTypes {
-  avatar?: string;
-  name: string;
-  skills: string;
-  slug: string;
-}
+import ProfileType from '@javascript/types/profile'
 
 export interface ProfilesProps {
-  creatorsPageData: ProfileTypes[];
+  creatorsPageData: ProfileType[];
 }
 
 const MobileProfiles :FC<ProfilesProps>= ({creatorsPageData}) => {

@@ -3,6 +3,7 @@ export default interface ProductType {
     store_name: string,
     price: string,
     slug: string,
+    store_slug?: string,
     created_at: string,
     issue_cover?: string
 }
