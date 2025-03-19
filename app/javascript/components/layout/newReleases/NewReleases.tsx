@@ -35,8 +35,14 @@ const NewReleases: FC<NewReleasesProps> = ({ newReleases = [] }) => {
           />
           <div className="titleAndButtonsCommon">
             <BackAndForwardButtons
-              onBack={() => listWrapperRef.current && handleScroll({current : listWrapperRef.current}, 'left')}
-              onForward={() => listWrapperRef.current && handleScroll({current: listWrapperRef.current}, 'right')}
+              onBack={() =>
+                listWrapperRef.current &&
+                handleScroll({ current: listWrapperRef.current }, 'left')
+              }
+              onForward={() =>
+                listWrapperRef.current &&
+                handleScroll({ current: listWrapperRef.current }, 'right')
+              }
             />
           </div>
         </div>
