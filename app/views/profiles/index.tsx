@@ -3,17 +3,9 @@ import { useContent } from '@thoughtbot/superglue';
 import { useMediaQuery } from 'react-responsive';
 import WebProfiles from '@javascript/components/pages/profiles/index/WebProfiles';
 import MobileProfiles from '@javascript/components/pages/profiles/index/MobileProfiles';
-import ProfileType from '@javascript/types/profile';
+import { ProfileType, PaginationType } from '@javascript/types/applicationTypes';
 import WebProfilesLoading from '@javascript/components/pages/profiles/index/WebProfilesLoading';
 import MobileProfilesLoading from '@javascript/components/pages/profiles/index/MobileProfilesLoading';
-
-export interface PaginationType {
-  count: number;
-  next?: number;
-  next_url: string;
-  page: number;
-  prev_url: string;
-}
 
 export interface ProfilesProps {
   profiles: ProfileType[];

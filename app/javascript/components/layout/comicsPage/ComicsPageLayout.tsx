@@ -2,26 +2,10 @@ import React, { FC } from 'react';
 // import '@assets/stylesheets/newui/comicsPageStyles/comicsPage.sass.scss';
 import ComicsPageList from './ComicsPageList';
 import ComicsPageFilters from './ComicsPageFilters';
-
-export interface PaginationType {
-  prev_url: string;
-  next_url: string;
-  count: number;
-  page: number;
-  next: number;
-}
-
-export interface ComicsPageType {
-  name: string;
-  slug: string;
-  price: string;
-  store_name: string;
-  store_slug: string;
-  avatar: string;
-}
+import { ProductType } from '@javascript/types/applicationTypes';
 
 export interface ComicsPageLayoutProps {
-  latestComics: ComicsPageType[];
+  latestComics: ProductType[];
 }
 
 const ComicsPageLayout: FC<ComicsPageLayoutProps> = ({ latestComics }) => {

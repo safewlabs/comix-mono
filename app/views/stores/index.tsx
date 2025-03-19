@@ -3,8 +3,7 @@ import { useContent } from "@thoughtbot/superglue";
 import { useMediaQuery } from "react-responsive";
 import WebStores from "@javascript/components/pages/stores/index/WebStores";
 import MobileStores from "@javascript/components/pages/stores/index/MobileStores";
-import PaginationType from "@javascript/types/pagination";
-import StoreType from "@javascript/types/store";
+import { PaginationType, StoreType } from "@javascript/types/applicationTypes";
 
 export interface StoresProps {
   stores: StoreType[];
