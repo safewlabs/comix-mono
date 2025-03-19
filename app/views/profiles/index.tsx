@@ -1,16 +1,18 @@
-import React from "react";
-import { useContent } from "@thoughtbot/superglue";
-import { useMediaQuery } from "react-responsive";
-import WebProfiles from "@javascript/components/pages/profiles/index/WebProfiles";
-import MobileProfiles from "@javascript/components/pages/profiles/index/MobileProfiles";
-import ProfileType from "@javascript/types/profile";
+import React, { useEffect, useState } from 'react';
+import { useContent } from '@thoughtbot/superglue';
+import { useMediaQuery } from 'react-responsive';
+import WebProfiles from '@javascript/components/pages/profiles/index/WebProfiles';
+import MobileProfiles from '@javascript/components/pages/profiles/index/MobileProfiles';
+import ProfileType from '@javascript/types/profile';
+import WebProfilesLoading from '@javascript/components/pages/profiles/index/WebProfilesLoading';
+import MobileProfilesLoading from '@javascript/components/pages/profiles/index/MobileProfilesLoading';
 
 export interface PaginationType {
   count: number;
   next?: number;
   next_url: string;
   page: number;
-  prev_url: string; 
+  prev_url: string;
 }
 
 export interface ProfilesProps {
@@ -19,25 +21,48 @@ export interface ProfilesProps {
 }
 
 export default function ProfilesIndex() {
-  const { profiles: creatorsPageData , pagination} = useContent<ProfilesProps>();
-  const pageNumber = pagination?.page;
+  const [loading, setLoading] = useState(true);
+  const { profiles: creatorsPageData, pagination } =
+    useContent<ProfilesProps>();
 
-  console.log(pagination)
-  const isWeb = useMediaQuery({
-    query: "(min-width: 768px)",
-  });
+  // Single media query to determine layout
+  const isDesktop = useMediaQuery(
+    { query: '(min-width: 769px)' },
+    undefined,
+    (matches) => {
+      // This callback prevents hydration mismatch by only using client-side media queries
+      return matches;
+    }
+  );
 
-  const isMobile = useMediaQuery({
-    query: "(max-width: 768px)",
-  });
+  useEffect(() => {
+    if (creatorsPageData && pagination) {
+      // Add small delay to ensure smooth transition
+      const timer = setTimeout(() => {
+        setLoading(false);
+      }, 200);
+      return () => clearTimeout(timer);
+    }
+  }, [creatorsPageData, pagination]);
 
   return (
     <>
-      {isWeb && (
-        <WebProfiles creatorsPageData={creatorsPageData} pageNumber={pageNumber}/>
-      )}
-      {isMobile && (
-        <MobileProfiles creatorsPageData={creatorsPageData} pageNumber={pageNumber}/>
+      {loading ? (
+        isDesktop ? (
+          <WebProfilesLoading />
+        ) : (
+          <MobileProfilesLoading />
+        )
+      ) : isDesktop ? (
+        <WebProfiles
+          creatorsPageData={creatorsPageData}
+          pageNumber={pagination?.page}
+        />
+      ) : (
+        <MobileProfiles
+          creatorsPageData={creatorsPageData}
+          pageNumber={pagination?.page}
+        />
       )}
     </>
   );
