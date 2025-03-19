@@ -5,9 +5,9 @@ import Tagline from '@javascript/components/common/Tagline';
 
 export interface CreatorData {
   name: string;
-  slug: string;
   skills: string;
-  avatar: string;
+  slug: string;
+  avatar?: string;
 }
 
 export interface Pagination {

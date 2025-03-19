@@ -13,8 +13,9 @@ export interface ComicData {
   store_name: string;
   price: string;
   slug: string;
+  store_slug?: string;
   created_at: string;
-  issue_cover: string;
+  issue_cover?: string;
 }
 
 export interface NewReleasesProps {
@@ -35,8 +36,14 @@ const NewReleases: FC<NewReleasesProps> = ({ newReleases = [] }) => {
           />
           <div className="titleAndButtonsCommon">
             <BackAndForwardButtons
-              onBack={() => listWrapperRef.current && handleScroll({current : listWrapperRef.current}, 'left')}
-              onForward={() => listWrapperRef.current && handleScroll({current: listWrapperRef.current}, 'right')}
+              onBack={() =>
+                listWrapperRef.current &&
+                handleScroll({ current: listWrapperRef.current }, 'left')
+              }
+              onForward={() =>
+                listWrapperRef.current &&
+                handleScroll({ current: listWrapperRef.current }, 'right')
+              }
             />
           </div>
         </div>

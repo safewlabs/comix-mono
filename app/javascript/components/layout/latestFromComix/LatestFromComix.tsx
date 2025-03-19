@@ -15,10 +15,11 @@ export const latestFromComixDummyImages = [
 ];
 export interface LatestPost {
   title: string;
-  article_type: string;
+  body?: string;
   summary: string;
-  slug: string;
-  created_at: string;
+  slug?: string;
+  created_at?: string;
+  article_type: string;
 }
 
 export interface LatestFromComixProps {

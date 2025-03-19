@@ -1,11 +1,11 @@
 // import '@assets/stylesheets/newui/top10ComicsStyles/top10ComicsMobileStyles.sass.scss';
 import React, { FC } from 'react';
-import { Top10Comics } from './Top10Comics';
+import { Top10ComicsProps } from './Top10Comics';
 import ComicCardMobile from '../newReleases/ComicCardMobile';
 import Button from '@javascript/components/common/Button';
 import TitleAndTaglineMobile from '@javascript/components/common/TitleAndTaglineMobile';
 
-const Top10ComicsMobile: FC<Top10Comics> = ({ top10Comics }) => {
+const Top10ComicsMobile: FC<Top10ComicsProps> = ({ top10Comics }) => {
   return (
     <div className="top10ComicsMobileWrapper">
       <TitleAndTaglineMobile

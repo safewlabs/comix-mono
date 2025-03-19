@@ -6,8 +6,8 @@ import StoresCard from './StoresCard';
 
 export interface StoreTypes {
   name: string;
-  issue_cover: string;
   slug: string;
+  display_image?: string;
 }
 
 export interface StoresProps {
@@ -33,7 +33,7 @@ const Stores: FC<StoresProps> = ({ storesData }) => {
           >
             <div>
               <StoresCard
-                storeImage={storeData.issue_cover}
+                storeImage={storeData.display_image || ''}
                 storeTitle={storeData.name}
                 storeSlug={storeData.slug}
               />

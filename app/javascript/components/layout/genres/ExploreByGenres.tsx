@@ -7,9 +7,9 @@ import Tagline from '../../common/Tagline';
 // import '@assets/stylesheets/newui/exploreByGenresStyles/exploreByGenres.sass.scss';
 
 export interface ExploreByGenres {
-  cover?: string;
   name: string;
   slug: string;
+  cover?: string;
 }
 
 export interface ExploreByGenresProps {

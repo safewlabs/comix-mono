@@ -1,31 +1,33 @@
-import React, { FC } from 'react'
-import AppMarketing from '@javascript/components/layout/appMarketing/AppMarketing'
-import Footer from '@javascript/components/layout/footer/Footer'
-import Header from '@javascript/components/layout/header/Header'
-import SortingBar from '@javascript/components/layout/sortingBar/SortingBar'
-import OurCreatorsPageLayout from '@javascript/components/layout/ourCreatorsPage/OurCreatorsPageLayout'
-import Paginate from '@javascript/components/common/Paginate'
-import { ProfileType } from '@javascript/types/applicationTypes'
-
+import React, { FC } from 'react';
+import AppMarketing from '@javascript/components/layout/appMarketing/AppMarketing';
+import Footer from '@javascript/components/layout/footer/Footer';
+import Header from '@javascript/components/layout/header/Header';
+import SortingBar from '@javascript/components/layout/sortingBar/SortingBar';
+import OurCreatorsPageLayout from '@javascript/components/layout/ourCreatorsPage/OurCreatorsPageLayout';
+import Paginate from '@javascript/components/common/Paginate';
+import { ProfileType } from '@javascript/types/applicationTypes';
 
 type WebProfilesProps = {
   creatorsPageData: ProfileType[];
   pageNumber?: number;
-}
+};
 
-const WebProfiles : FC<WebProfilesProps>= ({creatorsPageData, pageNumber}) => {
+const WebProfiles: FC<WebProfilesProps> = ({
+  creatorsPageData,
+  pageNumber,
+}) => {
   return (
     <>
-      <Header/>
+      <Header />
       {/* Write a Sorting function/Fetch sorted data and pass it here */}
-      <SortingBar title="OUR CREATORS" onSortChange={() => {}}/> 
+      <SortingBar title="OUR CREATORS" onSortChange={() => {}} />
       {/* Pass the sorted data here  */}
-      <OurCreatorsPageLayout creatorsPageData={creatorsPageData}/>
-      <Paginate currentPage={pageNumber}/>
-      <AppMarketing/>
-      <Footer/>
+      <OurCreatorsPageLayout creatorsPageData={creatorsPageData} />
+      <Paginate currentPage={pageNumber} />
+      <AppMarketing />
+      <Footer />
     </>
-  )
-}
+  );
+};
 
-export default WebProfiles
+export default WebProfiles;

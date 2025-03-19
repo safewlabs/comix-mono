@@ -15,11 +15,11 @@ export interface Top10Comic {
   created_at: string;
   issue_cover: string;
 }
-export interface Top10Comics {
+export interface Top10ComicsProps {
   top10Comics: Top10Comic[];
 }
 
-const Top10Comics: FC<Top10Comics> = ({ top10Comics }) => {
+const Top10Comics: FC<Top10ComicsProps> = ({ top10Comics }) => {
   const top10ComicsWrapperRef = useRef<HTMLDivElement>(null);
   return (
     <div className="top10ComicsWrapperWeb">
@@ -31,8 +31,14 @@ const Top10Comics: FC<Top10Comics> = ({ top10Comics }) => {
         />
         <div className="titleAndButtons">
           <BackAndForwardButtons
-            onBack={() => top10ComicsWrapperRef.current && handleScroll({current : top10ComicsWrapperRef.current}, 'left')}
-            onForward={() => top10ComicsWrapperRef.current && handleScroll({current: top10ComicsWrapperRef.current}, 'right')}
+            onBack={() =>
+              top10ComicsWrapperRef.current &&
+              handleScroll({ current: top10ComicsWrapperRef.current }, 'left')
+            }
+            onForward={() =>
+              top10ComicsWrapperRef.current &&
+              handleScroll({ current: top10ComicsWrapperRef.current }, 'right')
+            }
           />
         </div>
       </div>
