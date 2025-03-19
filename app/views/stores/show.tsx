@@ -1,10 +1,9 @@
 import React from "react";
 import { useContent } from "@thoughtbot/superglue";
 import { useMediaQuery } from "react-responsive";
-import StoreType from "@javascript/types/store";
-import ProductType from "@javascript/types/product";
 import WebStore from "@javascript/components/pages/stores/show/WebStore";
 import MobileStore from "@javascript/components/pages/stores/show/MobileStore";
+import { ProductType, StoreType } from "@javascript/types/applicationTypes";
 
 type StoreProps = {
   store: StoreType,

@@ -1,26 +1,10 @@
 import React, { FC } from 'react';
 import ComicsPageCardMobile from './ComicsPageCardMobile';
+import { PaginationType, ProductType } from '@javascript/types/applicationTypes';
 // import '@assets/stylesheets/newui/comicsPageStyles/comicsPageMobile.sass.scss';
 
-export interface PaginationType {
-  prev_url: string;
-  next_url: string;
-  count: number;
-  page: number;
-  next: number;
-}
-
-export interface ComicsPageType {
-  avatar: string;
-  name: string;
-  price: string;
-  slug: string;
-  store_name: string;
-  store_slug: string;
-}
-
 export interface ComicsPageLayout {
-  data: ComicsPageType[];
+  data: ProductType[];
   pagination: PaginationType;
 }
 

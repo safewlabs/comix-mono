@@ -5,13 +5,8 @@ import Header from '@javascript/components/layout/header/Header'
 import SortingBar from '@javascript/components/layout/sortingBar/SortingBar'
 import OurCreatorsPageLayout from '@javascript/components/layout/ourCreatorsPage/OurCreatorsPageLayout'
 import Paginate from '@javascript/components/common/Paginate'
+import { ProfileType } from '@javascript/types/applicationTypes'
 
-interface ProfileType {
-  avatar? : string;
-  name: string;
-  skills: string;
-  slug: string
-}
 
 type WebProfilesProps = {
   creatorsPageData: ProfileType[];

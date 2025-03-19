@@ -3,7 +3,7 @@ import { useContent } from "@thoughtbot/superglue";
 import { useMediaQuery } from "react-responsive";
 import MobilePost from "@javascript/components/pages/posts/show/MobilePost";
 import WebPost from "@javascript/components/pages/posts/show/WebPost";
-import PostType from "@javascript/types/post";
+import { PostType } from "@javascript/types/applicationTypes";
 
 type PostProps = {
   post: PostType;

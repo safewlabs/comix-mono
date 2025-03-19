@@ -4,7 +4,7 @@ import HeaderMobile from '@javascript/components/layout/headerMobile/HeaderMobil
 import AppMarketingMobile from '@javascript/components/layout/appMarketing/AppMarketingMobile';
 import FooterMobile from '@javascript/components/layout/footer/FooterMobile';
 import SortingBarMobile from '@javascript/components/layout/sortingBar/SortingBarMobile';
-import StoreType from '@javascript/types/store';
+import { StoreType } from '@javascript/types/applicationTypes';
 
 export interface MobileStoresProps {
   storesPageData: StoreType[];

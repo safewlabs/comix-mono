@@ -3,11 +3,13 @@ import { useContent } from '@thoughtbot/superglue';
 import { useMediaQuery } from 'react-responsive';
 import MobileHome from '@javascript/components/pages/home/index/MobileHome';
 import WebHome from '@javascript/components/pages/home/index/WebHome';
-import ProductType from '@javascript/types/product';
-import GenreType from '@javascript/types/genre';
-import StoreType from '@javascript/types/store';
-import PostType from '@javascript/types/post';
-import ProfileType from '@javascript/types/profile';
+import {
+  ProductType,
+  GenreType,
+  StoreType,
+  PostType,
+  ProfileType,
+} from '@javascript/types/applicationTypes';
 
 export interface HomeProps {
   new_releases: ProductType[];
@@ -19,8 +21,14 @@ export interface HomeProps {
 }
 
 export default function HomeIndex() {
-  const { new_releases, top_ten, genres, random_stores, latest_posts, home_profiles } =
-    useContent<HomeProps>();
+  const {
+    new_releases,
+    top_ten,
+    genres,
+    random_stores,
+    latest_posts,
+    home_profiles,
+  } = useContent<HomeProps>();
   console.log('new releases', new_releases);
   console.log('top ten', top_ten);
   console.log('genre', genres);

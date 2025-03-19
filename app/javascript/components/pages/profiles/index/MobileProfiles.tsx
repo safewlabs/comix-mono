@@ -5,8 +5,8 @@ import SortingBarMobile from '@javascript/components/layout/sortingBar/SortingBa
 import OurCreatorsFilter from '@javascript/components/layout/ourCreatorsPage/OurCreatorsFilter'
 import React, {FC} from 'react'
 import OurCreatorsPageMobile from '@javascript/components/layout/ourCreatorsPage/OurCreatorsPageMobile'
-import ProfileType from '@javascript/types/profile'
 import Paginate from '@javascript/components/common/Paginate'
+import { ProfileType } from '@javascript/types/applicationTypes'
 
 export interface ProfilesProps {
   creatorsPageData: ProfileType[];
