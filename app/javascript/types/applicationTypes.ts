@@ -17,6 +17,7 @@ export interface PostType {
   body: string;
   summary: string;
   article_type: string;
+  slug?: string;
 }
 
 export interface ProductType {

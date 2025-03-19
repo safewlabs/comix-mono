@@ -51,6 +51,8 @@ export default function HomeIndex() {
           top_ten={top_ten}
           genres={genres}
           random_stores={random_stores}
+          latest_posts={latest_posts}
+          home_profiles={home_profiles}
         />
       )}
       {isMobile && <MobileHome />}

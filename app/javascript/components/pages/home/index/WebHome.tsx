@@ -10,21 +10,29 @@ import {
   GenreType,
   ProductType,
   StoreType,
+  PostType,
+  ProfileType,
 } from '@javascript/types/applicationTypes';
 import Top10Comics from '@javascript/components/layout/top10Comics/Top10Comics';
 import ExploreByGenres from '@javascript/components/layout/genres/ExploreByGenres';
 import Stores from '@javascript/components/layout/stores/Stores';
+import LatestFromComix from '@javascript/components/layout/latestFromComix/LatestFromComix';
+import CreatorsSection from '@javascript/components/layout/creators/CreatorsSection';
 type WebHomeProps = {
   new_releases: ProductType[];
   top_ten: ProductType[];
   genres: GenreType[];
   random_stores: StoreType[];
+  latest_posts: PostType[];
+  home_profiles: ProfileType[];
 };
 const WebHome: FC<WebHomeProps> = ({
   new_releases,
   top_ten,
   genres,
   random_stores,
+  latest_posts,
+  home_profiles,
 }) => {
   return (
     <div className="webApp">
@@ -36,6 +44,8 @@ const WebHome: FC<WebHomeProps> = ({
       <FeaturedOn />
       <Stores random_stores={random_stores} />
       <ForCreators />
+      <LatestFromComix latest_posts={latest_posts} />
+      <CreatorsSection home_profiles={home_profiles} />
       <AppMarketing />
       <Footer />
     </div>
