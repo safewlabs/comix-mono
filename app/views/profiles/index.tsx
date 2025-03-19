@@ -20,8 +20,9 @@ export interface ProfilesProps {
 
 export default function ProfilesIndex() {
   const { profiles: creatorsPageData , pagination} = useContent<ProfilesProps>();
-  const pageCount = pagination?.count;
+  const pageNumber = pagination?.page;
 
+  console.log(pagination)
   const isWeb = useMediaQuery({
     query: "(min-width: 768px)",
   });
@@ -33,10 +34,10 @@ export default function ProfilesIndex() {
   return (
     <>
       {isWeb && (
-        <WebProfiles creatorsPageData={creatorsPageData} pageCount={pageCount}/>
+        <WebProfiles creatorsPageData={creatorsPageData} pageNumber={pageNumber}/>
       )}
       {isMobile && (
-        <MobileProfiles creatorsPageData={creatorsPageData}/>
+        <MobileProfiles creatorsPageData={creatorsPageData} pageNumber={pageNumber}/>
       )}
     </>
   );

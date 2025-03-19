@@ -6,12 +6,14 @@ import OurCreatorsFilter from '@javascript/components/layout/ourCreatorsPage/Our
 import React, {FC} from 'react'
 import OurCreatorsPageMobile from '@javascript/components/layout/ourCreatorsPage/OurCreatorsPageMobile'
 import ProfileType from '@javascript/types/profile'
+import Paginate from '@javascript/components/common/Paginate'
 
 export interface ProfilesProps {
   creatorsPageData: ProfileType[];
+  pageNumber?: number;
 }
 
-const MobileProfiles :FC<ProfilesProps>= ({creatorsPageData}) => {
+const MobileProfiles :FC<ProfilesProps>= ({creatorsPageData, pageNumber}) => {
   return (
     <>
     <HeaderMobile/>
@@ -21,6 +23,7 @@ const MobileProfiles :FC<ProfilesProps>= ({creatorsPageData}) => {
     </SortingBarMobile>    
     {/* Pass the sorted data here  */}
     <OurCreatorsPageMobile creatorsPageData={creatorsPageData}/>
+    <Paginate currentPage={pageNumber}/>
     <AppMarketingMobile/>
     <FooterMobile/>
     </>
