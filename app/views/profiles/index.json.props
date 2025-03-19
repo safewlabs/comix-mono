@@ -2,10 +2,14 @@
 
 json.profiles do
   json.array! @creator_profiles do |creator_profile|
-    json.avatar url_for(creator_profile.avatar) if creator_profile.avatar.present?
     json.name creator_profile.name
     json.slug creator_profile.slug
     json.skills creator_profile.skills
+    if creator_profile.avatar.present?
+      json.avatar url_for(creator_profile.avatar) 
+    else
+      json.avatar "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+    end
   end
 end
 
