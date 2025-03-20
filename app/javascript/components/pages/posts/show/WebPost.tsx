@@ -1,3 +1,6 @@
+import AppMarketing from '@javascript/components/layout/appMarketing/AppMarketing';
+import Footer from '@javascript/components/layout/footer/Footer';
+import Header from '@javascript/components/layout/header/Header';
 import React, { FC } from 'react';
 
 export type PostProps = {
@@ -9,7 +12,13 @@ export type PostProps = {
 
 const WebPost: FC<PostProps> = ({ title, body, summary, article_type }) => {
   console.log(title, body, summary, article_type);
-  return <div>WebPost</div>;
+  return (
+    <div>
+      <Header />
+      <AppMarketing />
+      <Footer />
+    </div>
+  );
 };
 
 export default WebPost;
