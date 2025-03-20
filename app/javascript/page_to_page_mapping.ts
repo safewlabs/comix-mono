@@ -6,6 +6,7 @@ import StoreShow from '@views/stores/show';
 import ProfilesIndex from '@views/profiles/index';
 import HomeIndex from '@views/home/index';
 import ProductsIndex from '@views/products/index';
+import ForCreators from '@views/static_pages/for_creators';
 // Mapping between your props template to Component, you must add to this
 // to register any new page level component you create. If you are using the
 // scaffold, it will auto append the identifers for you.
@@ -40,6 +41,7 @@ const pageIdentifierToPageComponent = {
   'profiles/index': ProfilesIndex,
   'home/index': HomeIndex,
   'products/index': ProductsIndex,
+  'static_pages/for_creators': ForCreators,
 };
 
 export { pageIdentifierToPageComponent };

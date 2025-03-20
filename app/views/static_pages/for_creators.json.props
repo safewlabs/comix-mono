@@ -1,0 +1,5 @@
+# frozen_string_literal: true
+
+json.static_pages do
+  json.title "For Creators"
+end
