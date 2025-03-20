@@ -38,7 +38,6 @@ export default function PurchaseShow() {
               plugins={[themePluginInstance]}
               theme={currentTheme}
             />
-            ;
           </ThemeContext.Provider>
           <Viewer
             fileUrl={product_url}
