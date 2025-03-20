@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class PagesController < ApplicationController
+class StaticPagesController < ApplicationController
   def about
     set_meta_tags title: "Our Story",
       description: "Our Story page",
