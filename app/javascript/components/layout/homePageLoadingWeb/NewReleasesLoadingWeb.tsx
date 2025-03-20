@@ -1,9 +1,9 @@
 import React, { useRef } from 'react';
-import Edge from '@assets/stylesheets/newui/background/new-releases-lavender-background-edge.svg';
 import { handleScroll } from '@javascript/components/common/handleScroll';
 import TitleAndButtons from '@javascript/components/common/TitleAndButtons';
 import Tagline from '@javascript/components/common/Tagline';
 import BackAndForwardButtons from '@javascript/components/common/BackAndForwardButtons';
+import Edge from 'public/background/new-releases-lavender-background-edge.svg';
 // import '@assets/stylesheets/newui/newReleasesStyles/newReleases.sass.scss';
 // import '@assets/stylesheets/newui/titleAndButtons.sass.scss';
 // import '@assets/stylesheets/newui/shimmerLoader.sass.scss';
@@ -24,13 +24,19 @@ const NewReleasesLoadingWeb = () => {
           />
           <div className="titleAndButtonsCommon">
             <BackAndForwardButtons
-              onBack={() => listWrapperRef.current && handleScroll({current: listWrapperRef.current}, 'left')}
-              onForward={() => listWrapperRef.current && handleScroll({current: listWrapperRef.current}, 'right')}
+              onBack={() =>
+                listWrapperRef.current &&
+                handleScroll({ current: listWrapperRef.current }, 'left')
+              }
+              onForward={() =>
+                listWrapperRef.current &&
+                handleScroll({ current: listWrapperRef.current }, 'right')
+              }
             />
           </div>
         </div>
         <Tagline
-          tagline={'See The Hottest Comics That Everyone’s Talking About.'}
+          tagline={"See The Hottest Comics That Everyone's Talking About."}
         />
         <div className="newReleasesListWrapperOne">
           {dummmyList.map((index) => (
