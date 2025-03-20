@@ -2,6 +2,8 @@
 
 class PurchasesController < ApplicationController
   before_action :authenticate_user!
+  before_action :use_jsx_rendering_defaults, only: [:show]
+
   def index
     @pagy, @purchases = pagy(current_user.purchases.order(created_at: :desc))
   end

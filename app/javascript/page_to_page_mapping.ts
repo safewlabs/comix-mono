@@ -1,5 +1,6 @@
 // import your page component #todo fix output of new lines
 // e.g import PostsEdit from '../views/posts/edit'
+import PurchaseShow from '@views/purchases/show';
 import PostShow from '@views/posts/show';
 import StoreIndex from '@views/stores/index';
 // Mapping between your props template to Component, you must add to this
@@ -30,6 +31,7 @@ import StoreIndex from '@views/stores/index';
 // ```
 //
 const pageIdentifierToPageComponent = {
+  'purchases/show': PurchaseShow,
   'posts/show': PostShow,
   'stores/index': StoreIndex,
 };
