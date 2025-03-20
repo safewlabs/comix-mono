@@ -2,6 +2,7 @@
   "compilerOptions": {
     "removeComments": true,
     "isolatedModules": true,
+    "module": "ESNext",
     "moduleResolution": "bundler",
     "strict": true,
     "strictPropertyInitialization": false,

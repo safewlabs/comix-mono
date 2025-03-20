@@ -1,0 +1,15 @@
+# frozen_string_literal: true
+
+json.product do
+  json.name @product.name
+  json.page_count @product.page_count
+  if @product.file_attachment.present?
+    json.product_url rails_blob_url(@product.file_attachment, disposition: "preview")
+  else
+    json.product_url nil
+  end
+end
+
+json.purchases do
+  json.purchases_path purchases_path
+end
