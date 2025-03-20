@@ -65,7 +65,11 @@ const ComicsPageFilters: React.FC = () => {
     const params = new URLSearchParams(window.location.search);
     params.set('minPrice', priceRange[0].toString());
     params.set('maxPrice', priceRange[1].toString());
-    window.history.replaceState({}, '', `${window.location.pathname}?${params.toString()}`);
+    window.history.replaceState(
+      {},
+      '',
+      `${window.location.pathname}?${params.toString()}`
+    );
   };
 
   // Apply age filter
@@ -73,7 +77,11 @@ const ComicsPageFilters: React.FC = () => {
     const params = new URLSearchParams(window.location.search);
     params.set('minAge', ageRange[0].toString());
     params.set('maxAge', ageRange[1].toString());
-    window.history.replaceState({}, '', `${window.location.pathname}?${params.toString()}`);
+    window.history.replaceState(
+      {},
+      '',
+      `${window.location.pathname}?${params.toString()}`
+    );
   };
 
   // Handle tags change (checkbox selection)
@@ -87,7 +95,11 @@ const ComicsPageFilters: React.FC = () => {
     const params = new URLSearchParams(window.location.search);
     params.delete('tags'); // Remove existing tags query params
     newTags.forEach((tag) => params.append('tags', tag)); // Add new tags
-    window.history.replaceState({}, '', `${window.location.pathname}?${params.toString()}`);
+    window.history.replaceState(
+      {},
+      '',
+      `${window.location.pathname}?${params.toString()}`
+    );
   };
 
   return (
@@ -177,7 +189,10 @@ const ComicsPageFilters: React.FC = () => {
         <>
           <div className="genresList" id="tagsOptions">
             {exploreByGenres.map((genre: GenreObj, index: number) => (
-              <label htmlFor={`${genre.name}`} key={index}>
+              <label
+                htmlFor={`${genre.name}`}
+                key={`${crypto.randomUUID()}-${index}`}
+              >
                 <input
                   type="checkbox"
                   className="genreCheckbox"
