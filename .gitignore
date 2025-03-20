@@ -41,3 +41,5 @@
 /config/credentials/production.key
 
 /node_modules
+app/javascript/components/pages/.DS_Store
+app/javascript/components/pages/stores/.DS_Store
