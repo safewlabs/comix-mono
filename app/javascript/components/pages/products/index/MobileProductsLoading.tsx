@@ -1,21 +1,23 @@
 import React from 'react';
+import SortingBarLoadingMobile from '@javascript/components/common/shimmerLoaders/SortingBarLoadingMobile';
 import HeaderMobile from '@javascript/components/layout/headerMobile/HeaderMobile';
-import SortingBarMobile from '@javascript/components/layout/sortingBar/SortingBarMobile';
 import ComicsPageFilters from '@javascript/components/layout/comicsPage/ComicsPageFilters';
+import ComicsPageMobileShimmer from '@javascript/components/common/shimmerLoaders/ComicsPageMobileShimmer';
 import AppMarketingMobile from '@javascript/components/layout/appMarketing/AppMarketingMobile';
 import FooterMobile from '@javascript/components/layout/footer/FooterMobile';
 
-function MobileProducts() {
+const MobileProductsLoading = () => {
   return (
     <div>
       <HeaderMobile />
-      <SortingBarMobile title="LATEST COMICS" onSortChange={() => {}}>
+      <SortingBarLoadingMobile title="LATEST COMICS">
         <ComicsPageFilters />
-      </SortingBarMobile>
+      </SortingBarLoadingMobile>
+      <ComicsPageMobileShimmer />
       <AppMarketingMobile />
       <FooterMobile />
     </div>
   );
-}
+};
 
-export default MobileProducts;
+export default MobileProductsLoading;

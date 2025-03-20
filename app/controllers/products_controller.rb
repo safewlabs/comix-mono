@@ -21,7 +21,6 @@ class ProductsController < ApplicationController
             twitter: {
               card: "photo",
               image: {
-                _: @product.issue_cover,
                 width: 200,
                 height: 200
               }
@@ -29,7 +28,6 @@ class ProductsController < ApplicationController
             og: {
               title: :title,
               site_name: :site,
-              image: @product.issue_cover
             }
     end
   end
@@ -43,7 +41,6 @@ class ProductsController < ApplicationController
           twitter: {
             card: "photo",
             image: {
-              _: @products.first.issue_cover,
               width: 200,
               height: 200
             }
@@ -66,7 +63,6 @@ class ProductsController < ApplicationController
           twitter: {
             card: "photo",
             image: {
-              _: @products.first.issue_cover,
               width: 200,
               height: 200
             }
@@ -74,7 +70,6 @@ class ProductsController < ApplicationController
           og: {
             title: :title,
             site_name: :site,
-            image: @products.first.issue_cover
           }
   end
 end
