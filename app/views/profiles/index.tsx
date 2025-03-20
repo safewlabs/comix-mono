@@ -16,7 +16,7 @@ export interface ProfilesProps {
 }
 
 export default function ProfilesIndex() {
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState<boolean>(true);
   const { profiles: creatorsPageData, pagination } =
     useContent<ProfilesProps>();
 
