@@ -3474,10 +3474,10 @@ synckit@^0.9.1:
     "@pkgr/core" "^0.1.0"
     tslib "^2.6.2"
 
-tailwindcss-stimulus-components@^4.0.4:
-  version "4.1.0"
-  resolved "https://registry.yarnpkg.com/tailwindcss-stimulus-components/-/tailwindcss-stimulus-components-4.1.0.tgz#74ba5f9c3d04317a8a8cd437c9673a54a7af93c1"
-  integrity sha512-g+TlppXgf2bLEQvhvjBU/vG0mQShA1v4Iftap90KOcUrd3vpVY8+Wam8SNP5nWmMiEEQctS5W0fHNEMC6iV+Hg==
+tailwindcss-stimulus-components@^6.1.3:
+  version "6.1.3"
+  resolved "https://registry.yarnpkg.com/tailwindcss-stimulus-components/-/tailwindcss-stimulus-components-6.1.3.tgz#c32b8b63e6e8b769057c37449510d15a9e403d40"
+  integrity sha512-2KAEOQkvFClER0SLxfgai19OCpAdFZomSfsiC1e8W+kz4GQRWAZQDnGzBOI03TwvPgI8wQTrLanUC1ugszEiJw==
 
 tailwindcss@^3.4.1:
   version "3.4.17"
