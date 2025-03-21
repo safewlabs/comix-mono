@@ -43,7 +43,7 @@ const NewReleasesLoadingWeb = () => {
             <div key={index}>
               <div
                 key={index}
-                className="newReleaseCard shimmerLoaderPurple"
+                className="newReleaseCardTwo shimmerLoaderPurple"
               ></div>
             </div>
           ))}

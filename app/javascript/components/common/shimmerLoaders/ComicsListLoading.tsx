@@ -21,7 +21,7 @@ const ComicsListLoading = () => {
           {dummyArr.map((index) => (
             <div
               key={`${crypto.randomUUID()}-${index}`}
-              className="newReleaseCard"
+              className="newReleaseCardOne"
             >
               <div className="shimmerLoader shimmerComicImage" />
               <div className="newReleaseNameAndStore">

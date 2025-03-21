@@ -13,7 +13,7 @@ export interface ComicCardProps {
 const ComicCard: FC<ComicCardProps> = ({ index, comicData }) => {
   return (
     <div>
-      <div key={index} className="newReleaseCard">
+      <div key={index} className="newReleaseCardTwo">
         <div className="newReleaseNameAndStore">
           <p className="newReleaseName">
             {comicData.name.length > 20

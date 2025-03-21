@@ -1,8 +1,16 @@
 import React, { FC } from 'react';
-import { ComicsPageType } from './ComicsPageLayout';
 import PriceTagIcon from '@assets/icons/price-tag-icon.svg';
 // import '@assets/stylesheets/newui/comicsPageStyles/comicsPageMobile.sass.scss';
 // import '@assets/stylesheets/newui/shimmerLoader.sass.scss';
+
+export interface ComicsPageType {
+  name: string;
+  slug: string;
+  price: string;
+  store_name: string;
+  store_slug: string;
+  avatar: string;
+}
 
 export interface ComicCardProps {
   index: number;
