@@ -8,7 +8,10 @@ const GenreBooksListShimmer = () => {
   return (
     <div className="genrePageListWrapper">
       {dummyComics.map((index) => (
-        <div key={`${crypto.randomUUID()}-${index}`} className="newReleaseCard">
+        <div
+          key={`${crypto.randomUUID()}-${index}`}
+          className="newReleaseCardOne"
+        >
           <div className="shimmerLoader shimmerComicImage" />
           <div className="newReleaseNameAndStore">
             <div className="shimmerLoader newReleaseNameLoading"></div>

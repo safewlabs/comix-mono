@@ -21,8 +21,14 @@ const Top10ComicsLoadingWeb = () => {
         />
         <div className="titleAndButtons">
           <BackAndForwardButtons
-            onBack={() => top10ComicsWrapperRef.current && handleScroll({current: top10ComicsWrapperRef.current}, 'left')}
-            onForward={() => top10ComicsWrapperRef.current && handleScroll({current : top10ComicsWrapperRef.current}, 'right')}
+            onBack={() =>
+              top10ComicsWrapperRef.current &&
+              handleScroll({ current: top10ComicsWrapperRef.current }, 'left')
+            }
+            onForward={() =>
+              top10ComicsWrapperRef.current &&
+              handleScroll({ current: top10ComicsWrapperRef.current }, 'right')
+            }
           />
         </div>
       </div>
@@ -34,7 +40,7 @@ const Top10ComicsLoadingWeb = () => {
           <div key={index}>
             <div
               key={index}
-              className="newReleaseCard shimmerLoaderPurple"
+              className="newReleaseCardTwo shimmerLoaderPurple"
             ></div>
           </div>
         ))}

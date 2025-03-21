@@ -1,8 +1,16 @@
 import React, { FC, useState } from 'react';
-import { ComicsPageType } from './ComicsPageLayout';
 import PriceTagIcon from '@assets/icons/price-tag-icon.svg';
 // import '@assets/stylesheets/newui/shimmerLoader.sass.scss';
 // import '@assets/stylesheets/newui/comicsPageStyles/comicsPage.sass.scss';
+
+export interface ComicsPageType {
+  name: string;
+  slug: string;
+  price: string;
+  store_name: string;
+  store_slug: string;
+  avatar: string;
+}
 
 export interface ComicCardProps {
   index: number;
@@ -16,7 +24,7 @@ const ComicsPageCard: FC<ComicCardProps> = ({ index, comicData }) => {
     <div
       role="comic card"
       aria-labelledby={`comic-card-${index}`}
-      className="newReleaseCard"
+      className="newReleaseCardOne"
     >
       <img src={PriceTagIcon} alt="Price tag icon" className="priceTag" />
       <p className="priceAmount" aria-label={`Price: ${comicData.price}`}>
