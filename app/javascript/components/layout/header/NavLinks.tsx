@@ -13,7 +13,7 @@ const NavLinks: FC = () => {
   return (
     <nav className="navContainer">
       {NAV_LINK_LABELS_AND_ROUTES.map((labelAndRoute, index) => (
-        <a href={labelAndRoute.route} key={index} className="navLinks">
+        <a href={labelAndRoute.route} key={index} className="navLinks" data-sg-visit>
           {labelAndRoute.label}
         </a>
       ))}
