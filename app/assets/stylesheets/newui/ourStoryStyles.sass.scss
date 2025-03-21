@@ -6,7 +6,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image: url('../../assets/background/creators-page-background.svg');
+  background-image: url('/background/creators-page-background.svg');
   padding: 70px 60px;
   gap: 60px;
 }
@@ -109,7 +109,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('../../assets/background/how-were-different.svg');
+    background-image: url('/background/how-were-different.svg');
     background-size: cover;
     background-position: center;
     filter: blur(15px);

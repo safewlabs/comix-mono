@@ -14,19 +14,16 @@ export interface ProfilesProps {
   creatorsPageData: ProfileTypes[];
 }
 
-
-const OurCreatorsPageMobile: FC<ProfilesProps> = ({
-  creatorsPageData,
-}) => {
+const OurCreatorsPageMobile: FC<ProfilesProps> = ({ creatorsPageData }) => {
   //NEW BACKGROUND STRATEGY
-  //In the mobile breakpoint 
+  //In the mobile breakpoint
   const bgMobileStyle = {
     backgroundImage: `url('/images/our-creators-mobile-background.svg')`,
     backgroundSize: 'contain',
     backgroundPosition: 'center',
     backgroundRepeat: 'repeat',
   };
-  
+
   return (
     <div className="creatorsPageLayoutWrapperMobile" style={bgMobileStyle}>
       {creatorsPageData.map((creatorData, index) => (
@@ -50,10 +47,14 @@ const OurCreatorsPageMobile: FC<ProfilesProps> = ({
                   <p className="creatorSkillsMobile">
                     {`${creatorData.skills.slice(0, 30)}...`}
                   </p>
-                  <p className="creatorSkillsBannerMobile">{creatorData.skills}</p>
+                  <p className="creatorSkillsBannerMobile">
+                    {creatorData.skills}
+                  </p>
                 </>
               ) : (
-                <p className="creatorSkillsMobile">{creatorData?.skills || ''}</p>
+                <p className="creatorSkillsMobile">
+                  {creatorData?.skills || ''}
+                </p>
               )}
             </div>
           </div>

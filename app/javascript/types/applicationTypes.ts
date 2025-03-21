@@ -38,7 +38,7 @@ export interface ProfileType {
 }
 
 export interface StoreType {
+  display_image?: string;
   name: string;
   slug: string;
-  display_image?: string;
 }
