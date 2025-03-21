@@ -8,27 +8,27 @@ interface StoreDataObj {
   slug: string;
 }
 
-interface PaginatedDataObj {
-  count: number;
-  next: number;
-  next_url: string;
-  page: number;
-  prev_url: string;
-}
+// interface PaginatedDataObj {
+//   count: number;
+//   next: number;
+//   next_url: string;
+//   page: number;
+//   prev_url: string;
+// }
 
-interface StoreDataMobile {
-  data: StoreDataObj[];
-  pagination: PaginatedDataObj;
-}
+// interface StoreDataMobile {
+//   data: StoreDataObj[];
+//   pagination: PaginatedDataObj;
+// }
 
-interface StoresPageMobileProps {
-  storesPageData: StoreDataMobile;
-}
+// interface StoresPageMobileProps {
+//   storesPageData: StoreDataMobile;
+// }
 
-const StoresPageMobile: FC<StoresPageMobileProps> = ({ storesPageData }) => {
+const StoresPageMobile: FC<any> = ({ storesPageData = [] }) => {
   return (
     <div className="storesMobileWrapper">
-      {storesPageData.data.map((storesObj, index) => (
+      {storesPageData?.map((storesObj: StoreDataObj, index: number) => (
         <div key={index}>
           <a
             key={index}

@@ -10,7 +10,7 @@ const WebStores: FC<any> = ({ storesPageData }) => {
     <>
       <Header />
       <SortingBar title={'STORES'} onSortChange={() => {}} />
-      <StoresPage storesPageData={storesPageData} />
+      <StoresPage storesPageData={storesPageData.stores} />
       <AppMarketing />
       <Footer />
     </>
