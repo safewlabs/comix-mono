@@ -5,7 +5,7 @@ const NAV_LINK_LABELS_AND_ROUTES = [
   { label: 'Comics', route: '/products' },
   { label: 'Creators', route: '/profiles' },
   { label: 'Stores', route: '/stores' },
-  { label: 'Publish', route: '/publish' },
+  { label: 'Publish', route: '/for-creators' },
   { label: 'Crowdfunding', route: 'https://diebold.comix.one/' },
 ];
 
