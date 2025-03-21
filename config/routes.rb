@@ -23,8 +23,8 @@ Rails.application.routes.draw do
   end
 
   root "home#index"
-  get "about", to: "pages#about", as: "about"
-  get "for-creators", to: "pages#for_creators", as: "for_creators"
+  get "about", to: "static_pages#about", as: "about"
+  get "for-creators", to: "static_pages#for_creators", as: "for_creators"
   get "comics", to: "products#index", as: "comics"
   get "products", to: "products#index"
   get "comics/:grenre_slug", to: "products#genres", as: "genres"

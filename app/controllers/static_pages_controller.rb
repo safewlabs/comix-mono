@@ -1,6 +1,9 @@
 # frozen_string_literal: true
 
-class PagesController < ApplicationController
+class StaticPagesController < ApplicationController
+  before_action :use_jsx_rendering_defaults, only: [:for_creators]
+  layout "newui", only: [:for_creators]
+
   def about
     set_meta_tags title: "Our Story",
       description: "Our Story page",
